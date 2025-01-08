@@ -16,7 +16,14 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
-        <Image src={"/hero.jpg"} alt="hero" fill />
+        <Image
+          src={"/hero.jpg"}
+          alt="hero"
+          fill
+          objectFit="cover"
+          objectPosition="center"
+          priority
+        />
         <div className=" absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent object-cover"></div>
       </div>
     </div>
