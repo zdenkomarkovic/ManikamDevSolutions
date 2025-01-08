@@ -7,9 +7,8 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <div className="container mx-auto px-4 py-20">
+      <div className=" py-20">
         <Hero />
-        <Cenovnik />
         <Pokusaj />
         <MiSmoTu />
         <Cenovnik />

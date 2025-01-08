@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const MiSmoTu = () => {
   return (
-    <div className=" my-20 relative flex ">
+    <div className=" container px-4 mx-auto my-20 relative flex ">
       <div
         className={`w-[500px] h-[500px] bg-gray-200 shadow-lg p-5 sticky top-16`}
       >

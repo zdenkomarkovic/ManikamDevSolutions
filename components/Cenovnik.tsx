@@ -2,7 +2,7 @@ import React from "react";
 
 const Cenovnik = () => {
   return (
-    <div className="container text-center py-10 space-y-10">
+    <div className="container px-4 mx-auto text-center py-10 space-y-10">
       <h1 className="text-4xl">Cenovnik</h1>
       <div className="grid grid-cols-4 gap-10 ">
         <div>

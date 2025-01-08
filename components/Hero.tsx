@@ -1,17 +1,24 @@
+import Image from "@/node_modules/next/image";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative z-10 container mx-auto px-4 py-8">
-      <div></div>
-      <h1 className="text-2xl md:text-6xl py-36 pl-10  ">
-        Manikam<span className="font-bold text-red-700">Web</span>
-        Solutions{" "}
-        <span className="text-1xl md:text-3xl block pl-1">
-          mi pomazemo vasem biznisu da raste
-        </span>
-      </h1>
-      <div></div>
+    <div className="relative ">
+      <div className="container mx-auto px-4 h-screen flex items-center">
+        <div className="">
+          <h1 className="relative text-2xl md:text-6xl z-10">
+            Manikam<span className="font-bold text-red-700">Web</span>
+            Solutions{" "}
+            <span className="text-1xl md:text-3xl block pl-1">
+              mi pomazemo vasem biznisu da raste
+            </span>
+          </h1>
+        </div>
+      </div>
+      <div className="absolute top-0 z-0 w-full h-screen">
+        <Image src={"/hero.jpg"} alt="hero" fill />
+        <div className=" absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent object-cover"></div>
+      </div>
     </div>
   );
 };
