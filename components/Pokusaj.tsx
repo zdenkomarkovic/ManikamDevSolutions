@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
+import { useCardAnimation } from "@/hooks/useCardAnimation";
 
 const Pokusaj = () => {
   const targetRef = useRef(null);
@@ -20,15 +21,15 @@ const Pokusaj = () => {
     opacity: useTransform(scrollY, [0, titleHeight], [1, 0]),
   };
 
-  const animations = cardData.map((_, i) => {
-    const start = titleHeight + i * size.height;
-    const end = titleHeight + (i + 1) * size.height;
+  // const animations = cardData.map((_, i) => {
+  //   const start = titleHeight + i * size.height;
+  //   const end = titleHeight + (i + 1) * size.height;
 
-    return {
-      scale: useTransform(scrollY, [start, end], [1, 0.8]),
-      opacity: useTransform(scrollY, [start, end], [1, 0]),
-    };
-  });
+  //   return {
+  //     scale: useTransform(scrollY, [start, end], [1, 0.8]),
+  //     opacity: useTransform(scrollY, [start, end], [1, 0]),
+  //   };
+  // });
 
   return (
     <div ref={targetRef} className="mx-auto container px-4 text-center">
@@ -45,19 +46,27 @@ const Pokusaj = () => {
 
       {/* Karte */}
       <div>
-        {cardData.map((text, i) => (
-          <motion.div
-            key={i}
-            style={{
-              scale: animations[i].scale,
-              opacity: animations[i].opacity,
-            }}
-            className="h-dvh py-20 sticky top-0"
-          >
-            <Card text={text} />
-          </motion.div>
-        ))}
+        {cardData.map((text, i) => {
+          const { scale, opacity } = useCardAnimation(
+            i,
+            titleHeight,
+            size.height,
+            scrollY
+          );
 
+          return (
+            <motion.div
+              key={i}
+              style={{
+                scale,
+                opacity,
+              }}
+              className="h-dvh py-20 sticky top-0"
+            >
+              <Card text={text} />
+            </motion.div>
+          );
+        })}
         {/* Dodatni sadržaj */}
         <div className="h-[1000px]">
           <h1 className="text-4xl pt-[500px]">
