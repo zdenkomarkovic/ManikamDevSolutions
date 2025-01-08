@@ -9,9 +9,9 @@ const Home = () => {
     <div>
       <div className=" py-20">
         <Hero />
-        <Pokusaj />
+        {/* <Pokusaj />
         <MiSmoTu />
-        <Cenovnik />
+        <Cenovnik /> */}
       </div>
     </div>
   );
