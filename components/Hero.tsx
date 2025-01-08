@@ -1,5 +1,6 @@
 import Image from "@/node_modules/next/image";
 import React from "react";
+import heroImg from "../public/hero.jpg";
 
 const Hero = () => {
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
-          src="/hero.jpg"
+          src={heroImg}
           alt="Background image"
           layout="fill"
           objectFit="cover"
