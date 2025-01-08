@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
+import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 
 const Pokusaj = () => {
   const targetRef = useRef(null);
@@ -72,7 +73,7 @@ const AnimatedCard = ({
   text: { title: string; mim: string };
   titleHeight: number;
   screenHeight: number;
-  scrollY: any;
+  scrollY: MotionValue<number>;
 }) => {
   const start = titleHeight + index * screenHeight;
   const end = titleHeight + (index + 1) * screenHeight;
