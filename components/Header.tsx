@@ -7,8 +7,7 @@ import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "/public/favicon.ico";
-import { NavList } from "@/constants/index";
+import { NavList } from "../constants/index";
 import { SlArrowDown } from "react-icons/sl";
 
 export default function Header() {
