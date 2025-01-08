@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
-import { useCardAnimation } from "@/hooks/useCardAnimation";
 
 const Pokusaj = () => {
   const targetRef = useRef(null);
@@ -15,21 +14,11 @@ const Pokusaj = () => {
 
   const titleHeight = 1500;
 
-  // Kreiramo animacije unapred van petlje
+  // Animacije za naslov
   const titleAnimation = {
     scale: useTransform(scrollY, [0, titleHeight], [1, 0.8]),
     opacity: useTransform(scrollY, [0, titleHeight], [1, 0]),
   };
-
-  // const animations = cardData.map((_, i) => {
-  //   const start = titleHeight + i * size.height;
-  //   const end = titleHeight + (i + 1) * size.height;
-
-  //   return {
-  //     scale: useTransform(scrollY, [start, end], [1, 0.8]),
-  //     opacity: useTransform(scrollY, [start, end], [1, 0]),
-  //   };
-  // });
 
   return (
     <div ref={targetRef} className="mx-auto container px-4 text-center">
@@ -41,32 +30,22 @@ const Pokusaj = () => {
         }}
         className="h-[500px] sticky top-0"
       >
-        <h1 className="text-8xl py-32">naslovv</h1>
+        <h1 className="text-8xl py-32">naslov</h1>
       </motion.div>
 
       {/* Karte */}
       <div>
-        {cardData.map((text, i) => {
-          const { scale, opacity } = useCardAnimation(
-            i,
-            titleHeight,
-            size.height,
-            scrollY
-          );
+        {cardData.map((text, i) => (
+          <AnimatedCard
+            key={i}
+            index={i}
+            text={text}
+            titleHeight={titleHeight}
+            screenHeight={size.height}
+            scrollY={scrollY}
+          />
+        ))}
 
-          return (
-            <motion.div
-              key={i}
-              style={{
-                scale,
-                opacity,
-              }}
-              className="h-dvh py-20 sticky top-0"
-            >
-              <Card text={text} />
-            </motion.div>
-          );
-        })}
         {/* Dodatni sadržaj */}
         <div className="h-[1000px]">
           <h1 className="text-4xl pt-[500px]">
@@ -81,6 +60,40 @@ const Pokusaj = () => {
 
 export default Pokusaj;
 
+// Zasebna komponenta za animiranu karticu
+const AnimatedCard = ({
+  index,
+  text,
+  titleHeight,
+  screenHeight,
+  scrollY,
+}: {
+  index: number;
+  text: { title: string; mim: string };
+  titleHeight: number;
+  screenHeight: number;
+  scrollY: any;
+}) => {
+  const start = titleHeight + index * screenHeight;
+  const end = titleHeight + (index + 1) * screenHeight;
+
+  const scale = useTransform(scrollY, [start, end], [1, 0.8]);
+  const opacity = useTransform(scrollY, [start, end], [1, 0]);
+
+  return (
+    <motion.div
+      style={{
+        scale,
+        opacity,
+      }}
+      className="h-dvh py-20 sticky top-0"
+    >
+      <Card text={text} />
+    </motion.div>
+  );
+};
+
+// Komponenta za sadržaj kartice
 const Card = ({ text }: { text: { title: string; mim: string } }) => {
   return (
     <div className="bg-green-700 w-[80%] h-[600px] mx-auto space-y-10 p-10">
