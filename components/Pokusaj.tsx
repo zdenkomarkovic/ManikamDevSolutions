@@ -12,12 +12,9 @@ const Pokusaj = () => {
     offset: ["start start", "end end"],
   });
 
-  //   useMotionValueEvent(scrollY, "change", () => {
-  //     console.log(scrollY.get());
-  //   });
-
   const titleHeight = 1500;
 
+  // Prvo kreiramo `cardTimeline` izvan map funkcije
   const cardTimeline = cardData.map((_, i) => {
     const start = titleHeight + i * size.height;
     const end = titleHeight + (i + 1) * size.height;
@@ -25,11 +22,12 @@ const Pokusaj = () => {
   });
 
   const timeline = [[0, titleHeight], ...cardTimeline];
+
+  // Kreiramo `animation` izvan render logike
   const animation = timeline.map((data) => ({
     scale: useTransform(scrollY, data, [1, 0.8]),
     opacity: useTransform(scrollY, data, [1, 0]),
   }));
-
   return (
     <div ref={targetRef} className="mx-auto container px-4 text-center ">
       <motion.div
