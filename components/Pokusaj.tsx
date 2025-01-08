@@ -14,47 +14,55 @@ const Pokusaj = () => {
 
   const titleHeight = 1500;
 
-  // Prvo kreiramo `cardTimeline` izvan map funkcije
-  const cardTimeline = cardData.map((_, i) => {
+  // Napravi niz koji sadrži sve transformacije unapred
+  const animations = cardData.map((_, i) => {
     const start = titleHeight + i * size.height;
     const end = titleHeight + (i + 1) * size.height;
-    return [start, end];
+
+    return {
+      scale: useTransform(scrollY, [start, end], [1, 0.8]),
+      opacity: useTransform(scrollY, [start, end], [1, 0]),
+    };
   });
 
-  const timeline = [[0, titleHeight], ...cardTimeline];
+  // Dodajemo i transformacije za naslov
+  const titleAnimation = {
+    scale: useTransform(scrollY, [0, titleHeight], [1, 0.8]),
+    opacity: useTransform(scrollY, [0, titleHeight], [1, 0]),
+  };
 
-  // Kreiramo `animation` izvan render logike
-  const animation = timeline.map((data) => ({
-    scale: useTransform(scrollY, data, [1, 0.8]),
-    opacity: useTransform(scrollY, data, [1, 0]),
-  }));
   return (
-    <div ref={targetRef} className="mx-auto container px-4 text-center ">
+    <div ref={targetRef} className="mx-auto container px-4 text-center">
+      {/* Naslov */}
       <motion.div
         style={{
-          scale: animation[0].scale,
-          opacity: animation[0].opacity,
-          //   height: `${titleHeight}px`,
+          scale: titleAnimation.scale,
+          opacity: titleAnimation.opacity,
         }}
         className="h-[500px] sticky top-0"
       >
         <h1 className="text-8xl py-32">naslov</h1>
       </motion.div>
-      <div className="">
+
+      {/* Karte */}
+      <div>
         {cardData.map((text, i) => {
+          const animation = animations[i]; // Dohvatamo odgovarajuću animaciju
           return (
             <motion.div
-              style={{
-                scale: animation[i + 1].scale,
-                opacity: animation[i + 1].opacity,
-              }}
               key={i}
+              style={{
+                scale: animation.scale,
+                opacity: animation.opacity,
+              }}
               className="h-dvh py-20 sticky top-0"
             >
               <Card text={text} />
             </motion.div>
           );
         })}
+
+        {/* Dodatni sadržaj */}
         <div className="h-[1000px]">
           <h1 className="text-4xl pt-[500px]">
             Mnogi mali biznisi potcenjuju vrednost svojih veb-sajtova, što
@@ -70,12 +78,13 @@ export default Pokusaj;
 
 const Card = ({ text }) => {
   return (
-    <div className="bg-green-700 w-[80%]  h-[600px]  mx-auto space-y-10 p-10">
+    <div className="bg-green-700 w-[80%] h-[600px] mx-auto space-y-10 p-10">
       <h2 className="text-8xl">{text.title}</h2>
       <h2 className="text-3xl">{text.mim}</h2>
     </div>
   );
 };
+
 interface CardData {
   title: string;
   mim: string;
