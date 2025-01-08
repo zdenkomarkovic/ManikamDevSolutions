@@ -14,7 +14,12 @@ const Pokusaj = () => {
 
   const titleHeight = 1500;
 
-  // Napravi niz koji sadrži sve transformacije unapred
+  // Kreiramo animacije unapred van petlje
+  const titleAnimation = {
+    scale: useTransform(scrollY, [0, titleHeight], [1, 0.8]),
+    opacity: useTransform(scrollY, [0, titleHeight], [1, 0]),
+  };
+
   const animations = cardData.map((_, i) => {
     const start = titleHeight + i * size.height;
     const end = titleHeight + (i + 1) * size.height;
@@ -24,12 +29,6 @@ const Pokusaj = () => {
       opacity: useTransform(scrollY, [start, end], [1, 0]),
     };
   });
-
-  // Dodajemo i transformacije za naslov
-  const titleAnimation = {
-    scale: useTransform(scrollY, [0, titleHeight], [1, 0.8]),
-    opacity: useTransform(scrollY, [0, titleHeight], [1, 0]),
-  };
 
   return (
     <div ref={targetRef} className="mx-auto container px-4 text-center">
@@ -46,21 +45,18 @@ const Pokusaj = () => {
 
       {/* Karte */}
       <div>
-        {cardData.map((text, i) => {
-          const animation = animations[i]; // Dohvatamo odgovarajuću animaciju
-          return (
-            <motion.div
-              key={i}
-              style={{
-                scale: animation.scale,
-                opacity: animation.opacity,
-              }}
-              className="h-dvh py-20 sticky top-0"
-            >
-              <Card text={text} />
-            </motion.div>
-          );
-        })}
+        {cardData.map((text, i) => (
+          <motion.div
+            key={i}
+            style={{
+              scale: animations[i].scale,
+              opacity: animations[i].opacity,
+            }}
+            className="h-dvh py-20 sticky top-0"
+          >
+            <Card text={text} />
+          </motion.div>
+        ))}
 
         {/* Dodatni sadržaj */}
         <div className="h-[1000px]">
@@ -76,7 +72,7 @@ const Pokusaj = () => {
 
 export default Pokusaj;
 
-const Card = ({ text }) => {
+const Card = ({ text }: { text: { title: string; mim: string } }) => {
   return (
     <div className="bg-green-700 w-[80%] h-[600px] mx-auto space-y-10 p-10">
       <h2 className="text-8xl">{text.title}</h2>
