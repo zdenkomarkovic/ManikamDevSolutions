@@ -1,7 +1,6 @@
 "use client";
 import Image from "@/node_modules/next/image";
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 
 const MiSmoTu = () => {
   return (

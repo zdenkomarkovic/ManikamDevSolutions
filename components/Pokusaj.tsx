@@ -1,11 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import {
-  useScroll,
-  motion,
-  //   useMotionValueEvent,
-  useTransform,
-} from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 
 const Pokusaj = () => {
@@ -30,7 +25,7 @@ const Pokusaj = () => {
   });
 
   const timeline = [[0, titleHeight], ...cardTimeline];
-  const animation = timeline.map((data, i) => ({
+  const animation = timeline.map((data) => ({
     scale: useTransform(scrollY, data, [1, 0.8]),
     opacity: useTransform(scrollY, data, [1, 0]),
   }));
