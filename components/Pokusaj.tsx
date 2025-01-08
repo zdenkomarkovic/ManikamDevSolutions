@@ -41,7 +41,7 @@ const Pokusaj = () => {
         }}
         className="h-[500px] sticky top-0"
       >
-        <h1 className="text-8xl py-32">naslov</h1>
+        <h1 className="text-8xl py-32">naslovv</h1>
       </motion.div>
 
       {/* Karte */}
