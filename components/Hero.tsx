@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <img
-          src="/hero.jpg"
+          src="/images/hero.jpg"
           alt="Background image"
           className="w-[100%] h-[100%] object-cover"
           // layout="fill"
