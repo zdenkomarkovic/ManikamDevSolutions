@@ -61,7 +61,7 @@ export default function Footer() {
               Manikam Web Solutions
             </h3>
             <p className="text-muted-foreground">
-              Volimo da ostavimo trag po kome ce nas pamtiti
+              Mi ostavljamo trag po kome nas pamte
             </p>
           </div>
         </div>

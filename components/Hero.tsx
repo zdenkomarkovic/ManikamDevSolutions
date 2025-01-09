@@ -9,7 +9,7 @@ const Hero = () => {
           <h1 className="relative mt-[250px] md:mt-0 text-[33px] md:text-6xl z-10">
             Manikam<span className="font-bold text-red-700">Web</span>
             Solutions{" "}
-            <span className="text-[22px] md:text-3xl block ">
+            <span className="text-[21px] md:text-3xl block ">
               mi pomazemo vasem biznisu da raste
             </span>
           </h1>
@@ -17,13 +17,13 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
-          src="/images/hero.jpg"
+          src="/images/rayi-christian-wicaksono-6PF6DaiWz48-unsplash.jpg"
           alt="Background image"
           fill
           objectFit="cover"
           priority
         />
-        <div className=" absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div>
+        <div className="   absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div>
       </div>
     </div>
   );
