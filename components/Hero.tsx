@@ -1,4 +1,3 @@
-import Image from "@/node_modules/next/image";
 import React from "react";
 
 const Hero = () => {
