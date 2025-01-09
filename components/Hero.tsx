@@ -4,12 +4,12 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="relative ">
-      <div className="container mx-auto px-4 h-screen flex items-center">
+      <div className="container mx-auto px-[5px] md:px-4 h-screen flex items-center">
         <div className="">
-          <h1 className="relative text-2xl md:text-6xl z-10">
+          <h1 className="relative mt-[250px] md:mt-0 text-[33px] md:text-6xl z-10">
             Manikam<span className="font-bold text-red-700">Web</span>
             Solutions{" "}
-            <span className="text-1xl md:text-3xl block pl-1">
+            <span className="text-[22px] md:text-3xl block ">
               mi pomazemo vasem biznisu da raste
             </span>
           </h1>
@@ -21,10 +21,9 @@ const Hero = () => {
           alt="Background image"
           fill
           objectFit="cover"
-          objectPosition="center"
           priority
         />
-        <div className=" absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div>
+        <div className=" absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div>
       </div>
     </div>
   );
