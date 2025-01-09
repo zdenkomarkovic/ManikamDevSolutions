@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
-          src="/images/sijalica.jpg"
+          src="/images/dillon-shook-mY3_bvR74fI-unsplash.jpg"
           alt="Background image"
           fill
           objectFit="cover"
