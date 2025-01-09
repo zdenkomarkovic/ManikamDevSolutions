@@ -17,13 +17,13 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
-          src="/images/seth-schwiet-WB3ujiKLJwQ-unsplash.jpg"
+          src="/images/laptop.jpg"
           alt="Background image"
           fill
           objectFit="cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/80 to-transparent" />
       </div>
     </div>
   );
