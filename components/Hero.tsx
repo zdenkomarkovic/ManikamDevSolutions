@@ -1,3 +1,4 @@
+import Image from "@/node_modules/next/image";
 import React from "react";
 
 const Hero = () => {
@@ -15,14 +16,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
-        <img
+        <Image
           src="/images/hero.jpg"
           alt="Background image"
-          className="w-[100%] h-[100%] object-cover"
-          // layout="fill"
-          // objectFit="cover"
-          // objectPosition="center"
-          // priority
+          fill
+          objectFit="cover"
+          objectPosition="center"
+          priority
         />
         {/* <div className=" absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div> */}
       </div>
