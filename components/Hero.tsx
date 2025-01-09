@@ -20,7 +20,7 @@ const Hero = () => {
         <img
           src="/hero.jpg"
           alt="Background image"
-          className="w-full h-screen"
+          className="w-[100%] h-[100%] object-cover"
           // layout="fill"
           // objectFit="cover"
           // objectPosition="center"
