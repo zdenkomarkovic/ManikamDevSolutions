@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 const Home = () => {
   return (
     <div>
-      <div className=" py-20">
+      <div className="">
         <Hero />
         {/* <Pokusaj />
         <MiSmoTu />
