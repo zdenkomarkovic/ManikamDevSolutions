@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative ">
       <div className="container mx-auto px-[5px] md:px-4 h-screen flex items-center">
         <div className="">
-          <h1 className="relative mt-[250px] md:mt-0 text-[33px] md:text-6xl z-10">
+          <h1 className="relative text-gray-900 mt-[250px] md:mt-0 text-[33px] md:text-6xl z-10">
             Manikam<span className="font-bold text-red-700">Web</span>
             Solutions{" "}
             <span className="text-[21px] md:text-3xl block ">
@@ -17,13 +17,13 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
-          src="/images/josh-calabrese-XXpbdU_31Sg-unsplash.jpg"
+          src="/images/sijalica.jpg"
           alt="Background image"
           fill
           objectFit="cover"
           priority
         />
-        <div className="   absolute inset-0 bg-gradient-to-r md:bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div>
+        <div className="   absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/90 to-transparent"></div>
       </div>
     </div>
   );
