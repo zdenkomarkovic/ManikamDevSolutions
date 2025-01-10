@@ -63,6 +63,9 @@ export default function Footer() {
             <p className="text-muted-foreground">
               Mi ostavljamo trag po kome nas pamte
             </p>
+            <p className="text-muted-foreground">
+              Stvaramo priče koje se pamte.
+            </p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-muted-foreground/20 text-center text-muted-foreground">

@@ -6,10 +6,10 @@ const Hero = () => {
     <div className="relative ">
       <div className="container mx-auto px-[5px] md:px-4 h-screen flex items-center">
         <div className="">
-          <h1 className="relative text-gray-900 mt-[250px] md:mt-0 text-[33px] md:text-6xl z-10">
+          <h1 className="relative text-gray-900 mt-[250px] md:mt-0 text-[33px] md:text-6xl xl:text-[80px] z-10">
             Manikam<span className="font-bold text-red-700">Web</span>
             Solutions{" "}
-            <span className="text-[21px] md:text-3xl block ">
+            <span className="text-[21px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
               mi pomazemo vasem biznisu da raste
             </span>
           </h1>

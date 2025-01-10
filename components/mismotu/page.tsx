@@ -8,9 +8,9 @@ const MiSmoTu = () => {
       <div
         className={`w-[500px] h-[500px] bg-gray-200 shadow-lg p-5 sticky top-16`}
       >
-        <h2 className="text-4xl">
-          Mi smo tu da vam pomognemo da da ostvarite veci{" "}
-          <span className="text-red-700">uspeh</span> preko interneta
+        <h2 className="text-[30px] md:text-5xl">
+          Mozemo vam pomoci da ostvarite veci{" "}
+          <span className="text-red-700">uspeh</span> online
         </h2>
       </div>
       <div className={` relative z-10 w-full pl-auto text-2xl `}>
@@ -59,11 +59,10 @@ const MiSmoTu = () => {
               prisutnosti?
             </h3>
             <p>
-              Niste sigurni koga da angažujete za unapređenje vaše online
-              prisutnosti? Imamo stotine recenzija sa 5 zvezdica. Svakog meseca
-              zakazujemo 250 sastanaka za naš prodajni tim koristeći oglase, SEO
-              i dobre stope konverzije. Omogućavamo vam da nas isprobate
-              besplatno. Ne odlučujte na osnovu emocija, već na osnovu podataka.
+              Imamo stotine recenzija sa 5 zvezdica. Svakog meseca zakazujemo
+              250 sastanaka za naš prodajni tim koristeći oglase, SEO i dobre
+              stope konverzije. Omogućavamo vam da nas isprobate besplatno. Ne
+              odlučujte na osnovu emocija, već na osnovu podataka.
             </p>
           </div>
           <div className="w-[20%] p-5 space-y-5">
