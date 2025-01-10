@@ -23,7 +23,7 @@ const Hero = () => {
           objectFit="cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/60 to-transparent" />
       </div>
     </div>
   );

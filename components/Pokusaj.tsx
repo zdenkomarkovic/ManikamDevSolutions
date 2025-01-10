@@ -114,7 +114,7 @@ const Card = ({
   return (
     <div className="p-1 md:p-2 bg-white rounded-3xl md:w-[90%] mx-auto">
       <div
-        className={`flex flex-col gap-6 pt-7 md:pt-0 ${
+        className={`flex flex-col gap-6 pt-7  ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
         }  justify-between items-center rounded-3xl bg-gray-100   h-[600px] mx-auto p-2 md:p-7`}
       >
