@@ -14,7 +14,7 @@ const Pokusaj = () => {
     offset: ["start start", "end end"],
   });
 
-  const titleHeight = 1700;
+  const titleHeight = 1750;
 
   // Animacije za naslov
   const titleAnimation = {
@@ -25,7 +25,7 @@ const Pokusaj = () => {
   return (
     <div
       ref={targetRef}
-      className="border-t-2 mx-auto container px-2 md:px-4 text-center"
+      className=" mx-auto container px-2 md:px-4 text-center"
     >
       {/* Naslov */}
       <motion.div
@@ -33,15 +33,22 @@ const Pokusaj = () => {
           scale: titleAnimation.scale,
           opacity: titleAnimation.opacity,
         }}
-        className="h-[600px] sticky  top-10"
+        className="h-[600px] sticky  top-10 md:flex justify-between items-center"
       >
-        <h2 className="text-[33px] md:text-6xl xl:text-[80px] py-10 md:py-40">
+        <h2 className="text-[33px] md:text-6xl xl:text-[80px] py-10 md:py-40 md:w-[65%]">
           Mozemo vam pomoci da ostvarite veci{" "}
           <span className="text-red-700">uspeh</span> preko interneta
         </h2>
+        <Image
+          src={"/images/lightbulb.jpg"}
+          alt="idea"
+          width={350}
+          height={3}
+          className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] mx-auto md:mx-0 object-cover "
+          priority
+        />
       </motion.div>
 
-      {/* Karte */}
       <div>
         {cardData.map((text, i) => (
           <AnimatedCard
