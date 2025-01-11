@@ -40,7 +40,7 @@ const Pokusaj = () => {
           <span className="text-red-700">uspeh</span> preko interneta
         </h2>
         <Image
-          src={"/images/lightbulb.jpg"}
+          src={"/images/diego-ph-fIq0tET6llw-unsplash.jpg"}
           alt="idea"
           width={350}
           height={3}
