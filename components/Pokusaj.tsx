@@ -35,7 +35,7 @@ const Pokusaj = () => {
         }}
         className="h-[600px] sticky  top-10"
       >
-        <h2 className="text-[33px] md:text-6xl xl:text-[80px] py-40">
+        <h2 className="text-[33px] md:text-6xl xl:text-[80px] py-10 md:py-40">
           Mozemo vam pomoci da ostvarite veci{" "}
           <span className="text-red-700">uspeh</span> preko interneta
         </h2>
