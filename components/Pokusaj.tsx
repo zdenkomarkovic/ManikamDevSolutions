@@ -23,7 +23,10 @@ const Pokusaj = () => {
   };
 
   return (
-    <div ref={targetRef} className="mx-auto container px-2 md:px-4 text-center">
+    <div
+      ref={targetRef}
+      className="border-t-2 mx-auto container px-2 md:px-4 text-center"
+    >
       {/* Naslov */}
       <motion.div
         style={{
@@ -56,7 +59,7 @@ const Pokusaj = () => {
           <p className="text-2xl xl:text-6xl pt-[500px]">
             Mnogi mali biznisi potcenjuju vrednost svojih{" "}
             <span className="font-bold text-red-700">veb-sajtova</span>, što
-            dovodi do gubitka prilika velikih vrednosti.
+            dovodi do gubitka prilika i novca.
           </p>
           <p className="text-3xl md:text-7xl">
             <span className=" text-red-700 font-bold">Nemojte</span> biti jedni
