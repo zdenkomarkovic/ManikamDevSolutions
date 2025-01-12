@@ -12,7 +12,7 @@ export default function Footer() {
       transition={{ delay: 0.5 }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-muted-foreground">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-[1fr_2fr] text-center md:text-left md:grid-cols-3 gap-8 mx-auto">
           <div>
             <ul className="space-y-2">
               <li>
@@ -20,7 +20,7 @@ export default function Footer() {
                   href="/"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  ManikamWebSolutions
+                  Pocetna
                 </Link>
               </li>
 
@@ -29,7 +29,7 @@ export default function Footer() {
                   href="/usluge"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  Cenovnik
+                  Usluge
                 </Link>
               </li>
 
@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="space-y-2">
             <p className="text-muted-foreground">Telefon: +38163 742 94 15</p>
             <p className="text-muted-foreground">Email: office@manikam.rs</p>
-            <div className="flex space-x-4 pt-5 ">
+            <div className="flex space-x-4 justify-center md:justify-start">
               <a href="#" className="text-muted-foreground hover:text-primary">
                 <Facebook />
               </a>
@@ -56,15 +56,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4  font-dancing">
+          <div className="md:col-span-1 col-span-2 text-center">
+            <h3 className="text-lg font-semibold mb-4">
               Manikam Web Solutions
             </h3>
+
             <p className="text-muted-foreground">
-              Mi ostavljamo trag po kome nas pamte
-            </p>
-            <p className="text-muted-foreground">
-              Stvaramo priče koje se pamte.
+              Mi stvaramo priče koje se pamte.
             </p>
           </div>
         </div>

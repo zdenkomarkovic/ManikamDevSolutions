@@ -38,7 +38,8 @@ const Section1 = () => {
       >
         <div className="py-10">
           <h2 className="text-4xl md:text-6xl xl:text-[80px] pb-10  ">
-            Za veci <span className="text-red-700">uspeh</span> online
+            Mi znamo kako da realizujemo vase{" "}
+            <span className="text-red-700">ideje</span>!
           </h2>
           <a
             href="tel:+381637429415"
@@ -56,7 +57,7 @@ const Section1 = () => {
           alt="idea"
           width={350}
           height={3}
-          className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] mx-auto md:mx-0 object-cover "
+          className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] md:w-[500px] mx-auto md:mx-0 object-cover "
           priority
         />
       </motion.div>
@@ -79,7 +80,7 @@ const Section1 = () => {
             <p className="text-3xl xl:text-5xl pt-[150px]">
               Mnogi mali biznisi potcenjuju vrednost svojih{" "}
               <span className="font-bold text-red-700">veb-sajtova</span>, što
-              dovodi do ogromnog gubitka.
+              dovodi do ogromnog gubitka i smanjuje njihov potencijal
             </p>
             <div>
               <Image
