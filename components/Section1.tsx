@@ -98,7 +98,10 @@ const Section1 = () => {
               <span className=" text-red-700 font-bold">Zakazite sastanak</span>{" "}
               da poslozimo sve kockice
               <span className="text-red-700 font-bold">!</span>
-              <p className="text-2xl md:text-4xl"> +38163 742 94 15</p>
+              <p className="text-2xl md:text-3xl hover:scale-110">
+                {" "}
+                +38163 742 94 15
+              </p>
             </a>
           </div>
         </div>
