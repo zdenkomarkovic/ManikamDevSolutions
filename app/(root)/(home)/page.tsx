@@ -1,18 +1,15 @@
 import React from "react";
 import Hero from "@/components/Hero";
-import Pokusaj from "@/components/Pokusaj";
-// import Cenovnik from "@/components/Cenovnik";
-// import MiSmoTu from "@/components/mismotu/page";
-// import Pokusaj from "@/components/Pokusaj";
+import Section1 from "@/components/Section1";
+import Usluge from "@/components/Usluge";
 
 const Home = () => {
   return (
     <div>
-      <div className="">
+      <div>
         <Hero />
-        <Pokusaj />
-        {/* <MiSmoTu /> */}
-        {/* <Cenovnik /> */}
+        <Section1 />
+        <Usluge />
       </div>
     </div>
   );

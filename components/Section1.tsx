@@ -4,8 +4,9 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 import Image from "@/node_modules/next/image";
+import { cardData } from "@/constants/index";
 
-const Pokusaj = () => {
+const Section1 = () => {
   const targetRef = useRef(null);
   const { size } = useWindowSize();
 
@@ -33,12 +34,23 @@ const Pokusaj = () => {
           scale: titleAnimation.scale,
           opacity: titleAnimation.opacity,
         }}
-        className="h-[600px] sticky  top-10 md:flex justify-between items-center"
+        className="h-[600px] sticky  top-10 md:flex justify-around items-center"
       >
-        <h2 className="text-[33px] md:text-6xl xl:text-[80px] py-10 md:py-40 md:w-[65%]">
-          Mozemo vam pomoci da ostvarite veci{" "}
-          <span className="text-red-700">uspeh</span> preko interneta
-        </h2>
+        <div className="py-10">
+          <h2 className="text-4xl md:text-6xl xl:text-[80px] pb-10  ">
+            Za veci <span className="text-red-700">uspeh</span> online
+          </h2>
+          <a
+            href="tel:+381637429415"
+            className="text-red-700 text-3xl md:text-5xl text-center md:text-left hover:scale-110"
+          >
+            Zakazite sastanak:{" "}
+            <span className="text-black text-3xl md:text-4xl block md:inline">
+              {" "}
+              +38163 742 94 15
+            </span>
+          </a>
+        </div>
         <Image
           src={"/images/diego-ph-fIq0tET6llw-unsplash.jpg"}
           alt="idea"
@@ -62,23 +74,40 @@ const Pokusaj = () => {
         ))}
 
         {/* Dodatni sadržaj */}
-        <div className="h-[1000px] space-y-20">
-          <p className="text-2xl xl:text-6xl pt-[500px]">
-            Mnogi mali biznisi potcenjuju vrednost svojih{" "}
-            <span className="font-bold text-red-700">veb-sajtova</span>, što
-            dovodi do gubitka prilika i novca.
-          </p>
-          <p className="text-3xl md:text-7xl">
-            <span className=" text-red-700 font-bold">Nemojte</span> biti jedni
-            od njih<span className="text-red-700 font-bold">!</span>
-          </p>
+        <div className="h-[1000px] ">
+          <div className="space-y-5 sticky top-0">
+            <p className="text-3xl xl:text-5xl pt-[150px]">
+              Mnogi mali biznisi potcenjuju vrednost svojih{" "}
+              <span className="font-bold text-red-700">veb-sajtova</span>, što
+              dovodi do ogromnog gubitka.
+            </p>
+            <div>
+              <Image
+                src={"/images/gabriel-mihalcea-VEM3qCAheOk-unsplash.jpg"}
+                alt="usluge"
+                width={300}
+                height={200}
+                priority
+                className="mx-auto rounded-full w-[250px] h-[250px] md:w-[300px] md:h-[300px] hover:scale-110 object-cover"
+              />
+            </div>
+            <a
+              href="tel:+381637429415"
+              className="text-2xl md:text-4xl hover:scale-110"
+            >
+              <span className=" text-red-700 font-bold">Zakazite sastanak</span>{" "}
+              da poslozimo sve kockice
+              <span className="text-red-700 font-bold">!</span>
+              <p className="text-2xl md:text-4xl"> +38163 742 94 15</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Pokusaj;
+export default Section1;
 
 const animationHeight = 1500;
 const AnimatedCard = ({
@@ -145,38 +174,3 @@ const Card = ({
     </div>
   );
 };
-
-interface CardData {
-  title: string;
-  mim: string;
-  img: string;
-}
-
-const cardData: CardData[] = [
-  {
-    title: "Vaš sajt ne generiše dovoljno potencijalnih klijenata?",
-    mim: "Ne prepustite dizajn svog sajta slučaju – dozvolite nam da napravimo besplatan demo dizajn sa predlozima koji će vam doneti više potencijalnih klijenata! Bićete oduševljeni onim što vidite.",
-    img: "/images/hero2.jpg",
-  },
-  {
-    title: "Moj sajt ne dobija dovoljno poseta?",
-    mim: "Najbolji deo? Pobrinemo se da vaš sajt postane magnet za mušterije koje ne mogu da odole vašem šarmu. Dakle, ako ste mali ili srednji biznis koji želi da izgleda sjajno, bude lako pronađen i vlada online džunglom, mi smo tim za vas!",
-    img: "/images/hero.jpg",
-  },
-  {
-    title: "Moj sajt ne dobija dovoljno poseta?",
-    mim: "Naš visokokvalitetni SEO pruža vam maksimalnu vrednost za uloženi novac. Izbacujemo suvišne stvari za maksimalan efekat. Mi to zovemo Pametni SEO.",
-    img: "/images/sijalica.jpg",
-  },
-  {
-    title:
-      "Niste sigurni koga da angažujete za unapređenje vaše online prisutnosti?",
-    mim: "Imamo stotine recenzija sa 5 zvezdica. Svakog meseca zakazujemo 250 sastanaka za naš prodajni tim koristeći oglase, SEO i dobre stope konverzije. Omogućavamo vam da nas isprobate besplatno. Ne odlučujte na osnovu emocija, već na osnovu podataka.",
-    img: "/images/kljuc.jpg",
-  },
-  {
-    title: "Moji marketing i prodajni podaci nisu povezani?",
-    mim: "Naše digitalno oglašavanje je kao espresso za vaš brend – pružiće vam energiju i pažnju potrebnu da nadmašite konkurenciju.",
-    img: "/images/planeta.jpg",
-  },
-];
