@@ -89,7 +89,7 @@ const Section1 = () => {
                 width={300}
                 height={200}
                 priority
-                className="mx-auto rounded-full w-[250px] h-[250px] md:w-[300px] md:h-[300px] hover:scale-110 object-cover"
+                className="mx-auto rounded-full w-[250px] h-[250px] md:w-[300px] md:h-[300px] object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
             <a
