@@ -30,7 +30,7 @@ const Usluge = () => {
       <div className={` relative z-10 md:w-[50%] bg-gray-100/75 `}>
         <div className="grid grid-cols-2 gap-2 md:gap-5">
           {uslugeData.map((item, i) => {
-            return <Card item={item} i={i} />;
+            return <Card key={i} item={item} i={i} />;
           })}
         </div>
       </div>

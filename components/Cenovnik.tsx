@@ -5,7 +5,7 @@ const Cenovnik = () => {
     <div className="container px-4 mx-auto text-center py-10 space-y-10">
       <h1 className="text-4xl">Cenovnik</h1>
       <div className="grid grid-cols-4 gap-10 ">
-        <div>
+        {/* <div>
           <h3>Custom sajt</h3>
           <p>od 48000 rsd pa navise, zavisno od potrebe korisnika</p>
         </div>
@@ -40,7 +40,7 @@ const Cenovnik = () => {
         <div>
           <h3>Redizajn sajta </h3>
           <p>Zavisno od kompleksnosti, cesto skuplji od novog sajta</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

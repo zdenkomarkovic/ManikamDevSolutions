@@ -8,7 +8,7 @@ const WebSite = () => {
       <h2 className="text-center text-2xl">Izrada web sajta</h2>
       <div className="grid grid-cols-3 gap-6">
         <div className={cardClass}>
-          <h3 className={h3Class}>Sajt do 10 stranica - 48,000rsd</h3>
+          <h3 className={h3Class}>Sajt do 10 stranica - 32,000rsd</h3>
 
           <p>
             responsive - prilagodjeno pregledu na mobilnim uredjajima i desktop
@@ -26,7 +26,7 @@ const WebSite = () => {
           <p>Mesečni izveštaj o posetama</p>
           <p>osnovna google optimizacija SEO</p>
         </div>
-        <div className={cardClass}>
+        {/* <div className={cardClass}>
           <h3 className={h3Class}>Sajt sa CMS - 89,000rsd</h3>
           <p>
             {" "}
@@ -53,7 +53,7 @@ const WebSite = () => {
           <p>Podesavaje za rad sa kurirskim sluzbama</p>
           <p>Sistem za akcije i popuste</p>
           <p>Sigurnosni SSL sertifikat</p>
-        </div>
+        </div> */}
       </div>
       <div>
         <p>
