@@ -26,7 +26,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/usluge"
+                  href="/services"
                   className="text-muted-foreground hover:text-primary"
                 >
                   Usluge
@@ -45,7 +45,9 @@ export default function Footer() {
           </div>
 
           <div className="space-y-2">
-            <p className="text-muted-foreground">Telefon: +38163 742 94 15</p>
+            <a href="tel:+381637429415">
+              <p className="text-muted-foreground">Telefon: +38163 742 94 15</p>
+            </a>
             <p className="text-muted-foreground">Email: office@manikam.rs</p>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a href="#" className="text-muted-foreground hover:text-primary">

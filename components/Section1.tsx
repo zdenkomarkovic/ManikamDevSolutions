@@ -28,18 +28,17 @@ const Section1 = () => {
       ref={targetRef}
       className=" mx-auto container px-2 md:px-4 text-center"
     >
-      {/* Naslov */}
       <motion.div
         style={{
           scale: titleAnimation.scale,
           opacity: titleAnimation.opacity,
         }}
-        className="h-[600px] sticky  top-10 md:flex justify-around items-center"
+        className="h-[600px] sticky top-10 md:flex justify-between gap-10 items-center"
       >
-        <div className="py-10">
-          <h2 className="text-4xl md:text-6xl xl:text-[80px] pb-10  ">
-            Mi znamo kako da realizujemo vase{" "}
-            <span className="text-red-700">ideje</span>!
+        <div className="py-10 px-0">
+          <h2 className="text-4xl md:text-6xl  pb-10 px-0 ">
+            Uz naše znanje i iskustvo, vaše{" "}
+            <span className="text-red-700">ideje</span> pretvaramo u stvarnost!{" "}
           </h2>
           <a
             href="tel:+381637429415"
@@ -57,7 +56,7 @@ const Section1 = () => {
           alt="idea"
           width={350}
           height={3}
-          className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] md:w-[500px] mx-auto md:mx-0 object-cover "
+          className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] md:w-[560px] mx-auto md:mx-0 object-cover "
           priority
         />
       </motion.div>
