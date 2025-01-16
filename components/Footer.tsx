@@ -48,7 +48,12 @@ export default function Footer() {
             <a href="tel:+381637429415">
               <p className="text-muted-foreground">Telefon: +38163 742 94 15</p>
             </a>
-            <p className="text-muted-foreground">Email: office@manikam.rs</p>
+
+            <a href="mailto:manikamwebsolutions@gmail.com">
+              <p className="text-muted-foreground">
+                Email: manikamwebsolutions@gmail.com
+              </p>
+            </a>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a href="#" className="text-muted-foreground hover:text-primary">
                 <Facebook />

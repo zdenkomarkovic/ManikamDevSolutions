@@ -1,13 +1,13 @@
 import React from "react";
 
 const WebSite = () => {
-  const h3Class = " md:text-xl py-3";
-  const cardClass = " border-2 p-2 md:p-10 rounded-xl  space-y-1 md:space-y-2";
+  const cardClass =
+    " p-2 md:p-8 rounded-3xl shadow-xl md:shadow-2xl space-y-1 md:space-y-5 bg-gray-50  ";
   return (
-    <div className="  md:px-32  py-4 text-base md:text-xl  mx-auto space-y-8 ">
+    <div className="  md:px-32  py-4 text-base md:text-[22px]  mx-auto space-y-8 md:space-y-24 ">
       <h2 className="text-center text-3xl md:text-6xl">Izrada web sajta</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20">
-        <div className=" space-y-10">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+        <div className="md:hidden">
           <p className=" first-letter:pl-6 ">
             Tehnologije u kojima radimo su{" "}
             <span className="font-bold ">React.js Node.js Next.js</span>. Ne
@@ -16,17 +16,10 @@ const WebSite = () => {
             optimizovan, što je ključni faktor za SEO, što osigurava bolju
             poziciju na pretraživačima i veću vidljivost, čemu svi težimo.
           </p>
-          <p className=" first-letter:pl-6 hidden md:block">
-            Ovaj paket pruža sve što je potrebno za izvanredan sajt. Ako imate
-            specifične zahteve, kreiraćemo jedinstveni paket potpuno prilagođen
-            vašim potrebama. Možete dodati napredni SEO , poseban dizajn ili
-            bilo šta drugo iz naše palete usluga.
-          </p>
         </div>
         <div className={cardClass}>
-          <h3 className={h3Class}>
-            <span className="font-bold">Osnovni paket:</span> Sajt do 10
-            stranica - 32,000rsd
+          <h3 className=" py-3 font-bold">
+            Osnovni paket: Sajt do 10 stranica - 32,000rsd
           </h3>
 
           <p>
@@ -41,7 +34,15 @@ const WebSite = () => {
 
           <p> - Osnovna google optimizacija SEO</p>
         </div>
-        <div className="md:hidden">
+        <div className=" md:space-y-20">
+          <p className=" first-letter:pl-6 hidden md:block ">
+            Tehnologije u kojima radimo su{" "}
+            <span className="font-bold ">React.js Node.js Next.js</span>. Ne
+            koristimo WordPress ili druge popularne graditelje sajtova. Sajt
+            koji razvijamo za vas biće tehnički superiorniji, brži i bolje
+            optimizovan, što je ključni faktor za SEO, što osigurava bolju
+            poziciju na pretraživačima i veću vidljivost, čemu svi težimo.
+          </p>
           <p className=" first-letter:pl-6">
             Ovaj paket pruža sve što je potrebno za izvanredan sajt. Ako imate
             specifične zahteve, kreiraćemo jedinstveni paket potpuno prilagođen

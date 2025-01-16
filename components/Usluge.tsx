@@ -11,7 +11,7 @@ const imageClass =
 const h3Class = "text-[20px] md:text-3xl font-bold";
 const Usluge = () => {
   return (
-    <div className=" top container px-2 md:px-4 mx-auto my-20 relative md:flex justify-around ">
+    <div className=" top container px-2 md:px-10 mx-auto my-20 relative md:flex justify-around ">
       <div
         className={`md:w-[35%] h-[500px] rounded-xl  px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 hover:scale-110 transition-transform duration-500 `}
       >
@@ -27,8 +27,8 @@ const Usluge = () => {
           />
         </div>
       </div>
-      <div className={` relative z-10 md:w-[50%] bg-gray-100/75 `}>
-        <div className="grid grid-cols-2 gap-2 md:gap-10">
+      <div className={` relative z-10 md:w-[60%] bg-gray-100/75 `}>
+        <div className="grid grid-cols-2 gap-2 md:gap-10 px-20">
           {uslugeData.map((item, i) => {
             return <Card key={i} item={item} i={i} />;
           })}

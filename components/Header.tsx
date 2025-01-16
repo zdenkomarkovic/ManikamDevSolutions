@@ -13,12 +13,12 @@ import { SlArrowDown } from "react-icons/sl";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggleMenuAndDropdown = () => {
-    setIsMenuOpen(!isMenuOpen);
-    setDropdownOpen(false);
-  };
+  // const toggleMenuAndDropdown = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  //   setDropdownOpen(false);
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,15 +39,16 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-[10px]">
         <div className="flex justify-between items-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href="/" className="flex items-center space-x-4">
               <Image
-                src={"/logoo.jpg"}
+                src={"/images/manikam-logo.png"}
                 alt="manikamdevsolutions logo"
-                width={50}
-                height={40}
+                width={55}
+                height={55}
+                className=" rounded-full"
               />
               <span className="font-bold text-xl hidden md:inline">
                 ManikamWebSolutions
@@ -61,21 +62,21 @@ export default function Header() {
                 <div
                   key={i}
                   className="relative group"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
+                  // onMouseEnter={() => setDropdownOpen(true)}
+                  // onMouseLeave={() => setDropdownOpen(false)}
                 >
                   <Link
                     href={item.route}
                     className="flex items-center text-foreground hover:text-primary transition-colors uppercase cursor-pointer"
                   >
                     {item.title}
-                    <SlArrowDown
+                    {/* <SlArrowDown
                       className={`ml-2 ${
                         !dropdownOpen && "-rotate-90"
                       } font-bold `}
-                    />
+                    /> */}
                   </Link>
-                  {dropdownOpen && (
+                  {/* {dropdownOpen && (
                     <div className="absolute top-full left-0 bg-background shadow-md py-2 w-48 z-10">
                       {item.dropdownItems.map((subItem, j) => (
                         <Link
@@ -87,7 +88,7 @@ export default function Header() {
                         </Link>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
               ) : (
                 <Link
@@ -129,25 +130,25 @@ export default function Header() {
                 <div
                   key={i}
                   className="relative group"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                  //   onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
+                  // onClick={() => setDropdownOpen(!dropdownOpen)}
+                  // //   onMouseEnter={() => setDropdownOpen(true)}
+                  // onMouseLeave={() => setDropdownOpen(false)}
                 >
                   <div className="flex items-center">
                     <Link
                       href={item.route}
                       className="block  py-2 hover:text-primary transition-colors uppercase cursor-pointer"
-                      onClick={toggleMenuAndDropdown}
+                      // onClick={toggleMenuAndDropdown}
                     >
                       {item.title}
                     </Link>
-                    <SlArrowDown
+                    {/* <SlArrowDown
                       className={`ml-2 ${
                         !dropdownOpen && "-rotate-90"
                       } font-bold `}
-                    />
+                    /> */}
                   </div>
-                  {dropdownOpen && (
+                  {/* {dropdownOpen && (
                     <div className="absolute top-full left-0 bg-background shadow-md py-2 w-48 z-10">
                       {item.dropdownItems.map((subItem, j) => (
                         <Link
@@ -160,7 +161,7 @@ export default function Header() {
                         </Link>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
               ) : (
                 <Link

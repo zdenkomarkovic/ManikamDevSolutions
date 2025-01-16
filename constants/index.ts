@@ -4,10 +4,6 @@ export const NavList = [
     route: "/",
   },
   {
-    title: "O nama",
-    route: "/about",
-  },
-  {
     title: "Usluge",
     route: "/services",
     hasDropdown: true,
