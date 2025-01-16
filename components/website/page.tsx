@@ -4,8 +4,10 @@ const WebSite = () => {
   const cardClass =
     " p-2 md:p-8 rounded-3xl shadow-xl md:shadow-2xl space-y-1 md:space-y-5 bg-gray-50  ";
   return (
-    <div className="  md:px-32  py-4 text-base md:text-[22px]  mx-auto space-y-8 md:space-y-24 ">
-      <h2 className="text-center text-3xl md:text-6xl">Izrada web sajta</h2>
+    <div className="  md:px-32  py-4 text-base md:text-[22px]  mx-auto space-y-8   ">
+      <h2 className="text-center text-3xl md:text-6xl md:pb-20">
+        Izrada web sajta
+      </h2>
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
         <div className="md:hidden">
           <p className=" first-letter:pl-6 ">
