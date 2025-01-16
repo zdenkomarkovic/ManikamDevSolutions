@@ -4,7 +4,7 @@ import Link from "@/node_modules/next/link";
 import React from "react";
 
 const class1 =
-  " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-3xl pt-[72px] md:pt-24";
+  " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl md:rounded-3xl pt-[72px] md:pt-24";
 const imageClass =
   "w-[150px] h-[150px] md:w-[200px] md:h-[200px] mx-auto absolute -top-16 md:-top-24 left-0 right-0";
 
@@ -28,7 +28,7 @@ const Usluge = () => {
         </div>
       </div>
       <div className={` relative z-10 md:w-[60%] bg-gray-100/75 `}>
-        <div className="grid grid-cols-2 gap-2 md:gap-10 px-20">
+        <div className="grid grid-cols-2 gap-2 md:gap-10 md:px-20">
           {uslugeData.map((item, i) => {
             return <Card key={i} item={item} i={i} />;
           })}
