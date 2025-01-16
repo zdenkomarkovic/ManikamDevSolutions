@@ -8,7 +8,6 @@ import { Button } from "../components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavList } from "../constants/index";
-import { SlArrowDown } from "react-icons/sl";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
