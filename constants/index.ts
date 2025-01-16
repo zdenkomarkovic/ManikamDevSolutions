@@ -48,8 +48,8 @@ export const cardData: CardData[] = [
     img: "/images/kljuc.jpg",
   },
   {
-    title: "Moji marketing i prodajni podaci nisu povezani?",
-    mim: "Naše digitalno oglašavanje je kao espresso za vaš brend – pružiće vam energiju i pažnju potrebnu da nadmašite konkurenciju.",
+    title: "Želite da pokrenete oglašavanje?",
+    mim: "Nadmašite konkurenciju i povećajte svoju online vidljivost uz profesionalno kreirane kampanje koje donose rezultate. Nudimo optimizaciju, analitiku i prilagođena rešenja kako biste postigli najbolje performanse na Google pretragama.",
     img: "/images/planeta.jpg",
   },
 ];
@@ -62,61 +62,61 @@ interface UslugeData {
 
 export const uslugeData: UslugeData[] = [
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/26760925_2112.i301.031.S.m004.c13.UI and UX designers concepts isometric composition.svg",
     title: "WEB DEVELOPMENT",
     text: "Koristimo tehnologije React.js, Node.js i Next.js Sarađujemo sa domaćim i stranim klijentima, a takođe razvijamo i sopstvena digitalna rešenja, poput aplikacije",
     span: " Taxi report",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/1677243125responsive-web-design.svg",
     title: "SAJT",
     text: "Ne koristimo alate za izradu sajtova, već ih programiramo u Next.js, jednoj od najbržih tehnologija, što osigurava brzinu i bolji rang na Google. Nudimo osnovne sajtove do 10 stranica i prilagođena rešenja za specifične potrebe klijenata.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/cms-system (1).png",
     title: "SAJT KOJI SAMI AŽURIRATE",
     text: "CMS (Content Management System) omogućava korisnicima da sami ažuriraju stranice, dodaju ili brišu sadržaj i stranice. Idealan je za blogove, portale i sajtove sa čestim izmenama sadržaja.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/mobile-shopping.png",
     title: "ONLINE PRODAVNICA",
     text: "Custom online prodavnice pružaju prilagođen prikaz za određenu grupu proizvoda, uz dodatne opcije i funkcionalnosti koje poboljšavaju prodaju. Idealno rešenje za uspešnu online prodaju.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/352856051_11423822.svg",
     title: "SEO",
     text: "Želite bolje pozicioniranje u pretrazi? Naš visokokvalitetni SEO poboljšava poziciju vašeg sajta i povećava vidljivost. Optimizujemo sadržaj, ključne reči i tehničke aspekte sajta za bolje rezultate i veći saobraćaj.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/rb_54114.png",
     title: "ODRŽAVANJE",
     text: "Svaki sajt vremenom zahteva održavanje. Kako tehnologije brzo napreduju, važno je redovno prilagođavanje kako bi sajt ostao funkcionalan i u toku s najnovijim standardima.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/destination.png",
     title: "TRANZICIJA SAJTA",
     text: "Bez obzira na razlog, ako želite da promenite hosting provajdera, naš tim će se pobrinuti za siguran i besprekidan transfer vašeg sajta na provajdera po vašem izboru.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/redesign.png",
     title: "REDIZAJN SAJTA",
     text: "Ako je vaš sajt stariji, verovatno je vreme za redizajn. Redizajn uključuje modernizaciju dizajna uz zadržavanje dela postojećeg sadržaja i dodavanje novog, čineći ga funkcionalnijim i vizuelno privlačnijim.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/consulting.png",
     title: "KONSALTING",
     text: "Niste sigurni šta vam je potrebno? Zakažite sastanak sa nama, rado ćemo vam predstaviti šta sve možemo da uradimo za vaš biznis i kako da postignete bolje rezultate.",
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/cloud.png",
     title: "HOSTING",
     text: "U saradnji sa našim partnerima, nudimo hosting i domene za sajtove koje smo izradili ili redizajnirali, osiguravajući pouzdanu podršku i optimalne performanse za vaš sajt ili web softver.",
     span: "",
