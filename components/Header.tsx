@@ -126,44 +126,7 @@ export default function Header() {
         >
           <div className="container mx-auto px-4 py-4">
             {NavList.map((item, i) => {
-              return item.hasDropdown ? (
-                <div
-                  key={i}
-                  className="relative group"
-                  // onClick={() => setDropdownOpen(!dropdownOpen)}
-                  // //   onMouseEnter={() => setDropdownOpen(true)}
-                  // onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <div className="flex items-center">
-                    <Link
-                      href={item.route}
-                      className="block  py-2 hover:text-primary transition-colors uppercase cursor-pointer"
-                      // onClick={toggleMenuAndDropdown}
-                    >
-                      {item.title}
-                    </Link>
-                    {/* <SlArrowDown
-                      className={`ml-2 ${
-                        !dropdownOpen && "-rotate-90"
-                      } font-bold `}
-                    /> */}
-                  </div>
-                  {/* {dropdownOpen && (
-                    <div className="absolute top-full left-0 bg-background shadow-md py-2 w-48 z-10">
-                      {item.dropdownItems.map((subItem, j) => (
-                        <Link
-                          key={j}
-                          href={subItem.route}
-                          onClick={toggleMenuAndDropdown}
-                          className="block px-1 py-2 hover:text-primary transition-colors uppercase"
-                        >
-                          {subItem.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )} */}
-                </div>
-              ) : (
+              return (
                 <Link
                   key={i}
                   href={item.route}

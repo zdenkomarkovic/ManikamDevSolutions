@@ -50,7 +50,7 @@ export default function Footer() {
             </a>
 
             <a href="mailto:manikamwebsolutions@gmail.com">
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-wrap">
                 Email: manikamwebsolutions@gmail.com
               </p>
             </a>
