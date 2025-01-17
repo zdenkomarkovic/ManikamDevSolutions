@@ -20,7 +20,7 @@ export default function Footer() {
                   href="/"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  Pocetna
+                  Početna
                 </Link>
               </li>
 

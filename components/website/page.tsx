@@ -37,7 +37,7 @@ const WebSite = () => {
           <p> - Moderan dizajn prilagođen vašim željama i potrebama.</p>
           <p> - Kontakt forma sa mapom vaše lokacije.</p>
           <p> - Integracija sa društvenim mrežama</p>
-          <p> - SSL sertifikat i zastita sajta</p>
+          <p> - SSL sertifikat i zaštita sajta</p>
           <p> - Hosting i domen za prvu godinu uključeni u cenu.</p>
           <p> - Izrada za 3-7 dana</p>
 
