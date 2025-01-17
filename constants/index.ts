@@ -33,7 +33,7 @@ export const cardData: CardData[] = [
     img: "/images/hero2.jpg",
   },
   {
-    title: "Vaš sajt ne donosi dovoljno novih klijenata?",
+    title: "Vaš sajt ne privlači dovoljno novih klijenata?",
     mim: "Vaš sajt ne privlači dovoljno potencijalnih klijenata? Možda je vreme za osveženje dizajna! Kreiramo upečatljive, modernizovane sajtove koji ne samo da izgledaju fantastično, već i ostavljaju snažan utisak na posetioce. Povećajte angažman i učinite da vaš sajt bude nezaboravan!",
     img: "/images/hero.jpg",
   },

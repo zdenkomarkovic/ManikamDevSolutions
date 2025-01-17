@@ -1,4 +1,7 @@
+"use client";
+
 import { uslugeData } from "@/constants/index";
+import { motion } from "framer-motion";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import React from "react";
@@ -12,10 +15,14 @@ const h3Class = "text-[20px] md:text-3xl font-bold";
 const Usluge = () => {
   return (
     <div className=" top container px-2 md:px-10 mx-auto my-20 relative md:flex justify-around ">
-      <div
-        className={`md:w-[35%] h-[500px] rounded-xl  px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 hover:scale-110 transition-transform duration-500 `}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={`md:w-[35%] h-[500px] rounded-xl  px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
       >
-        <h2 className="text-[33px] md:text-6xl text-center">NASE USLUGE</h2>
+        <h2 className="text-[33px] md:text-6xl text-center uppercase">
+          Naše usluge
+        </h2>
         <div>
           <Image
             src={"/images/pravac.jpg"}
@@ -26,7 +33,7 @@ const Usluge = () => {
             className="mx-auto rotate-90 md:rotate-0 rounded-xl py-10 md:py-0 w-[350px] h-auto object-cover"
           />
         </div>
-      </div>
+      </motion.div>
       <div className={` relative z-10 md:w-[60%] bg-gray-100/75 `}>
         <div className="grid grid-cols-2 gap-2 md:gap-10 md:px-20">
           {uslugeData.map((item, i) => {
@@ -56,24 +63,26 @@ const Card = ({
   i: number;
 }) => {
   return (
-    <Link href={"/services"}>
-      <div
-        className={`${class1} ${i === 0 ? "mt-[140px] md:mt-[180px]" : ""} ${
-          i !== 0 && (i === 1 || i % 2 === 0) ? "mt-[70px] md:mt-[90px]" : ""
-        }`}
-      >
-        <Image
-          src={item.img}
-          alt=""
-          width={200}
-          height={200}
-          className={`${imageClass}`}
-        />
-        <h3 className={`${h3Class}`}>{item.title}</h3>
-        <p>
-          {item.text} <span className="font-bold">{item.span}</span>
-        </p>
-      </div>
-    </Link>
+    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      <Link href={"/services"}>
+        <div
+          className={`${class1} ${i === 0 ? "mt-[140px] md:mt-[180px]" : ""} ${
+            i !== 0 && (i === 1 || i % 2 === 0) ? "mt-[70px] md:mt-[90px]" : ""
+          }`}
+        >
+          <Image
+            src={item.img}
+            alt=""
+            width={200}
+            height={200}
+            className={`${imageClass}`}
+          />
+          <h3 className={`${h3Class}`}>{item.title}</h3>
+          <p>
+            {item.text} <span className="font-bold">{item.span}</span>
+          </p>
+        </div>
+      </Link>
+    </motion.div>
   );
 };

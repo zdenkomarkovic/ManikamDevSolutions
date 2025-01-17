@@ -44,7 +44,7 @@ const Section1 = () => {
             href="tel:+381637429415"
             className="text-red-700 text-3xl md:text-5xl text-center md:text-left hover:scale-110"
           >
-            Zakazite sastanak:{" "}
+            Zakažite sastanak:{" "}
             <span className="text-black text-3xl md:text-4xl block md:inline">
               {" "}
               +38163 742 94 15
@@ -95,8 +95,8 @@ const Section1 = () => {
               href="tel:+381637429415"
               className="text-2xl md:text-4xl hover:scale-110"
             >
-              <span className=" text-red-700 font-bold">Zakazite sastanak</span>{" "}
-              da poslozimo sve kockice
+              <span className=" text-red-700 font-bold">Zakažite sastanak</span>{" "}
+              da posložimo sve kockice
               <span className="text-red-700 font-bold">!</span>
               <p className="text-2xl md:text-3xl hover:scale-110">
                 {" "}
@@ -145,7 +145,6 @@ const AnimatedCard = ({
   );
 };
 
-// Komponenta za sadržaj kartice
 const Card = ({
   text,
   index,

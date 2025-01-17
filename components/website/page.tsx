@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const WebSite = () => {
   const cardClass =
@@ -19,7 +22,11 @@ const WebSite = () => {
             poziciju na pretraživačima i veću vidljivost, čemu svi težimo.
           </p>
         </div>
-        <div className={cardClass}>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={cardClass}
+        >
           <h3 className=" py-3 font-bold">
             Osnovni paket: Sajt do 10 stranica - 32,000rsd
           </h3>
@@ -35,7 +42,7 @@ const WebSite = () => {
           <p> - Izrada za 3-7 dana</p>
 
           <p> - Osnovna google optimizacija SEO</p>
-        </div>
+        </motion.div>
         <div className=" md:space-y-20">
           <p className=" first-letter:pl-6 hidden md:block ">
             Tehnologije u kojima radimo su{" "}
