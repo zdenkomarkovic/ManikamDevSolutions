@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: "ManikamDevSolutions",
   description: "Agencija za izradu softvera i sajtova",
   icons: {
-    icon: "/public/manikam.png",
-    apple: "/public/manikam.png",
+    icon: "/manikam.png",
+    apple: "/manikam.png",
   },
 };
 
