@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: "ManikamDevSolutions",
   description: "Agencija za izradu softvera i sajtova",
   icons: {
-    icon: "/public/images/manikam.png",
-    apple: "/public/images/manikam.png",
+    icon: "/public/manikam.png",
+    apple: "/public/manikam.png",
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
