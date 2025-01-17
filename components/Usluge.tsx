@@ -47,14 +47,6 @@ const Usluge = () => {
 
 export default Usluge;
 
-// Moj sajt ne dobija dovoljno poseta? Naš visokokvalitetni SEO pruža
-// vam maksimalnu vrednost za uloženi novac. Izbacujemo suvišne
-// stvari za maksimalan efekat. Mi to zovemo Pametni SEO.
-
-// Ne prepustite dizajn svog sajta slučaju – dozvolite nam da
-//               napravimo besplatan demo dizajn sa predlozima koji će vam doneti
-//               više potencijalnih klijenata! Bićete oduševljeni onim što vidite.
-
 const Card = ({
   item,
   i,
