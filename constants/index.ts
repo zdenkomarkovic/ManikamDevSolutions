@@ -33,13 +33,13 @@ export const cardData: CardData[] = [
     img: "/images/hero2.jpg",
   },
   {
-    title: "Vaš sajt ne generiše dovoljno potencijalnih klijenata?",
-    mim: "Najbolji deo? Pobrinemo se da vaš sajt postane magnet za mušterije koje ne mogu da odole vašem šarmu. Dakle, ako ste mali ili srednji biznis koji želi da izgleda sjajno, bude lako pronađen i vlada online džunglom, mi smo tim za vas!",
+    title: "Vaš sajt ne donosi dovoljno novih klijenata?",
+    mim: "Vaš sajt ne privlači dovoljno potencijalnih klijenata? Možda je vreme za osveženje dizajna! Kreiramo upečatljive, modernizovane sajtove koji ne samo da izgledaju fantastično, već i ostavljaju snažan utisak na posetioce. Povećajte angažman i učinite da vaš sajt bude nezaboravan!",
     img: "/images/hero.jpg",
   },
   {
-    title: "Moj sajt ne dobija dovoljno poseta?",
-    mim: "Naš visokokvalitetni SEO pruža vam maksimalnu vrednost za uloženi novac. Izbacujemo suvišne stvari za maksimalan efekat. Mi to zovemo Pametni SEO.",
+    title: "Povećajte posete uz SEO optimizaciju!",
+    mim: "Vaš sajt nema dovoljno poseta? Pomoću SEO optimizacije možete povećati vidljivost na pretraživačima i privući više korisnika. Nudimo detaljnu analizu, strateško planiranje i implementaciju rešenja koja donose rezultate. Poboljšajte poziciju na Google-u i nadmašite konkurenciju već danas",
     img: "/images/sijalica.jpg",
   },
   {
@@ -62,37 +62,37 @@ interface UslugeData {
 
 export const uslugeData: UslugeData[] = [
   {
-    img: "/images/26760925_2112.i301.031.S.m004.c13.UI and UX designers concepts isometric composition.svg",
+    img: "/images/software.svg",
     title: "WEB DEVELOPMENT",
     text: "Koristimo tehnologije React.js, Node.js i Next.js Sarađujemo sa domaćim i stranim klijentima, a takođe razvijamo i sopstvena digitalna rešenja, poput aplikacije",
     span: " Taxi report",
   },
   {
-    img: "/images/1677243125responsive-web-design.svg",
+    img: "/images/sajt.svg",
     title: "SAJT",
     text: "Ne koristimo alate za izradu sajtova, već ih programiramo u Next.js, jednoj od najbržih tehnologija, što osigurava brzinu i bolji rang na Google. Nudimo osnovne sajtove do 10 stranica i prilagođena rešenja za specifične potrebe klijenata.",
     span: "",
   },
   {
-    img: "/images/cms-system (1).png",
+    img: "/images/cms.png",
     title: "SAJT KOJI SAMI AŽURIRATE",
     text: "CMS (Content Management System) omogućava korisnicima da sami ažuriraju stranice, dodaju ili brišu sadržaj i stranice. Idealan je za blogove, portale i sajtove sa čestim izmenama sadržaja.",
     span: "",
   },
   {
-    img: "/images/mobile-shopping.png",
+    img: "/images/ecomm.png",
     title: "ONLINE PRODAVNICA",
     text: "Custom online prodavnice pružaju prilagođen prikaz za određenu grupu proizvoda, uz dodatne opcije i funkcionalnosti koje poboljšavaju prodaju. Idealno rešenje za uspešnu online prodaju.",
     span: "",
   },
   {
-    img: "/images/352856051_11423822.svg",
+    img: "/images/seo.svg",
     title: "SEO",
     text: "Želite bolje pozicioniranje u pretrazi? Naš visokokvalitetni SEO poboljšava poziciju vašeg sajta i povećava vidljivost. Optimizujemo sadržaj, ključne reči i tehničke aspekte sajta za bolje rezultate i veći saobraćaj.",
     span: "",
   },
   {
-    img: "/images/rb_54114.png",
+    img: "/images/odrzavanje.png",
     title: "ODRŽAVANJE",
     text: "Svaki sajt vremenom zahteva održavanje. Kako tehnologije brzo napreduju, važno je redovno prilagođavanje kako bi sajt ostao funkcionalan i u toku s najnovijim standardima.",
     span: "",
@@ -122,7 +122,7 @@ export const uslugeData: UslugeData[] = [
     span: "",
   },
   {
-    img: "/11434263_4706355.svg",
+    img: "/images/ads.svg",
     title: "GOOGLE OGLAŠAVANJE",
     text: "Uz našu uslugu digitalnog oglašavanja, vaš brend će dobiti potrebnu vidljivost i pažnju, što će vam omogućiti da se izdvojite iz konkurencije i dosegnete ciljaniju publiku.",
     span: "",

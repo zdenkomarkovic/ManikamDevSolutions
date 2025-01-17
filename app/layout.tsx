@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ManikamDevSolutions",
   description: "Agencija za izradu softvera i sajtova",
-  icons: "/public/images/manikam.png",
+  icons: {
+    icon: "/public/images/manikam.png",
+    apple: "/public/images/manikam.png",
+  },
 };
 
 export default function RootLayout({

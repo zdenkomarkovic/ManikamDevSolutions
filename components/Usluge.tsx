@@ -6,7 +6,7 @@ import React from "react";
 const class1 =
   " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl md:rounded-3xl pt-[72px] md:pt-24";
 const imageClass =
-  " w-[150px] h-[150px] md:w-[200px] md:h-[200px] mx-auto absolute -top-16 md:-top-24 left-0 right-0";
+  " w-[150px] h-[150px] md:w-[200px] md:h-[200px] mx-auto absolute -top-16 md:-top-24 left-0 right-0 ";
 
 const h3Class = "text-[20px] md:text-3xl font-bold";
 const Usluge = () => {
@@ -18,7 +18,7 @@ const Usluge = () => {
         <h2 className="text-[33px] md:text-6xl text-center">NASE USLUGE</h2>
         <div>
           <Image
-            src={"/images/nik-MAgPyHRO0AA-unsplash.jpg"}
+            src={"/images/pravac.jpg"}
             alt="usluge"
             width={300}
             height={200}

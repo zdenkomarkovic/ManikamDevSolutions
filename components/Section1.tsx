@@ -52,7 +52,7 @@ const Section1 = () => {
           </a>
         </div>
         <Image
-          src={"/images/diego-ph-fIq0tET6llw-unsplash.jpg"}
+          src={"/images/ideja.jpg"}
           alt="idea"
           width={350}
           height={3}
@@ -83,7 +83,7 @@ const Section1 = () => {
             </p>
             <div>
               <Image
-                src={"/images/gabriel-mihalcea-VEM3qCAheOk-unsplash.jpg"}
+                src={"/images/rubik.jpg"}
                 alt="usluge"
                 width={300}
                 height={200}
