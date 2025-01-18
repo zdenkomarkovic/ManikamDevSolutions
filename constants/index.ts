@@ -68,7 +68,7 @@ export const uslugeData: UslugeData[] = [
     span: " Taxi report",
   },
   {
-    img: "/images/sajt.svg",
+    img: "/images/5462824_Devices.svg",
     title: "SAJT",
     text: "Ne koristimo alate za izradu sajtova, već ih programiramo u Next.js, jednoj od najbržih tehnologija, što osigurava brzinu i bolji rang na Google. Nudimo osnovne sajtove do 10 stranica i prilagođena rešenja za specifične potrebe klijenata.",
     span: "",
@@ -80,7 +80,7 @@ export const uslugeData: UslugeData[] = [
     span: "",
   },
   {
-    img: "/images/ecomm.png",
+    img: "/images/7079603_3509262.svg",
     title: "ONLINE PRODAVNICA",
     text: "Custom online prodavnice pružaju prilagođen prikaz za određenu grupu proizvoda, uz dodatne opcije i funkcionalnosti koje poboljšavaju prodaju. Idealno rešenje za uspešnu online prodaju.",
     span: "",
