@@ -28,7 +28,7 @@ const WebSite = () => {
           className={cardClass}
         >
           <h3 className=" py-3 font-bold">
-            Osnovni paket: Sajt do 10 stranica - 32,000rsd
+            Osnovni paket: Sajt do 10 stranica
           </h3>
 
           <p>
