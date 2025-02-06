@@ -13,11 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ManikamDevSolutions",
+  title: "Manikam Web Solutions",
   description: "Agencija za izradu softvera i sajtova",
   icons: {
     icon: "/manikam.png",
     apple: "/manikam.png",
+  },
+
+  keywords: [
+    "sajt",
+    "sajtovi",
+    "izrada sajta",
+    "web dizajn",
+    "softver",
+    "izrada softvera",
+  ],
+  alternates: {
+    canonical: "https://www.manikamwebsolutions.com/",
   },
 };
 

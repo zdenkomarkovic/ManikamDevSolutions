@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.manikamwebsolutions.com
-
-# Sitemaps
-Sitemap: https://www.manikamwebsolutions.com/sitemap.xml
