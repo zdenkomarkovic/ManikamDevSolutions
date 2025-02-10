@@ -43,13 +43,13 @@ export default function Header() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href="/" className="flex items-center space-x-4">
               <Image
-                src={"/images/manikam-logo.png"}
+                src={"/logo.jpg"}
                 alt="manikamdevsolutions logo"
                 width={55}
                 height={55}
                 className=" rounded-full"
               />
-              <span className="font-bold text-xl hidden md:inline">
+              <span className="font-bold  text-xl hidden md:inline">
                 ManikamWebSolutions
               </span>
             </Link>

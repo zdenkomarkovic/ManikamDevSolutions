@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: "Manikam Web Solutions",
   description: "Agencija za izradu softvera i sajtova",
   icons: {
-    icon: "/manikam.png",
-    apple: "/manikam.png",
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
   },
 
   keywords: [
