@@ -16,10 +16,10 @@ import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { Button } from "../../../components/ui/button";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+// import { FaFacebook } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { FaViber } from "react-icons/fa";
-import { FaWhatsappSquare } from "react-icons/fa";
+// import { FaWhatsappSquare } from "react-icons/fa";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Molimo unesite vase ime i prezime" }),

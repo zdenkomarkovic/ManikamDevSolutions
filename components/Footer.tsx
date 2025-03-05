@@ -1,7 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Facebook, Instagram } from "lucide-react";
+import {
+  //  Facebook,
+  Instagram,
+} from "lucide-react";
 
 export default function Footer() {
   return (
