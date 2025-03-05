@@ -1,3 +1,5 @@
+import Reference from "@/components/Reference";
+
 export const NavList = [
   {
     title: "Naslovna",
@@ -127,4 +129,63 @@ export const uslugeData: UslugeData[] = [
     text: "Uz našu uslugu digitalnog oglašavanja, vaš brend će dobiti potrebnu vidljivost i pažnju, što će vam omogućiti da se izdvojite iz konkurencije i dosegnete ciljaniju publiku.",
     span: "",
   },
+];
+
+export interface Redizajn {
+  title: string;
+  image: string;
+  link: string;
+}
+
+export const reference: Reference[] = [
+  {
+    title: "Pure Clean Solutions",
+    image: "/SS3.png",
+    link: "https://www.ciscenje-nis.rs/",
+  },
+  {
+    title: "Enterijeri Kankan",
+    image: "/SS4.png",
+    link: "https://www.separei.rs/",
+  },
+  {
+    title: " Dm Rustic 24",
+    image: "/SS5.png",
+    link: "https://www.dekorativneciglice.rs/",
+  },
+  {
+    title: "Cool Taxi Nis",
+    image: "/SS2.png",
+    link: "https://www.taxiniš.rs/",
+  },
+  {
+    title: "Autoring",
+    image: "/SS9.png",
+    link: "https://www.kombiprevozputnikapozega.rs/",
+  },
+  {
+    title: "Sushi Wasabi",
+    image: "/SS7.png",
+    link: "https://www.sushiwasabi.rs/",
+  },
+  {
+    title: "Lucky Fitness",
+    image: "/SS8.png",
+    link: "https://www.luckyfitness.rs/",
+  },
+  {
+    title: "Šlep služba Purić 032 Čačak",
+    image: "/SS6.png",
+    link: "https://www.slep-cacak.rs/",
+  },
+  // {
+  //   title: "STEEL AM CONSTRUCTIONS",
+  //   image: "/SS2.png",
+  //   link: "https://www.celicnekonstrukcije.rs/",
+  // },
+  // {
+  //   title: "Tolić Inženjering",
+  //   image: "/SS2.png",
+  //   link: "https://www.celicne-konstrukcije.rs/",
+  // },
 ];
