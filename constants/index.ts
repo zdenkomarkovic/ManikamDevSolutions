@@ -131,7 +131,7 @@ export const uslugeData: UslugeData[] = [
   },
 ];
 
-export interface Redizajn {
+export interface Reference {
   title: string;
   image: string;
   link: string;
