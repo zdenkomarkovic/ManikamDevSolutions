@@ -81,7 +81,7 @@ export default function Contact() {
                 +381 63 742 94 15
               </button>
             </a>
-            <a
+            {/* <a
               href="https://wa.me/381637429415"
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
@@ -89,7 +89,7 @@ export default function Contact() {
                 <FaWhatsappSquare className="text-[30px] lg:text-[35px] rounded-2xl text-green-700 " />{" "}
                 +381 63 742 94 15
               </button>
-            </a>
+            </a> */}
             <a
               href="mailto:manikamwebsolutions@gmail.com"
               className="py-[7px] flex border-b-[1px] border-gray-800"
@@ -101,21 +101,21 @@ export default function Contact() {
           </div>
           <div className="flex pt-4 lg:pt-12 gap-10 lg:gap-20 text-[33px] lg:text-[40px] justify-center items-center text-center">
             <a
-              href=""
+              href="https://www.instagram.com/manikam.web.solutions/"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:scale-110 transition-transform duration-500"
             >
               <FaInstagram className="" />
             </a>
-            <a
+            {/* <a
               href=""
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:scale-110 transition-transform duration-500"
             >
               <FaFacebook className="" />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="mx-6 md:mx-20 bg-gray-50 rounded-3xl shadow-2xl">

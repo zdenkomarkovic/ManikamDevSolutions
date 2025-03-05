@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Agencija za izradu softvera i sajtova",
   icons: {
     icon: "/logo.jpg",
-    apple: "/logo.jpg",
+    apple: "/logo.jpg1",
   },
 
   keywords: [
