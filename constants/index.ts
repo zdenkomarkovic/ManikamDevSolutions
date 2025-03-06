@@ -156,7 +156,7 @@ export const reference: Reference[] = [
   {
     title: "Cool Taxi Nis",
     image: "/SS2.png",
-    link: "https://www.taxiniš.rs/",
+    link: "https://www.taxinis.rs/",
   },
   {
     title: "Autoring",
