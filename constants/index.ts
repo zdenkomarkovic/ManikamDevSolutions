@@ -139,6 +139,11 @@ export interface Reference {
 
 export const reference: Reference[] = [
   {
+    title: "Kreditni Savetnik",
+    image: "/SS11.png",
+    link: "https://www.kreditnisavetniksrbija.rs/",
+  },
+  {
     title: "Pure Clean Solutions",
     image: "/SS3.png",
     link: "https://www.ciscenje-nis.rs/",
@@ -148,6 +153,7 @@ export const reference: Reference[] = [
     image: "/SS4.png",
     link: "https://www.separei.rs/",
   },
+
   {
     title: " Dm Rustic 24",
     image: "/SS5.png",
@@ -157,6 +163,11 @@ export const reference: Reference[] = [
     title: "Cool Taxi Nis",
     image: "/SS2.png",
     link: "https://www.taxinis.rs/",
+  },
+  {
+    title: "STEEL AM CONSTRUCTIONS",
+    image: "/SS12.png",
+    link: "https://www.celicnekonstrukcije.rs/",
   },
   {
     title: "Autoring",
@@ -178,14 +189,16 @@ export const reference: Reference[] = [
     image: "/SS6.png",
     link: "https://www.slep-cacak.rs/",
   },
-  // {
-  //   title: "STEEL AM CONSTRUCTIONS",
-  //   image: "/SS2.png",
-  //   link: "https://www.celicnekonstrukcije.rs/",
-  // },
-  // {
-  //   title: "Tolić Inženjering",
-  //   image: "/SS2.png",
-  //   link: "https://www.celicne-konstrukcije.rs/",
-  // },
+
+  {
+    title: "Tolić Inženjering",
+    image: "/SS13.png",
+    link: "https://www.celicne-konstrukcije.rs/",
+  },
+
+  {
+    title: "M Migić",
+    image: "/SS10.png",
+    link: "https://www.alpinistickiradovi.rs/",
+  },
 ];
