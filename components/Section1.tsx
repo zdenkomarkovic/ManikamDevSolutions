@@ -41,13 +41,13 @@ const Section1 = () => {
             <span className="text-red-700">ideje</span> pretvaramo u stvarnost!{" "}
           </h2>
           <a
-            href="tel:+381637429415"
+            href="tel:+381641967267"
             className="text-red-700 text-3xl md:text-5xl text-center md:text-left hover:scale-110"
           >
             Zakažite sastanak:{" "}
             <span className="text-black text-3xl md:text-4xl block md:inline">
               {" "}
-              +38163 742 94 15
+              +38164 19 67 267
             </span>
           </a>
         </div>
@@ -92,7 +92,7 @@ const Section1 = () => {
               />
             </div>
             <a
-              href="tel:+381637429415"
+              href="tel:+381641967267"
               className="text-2xl md:text-4xl hover:scale-110"
             >
               <span className=" text-red-700 font-bold">Zakažite sastanak</span>{" "}
@@ -100,7 +100,7 @@ const Section1 = () => {
               <span className="text-red-700 font-bold">!</span>
               <p className="text-2xl md:text-3xl hover:scale-110">
                 {" "}
-                +38163 742 94 15
+                +38164 19 67 267
               </p>
             </a>
           </div>

@@ -7,7 +7,10 @@ import React from "react";
 
 const Reference = () => {
   return (
-    <div className="container px-2 md:px-4 mx-auto py-10 border-t">
+    <div
+      id="reference"
+      className="container px-2 md:px-4 mx-auto py-10 border-t"
+    >
       <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10">
         Reference
       </h3>{" "}

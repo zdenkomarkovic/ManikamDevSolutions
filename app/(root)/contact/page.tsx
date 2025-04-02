@@ -16,10 +16,10 @@ import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { Button } from "../../../components/ui/button";
 import { FaInstagram } from "react-icons/fa";
-// import { FaFacebook } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { FaViber } from "react-icons/fa";
-// import { FaWhatsappSquare } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Molimo unesite vase ime i prezime" }),
@@ -64,32 +64,32 @@ export default function Contact() {
         <div className=" mx-6 md:mx-20">
           <div className="space-y-3 md:space-y-10 text-lg md:text-2xl">
             <a
-              href="tel:+381637429415"
+              href="tel: +381641967267"
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
               <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaPhone className="text-[20px] lg:text-[30px]" /> +381 63 742
-                94 15
+                <FaPhone className="text-[20px] lg:text-[30px]" /> +38164 1967
+                267
               </button>
             </a>
             <a
-              href="viber://chat?number=%2B381637429415"
+              href="viber://chat?number=%2B381641967267"
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
               <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                 <FaViber className="text-[28px] lg:text-[35px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
-                +381 63 742 94 15
+                +38164 1967 267
               </button>
             </a>
-            {/* <a
-              href="https://wa.me/381637429415"
+            <a
+              href="https://wa.me/381641967267"
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
               <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                 <FaWhatsappSquare className="text-[30px] lg:text-[35px] rounded-2xl text-green-700 " />{" "}
-                +381 63 742 94 15
+                +38164 1967 267
               </button>
-            </a> */}
+            </a>
             <a
               href="mailto:manikamwebsolutions@gmail.com"
               className="py-[7px] flex border-b-[1px] border-gray-800"
@@ -101,21 +101,21 @@ export default function Contact() {
           </div>
           <div className="flex pt-4 lg:pt-12 gap-10 lg:gap-20 text-[33px] lg:text-[40px] justify-center items-center text-center">
             <a
-              href="https://www.instagram.com/manikam.web.solutions/"
+              href="https://www.instagram.com/manikam_web_solutions/"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:scale-110 transition-transform duration-500"
             >
               <FaInstagram className="" />
             </a>
-            {/* <a
-              href=""
+            <a
+              href="https://www.facebook.com/profile.php?id=61559540493992"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:scale-110 transition-transform duration-500"
             >
               <FaFacebook className="" />
-            </a> */}
+            </a>
           </div>
         </div>
         <div className="mx-6 md:mx-20 bg-gray-50 rounded-3xl shadow-2xl">

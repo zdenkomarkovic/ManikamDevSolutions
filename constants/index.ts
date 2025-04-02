@@ -17,6 +17,10 @@ export const NavList = [
     ],
   },
   {
+    title: "Reference",
+    route: "/#reference",
+  },
+  {
     title: "Kontakt",
     route: "/contact",
   },

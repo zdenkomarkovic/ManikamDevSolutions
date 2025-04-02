@@ -1,10 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  //  Facebook,
-  Instagram,
-} from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -64,11 +61,14 @@ export default function Footer() {
               </a>
             </div>
             <div className="flex space-x-4 justify-center md:justify-start">
-              {/* <a href="#" className="text-muted-foreground hover:text-primary">
-                <Facebook />
-              </a> */}
               <a
-                href="https://www.instagram.com/manikam.web.solutions/"
+                href="https://www.facebook.com/profile.php?id=61559540493992"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Facebook />
+              </a>
+              <a
+                href="https://www.instagram.com/manikam_web_solutions/"
                 target={"_blank"}
                 className="text-muted-foreground hover:text-primary"
               >
