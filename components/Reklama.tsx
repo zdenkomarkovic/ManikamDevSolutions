@@ -17,14 +17,14 @@ const Reklama = () => {
         </div>
 
         <div className="z-20 text-xl text-center">
-          <h1 className="relative text-gray-900 mt-[130px] md:mt-0 text-[33px] md:text-6xl xl:text-[80px] z-20">
+          {/* <h1 className="relative text-gray-900 mt-[130px] md:mt-0 text-[33px] md:text-6xl xl:text-[80px] z-20">
             Manikam<span className="font-bold text-red-700">Web</span>
             Solutions{" "}
             <span className="text-[21px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
               mi pomazemo vasem biznisu da raste
             </span>
-          </h1>
-          <p className="mt-[10px] text-center font-bold">Nemate materijal?</p>
+          </h1> */}
+          <p className="mt-[150px] text-center font-bold">Nemate materijal?</p>
           <p className="text-lg">
             Nema problema – pišemo tekstove i dodajemo profi slike!
           </p>
