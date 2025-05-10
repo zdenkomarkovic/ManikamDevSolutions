@@ -101,7 +101,7 @@ export default function Contact() {
           </div>
           <div className="flex pt-4 lg:pt-12 gap-10 lg:gap-20 text-[33px] lg:text-[40px] justify-center items-center text-center">
             <a
-              href="https://www.instagram.com/manikam_web_solutions/"
+              href="https://www.instagram.com/manikam.web.solutions/"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:scale-110 transition-transform duration-500"
@@ -109,7 +109,7 @@ export default function Contact() {
               <FaInstagram className="" />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61559540493992"
+              href="https://www.facebook.com/profile.php?id=61574784286298"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:scale-110 transition-transform duration-500"

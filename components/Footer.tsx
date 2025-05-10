@@ -62,13 +62,13 @@ export default function Footer() {
             </div>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a
-                href="https://www.facebook.com/profile.php?id=61559540493992"
+                href="https://www.facebook.com/profile.php?id=61574784286298"
                 className="text-muted-foreground hover:text-primary"
               >
                 <Facebook />
               </a>
               <a
-                href="https://www.instagram.com/manikam_web_solutions/"
+                href="https://www.instagram.com/manikam.web.solutions/"
                 target={"_blank"}
                 className="text-muted-foreground hover:text-primary"
               >
