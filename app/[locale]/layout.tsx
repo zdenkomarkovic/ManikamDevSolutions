@@ -1,6 +1,5 @@
 // app/[locale]/layout.tsx
 import "../globals.css";
-import { dir } from "i18next";
 import { languages } from "@/i18n/settings";
 import TranslationsProvider from "@/components/TranslationsProvider";
 
