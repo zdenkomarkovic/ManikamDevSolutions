@@ -26,39 +26,6 @@ export const NavList = [
   },
 ];
 
-interface CardData {
-  title: string;
-  mim: string;
-  img: string;
-}
-
-export const cardData: CardData[] = [
-  {
-    title: "Potreban vam je prilagođeni softver za vaš biznis?",
-    mim: "Naša firma specijalizovana je za razvoj prilagođenog softvera, kreiranog u konsultacijama sa klijentima i prema njihovim specifičnim potrebama. Od ideje do implementacije, pružamo kompletna rešenja koja pomažu klijentima da automatizuju i olakšaju svoj rad. Ako vam je potrebna bolja organizacija, veća efikasnost i smanjenje manuelnog rada, možemo kreirati softver tačno prema vašim potrebama.",
-    img: "/images/hero2.jpg",
-  },
-  {
-    title: "Vaš sajt ne privlači dovoljno novih klijenata?",
-    mim: "Vaš sajt ne privlači dovoljno potencijalnih klijenata? Možda je vreme za osveženje dizajna! Kreiramo upečatljive, modernizovane sajtove koji ne samo da izgledaju fantastično, već i ostavljaju snažan utisak na posetioce. Povećajte angažman i učinite da vaš sajt bude nezaboravan!",
-    img: "/images/hero.jpg",
-  },
-  {
-    title: "Povećajte posete uz SEO optimizaciju!",
-    mim: "Vaš sajt nema dovoljno poseta? Pomoću SEO optimizacije možete povećati vidljivost na pretraživačima i privući više korisnika. Nudimo detaljnu analizu, strateško planiranje i implementaciju rešenja koja donose rezultate. Poboljšajte poziciju na Google-u i nadmašite konkurenciju već danas",
-    img: "/images/sijalica.jpg",
-  },
-  {
-    title: "Potreban vam je sajt koji možete sami ažurirati?",
-    mim: "Sa našim CMS rešenjem, dobijate sajt koji možete lako i brzo ažurirati bez potrebe za tehničkim znanjem. Bilo da želite da dodate nove stranice, promenite sadržaj ili prilagodite dizajn, sve to možete uraditi sami. Ovaj sistem omogućava potpunu kontrolu nad vašim sajtom, dok mi pružamo podršku kada vam zatreba.",
-    img: "/images/kljuc.jpg",
-  },
-  {
-    title: "Želite da pokrenete oglašavanje?",
-    mim: "Nadmašite konkurenciju i povećajte svoju online vidljivost uz profesionalno kreirane kampanje koje donose rezultate. Nudimo optimizaciju, analitiku i prilagođena rešenja kako biste postigli najbolje performanse na Google pretragama.",
-    img: "/images/planeta.jpg",
-  },
-];
 interface UslugeData {
   title: string;
   text: string;

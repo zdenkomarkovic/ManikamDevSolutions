@@ -1,0 +1,23 @@
+import "server-only";
+
+import { createIntl } from "@formatjs/intl";
+import type { Locale } from "../../i18n-config";
+
+export async function getIntl(locale: Locale) {
+  let messages;
+  try {
+    messages = (await import(`../lang/${locale}.json`)).default;
+  } catch (e) {
+    // fallback na engleski
+    messages = (await import(`../lang/en.json`)).default;
+    locale = "en"; // da bude konzistentno
+  }
+  return createIntl({ locale, messages });
+}
+
+export function getDirection(locale: Locale) {
+  switch (locale) {
+    case "en":
+    case "sr":
+  }
+}

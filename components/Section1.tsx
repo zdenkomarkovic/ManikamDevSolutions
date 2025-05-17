@@ -4,9 +4,33 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 import Image from "@/node_modules/next/image";
-import { cardData } from "@/constants/index";
 
-const Section1 = () => {
+type CardData = {
+  title: string;
+  mim: string;
+  img?: string;
+};
+type SectionData = {
+  title: string;
+  span: string;
+  title2: string;
+  title3: string;
+  span2: string;
+  subtitle: string;
+  span3: string;
+  subtitle2: string;
+  span4: string;
+  subtitle3: string;
+  span5: string;
+};
+
+const Section1 = ({
+  cards,
+  section,
+}: {
+  cards: CardData[];
+  section: SectionData;
+}) => {
   const targetRef = useRef(null);
   const { size } = useWindowSize();
 
@@ -37,17 +61,18 @@ const Section1 = () => {
       >
         <div className="py-10 px-0">
           <h2 className="text-4xl md:text-6xl  pb-10 px-0 ">
-            Uz naše znanje i iskustvo, vaše{" "}
-            <span className="text-red-700">ideje</span> pretvaramo u stvarnost!{" "}
+            {section.title}
+            <span className="text-red-700">{section.span}</span>{" "}
+            {section.title2}{" "}
           </h2>
           <a
             href="tel:+381641967267"
             className="text-red-700 text-3xl md:text-5xl text-center md:text-left hover:scale-110"
           >
-            Zakažite sastanak:{" "}
+            {section.title3}
             <span className="text-black text-3xl md:text-4xl block md:inline">
               {" "}
-              +38164 19 67 267
+              {section.span2}
             </span>
           </a>
         </div>
@@ -62,7 +87,7 @@ const Section1 = () => {
       </motion.div>
 
       <div>
-        {cardData.map((text, i) => (
+        {cards.map((text, i) => (
           <AnimatedCard
             key={i}
             index={i}
@@ -77,9 +102,9 @@ const Section1 = () => {
         <div className="h-[1000px] ">
           <div className="space-y-5 sticky top-0">
             <p className="text-3xl xl:text-5xl pt-[150px]">
-              Mnogi mali biznisi potcenjuju vrednost svojih{" "}
-              <span className="font-bold text-red-700">veb-sajtova</span>, što
-              dovodi do ogromnog gubitka i smanjuje njihov potencijal
+              {section.subtitle}
+              <span className="font-bold text-red-700">{section.span3}</span>,
+              {section.subtitle2}
             </p>
             <div>
               <Image
@@ -95,12 +120,12 @@ const Section1 = () => {
               href="tel:+381641967267"
               className="text-2xl md:text-4xl hover:scale-110"
             >
-              <span className=" text-red-700 font-bold">Zakažite sastanak</span>{" "}
-              da posložimo sve kockice
-              <span className="text-red-700 font-bold">!</span>
+              <span className=" text-red-700 font-bold">{section.span4}</span>{" "}
+              {section.subtitle3}
+              <span className="text-red-700 font-bold">{section.span5}</span>
               <p className="text-2xl md:text-3xl hover:scale-110">
                 {" "}
-                +38164 19 67 267
+                {section.span2}
               </p>
             </a>
           </div>

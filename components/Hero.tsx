@@ -2,10 +2,12 @@
 
 import Image from "@/node_modules/next/image";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
-const Hero = () => {
-  const { t } = useTranslation("common");
+type HeroProps = {
+  title: string;
+};
+
+const Hero = ({ title }: HeroProps) => {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
       <div className="container mx-auto px-[5px] md:px-4 h-screen flex items-center">
@@ -14,7 +16,7 @@ const Hero = () => {
             Manikam<span className="font-bold text-red-700">Web</span>
             Solutions
             <span className="text-[21px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
-              {t("welcome")}
+              {title}
             </span>
           </h1>
         </div>

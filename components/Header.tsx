@@ -8,8 +8,17 @@ import { Button } from "../components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavList } from "../constants/index";
+import { i18n } from "../i18n-config";
+import { getNavList } from "@/locales/navUtils";
 
-export default function Header() {
+type NavbarProps = {
+  locale: "sr" | "en";
+};
+
+export default function Header({ locale }: NavbarProps) {
+  const { locales, defaultLocale } = i18n;
+  const navList = getNavList(locale);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -56,40 +65,8 @@ export default function Header() {
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-6">
-            {NavList.map((item, i) => {
-              return item.hasDropdown ? (
-                <div
-                  key={i}
-                  className="relative group"
-                  // onMouseEnter={() => setDropdownOpen(true)}
-                  // onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <Link
-                    href={item.route}
-                    className="flex items-center text-foreground hover:text-primary transition-colors uppercase cursor-pointer"
-                  >
-                    {item.title}
-                    {/* <SlArrowDown
-                      className={`ml-2 ${
-                        !dropdownOpen && "-rotate-90"
-                      } font-bold `}
-                    /> */}
-                  </Link>
-                  {/* {dropdownOpen && (
-                    <div className="absolute top-full left-0 bg-background shadow-md py-2 w-48 z-10">
-                      {item.dropdownItems.map((subItem, j) => (
-                        <Link
-                          key={j}
-                          href={subItem.route}
-                          className="block px-4 py-2 text-sm text-foreground hover:text-primary transition"
-                        >
-                          {subItem.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )} */}
-                </div>
-              ) : (
+            {navList.map((item, i) => {
+              return (
                 <Link
                   key={i}
                   href={item.route}
@@ -99,6 +76,16 @@ export default function Header() {
                 </Link>
               );
             })}
+          </div>
+          <div dir="ltr" className="flex flex-col">
+            {[...locales].sort().map((locale) => (
+              <Link
+                key={locale}
+                href={locale === defaultLocale ? "/" : `/${locale}`}
+              >
+                {locale}
+              </Link>
+            ))}
           </div>
           <div className="md:hidden">
             <Button
