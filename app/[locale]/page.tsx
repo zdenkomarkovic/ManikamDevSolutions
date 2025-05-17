@@ -16,10 +16,7 @@ type RouteProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(
-  props: RouteProps,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(props: RouteProps): Promise<Metadata> {
   const params = await props.params; // await params!
   const intl = await getIntl(params.locale);
 

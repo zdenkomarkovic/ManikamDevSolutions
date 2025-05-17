@@ -1,6 +1,5 @@
 "use client";
 
-import { uslugeData } from "@/constants/index";
 import { motion } from "framer-motion";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
