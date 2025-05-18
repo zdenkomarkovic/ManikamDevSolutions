@@ -3,7 +3,8 @@ import Reference from "@/components/Reference";
 import Section1 from "@/components/Section1";
 import Usluge from "@/components/Usluge";
 import { generateAlternateLinks } from "@/lib/seo";
-import { Metadata, ResolvingMetadata } from "next";
+import { Messages } from "@/types/messages";
+import { Metadata } from "next";
 
 import { getIntl } from "../../lib/intl";
 
@@ -35,7 +36,7 @@ export default async function Home(props: HomeProps) {
   const params = await props.params;
   const intl = await getIntl(params.locale);
   const heroTitle = intl.formatMessage({ id: "hero.title" });
-  const messages = (await getIntl(params.locale)).messages as any;
+  const messages = (await getIntl(params.locale)).messages as Messages;
   const cards = messages.cards;
   const usluge = messages.usluge;
   const section = messages.section;
