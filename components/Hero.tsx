@@ -4,7 +4,7 @@ import Image from "@/node_modules/next/image";
 import React from "react";
 
 type HeroProps = {
-  title: string;
+  title?: string;
 };
 
 const Hero = ({ title }: HeroProps) => {
