@@ -12,7 +12,7 @@ export async function getIntl(locale: Locale) {
     messages = (await import(`../lang/en.json`)).default;
     locale = "en"; // da bude konzistentno
   }
-  return createIntl({ locale, messages });
+  return createIntl({ locale, messages: messages as Record<string, string> });
 }
 
 export function getDirection(locale: Locale) {
