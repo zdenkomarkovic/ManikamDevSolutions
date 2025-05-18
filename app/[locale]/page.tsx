@@ -31,15 +31,28 @@ export async function generateMetadata(props: RouteProps): Promise<Metadata> {
 type HomeProps = {
   params: { locale: string };
 };
+const defaultSection = {
+  title: "",
+  span: "",
+  title2: "",
+  title3: "",
+  span2: "",
+  subtitle: "",
+  span3: "",
+  subtitle2: "",
+  span4: "",
+  subtitle3: "",
+  span5: "",
+};
 
 export default async function Home(props: HomeProps) {
   const params = await props.params;
   const intl = await getIntl(params.locale);
   const heroTitle = intl.formatMessage({ id: "hero.title" });
   const messages = (await getIntl(params.locale)).messages as Messages;
-  const cards = messages.cards;
-  const usluge = messages.usluge;
-  const section = messages.section;
+  const cards = messages.cards ?? [];
+  const usluge = messages.usluge ?? [];
+  const section = messages.section ?? defaultSection;
 
   return (
     <main>
