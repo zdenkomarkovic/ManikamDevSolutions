@@ -14,7 +14,7 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
+    locales.slice() // ← kopija kao `string[]`
   );
 
   return match(languages, locales, defaultLocale);
