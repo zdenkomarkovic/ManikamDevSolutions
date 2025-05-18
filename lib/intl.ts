@@ -7,7 +7,7 @@ export async function getIntl(locale: Locale) {
   let messages;
   try {
     messages = (await import(`../lang/${locale}.json`)).default;
-  } catch (_) {
+  } catch {
     // fallback na engleski
     messages = (await import(`../lang/en.json`)).default;
     locale = "en"; // da bude konzistentno
@@ -19,5 +19,7 @@ export function getDirection(locale: Locale) {
   switch (locale) {
     case "en":
     case "sr":
+    default:
+      return "ltr";
   }
 }
