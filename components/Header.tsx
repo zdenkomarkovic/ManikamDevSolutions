@@ -16,7 +16,10 @@ function isValidLocale(locale: string): locale is Locale {
   return (i18n.locales as readonly string[]).includes(locale);
 }
 function getSafeLocale(locale: string): Locale {
-  return isValidLocale(locale) ? locale : i18n.defaultLocale;
+  if (isValidLocale(locale)) {
+    return locale;
+  }
+  return i18n.defaultLocale as Locale;
 }
 
 export default function Header({ locale }: { locale: string }) {
