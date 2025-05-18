@@ -12,13 +12,14 @@ import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
 
-type NavbarProps = {
-  locale: Locale;
-};
+function isValidLocale(locale: string): locale is Locale {
+  return i18n.locales.includes(locale as Locale);
+}
 
-export default function Header({ locale }: NavbarProps) {
+export default function Header({ locale }: { locale: string }) {
   const { locales, defaultLocale } = i18n;
-  const navList = getNavList(locale as Locale);
+  const currentLocale: Locale = isValidLocale(locale) ? locale : defaultLocale;
+  const navList = getNavList(currentLocale);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [dropdownOpen, setDropdownOpen] = useState(false);
