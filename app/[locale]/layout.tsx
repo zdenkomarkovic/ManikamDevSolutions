@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDirection } from "@/lib/intl";
 import { headers } from "next/headers";
+import { Locale } from "@/i18n-config";
+import { isValidLocale } from "@/lib/locale";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +49,8 @@ export default async function LocaleLayout({
   children: React.ReactNode;
 }) {
   const h = await headers();
-  const locale = h.get("x-next-locale") ?? "en";
+  const rawLocale = h.get("x-next-locale") ?? "en";
+  const locale: Locale = isValidLocale(rawLocale) ? rawLocale : "en";
   const dir = getDirection(locale);
   return (
     <html lang={locale} dir={dir}>
