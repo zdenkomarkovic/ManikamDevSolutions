@@ -5,15 +5,18 @@ import Usluge from "@/components/Usluge";
 import { generateAlternateLinks } from "@/lib/seo";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
-
 import { getIntl } from "../../lib/intl";
+import { headers } from "next/headers";
 
-type Props = {
+type PageProps = {
   params: { locale: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const intl = await getIntl(params.locale);
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const locale = headers().get("x-next-locale") ?? "en";
+  const intl = await getIntl(locale);
 
   return {
     title: intl.formatMessage({ id: "page.home.head.title" }),
@@ -36,8 +39,9 @@ const defaultSection = {
   span5: "",
 };
 
-export default async function Home({ params }: Props) {
-  const intl = await getIntl(params.locale);
+export default async function Home() {
+  const locale = headers().get("x-next-locale") ?? "en";
+  const intl = await getIntl(locale);
   const messages = intl.messages as Messages;
   const heroTitle = intl.formatMessage({ id: "hero.title" });
 

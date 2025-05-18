@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDirection } from "@/lib/intl";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,8 +46,12 @@ export async function generateStaticParams(): Promise<{ locale: string }[]> {
   return [{ locale: "sr" }, { locale: "en" }];
 }
 
-export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = params;
+export default async function LocaleLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const locale = headers().get("x-next-locale") ?? "en";
   const dir = getDirection(locale);
   return (
     <html lang={locale} dir={dir}>
