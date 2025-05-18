@@ -13,12 +13,15 @@ import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
 
 function isValidLocale(locale: string): locale is Locale {
-  return i18n.locales.includes(locale as Locale);
+  return (i18n.locales as readonly string[]).includes(locale);
+}
+function getSafeLocale(locale: string): Locale {
+  return isValidLocale(locale) ? locale : i18n.defaultLocale;
 }
 
 export default function Header({ locale }: { locale: string }) {
   const { locales, defaultLocale } = i18n;
-  const currentLocale: Locale = isValidLocale(locale) ? locale : defaultLocale;
+  const currentLocale = getSafeLocale(locale);
   const navList = getNavList(currentLocale);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDirection } from "@/lib/intl";
 import { headers } from "next/headers";
-import { Locale } from "@/i18n-config";
+import { i18n, Locale } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
 
 const geistSans = Geist({
@@ -42,6 +42,9 @@ const geistMono = Geist_Mono({
 export async function generateStaticParams(): Promise<{ locale: string }[]> {
   return [{ locale: "sr" }, { locale: "en" }];
 }
+function isValidLocale(locale: string): locale is Locale {
+  return i18n.locales.includes(locale as Locale);
+}
 
 export default async function LocaleLayout({
   children,
@@ -50,7 +53,9 @@ export default async function LocaleLayout({
 }) {
   const h = await headers();
   const rawLocale = h.get("x-next-locale") ?? "en";
-  const locale: Locale = isValidLocale(rawLocale) ? rawLocale : "en";
+  const locale: Locale = isValidLocale(rawLocale)
+    ? rawLocale
+    : i18n.defaultLocale;
   const dir = getDirection(locale);
   return (
     <html lang={locale} dir={dir}>
