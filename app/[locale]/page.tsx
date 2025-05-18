@@ -44,11 +44,10 @@ const defaultSection = {
   span5: "",
 };
 
-export default async function Home(props: HomeProps) {
-  const params = props.params;
+export default async function Home({ params }: HomeProps) {
   const intl = await getIntl(params.locale);
-  const heroTitle = intl.formatMessage({ id: "hero.title" });
   const messages = intl.messages as Messages;
+  const heroTitle = intl.formatMessage({ id: "hero.title" });
   const cards = messages.cards ?? [];
   const usluge = messages.usluge ?? [];
   const section = messages.section ?? defaultSection;

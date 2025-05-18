@@ -5,10 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDirection } from "@/lib/intl";
 
-export function generateStaticParams(): { locale: string }[] {
-  return [{ locale: "sr" }, { locale: "en" }];
-}
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,8 +41,12 @@ type Props = {
   params: { locale: string };
 };
 
-export default function LocaleLayout({ children, params }: Props) {
-  const locale = params.locale;
+export async function generateStaticParams(): Promise<{ locale: string }[]> {
+  return [{ locale: "sr" }, { locale: "en" }];
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = params;
   const dir = getDirection(locale);
   return (
     <html lang={locale} dir={dir}>
