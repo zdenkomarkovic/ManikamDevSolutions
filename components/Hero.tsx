@@ -2,6 +2,7 @@
 
 import Image from "@/node_modules/next/image";
 import React from "react";
+import heroImg from "../public/images/laptop.jpg";
 
 type HeroProps = {
   title?: string;
@@ -23,7 +24,7 @@ const Hero = ({ title }: HeroProps) => {
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
-          src="/images/laptop.jpg"
+          src={heroImg}
           alt="Background image"
           fill
           className="object-cover"

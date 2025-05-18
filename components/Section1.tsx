@@ -4,6 +4,8 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 import Image from "@/node_modules/next/image";
+import rubik from "../public/rubik.jpg";
+import ideja from "../public/images/ideja.jpg";
 
 type CardData = {
   title: string;
@@ -77,7 +79,7 @@ const Section1 = ({
           </a>
         </div>
         <Image
-          src={"/images/ideja.jpg"}
+          src={ideja}
           alt="idea"
           width={350}
           height={3}
@@ -107,7 +109,7 @@ const Section1 = ({
             </p>
             <div>
               <Image
-                src={"/images/rubik.jpg"}
+                src={rubik}
                 alt="usluge"
                 width={300}
                 height={200}
