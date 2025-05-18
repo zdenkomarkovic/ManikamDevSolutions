@@ -8,7 +8,7 @@ import Image from "@/node_modules/next/image";
 type CardData = {
   title: string;
   mim: string;
-  img?: string;
+  img: string;
 };
 type SectionData = {
   title: string;
