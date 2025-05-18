@@ -82,7 +82,6 @@ const Section1 = ({
           width={350}
           height={3}
           className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] md:w-[560px] mx-auto md:mx-0 object-cover "
-          priority
         />
       </motion.div>
 
@@ -112,7 +111,6 @@ const Section1 = ({
                 alt="usluge"
                 width={300}
                 height={200}
-                priority
                 className="mx-auto rounded-full w-[250px] h-[250px] md:w-[300px] md:h-[300px] object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
@@ -190,11 +188,10 @@ const Card = ({
         </div>
         <div className="relative w-full md:w-[50%] h-full">
           <Image
-            src={text.img}
+            src={text.img || "/fallback.jpg"}
             alt=""
             fill
-            objectFit="cover"
-            className="rounded-3xl"
+            className="rounded-3xl object-cover"
           />
         </div>
       </div>
