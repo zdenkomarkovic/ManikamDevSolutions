@@ -38,7 +38,7 @@ export default async function Home() {
   const h = await headers();
   const locale = h.get("x-next-locale") ?? "en";
   const intl = await getIntl(locale);
-  const messages = intl.messages as Messages;
+  const messages = intl.messages as unknown as Messages;
   const heroTitle = intl.formatMessage({ id: "hero.title" });
 
   const cards = messages.cards ?? [];
