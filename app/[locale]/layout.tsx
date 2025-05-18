@@ -45,7 +45,7 @@ type Props = {
   params: { locale: string };
 };
 
-export default function RootLayout({ children, params }: Props) {
+export default function LocaleLayout({ children, params }: Props) {
   const locale = params.locale;
   const dir = getDirection(locale);
   return (
