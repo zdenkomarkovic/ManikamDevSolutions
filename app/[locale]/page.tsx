@@ -4,20 +4,21 @@ import Section1 from "@/components/Section1";
 import Usluge from "@/components/Usluge";
 import { generateAlternateLinks } from "@/lib/seo";
 import { Messages } from "@/types/messages";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 
 import { getIntl } from "../../lib/intl";
 
 export const dynamicParams = false;
 
 export const dynamic = "force-static";
-type RouteProps = {
+type Props = {
   params: { locale: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(props: RouteProps): Promise<Metadata> {
-  const params = props.params;
+export async function generateMetadata(
+  { params }: Props,
+  _parent?: ResolvingMetadata
+): Promise<Metadata> {
   const intl = await getIntl(params.locale);
 
   return {
@@ -27,9 +28,6 @@ export async function generateMetadata(props: RouteProps): Promise<Metadata> {
   };
 }
 
-type HomeProps = {
-  params: { locale: string };
-};
 const defaultSection = {
   title: "",
   span: "",
@@ -44,10 +42,11 @@ const defaultSection = {
   span5: "",
 };
 
-export default async function Home({ params }: HomeProps) {
+export default async function Home({ params }: Props) {
   const intl = await getIntl(params.locale);
   const messages = intl.messages as Messages;
   const heroTitle = intl.formatMessage({ id: "hero.title" });
+
   const cards = messages.cards ?? [];
   const usluge = messages.usluge ?? [];
   const section = messages.section ?? defaultSection;
