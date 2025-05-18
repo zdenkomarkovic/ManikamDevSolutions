@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDirection } from "@/lib/intl";
 
-export function generateStaticParams() {
+export function generateStaticParams(): { locale: string }[] {
   return [{ locale: "sr" }, { locale: "en" }];
 }
 

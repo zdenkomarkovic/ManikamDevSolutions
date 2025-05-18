@@ -8,10 +8,6 @@ import { Metadata } from "next";
 
 import { getIntl } from "../../lib/intl";
 
-export function generateStaticParams(): { locale: string }[] {
-  return [{ locale: "sr" }, { locale: "en" }];
-}
-
 export const dynamicParams = false;
 
 export const dynamic = "force-static";
