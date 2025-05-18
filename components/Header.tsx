@@ -10,9 +10,10 @@ import { AiOutlineClose } from "react-icons/ai";
 import { NavList } from "../constants/index";
 import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
+import type { Locale } from "@/i18n-config";
 
 type NavbarProps = {
-  locale: string;
+  locale: Locale;
 };
 
 export default function Header({ locale }: NavbarProps) {
