@@ -42,9 +42,6 @@ const geistMono = Geist_Mono({
 export async function generateStaticParams(): Promise<{ locale: string }[]> {
   return [{ locale: "sr" }, { locale: "en" }];
 }
-function isValidLocale(locale: string): locale is Locale {
-  return i18n.locales.includes(locale as Locale);
-}
 
 export default async function LocaleLayout({
   children,
