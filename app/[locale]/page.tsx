@@ -17,7 +17,7 @@ type RouteProps = {
 };
 
 export async function generateMetadata(props: RouteProps): Promise<Metadata> {
-  const params = props.params; // await params!
+  const params = props.params;
   const intl = await getIntl(params.locale);
 
   return {
@@ -48,7 +48,7 @@ export default async function Home(props: HomeProps) {
   const params = props.params;
   const intl = await getIntl(params.locale);
   const heroTitle = intl.formatMessage({ id: "hero.title" });
-  const messages = (await getIntl(params.locale)).messages as Messages;
+  const messages = intl.messages as Messages;
   const cards = messages.cards ?? [];
   const usluge = messages.usluge ?? [];
   const section = messages.section ?? defaultSection;
