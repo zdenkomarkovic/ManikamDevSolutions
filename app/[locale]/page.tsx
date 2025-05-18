@@ -8,13 +8,7 @@ import { Metadata } from "next";
 import { getIntl } from "../../lib/intl";
 import { headers } from "next/headers";
 
-type PageProps = {
-  params: { locale: string };
-};
-
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const locale = headers().get("x-next-locale") ?? "en";
   const intl = await getIntl(locale);
 
