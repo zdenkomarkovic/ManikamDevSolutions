@@ -46,7 +46,7 @@ type Props = {
 };
 
 export default async function RootLayout({ children, params }: Props) {
-  const awaitedParams = await params;
+  const awaitedParams = params;
   const locale = awaitedParams.locale;
   const dir = getDirection(locale);
   return (
