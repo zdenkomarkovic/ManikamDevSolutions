@@ -12,7 +12,7 @@ import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
 
 type NavbarProps = {
-  locale: "sr" | "en";
+  locale: string;
 };
 
 export default function Header({ locale }: NavbarProps) {
