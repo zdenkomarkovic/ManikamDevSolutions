@@ -8,9 +8,6 @@ import { Metadata, ResolvingMetadata } from "next";
 
 import { getIntl } from "../../lib/intl";
 
-export const dynamicParams = false;
-
-export const dynamic = "force-static";
 type Props = {
   params: { locale: string };
 };
