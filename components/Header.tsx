@@ -18,8 +18,7 @@ type NavbarProps = {
 
 export default function Header({ locale }: NavbarProps) {
   const { locales, defaultLocale } = i18n;
-  const navList = getNavList(locale);
-
+  const navList = getNavList(locale as Locale);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [dropdownOpen, setDropdownOpen] = useState(false);
