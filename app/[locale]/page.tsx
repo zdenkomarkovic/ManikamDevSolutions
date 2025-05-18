@@ -12,10 +12,7 @@ type Props = {
   params: { locale: string };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  _parent?: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const intl = await getIntl(params.locale);
 
   return {
