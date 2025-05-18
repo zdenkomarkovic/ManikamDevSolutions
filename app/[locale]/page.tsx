@@ -9,7 +9,8 @@ import { getIntl } from "../../lib/intl";
 import { headers } from "next/headers";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = headers().get("x-next-locale") ?? "en";
+  const h = await headers();
+  const locale = h.get("x-next-locale") ?? "en";
   const intl = await getIntl(locale);
 
   return {
@@ -34,7 +35,8 @@ const defaultSection = {
 };
 
 export default async function Home() {
-  const locale = headers().get("x-next-locale") ?? "en";
+  const h = await headers();
+  const locale = h.get("x-next-locale") ?? "en";
   const intl = await getIntl(locale);
   const messages = intl.messages as Messages;
   const heroTitle = intl.formatMessage({ id: "hero.title" });

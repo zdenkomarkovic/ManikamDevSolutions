@@ -46,7 +46,8 @@ export default async function LocaleLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = headers().get("x-next-locale") ?? "en";
+  const h = await headers();
+  const locale = h.get("x-next-locale") ?? "en";
   const dir = getDirection(locale);
   return (
     <html lang={locale} dir={dir}>
