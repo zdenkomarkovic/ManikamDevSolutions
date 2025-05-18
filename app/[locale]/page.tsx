@@ -4,7 +4,7 @@ import Section1 from "@/components/Section1";
 import Usluge from "@/components/Usluge";
 import { generateAlternateLinks } from "@/lib/seo";
 import { Messages } from "@/types/messages";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
 import { getIntl } from "../../lib/intl";
 
