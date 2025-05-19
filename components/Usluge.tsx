@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import React from "react";
+import pravac from "../public/images/pravac.jpg";
 
 const class1 =
   " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl md:rounded-3xl pt-[72px] md:pt-24";
@@ -32,7 +33,7 @@ const Usluge = ({ usluge }: { usluge: UslugeData[] }) => {
         </h2>
         <div>
           <Image
-            src={"/images/pravac.jpg"}
+            src={pravac}
             alt="usluge"
             width={300}
             height={200}
