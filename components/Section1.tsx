@@ -10,7 +10,7 @@ import ideja from "../public/images/ideja.jpg";
 type CardData = {
   title: string;
   mim: string;
-  img: string;
+  img?: string;
 };
 type SectionData = {
   title: string;
