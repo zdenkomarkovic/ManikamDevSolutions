@@ -4,9 +4,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDirection } from "@/lib/intl";
-import { headers } from "next/headers";
-import { i18n, Locale } from "@/i18n-config";
+import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
+import { LocaleProvider } from "../../lib/LocaleContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,23 +45,24 @@ export async function generateStaticParams(): Promise<{ locale: string }[]> {
 
 export default async function LocaleLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>; // Ovaj tip je važno da bude Promise
 }) {
-  const h = await headers();
-  const rawLocale = h.get("x-next-locale") ?? "en";
-  const locale: Locale = isValidLocale(rawLocale)
-    ? rawLocale
-    : i18n.defaultLocale;
-  const dir = getDirection(locale);
+  const awaitedParams = await params; // awaituj ceo params
+  const localeParam = awaitedParams.locale;
+
+  const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
+
   return (
-    <html lang={locale} dir={dir}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 text-gray-800`}
-      >
-        <Header locale={locale} />
-        {children}
-        <Footer />
+    <html lang={locale} dir={getDirection(locale)}>
+      <body>
+        <LocaleProvider locale={locale}>
+          <Header locale={locale} />
+          {children}
+          <Footer />
+        </LocaleProvider>
       </body>
     </html>
   );

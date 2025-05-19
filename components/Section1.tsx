@@ -190,9 +190,10 @@ const Card = ({
         </div>
         <div className="relative w-full md:w-[50%] h-full">
           <Image
-            src={text.img || "/fallback.jpg"}
+            src={text.img}
+            width={1000}
+            height={1000}
             alt=""
-            fill
             className="rounded-3xl object-cover"
           />
         </div>

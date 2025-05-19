@@ -6,16 +6,19 @@ import { generateAlternateLinks } from "@/lib/seo";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
 import { getIntl } from "../../lib/intl";
-import { headers } from "next/headers";
-import { Locale, i18n } from "@/i18n-config";
+import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const h = await headers();
-  const rawLocale = h.get("x-next-locale") ?? "en";
-  const locale: Locale = isValidLocale(rawLocale)
-    ? rawLocale
-    : i18n.defaultLocale;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const awaitedParams = await params;
+  const localeParam = awaitedParams.locale;
+
+  const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
+
   const intl = await getIntl(locale);
 
   return {
@@ -39,16 +42,20 @@ const defaultSection = {
   span5: "",
 };
 
-export default async function Home() {
-  const h = await headers();
-  const rawLocale = h.get("x-next-locale") ?? "en";
-  const locale: Locale = isValidLocale(rawLocale)
-    ? rawLocale
-    : i18n.defaultLocale;
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const awaitedParams = await params;
+  const localeParam = awaitedParams.locale;
+
+  const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
+
   const intl = await getIntl(locale);
   const messages = intl.messages as unknown as Messages;
-  const heroTitle = intl.formatMessage({ id: "hero.title" });
 
+  const heroTitle = intl.formatMessage({ id: "hero.title" });
   const cards = messages.cards ?? [];
   const usluge = messages.usluge ?? [];
   const section = messages.section ?? defaultSection;

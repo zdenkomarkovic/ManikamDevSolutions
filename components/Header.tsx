@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
-import { NavList } from "../constants/index";
 import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
+import logo from "../public/logo.jpg";
 
 function isValidLocale(locale: string): locale is Locale {
   return (i18n.locales as readonly string[]).includes(locale);
@@ -59,7 +59,7 @@ export default function Header({ locale }: { locale: string }) {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href="/" className="flex items-center space-x-4">
               <Image
-                src={"/logo.jpg"}
+                src={logo}
                 alt="manikamdevsolutions logo"
                 width={55}
                 height={55}
@@ -118,7 +118,7 @@ export default function Header({ locale }: { locale: string }) {
           className="md:hidden bg-background"
         >
           <div className="container mx-auto px-4 py-4">
-            {NavList.map((item, i) => {
+            {navList.map((item, i) => {
               return (
                 <Link
                   key={i}
