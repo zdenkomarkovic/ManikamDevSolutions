@@ -3,7 +3,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getDirection } from "@/lib/intl";
+import { getDirection, getIntl } from "@/lib/intl";
 import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
 import { LocaleProvider } from "../../lib/LocaleContext";
@@ -54,6 +54,9 @@ export default async function LocaleLayout({
   const localeParam = awaitedParams.locale;
 
   const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
+  const intl = await getIntl(locale);
+  const message = intl.formatMessage({ id: "footer.message" });
+  const rights = intl.formatMessage({ id: "footer.rights" });
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
@@ -61,7 +64,7 @@ export default async function LocaleLayout({
         <LocaleProvider locale={locale}>
           <Header locale={locale} />
           {children}
-          <Footer />
+          <Footer locale={locale} rights={rights} message={message} />
         </LocaleProvider>
       </body>
     </html>
