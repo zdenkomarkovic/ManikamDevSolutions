@@ -5,7 +5,7 @@ import Link from "@/node_modules/next/link";
 import { motion } from "framer-motion";
 import React from "react";
 
-const Reference = ({ refLink, title }: { reflink: string; title: string }) => {
+const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   return (
     <div
       id="reference"
