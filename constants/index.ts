@@ -111,65 +111,65 @@ export interface Reference {
 export const reference: Reference[] = [
   {
     title: "Kreditni Savetnik",
-    image: "/SS11.png",
+    image: "/images/SS11.png",
     link: "https://www.kreditnisavetniksrbija.rs/",
   },
   {
     title: "Pure Clean Solutions",
-    image: "/SS3.png",
+    image: "/images/SS3.png",
     link: "https://www.ciscenje-nis.rs/",
   },
   {
     title: "Enterijeri Kankan",
-    image: "/SS4.png",
+    image: "/images/SS4.png",
     link: "https://www.separei.rs/",
   },
 
   {
     title: " Dm Rustic 24",
-    image: "/SS5.png",
+    image: "/images/SS5.png",
     link: "https://www.dekorativneciglice.rs/",
   },
   {
     title: "Cool Taxi Nis",
-    image: "/SS2.png",
+    image: "/images/SS2.png",
     link: "https://www.taxinis.rs/",
   },
   {
     title: "STEEL AM CONSTRUCTIONS",
-    image: "/SS12.png",
+    image: "/images/SS12.png",
     link: "https://www.celicnekonstrukcije.rs/",
   },
   {
     title: "Autoring",
-    image: "/SS9.png",
+    image: "/images/SS9.png",
     link: "https://www.kombiprevozputnikapozega.rs/",
   },
   {
     title: "Sushi Wasabi",
-    image: "/SS7.png",
+    image: "/images/SS7.png",
     link: "https://www.sushiwasabi.rs/",
   },
   {
     title: "Lucky Fitness",
-    image: "/SS8.png",
+    image: "/images/SS8.png",
     link: "https://www.luckyfitness.rs/",
   },
   {
     title: "Šlep služba Purić 032 Čačak",
-    image: "/SS6.png",
+    image: "/images/SS6.png",
     link: "https://www.slep-cacak.rs/",
   },
 
   {
     title: "Tolić Inženjering",
-    image: "/SS13.png",
+    image: "/images/SS13.png",
     link: "https://www.celicne-konstrukcije.rs/",
   },
 
   {
     title: "M Migić",
-    image: "/SS10.png",
+    image: "/images/SS10.png",
     link: "https://www.alpinistickiradovi.rs/",
   },
 ];

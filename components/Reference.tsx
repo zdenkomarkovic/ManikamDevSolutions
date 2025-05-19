@@ -5,14 +5,14 @@ import Link from "@/node_modules/next/link";
 import { motion } from "framer-motion";
 import React from "react";
 
-const Reference = () => {
+const Reference = ({ refLink, title }: { reflink: string; title: string }) => {
   return (
     <div
       id="reference"
       className="container px-2 md:px-4 mx-auto py-10 border-t"
     >
       <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10">
-        Reference
+        {title}
       </h3>{" "}
       <div className="grid md:grid-cols-3 gap-8">
         {reference.map((item, i) => {
@@ -26,9 +26,7 @@ const Reference = () => {
                   alt="manikam web solutions"
                   className="w-full object-cover"
                 />
-                <p className="absolute bottom-5 left-5 text-xl">
-                  Posetite sajt...
-                </p>
+                <p className="absolute bottom-5 left-5 text-xl">{refLink}...</p>
               </Link>
             </motion.div>
           );

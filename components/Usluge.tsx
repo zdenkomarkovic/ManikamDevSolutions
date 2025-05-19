@@ -20,7 +20,7 @@ type UslugeData = {
   span: string;
 };
 
-const Usluge = ({ usluge }: { usluge: UslugeData[] }) => {
+const Usluge = ({ usluge, title }: { usluge: UslugeData[]; title: string }) => {
   return (
     <div className=" top container px-2 md:px-10 mx-auto my-20 relative md:flex justify-around ">
       <motion.div
@@ -29,7 +29,7 @@ const Usluge = ({ usluge }: { usluge: UslugeData[] }) => {
         className={`md:w-[35%] h-[500px] rounded-xl  px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
       >
         <h2 className="text-[33px] md:text-6xl text-center uppercase">
-          Naše usluge
+          {title}
         </h2>
         <div>
           <Image

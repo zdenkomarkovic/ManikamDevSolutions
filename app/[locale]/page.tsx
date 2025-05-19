@@ -59,14 +59,17 @@ export default async function Home({
   const cards = messages.cards ?? [];
   const usluge = messages.usluge ?? [];
   const section = messages.section ?? defaultSection;
+  const uslugeTitle = intl.formatMessage({ id: "usluge.title" });
+  const refLink = intl.formatMessage({ id: "reference.link" });
+  const refTitle = intl.formatMessage({ id: "reference.title" });
 
   return (
     <main>
       <div className="">
         <Hero title={heroTitle} />
         <Section1 section={section} cards={cards} />
-        <Usluge usluge={usluge} />
-        <Reference />
+        <Usluge usluge={usluge} title={uslugeTitle} />
+        <Reference refLink={refLink} title={refTitle} />
       </div>
     </main>
   );

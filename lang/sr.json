@@ -42,6 +42,7 @@
       "img": "/images/planeta.jpg"
     }
   ],
+  "usluge.title": "Naše usluge",
   "usluge": [
     {
       "img": "/images/software.svg",
@@ -109,5 +110,7 @@
       "text": "Uz našu uslugu digitalnog oglašavanja, vaš brend će dobiti potrebnu vidljivost i pažnju, što će vam omogućiti da se izdvojite iz konkurencije i dosegnete ciljaniju publiku.",
       "span": ""
     }
-  ]
+  ],
+  "reference.title": "Reference",
+  "reference.link": "Posetite sajt"
 }

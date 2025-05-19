@@ -42,6 +42,7 @@
       "img": "/images/planeta.jpg"
     }
   ],
+  "usluge.title": "Our Services",
   "usluge": [
     {
       "img": "/images/software.svg",
@@ -109,5 +110,7 @@
       "text": "With our digital advertising service, your brand will gain the visibility and attention it needs, allowing you to stand out from the competition and reach a more targeted audience.",
       "span": ""
     }
-  ]
+  ],
+  "reference.title": "References",
+  "reference.link": "Visit the website"
 }
