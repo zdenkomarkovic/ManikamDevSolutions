@@ -114,5 +114,14 @@
   "reference.title": "References",
   "reference.link": "Visit the website",
   "footer.message": "We create stories that are remembered.",
-  "footer.rights": "All rights reserved."
+  "footer.rights": "All rights reserved.",
+  "contact": {
+    "title": "Feel free to contact us in the way that suits you best...",
+    "name": "Full Name:",
+    "broj": "Phone Number:",
+    "message": "Your Message:",
+    "plh.name": "Enter your full name:",
+    "plh.broj": "Enter your phone number:",
+    "plh.message": "Your message to us"
+  }
 }

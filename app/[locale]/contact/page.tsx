@@ -61,14 +61,15 @@ export default function Contact() {
         Pa izvolite kako vam je zgodnije...
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        <div className=" mx-6 md:mx-20">
-          <div className="space-y-3 md:space-y-10 text-lg md:text-2xl">
+        <div className=" mx-6 md:mx-20 md:space-y-10">
+          <div className="space-y-3 md:space-y-2 text-lg md:text-xl">
+            <p className="font-bold text-2xl">Office: Serbia Nis</p>
             <a
-              href="tel: +381641967267"
+              href="tel:+381641967267"
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
               <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaPhone className="text-[20px] lg:text-[30px]" /> +38164 1967
+                <FaPhone className="text-[20px] lg:text-[22px]" /> +38164 1967
                 267
               </button>
             </a>
@@ -77,7 +78,7 @@ export default function Contact() {
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
               <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaViber className="text-[28px] lg:text-[35px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
+                <FaViber className="text-[28px] lg:text-[27px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
                 +38164 1967 267
               </button>
             </a>
@@ -86,36 +87,67 @@ export default function Contact() {
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
               <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaWhatsappSquare className="text-[30px] lg:text-[35px] rounded-2xl text-green-700 " />{" "}
+                <FaWhatsappSquare className="text-[30px] lg:text-[30px] rounded-2xl text-green-700 " />{" "}
                 +38164 1967 267
               </button>
             </a>
+          </div>
+          <div className="space-y-3 md:space-y-2 text-lg md:text-xl">
+            <p className="font-bold text-2xl">Office: Washington, D.C., USA</p>
+            <a
+              href="tel:+12408103730"
+              className="py-[7px] flex border-b-[1px] border-gray-800"
+            >
+              <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
+                <FaPhone className="text-[20px] lg:text-[22px]" /> +12408103730
+              </button>
+            </a>
+            <a
+              href="viber://chat?number=%2B12408103730"
+              className="py-[7px] flex border-b-[1px] border-gray-800"
+            >
+              <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
+                <FaViber className="text-[20px] lg:text-[27px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
+                +12408103730
+              </button>
+            </a>
+            <a
+              href="https://wa.me/12408103730"
+              className="py-[7px] flex border-b-[1px] border-gray-800"
+            >
+              <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
+                <FaWhatsappSquare className="text-[20px] lg:text-[30px] rounded-2xl text-green-700 " />{" "}
+                +12408103730
+              </button>
+            </a>
+          </div>
+          <div>
             <a
               href="mailto:manikamwebsolutions@gmail.com"
               className="py-[7px] flex border-b-[1px] border-gray-800"
             >
-              <button className="hover:scale-110 transition-transform duration-500 px-auto md:px-8">
+              <button className="hover:scale-110 transition-transform duration-500 px-auto md:px-8 text-xl">
                 Email: manikamwebsolutions@gmail.com
               </button>
             </a>
-          </div>
-          <div className="flex pt-4 lg:pt-12 gap-10 lg:gap-20 text-[33px] lg:text-[40px] justify-center items-center text-center">
-            <a
-              href="https://www.instagram.com/manikam.web.solutions/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" hover:scale-110 transition-transform duration-500"
-            >
-              <FaInstagram className="" />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61574784286298"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" hover:scale-110 transition-transform duration-500"
-            >
-              <FaFacebook className="" />
-            </a>
+            <div className="flex pt-4 lg:pt-12 gap-10 lg:gap-20 text-[33px] lg:text-[40px] justify-center items-center text-center">
+              <a
+                href="https://www.instagram.com/manikam.web.solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:scale-110 transition-transform duration-500"
+              >
+                <FaInstagram className="" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61574784286298"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:scale-110 transition-transform duration-500"
+              >
+                <FaFacebook className="" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="mx-6 md:mx-20 bg-gray-50 rounded-3xl shadow-2xl">

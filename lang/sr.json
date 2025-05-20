@@ -114,5 +114,14 @@
   "reference.title": "Reference",
   "reference.link": "Posetite sajt",
   "footer.message": "Mi stvaramo priče koje se pamte.",
-  "footer.rights": "Sva prava zadržana."
+  "footer.rights": "Sva prava zadržana.",
+  "contact": {
+    "title": "Pa izvolite kako vam je zgodnije...",
+    "name": "Ime i Prezime:",
+    "broj": "Broj telefona:",
+    "message": "Vaša poruka:",
+    "plh.name": "Unesite ime i prezime:",
+    "plh.broj": "Unesite vaš broj telefona:",
+    "plh.message": "Vaša poruka za nas"
+  }
 }

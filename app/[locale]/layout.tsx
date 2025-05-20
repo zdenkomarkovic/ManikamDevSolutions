@@ -7,6 +7,7 @@ import { getDirection, getIntl } from "@/lib/intl";
 import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
 import { LocaleProvider } from "../../lib/LocaleContext";
+import { Metadata } from "@/node_modules/next/types";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -18,26 +19,26 @@ import { LocaleProvider } from "../../lib/LocaleContext";
 //   subsets: ["latin"],
 // });
 
-// export const metadata: Metadata = {
-//   title: "Manikam Web Solutions",
-//   description: "Agencija za izradu softvera i sajtova",
-//   icons: {
-//     icon: "/logo.jpg",
-//     apple: "/logo.jpg1",
-//   },
+export const metadata: Metadata = {
+  title: "Manikam Web Solutions",
+  description: "Agencija za izradu softvera i sajtova",
+  icons: {
+    icon: "/logo.jpg",
+    apple: "/logo.jpg1",
+  },
 
-//   keywords: [
-//     "sajt",
-//     "sajtovi",
-//     "izrada sajta",
-//     "web dizajn",
-//     "softver",
-//     "izrada softvera",
-//   ],
-//   alternates: {
-//     canonical: "https://www.manikamwebsolutions.com/",
-//   },
-// };
+  keywords: [
+    "sajt",
+    "sajtovi",
+    "izrada sajta",
+    "web dizajn",
+    "softver",
+    "izrada softvera",
+  ],
+  alternates: {
+    canonical: "https://manikamwebsolutions.com/",
+  },
+};
 
 export async function generateStaticParams(): Promise<{ locale: string }[]> {
   return [{ locale: "sr" }, { locale: "en" }];
