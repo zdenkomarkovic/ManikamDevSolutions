@@ -1,4 +1,4 @@
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -9,22 +9,22 @@ import { isValidLocale } from "@/lib/locale";
 import { LocaleProvider } from "../../lib/LocaleContext";
 import { Metadata } from "@/node_modules/next/types";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Manikam Web Solutions",
   description: "Agencija za izradu softvera i sajtova",
   icons: {
-    icon: "/logo.jpg",
-    apple: "/logo.jpg1",
+    icon: "/images/android-chrome-192x192.png",
+    apple: "/images/apple-touch-icon.png",
   },
 
   keywords: [
@@ -61,7 +61,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
-      <body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <LocaleProvider locale={locale}>
           <Header locale={locale} />
           {children}
