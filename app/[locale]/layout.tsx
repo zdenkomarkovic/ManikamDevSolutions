@@ -8,6 +8,7 @@ import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
 import { LocaleProvider } from "../../lib/LocaleContext";
 import { Metadata } from "@/node_modules/next/types";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics />
         <LocaleProvider locale={locale}>
           <Header locale={locale} />
           {children}
