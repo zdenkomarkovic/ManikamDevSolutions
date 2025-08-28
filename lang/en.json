@@ -123,5 +123,24 @@
     "plh.name": "Enter your full name:",
     "plh.broj": "Enter your phone number:",
     "plh.message": "Your message to us"
-  }
+  },
+  "alt_hero": "Background image - Manikam Web Solutions",
+  "alt_reference": "Website screenshot: {project}",
+  "alt_section1_1": "Illustration of software solution",
+  "alt_section1_2": "Illustration of modern website",
+  "alt_section1_3": "Illustration of SEO optimization",
+  "alt_section1_4": "Illustration of CMS system",
+  "alt_section1_5": "Illustration of advertising",
+  "alt_usluge_1": "Web development service illustration",
+  "alt_usluge_2": "Website development illustration",
+  "alt_usluge_3": "CMS solution illustration",
+  "alt_usluge_4": "Online store illustration",
+  "alt_usluge_5": "SEO service illustration",
+  "alt_usluge_6": "Website maintenance illustration",
+  "alt_usluge_7": "Website transition illustration",
+  "alt_usluge_8": "Website redesign illustration",
+  "alt_usluge_9": "Consulting service illustration",
+  "alt_usluge_10": "Hosting service illustration",
+  "alt_usluge_11": "Google advertising illustration",
+  "alt_reklama_bg": "Background image of a laptop"
 }

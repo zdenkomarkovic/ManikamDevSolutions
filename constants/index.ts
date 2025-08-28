@@ -108,7 +108,7 @@ export interface Reference {
   link: string;
 }
 
-export const reference: Reference[] = [
+export const reference1: Reference[] = [
   {
     title: "Kreditni Savetnik",
     image: "/images/SS11.png",
@@ -171,5 +171,78 @@ export const reference: Reference[] = [
     title: "M Migić",
     image: "/images/SS10.png",
     link: "https://www.alpinistickiradovi.rs/",
+  },
+];
+export const reference2: Reference[] = [
+  {
+    title: "HATTA AI",
+    image: "/images/reference (14).jpg",
+    link: "https://hatta-ai.vercel.app/",
+  },
+  {
+    title: "Micro Hair Clinic",
+    image: "/images/reference (13).jpg",
+    link: "https://microhairclinic.si/",
+  },
+  {
+    title: "Ketering",
+    image: "/images/reference (12).jpg",
+    link: "https://ketering-two.vercel.app/",
+  },
+  {
+    title: "Pustolovi",
+    image: "/images/reference (11).jpg",
+    link: "https://pustolovi.vercel.app/",
+  },
+  {
+    title: "Slep Laki",
+    image: "/images/reference (10).jpg",
+    link: "https://slep-beograd.rs/",
+  },
+  {
+    title: "Amberg Pvc",
+    image: "/images/reference (9).jpg",
+    link: "https://aluipvcstolarija.com/",
+  },
+  {
+    title: "San Spremanje",
+    image: "/images/reference (8).jpg",
+    link: "https://www.ciscenjenovisad.rs/",
+  },
+  {
+    title: "Institut Lira",
+    image: "/images/reference (7).jpg",
+    link: "https://www.zastitanaradu.rs/",
+  },
+  {
+    title: "Fgc",
+    image: "/images/reference (6).jpg",
+    link: "https://fgc.rs/",
+  },
+  {
+    title: "Grad Mont",
+    image: "/images/reference (5).jpg",
+    link: "https://www.izrada-bazena.rs/",
+  },
+  {
+    title: "Trubaci",
+    image: "/images/reference (4).jpg",
+    link: "https://trubaci.vercel.app",
+  },
+  {
+    title: "Kuca Znanja",
+    image: "/images/reference (3).jpg",
+    link: "https://kucaznanja.edu.rs",
+  },
+  {
+    title: "Servis Mgm",
+    image: "/images/reference (2).jpg",
+    link: "https://servisracunaramgm.rs",
+  },
+
+  {
+    title: "Bliss",
+    image: "/images/reference (15).jpg",
+    link: "https://www.blisscollectionofficial.rs/",
   },
 ];

@@ -123,5 +123,24 @@
     "plh.name": "Unesite ime i prezime:",
     "plh.broj": "Unesite vaš broj telefona:",
     "plh.message": "Vaša poruka za nas"
-  }
+  },
+  "alt_hero": "Pozadinska slika - Manikam Web Solutions",
+  "alt_reference": "Snimak sajta: {project}",
+  "alt_section1_1": "Ilustracija softverskog rešenja",
+  "alt_section1_2": "Ilustracija modernog sajta",
+  "alt_section1_3": "Ilustracija SEO optimizacije",
+  "alt_section1_4": "Ilustracija CMS sistema",
+  "alt_section1_5": "Ilustracija oglašavanja",
+  "alt_usluge_1": "Ilustracija web development usluge",
+  "alt_usluge_2": "Ilustracija izrade sajta",
+  "alt_usluge_3": "Ilustracija CMS rešenja",
+  "alt_usluge_4": "Ilustracija online prodavnice",
+  "alt_usluge_5": "Ilustracija SEO usluge",
+  "alt_usluge_6": "Ilustracija održavanja sajta",
+  "alt_usluge_7": "Ilustracija tranzicije sajta",
+  "alt_usluge_8": "Ilustracija redizajna sajta",
+  "alt_usluge_9": "Ilustracija konsalting usluge",
+  "alt_usluge_10": "Ilustracija hosting usluge",
+  "alt_usluge_11": "Ilustracija Google oglašavanja",
+  "alt_reklama_bg": "Pozadinska slika laptopa"
 }
