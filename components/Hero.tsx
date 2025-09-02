@@ -2,7 +2,7 @@
 
 import Image from "@/node_modules/next/image";
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useLocale } from "@/lib/LocaleContext";
 import heroImg from "../public/images/laptop.jpg";
 
@@ -51,6 +51,7 @@ const Hero = ({ title }: HeroProps) => {
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+     <div className="relative container mx-auto px-[5px] md:px-4 h-screen ">
       {/* H1 naslov - pozicioniran apsolutno */}
       <div className="absolute bottom-10 md:bottom-16 left-10 md:left-16 z-20">
         <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
@@ -108,7 +109,7 @@ const Hero = ({ title }: HeroProps) => {
           ))}
         </div>
       </div>
-      
+      </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
           src={heroImg}
