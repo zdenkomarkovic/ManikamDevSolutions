@@ -53,12 +53,12 @@ const Hero = ({ title }: HeroProps) => {
     <div className="relative h-[100dvh] w-full bg-white dark:bg-neutral-950 overflow-hidden">
      <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
       {/* H1 naslov - pozicioniran apsolutno */}
-      <div className="absolute bottom-16 left-3 md:left-24 z-20">
+      <div className="absolute bottom-24 left-3 md:left-24 z-20">
         <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
           Manikam<span className="font-bold text-red-700 block">Web <span className="text-gray-900 font-normal">
           Solutions  </span></span>
          
-          <span className="text-[21px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
+          <span className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
             {title}
           </span>
         </h1>
