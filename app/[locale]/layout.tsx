@@ -23,6 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Manikam Web Solutions",
   description: "Agencija za izradu softvera i sajtova",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   icons: {
     icon: "/images/android-chrome-192x192.png",
     apple: "/images/apple-touch-icon.png",
