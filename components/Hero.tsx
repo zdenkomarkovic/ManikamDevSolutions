@@ -65,7 +65,7 @@ const Hero = ({ title }: HeroProps) => {
 
       {/* Animacija usluga - pozicionirana apsolutno */}
       <div className="absolute top-20 right-16 z-20 hidden md:block">
-        <div className="space-y-4">
+        <div className="space-y-3">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -78,7 +78,7 @@ const Hero = ({ title }: HeroProps) => {
                 duration: 0.6,
                 ease: "easeOut"
               }}
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl  text-gray-900 text-left"
+              className="md:text-2xl text-gray-900 text-left border border-gray-900 px-4 py-1 rounded-lg w-fit"
             >
               {service}
             </motion.div>
@@ -101,7 +101,7 @@ const Hero = ({ title }: HeroProps) => {
                 duration: 0.6,
                 ease: "easeOut"
               }}
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 text-left"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 text-left border border-gray-900 px-3 py-1 rounded-lg w-fit"
             >
               {service}
             </motion.div>
