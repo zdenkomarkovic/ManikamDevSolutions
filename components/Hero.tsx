@@ -102,7 +102,7 @@ const Hero = ({ title }: HeroProps) => {
                 duration: 0.6,
                 ease: "easeOut"
               }}
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-900 text-left border border-gray-900 px-3 py-1 rounded-lg w-fit"
+              className="text-base text-gray-900 text-left border border-gray-900 px-3 py-1 rounded-lg w-fit"
             >
               {service}
             </motion.div>
