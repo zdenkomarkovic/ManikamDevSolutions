@@ -50,10 +50,10 @@ const Hero = ({ title }: HeroProps) => {
   }, [services.length]);
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+    <div className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
      <div className="relative container mx-auto px-[5px] md:px-4 h-screen ">
       {/* H1 naslov - pozicioniran apsolutno */}
-      <div className="absolute bottom-10 md:bottom-16 left-10 md:left-16 z-20">
+      <div className="absolute bottom-10 md:bottom-16 left-10 md:left-24 z-20">
         <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
           Manikam<span className="font-bold text-red-700 block">Web <span className="text-gray-900 font-normal">
           Solutions  </span></span>
@@ -65,7 +65,7 @@ const Hero = ({ title }: HeroProps) => {
       </div>
 
       {/* Animacija usluga - pozicionirana apsolutno */}
-      <div className="absolute top-20 right-16 z-20 hidden md:block">
+      <div className="absolute top-20 right-24 z-20 hidden md:block">
         <div className="space-y-3">
           {services.map((service, index) => (
             <motion.div
