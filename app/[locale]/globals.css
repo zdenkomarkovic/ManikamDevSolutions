@@ -46,3 +46,19 @@ html {
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+
+/* Osigurava da Hero sekcija ne bude viša od ekrana na mobilnim uređajima */
+@media (max-width: 768px) {
+  .min-h-screen {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden;
+  }
+  
+  /* Osigurava da se Hero sekcija prikazuje ispravno na mobilnim */
+  .h-screen {
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+}
