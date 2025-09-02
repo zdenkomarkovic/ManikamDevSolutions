@@ -50,8 +50,8 @@ const Hero = ({ title }: HeroProps) => {
   }, [services.length]);
 
   return (
-    <div className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
-     <div className="relative container mx-auto px-[5px] md:px-4 h-screen ">
+    <div className="relative h-screen w-full bg-white dark:bg-neutral-950">
+     <div className="relative container mx-auto px-[5px] md:px-4 h-full">
       {/* H1 naslov - pozicioniran apsolutno */}
       <div className="absolute bottom-10 md:bottom-16 left-10 md:left-24 z-20">
         <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
