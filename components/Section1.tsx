@@ -45,7 +45,6 @@ const Section1 = ({
     offset: ["start start", "end end"],
   });
 
-  const titleHeight = 1750;
 
 
   return (
