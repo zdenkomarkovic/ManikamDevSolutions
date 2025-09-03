@@ -47,11 +47,6 @@ const Section1 = ({
 
   const titleHeight = 1750;
 
-  // Animacije za naslov
-  const titleAnimation = {
-    scale: useTransform(scrollY, [0, titleHeight], [1, 0.8]),
-    opacity: useTransform(scrollY, [0, titleHeight], [1, 0]),
-  };
 
   return (
     <div
