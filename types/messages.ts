@@ -8,12 +8,16 @@ export type Messages = {
     title2: string;
     title3: string;
     span2: string;
+    phone: string;
     subtitle: string;
     span3: string;
     subtitle2: string;
     span4: string;
     subtitle3: string;
     span5: string;
+    email_button: string;
+    email_address: string;
+    call_button: string;
   };
   cards: {
     title: string;

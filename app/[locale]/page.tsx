@@ -34,12 +34,16 @@ const defaultSection = {
   title2: "",
   title3: "",
   span2: "",
+  phone: "",
   subtitle: "",
   span3: "",
   subtitle2: "",
   span4: "",
   subtitle3: "",
   span5: "",
+  email_button: "",
+  email_address: "",
+  call_button: "",
 };
 
 export default async function Home({
