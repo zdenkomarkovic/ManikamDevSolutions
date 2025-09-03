@@ -5,7 +5,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 import Image from "@/node_modules/next/image";
 import rubik from "../public/rubik.jpg";
-import ideja from "../public/images/ideja.jpg";
+
 
 type CardData = {
   title: string;
@@ -18,6 +18,7 @@ type SectionData = {
   title2: string;
   title3: string;
   span2: string;
+  phone: string;
   subtitle: string;
   span3: string;
   subtitle2: string;
@@ -52,40 +53,31 @@ const Section1 = ({
   return (
     <div
       ref={targetRef}
-      className=" mx-auto container px-2 md:px-4 text-center"
+      className="w-full text-center"
     >
-      <motion.div
-        style={{
-          scale: titleAnimation.scale,
-          opacity: titleAnimation.opacity,
-        }}
-        className="h-[600px] sticky top-10 md:flex justify-between gap-10 items-center"
-      >
-        <div className="py-10 px-0">
-          <h2 className="text-4xl md:text-6xl  pb-10 px-0 ">
-            {section.title}
-            <span className="text-red-700">{section.span}</span>{" "}
-            {section.title2}{" "}
+      <div className="py-16 md:py-24 sticky top-10">
+        {/* Hero CTA Card */}
+        <div className="bg-gradient-to-br from-gray-400 to-white  py-8 md:py-16 shadow-xl border border-gray-100 text-center">
+                    <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
+            <div className="">{section.title}   {section.title3}
+            <span className="text-red-700 font-bold">{section.span}</span></div>
+ 
+            <div className="block">{section.title2}</div>
           </h2>
-          <a
-            href="tel:+381641967267"
-            className="text-red-700 text-3xl md:text-5xl text-center md:text-left hover:scale-110"
-          >
-            {section.title3}
-            <span className="text-black text-3xl md:text-4xl block md:inline">
-              {" "}
+                          <a
+                  href={`tel:${section.phone}`}
+                  className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-gray-700 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold border border-gray-700 hover:from-gray-800 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+            <svg className="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            {section.span4}
+            <span className="text-white text-base md:text-3xl font-normal block">
               {section.span2}
             </span>
           </a>
         </div>
-        <Image
-          src={ideja}
-          alt="idea"
-          width={350}
-          height={3}
-          className="rounded-full border-white border-[5px] md:border-[8px] w-[370px] h-[370px] md:w-[560px] mx-auto md:mx-0 object-cover "
-        />
-      </motion.div>
+      </div>
 
       <div>
         {cards.map((text, i) => (
@@ -99,35 +91,33 @@ const Section1 = ({
           />
         ))}
 
-        {/* Dodatni sadržaj */}
-        <div className="h-[1000px] ">
-          <div className="space-y-5 sticky top-0">
-            <p className="text-3xl xl:text-5xl pt-[150px]">
-              {section.subtitle}
-              <span className="font-bold text-red-700">{section.span3}</span>,
-              {section.subtitle2}
-            </p>
-            <div>
-              <Image
-                src={rubik}
-                alt="usluge"
-                width={300}
-                height={200}
-                className="mx-auto rounded-full w-[250px] h-[250px] md:w-[300px] md:h-[300px] object-cover hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <a
-              href="tel:+381641967267"
-              className="text-2xl md:text-4xl hover:scale-110"
-            >
-              <span className=" text-red-700 font-bold">{section.span4}</span>{" "}
-              {section.subtitle3}
-              <span className="text-red-700 font-bold">{section.span5}</span>
-              <p className="text-2xl md:text-3xl hover:scale-110">
-                {" "}
-                {section.span2}
+        {/* Second CTA Card */}
+        <div className="h-[800px]">
+          <div className="sticky top-0 bg-white pt-[100px]">
+            <div className="bg-gradient-to-br from-red-50 to-white rounded-3xl p-12 md:p-16 shadow-xl border border-red-100 w-full text-center">
+              <p className="text-3xl md:text-5xl mb-8 md:mb-12 font-bold leading-tight">
+                {section.subtitle}
+                <span className="text-red-700">{section.span3}</span>,
+                {section.subtitle2}
               </p>
-            </a>
+              
+              <a
+                href={`tel:${section.phone}`}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-700 to-white text-white px-8 md:py-4 rounded-3xl text-xl md:text-3xl font-semibold hover:from-red-800 hover:to-red-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-red-500"
+              >
+                <svg className="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <div className="text-center">
+                  <span className="font-bold">{section.span4}</span>{" "}
+                  {section.subtitle3}
+                  <span className="font-bold">{section.span5}</span>
+                  <span className="block text-lg md:text-2xl font-normal opacity-90 mt-2">
+                    {section.span2}
+                  </span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
