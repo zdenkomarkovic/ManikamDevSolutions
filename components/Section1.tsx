@@ -57,7 +57,7 @@ const Section1 = ({
         <div className="bg-gradient-to-br from-gray-400 to-white  py-8 md:py-16 shadow-xl border border-gray-100 text-center">
                     <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
             <div className="">{section.title}   {section.title3}
-            <span className="text-red-700 font-bold">{section.span}</span></div>
+            <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent">{section.span}</span></div>
  
             <div className="block">{section.title2}</div>
           </h2>
@@ -95,11 +95,11 @@ const Section1 = ({
             <div className="bg-gradient-to-br from-gray-400 to-white py-8 md:py-16 shadow-xl border border-gray-100 w-full text-center">
               <p className="container mx-auto text-center text-xl italic md:text-5xl mb-8 md:mb-12 leading-tight">
                 {section.subtitle}
-                <span className="text-red-700 font-bold">{section.span3}</span>,
+                <span className=" font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent">{section.span3}</span>,
                 {section.subtitle2}
               </p>
               
-              <p className="text-xl italic md:text-4xl mb-8 font-bold text-center">
+              <p className="text-xl italic md:text-4xl mb-8 font-bold  text-center">
                 {section.span4} {section.subtitle3} <span className="">{section.span5}</span>
               </p>
               
