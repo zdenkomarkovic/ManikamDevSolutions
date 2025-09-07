@@ -1,32 +1,10 @@
-import React from "react";
-import type { Metadata } from "next";
 "use client";
+
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Izrada web shopa - Online prodavnica | Manikam Web Solutions",
-  description: "Profesionalna izrada web shopova i online prodavnica. E-commerce rešenja prilagođena vašem biznisu. Integrisano plaćanje, upravljanje zalihama, SEO optimizacija.",
-  keywords: [
-    "izrada web shopa",
-    "online prodavnica",
-    "e-commerce",
-    "web shop",
-    "internet prodavnica",
-    "online trgovina",
-    "prodaja online",
-    "elektronska trgovina"
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
-      en: "https://manikamwebsolutions.com/en/webshop-development",
-    },
-  },
-};
-
-const page = () => {
+const WebShopPage = () => {
   const features = [
     {
       title: "Upravljanje proizvodima",
@@ -395,4 +373,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default WebShopPage;
