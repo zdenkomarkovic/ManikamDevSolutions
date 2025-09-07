@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { useScroll, motion, useTransform, AnimatePresence } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 import Image from "@/node_modules/next/image";
