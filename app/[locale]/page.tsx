@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { getIntl } from "../../lib/intl";
 import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 export async function generateMetadata({
   params,
@@ -70,6 +71,7 @@ export default async function Home({
   return (
     <main>
       <div className="">
+        <ParticlesBackground />
         <Hero title={heroTitle} />
         <Section1 section={section} cards={cards} />
         <Usluge usluge={usluge} title={uslugeTitle} />

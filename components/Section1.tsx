@@ -50,12 +50,13 @@ const Section1 = ({
   return (
     <div
       ref={targetRef}
-      className="w-full text-center"
+      className="w-full text-center relative"
     >
       <div className="py-16 md:py-24 sticky top-10">
         {/* Hero CTA Card */}
-        <div className="bg-gradient-to-br from-gray-400 to-white  py-8 md:py-16 shadow-xl border border-gray-100 text-center">
-                    <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
+        <div className="bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
+          <div className="container mx-auto relative z-30 ">
+                   <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
             <div className="">{section.title}   {section.title3}
             <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent">{section.span}</span></div>
  
@@ -73,10 +74,11 @@ const Section1 = ({
               {section.span2}
             </span>
           </a>
+          </div>  
         </div>
       </div>
 
-      <div className=" container mx-auto">
+      <div className=" container mx-auto relative z-20">
         {cards.map((text, i) => (
           <AnimatedCard
             key={i}

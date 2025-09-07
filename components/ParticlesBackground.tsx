@@ -49,7 +49,7 @@ const ParticlesBackground = () => {
         },
         particles: {
           color: {
-            value: "#374151",
+            value: "#ffffff",
           },
           links: {
             color: "#374151",
@@ -65,7 +65,7 @@ const ParticlesBackground = () => {
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: 1.2,
             straight: false,
           },
           number: {
@@ -82,7 +82,7 @@ const ParticlesBackground = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 0, max: 0 },
           },
         },
         detectRetina: true,

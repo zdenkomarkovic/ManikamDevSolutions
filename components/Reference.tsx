@@ -90,7 +90,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
           return (
             <motion.div 
               key={`${item.title}-${i}`} 
-              className="relative rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="relative z-20 rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}

@@ -26,19 +26,19 @@ const Usluge = ({ usluge, title }: { usluge: UslugeData[]; title: string }) => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={`md:w-[35%] h-[500px] rounded-xl  px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
+        className={`md:w-[35%] h-[500px] rounded-xl relative z-20 px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
       >
         <h2 className="text-[33px] md:text-6xl text-center uppercase">
           {title}
         </h2>
-        <div>
+        <div className="relative z-20">
           <Image
             src={pravac}
             alt="usluge"
             width={300}
             height={200}
             priority
-            className="mx-auto rotate-90 md:rotate-0 rounded-xl py-10 md:py-0 w-[350px] h-auto object-cover"
+            className="mx-auto relative z-20 rotate-90 md:rotate-0 rounded-xl py-10 md:py-0 w-[350px] h-auto object-cover"
           />
         </div>
       </motion.div>
