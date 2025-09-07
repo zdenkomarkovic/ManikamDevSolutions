@@ -333,6 +333,8 @@ const page = () => {
                 <a
                   href="mailto:manikamwebsolutions@gmail.com"
                   className="block bg-white/20 backdrop-blur text-white font-bold py-3 px-6 rounded-xl hover:bg-white/30 transition-colors"
+                >
+                  ✉️ manikamwebsolutions@gmail.com
                 </a>
               </div>
             </div>
@@ -378,7 +380,6 @@ const page = () => {
         </div>
       </div>
     </div>
-  )
   );
 };
 
