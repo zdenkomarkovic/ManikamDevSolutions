@@ -54,7 +54,7 @@ const Section1 = ({
     >
       <div className="py-16 md:py-24 sticky top-10">
         {/* Hero CTA Card */}
-        <div className="bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
+        <div className="hidden md:block bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
           <div className="container mx-auto relative z-30 ">
                    <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
             <div className="">{section.title}   {section.title3}

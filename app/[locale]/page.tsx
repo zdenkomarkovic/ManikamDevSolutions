@@ -72,7 +72,7 @@ export default async function Home({
     <main>
       <div className="">
         <ParticlesBackground />
-        <Hero title={heroTitle} />
+        <Hero title={heroTitle} section={section} />
         <Section1 section={section} cards={cards} />
         <Usluge usluge={usluge} title={uslugeTitle} />
         <Reference refLink={refLink} title={refTitle} />
