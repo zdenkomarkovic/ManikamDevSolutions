@@ -1,4 +1,4 @@
-﻿import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -66,7 +66,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         <GoogleAnalytics />
         <LocaleProvider locale={locale}>
           <Header locale={locale} />
