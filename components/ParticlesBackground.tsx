@@ -2,7 +2,7 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -10,7 +10,7 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = useCallback(async () => {
-    // Particles su učitani
+    // Particles su ucitani
   }, []);
 
   return (
@@ -49,10 +49,10 @@ const ParticlesBackground = () => {
         },
         particles: {
           color: {
-            value: "#991b1b",
+            value: "#374151",
           },
           links: {
-            color: "#991b1b",
+            color: "#374151",
             distance: 150,
             enable: true,
             opacity: 0.2,
@@ -87,7 +87,7 @@ const ParticlesBackground = () => {
         },
         detectRetina: true,
       }}
-      className="absolute inset-0 z-10 pointer-events-none"
+      className="fixed inset-0 -z-50 pointer-events-none"
     />
   );
 };
