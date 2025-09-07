@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
