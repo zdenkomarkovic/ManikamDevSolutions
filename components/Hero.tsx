@@ -83,11 +83,11 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
             {title}
           </p>
           <div className="md:hidden">
-                   <h2 className="text-[19px] italic md:text-5xl pb-8 md:pb-12">
+                   <h2 className="text-[19px] italic md:text-5xl pb-4 md:pb-12">
             <div className="">{section.title}   {section.title3}
             <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent">{section.span} </span>{section.title2}</div>
  
-            <div className=""></div>
+     
           </h2>
                           <a
                   href={`tel:${section.phone}`}
