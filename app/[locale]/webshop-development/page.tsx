@@ -263,7 +263,7 @@ const page = () => {
             </div>
             <h4 className="text-xl font-bold mb-3">Security</h4>
             <p className="text-gray-600">
-              Highest security standards to protect your data and your customers' data.
+              Highest security standards to protect your data and your customers&apos; data.
             </p>
           </div>
         </div>
