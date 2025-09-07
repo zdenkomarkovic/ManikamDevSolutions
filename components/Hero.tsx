@@ -62,10 +62,10 @@ const Hero = ({ title }: HeroProps) => {
           Manikam<span className="font-bold text-red-700 block">Web <span className="text-gray-900 font-normal">
           Solutions  </span></span>
          
-          <span className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
-            {title}
-          </span>
         </h1>
+          <p className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
+            {title}
+          </p>
       </div>
 
       {/* Animacija usluga - pozicionirana apsolutno */}
