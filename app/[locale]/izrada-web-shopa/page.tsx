@@ -129,93 +129,135 @@ const page = () => {
             </div>
           </div>
 
-          {/* Desna kolona - Paket */}
-          <div className="lg:sticky lg:top-24">
-            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-blue-200 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-6 py-2 rounded-bl-2xl">
+          {/* Desna kolona - 3 Paketa */}
+          <div className="lg:sticky lg:top-24 space-y-6">
+            
+            {/* Osnovni paket */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+              <h3 className="text-2xl font-bold mb-2 text-gray-800">
+                Osnovni Web Shop
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Idealno za manje biznise koji počinju online prodaju
+              </p>
+              <div className="text-3xl font-bold text-blue-600 mb-4">€1,200</div>
+
+              <div className="space-y-3 mb-6 text-sm">
+                <div className="flex items-start">
+                  <FaShoppingCart className="text-blue-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Do 50 proizvoda</span>
+                </div>
+                <div className="flex items-start">
+                  <FaCreditCard className="text-green-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Osnovno plaćanje (kartice, pouzeće)</span>
+                </div>
+                <div className="flex items-start">
+                  <FaMobile className="text-orange-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Mobilna optimizacija</span>
+                </div>
+                <div className="flex items-start">
+                  <FaLock className="text-red-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>SSL sertifikat</span>
+                </div>
+              </div>
+
+              <div className="text-xs text-gray-600 mb-4">
+                <strong>Vreme izrade:</strong> 10-14 dana<br/>
+                <strong>Hosting:</strong> 1 godina uključena
+              </div>
+            </div>
+
+            {/* Profesionalni paket - NAJPOPULARNIJI */}
+            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-blue-200 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-2xl text-xs">
                 <span className="font-bold">NAJPOPULARNIJI</span>
               </div>
               
               <div className="mt-4">
-                <h3 className="text-3xl font-bold mb-2 text-gray-800">
+                <h3 className="text-2xl font-bold mb-2 text-gray-800">
                   Profesionalni Web Shop
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   Kompletno e-commerce rešenje za ozbiljan biznis
                 </p>
+                <div className="text-3xl font-bold text-purple-600 mb-4">€2,500</div>
 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-3 mb-6 text-sm">
                   <div className="flex items-start">
-                    <FaShoppingCart className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <strong>Neograničen broj proizvoda</strong>
-                      <p className="text-sm text-gray-600">Sa kategorijama, varijantama i detaljnim opisima</p>
-                    </div>
+                    <FaShoppingCart className="text-blue-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                    <span>Neograničen broj proizvoda</span>
                   </div>
-                  
                   <div className="flex items-start">
-                    <FaCreditCard className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <strong>Integrisano plaćanje</strong>
-                      <p className="text-sm text-gray-600">Kartice, PayPal, pouzeće, bankarske uplate</p>
-                    </div>
+                    <FaCreditCard className="text-green-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                    <span>Sva plaćanja (kartice, PayPal, banke)</span>
                   </div>
-                  
                   <div className="flex items-start">
-                    <FaCog className="text-purple-500 mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <strong>Upravljanje zalihama</strong>
-                      <p className="text-sm text-gray-600">Automatsko praćenje stanja i notifikacije</p>
-                    </div>
+                    <FaCog className="text-purple-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                    <span>Upravljanje zalihama</span>
                   </div>
-                  
                   <div className="flex items-start">
-                    <FaMobile className="text-orange-500 mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <strong>Mobilna optimizacija</strong>
-                      <p className="text-sm text-gray-600">Savršen prikaz na svim uređajima</p>
-                    </div>
+                    <FaMobile className="text-orange-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                    <span>Napredna mobilna optimizacija</span>
                   </div>
-                  
                   <div className="flex items-start">
-                    <FaLock className="text-red-500 mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <strong>SSL sertifikat i sigurnost</strong>
-                      <p className="text-sm text-gray-600">Zaštićene transakcije i podaci kupaca</p>
-                    </div>
+                    <FaChartLine className="text-indigo-500 mt-1 mr-2 flex-shrink-0 text-xs" />
+                    <span>Analytics i izveštaji</span>
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
-                  <h4 className="font-bold mb-3">Dodatno uključeno:</h4>
-                  <ul className="text-sm space-y-2 text-gray-700">
-                    <li>• Korisnički nalozi i wishlist</li>
-                    <li>• Automatske email notifikacije</li>
-                    <li>• Detaljni admin panel</li>
-                    <li>• Google Analytics integracija</li>
-                    <li>• SEO optimizacija</li>
-                    <li>• Hosting i domen (1 godina)</li>
-                    <li>• Obuka za korišćenje</li>
-                    <li>• 3 meseca besplatne podrške</li>
-                  </ul>
-                </div>
-
-                <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
-                  <p className="text-center text-gray-700">
-                    <strong>Vreme izrade:</strong> 14-21 dan<br/>
-                    <strong>Garancija:</strong> 12 meseci
-                  </p>
+                <div className="text-xs text-gray-600 mb-4">
+                  <strong>Vreme izrade:</strong> 14-21 dan<br/>
+                  <strong>Podrška:</strong> 3 meseca besplatno
                 </div>
               </div>
             </div>
 
+            {/* Premium paket */}
+            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-6 shadow-lg text-white">
+              <h3 className="text-2xl font-bold mb-2">
+                Premium Web Shop
+              </h3>
+              <p className="mb-4 opacity-90">
+                Enterprise rešenje sa naprednim funkcionalnostima
+              </p>
+              <div className="text-3xl font-bold mb-4">€4,500</div>
+
+              <div className="space-y-3 mb-6 text-sm">
+                <div className="flex items-start">
+                  <FaShoppingCart className="text-yellow-300 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Neograničeno + Multi-store</span>
+                </div>
+                <div className="flex items-start">
+                  <FaCreditCard className="text-yellow-300 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Sva plaćanja + Kriptovalute</span>
+                </div>
+                <div className="flex items-start">
+                  <FaCog className="text-yellow-300 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>AI preporuke proizvoda</span>
+                </div>
+                <div className="flex items-start">
+                  <FaChartLine className="text-yellow-300 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Napredna analitika + CRM</span>
+                </div>
+                <div className="flex items-start">
+                  <FaLock className="text-yellow-300 mt-1 mr-2 flex-shrink-0 text-xs" />
+                  <span>Enterprise sigurnost</span>
+                </div>
+              </div>
+
+              <div className="text-xs opacity-90 mb-4">
+                <strong>Vreme izrade:</strong> 21-30 dana<br/>
+                <strong>Podrška:</strong> 6 meseci + prioritet
+              </div>
+            </div>
+
             {/* CTA sekcija */}
-            <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white text-center">
               <h4 className="text-xl font-bold mb-3">
                 Spremni za digitalni uspeh?
               </h4>
               <p className="mb-4 opacity-90">
-                Kontaktirajte nas za besplatnu konsultaciju i procenu vašeg projekta
+                Kontaktirajte nas za besplatnu konsultaciju
               </p>
               <div className="space-y-3">
                 <a
