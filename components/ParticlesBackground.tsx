@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
@@ -87,7 +87,7 @@ const ParticlesBackground = () => {
         },
         detectRetina: true,
       }}
-      className="fixed inset-0 -z-50 pointer-events-none"
+      className="absolute inset-0 z-10 pointer-events-none"
     />
   );
 };
