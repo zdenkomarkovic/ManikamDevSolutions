@@ -77,7 +77,7 @@ export default function Header({ locale }: { locale: string }) {
                 <Link
                   key={i}
                   href={item.route}
-                  className="text-foreground hover:text-primary transition-colors uppercase"
+                  className="text-foreground hover:text-red-800 transition-colors uppercase"
                 >
                   {item.title}
                 </Link>

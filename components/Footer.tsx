@@ -48,7 +48,7 @@ export default function Footer({
                   <li>
                     <Link
                       href={item.route}
-                      className="text-muted-foreground hover:text-primary"
+                      className="text-muted-foreground hover:text-red-800"
                     >
                       {item.title}
                     </Link>
@@ -62,7 +62,7 @@ export default function Footer({
             <div>
               {" "}
               <a href="tel:+381641967267">
-                <p className="text-muted-foreground  flex gap-2 items-center hover:text-primary">
+                <p className="text-muted-foreground  flex gap-2 items-center hover:text-red-800">
                   Office: Serbia <FaPhone className="" /> +38164 1967 267
                 </p>
               </a>
@@ -70,7 +70,7 @@ export default function Footer({
             <div>
               {" "}
               <a href="tel:+12408103730">
-                <p className="text-muted-foreground  flex gap-2 items-center hover:text-primary">
+                <p className="text-muted-foreground  flex gap-2 items-center hover:text-red-800">
                   Office: Washington, D.C., USA <FaPhone className="" />{" "}
                   +12408103730
                 </p>
@@ -78,7 +78,7 @@ export default function Footer({
             </div>
             <div>
               <a href="mailto:manikamwebsolutions@gmail.com">
-                <p className="flex gap-3 items-center  hover:text-primary text-muted-foreground text-wrap">
+                  <p className="flex gap-3 items-center  hover:text-red-800 text-muted-foreground text-wrap">
                   <TfiEmail /> manikamwebsolutions@gmail.com
                 </p>
               </a>
@@ -86,14 +86,14 @@ export default function Footer({
             <div className="flex space-x-4 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/profile.php?id=61574784286298"
-                className="text-muted-foreground hover:text-primary"
+                className="text-muted-foreground hover:text-red-800"
               >
                 <Facebook />
               </a>
               <a
                 href="https://www.instagram.com/manikam.web.solutions/"
                 target={"_blank"}
-                className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-red-800"
               >
                 <Instagram />
               </a>
@@ -104,7 +104,7 @@ export default function Footer({
               Manikam <span className="">Web</span> Solutions
             </h3>
 
-            <p className=" font-bold text-red-700 ">{message}</p>
+            <p className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent">{message}</p>
           </div>
         </div>
         <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-muted-foreground">

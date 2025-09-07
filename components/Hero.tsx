@@ -74,9 +74,10 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
       {/* H1 naslov - pozicioniran apsolutno */}
       <div className="absolute bottom-6 md:bottom-32 left-3 md:left-24 z-20">
         <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
-          Manikam<span className="font-bold text-red-700 block">Web <span className="text-gray-900 font-normal">
-          Solutions  </span></span>
-         
+          Manikam <span className="block">
+            <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent ">Web </span><span className="text-gray-900 font-normal">
+            Solutions  </span>
+          </span>
         </h1>
           <p className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
             {title}
@@ -105,7 +106,7 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
 
       {/* Animacija usluga - pozicionirana apsolutno */}
       <div className="absolute top-32 right-24 z-20 hidden md:block">
-        <div className="space-y-3">
+        <div className="space-y-3 relative z-20">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -118,7 +119,7 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
                 duration: 0.6,
                 ease: "easeOut"
               }}
-              className="md:text-2xl text-gray-900 text-left border border-gray-900 px-4 py-1 rounded-lg w-fit"
+              className="relative z-20 md:text-2xl text-gray-900 text-left border border-gray-900 px-4 py-1 rounded-lg w-fit"
             >
               {service}
             </motion.div>
