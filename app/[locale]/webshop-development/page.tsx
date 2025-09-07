@@ -1,19 +1,22 @@
 import React from "react";
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
-import Section1 from "@/components/Section1";
-import Usluge from "@/components/Usluge";
-import Reference from "@/components/Reference";
-import { generateAlternateLinks } from "@/lib/seo";
-import { Messages } from "@/types/messages";
-import { getIntl } from "../../../lib/intl";
-import { i18n } from "@/i18n-config";
-import { isValidLocale } from "@/lib/locale";
-import ParticlesBackground from "@/components/ParticlesBackground";
+import { FaShoppingCart, FaCreditCard, FaChartLine, FaMobile, FaLock, FaCog } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Webshop Development - E-commerce Solutions | Manikam Web Solutions",
-  description: "Professional webshop and e-commerce development. Custom online store solutions with integrated payments, inventory management, and SEO optimization tailored to your business.",
+  title: "Webshop Development - Professional E-commerce Solutions | Manikam Web Solutions",
+  description: "Professional webshop development and e-commerce solutions. Complete online stores with integrated payments, inventory management, SEO optimization and mobile adaptation for maximum results.",
+  keywords: [
+    "webshop development",
+    "online store",
+    "e-commerce",
+    "web shop",
+    "internet store",
+    "online shop",
+    "e-commerce solutions",
+    "web store development",
+    "digital store",
+    "online business"
+  ],
   alternates: {
     canonical: "https://manikamwebsolutions.com/en/webshop-development",
     languages: {
@@ -23,117 +26,250 @@ export const metadata: Metadata = {
   },
 };
 
-const defaultSection = {
-  title: "Professional online stores",
-  span: "that boost",
-  title2: "your sales!",
-  title3: "",
-  span2: "+12408103730",
-  phone: "+12408103730",
-  subtitle: "Your business deserves a",
-  span3: "webshop",
-  subtitle2: "that works 24/7 and delivers results",
-  span4: "Call us",
-  subtitle3: "to launch your success",
-  span5: "!",
-  email_button: "Send email",
-  email_address: "manikamwebsolutions@gmail.com",
-  call_button: "Call us"
+const page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Hero section */}
+      <div className="pt-24 pb-16 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Webshop Development
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your business with a professional online store that works 24/7. 
+            We create e-commerce solutions that increase sales and automate your business.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+              E-commerce Experts
+            </span>
+            <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">
+              Integrated Payments
+            </span>
+            <span className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold">
+              SEO Optimized
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main content section */}
+      <div className="container mx-auto px-4 pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          
+          {/* Left column - Text */}
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">
+                Why is a webshop crucial for your success?
+              </h2>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p className="text-lg">
+                  In the digital age, an online store is not a luxury but a necessity. Your competitors are already selling online 24 hours a day, 
+                  7 days a week. A webshop allows you to reach customers worldwide, increase revenue and automate the sales process.
+                </p>
+                <p>
+                  Our webshops are not just digital stores - they are powerful business tools that transform the way you run your business. 
+                  With advanced inventory management features, automated order processing and detailed analytics, 
+                  your webshop becomes the heart of your digital business.
+                </p>
+                <p>
+                  We use the latest technologies like React.js and Next.js that guarantee speed, security and excellent positioning on Google search engines. 
+                  Unlike WordPress or other template solutions, our custom webshops are optimized for performance and SEO from day one.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-bold mb-6 text-gray-800">
+                What makes our webshops special?
+              </h3>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  <strong>Mobile optimization:</strong> Over 60% of purchases are made from mobile devices. Our webshops are fully responsive 
+                  and provide a perfect user experience on all devices.
+                </p>
+                <p>
+                  <strong>Loading speed:</strong> Every second of delay costs you customers. Our webshops load in less than 3 seconds, 
+                  which significantly increases conversions.
+                </p>
+                <p>
+                  <strong>SEO optimization:</strong> Your webshop must be found. We implement advanced SEO techniques that ensure 
+                  high positioning on Google search engines and more organic traffic.
+                </p>
+                <p>
+                  <strong>Security:</strong> SSL certificates, secure data storage and PCI DSS compliance guarantee the safety 
+                  of your customers and their financial information.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">
+                Results you can expect
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <FaChartLine className="mr-3 text-yellow-300" />
+                  Sales increase of 40-60% in the first year
+                </li>
+                <li className="flex items-center">
+                  <FaShoppingCart className="mr-3 text-yellow-300" />
+                  Automation of 80% of sales processes
+                </li>
+                <li className="flex items-center">
+                  <FaMobile className="mr-3 text-yellow-300" />
+                  Access to global market 24/7
+                </li>
+                <li className="flex items-center">
+                  <FaCog className="mr-3 text-yellow-300" />
+                  Reduction of operational costs by 30%
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Right column - Package */}
+          <div className="lg:sticky lg:top-24">
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-blue-200 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-6 py-2 rounded-bl-2xl">
+                <span className="font-bold">MOST POPULAR</span>
+              </div>
+              
+              <div className="mt-4">
+                <h3 className="text-3xl font-bold mb-2 text-gray-800">
+                  Professional Webshop
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Complete e-commerce solution for serious business
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start">
+                    <FaShoppingCart className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <strong>Unlimited products</strong>
+                      <p className="text-sm text-gray-600">With categories, variants and detailed descriptions</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <FaCreditCard className="text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <strong>Integrated payments</strong>
+                      <p className="text-sm text-gray-600">Cards, PayPal, cash on delivery, bank transfers</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <FaCog className="text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <strong>Inventory management</strong>
+                      <p className="text-sm text-gray-600">Automatic stock tracking and notifications</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <FaMobile className="text-orange-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <strong>Mobile optimization</strong>
+                      <p className="text-sm text-gray-600">Perfect display on all devices</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <FaLock className="text-red-500 mt-1 mr-3 flex-shrink-0" />
+                    <div>
+                      <strong>SSL certificate and security</strong>
+                      <p className="text-sm text-gray-600">Protected transactions and customer data</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t pt-6">
+                  <h4 className="font-bold mb-3">Additionally included:</h4>
+                  <ul className="text-sm space-y-2 text-gray-700">
+                    <li>• User accounts and wishlist</li>
+                    <li>• Automatic email notifications</li>
+                    <li>• Detailed admin panel</li>
+                    <li>• Google Analytics integration</li>
+                    <li>• SEO optimization</li>
+                    <li>• Hosting and domain (1 year)</li>
+                    <li>• Usage training</li>
+                    <li>• 3 months free support</li>
+                  </ul>
+                </div>
+
+                <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+                  <p className="text-center text-gray-700">
+                    <strong>Development time:</strong> 14-21 days<br/>
+                    <strong>Warranty:</strong> 12 months
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA section */}
+            <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white text-center">
+              <h4 className="text-xl font-bold mb-3">
+                Ready for digital success?
+              </h4>
+              <p className="mb-4 opacity-90">
+                Contact us for a free consultation and project assessment
+              </p>
+              <div className="space-y-3">
+                <a
+                  href="tel:+12408103730"
+                  className="block bg-white text-blue-600 font-bold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors"
+                >
+                  📞 +1 240 810 3730
+                </a>
+                <a
+                  href="mailto:manikamwebsolutions@gmail.com"
+                  className="block bg-white/20 backdrop-blur text-white font-bold py-3 px-6 rounded-xl hover:bg-white/30 transition-colors"
+                >
+                  ✉️ manikamwebsolutions@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional benefits section */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <FaChartLine className="text-2xl text-blue-600" />
+            </div>
+            <h4 className="text-xl font-bold mb-3">Sales Increase</h4>
+            <p className="text-gray-600">
+              Our clients on average increase sales by 40-60% in the first year of webshop operation.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <FaCog className="text-2xl text-green-600" />
+            </div>
+            <h4 className="text-xl font-bold mb-3">Automation</h4>
+            <p className="text-gray-600">
+              Automated processes for orders, invoicing and inventory management save time and money.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <FaLock className="text-2xl text-purple-600" />
+            </div>
+            <h4 className="text-xl font-bold mb-3">Security</h4>
+            <p className="text-gray-600">
+              Highest security standards to protect your data and your customers' data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default async function WebshopDevelopment({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const awaitedParams = await params;
-  const localeParam = awaitedParams.locale;
-  const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
-  const intl = await getIntl(locale);
-  const messages = intl.messages as unknown as Messages;
-
-  const heroTitle = "Webshop development that delivers results!";
-  
-  const webshopCards = [
-    {
-      title: "Need an online store that works 24/7?",
-      mim: "We create professional webshops with integrated payment systems, inventory management, and automated order processing. Your customers can shop anytime, anywhere, while you earn money while you sleep.",
-      img: "/images/hero2.jpg"
-    },
-    {
-      title: "Your webshop isn't attracting enough customers?",
-      mim: "We design attractive and functional online stores that convert visitors into buyers. Focus on user experience, loading speed, and purchase simplicity for maximum results.",
-      img: "/images/hero.jpg"
-    },
-    {
-      title: "Want to automate sales and management?",
-      mim: "Our webshops come with advanced admin panels for managing products, orders, customers, and inventory. Everything in one place with detailed sales reports.",
-      img: "/images/sijalica.jpg"
-    },
-    {
-      title: "Need integration with payment systems?",
-      mim: "We'll integrate all popular payment methods - cards, PayPal, cash on delivery, bank transfers. Secure transactions with SSL certificates and protected customer data.",
-      img: "/images/kljuc.jpg"
-    },
-    {
-      title: "Want to stand out from the competition?",
-      mim: "We create unique webshops tailored to your brand and target audience. SEO optimization, fast loading, and mobile optimization for better Google rankings.",
-      img: "/images/planeta.jpg"
-    }
-  ];
-
-  const webshopUsluge = [
-    {
-      img: "/images/7079603_3509262.svg",
-      title: "BASIC WEBSHOP",
-      text: "Complete online store up to 100 products with all necessary functionalities for successful sales",
-      span: ""
-    },
-    {
-      img: "/images/software.svg", 
-      title: "ADVANCED WEBSHOP",
-      text: "Custom webshop with unlimited products, advanced functionalities and integrations",
-      span: ""
-    },
-    {
-      img: "/images/cms.png",
-      title: "CONTENT MANAGEMENT",
-      text: "Simple admin panel for adding products, managing orders and tracking sales",
-      span: ""
-    },
-    {
-      img: "/images/seo.svg",
-      title: "SEO OPTIMIZATION",
-      text: "Search engine optimization so your webshop is easier to find and better ranked on Google",
-      span: ""
-    },
-    {
-      img: "/images/odrzavanje.png",
-      title: "MAINTENANCE & SUPPORT",
-      text: "Regular updates, security patches and technical support for smooth operation",
-      span: ""
-    },
-    {
-      img: "/images/ads.svg",
-      title: "MARKETING & PROMOTION",
-      text: "Google Ads campaigns, Facebook advertising and email marketing to increase sales",
-      span: ""
-    }
-  ];
-
-  const uslugeTitle = "Our webshop services";
-  const refLink = intl.formatMessage({ id: "reference.link" });
-  const refTitle = intl.formatMessage({ id: "reference.title" });
-
-  return (
-    <main>
-      <div className="">
-        <ParticlesBackground />
-        <Hero title={heroTitle} section={defaultSection} />
-        <Section1 section={defaultSection} cards={webshopCards} />
-        <Usluge usluge={webshopUsluge} title={uslugeTitle} />
-        <Reference refLink={refLink} title={refTitle} />
-      </div>
-    </main>
-  );
-}
+export default page;
