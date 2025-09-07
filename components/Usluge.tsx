@@ -42,7 +42,7 @@ const Usluge = ({ usluge, title }: { usluge: UslugeData[]; title: string }) => {
           />
         </div>
       </motion.div>
-      <div className={` relative z-10 md:w-[60%] bg-gray-100/75 `}>
+      <div className={` relative z-30 md:w-[60%] bg-gray-100/75 `}>
         <div className="grid grid-cols-2 gap-2 md:gap-10 md:px-20">
           {usluge.map((item, i) => {
             return <Card key={i} item={item} i={i} />;
