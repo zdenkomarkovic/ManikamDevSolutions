@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import Image from "@/node_modules/next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useLocale } from "@/lib/LocaleContext";
 import heroImg from "../public/images/laptop.jpg";
@@ -29,6 +29,7 @@ type SectionData = {
 
 const Hero = ({ title, section }: { title: string, section: SectionData }) => {
   const locale = useLocale();
+  const [isMounted, setIsMounted] = useState(false);
   
   // Lokalizovani tekstovi za usluge
   const services = locale === "sr" 
@@ -50,6 +51,12 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
     const intervals: NodeJS.Timeout[] = [];
     
     // Dodajemo usluge jednu po jednu sa razlicitim kasnjenjima
@@ -64,8 +71,37 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
     return () => {
       intervals.forEach(clearTimeout);
     };
-  }, [services.length]);
+  }, [services.length, isMounted]);
 
+  if (!isMounted) {
+    return (
+      <div className="relative h-[100dvh] w-full bg-white dark:bg-neutral-950 overflow-hidden">
+        <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
+          <div className="absolute bottom-6 md:bottom-32 left-3 md:left-24 z-20">
+            <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
+              Manikam <span className="block">
+                <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent ">Web </span><span className="text-gray-900 font-normal">
+                Solutions  </span>
+              </span>
+            </h1>
+            <p className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
+              {title}
+            </p>
+          </div>
+        </div>
+        <div className="absolute top-0 z-0 w-full h-screen">
+          <Image
+            src={heroImg}
+            alt="Background image"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/60 to-transparent" />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="relative h-[100dvh] w-full bg-white dark:bg-neutral-950 overflow-hidden">
      <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform, AnimatePresence } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 import { MotionValue } from "@/node_modules/framer-motion/dist/index";
 import Image from "@/node_modules/next/image";
@@ -161,11 +161,12 @@ const AnimatedCard = ({
   const start = animationHeight + index * screenHeight;
   const end = animationHeight + (index + 1) * screenHeight;
 
-  const scale = useTransform(scrollY, [start, end], [1, 0.8]);
-  const opacity = useTransform(scrollY, [start, end], [1, 0]);
+  const scale = useTransform(scrollY, [start, end], [1, 0.8], { clamp: false });
+  const opacity = useTransform(scrollY, [start, end], [1, 0], { clamp: false });
 
   return (
     <motion.div
+      initial={{ scale: 1, opacity: 1 }}
       style={{
         scale,
         opacity,
