@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import { useLocale } from "@/lib/LocaleContext";
 import heroImg from "../public/images/laptop.jpg";
 
-
-
 type SectionData = {
   title: string;
   span: string;
@@ -26,38 +24,38 @@ type SectionData = {
   call_button: string; // Added for call button text
 };
 
-
-const Hero = ({ title, section }: { title: string, section: SectionData }) => {
+const Hero = ({ title, section }: { title: string; section: SectionData }) => {
   const locale = useLocale();
-  
+
   // Lokalizovani tekstovi za usluge
-  const services = locale === "sr" 
-    ? [
-        "Izrada web sajta",
-        "Izrada web shopa", 
-        "Izrada softvera",
-        "Google oglasavanje",
-        "SEO optimizacija"
-      ]
-    : [
-        "Website Development",
-        "Web Shop Development",
-        "Software Development", 
-        "Google Advertising",
-        "SEO Optimization"
-      ];
+  const services =
+    locale === "sr"
+      ? [
+          "Izrada web sajta",
+          "Izrada web shopa",
+          "Izrada softvera",
+          "Google oglasavanje",
+          "SEO optimizacija",
+        ]
+      : [
+          "Website Development",
+          "Web Shop Development",
+          "Software Development",
+          "Google Advertising",
+          "SEO Optimization",
+        ];
 
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
 
   useEffect(() => {
     const intervals: NodeJS.Timeout[] = [];
-    
+
     // Dodajemo usluge jednu po jednu sa razlicitim kasnjenjima
     services.forEach((_, index) => {
       const timeout = setTimeout(() => {
-        setVisibleServices(prev => [...prev, index]);
+        setVisibleServices((prev) => [...prev, index]);
       }, index * 400); // 800ms izmedu svake usluge
-      
+
       intervals.push(timeout);
     });
 
@@ -68,87 +66,95 @@ const Hero = ({ title, section }: { title: string, section: SectionData }) => {
 
   return (
     <div className="relative h-[100dvh] w-full bg-white dark:bg-neutral-950 overflow-hidden">
-     <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
-
-      
-      {/* H1 naslov - pozicioniran apsolutno */}
-      <div className="absolute bottom-6 md:bottom-32 left-3 md:left-24 z-20">
-        <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
-          Manikam <span className="block">
-            <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent ">Web </span><span className="text-gray-900 font-normal">
-            Solutions  </span>
-          </span>
-        </h1>
+      <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
+        {/* H1 naslov - pozicioniran apsolutno */}
+        <div className="absolute bottom-6 md:bottom-32 left-3 md:left-24 z-20">
+          <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
+            Manikam{" "}
+            <span className="block">
+              <span className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent ">
+                Web{" "}
+              </span>
+              <span className="text-gray-900 font-normal">Solutions </span>
+            </span>
+          </h1>
           <p className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
             {title}
           </p>
           <div className="md:hidden">
-                   <h2 className="text-[19px] italic md:text-5xl pb-4 md:pb-12">
-            <div className="">{section.title}   {section.title3}
-            <span className="font-bold bg-gradient-to-r from-gray-700 via-red-800 to-red-800 bg-clip-text text-transparent">{section.span} </span>{section.title2}</div>
- 
-     
-          </h2>
-                          <a
-                  href={`tel:${section.phone}`}
-                  className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-gray-700 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold border border-gray-700 hover:from-gray-800 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                >
-                              <svg className="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-            {section.span4}
-            <span className="text-white text-base md:text-3xl font-normal block">
-              {section.span2}
-            </span>
-          </a>
-          </div>  
-      </div>
-
-      {/* Animacija usluga - pozicionirana apsolutno */}
-      <div className="absolute top-32 right-24 z-20 hidden md:block">
-        <div className="space-y-3 relative z-20">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ 
-                opacity: visibleServices.includes(index) ? 1 : 0,
-                x: visibleServices.includes(index) ? 0 : 100
-              }}
-              transition={{ 
-                duration: 0.6,
-                ease: "easeOut"
-              }}
-              className="relative z-20 md:text-2xl text-gray-900 text-left border border-gray-900 px-4 py-1 rounded-lg w-fit"
+            <h2 className="text-[19px] italic md:text-5xl pb-4 md:pb-12">
+              <div className="">
+                {section.title} {section.title3}
+                <span className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent">
+                  {section.span}{" "}
+                </span>
+                {section.title2}
+              </div>
+            </h2>
+            <a
+              href={`tel:${section.phone}`}
+              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              {service}
-            </motion.div>
-          ))}
+              <svg
+                className="w-6 h-6 md:w-8 md:h-8"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              {section.span4}
+              <span className="text-white text-base md:text-3xl font-normal block">
+                {section.span2}
+              </span>
+            </a>
+          </div>
         </div>
-      </div>
 
-      {/* Mobilna verzija usluga - iznad h1 */}
-      <div className="absolute top-24 right-3 z-20 md:hidden">
-        <div className="space-y-3">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ 
-                opacity: visibleServices.includes(index) ? 1 : 0,
-                x: visibleServices.includes(index) ? 0 : 100
-              }}
-              transition={{ 
-                duration: 0.6,
-                ease: "easeOut"
-              }}
-              className="text-base text-gray-900 text-left border border-gray-900 px-3 py-1 rounded-lg w-fit"
-            >
-              {service}
-            </motion.div>
-          ))}
+        {/* Animacija usluga - pozicionirana apsolutno */}
+        <div className="absolute top-32 right-24 z-20 hidden md:block">
+          <div className="space-y-3 relative z-20">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: visibleServices.includes(index) ? 1 : 0,
+                  x: visibleServices.includes(index) ? 0 : 100,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+                className="relative z-20 md:text-2xl text-gray-900 text-left border border-gray-900 px-4 py-1 rounded-lg w-fit"
+              >
+                {service}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+
+        {/* Mobilna verzija usluga - iznad h1 */}
+        <div className="absolute top-24 right-3 z-20 md:hidden">
+          <div className="space-y-3">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: visibleServices.includes(index) ? 1 : 0,
+                  x: visibleServices.includes(index) ? 0 : 100,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+                className="text-base text-gray-900 text-left border border-gray-900 px-3 py-1 rounded-lg w-fit"
+              >
+                {service}
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="absolute top-0 z-0 w-full h-screen">
         <Image
