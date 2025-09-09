@@ -90,8 +90,8 @@ const Section1 = ({
           />
         ))}
       </div>
-      <div className="h-[500px] md:h-[700px]">
-        <div className="sticky top-0  mt-20  z-20">
+      <div className="h-[500px] md:h-[700px] px-2">
+        <div className="sticky top-0 z-20">
           <div className="relative container mx-auto px-4 rounded-3xl overflow-hidden z-20 bg-gradient-to-br from-gray-400 to-white py-8 md:py-16 shadow-xl border border-gray-100 w-full text-center">
             <p className="container mx-auto text-center text-xl italic md:text-5xl mb-8 md:mb-12 leading-tight">
               {section.subtitle}

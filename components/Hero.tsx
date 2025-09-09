@@ -68,10 +68,10 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
     <div className="relative h-[100dvh] w-full bg-white dark:bg-neutral-950 overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
-        <div className="absolute bottom-6 md:bottom-32 left-3 md:left-24 z-20">
+        <div className="absolute bottom-10 md:bottom-32 left-5 md:left-24 z-20">
           <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px]">
             Manikam{" "}
-            <span className="block">
+            <span className="block py-2 md:py-0">
               <span className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
