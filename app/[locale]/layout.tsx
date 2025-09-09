@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "sajt",
-    "sajtovi", 
+    "sajtovi",
     "izrada sajta",
     "web dizajn",
     "softver",
@@ -66,8 +66,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
-      <body 
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-800 bg-white text-base md:text-xl`}
         suppressHydrationWarning={true}
       >
         <GoogleAnalytics />

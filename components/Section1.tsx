@@ -47,7 +47,7 @@ const Section1 = ({
     <div ref={targetRef} className="w-full text-center relative">
       <div className="py-16 md:py-24 sticky top-10  z-20">
         {/* Hero CTA Card */}
-        <div className="hidden md:block bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
+        <div className="hidden container px-4 rounded-3xl mx-auto md:block bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
           <div className="container mx-auto relative z-20 ">
             <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
               <div className="">
@@ -94,8 +94,8 @@ const Section1 = ({
         {/* Second CTA Card */}
       </div>
       <div className="h-[500px] md:h-[700px]">
-        <div className="sticky top-0 bg-white mt-20 relative z-20">
-          <div className="relative z-20 bg-gradient-to-br from-gray-400 to-white py-8 md:py-16 shadow-xl border border-gray-100 w-full text-center">
+        <div className="sticky top-0  mt-20  z-20">
+          <div className="relative container mx-auto px-4 rounded-3xl overflow-hidden z-20 bg-gradient-to-br from-gray-400 to-white py-8 md:py-16 shadow-xl border border-gray-100 w-full text-center">
             <p className="container mx-auto text-center text-xl italic md:text-5xl mb-8 md:mb-12 leading-tight">
               {section.subtitle}
               <span className=" font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent">

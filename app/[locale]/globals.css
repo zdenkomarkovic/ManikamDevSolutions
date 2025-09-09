@@ -55,7 +55,7 @@ html {
     max-height: 100vh !important;
     overflow: hidden;
   }
-  
+
   /* Osigurava da se Hero sekcija prikazuje ispravno na mobilnim */
   .h-screen {
     height: 100vh !important;
