@@ -44,9 +44,11 @@ const Section1 = ({
   });
 
   return (
-    <div ref={targetRef} className="w-full text-center relative">
+    <div
+      ref={targetRef}
+      className="mx-auto container px-10 text-center relative"
+    >
       <div className="py-16 md:py-24 sticky top-10  z-20">
-        {/* Hero CTA Card */}
         <div className="hidden container px-4 rounded-3xl mx-auto md:block bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
           <div className="container mx-auto relative z-20 ">
             <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
@@ -79,7 +81,7 @@ const Section1 = ({
         </div>
       </div>
 
-      <div className=" container mx-auto relative z-20">
+      <div className="relative z-20">
         {cards.map((text, i) => (
           <AnimatedCard
             key={i}
@@ -90,8 +92,6 @@ const Section1 = ({
             scrollY={scrollY}
           />
         ))}
-
-        {/* Second CTA Card */}
       </div>
       <div className="h-[500px] md:h-[700px]">
         <div className="sticky top-0  mt-20  z-20">
@@ -110,7 +110,6 @@ const Section1 = ({
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center">
-              {/* Phone Call Button */}
               <a
                 href={`tel:${section.phone}`}
                 className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -127,7 +126,6 @@ const Section1 = ({
                 </span>
               </a>
 
-              {/* Email Button */}
               <a
                 href="mailto:manikamwebsolutions@gmailcom"
                 className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -155,7 +153,7 @@ const Section1 = ({
 
 export default Section1;
 
-const animationHeight = 1500;
+const animationHeight = 1400;
 const AnimatedCard = ({
   index,
   text,
@@ -201,11 +199,11 @@ const Card = ({
       <div
         className={`flex flex-col gap-6 pt-7  ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-        }  justify-between items-center rounded-3xl bg-gray-100   h-[600px] mx-auto p-2 md:p-7`}
+        }  justify-between items-center rounded-3xl bg-gray-100 h-[600px] mx-auto p-2 md:p-7`}
       >
         <div className="md:w-[45%] space-y-5 md:space-y-10">
           <h3 className=" text-2xl md:text-3xl xl:text-4xl">{text.title}</h3>
-          <p className="text-xl">{text.mim}</p>
+          <p className="">{text.mim}</p>
         </div>
         <div className="relative w-full md:w-[50%] h-full">
           <Image
