@@ -44,10 +44,7 @@ const Section1 = ({
   });
 
   return (
-    <div
-      ref={targetRef}
-      className="mx-auto container px-10 text-center relative"
-    >
+    <div ref={targetRef} className="mx-auto container  text-center relative">
       <div className="py-16 md:py-24 sticky top-10  z-20">
         <div className="hidden container px-4 rounded-3xl mx-auto md:block bg-gradient-to-br from-gray-400 to-white relative z-20  py-8 md:py-16 shadow-xl border border-gray-100 text-center ">
           <div className="container mx-auto relative z-20 ">
@@ -153,7 +150,7 @@ const Section1 = ({
 
 export default Section1;
 
-const animationHeight = 1400;
+const animationHeight = 1500;
 const AnimatedCard = ({
   index,
   text,
@@ -195,7 +192,7 @@ const Card = ({
   index: number;
 }) => {
   return (
-    <div className="p-1 md:p-2 bg-white rounded-3xl md:w-[90%] mx-auto">
+    <div className="px-10 p-1 md:p-2 bg-white rounded-3xl md:w-[90%] mx-auto">
       <div
         className={`flex flex-col gap-6 pt-7  ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -203,12 +200,13 @@ const Card = ({
       >
         <div className="md:w-[45%] space-y-5 md:space-y-10">
           <h3 className=" text-2xl md:text-3xl xl:text-4xl">{text.title}</h3>
-          <p className="">{text.mim}</p>
+          <p className="text-sm md:text-xl">{text.mim}</p>
         </div>
         <div className="relative w-full md:w-[50%] h-full">
           <Image
             src={text.img}
-            alt=""
+            alt="izrada sajta
+            "
             fill
             className="rounded-3xl object-cover"
           />
