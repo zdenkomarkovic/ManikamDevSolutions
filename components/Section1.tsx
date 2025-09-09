@@ -150,7 +150,7 @@ const Section1 = ({
 
 export default Section1;
 
-const animationHeight = 1500;
+const animationHeight = 1400;
 const AnimatedCard = ({
   index,
   text,
@@ -196,19 +196,20 @@ const Card = ({
       <div
         className={`flex flex-col gap-6 pt-7  ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-        }  justify-between items-center rounded-3xl bg-gray-100 h-[600px] mx-auto p-2 md:p-7`}
+        }  justify-between items-center rounded-3xl bg-gray-100 h-[550px] mx-auto p-2 md:p-7`}
       >
-        <div className="md:w-[45%] space-y-5 md:space-y-10">
-          <h3 className=" text-2xl md:text-3xl xl:text-4xl">{text.title}</h3>
-          <p className="text-sm md:text-xl">{text.mim}</p>
+        <div className="md:w-[45%] space-y-3 md:space-y-10">
+          <h3 className=" text-xl md:text-3xl xl:text-4xl">{text.title}</h3>
+          <p className="text-sm leading-tight md:leading-normal md:text-2xl">
+            {text.mim}
+          </p>
         </div>
         <div className="relative w-full md:w-[50%] h-full">
           <Image
             src={text.img}
-            alt="izrada sajta
-            "
+            alt=""
             fill
-            className="rounded-3xl object-cover"
+            className="rounded-3xl object-cover w-full"
           />
         </div>
       </div>
