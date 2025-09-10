@@ -69,7 +69,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-32 left-5 md:left-24 z-20">
-          <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px] font-bold">
+          <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px] ">
             Manikam{" "}
             <span className="block py-2 md:py-0">
               <span className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent ">
@@ -164,7 +164,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-100 via-gray-100/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tr md:bg-gradient-to-tr from-gray-100 via-gray-100/60 to-transparent" />
       </div>
     </div>
   );
