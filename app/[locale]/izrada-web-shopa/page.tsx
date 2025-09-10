@@ -1,10 +1,19 @@
 import React from "react";
 import type { Metadata } from "next";
-import { FaShoppingCart, FaCreditCard, FaChartLine, FaMobile, FaLock, FaCog } from "react-icons/fa";
+import {
+  FaShoppingCart,
+  FaCreditCard,
+  FaChartLine,
+  FaMobile,
+  FaLock,
+  FaCog,
+} from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Izrada Web Shopa - Profesionalne Online Prodavnice | Manikam Web Solutions",
-  description: "Profesionalna izrada web shopova i e-commerce rešenja. Kompletne online prodavnice sa integrisanim plaćanjem, upravljanjem zalihama, SEO optimizacijom i mobilnom prilagodbom za maksimalne rezultate.",
+  title:
+    "Izrada Web Shopa - Profesionalne Online Prodavnice | Manikam Web Solutions",
+  description:
+    "Profesionalna izrada web shopova i e-commerce rešenja. Kompletne online prodavnice sa integrisanim plaćanjem, upravljanjem zalihama, SEO optimizacijom i mobilnom prilagodbom za maksimalne rezultate.",
   keywords: [
     "izrada web shopa",
     "online prodavnica",
@@ -15,7 +24,7 @@ export const metadata: Metadata = {
     "e-commerce rešenja",
     "web shop development",
     "online store",
-    "digitalna prodavnica"
+    "digitalna prodavnica",
   ],
   alternates: {
     canonical: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
@@ -36,8 +45,9 @@ const page = () => {
             Izrada Web Shopa
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transformišite svoj biznis sa profesionalnom online prodavnicom koja radi 24/7. 
-            Kreiramo e-commerce rešenja koja povećavaju prodaju i automatizuju vaš posao.
+            Transformišite svoj biznis sa profesionalnom online prodavnicom koja
+            radi 24/7. Kreiramo e-commerce rešenja koja povećavaju prodaju i
+            automatizuju vaš posao.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
@@ -56,7 +66,6 @@ const page = () => {
       {/* Glavna sekcija sa sadržajem */}
       <div className="container mx-auto px-4 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
           {/* Leva kolona - Tekst */}
           <div className="space-y-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
@@ -65,17 +74,25 @@ const page = () => {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p className="text-lg">
-                  U digitalnom dobu, online prodavnica nije luksuz već neophodnost. Vaši konkurenti već prodaju online 24 sata dnevno, 
-                  7 dana u nedelji. Web shop vam omogućava da dosegnete kupce širom sveta, povećate prihode i automatizujete prodajni proces.
+                  U digitalnom dobu, online prodavnica nije luksuz već
+                  neophodnost. Vaši konkurenti već prodaju online 24 sata
+                  dnevno, 7 dana u nedelji. Web shop vam omogućava da dosegnete
+                  kupce širom sveta, povećate prihode i automatizujete prodajni
+                  proces.
                 </p>
                 <p>
-                  Naši web shopovi nisu samo digitalne prodavnice - to su moćni poslovni alati koji transformišu način na koji vodite biznis. 
-                  Sa naprednim funkcionalnostima za upravljanje zalihama, automatskim procesiranjem porudžbina i detaljnim analitikama, 
+                  Naši web shopovi nisu samo digitalne prodavnice - to su moćni
+                  poslovni alati koji transformišu način na koji vodite biznis.
+                  Sa naprednim funkcionalnostima za upravljanje zalihama,
+                  automatskim procesiranjem porudžbina i detaljnim analitikama,
                   vaš web shop postaje srce vašeg digitalnog poslovanja.
                 </p>
                 <p>
-                  Koristimo najnovije tehnologije poput React.js i Next.js koje garantuju brzinu, sigurnost i odličnu poziciju na Google pretraživačima. 
-                  Za razliku od WordPress ili drugih template rešenja, naši custom web shopovi su optimizovani za performanse i SEO od prvog dana.
+                  Koristimo najnovije tehnologije poput React.js i Next.js koje
+                  garantuju brzinu, sigurnost i odličnu poziciju na Google
+                  pretraživačima. Za razliku od WordPress ili drugih template
+                  rešenja, naši custom web shopovi su optimizovani za
+                  performanse i SEO od prvog dana.
                 </p>
               </div>
             </div>
@@ -86,20 +103,26 @@ const page = () => {
               </h3>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  <strong>Mobilna optimizacija:</strong> Preko 60% kupovina se vrši sa mobilnih uređaja. Naši web shopovi su potpuno responzivni 
-                  i pružaju savršeno korisničko iskustvo na svim uređajima.
+                  <strong>Mobilna optimizacija:</strong> Preko 60% kupovina se
+                  vrši sa mobilnih uređaja. Naši web shopovi su potpuno
+                  responzivni i pružaju savršeno korisničko iskustvo na svim
+                  uređajima.
                 </p>
                 <p>
-                  <strong>Brzina učitavanja:</strong> Svaka sekunda kašnjenja košta vas kupce. Naši web shopovi se učitavaju za manje od 3 sekunde, 
-                  što značajno povećava konverzije.
+                  <strong>Brzina učitavanja:</strong> Svaka sekunda kašnjenja
+                  košta vas kupce. Naši web shopovi se učitavaju za manje od 3
+                  sekunde, što značajno povećava konverzije.
                 </p>
                 <p>
-                  <strong>SEO optimizacija:</strong> Vaš web shop mora biti pronađen. Implementiramo napredne SEO tehnike koje osiguravaju 
-                  visoku poziciju na Google pretraživačima i više organskog saobraćaja.
+                  <strong>SEO optimizacija:</strong> Vaš web shop mora biti
+                  pronađen. Implementiramo napredne SEO tehnike koje osiguravaju
+                  visoku poziciju na Google pretraživačima i više organskog
+                  saobraćaja.
                 </p>
                 <p>
-                  <strong>Sigurnost:</strong> SSL sertifikati, sigurno čuvanje podataka i PCI DSS kompatibilnost garantuju bezbednost 
-                  vaših kupaca i njihovih finansijskih informacija.
+                  <strong>Sigurnost:</strong> SSL sertifikati, sigurno čuvanje
+                  podataka i PCI DSS kompatibilnost garantuju bezbednost vaših
+                  kupaca i njihovih finansijskih informacija.
                 </p>
               </div>
             </div>
@@ -131,7 +154,6 @@ const page = () => {
 
           {/* Desna kolona - 3 Paketa */}
           <div className="lg:sticky lg:top-24 space-y-6">
-            
             {/* Osnovni paket */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold mb-2 text-gray-800">
@@ -140,7 +162,6 @@ const page = () => {
               <p className="text-gray-600 mb-4">
                 Idealno za manje biznise koji počinju online prodaju
               </p>
-              <div className="text-3xl font-bold text-blue-600 mb-4">€1,200</div>
 
               <div className="space-y-3 mb-6 text-sm">
                 <div className="flex items-start">
@@ -162,7 +183,8 @@ const page = () => {
               </div>
 
               <div className="text-xs text-gray-600 mb-4">
-                <strong>Vreme izrade:</strong> 10-14 dana<br/>
+                <strong>Vreme izrade:</strong> 10-14 dana
+                <br />
                 <strong>Hosting:</strong> 1 godina uključena
               </div>
             </div>
@@ -172,7 +194,7 @@ const page = () => {
               <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-2xl text-xs">
                 <span className="font-bold">NAJPOPULARNIJI</span>
               </div>
-              
+
               <div className="mt-4">
                 <h3 className="text-2xl font-bold mb-2 text-gray-800">
                   Profesionalni Web Shop
@@ -180,7 +202,6 @@ const page = () => {
                 <p className="text-gray-600 mb-4">
                   Kompletno e-commerce rešenje za ozbiljan biznis
                 </p>
-                <div className="text-3xl font-bold text-purple-600 mb-4">€2,500</div>
 
                 <div className="space-y-3 mb-6 text-sm">
                   <div className="flex items-start">
@@ -206,7 +227,8 @@ const page = () => {
                 </div>
 
                 <div className="text-xs text-gray-600 mb-4">
-                  <strong>Vreme izrade:</strong> 14-21 dan<br/>
+                  <strong>Vreme izrade:</strong> 14-21 dan
+                  <br />
                   <strong>Podrška:</strong> 3 meseca besplatno
                 </div>
               </div>
@@ -214,13 +236,10 @@ const page = () => {
 
             {/* Premium paket */}
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-6 shadow-lg text-white">
-              <h3 className="text-2xl font-bold mb-2">
-                Premium Web Shop
-              </h3>
+              <h3 className="text-2xl font-bold mb-2">Premium Web Shop</h3>
               <p className="mb-4 opacity-90">
                 Enterprise rešenje sa naprednim funkcionalnostima
               </p>
-              <div className="text-3xl font-bold mb-4">€4,500</div>
 
               <div className="space-y-3 mb-6 text-sm">
                 <div className="flex items-start">
@@ -246,7 +265,8 @@ const page = () => {
               </div>
 
               <div className="text-xs opacity-90 mb-4">
-                <strong>Vreme izrade:</strong> 21-30 dana<br/>
+                <strong>Vreme izrade:</strong> 21-30 dana
+                <br />
                 <strong>Podrška:</strong> 6 meseci + prioritet
               </div>
             </div>
@@ -285,27 +305,30 @@ const page = () => {
             </div>
             <h4 className="text-xl font-bold mb-3">Povećanje Prodaje</h4>
             <p className="text-gray-600">
-              Naši klijenti u proseku povećaju prodaju za 40-60% u prvoj godini rada web shopa.
+              Naši klijenti u proseku povećaju prodaju za 40-60% u prvoj godini
+              rada web shopa.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl p-6 shadow-lg text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <FaCog className="text-2xl text-green-600" />
             </div>
             <h4 className="text-xl font-bold mb-3">Automatizacija</h4>
             <p className="text-gray-600">
-              Automatski procesi za porudžbine, fakturisanje i upravljanje zalihama štede vreme i novac.
+              Automatski procesi za porudžbine, fakturisanje i upravljanje
+              zalihama štede vreme i novac.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl p-6 shadow-lg text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <FaLock className="text-2xl text-purple-600" />
             </div>
             <h4 className="text-xl font-bold mb-3">Sigurnost</h4>
             <p className="text-gray-600">
-              Najviši standardi sigurnosti za zaštitu vaših i podataka vaših kupaca.
+              Najviši standardi sigurnosti za zaštitu vaših i podataka vaših
+              kupaca.
             </p>
           </div>
         </div>
