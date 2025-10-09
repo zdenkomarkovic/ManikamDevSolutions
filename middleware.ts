@@ -66,17 +66,13 @@ export function middleware(request: VercelRequest) {
     const country = request.geo?.country || "";
 
     let locale: string;
-    // Ako je Srbija, koristi srpski
-    if (country === "RS") {
-      locale = "sr";
-    }
     // Ako je Amerika, koristi engleski
-    else if (country === "US") {
+    if (country === "US") {
       locale = "en";
     }
-    // Sve ostale zemlje - default
+    // Sve ostalo (uključujući Srbiju) - srpski
     else {
-      locale = defaultLocale;
+      locale = "sr";
     }
 
     let newPath = `/${locale}${pathname}`;
