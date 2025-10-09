@@ -72,7 +72,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
           <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px] ">
             Manikam{" "}
             <span className="block py-2 md:py-0">
-              <span className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent ">
+              <span className="font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
               <span className="text-gray-900 ">Solutions </span>

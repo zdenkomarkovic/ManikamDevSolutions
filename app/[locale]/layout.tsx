@@ -23,9 +23,14 @@ export const metadata: Metadata = {
   title: "Manikam Web Solutions",
   description: "Agencija za izradu softvera i sajtova",
   icons: {
-    icon: "/images/android-chrome-192x192.png",
-    apple: "/images/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
   keywords: [
     "sajt",
     "sajtovi",
