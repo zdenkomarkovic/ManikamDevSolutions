@@ -7,6 +7,17 @@ import Negotiator from "negotiator";
 import { i18n } from "./i18n-config";
 import type { I18nConfig } from "./i18n-config";
 
+// Proširenje NextRequest tipa za Vercel geo podatke
+interface VercelRequest extends NextRequest {
+  geo?: {
+    city?: string;
+    country?: string;
+    region?: string;
+    latitude?: string;
+    longitude?: string;
+  };
+}
+
 function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
   const { locales, defaultLocale } = i18nConfig;
 
@@ -20,7 +31,7 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
   return match(languages, locales, defaultLocale);
 }
 
-export function middleware(request: NextRequest) {
+export function middleware(request: VercelRequest) {
   // Geo-blocking: Blokira korisnike iz Amerike samo sa 2 srpske stranice
   const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
