@@ -24,7 +24,7 @@ function getSafeLocale(locale: string): Locale {
 }
 
 export default function Header({ locale }: { locale: string }) {
-  const { locales, defaultLocale } = i18n;
+  const { locales } = i18n;
   const currentLocale = getSafeLocale(locale);
   const navList = getNavList(currentLocale);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,7 +89,8 @@ export default function Header({ locale }: { locale: string }) {
           <div dir="ltr" className="flex flex-col">
             {[...locales].sort().map((loc) => {
               // Ukloni trenutni locale iz pathname-a
-              const pathWithoutLocale = pathname.replace(`/${currentLocale}`, '') || '/';
+              const pathWithoutLocale =
+                pathname.replace(`/${currentLocale}`, "") || "/";
               // Dodaj novi locale
               const newPath = `/${loc}${pathWithoutLocale}`;
 
