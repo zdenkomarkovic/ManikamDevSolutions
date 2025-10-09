@@ -68,7 +68,7 @@ const Section1 = ({
             <h2 className="text-xl italic md:text-5xl pb-8 md:pb-12">
               <div className="">
                 {section.title} {section.title3}
-                <span className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent">
+                <span className="font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
                   {section.span}
                 </span>
               </div>
@@ -76,7 +76,7 @@ const Section1 = ({
             </h2>
             <a
               href={`tel:${section.phone}`}
-              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:from-orange-600 hover:to-red-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
                 className="w-6 h-6 md:w-8 md:h-8"
@@ -113,7 +113,7 @@ const Section1 = ({
             <div className="relative border-8 border-white container mx-auto px-4 rounded-3xl overflow-hidden z-20 bg-gradient-to-br from-gray-400 to-white py-8 md:py-16 shadow-xl text-center">
               <p className="container mx-auto text-center text-xl italic md:text-5xl mb-8 md:mb-12 leading-tight">
                 {section.subtitle}
-                <span className=" font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent">
+                <span className=" font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
                   {section.span3}
                 </span>
                 ,{section.subtitle2}
@@ -127,7 +127,7 @@ const Section1 = ({
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center">
                 <a
                   href={`tel:${section.phone}`}
-                  className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-orange-600 hover:to-red-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <svg
                     className="w-6 h-6 md:w-8 md:h-8"
@@ -143,7 +143,7 @@ const Section1 = ({
 
                 <a
                   href="mailto:manikamwebsolutions@gmailcom"
-                  className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-orange-600 hover:to-red-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <svg
                     className="w-6 h-6 md:w-8 md:h-8"

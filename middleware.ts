@@ -21,12 +21,23 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
 }
 
 export function middleware(request: NextRequest) {
+  // Geo-blocking: Blokira korisnike iz Amerike samo sa 2 srpske stranice
+  const country = request.geo?.country || "";
+  const { pathname } = request.nextUrl;
+
+  const blockedPagesForUS = ["/izrada-sajta", "/izrada-web-shopa"];
+  const isBlockedPage = blockedPagesForUS.some(page => pathname.includes(page));
+
+  if (country === "US" && isBlockedPage) {
+    return NextResponse.redirect(new URL("/en", request.url));
+  }
+
   let response: NextResponse | undefined;
   let nextLocale: string | undefined;
 
   const { locales, defaultLocale } = i18n;
 
-  const { basePath, pathname } = request.nextUrl;
+  const { basePath } = request.nextUrl;
 
   const pathLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -37,9 +48,23 @@ export function middleware(request: NextRequest) {
     nextLocale = pathLocale;
     response = NextResponse.next();
   } else {
-    // Nema jezika u URL-u, automatski redirektuj
+    // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
+    const country = request.geo?.country || "";
     const isFirstVisit = !request.cookies.has("NEXT_LOCALE");
-    const locale = isFirstVisit ? getLocale(request, i18n) : defaultLocale;
+
+    let locale: string;
+    if (isFirstVisit) {
+      // Ako je Srbija, koristi srpski, ako je Amerika koristi engleski, inače detektuj
+      if (country === "RS") {
+        locale = "sr";
+      } else if (country === "US") {
+        locale = "en";
+      } else {
+        locale = getLocale(request, i18n);
+      }
+    } else {
+      locale = defaultLocale;
+    }
 
     let newPath = `/${locale}${pathname}`;
     if (request.nextUrl.search) newPath += request.nextUrl.search;

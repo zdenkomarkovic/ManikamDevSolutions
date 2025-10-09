@@ -54,10 +54,10 @@ export default function Header({ locale }: { locale: string }) {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <nav className="container mx-auto px-4 py-[10px]">
+      <nav className="container mx-auto px-4 py-[10px] ">
         <div className="flex justify-between items-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href="/" className="flex items-center space-x-4">
+            <Link href="/" className="flex items-center space-x-4 ">
               <Image
                 src={logo}
                 alt="manikamdevsolutions logo"
@@ -71,13 +71,13 @@ export default function Header({ locale }: { locale: string }) {
             </Link>
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 ">
             {navList.map((item, i) => {
               return (
                 <Link
                   key={i}
                   href={item.route}
-                  className="text-foreground hover:text-red-800 transition-colors uppercase"
+                  className=" hover:text-orange-600 transition-colors uppercase"
                 >
                   {item.title}
                 </Link>

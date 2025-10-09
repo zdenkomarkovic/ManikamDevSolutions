@@ -109,12 +109,11 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
               currentPage === 1
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-red-900 to-red-700 text-white  hover:from-red-950 hover:to-red-800 hover:scale-105"
+                : "bg-gradient-to-r from-orange-500 to-red-600 text-white  hover:orange-600 hover:to-red-700 hover:scale-105"
             }`}
           >
             ←
           </button>
-
           {/* 3 dugmića za stranice */}
           {getPageNumbers().map((page, index) => (
             <button
@@ -122,14 +121,13 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
               onClick={() => goToPage(page)}
               className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                 page === currentPage
-                  ? "bg-gradient-to-r from-red-900 to-red-700 text-white scale-110"
-                  : "bg-gray-200 text-gray-700 hover:bg-gradient-to-r hover:from-red-950 hover:to-red-800 hover:text-white hover:scale-105"
+                  ? "bg-gradient-to-r from-orange-500 to-red-600 text-white scale-110"
+                  : "bg-gray-200 text-gray-700 hover:bg-gradient-to-r hover:from-orange-600 hover:to-red-700 hover:text-white hover:scale-105"
               }`}
             >
               {page}
             </button>
           ))}
-
           {/* Sledeća stranica */}
           <button
             onClick={goToNextPage}
@@ -137,7 +135,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
               currentPage === totalPages
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-red-900 to-red-700 text-white hover:from-red-950 hover:to-red-800 hover:scale-105"
+                : "bg-gradient-to-r from-orange-500 to-red-600 text-white hover:orange-600 hover:to-red-700 hover:scale-105"
             }`}
           >
             →

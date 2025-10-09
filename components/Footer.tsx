@@ -104,7 +104,7 @@ export default function Footer({
               Manikam <span className="">Web</span> Solutions
             </h3>
 
-            <p className="font-bold bg-gradient-to-r from-red-900 to-red-700 bg-clip-text text-transparent">
+            <p className="font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
               {message}
             </p>
           </div>

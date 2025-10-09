@@ -62,3 +62,24 @@ html {
     max-height: 100vh !important;
   }
 }
+.gradient-border {
+  position: relative;
+  background: transparent;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* debljina bordera */
+  background: linear-gradient(
+    to right,
+    #f97316,
+    #dc2626
+  ); /* orange-500 → red-600 */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

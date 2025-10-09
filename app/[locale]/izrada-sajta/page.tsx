@@ -391,19 +391,19 @@ const page = () => {
                   </h3>
                   <ul className="space-y-1 md:space-y-3 mx-auto w-fit">
                     <li className="flex items-center">
-                      <FaSearch className="mr-3 text-red-700" />
+                      <FaSearch className="mr-3 text-orange-500" />
                       Poboljšanje Google rangiranja za 50-80%
                     </li>
                     <li className="flex items-center">
-                      <FaRocket className="mr-3 text-red-700" />
+                      <FaRocket className="mr-3 text-orange-500" />
                       Povećanje brzine sajta za 300-500%
                     </li>
                     <li className="flex items-center">
-                      <FaMobile className="mr-3 text-red-700" />
+                      <FaMobile className="mr-3 text-orange-500" />
                       Bolje korisničko iskustvo na svim uređajima
                     </li>
                     <li className="flex items-center">
-                      <FaShieldAlt className="mr-3 text-red-700" />
+                      <FaShieldAlt className="mr-3 text-orange-500" />
                       Maksimalna sigurnost i stabilnost
                     </li>
                   </ul>
@@ -418,7 +418,7 @@ const page = () => {
                   {/* Phone Call Button */}
                   <a
                     href={`tel:+381641967267`}
-                    className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                   >
                     <svg
                       className="w-6 h-6 md:w-8 md:h-8"
@@ -435,7 +435,7 @@ const page = () => {
                   {/* Email Button */}
                   <a
                     href="mailto:manikamwebsolutions@gmailcom"
-                    className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-900 to-red-700 text-white px-4 md:px-8 py-2 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                   >
                     <svg
                       className="w-6 h-6 md:w-8 md:h-8"
@@ -472,8 +472,8 @@ const page = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaRocket className="text-2xl text-blue-600" />
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaRocket className="text-2xl text-white" />
               </div>
               <h4 className="text-xl font-bold mb-3">Brzina i Performanse</h4>
               <p className="text-gray-600">
@@ -483,8 +483,8 @@ const page = () => {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaSearch className="text-2xl text-green-600" />
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaSearch className="text-2xl text-white" />
               </div>
               <h4 className="text-xl font-bold mb-3">SEO Optimizacija</h4>
               <p className="text-gray-600">
@@ -494,8 +494,8 @@ const page = () => {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaShieldAlt className="text-2xl text-red-600" />
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaShieldAlt className="text-2xl text-white" />
               </div>
               <h4 className="text-xl font-bold mb-3">Sigurnost</h4>
               <p className="text-gray-600">
