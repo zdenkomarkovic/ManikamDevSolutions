@@ -11,6 +11,7 @@ import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
 import logo from "../public/images/manikamlogo.png";
+import { usePathname } from "next/navigation";
 
 function isValidLocale(locale: string): locale is Locale {
   return (i18n.locales as readonly string[]).includes(locale);
@@ -28,6 +29,7 @@ export default function Header({ locale }: { locale: string }) {
   const navList = getNavList(currentLocale);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
   // const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // const toggleMenuAndDropdown = () => {
@@ -85,14 +87,22 @@ export default function Header({ locale }: { locale: string }) {
             })}
           </div>
           <div dir="ltr" className="flex flex-col">
-            {[...locales].sort().map((locale) => (
-              <Link
-                key={locale}
-                href={locale === defaultLocale ? "/" : `/${locale}`}
-              >
-                {locale}
-              </Link>
-            ))}
+            {[...locales].sort().map((loc) => {
+              // Ukloni trenutni locale iz pathname-a
+              const pathWithoutLocale = pathname.replace(`/${currentLocale}`, '') || '/';
+              // Dodaj novi locale
+              const newPath = `/${loc}${pathWithoutLocale}`;
+
+              return (
+                <Link
+                  key={loc}
+                  href={newPath}
+                  className={loc === currentLocale ? "font-bold" : ""}
+                >
+                  {loc}
+                </Link>
+              );
+            })}
           </div>
           <div className="md:hidden">
             <Button
