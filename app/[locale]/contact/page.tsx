@@ -92,7 +92,7 @@ export default function Contact() {
               </button>
             </a>
           </div>
-          <div className="space-y-3 md:space-y-2 text-lg md:text-xl">
+          {/* <div className="space-y-3 md:space-y-2 text-lg md:text-xl">
             <p className="font-bold text-2xl">Office: Washington, D.C., USA</p>
             <a
               href="tel:+12408103730"
@@ -120,7 +120,7 @@ export default function Contact() {
                 +12408103730
               </button>
             </a>
-          </div>
+          </div> */}
           <div>
             <a
               href="mailto:manikamwebsolutions@gmail.com"

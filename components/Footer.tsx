@@ -67,7 +67,7 @@ export default function Footer({
                 </p>
               </a>
             </div>
-            <div>
+            {/* <div>
               {" "}
               <a href="tel:+12408103730">
                 <p className="text-muted-foreground  flex gap-2 items-center hover:text-red-800">
@@ -75,7 +75,7 @@ export default function Footer({
                   +12408103730
                 </p>
               </a>
-            </div>
+            </div> */}
             <div>
               <a href="mailto:manikamwebsolutions@gmail.com">
                 <p className="flex gap-3 items-center  hover:text-red-800 text-muted-foreground text-wrap">
