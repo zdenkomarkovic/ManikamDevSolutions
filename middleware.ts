@@ -36,6 +36,9 @@ export function middleware(request: VercelRequest) {
   const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
 
+  // Debug - ispisuje geo podatke
+  console.log("GEO:", request.geo, "Country:", country, "Pathname:", pathname);
+
   const blockedPagesForUS = ["/izrada-sajta", "/izrada-web-shopa"];
   const isBlockedPage = blockedPagesForUS.some(page => pathname.includes(page));
 
@@ -61,19 +64,18 @@ export function middleware(request: VercelRequest) {
   } else {
     // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
     const country = request.geo?.country || "";
-    const isFirstVisit = !request.cookies.has("NEXT_LOCALE");
 
     let locale: string;
-    if (isFirstVisit) {
-      // Ako je Srbija, koristi srpski, ako je Amerika koristi engleski, inače detektuj
-      if (country === "RS") {
-        locale = "sr";
-      } else if (country === "US") {
-        locale = "en";
-      } else {
-        locale = getLocale(request, i18n);
-      }
-    } else {
+    // Ako je Srbija, koristi srpski
+    if (country === "RS") {
+      locale = "sr";
+    }
+    // Ako je Amerika, koristi engleski
+    else if (country === "US") {
+      locale = "en";
+    }
+    // Sve ostale zemlje - default
+    else {
       locale = defaultLocale;
     }
 
