@@ -93,7 +93,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             </h2>
             <a
               href={`tel:${section.phone}`}
-              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:from-red-950 hover:to-red-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:from-orange-600 hover:to-red-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
                 className="w-6 h-6 md:w-8 md:h-8"
