@@ -88,9 +88,22 @@ export default function Header({ locale }: { locale: string }) {
           </div>
           <div dir="ltr" className="flex flex-col">
             {[...locales].sort().map((loc) => {
+              // Mapa srpskih stranica na engleske ekvivalente
+              const pageMapping: Record<string, string> = {
+                '/izrada-sajta': '/website-development',
+                '/izrada-web-shopa': '/webshop-development',
+                '/website-development': '/izrada-sajta',
+                '/webshop-development': '/izrada-web-shopa',
+              };
+
               // Ukloni trenutni locale iz pathname-a
-              const pathWithoutLocale =
-                pathname.replace(`/${currentLocale}`, "") || "/";
+              let pathWithoutLocale = pathname.replace(`/${currentLocale}`, "") || "/";
+
+              // Ako menjamo jezik, mapiraj stranicu na ekvivalent
+              if (loc !== currentLocale && pageMapping[pathWithoutLocale]) {
+                pathWithoutLocale = pageMapping[pathWithoutLocale];
+              }
+
               // Dodaj novi locale
               const newPath = `/${loc}${pathWithoutLocale}`;
 
