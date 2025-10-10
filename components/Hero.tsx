@@ -125,7 +125,8 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="relative z-20 md:text-2xl bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent text-left border-2 font-bold border-orange-500 px-4 py-1 rounded-lg w-fit"
+                style={{ marginLeft: `${index * 20}px` }}
+                className="relative z-20 md:text-2xl bg-gradient-to-r from-orange-500 to-red-600 text-white text-left border-2 font-bold px-4 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>
@@ -134,7 +135,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         </div>
 
         {/* Mobilna verzija usluga - iznad h1 */}
-        <div className="absolute top-24 right-3 z-20 md:hidden">
+        <div className="absolute top-24 right-4 z-20 md:hidden">
           <div className="space-y-3">
             {services.map((service, index) => (
               <motion.div
@@ -148,7 +149,8 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="text-base bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent text-left border border-orange-500 px-3 py-1 rounded-lg w-fit"
+                style={{ marginLeft: `${index * 12}px` }}
+                className="text-base bg-gradient-to-r from-orange-500 to-red-600 text-white text-left border  px-3 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>
