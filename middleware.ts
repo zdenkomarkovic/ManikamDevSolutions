@@ -32,6 +32,14 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
 }
 
 export function middleware(request: VercelRequest) {
+  // WWW to non-WWW redirect
+  const hostname = request.headers.get("host") || "";
+  if (hostname.startsWith("www.")) {
+    const newUrl = new URL(request.url);
+    newUrl.host = hostname.replace("www.", "");
+    return NextResponse.redirect(newUrl, 301); // Permanent redirect
+  }
+
   // Geo-blocking: PRIVREMENO DEAKTIVIRANO ZA TESTIRANJE
   // const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
