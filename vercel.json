@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.manikamwebsolutions.com"
+        }
+      ],
+      "destination": "https://manikamwebsolutions.com/:path*",
+      "permanent": true
+    }
+  ]
+}
