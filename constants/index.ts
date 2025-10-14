@@ -1,30 +1,30 @@
 import Reference from "@/components/Reference";
 
-export const NavList = [
-  {
-    title: "Naslovna",
-    route: "/",
-  },
-  {
-    title: "Usluge",
-    route: "/services",
-    hasDropdown: true,
-    dropdownItems: [
-      { title: "Izrada sajtova", route: "/services/#website" },
-      { title: "Izrada webshopova", route: "/services/#webshop" },
-      { title: "Odrzavanje", route: "/services/#maintaince" },
-      { title: "SEO Optimizacija", route: "/services/#seo" },
-    ],
-  },
-  {
-    title: "Reference",
-    route: "/#reference",
-  },
-  {
-    title: "Kontakt",
-    route: "/contact",
-  },
-];
+// export const NavList = [
+//   {
+//     title: "Naslovna",
+//     route: "/",
+//   },
+//   {
+//     title: "Usluge",
+//     route: "/services",
+//     hasDropdown: true,
+//     dropdownItems: [
+//       { title: "Izrada sajtova", route: "/services/#website" },
+//       { title: "Izrada webshopova", route: "/services/#webshop" },
+//       { title: "Odrzavanje", route: "/services/#maintaince" },
+//       { title: "SEO Optimizacija", route: "/services/#seo" },
+//     ],
+//   },
+//   {
+//     title: "Reference",
+//     route: "/#reference",
+//   },
+//   {
+//     title: "Kontakt",
+//     route: "/contact",
+//   },
+// ];
 
 interface UslugeData {
   title: string;
