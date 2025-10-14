@@ -1,4 +1,4 @@
-const baseUrl = "https://example.com"; // Zameni svojim domenom
+const baseUrl = "https://manikamwebsolutions.com";
 const supportedLocales = ["sr", "en"];
 
 export function generateAlternateLinks(pathname: string) {
