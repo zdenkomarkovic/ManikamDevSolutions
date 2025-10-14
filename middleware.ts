@@ -32,27 +32,27 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
 }
 
 export function middleware(request: VercelRequest) {
-  // Geo-blocking: Blokira korisnike iz Amerike samo sa srpskih verzija stranica
-  const country = request.geo?.country || "";
+  // Geo-blocking: PRIVREMENO DEAKTIVIRANO ZA TESTIRANJE
+  // const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
 
   // Debug - ispisuje geo podatke
-  console.log("GEO:", request.geo, "Country:", country, "Pathname:", pathname);
+  // console.log("GEO:", request.geo, "Country:", country, "Pathname:", pathname);
 
   // Blokira samo /sr/izrada-sajta i /sr/izrada-web-shopa
-  const blockedPagesForUS = ["/sr/izrada-sajta", "/sr/izrada-web-shopa"];
-  const isBlockedPage = blockedPagesForUS.some(page => pathname.startsWith(page));
+  // const blockedPagesForUS = ["/sr/izrada-sajta", "/sr/izrada-web-shopa"];
+  // const isBlockedPage = blockedPagesForUS.some(page => pathname.startsWith(page));
 
-  if (country === "US" && isBlockedPage) {
-    // Redirektuj na englesku verziju iste stranice
-    const pageMapping: Record<string, string> = {
-      "/sr/izrada-sajta": "/en/website-development",
-      "/sr/izrada-web-shopa": "/en/webshop-development",
-    };
+  // if (country === "US" && isBlockedPage) {
+  //   // Redirektuj na englesku verziju iste stranice
+  //   const pageMapping: Record<string, string> = {
+  //     "/sr/izrada-sajta": "/en/website-development",
+  //     "/sr/izrada-web-shopa": "/en/webshop-development",
+  //   };
 
-    const redirectUrl = pageMapping[pathname] || "/en";
-    return NextResponse.redirect(new URL(redirectUrl, request.url));
-  }
+  //   const redirectUrl = pageMapping[pathname] || "/en";
+  //   return NextResponse.redirect(new URL(redirectUrl, request.url));
+  // }
 
   let response: NextResponse | undefined;
   let nextLocale: string | undefined;
