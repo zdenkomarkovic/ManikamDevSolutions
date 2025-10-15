@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.manikamwebsolutions.com",
-  generateRobotsTxt: true,
+  siteUrl: "https://manikamwebsolutions.com",
+  generateRobotsTxt: false, // Koristimo custom robots.txt
   sitemapSize: 5000,
 };

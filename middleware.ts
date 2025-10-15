@@ -31,7 +31,62 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
   return match(languages, locales, defaultLocale);
 }
 
+// Funkcija za detekciju SEO botova
+function isCrawlerBot(userAgent: string): boolean {
+  const botPatterns = [
+    'googlebot',
+    'bingbot',
+    'slurp', // Yahoo
+    'duckduckbot',
+    'baiduspider',
+    'yandexbot',
+    'facebookexternalhit',
+    'twitterbot',
+    'rogerbot',
+    'linkedinbot',
+    'embedly',
+    'quora link preview',
+    'showyoubot',
+    'outbrain',
+    'pinterest',
+    'slackbot',
+    'vkshare',
+    'w3c_validator',
+    'redditbot',
+    'applebot',
+    'whatsapp',
+    'flipboard',
+    'tumblr',
+    'bitlybot',
+    'skypeuripreview',
+    'nuzzel',
+    'discordbot',
+    'qwantify',
+    'pinterestbot',
+    'bitrix',
+    'seobility', // SEO alat
+    'screaming frog', // SEO alat
+    'semrush', // SEO alat
+    'ahrefs', // SEO alat
+    'moz', // SEO alat
+  ];
+
+  const lowerUA = userAgent.toLowerCase();
+  return botPatterns.some(pattern => lowerUA.includes(pattern));
+}
+
 export function middleware(request: VercelRequest) {
+  const userAgent = request.headers.get('user-agent') || '';
+  const isBot = isCrawlerBot(userAgent);
+
+  // WWW to non-WWW redirect (samo za obične korisnike, ne za botove)
+  const hostname = request.headers.get("host") || "";
+  if (hostname.startsWith("www.")) {
+    const newUrl = new URL(request.url);
+    newUrl.host = hostname.replace("www.", "");
+    return NextResponse.redirect(newUrl, 301);
+  }
+
   // Geo-blocking: PRIVREMENO DEAKTIVIRANO ZA TESTIRANJE
   // const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
@@ -71,16 +126,21 @@ export function middleware(request: VercelRequest) {
     response = NextResponse.next();
   } else {
     // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
-    const country = request.geo?.country || "";
-
     let locale: string;
-    // Ako je Amerika, koristi engleski
-    if (country === "US") {
+
+    // Botovi uvek dobijaju englesku verziju (konzistentno)
+    if (isBot) {
       locale = "en";
-    }
-    // Sve ostalo (uključujući Srbiju) - srpski
-    else {
-      locale = "sr";
+    } else {
+      const country = request.geo?.country || "";
+      // Ako je Amerika, koristi engleski
+      if (country === "US") {
+        locale = "en";
+      }
+      // Sve ostalo (uključujući Srbiju) - srpski
+      else {
+        locale = "sr";
+      }
     }
 
     let newPath = `/${locale}${pathname}`;
