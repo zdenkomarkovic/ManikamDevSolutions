@@ -76,14 +76,6 @@ function isCrawlerBot(userAgent: string): boolean {
 }
 
 export function middleware(request: VercelRequest) {
-  // PRVO: WWW to non-WWW redirect (mora biti PRE svega ostalog)
-  const hostname = request.headers.get("host") || "";
-  if (hostname === "www.manikamwebsolutions.com") {
-    const url = new URL(request.url);
-    url.hostname = "manikamwebsolutions.com";
-    return NextResponse.redirect(url, 301);
-  }
-
   const userAgent = request.headers.get('user-agent') || '';
   const isBot = isCrawlerBot(userAgent);
 
