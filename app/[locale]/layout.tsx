@@ -39,9 +39,7 @@ export const metadata: Metadata = {
     "softver",
     "izrada softvera",
   ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/",
-  },
+  // Ne postavljamo canonical ovde - svaka stranica ima svoj
 };
 
 export const viewport = {
