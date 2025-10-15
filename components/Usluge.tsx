@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "@/node_modules/next/image";
-import Link from "@/node_modules/next/link";
 import React from "react";
 import pravac from "../public/images/pravac.jpg";
 
@@ -64,25 +63,23 @@ const Card = ({
 }) => {
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-      <Link href={"/services"}>
-        <div
-          className={`${class1} ${i === 0 ? "mt-[140px] md:mt-[180px]" : ""} ${
-            i !== 0 && (i === 1 || i % 2 === 0) ? "mt-[70px] md:mt-[90px]" : ""
-          }`}
-        >
-          <Image
-            src={item.img}
-            alt=""
-            width={200}
-            height={200}
-            className={`${imageClass}`}
-          />
-          <h3 className={`${h3Class}`}>{item.title}</h3>
-          <p>
-            {item.text} <span className="font-bold">{item.span}</span>
-          </p>
-        </div>
-      </Link>
+      <div
+        className={`${class1} ${i === 0 ? "mt-[140px] md:mt-[180px]" : ""} ${
+          i !== 0 && (i === 1 || i % 2 === 0) ? "mt-[70px] md:mt-[90px]" : ""
+        }`}
+      >
+        <Image
+          src={item.img}
+          alt=""
+          width={200}
+          height={200}
+          className={`${imageClass}`}
+        />
+        <h3 className={`${h3Class}`}>{item.title}</h3>
+        <p>
+          {item.text} <span className="font-bold">{item.span}</span>
+        </p>
+      </div>
     </motion.div>
   );
 };
