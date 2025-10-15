@@ -25,7 +25,7 @@ export async function generateMetadata({
   return {
     title: intl.formatMessage({ id: "page.home.head.title" }),
     description: intl.formatMessage({ id: "page.home.head.meta.description" }),
-    alternates: generateAlternateLinks(""),
+    alternates: generateAlternateLinks("", locale),
   };
 }
 
