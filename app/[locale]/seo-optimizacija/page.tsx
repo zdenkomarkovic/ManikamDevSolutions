@@ -11,7 +11,8 @@ import SEOFAQ from "@/components/seo/SEOFAQ";
 import SEOCTA from "@/components/seo/SEOCTA";
 
 export const metadata: Metadata = {
-  title: "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
+  title:
+    "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
   description:
     "Profesionalna SEO optimizacija koja donosi organsku posećenost. Povećajte rangiranje na Google-u, privucite ciljanu publiku i razvijte svoj biznis. Više od 10 godina iskustva.",
   keywords: [
@@ -34,7 +35,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
+    title:
+      "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
     description:
       "Profesionalna SEO optimizacija koja donosi organsku posećenost. Povećajte rangiranje na Google-u i razvijte svoj biznis.",
     type: "website",
@@ -52,15 +54,13 @@ export default function SEOOptimizacijaPage() {
         <div className="space-y-8 mb-8">
           <SEOIntro />
           <SEOFeatures />
+          <SEOCTA />
           <SEOServices />
-        </div>
+          <SEOProcess />
+          <SEOResults />
 
-        <SEOProcess />
-        <SEOResults />
-        <SEOWhy />
-        <SEOIndustries />
-        <SEOFAQ />
-        <SEOCTA />
+          <SEOFAQ />
+        </div>
       </section>
     </div>
   );

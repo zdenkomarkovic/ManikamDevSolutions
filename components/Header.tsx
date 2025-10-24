@@ -181,7 +181,7 @@ export default function Header({ locale }: { locale: string }) {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-background"
+          className="md:hidden bg-background text-black"
         >
           <div className="container mx-auto px-4 py-4">
             {navList.map((item, i) => {

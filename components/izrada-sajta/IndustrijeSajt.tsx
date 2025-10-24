@@ -2,7 +2,7 @@ import React from "react";
 
 const IndustrijeSajt = () => {
   return (
-    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-8 shadow-lg border border-gray-100">
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
       <h2 className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
         Izrada sajtova za različite industrije
       </h2>
@@ -11,8 +11,8 @@ const IndustrijeSajt = () => {
         delatnost, kreiramo prilagođena rešenja koja odgovaraju specifičnim
         potrebama vaše branše.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Ugostiteljstvo i Restorani
           </h3>
@@ -22,7 +22,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Medicinske ordinacije
           </h3>
@@ -32,7 +32,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             E-commerce i Trgovina
           </h3>
@@ -42,7 +42,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Nekretnine
           </h3>
@@ -52,7 +52,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Pravne kancelarije
           </h3>
@@ -62,7 +62,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Fitnes i Wellness
           </h3>
@@ -72,7 +72,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Edukacija i Kursevi
           </h3>
@@ -82,7 +82,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Građevinarstvo
           </h3>
@@ -92,7 +92,7 @@ const IndustrijeSajt = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
           <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Agencije i Freelance-ri
           </h3>

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProcesSajt = () => {
   return (
-    <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-5 md:p-8 shadow-lg border border-gray-100">
+    <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
       <h2 className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
         Kako izgleda proces izrade sajta?
       </h2>

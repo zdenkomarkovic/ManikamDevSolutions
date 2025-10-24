@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaCode,
   FaSearch,
@@ -15,7 +18,13 @@ const PaketiSajt = () => {
   return (
     <div className="grid md:grid-cols-3 gap-4 md:">
       {/* Osnovni paket */}
-      <div className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-lg border border-gray-200">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-lg border border-gray-200"
+      >
         <div>
           <h3 className=" text-2xl font-bold mb-5 flex gap-1 items-center text-orange-500">
             Osnovni paket - 399 <MdEuro />
@@ -68,10 +77,16 @@ const PaketiSajt = () => {
         <div className=" text-gray-600">
           <strong>Vreme izrade:</strong> 7-10 dana
         </div>
-      </div>
+      </motion.div>
 
       {/* Profesionalni paket - NAJPOPULARNIJI */}
-      <div className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-xl border-2 border-blue-200 relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-xl border-2 border-blue-200 relative overflow-hidden"
+      >
         <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-2xl text-xs">
           <span className="font-bold">NAJPOPULARNIJI</span>
         </div>
@@ -132,10 +147,16 @@ const PaketiSajt = () => {
         <div className=" text-gray-600">
           <strong>Vreme izrade:</strong> 10-14 dana
         </div>
-      </div>
+      </motion.div>
 
       {/* Premium paket */}
-      <div className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3  shadow-lg border border-gray-200">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3  shadow-lg border border-gray-200"
+      >
         <div>
           <h3 className=" text-2xl font-bold mb-5 text-orange-500">
             Premium Sajt - cena po projektu
@@ -197,7 +218,7 @@ const PaketiSajt = () => {
         <div className=" text-gray-600 ">
           <strong>Vreme izrade:</strong> 10-14 dana
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

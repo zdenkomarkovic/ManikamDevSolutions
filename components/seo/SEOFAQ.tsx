@@ -1,8 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
-
 const faqs = [
   {
     question: "Koliko dugo traje da se vide rezultati SEO optimizacije?",
@@ -47,42 +44,21 @@ const faqs = [
 ];
 
 export default function SEOFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-8 md:mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+    <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <h2 className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
         Često Postavljana Pitanja
       </h2>
-
-      <div className="max-w-3xl mx-auto space-y-4">
+      <div className="space-y-6">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl shadow-lg overflow-hidden border border-gray-100"
+            className={index !== faqs.length - 1 ? "border-b border-gray-200 pb-6" : "pb-6"}
           >
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-200 transition-colors duration-200"
-            >
-              <span className="font-semibold text-gray-900 pr-4">
-                {faq.question}
-              </span>
-              <FaChevronDown
-                className={`text-orange-500 flex-shrink-0 transition-transform duration-300 ${
-                  openIndex === index ? "transform rotate-180" : ""
-                }`}
-              />
-            </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? "max-h-96" : "max-h-0"
-              }`}
-            >
-              <div className="px-6 pb-5 text-gray-700 leading-relaxed">
-                {faq.answer}
-              </div>
-            </div>
+            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+              {faq.question}
+            </h3>
+            <p className="text-gray-600">{faq.answer}</p>
           </div>
         ))}
       </div>

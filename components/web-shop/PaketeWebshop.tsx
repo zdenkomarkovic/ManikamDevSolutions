@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaShoppingCart,
   FaCreditCard,
@@ -18,7 +21,13 @@ const PaketeWebshop = () => {
   return (
     <div className="grid md:grid-cols-3 gap-6 py-12 ">
       {/* Osnovni paket */}
-      <div className="flex flex-col justify-between bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-200">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col justify-between bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-200"
+      >
         <div>
           {" "}
           <h3 className="text-2xl flex gap-1 items-center font-bold mb-2 text-orange-500">
@@ -58,10 +67,16 @@ const PaketeWebshop = () => {
         <div className=" text-gray-600">
           <strong>Vreme izrade:</strong> 10-14 dana
         </div>
-      </div>
+      </motion.div>
 
       {/* Profesionalni paket - NAJPOPULARNIJI */}
-      <div className="flex flex-col justify-between bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-xl border-2 border-blue-200 relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col justify-between bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-xl border-2 border-blue-200 relative overflow-hidden"
+      >
         <div>
           <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-2xl text-xs">
             <span className="font-bold">NAJPOPULARNIJI</span>
@@ -117,10 +132,16 @@ const PaketeWebshop = () => {
             <strong>Podrška:</strong> 3 meseca besplatno
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Premium paket */}
-      <div className="flex flex-col justify-between bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-200">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col justify-between bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-200"
+      >
         <div>
           <h3 className="text-2xl font-bold mb-2 text-orange-500">
             Premium Web Shop - cena po projektu
@@ -162,7 +183,7 @@ const PaketeWebshop = () => {
           <br />
           <strong>Podrška:</strong> 6 meseci + prioritet
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

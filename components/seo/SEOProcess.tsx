@@ -1,37 +1,49 @@
 "use client";
 
-import { FaSearch, FaBullseye, FaTools, FaChartLine, FaClipboardList, FaSyncAlt } from "react-icons/fa";
+import {
+  FaSearch,
+  FaBullseye,
+  FaTools,
+  FaChartLine,
+  FaClipboardList,
+  FaSyncAlt,
+} from "react-icons/fa";
 
 const steps = [
   {
     icon: FaSearch,
     title: "Analiza i Audit",
-    description: "Detaljno analiziramo trenutno stanje vašeg sajta, konkurenciju i industriju.",
+    description:
+      "Detaljno analiziramo trenutno stanje vašeg sajta, konkurenciju i industriju.",
   },
   {
     icon: FaBullseye,
     title: "Strategija i Planiranje",
-    description: "Kreiramo prilagođenu SEO strategiju baziranu na vašim ciljevima i budžetu.",
+    description:
+      "Kreiramo prilagođenu SEO strategiju baziranu na vašim ciljevima i budžetu.",
   },
   {
     icon: FaTools,
     title: "Implementacija",
-    description: "Primenjujemo tehničke optimizacije, kreiramo sadržaj i gradimo linkove.",
+    description:
+      "Primenjujemo tehničke optimizacije, kreiramo sadržaj i gradimo linkove.",
   },
   {
     icon: FaChartLine,
     title: "Monitoring i Optimizacija",
-    description: "Kontinuirano pratimo performanse i optimizujemo strategiju za najbolje rezultate.",
+    description:
+      "Kontinuirano pratimo performanse i optimizujemo strategiju za najbolje rezultate.",
   },
   {
     icon: FaClipboardList,
     title: "Izveštavanje",
-    description: "Dostavljamo detaljne mesečne izveštaje sa jasnim metrikama i ROI analizom.",
+    description: "Dostavljamo detaljne mesečne izveštaje sa jasnim metrikama.",
   },
   {
     icon: FaSyncAlt,
     title: "Kontinuirano Poboljšanje",
-    description: "SEO je kontinuiran proces - stalno unapređujemo strategiju i prilagođavamo se promenama.",
+    description:
+      "SEO je kontinuiran proces - stalno unapređujemo strategiju i prilagođavamo se promenama.",
   },
 ];
 
@@ -48,9 +60,6 @@ export default function SEOProcess() {
             key={index}
             className="relative bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-100"
           >
-            <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-300 text-white rounded-full flex items-center justify-center font-bold shadow-lg">
-              {index + 1}
-            </div>
             <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mb-4">
               <step.icon className="text-2xl text-white" />
             </div>
@@ -60,6 +69,17 @@ export default function SEOProcess() {
             <p className="text-gray-600 leading-relaxed">{step.description}</p>
           </div>
         ))}
+      </div>
+      <div className="mt-8 md:mt-12 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl md:rounded-3xl p-6 md:p-8 text-center shadow-lg border border-gray-100">
+        <p className="text-lg md:text-2xl font-semibold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          Prosečno vreme do prvih vidljivih rezultata
+        </p>
+        <p className="text-4xl md:text-5xl font-bold mb-2 text-gray-900">
+          3-6 meseci
+        </p>
+        <p className="text-base md:text-lg text-gray-700">
+          SEO je maraton, ne sprint - ali rezultati traju dugoročno!
+        </p>
       </div>
     </div>
   );

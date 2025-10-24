@@ -3,7 +3,7 @@ import React from "react";
 const HeroSajt = () => {
   return (
     <div className="container mx-auto text-center">
-      <h1 className="text-4xl md:text-8xl bg-gradient-to-r from-gray-100 to-gray-500 bg-clip-text text-transparent font-[1000] py-6 md:py-14">
+      <h1 className="text-[41px] leading-tight md:text-8xl bg-gradient-to-r from-gray-100 to-gray-500 bg-clip-text text-transparent font-[1000] py-6 md:py-14">
         Profesionalna Izrada Sajtova
       </h1>
       <p className="text-base md:text-2xl text-gray-100 mb-5 md:mb-8 max-w-4xl mx-auto md:first-letter:leading-relaxed">

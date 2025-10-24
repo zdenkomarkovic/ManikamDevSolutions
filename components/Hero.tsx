@@ -73,8 +73,8 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-10 left-5 md:left-16 z-20">
-          <h1 className="font-[1000] flex flex-col  relative  text-[33px] md:text-9xl">
-            <span className="pb-2 md:pb-5 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
+          <h1 className="font-[1000] flex flex-col  relative  text-[42px] md:text-9xl pb-4">
+            <span className="pb-3 md:pb-5 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
               Manikam{" "}
             </span>
@@ -157,7 +157,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   ease: "easeOut",
                 }}
                 style={{ marginLeft: `${index * 12}px` }}
-                className="text-base bg-gradient-to-r from-orange-500 via-gray-700 to-gray-400 text-white text-left  px-3 py-1 rounded-lg w-fit"
+                className="text-sm bg-gradient-to-r from-orange-500 via-gray-700 to-gray-400 text-white text-left  px-3 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>

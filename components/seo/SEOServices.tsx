@@ -17,7 +17,6 @@ const services = [
   {
     category: "Off-Page SEO",
     items: [
-      "Kvalitetni backlink building",
       "Guest posting na relevantnim sajtovima",
       "Social signals optimizacija",
       "Brand mention praćenje",
@@ -51,25 +50,30 @@ const services = [
 
 export default function SEOServices() {
   return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-8 md:mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <h2 className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
         Kompletna SEO Rešenja
       </h2>
+      <p className="text-center text-gray-100 mb-12 max-w-4xl mx-auto">
+        Naš tim eksperata pruža sveobuhvatne SEO usluge koje pokrivaju sve
+        aspekte optimizacije. Od tehničkih detalja do sadržajnih strategija,
+        garantujemo rezultate koji donose vrednost vašem biznisu.
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100"
+            className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
           >
-            <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4 md:mb-6 pb-4 border-b-2 border-gray-200">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
               {service.category}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {service.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="flex items-start gap-3">
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">{item}</span>
+                <li key={itemIndex} className="flex items-center gap-2">
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 " />
+                  <span className="text-gray-600 ">{item}</span>
                 </li>
               ))}
             </ul>

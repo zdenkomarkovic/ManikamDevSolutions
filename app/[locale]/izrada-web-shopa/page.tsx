@@ -1,13 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import HeroWebshop from "@/components/web-shop/HeroWebshop";
-import IntroWebshop from "@/components/web-shop/IntroWebshop";
-import PaketeWebshop from "@/components/web-shop/PaketeWebshop";
-import FeaturesWebshop from "@/components/web-shop/FeaturesWebshop";
-import ProcesWebshop from "@/components/web-shop/ProcesWebshop";
-import FAQWebshop from "@/components/web-shop/FAQWebshop";
-import ResultsWebShop from "@/components/web-shop/ResultsWebShop";
-import CtaWebShop from "@/components/web-shop/CtaWebShop";
+import IzradaWebShopaClient from "./IzradaWebShopaClient";
 
 export const metadata: Metadata = {
   title:
@@ -36,27 +29,7 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return (
-    <div className=" bg-gray-900/90 ">
-      {/* Hero sekcija */}
-      <div className="pt-24 pb-6 md:pb-16 px-4">
-        <HeroWebshop />
-      </div>
-
-      {/* Glavna sekcija sa sadržajem */}
-      <div className="container mx-auto px-3 md:px-16 pb-16">
-        <IntroWebshop />
-        <PaketeWebshop />
-        <ResultsWebShop />
-        <CtaWebShop />
-        <FeaturesWebshop />
-        {/* Proces izrade */}
-        <ProcesWebshop />
-        {/* FAQ */}
-        <FAQWebshop />
-      </div>
-    </div>
-  );
+  return <IzradaWebShopaClient />;
 };
 
 export default page;
