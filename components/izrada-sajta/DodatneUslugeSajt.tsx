@@ -1,6 +1,5 @@
 import React from "react";
-import { FaSearch, FaCog, FaPaintBrush } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaSearch, FaCog } from "react-icons/fa";
 
 const DodatneUslugeSajt = () => {
   return (

@@ -6,7 +6,6 @@ import {
   FaMobile,
   FaLock,
   FaCog,
-  FaTruck,
   FaBell,
   FaLanguage,
   FaBoxes,

@@ -9,7 +9,6 @@ import GoogleAdsWhy from "@/components/google-ads/GoogleAdsWhy";
 import GoogleAdsIndustries from "@/components/google-ads/GoogleAdsIndustries";
 import GoogleAdsFAQ from "@/components/google-ads/GoogleAdsFAQ";
 import GoogleAdsCTA from "@/components/google-ads/GoogleAdsCTA";
-import GoogleAdsTrust from "@/components/google-ads/GoogleAdsTrust";
 
 export const metadata: Metadata = {
   title: "Google Oglašavanje i PPC Kampanje | Manikam Dev Solutions",
