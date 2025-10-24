@@ -57,7 +57,6 @@ export default function GoogleOglasavanjePage() {
         <GoogleAdsProcess />
         <GoogleAdsResults />
         <GoogleAdsWhy />
-        <GoogleAdsIndustries />
         <GoogleAdsFAQ />
         <GoogleAdsCTA />
       </section>

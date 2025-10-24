@@ -4,9 +4,6 @@ import SEOIntro from "@/components/seo/SEOIntro";
 import SEOFeatures from "@/components/seo/SEOFeatures";
 import SEOServices from "@/components/seo/SEOServices";
 import SEOProcess from "@/components/seo/SEOProcess";
-import SEOResults from "@/components/seo/SEOResults";
-import SEOWhy from "@/components/seo/SEOWhy";
-import SEOIndustries from "@/components/seo/SEOIndustries";
 import SEOFAQ from "@/components/seo/SEOFAQ";
 import SEOCTA from "@/components/seo/SEOCTA";
 
@@ -57,7 +54,6 @@ export default function SEOOptimizacijaPage() {
           <SEOCTA />
           <SEOServices />
           <SEOProcess />
-          <SEOResults />
 
           <SEOFAQ />
         </div>
