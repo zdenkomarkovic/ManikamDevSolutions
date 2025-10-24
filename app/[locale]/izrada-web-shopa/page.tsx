@@ -6,7 +6,6 @@ import PaketeWebshop from "@/components/web-shop/PaketeWebshop";
 import FeaturesWebshop from "@/components/web-shop/FeaturesWebshop";
 import ProcesWebshop from "@/components/web-shop/ProcesWebshop";
 import FAQWebshop from "@/components/web-shop/FAQWebshop";
-import BenefitsWebshop from "@/components/web-shop/BenefitsWebshop";
 import ResultsWebShop from "@/components/web-shop/ResultsWebShop";
 import CtaWebShop from "@/components/web-shop/CtaWebShop";
 
@@ -55,9 +54,6 @@ const page = () => {
         <ProcesWebshop />
         {/* FAQ */}
         <FAQWebshop />
-
-        {/* Benefits */}
-        <BenefitsWebshop />
       </div>
     </div>
   );
