@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run postbuild:*)"
+      "Bash(npm run postbuild:*)",
+      "Bash(npm run dev:*)",
+      "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\")",
+      "Bash(findstr:*)",
+      "Bash(mkdir:*)",
+      "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\components\")",
+      "Bash(node:*)",
+      "Bash(if exist .next rmdir /S /Q .next)",
+      "Bash(powershell -Command \"if (Test-Path .next) { Remove-Item -Recurse -Force .next }\")",
+      "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\")",
+      "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\")",
+      "Bash(powershell -Command \"Get-Content ''E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\\page.tsx'' | Select-Object -Index 48\")"
     ],
     "deny": [],
     "ask": []

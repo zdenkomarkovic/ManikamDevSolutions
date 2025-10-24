@@ -31,15 +31,17 @@ export default function Footer({
 
   return (
     <motion.footer
-      className="bg-gray-50 py-8  shadow-[0px_-2px_5px_rgba(0,0,0,0.1)]"
+      className="bg-gradient-to-b from-gray-300 via-gray-400 to-gray-900 py-8  shadow-[0px_-2px_5px_rgba(0,0,0,0.1)]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-muted-foreground">
+      <div className="container mx-auto px-4 sm:px-6 md:px-16 text-">
         <div className="text-center md:text-left md:grid md:grid-cols-3 gap-8 mx-auto">
           <div>
             {navList.map((item, i) => {
+              // Skip items without a route (like Services with submenu)
+              if (!item.route) return null;
               return (
                 <ul
                   key={i}
@@ -48,7 +50,7 @@ export default function Footer({
                   <li>
                     <Link
                       href={item.route}
-                      className="text-muted-foreground hover:text-red-800"
+                      className="text-muted-foreground hover:text-orange-500"
                     >
                       {item.title}
                     </Link>
@@ -62,23 +64,23 @@ export default function Footer({
             <div>
               {" "}
               <a href="tel:+381641967267">
-                <p className="text-muted-foreground  flex gap-2 items-center hover:text-red-800">
+                <p className="text-muted-foreground  flex gap-2 items-center hover:text-orange-500">
                   Office: Serbia <FaPhone className="" /> +38164 1967 267
                 </p>
               </a>
             </div>
-            {/* <div>
+            <div>
               {" "}
               <a href="tel:+12408103730">
-                <p className="text-muted-foreground  flex gap-2 items-center hover:text-red-800">
+                <p className="text-muted-foreground  flex gap-2 items-center hover:text-orange-500">
                   Office: Washington, D.C., USA <FaPhone className="" />{" "}
                   +12408103730
                 </p>
               </a>
-            </div> */}
+            </div>
             <div>
               <a href="mailto:manikamwebsolutions@gmail.com">
-                <p className="flex gap-3 items-center  hover:text-red-800 text-muted-foreground text-wrap">
+                <p className="flex gap-3 items-center  hover:text-orange-500 text-muted-foreground text-wrap">
                   <TfiEmail /> manikamwebsolutions@gmail.com
                 </p>
               </a>
@@ -86,31 +88,37 @@ export default function Footer({
             <div className="flex space-x-4 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/profile.php?id=61574784286298"
-                className="text-muted-foreground hover:text-red-800"
+                className="text-muted-foreground hover:text-orange-500"
               >
                 <Facebook />
               </a>
               <a
                 href="https://www.instagram.com/manikam.web.solutions/"
                 target={"_blank"}
-                className="text-muted-foreground hover:text-red-800"
+                className="text-muted-foreground hover:text-orange-500"
               >
                 <Instagram />
               </a>
             </div>
           </div>
           <div className="md:col-span-1 col-span-2 text-center">
-            <h3 className="text-lg font-semibold mb-2 md:mb-4">
-              Manikam <span className="">Web</span> Solutions
+            <h3 className="text-lg font-semibold mb-2 md:mb-4 ">
+              Manikam{" "}
+              <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+                Web
+              </span>{" "}
+              Solutions
             </h3>
 
-            <p className="font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <p className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
               {message}
             </p>
           </div>
         </div>
-        <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-muted-foreground">
-          <p>&copy; 2024 ManikamWebSolutions. {rights}</p>
+        <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-gray-100">
+          <p>
+            &copy; {new Date().getFullYear()} ManikamWebSolutions. {rights}
+          </p>
         </div>
       </div>
     </motion.footer>

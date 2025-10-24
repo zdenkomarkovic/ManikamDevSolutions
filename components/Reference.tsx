@@ -65,9 +65,9 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   return (
     <div
       id="reference"
-      className="container px-2 md:px-4 mx-auto py-10 border-t"
+      className="container px-2 md:px-16 mx-auto py-10 border-t"
     >
-      <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10">
+      <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10 font-extrabold bg-gradient-to-r from-orange-500  to-orange-300 bg-clip-text text-transparent">
         {title}
       </h3>
 
@@ -109,7 +109,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
               currentPage === 1
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-orange-500 to-red-600 text-white  hover:orange-600 hover:to-red-700 hover:scale-105"
+                : "bg-gradient-to-r from-orange-500 to-orange-300 text-white hover:scale-105"
             }`}
           >
             ←
@@ -121,8 +121,8 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
               onClick={() => goToPage(page)}
               className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                 page === currentPage
-                  ? "bg-gradient-to-r from-orange-500 to-red-600 text-white scale-110"
-                  : "bg-gray-200 text-gray-700 hover:bg-gradient-to-r hover:from-orange-600 hover:to-red-700 hover:text-white hover:scale-105"
+                  ? "bg-gradient-to-r from-orange-500 to-orange-300 text-white scale-110"
+                  : "bg-gray-200 text-gray-700  hover:text-white hover:scale-105"
               }`}
             >
               {page}
@@ -135,7 +135,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
               currentPage === totalPages
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-orange-500 to-red-600 text-white hover:orange-600 hover:to-red-700 hover:scale-105"
+                : "bg-gradient-to-r from-orange-500 to-orange-300 text-white  hover:scale-105"
             }`}
           >
             →

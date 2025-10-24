@@ -6,7 +6,7 @@ import React from "react";
 import pravac from "../public/images/pravac.jpg";
 
 const class1 =
-  " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl md:rounded-3xl pt-[72px] md:pt-24";
+  " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl  pt-[72px] md:pt-24";
 const imageClass =
   " w-[150px] h-[150px] md:w-[200px] md:h-[200px] mx-auto absolute -top-16 md:-top-24 left-0 right-0 ";
 
@@ -25,9 +25,9 @@ const Usluge = ({ usluge, title }: { usluge: UslugeData[]; title: string }) => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={`md:w-[35%] h-[500px] rounded-xl relative z-20 px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
+        className={`md:w-[35%] h-[500px] rounded-xl  z-20 px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
       >
-        <h2 className="text-[33px] md:text-6xl text-center uppercase">
+        <h2 className="text-[33px] md:text-6xl text-center uppercase font-extrabold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
           {title}
         </h2>
         <div className="relative z-20">
@@ -41,7 +41,9 @@ const Usluge = ({ usluge, title }: { usluge: UslugeData[]; title: string }) => {
           />
         </div>
       </motion.div>
-      <div className={` relative z-30 md:w-[60%] bg-gray-100/75 `}>
+      <div
+        className={` relative z-30 md:w-[60%]  bg-gradient-to-r from-gray-900/95 via-orange-500 to-gray-900/95 rounded-xl pb-20`}
+      >
         <div className="grid grid-cols-2 gap-2 md:gap-10 md:px-20">
           {usluge.map((item, i) => {
             return <Card key={i} item={item} i={i} />;

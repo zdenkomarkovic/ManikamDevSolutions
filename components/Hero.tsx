@@ -33,16 +33,20 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
       ? [
           "Izrada web sajta",
           "Izrada web shopa",
-          "Izrada softvera",
+          "Redizajn sajta",
           "Google oglasavanje",
           "SEO optimizacija",
+          "Društvene mreže",
+          "Izrada softvera",
         ]
       : [
           "Website Development",
           "Web Shop Development",
-          "Software Development",
+          "Redesign website",
           "Google Advertising",
           "SEO Optimization",
+          "Social Networks",
+          "Software Development",
         ];
 
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
@@ -65,35 +69,38 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
   }, [services.length]);
 
   return (
-    <div className="relative h-[100dvh] w-full bg-white dark:bg-neutral-950 overflow-hidden">
+    <div className="relative h-[100dvh] w-full   overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
-        <div className="absolute bottom-8 md:bottom-32 left-5 md:left-24 z-20">
-          <h1 className="relative text-gray-900 text-[33px] md:text-6xl xl:text-[80px] ">
-            Manikam{" "}
+        <div className="absolute bottom-8 md:bottom-10 left-5 md:left-16 z-20">
+          <h1 className="font-[1000] flex flex-col  relative  text-[33px] md:text-9xl">
+            <span className="pb-2 md:pb-5 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
+              {" "}
+              Manikam{" "}
+            </span>
             <span className="block py-2 md:py-0">
-              <span className="font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent ">
+              <span className=" bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
-              <span className="text-gray-900 ">Solutions </span>
+              <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+                Solutions{" "}
+              </span>
             </span>
           </h1>
-          <p className="text-[19px] md:text-3xl xl:text-[55px] py-2 block xl:py-4">
+          <p className="text-[19px] font-bold md:text-3xl xl:text-[55px] py-2 block xl:py-10  bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent">
             {title}
           </p>
           <div className="md:hidden">
-            <h2 className="text-[19px] italic md:text-5xl pb-4 md:pb-12">
-              <div className="">
-                {section.title} {section.title3}
-                <span className="font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                  {section.span}{" "}
-                </span>
-                {section.title2}
-              </div>
-            </h2>
+            <p className="text-[19px] text-white italic md:text-5xl pb-4 md:pb-12">
+              {section.title} {section.title3}
+              <span className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+                {section.span}{" "}
+              </span>
+              {section.title2}
+            </p>
             <a
               href={`tel:${section.phone}`}
-              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:from-orange-600 hover:to-red-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-orange-300 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
                 className="w-6 h-6 md:w-8 md:h-8"
@@ -111,7 +118,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         </div>
 
         {/* Animacija usluga - pozicionirana apsolutno */}
-        <div className="absolute top-32 right-24 z-20 hidden md:block">
+        <div className="absolute top-28 right-16 z-20 hidden md:block">
           <div className="space-y-3 relative z-20">
             {services.map((service, index) => (
               <motion.div
@@ -126,7 +133,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   ease: "easeOut",
                 }}
                 style={{ marginLeft: `${index * 20}px` }}
-                className="relative z-20 md:text-2xl bg-gradient-to-r from-orange-500 to-red-600 text-white text-left border-2 font-bold px-4 py-1 rounded-lg w-fit"
+                className="relative z-20 md:text-2xl bg-gradient-to-r from-orange-500 via-gray-700 to-gray-400 text-white text-left font-bold px-4 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>
@@ -136,7 +143,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
 
         {/* Mobilna verzija usluga - iznad h1 */}
         <div className="absolute top-24 right-4 z-20 md:hidden">
-          <div className="space-y-3">
+          <div className="space-y-2">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -150,7 +157,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   ease: "easeOut",
                 }}
                 style={{ marginLeft: `${index * 12}px` }}
-                className="text-base bg-gradient-to-r from-orange-500 to-red-600 text-white text-left border  px-3 py-1 rounded-lg w-fit"
+                className="text-base bg-gradient-to-r from-orange-500 via-gray-700 to-gray-400 text-white text-left  px-3 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>
@@ -166,7 +173,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-tr md:bg-gradient-to-tr from-gray-100 via-gray-100/60 to-transparent" />
+        <div className="absolute inset-0 bg-black/60 " />
       </div>
     </div>
   );

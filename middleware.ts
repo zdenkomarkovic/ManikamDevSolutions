@@ -125,13 +125,14 @@ export function middleware(request: VercelRequest) {
       locale = "en";
     } else {
       const country = request.geo?.country || "";
-      // Ako je Amerika, koristi engleski
-      if (country === "US") {
-        locale = "en";
-      }
-      // Sve ostalo (uključujući Srbiju) - srpski
-      else {
+      // Ako je Srbija, Bosna, Crna Gora ili Makedonija - koristi srpski
+      const serbianSpeakingCountries = ["RS", "BA", "ME", "MK"];
+      if (serbianSpeakingCountries.includes(country)) {
         locale = "sr";
+      }
+      // Sve ostalo (uključujući USA, EU, itd.) - engleski
+      else {
+        locale = "en";
       }
     }
 
