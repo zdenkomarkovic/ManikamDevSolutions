@@ -9,7 +9,6 @@ import SocialMediaPlatforms from "@/components/drustvene-mreze/SocialMediaPlatfo
 import SocialMediaContent from "@/components/drustvene-mreze/SocialMediaContent";
 import SocialMediaAds from "@/components/drustvene-mreze/SocialMediaAds";
 import SocialMediaProcess from "@/components/drustvene-mreze/SocialMediaProcess";
-import SocialMediaResults from "@/components/drustvene-mreze/SocialMediaResults";
 import SocialMediaPackages from "@/components/drustvene-mreze/SocialMediaPackages";
 import SocialMediaFAQ from "@/components/drustvene-mreze/SocialMediaFAQ";
 import SocialMediaCTA from "@/components/drustvene-mreze/SocialMediaCTA";
