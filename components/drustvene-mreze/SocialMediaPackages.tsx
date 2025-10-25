@@ -1,137 +1,106 @@
 "use client";
 
+import React from "react";
+import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 
 const packages = [
   {
     name: "Starter Paket",
-    price: "Od 150€/mesečno",
+    price: "Od 150€",
+    period: "/mesečno",
     description: "Idealno za male biznise koji počinju sa društvenim mrežama",
     features: [
-      "Upravljanje 1 platformom (Facebook ili Instagram)",
-      "8-12 postova mesečno",
+      "Post - 2 nedeljno",
+      "Stories - 1 nedeljno",
+      "Reel - 1 nedeljno",
       "Osnovno grafičko dizajniranje",
       "Hashtag research",
-      "Odgovaranje na komentare i poruke",
-      "Mesečni izveštaj sa analytics",
+      "Content calendar planiranje",
     ],
+    iconColor: "text-green-500",
     highlight: false,
   },
   {
     name: "Profesionalni Paket",
-    price: "Od 300€/mesečno",
+    price: "Od 200€",
+    period: "/mesečno",
     description: "Kompletno rešenje za ozbiljan online rast",
     features: [
-      "Upravljanje 2 platforme (Facebook + Instagram)",
-      "16-20 postova mesečno",
+      "Post - 3 nedeljno",
+      "Stories - 2 nedeljno",
+      "Reel - 1 nedeljno",
       "Profesionalni grafički dizajn i foto editing",
-      "Instagram Stories (8-12 mesečno)",
+      "Hashtag research",
       "Content calendar planiranje",
-      "Community management (komentari, poruke, DM)",
-      "Mesečni oglasni budžet od 100€ uključen",
-      "Detaljni mesečni izveštaji i strategija",
     ],
+    iconColor: "text-green-500",
     highlight: true,
   },
   {
     name: "Premium Paket",
-    price: "Od 600€/mesečno",
+    price: "Od 400€",
+    period: "/mesečno",
     description: "Maksimalan rast sa video sadržajem i reklamama",
     features: [
-      "Upravljanje 2 platforme (Facebook + Instagram)",
-      "25-30 postova mesečno",
+      "Post - 3 nedeljno",
+      "Stories - 3 nedeljno",
+      "Reel - 2 nedeljno",
       "Premium grafički dizajn",
-      "Instagram Reels i video produkcija (4-8 mesečno)",
-      "Instagram Stories (15-20 mesečno)",
-      "Influencer outreach i saradnje",
-      "Mesečni oglasni budžet od 300€ uključen",
-      "A/B testiranje i optimizacija kampanja",
-      "Konkurentska analiza",
-      "Bi-weekly (2x mesečno) konsultacije",
+      "Odgovaranje na poruke i komentare",
+      "Hashtag research",
+      "Content calendar planiranje",
     ],
+    iconColor: "text-green-500",
     highlight: false,
   },
 ];
 
 export default function SocialMediaPackages() {
   return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800">
-        Paketi Usluga
-      </h2>
-      <p className="text-center text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto">
-        Odaberite paket koji odgovara vašim potrebama i budžetu. Svi paketi mogu se prilagoditi.
-      </p>
+    <div className="grid md:grid-cols-3 gap-4 md:">
+      {packages.map((pkg, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className={`bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-lg ${
+            pkg.highlight
+              ? "border-2 border-blue-200 shadow-xl relative overflow-hidden"
+              : "border border-gray-200"
+          }`}
+        >
+          {pkg.highlight && (
+            <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-2xl text-xs">
+              <span className="font-bold">NAJPOPULARNIJI</span>
+            </div>
+          )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {packages.map((pkg, index) => (
-          <div
-            key={index}
-            className={`bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 relative ${
-              pkg.highlight ? "border-blue-500" : "border-gray-200"
-            }`}
-          >
-            {pkg.highlight && (
-              <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-2xl text-xs">
-                <span className="font-bold">NAJPOPULARNIJI</span>
-              </div>
-            )}
-
-            <h3 className="text-2xl font-bold mb-2 text-gray-800">{pkg.name}</h3>
-            <div className="text-3xl font-bold text-orange-600 mb-3">{pkg.price}</div>
-            <p className="text-gray-600 mb-6 text-sm">{pkg.description}</p>
-
+          <div>
+            <h3 className="text-2xl font-bold mb-5 text-orange-500">
+              {pkg.name}
+            </h3>
+            <div className="text-3xl font-bold text-orange-500 mb-2">
+              {pkg.price}
+              <span className="text-lg text-gray-600">{pkg.period}</span>
+            </div>
+            <p className="text-gray-600 mb-4">{pkg.description}</p>
+            <div className="w-full h-1 bg-gray-200 mb-4"></div>
             <div className="space-y-3 mb-6">
               {pkg.features.map((feature, featureIndex) => (
-                <div key={featureIndex} className="flex items-start gap-3">
-                  <FaCheck className="text-green-500 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-sm">{feature}</span>
+                <div key={featureIndex} className="flex items-start">
+                  <FaCheck
+                    className={`${pkg.iconColor} mt-1 mr-2 flex-shrink-0`}
+                  />
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
           </div>
-        ))}
-      </div>
-
-      <div className="mt-8 bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100">
-        <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 text-center">
-          Dodatne Usluge (À La Carte)
-        </h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 font-bold">•</span>
-                <span><strong>Profesionalna fotografija</strong> - od 100€ po photo shoot-u</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 font-bold">•</span>
-                <span><strong>Video produkcija</strong> - od 150€ po videu</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 font-bold">•</span>
-                <span><strong>Influencer kampanje</strong> - custom pricing</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 font-bold">•</span>
-                <span><strong>Giveaway organizacija</strong> - od 200€</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 font-bold">•</span>
-                <span><strong>Facebook/Instagram Shop setup</strong> - od 150€</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 font-bold">•</span>
-                <span><strong>Dodatni oglasni budžet</strong> - po potrebi</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </motion.div>
+      ))}
     </div>
   );
 }

@@ -19,7 +19,7 @@ import { MdEuro } from "react-icons/md";
 
 const PaketeWebshop = () => {
   return (
-    <div className="grid md:grid-cols-3 gap-6 py-12 ">
+    <div className="grid md:grid-cols-3 gap-6 ">
       {/* Osnovni paket */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}

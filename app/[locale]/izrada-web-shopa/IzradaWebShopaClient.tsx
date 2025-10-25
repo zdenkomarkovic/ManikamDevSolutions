@@ -51,7 +51,7 @@ const IzradaWebShopaClient = () => {
       </motion.div>
 
       {/* Glavna sekcija sa sadržajem */}
-      <div className="container mx-auto px-3 md:px-16 pb-16">
+      <div className="container mx-auto space-y-8 md:space-y-16 px-3 md:px-16 pb-16">
         <motion.div
           initial="hidden"
           whileInView="visible"

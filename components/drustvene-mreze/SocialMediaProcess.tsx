@@ -1,66 +1,124 @@
 "use client";
 
-import { FaSearch, FaLightbulb, FaPencilAlt, FaRocket, FaChartLine, FaSyncAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const steps = [
   {
-    icon: FaSearch,
     title: "Analiza i Istraživanje",
     description: "Analiziramo vašu industriju, konkurenciju, ciljnu publiku i trenutno stanje na društvenim mrežama.",
   },
   {
-    icon: FaLightbulb,
     title: "Strategija i Planiranje",
     description: "Kreiramo personalizovanu strategiju sa ciljevima, tipovima sadržaja i planom objava.",
   },
   {
-    icon: FaPencilAlt,
     title: "Kreiranje Sadržaja",
     description: "Dizajniramo grafike, pišemo tekstove i kreiramo video sadržaj prema content calendar-u.",
   },
   {
-    icon: FaRocket,
     title: "Objava i Oglašavanje",
     description: "Redovno objavljujemo sadržaj i pokrećemo ciljane reklamne kampanje.",
   },
   {
-    icon: FaChartLine,
     title: "Praćenje i Analiza",
     description: "Pratimo performanse, angažman, doseg i konverzije kroz detaljne analytics.",
   },
   {
-    icon: FaSyncAlt,
     title: "Optimizacija",
     description: "Kontinuirano testiramo, učimo i optimizujemo strategiju za najbolje rezultate.",
   },
 ];
 
 export default function SocialMediaProcess() {
-  return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-800">
-        Naš Proces Upravljanja Društvenim Mrežama
-      </h2>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      x: -20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <motion.h2
+        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Naš Proces Upravljanja Društvenim Mrežama
+      </motion.h2>
+      <motion.div
+        className="space-y-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {steps.map((step, index) => (
-          <div
+          <motion.div
             key={index}
-            className="relative bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
+            className="space-y-5"
+            variants={itemVariants}
+            whileHover={{
+              x: 10,
+              transition: { duration: 0.3 }
+            }}
           >
-            <div className="absolute -top-4 -left-4 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">
-              {index + 1}
+            <div className="flex gap-6 items-center">
+              <motion.div
+                className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-300 rounded-full flex items-center justify-center text-white font-bold text-xl"
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { duration: 0.3 }
+                }}
+              >
+                {index + 1}
+              </motion.div>
+              <motion.h3
+                className="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent"
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 }
+                }}
+              >
+                {step.title}
+              </motion.h3>
             </div>
-            <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
-              <step.icon className="text-2xl text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {step.title}
-            </h3>
-            <p className="text-gray-600 leading-relaxed">{step.description}</p>
-          </div>
+            <motion.p
+              className="text-gray-600"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {step.description}
+            </motion.p>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
