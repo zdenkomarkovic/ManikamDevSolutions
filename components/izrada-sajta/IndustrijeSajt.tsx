@@ -13,90 +13,90 @@ const IndustrijeSajt = () => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Ugostiteljstvo i Restorani
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Sajtovi sa online menijima, rezervacionim sistemima, galerijom jela
             i integracijom sa delivery platformama.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Medicinske ordinacije
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Profesionalni sajtovi sa sistemom za zakazivanje termina, prikazom
             usluga, credentials doktora i GDPR usklađenošću.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             E-commerce i Trgovina
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Moderne online prodavnice sa naprednim sistemima plaćanja,
             upravljanjem inventarom i integracijama sa kurirskim službama.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Nekretnine
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Sajtovi sa naprednim filterima za pretragu nekretnina, virtuelnim
             turama, mapama i kontakt formama za svakih objekat.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Pravne kancelarije
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Elegantni, profesionalni sajtovi sa prikazom oblasti rada,
             biografijama pravnika, blog sekcijom i sigurnim kontakt formama.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Fitnes i Wellness
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Dinamični sajtovi sa rasporedom treninga, online zakazivanjem,
             prikazom trenera i integracijama sa fitness aplikacijama.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Edukacija i Kursevi
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Platforme za online učenje sa video integracijama, sistemima za
             testiranje, pratećim napretka učenika i certifikatima.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Građevinarstvo
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Sajtovi sa portfoliom projekata, galerijom realizacija, kalkulatorom
             cena i detaljnim prikazom usluga.
           </p>
         </div>
 
         <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
-          <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
             Agencije i Freelance-ri
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600">
             Kreativni portfolio sajtovi sa prikazom radova, testimonials-ima
             klijenata i integrisanim sistemima za ponude.
           </p>

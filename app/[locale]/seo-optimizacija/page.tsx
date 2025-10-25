@@ -1,11 +1,5 @@
 import { Metadata } from "next";
-import SEOHero from "@/components/seo/SEOHero";
-import SEOIntro from "@/components/seo/SEOIntro";
-import SEOFeatures from "@/components/seo/SEOFeatures";
-import SEOServices from "@/components/seo/SEOServices";
-import SEOProcess from "@/components/seo/SEOProcess";
-import SEOFAQ from "@/components/seo/SEOFAQ";
-import SEOCTA from "@/components/seo/SEOCTA";
+import SEOPageClient from "./SEOPageClient";
 
 export const metadata: Metadata = {
   title:
@@ -41,23 +35,5 @@ export const metadata: Metadata = {
 };
 
 export default function SEOOptimizacijaPage() {
-  return (
-    <div className=" bg-gray-900/90 ">
-      <section className="pt-24 pb-6 md:pb-16 px-4">
-        <SEOHero />
-      </section>
-
-      <section className="container mx-auto px-3 md:px-16 pb-16">
-        <div className="space-y-8 mb-8">
-          <SEOIntro />
-          <SEOFeatures />
-          <SEOCTA />
-          <SEOServices />
-          <SEOProcess />
-
-          <SEOFAQ />
-        </div>
-      </section>
-    </div>
-  );
+  return <SEOPageClient />;
 }
