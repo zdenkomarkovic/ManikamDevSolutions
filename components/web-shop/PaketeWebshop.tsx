@@ -30,8 +30,8 @@ const PaketeWebshop = () => {
       >
         <div>
           {" "}
-          <h3 className="text-2xl flex gap-1 items-center font-bold mb-2 text-orange-500">
-            Osnovni Web Shop - 700 <MdEuro />
+          <h3 className="text-2xl font-bold mb-2 text-orange-500">
+            Osnovni Web Shop - 700€
           </h3>
           <p className="text-gray-600 mb-4">
             Idealno za manje biznise koji počinju online prodaju
@@ -83,8 +83,8 @@ const PaketeWebshop = () => {
           </div>
 
           <div className="">
-            <h3 className="text-2xl flex gap-1 items-center  font-bold mb-2 text-orange-500">
-              Profesionalni Web Shop - 1000 <MdEuro />
+            <h3 className="text-2xl font-bold mb-2 text-orange-500">
+              Profesionalni Web Shop - 1000€
             </h3>
             <p className="text-gray-600 mb-4">
               Kompletno e-commerce rešenje za ozbiljan biznis

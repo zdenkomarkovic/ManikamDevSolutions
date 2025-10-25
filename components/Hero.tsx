@@ -79,7 +79,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
               Manikam{" "}
             </span>
             <span className="block py-2 md:py-0">
-              <span className=" bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent ">
+              <span className=" bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
               <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
@@ -157,7 +157,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   ease: "easeOut",
                 }}
                 style={{ marginLeft: `${index * 12}px` }}
-                className="text-sm bg-gradient-to-r from-orange-500 via-gray-700 to-gray-400 text-white text-left  px-3 py-1 rounded-lg w-fit"
+                className="text-sm bg-gradient-to-r from-orange-600  to-gray-600 text-white text-left  px-3 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>

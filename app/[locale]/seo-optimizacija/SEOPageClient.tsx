@@ -65,7 +65,7 @@ export default function SEOPageClient() {
 
       <section className="container mx-auto px-3 md:px-16 pb-16">
         <motion.div
-          className="space-y-8 mb-8"
+          className="space-y-8 md:space-y-16 mb-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

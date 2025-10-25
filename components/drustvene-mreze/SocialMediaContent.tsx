@@ -1,11 +1,11 @@
 "use client";
 
-import { FaImage, FaVideo, FaPencilAlt, FaLightbulb } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaCheckCircle } from "react-icons/fa";
 
 const contentTypes = [
   {
-    icon: FaImage,
-    title: "Grafički Dizajn",
+    category: "Grafički Dizajn",
     items: [
       "Profesionalne grafike za postove",
       "Infografike sa statistikama i podacima",
@@ -16,8 +16,7 @@ const contentTypes = [
     ],
   },
   {
-    icon: FaVideo,
-    title: "Video Sadržaj",
+    category: "Video Sadržaj",
     items: [
       "Instagram Reels (15-90 sekundi)",
       "Facebook video postovi",
@@ -28,8 +27,7 @@ const contentTypes = [
     ],
   },
   {
-    icon: FaPencilAlt,
-    title: "Copywriting",
+    category: "Copywriting",
     items: [
       "Angažujući caption tekstovi",
       "Call-to-action (CTA) optimizacija",
@@ -40,8 +38,7 @@ const contentTypes = [
     ],
   },
   {
-    icon: FaLightbulb,
-    title: "Content Strategija",
+    category: "Content Strategija",
     items: [
       "Content calendar planiranje (30-90 dana unapred)",
       "Mix obrazovnog, zabavnog i promotivnog sadržaja",
@@ -54,70 +51,183 @@ const contentTypes = [
 ];
 
 export default function SocialMediaContent() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      x: -20
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800">
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <motion.h2
+        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         Kreiranje Sadržaja Koji Angažuje
-      </h2>
-      <p className="text-center text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto">
+      </motion.h2>
+      <motion.p
+        className="text-center text-gray-100 mb-12 max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         Kvalitetan sadržaj je srce uspešnog social media marketinga. Kreiramo raznovrstan sadržaj
-        prilagođen vašoj publici i platformi.
-      </p>
+        prilagođen vašoj publici i platformi, sa fokusom na engagement i konverzije.
+      </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {contentTypes.map((type, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100"
+            className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+            variants={cardVariants}
+            whileHover={{
+              scale: 1.02,
+              y: -5,
+              boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)"
+            }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
-                <type.icon className="text-2xl text-white" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800">
-                {type.title}
-              </h3>
-            </div>
-            <ul className="space-y-2 text-gray-700">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+              {type.category}
+            </h3>
+            <motion.ul
+              className="space-y-2"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {type.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1 font-bold">✓</span>
-                  <span>{item}</span>
-                </li>
+                <motion.li
+                  key={itemIndex}
+                  className="flex items-center gap-2"
+                  variants={itemVariants}
+                >
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 }
+                    }}
+                  >
+                    <FaCheckCircle className="text-orange-500 flex-shrink-0" />
+                  </motion.div>
+                  <span className="text-gray-600">{item}</span>
+                </motion.li>
               ))}
-            </ul>
-          </div>
+            </motion.ul>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="mt-8 bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100">
-        <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">
+      <motion.div
+        className="mt-8 p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        whileHover={{
+          scale: 1.01,
+          y: -3,
+          boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)"
+        }}
+      >
+        <motion.h3
+          className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent text-center"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           Zašto je kvalitetan sadržaj ključan?
-        </h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div>
-            <h4 className="font-bold text-gray-900 mb-2">Povećava Angažman</h4>
-            <p className="text-gray-600 text-sm">
+        </motion.h3>
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div
+            variants={cardVariants}
+            className="text-center"
+          >
+            <h4 className="font-bold text-gray-900 mb-2 text-lg">Povećava Angažman</h4>
+            <p className="text-gray-600 text-sm leading-relaxed">
               Zanimljiv sadržaj podstiče lajkove, komentare, deljenje i čuvanje postova,
               što algoritmi Facebook-a i Instagram-a nagrađuju većim doseom.
             </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-gray-900 mb-2">Gradi Brend</h4>
-            <p className="text-gray-600 text-sm">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            className="text-center"
+          >
+            <h4 className="font-bold text-gray-900 mb-2 text-lg">Gradi Brend</h4>
+            <p className="text-gray-600 text-sm leading-relaxed">
               Konzistentan, kvalitetan sadržaj pozicionira vas kao stručnjaka u industriji
               i gradi prepoznatljivost brenda kod vaše publike.
             </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-gray-900 mb-2">Konvertuje Pratiоce</h4>
-            <p className="text-gray-600 text-sm">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            className="text-center"
+          >
+            <h4 className="font-bold text-gray-900 mb-2 text-lg">Konvertuje Pratiоce</h4>
+            <p className="text-gray-600 text-sm leading-relaxed">
               Dobro osmišljen sadržaj sa jasnim CTA-om transformiše pratioce u lead-ove
               i kupce, direktno utiče na vašu prodaju.
             </p>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

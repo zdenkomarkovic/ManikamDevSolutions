@@ -7,12 +7,12 @@ import { FaCheck } from "react-icons/fa";
 const packages = [
   {
     name: "Starter Paket",
-    price: "Od 150€",
+    price: "Od 200€",
     period: "/mesečno",
     description: "Idealno za male biznise koji počinju sa društvenim mrežama",
     features: [
-      "Post - 2 nedeljno",
-      "Stories - 1 nedeljno",
+      "Post - 3 nedeljno",
+      "Stories - 2 nedeljno",
       "Reel - 1 nedeljno",
       "Osnovno grafičko dizajniranje",
       "Hashtag research",
@@ -23,7 +23,7 @@ const packages = [
   },
   {
     name: "Profesionalni Paket",
-    price: "Od 200€",
+    price: "Od 300€",
     period: "/mesečno",
     description: "Kompletno rešenje za ozbiljan online rast",
     features: [
@@ -33,13 +33,14 @@ const packages = [
       "Profesionalni grafički dizajn i foto editing",
       "Hashtag research",
       "Content calendar planiranje",
+      "Upravljanje plaćenim oglasima",
     ],
     iconColor: "text-green-500",
     highlight: true,
   },
   {
     name: "Premium Paket",
-    price: "Od 400€",
+    price: "Od 450€",
     period: "/mesečno",
     description: "Maksimalan rast sa video sadržajem i reklamama",
     features: [
@@ -47,9 +48,11 @@ const packages = [
       "Stories - 3 nedeljno",
       "Reel - 2 nedeljno",
       "Premium grafički dizajn",
-      "Odgovaranje na poruke i komentare",
+
       "Hashtag research",
       "Content calendar planiranje",
+      "Upravljanje plaćenim oglasima",
+      "Odgovaranje na poruke i komentare",
     ],
     iconColor: "text-green-500",
     highlight: false,
@@ -94,7 +97,16 @@ export default function SocialMediaPackages() {
                   <FaCheck
                     className={`${pkg.iconColor} mt-1 mr-2 flex-shrink-0`}
                   />
-                  <span>{feature}</span>
+                  <span
+                    className={
+                      feature === "Upravljanje plaćenim oglasima" ||
+                      feature === "Odgovaranje na poruke i komentare"
+                        ? "font-bold"
+                        : ""
+                    }
+                  >
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>

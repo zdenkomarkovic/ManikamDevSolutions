@@ -1,147 +1,471 @@
 "use client";
 
-import { FaBullseye, FaDollarSign, FaChartBar, FaCrosshairs } from "react-icons/fa";
+import { motion } from "framer-motion";
+import {
+  FaBullseye,
+  FaDollarSign,
+  FaChartBar,
+  FaCrosshairs,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 export default function SocialMediaAds() {
-  return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-800">
-        Facebook i Instagram Oglašavanje
-      </h2>
-      <p className="text-center text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto">
-        Plaćeno oglašavanje na društvenim mrežama omogućava vam da dosegnete tačno onu
-        publiku koja je zainteresovana za vaš proizvod ili uslugu.
-      </p>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-white rounded-xl p-6 shadow-lg text-center border border-gray-100">
-          <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -180,
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        delay: 0.2,
+      },
+    },
+  };
+
+  return (
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <motion.h2
+        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Facebook i Instagram Oglašavanje
+      </motion.h2>
+      <motion.p
+        className="text-center text-gray-100 mb-12 max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        Plaćeno oglašavanje na društvenim mrežama omogućava vam da dosegnete
+        tačno onu publiku koja je zainteresovana za vaš proizvod ili uslugu.
+      </motion.p>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl text-center hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            variants={iconVariants}
+            whileHover={{
+              scale: 1.2,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <FaBullseye className="text-2xl text-white" />
-          </div>
-          <h3 className="text-xl font-bold mb-3">Precizno Targetiranje</h3>
+          </motion.div>
+          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            Precizno Targetiranje
+          </h3>
           <p className="text-gray-600">
             Targetirajte po demografiji, interesovanjima, ponašanju, lokaciji i
             custom audiences.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg text-center border border-gray-100">
-          <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl text-center hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            variants={iconVariants}
+            whileHover={{
+              scale: 1.2,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <FaDollarSign className="text-2xl text-white" />
-          </div>
-          <h3 className="text-xl font-bold mb-3">Kontrola Budžeta</h3>
+          </motion.div>
+          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            Kontrola Budžeta
+          </h3>
           <p className="text-gray-600">
-            Postavite dnevni ili mesečni budžet. Plaćate samo za rezultate koje želite.
+            Postavite dnevni ili mesečni budžet. Plaćate samo za rezultate koje
+            želite.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg text-center border border-gray-100">
-          <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl text-center hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            variants={iconVariants}
+            whileHover={{
+              scale: 1.2,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <FaChartBar className="text-2xl text-white" />
-          </div>
-          <h3 className="text-xl font-bold mb-3">Merljivi Rezultati</h3>
+          </motion.div>
+          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            Merljivi Rezultati
+          </h3>
           <p className="text-gray-600">
-            Detaljne analytics - tačno znate koliko ste potrošili i šta ste dobili.
+            Detaljne analytics - tačno znate koliko ste potrošili i šta ste
+            dobili.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg text-center border border-gray-100">
-          <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl text-center hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            variants={iconVariants}
+            whileHover={{
+              scale: 1.2,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <FaCrosshairs className="text-2xl text-white" />
-          </div>
-          <h3 className="text-xl font-bold mb-3">Retargeting</h3>
+          </motion.div>
+          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            Retargeting
+          </h3>
           <p className="text-gray-600">
-            Ponovo dosegnite posetioce sajta ili one koji su već angažovani sa vašim sadržajem.
+            Ponovo dosegnite posetioce sajta ili one koji su već angažovani sa
+            vašim sadržajem.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+      <motion.h3
+        className="text-xl md:text-3xl mt-8 font-extrabold mb-6 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent text-center"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        Tipovi Reklamnih Kampanja
+      </motion.h3>
 
-      <div className="mt-8 bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100">
-        <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-800 text-center md:text-left">
-          Tipovi Reklamnih Kampanja
-        </h3>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm">
+      <motion.div
+        className="mt-8 p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        whileHover={{
+          scale: 1.01,
+          y: -3,
+          boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+        }}
+      >
+        <motion.div
+          className="grid md:grid-cols-2 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={cardVariants}>
+            <h4 className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+              <motion.span
+                className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm"
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 360,
+                  transition: { duration: 0.6 },
+                }}
+              >
                 FB
-              </span>
+              </motion.span>
               Facebook Ads Kampanje
             </h4>
-            <ul className="space-y-2 text-gray-700 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Lead Generation Ads</strong> - prikupljanje email adresa i kontakt informacija</span>
+            <ul className="space-y-2">
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600 ">
+                  <strong>Lead Generation Ads</strong> - prikupljanje email i
+                  kontakt informacija
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Traffic Ads</strong> - slanje posetilaca na vaš sajt ili landing page</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600 ">
+                  <strong>Traffic Ads</strong> - slanje posetilaca na vaš sajt
+                  ili landing page
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Engagement Ads</strong> - povećanje lajkova, komentara, deljenja</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Engagement Ads</strong> - povećanje lajkova,
+                  komentara, deljenja
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Conversion Ads</strong> - direktna prodaja proizvoda ili usluga</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Conversion Ads</strong> - direktna prodaja proizvoda
+                  ili usluga
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Video Views Ads</strong> - promovisanje video sadržaja</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Video Views Ads</strong> - promovisanje video sadržaja
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Page Likes Ads</strong> - rast broja pratilaca stranice</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Page Likes Ads</strong> - rast broja pratilaca
+                  stranice
+                </span>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
-            <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <span className="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-full flex items-center justify-center text-sm">
+          <motion.div variants={cardVariants}>
+            <h4 className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+              <motion.span
+                className="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-full flex items-center justify-center text-sm"
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 360,
+                  transition: { duration: 0.6 },
+                }}
+              >
                 IG
-              </span>
+              </motion.span>
               Instagram Ads Kampanje
             </h4>
-            <ul className="space-y-2 text-gray-700 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Feed Ads</strong> - reklame u glavnom Instagram feed-u</span>
+            <ul className="space-y-2">
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Feed Ads</strong> - reklame u glavnom Instagram feed-u
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Stories Ads</strong> - full-screen vertikalne reklame između Stories</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Stories Ads</strong> - full-screen vertikalne reklame
+                  između Stories
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Reels Ads</strong> - reklame u Instagram Reels (viralni video format)</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Reels Ads</strong> - reklame u Instagram Reels
+                  (viralni video format)
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Explore Ads</strong> - reklame u Explore sekciji</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Explore Ads</strong> - reklame u Explore sekciji
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Shopping Ads</strong> - direktna prodaja proizvoda preko Instagram Shopping</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Shopping Ads</strong> - direktna prodaja proizvoda
+                  preko Instagram
+                </span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">•</span>
-                <span><strong>Carousel Ads</strong> - višestruke slike/video u jednoj reklami</span>
+              <li className="flex items-start md:items-center gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                </motion.div>
+                <span className="text-gray-600">
+                  <strong>Carousel Ads</strong> - višestruke slike/video u
+                  jednoj reklami
+                </span>
               </li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="mt-6 p-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl text-white">
+        <motion.div
+          className="mt-6 p-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl text-white"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 10px 30px rgba(249, 115, 22, 0.4)",
+          }}
+        >
           <p className="font-semibold mb-2">💡 Savet za uspešne kampanje:</p>
           <p className="text-sm opacity-90">
-            Najbolji rezultati se postižu kombinovanjem organskog sadržaja i plaćenog oglašavanja.
-            Redovno objavljujte kvalitetan sadržaj, gradite angažovanu publiku, a zatim koristite
-            reklame da pojačate doseg i targetirate nove potencijalne kupce.
+            Najbolji rezultati se postižu kombinovanjem organskog sadržaja i
+            plaćenog oglašavanja. Redovno objavljujte kvalitetan sadržaj,
+            gradite angažovanu publiku, a zatim koristite reklame da pojačate
+            doseg i targetirate nove potencijalne kupce.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

@@ -26,8 +26,8 @@ const PaketiSajt = () => {
         className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-lg border border-gray-200"
       >
         <div>
-          <h3 className=" text-2xl font-bold mb-5 flex gap-1 items-center text-orange-500">
-            Osnovni paket - 399 <MdEuro />
+          <h3 className=" text-2xl font-bold mb-5 text-orange-500">
+            Osnovni paket - 399€
           </h3>
           <p className="text-gray-600 mb-4">
             Idealno za manje biznise i startapove
@@ -92,8 +92,8 @@ const PaketiSajt = () => {
         </div>
 
         <div>
-          <h3 className="m text-2xl font-bold mb-5 flex gap-1 items-center text-orange-500">
-            Profesionalni Sajt - 499 <MdEuro />
+          <h3 className="m text-2xl font-bold mb-5 text-orange-500">
+            Profesionalni Sajt - 499€
           </h3>
           <p className="text-gray-600 mb-4">
             Kompletno rešenje za ozbiljan biznis

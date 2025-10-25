@@ -107,33 +107,32 @@ const DrustveneМrezeClient = () => {
           >
             <SocialMediaCTA />
           </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={fadeInUp}
+          >
+            <SocialMediaAds />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={fadeInUp}
+          >
+            <SocialMediaProcess />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={fadeInUp}
+          >
+            <SocialMediaFAQ />
+          </motion.div>
         </div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={fadeInUp}
-        >
-          <SocialMediaAds />
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-          variants={fadeInUp}
-        >
-          <SocialMediaProcess />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-          variants={fadeInUp}
-        >
-          <SocialMediaFAQ />
-        </motion.div>
       </div>
     </div>
   );

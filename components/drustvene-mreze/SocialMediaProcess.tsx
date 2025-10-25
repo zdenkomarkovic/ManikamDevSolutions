@@ -1,31 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  FaSearch,
+  FaBullseye,
+  FaPencilAlt,
+  FaRocket,
+  FaChartLine,
+  FaSyncAlt,
+} from "react-icons/fa";
 
 const steps = [
   {
+    icon: FaSearch,
     title: "Analiza i Istraživanje",
-    description: "Analiziramo vašu industriju, konkurenciju, ciljnu publiku i trenutno stanje na društvenim mrežama.",
+    description:
+      "Analiziramo vašu industriju, konkurenciju, ciljnu publiku i trenutno stanje na društvenim mrežama.",
   },
   {
+    icon: FaBullseye,
     title: "Strategija i Planiranje",
-    description: "Kreiramo personalizovanu strategiju sa ciljevima, tipovima sadržaja i planom objava.",
+    description:
+      "Kreiramo personalizovanu strategiju sa ciljevima, tipovima sadržaja i planom objava.",
   },
   {
+    icon: FaPencilAlt,
     title: "Kreiranje Sadržaja",
-    description: "Dizajniramo grafike, pišemo tekstove i kreiramo video sadržaj prema content calendar-u.",
+    description:
+      "Dizajniramo grafike, pišemo tekstove i kreiramo video sadržaj prema content calendar-u.",
   },
   {
+    icon: FaRocket,
     title: "Objava i Oglašavanje",
-    description: "Redovno objavljujemo sadržaj i pokrećemo ciljane reklamne kampanje.",
+    description:
+      "Redovno objavljujemo sadržaj i pokrećemo ciljane reklamne kampanje.",
   },
   {
+    icon: FaChartLine,
     title: "Praćenje i Analiza",
-    description: "Pratimo performanse, angažman, doseg i konverzije kroz detaljne analytics.",
+    description:
+      "Pratimo performanse, angažman, doseg i konverzije kroz detaljne analytics.",
   },
   {
+    icon: FaSyncAlt,
     title: "Optimizacija",
-    description: "Kontinuirano testiramo, učimo i optimizujemo strategiju za najbolje rezultate.",
+    description:
+      "Kontinuirano testiramo, učimo i optimizujemo strategiju za najbolje rezultate.",
   },
 ];
 
@@ -35,33 +55,49 @@ export default function SocialMediaProcess() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
   };
 
-  const itemVariants = {
+  const cardVariants = {
     hidden: {
       opacity: 0,
-      y: 30,
-      x: -20
+      y: 50,
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
       y: 0,
-      x: 0,
+      scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -180,
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        delay: 0.2,
+      },
+    },
   };
 
   return (
-    <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+    <div>
       <motion.h2
-        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        className="text-2xl md:text-3xl font-extrabold text-center mb-8 md:mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -69,8 +105,9 @@ export default function SocialMediaProcess() {
       >
         Naš Proces Upravljanja Društvenim Mrežama
       </motion.h2>
+
       <motion.div
-        className="space-y-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -79,43 +116,30 @@ export default function SocialMediaProcess() {
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            className="space-y-5"
-            variants={itemVariants}
+            className="relative bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-100"
+            variants={cardVariants}
             whileHover={{
-              x: 10,
-              transition: { duration: 0.3 }
+              scale: 1.05,
+              y: -10,
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
             }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="flex gap-6 items-center">
-              <motion.div
-                className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-300 rounded-full flex items-center justify-center text-white font-bold text-xl"
-                whileHover={{
-                  scale: 1.1,
-                  rotate: 5,
-                  transition: { duration: 0.3 }
-                }}
-              >
-                {index + 1}
-              </motion.div>
-              <motion.h3
-                className="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent"
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.2 }
-                }}
-              >
-                {step.title}
-              </motion.h3>
-            </div>
-            <motion.p
-              className="text-gray-600"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              viewport={{ once: true }}
+            <motion.div
+              className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mb-4"
+              variants={iconVariants}
+              whileHover={{
+                scale: 1.2,
+                rotate: 360,
+                transition: { duration: 0.6 },
+              }}
             >
-              {step.description}
-            </motion.p>
+              <step.icon className="text-2xl text-white" />
+            </motion.div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              {step.title}
+            </h3>
+            <p className="text-gray-600 leading-relaxed">{step.description}</p>
           </motion.div>
         ))}
       </motion.div>
