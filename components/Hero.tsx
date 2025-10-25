@@ -73,12 +73,12 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-10 left-5 md:left-16 z-20">
-          <h1 className="font-[1000] flex flex-col  relative  text-[42px] md:text-9xl pb-4">
+          <h1 className="font-[1000] flex flex-col  relative  text-5xl md:text-9xl pb-5">
             <span className="pb-3 md:pb-5 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
               Manikam{" "}
             </span>
-            <span className="block py-2 md:py-0">
+            <span className="block md:py-0">
               <span className=" bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
@@ -100,7 +100,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             </p>
             <a
               href={`tel:${section.phone}`}
-              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-orange-300 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
                 className="w-6 h-6 md:w-8 md:h-8"
@@ -142,7 +142,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         </div>
 
         {/* Mobilna verzija usluga - iznad h1 */}
-        <div className="absolute top-24 right-4 z-20 md:hidden">
+        <div className="absolute top-24 right-2 z-20 md:hidden">
           <div className="space-y-2">
             {services.map((service, index) => (
               <motion.div
@@ -157,7 +157,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   ease: "easeOut",
                 }}
                 style={{ marginLeft: `${index * 12}px` }}
-                className="text-sm bg-gradient-to-r from-orange-600  to-gray-600 text-white text-left  px-3 py-1 rounded-lg w-fit"
+                className="text-sm bg-gradient-to-r from-orange-600  to-gray-600 text-white text-left  px-3 py-0.5 rounded-lg w-fit"
               >
                 {service}
               </motion.div>
