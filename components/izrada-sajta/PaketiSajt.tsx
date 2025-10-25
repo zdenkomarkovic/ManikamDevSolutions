@@ -12,7 +12,7 @@ import {
   FaServer,
   FaGlobe,
 } from "react-icons/fa";
-import { MdDevices, MdEmail, MdLanguage, MdEuro } from "react-icons/md";
+import { MdDevices, MdEmail, MdLanguage } from "react-icons/md";
 
 const PaketiSajt = () => {
   return (

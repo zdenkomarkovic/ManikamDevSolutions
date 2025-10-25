@@ -15,7 +15,6 @@ import {
   FaServer,
   FaGlobe,
 } from "react-icons/fa";
-import { MdEuro } from "react-icons/md";
 
 const PaketeWebshop = () => {
   return (
