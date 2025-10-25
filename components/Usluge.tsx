@@ -27,7 +27,7 @@ const Usluge = ({ usluge, title }: { usluge: UslugeData[]; title: string }) => {
         whileTap={{ scale: 0.95 }}
         className={`md:w-[35%] h-[500px] rounded-xl  z-20 px-5 pt-9 sticky top-10 md:top-20 flex flex-col gap-12 `}
       >
-        <h2 className="text-[33px] md:text-6xl text-center uppercase font-extrabold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+        <h2 className="text-[33px] md:text-6xl text-center uppercase font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
           {title}
         </h2>
         <div className="relative z-20">

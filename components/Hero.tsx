@@ -72,13 +72,13 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
     <div className="relative h-[100dvh] w-full   overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
-        <div className="absolute bottom-8 md:bottom-10 left-5 md:left-16 z-20">
-          <h1 className="font-[1000] flex flex-col  relative  text-5xl md:text-9xl pb-5">
-            <span className="pb-3 md:pb-5 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
+        <div className="absolute bottom-8 md:bottom-10 left-4 md:left-16 z-20">
+          <h1 className="font-[1000] flex flex-col gap-4 mb:gap-0  relative  text-[3rem] md:text-9xl pb-5">
+            <span className="pt-2 pb-3 md:pb-0 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
               Manikam{" "}
             </span>
-            <span className="block md:py-0">
+            <span className="">
               <span className=" bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
@@ -87,11 +87,11 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
               </span>
             </span>
           </h1>
-          <p className="text-[19px] font-bold md:text-3xl xl:text-[55px] py-2 block xl:py-10  bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent">
+          <p className="text-[19px] font-bold md:text-6xl  py-2 block xl:py-10  bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent">
             {title}
           </p>
           <div className="md:hidden">
-            <p className="text-[19px] text-white italic md:text-5xl pb-4 md:pb-12">
+            <p className="text-[19px] text-white italic md:text-5xl pb-5 md:pb-12">
               {section.title} {section.title3}
               <span className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                 {section.span}{" "}

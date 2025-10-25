@@ -67,7 +67,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
       id="reference"
       className="container px-2 md:px-16 mx-auto py-10 border-t"
     >
-      <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10 font-extrabold bg-gradient-to-r from-orange-500  to-orange-300 bg-clip-text text-transparent">
+      <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10 font-extrabold bg-gradient-to-r from-orange-600  to-orange-400 bg-clip-text text-transparent">
         {title}
       </h3>
 
