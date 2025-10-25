@@ -93,7 +93,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
           <div className="md:hidden">
             <p className="text-[19px] text-white italic md:text-5xl pb-4 md:pb-12">
               {section.title} {section.title3}
-              <span className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+              <span className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                 {section.span}{" "}
               </span>
               {section.title2}
