@@ -70,8 +70,13 @@ export default function Header({ locale }: { locale: string }) {
                 height={55}
                 className=" rounded-full"
               />
-              <span className="font-bold  text-xl hidden md:inline">
-                ManikamWebSolutions
+
+              <span className="hidden md:block">
+                <span className="">Manikam </span>
+                <span className=" bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent ">
+                  Web{" "}
+                </span>
+                <span className="">Solutions</span>
               </span>
             </Link>
           </motion.div>
