@@ -11,7 +11,7 @@ import { ChevronDown } from "lucide-react";
 import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
-import logo from "../public/images/manikamlogo.png";
+import logo from "../public/images/android-chrome-192x192.png";
 import { usePathname } from "next/navigation";
 
 function isValidLocale(locale: string): locale is Locale {

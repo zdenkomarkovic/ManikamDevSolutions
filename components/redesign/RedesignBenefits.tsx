@@ -37,41 +37,109 @@ const benefits = [
 ];
 
 export default function RedesignBenefits() {
-  return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Ključne Prednosti Migracije na Next.js
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Otkrijte kako Next.js može transformisati vaš sajt u moćan digitalni alat koji donosi realne poslovne rezultate
-          </p>
-        </motion.div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const iconVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -180
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
+
+  return (
+    <div className="mt-16">
+      <motion.h2
+        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Ključne Prednosti Migracije na Next.js
+      </motion.h2>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {benefits.map((benefit, index) => {
+          const gradients = [
+            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-500",
+            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-500",
+            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-500",
+            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-500",
+            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-500",
+            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-500",
+          ];
+          return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className={`${gradients[index % 6]} rounded-xl p-6 shadow-lg text-center`}
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
             >
-              <benefit.icon className="w-12 h-12 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold mb-4 text-gray-900">{benefit.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+              <motion.div
+                className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-300 rounded-full flex items-center justify-center mx-auto mb-4"
+                variants={iconVariants}
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 360,
+                  transition: { duration: 0.6 }
+                }}
+              >
+                <benefit.icon className="text-2xl text-white" />
+              </motion.div>
+              <h4 className="text-xl font-bold mb-3 text-gray-100">
+                {benefit.title}
+              </h4>
+              <p className="text-gray-100 leading-relaxed">{benefit.description}</p>
             </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+          );
+        })}
+      </motion.div>
+    </div>
   );
 }

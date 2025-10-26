@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -56,86 +55,83 @@ const faqs = [
 ];
 
 export default function RedesignFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      x: -20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Često Postavljana Pitanja
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Odgovori na najčešća pitanja o procesu migracije i redizajna
-          </p>
-        </motion.div>
-
-        <div className="max-w-4xl mx-auto">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="mb-4"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full bg-gradient-to-r from-orange-50 to-white p-6 rounded-lg border border-orange-100 hover:border-orange-300 transition-all duration-300 text-left"
-              >
-                <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
-                  <motion.div
-                    animate={{ rotate: openIndex === index ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <ChevronDown className="w-6 h-6 text-orange-600 flex-shrink-0" />
-                  </motion.div>
-                </div>
-
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: openIndex === index ? "auto" : 0,
-                    opacity: openIndex === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <p className="text-gray-700 mt-4 leading-relaxed">{faq.answer}</p>
-                </motion.div>
-              </button>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-12 text-center"
-        >
-          <p className="text-lg text-gray-600 mb-4">
-            Imate dodatna pitanja? Javite nam se!
-          </p>
-          <Link
-            href="#kontakt"
-            className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300"
+    <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <motion.h2
+        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Često Postavljana Pitanja
+      </motion.h2>
+      <motion.div
+        className="space-y-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {faqs.map((faq, index) => (
+          <motion.div
+            key={index}
+            className={`${index !== faqs.length - 1 ? "border-b border-gray-200 pb-6" : "pb-6"} border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6`}
+            variants={itemVariants}
+            whileHover={{
+              x: 10,
+              transition: { duration: 0.3 }
+            }}
           >
-            Kontaktirajte Nas
-          </Link>
-        </motion.div>
-      </div>
-    </section>
+            <motion.h3
+              className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+            >
+              {faq.question}
+            </motion.h3>
+            <motion.p
+              className="text-gray-600"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {faq.answer}
+            </motion.p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
   );
 }
-
-import Link from "next/link";

@@ -1,4 +1,5 @@
 "use client";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import {
@@ -233,16 +234,16 @@ export default function SocialMediaAds() {
           viewport={{ once: true }}
         >
           <motion.div variants={cardVariants}>
-            <h4 className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+            <h4 className="font-bold  text-xl bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent mb-4 flex items-center gap-2">
               <motion.span
-                className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm"
+                className="w-10 h-10 rounded-full flex items-center justify-center"
                 whileHover={{
                   scale: 1.2,
                   rotate: 360,
                   transition: { duration: 0.6 },
                 }}
               >
-                FB
+                <FaFacebook className="text-8xl text-blue-600" />
               </motion.span>
               Facebook Ads Kampanje
             </h4>
@@ -340,16 +341,16 @@ export default function SocialMediaAds() {
           </motion.div>
 
           <motion.div variants={cardVariants}>
-            <h4 className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+            <h4 className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent mb-4 flex items-center gap-2">
               <motion.span
-                className="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-full flex items-center justify-center text-sm"
+                className="w-10 h-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white rounded-full flex items-center justify-center"
                 whileHover={{
                   scale: 1.2,
                   rotate: 360,
                   transition: { duration: 0.6 },
                 }}
               >
-                IG
+                <FaInstagram className="text-3xl text-white" />
               </motion.span>
               Instagram Ads Kampanje
             </h4>

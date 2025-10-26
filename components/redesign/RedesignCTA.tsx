@@ -5,24 +5,59 @@ import { ArrowRight, CheckCircle, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function RedesignCTA() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section id="kontakt" className="py-20 bg-gradient-to-br from-orange-600 via-red-600 to-orange-700">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+    <div className="text-gray-50 bg-gradient-to-br from-gray-700 via-gray-500 to-gray-200 rounded-2xl py-3 md:p-6">
+      <div className="max-w-5xl mx-auto">
+          <motion.h2
+            className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-5 bg-gradient-to-l from-orange-500 to-orange-300 bg-clip-text text-transparent text-center"
+            initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Spremni Za Transformaciju Vašeg Sajta?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Zakažite besplatnu konsultaciju i saznajte kako možemo modernizovati vaš sajt
-            </p>
-          </motion.div>
+            Spremni Za Transformaciju Vašeg Sajta?
+          </motion.h2>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -147,6 +182,5 @@ export default function RedesignCTA() {
           </motion.div>
         </div>
       </div>
-    </section>
   );
 }

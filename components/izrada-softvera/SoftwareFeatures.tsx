@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { FaShieldAlt, FaTachometerAlt, FaExpandArrowsAlt, FaMobileAlt, FaPlug, FaUsers } from "react-icons/fa";
 
 const features = [
@@ -36,26 +37,99 @@ const features = [
 ];
 
 export default function SoftwareFeatures() {
-  return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-800">
-        Karakteristike Našeg Softvera
-      </h2>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+    }
+  };
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const iconVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -180
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
+
+  return (
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <motion.h2
+        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Karakteristike Našeg Softvera
+      </motion.h2>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {features.map((feature, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white rounded-xl p-6 shadow-lg text-center border border-gray-100"
+            className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
+            variants={cardVariants}
+            whileHover={{
+              scale: 1.05,
+              y: -10,
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)"
+            }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <motion.div
+              className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+              variants={iconVariants}
+              whileHover={{
+                scale: 1.2,
+                rotate: 360,
+                transition: { duration: 0.6 }
+              }}
+            >
               <feature.icon className="text-2xl text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+            </motion.div>
+            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+              {feature.title}
+            </h3>
             <p className="text-gray-600">{feature.description}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
