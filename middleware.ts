@@ -115,59 +115,66 @@ export function middleware(request: VercelRequest) {
   // Geo detekcija pre nego što proverimo pathLocale
   const country = request.geo?.country || "";
   const serbianSpeakingCountries = ["RS", "BA", "ME", "MK"];
+  const existingCookie = request.cookies.get("NEXT_LOCALE")?.value;
 
   // DEBUG: Logovanje geo podataka
   console.log("🌍 GEO DEBUG:", {
     country,
     fullGeo: request.geo,
     pathname,
-    existingCookie: request.cookies.get("NEXT_LOCALE")?.value,
+    existingCookie,
+    acceptLanguage: request.headers.get('accept-language'),
   });
+
+  // Određivanje ispravnog jezika na osnovu geo/browser
+  const getCorrectLocale = (): string => {
+    if (isBot) return "en";
+
+    if (country && serbianSpeakingCountries.includes(country)) {
+      console.log("✅ Detektovan srpski govorni region:", country);
+      return "sr";
+    }
+
+    if (!country) {
+      const locale = getLocale(request, i18n);
+      console.log("⚠️ Geo nije dostupan, koristim Accept-Language:", locale);
+      return locale;
+    }
+
+    console.log("🌐 Detektovan region van Balkana:", country);
+    return "en";
+  };
+
+  const correctLocale = getCorrectLocale();
 
   if (pathLocale) {
     // Jezik već postoji u putanji
     // ALI ako je korisnik iz Srbije i pokušava da pristupa /en, redirektuj na /sr
-    if (country && serbianSpeakingCountries.includes(country) && pathLocale === "en" && !isBot) {
-      console.log("🔄 Geo override: Redirekcija sa /en na /sr za region:", country);
+    if (correctLocale === "sr" && pathLocale === "en" && !isBot) {
+      console.log("🔄 Geo override: Redirekcija sa /en na /sr");
       const newPath = pathname.replace(/^\/en/, "/sr");
       response = NextResponse.redirect(new URL(newPath, request.url));
       nextLocale = "sr";
-    } else {
+    }
+    // Ako cookie ne odgovara path locale, update cookie
+    else if (existingCookie && existingCookie !== pathLocale) {
+      console.log(`🍪 Update cookie: ${existingCookie} → ${pathLocale}`);
+      nextLocale = pathLocale;
+      response = NextResponse.next();
+    }
+    else {
       nextLocale = pathLocale;
       response = NextResponse.next();
     }
   } else {
-    // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
-    let locale: string;
-
-    // Botovi uvek dobijaju englesku verziju (konzistentno)
-    if (isBot) {
-      locale = "en";
-    } else {
-      // Ako je Srbija, Bosna, Crna Gora ili Makedonija - koristi srpski
-      if (country && serbianSpeakingCountries.includes(country)) {
-        locale = "sr";
-        console.log("✅ Detektovan srpski govorni region:", country);
-      }
-      // Ako geolokacija ne radi, koristi Accept-Language header iz browsera
-      else if (!country) {
-        locale = getLocale(request, i18n);
-        console.log("⚠️ Geo nije dostupan, koristim Accept-Language:", locale);
-      }
-      // Sve ostalo (uključujući USA, EU, itd.) - engleski
-      else {
-        locale = "en";
-        console.log("🌐 Detektovan region van Balkana:", country);
-      }
-    }
-
-    let newPath = `/${locale}${pathname}`;
+    // Nema jezika u URL-u, automatski redirektuj
+    let newPath = `/${correctLocale}${pathname}`;
     if (request.nextUrl.search) newPath += request.nextUrl.search;
 
     const url = basePath + newPath;
 
     response = NextResponse.redirect(new URL(url, request.url));
-    nextLocale = locale;
+    nextLocale = correctLocale;
   }
 
   if (nextLocale) {
@@ -179,5 +186,5 @@ export function middleware(request: VercelRequest) {
 
 export const config = {
   matcher:
-    "/((?!api|_next/static|_next/image|images/|favicon.ico|.*\\.svg$).*)",
+    "/((?!api|_next/static|_next/image|images/|favicon.ico|.*\\.svg$|.*\\.webmanifest$|.*\\.png$|.*\\.jpg$|.*\\.jpeg$|.*\\.ico$|.*\\.xml$|.*\\.txt$).*)",
 };
