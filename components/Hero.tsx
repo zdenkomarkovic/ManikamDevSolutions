@@ -133,7 +133,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                   ease: "easeOut",
                 }}
                 style={{ marginLeft: `${index * 20}px` }}
-                className="relative z-20  bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left font-bold px-4 py-1 rounded-lg w-fit"
+                className="relative z-20  bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left font-bold px-3 py-1 rounded-lg w-fit"
               >
                 {service}
               </motion.div>
