@@ -9,16 +9,16 @@ const FAQSajt = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: {
       opacity: 0,
       y: 30,
-      x: -20
+      x: -20,
     },
     visible: {
       opacity: 1,
@@ -26,22 +26,24 @@ const FAQSajt = () => {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Često postavljana pitanja o izradi sajtova
-      </motion.h2>
+      <div className="flex justify-center mb-12">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Često postavljana pitanja o izradi sajtova
+        </motion.h2>
+      </div>
       <motion.div
         className="space-y-6"
         variants={containerVariants}
@@ -50,186 +52,184 @@ const FAQSajt = () => {
         viewport={{ once: true }}
       >
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b  pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Koliko traje proces izrade sajta?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Vreme izrade zavisi od izabranog paketa i složenosti projekta.
-            Osnovni sajt izrađujemo za 7-10 dana, profesionalni i premium
-            paketi obično traju 10-14 dana. Za složenije projekte sa custom
-            funkcionalnostima, rok može biti duži. Tokom inicijalne
-            konsultacije dajemo vam precizan vremenski okvir za vaš projekat.
+            Osnovni sajt izrađujemo za 7-10 dana, profesionalni i premium paketi
+            obično traju 10-14 dana. Za složenije projekte sa custom
+            funkcionalnostima, rok može biti duži. Tokom inicijalne konsultacije
+            dajemo vam precizan vremenski okvir za vaš projekat.
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Da li moram da imam tehničko znanje da upravljam sajtom?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Ne, nije potrebno tehničko znanje. Ako izaberete paket sa CMS
-            sistemom (Profesionalni ili Premium), dobićete intuitivan sistem
-            za upravljanje sadržajem i detaljnu obuku. Moći ćete da menjate
-            tekstove, slike i osnovne elemente bez potrebe za programiranjem.
-            Za složenije izmene, naš tim je uvek dostupan za pomoć.
+            sistemom (Profesionalni ili Premium), dobićete intuitivan sistem za
+            upravljanje sadržajem i detaljnu obuku. Moći ćete da menjate
+            tekstove, slike i osnovne elemente bez potrebe za programiranjem. Za
+            složenije izmene, naš tim je uvek dostupan za pomoć.
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Šta je uključeno u hosting i koliko košta nakon prve godine?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Prva godina hostinga je uključena u cenu svih naših paketa.
-            Hosting uključuje SSD prostor, SSL sertifikat, redovne backup-e i
-            tehničku podršku.
+            Prva godina hostinga je uključena u cenu svih naših paketa. Hosting
+            uključuje SSD prostor, SSL sertifikat, redovne backup-e i tehničku
+            podršku.
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Zašto je Next.js bolji izbor od WordPress-a?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Next.js nudi superiorne performanse sa brzinom učitavanja do 10
-            puta većom od WordPress-a. Sigurnost je znatno bolja jer nema
-            plugin-ova koji su čest cilj hakera. SEO optimizacija je ugrađena
-            na nivou koda što garantuje bolje rangiranje. Takođe, ne plaćate
-            skupe premium plugin-ove koji su često neophodni za WordPress.
-            Naši Next.js sajtovi se lakše održavaju i skaliraju sa rastom
-            vašeg poslovanja.
+            Next.js nudi superiorne performanse sa brzinom učitavanja do 10 puta
+            većom od WordPress-a. Sigurnost je znatno bolja jer nema plugin-ova
+            koji su čest cilj hakera. SEO optimizacija je ugrađena na nivou koda
+            što garantuje bolje rangiranje. Takođe, ne plaćate skupe premium
+            plugin-ove koji su često neophodni za WordPress. Naši Next.js
+            sajtovi se lakše održavaju i skaliraju sa rastom vašeg poslovanja.
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b  pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Da li mogu da migriram postojeći WordPress sajt na Next.js?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Apsolutno! Nudimo specijalizovanu uslugu modernizacije i migracije
-            WordPress sajtova na Next.js platformu. Migriramo celokupan
-            sadržaj, optimizujemo slike, poboljšavamo SEO, i dodatno ubrzavamo
-            performanse. Većina klijenata primeti poboljšanje Google
-            rangiranja za 50-80% nakon migracije, uz dramatično povećanje
-            brzine sajta.
+            WordPress sajtova na Next.js platformu. Migriramo celokupan sadržaj,
+            optimizujemo slike, poboljšavamo SEO, i dodatno ubrzavamo
+            performanse. Većina klijenata primeti poboljšanje Google rangiranja
+            za 50-80% nakon migracije, uz dramatično povećanje brzine sajta.
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Šta ako mi treba dodatna funkcionalnost koja nije navedena u
             paketima?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -245,24 +245,24 @@ const FAQSajt = () => {
         </motion.div>
 
         <motion.div
-          className="border-b border-gray-200 pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Da li je sajt prilagođen za mobilne telefone?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -278,24 +278,24 @@ const FAQSajt = () => {
         </motion.div>
 
         <motion.div
-          className="pb-6 border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6"
+          className="pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3 },
           }}
         >
           <motion.h3
-            className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
             whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             Kako SEO optimizacija pomaže mom biznisu?
           </motion.h3>
           <motion.p
-            className="text-gray-600"
+            className=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -307,8 +307,8 @@ const FAQSajt = () => {
             proizvode ili usluge. To znači više potencijalnih klijenata bez
             troškova plaćenog oglašavanja. Naši sajtovi imaju ugrađenu SEO
             optimizaciju koja uključuje meta tagove, strukturirane podatke,
-            optimizaciju brzine, mobilnu prilagodljivost i Core Web Vitals -
-            sve faktore koje Google koristi za rangiranje.
+            optimizaciju brzine, mobilnu prilagodljivost i Core Web Vitals - sve
+            faktore koje Google koristi za rangiranje.
           </motion.p>
         </motion.div>
       </motion.div>

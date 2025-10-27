@@ -1,83 +1,239 @@
-import React from "react";
-import { FaRocket, FaSearch, FaMobile, FaShieldAlt } from "react-icons/fa";
+"use client";
+
+import { motion } from "framer-motion";
 
 const CTASajt = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
       <div className="text-gray-50 bg-gradient-to-br from-gray-700 via-gray-500 to-gray-200 rounded-2xl py-3 md:p-6  text-center">
-        <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-5 bg-gradient-to-l from-orange-500 to-orange-300 bg-clip-text text-transparent">
-          Spremni za digitalni uspeh?
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="md:space-y-8 md:px-20">
+        <div className="flex justify-center mb-3 md:mb-5">
+          <motion.h2
+            className="text-2xl md:text-4xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Spremni za digitalni uspeh?
+          </motion.h2>
+        </div>
+        <motion.div
+          className="grid md:grid-cols-2 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div className="md:space-y-8 md:px-20" variants={itemVariants}>
             <div>
               <h3 className="text-xl font-bold mb-4">
                 Rezultati koje možete očekivati
               </h3>
-              <ul className="space-y-1 md:space-y-3 mx-auto w-fit">
-                <li className="flex items-center">
-                  <FaSearch className="mr-3 text-orange-500" />
-                  Poboljšanje Google rangiranja za 50-80%
-                </li>
-                <li className="flex items-center">
-                  <FaRocket className="mr-3 text-orange-500" />
-                  Povećanje brzine sajta za 300-500%
-                </li>
-                <li className="flex items-center">
-                  <FaMobile className="mr-3 text-orange-500" />
-                  Bolje korisničko iskustvo na svim uređajima
-                </li>
-                <li className="flex items-center">
-                  <FaShieldAlt className="mr-3 text-orange-500" />
-                  Maksimalna sigurnost i stabilnost
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <p className="mb-4 text-2xl md:text-3xl opacity-90 font-bold px-2">
-              Kontaktirajte nas za besplatnu konsultaciju
-            </p>
-
-            <div className="flex flex-col  gap-4  justify-center items-center">
-              {/* Phone Call Button */}
-              <a
-                href={`tel:+381641967267`}
-                className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-orange-300 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              <motion.ul
+                className="space-y-1 md:space-y-3 mx-auto w-fit"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                <svg
+                <motion.li
+                  className="flex items-center"
+                  variants={itemVariants}
+                >
+                  <motion.svg
+                    className="w-5 h-5 mr-3 text-orange-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <path d="M9 9a2 2 0 114 0 2 2 0 01-4 0zm-4.5 0a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM11 17a8 8 0 100-16 8 8 0 000 16z" />
+                  </motion.svg>
+                  Poboljšanje Google rangiranja za 50-80%
+                </motion.li>
+                <motion.li
+                  className="flex items-center"
+                  variants={itemVariants}
+                >
+                  <motion.svg
+                    className="w-5 h-5 mr-3 text-orange-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                  </motion.svg>
+                  Povećanje brzine sajta za 300-500%
+                </motion.li>
+                <motion.li
+                  className="flex items-center"
+                  variants={itemVariants}
+                >
+                  <motion.svg
+                    className="w-5 h-5 mr-3 text-orange-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <path d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" />
+                  </motion.svg>
+                  Bolje korisničko iskustvo na svim uređajima
+                </motion.li>
+                <motion.li
+                  className="flex items-center"
+                  variants={itemVariants}
+                >
+                  <motion.svg
+                    className="w-5 h-5 mr-3 text-orange-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </motion.svg>
+                  Maksimalna sigurnost i stabilnost
+                </motion.li>
+              </motion.ul>
+            </div>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <motion.p
+              className="mb-4 text-2xl md:text-3xl opacity-90 font-bold px-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Kontaktirajte nas za besplatnu konsultaciju
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col  gap-4  justify-center items-center"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {/* Phone Call Button */}
+              <motion.a
+                href={`tel:+381641967267`}
+                className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                variants={buttonVariants}
+                whileHover={{
+                  scale: 1.05,
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(249, 115, 22, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <motion.svg
                   className="w-6 h-6 md:w-8 md:h-8"
                   fill="currentColor"
                   viewBox="0 0 20 20"
+                  whileHover={{
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
+                </motion.svg>
                 <span className="block text-lg md:text-2xl font-normal opacity-90">
                   +381641967267
                 </span>
-              </a>
+              </motion.a>
 
               {/* Email Button */}
-              <a
+              <motion.a
                 href="mailto:manikamwebsolutions@gmailcom"
-                className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-500 to-orange-300 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                variants={buttonVariants}
+                whileHover={{
+                  scale: 1.05,
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(249, 115, 22, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
               >
-                <svg
+                <motion.svg
                   className="w-6 h-6 md:w-8 md:h-8"
                   fill="currentColor"
                   viewBox="0 0 20 20"
+                  whileHover={{
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
                 >
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
+                </motion.svg>
 
                 <span className="block text-lg md:text-2xl font-normal opacity-90">
                   manikamwebsolutions@gmail.com
                 </span>
-              </a>
-            </div>
-          </div>
-        </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </>
   );

@@ -4,21 +4,23 @@ import { FaSearch, FaCog } from "react-icons/fa";
 const DodatneUslugeSajt = () => {
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-700 via-gray-500 to-gray-200 rounded-2xl p-3 py-5 md:p-8 shadow-lg border border-gray-200">
-      <h2 className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
-        Dodatne usluge koje nudimo
-      </h2>
+      <div className="flex justify-center mb-8">
+        <h2 className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          Dodatne usluge koje nudimo
+        </h2>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 p-3 md:p-6 rounded-xl shadow-md">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
-            <FaSearch className="text-orange-500" />
+          <h3 className="text-xl font-bold mb-3 inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+            <FaSearch className="text-orange-600" />
             SEO Optimizacija i Marketing
           </h3>
-          <p className="text-gray-600 mb-3">
+          <p className="mb-3">
             Kompleksna SEO optimizacija koja uključuje istraživanje ključnih
             reči, on-page i off-page optimizaciju, link building, i mesečne
             izveštaje o napretku rangiranja.
           </p>
-          <ul className=" text-gray-600 space-y-1 ml-4">
+          <ul className="  space-y-1 ml-4">
             <li>• Keyword research i strategija sadržaja</li>
             <li>• Google My Business optimizacija</li>
             <li>• Local SEO za lokalne biznise</li>
@@ -45,16 +47,16 @@ const DodatneUslugeSajt = () => {
         </div> */}
 
         <div className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 p-3 md:p-6 rounded-xl shadow-md">
-          <h3 className="text-xl bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent font-bold mb-3 flex items-center gap-2">
-            <FaCog className="text-orange-500" />
+          <h3 className="text-xl bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent font-bold mb-3 inline-flex items-center gap-2">
+            <FaCog className="text-orange-600" />
             Održavanje i Podrška
           </h3>
-          <p className="text-gray-600 mb-3">
+          <p className=" mb-3">
             Redovno održavanje sajta, sigurnosni update-i, backup-ovi,
             monitoring performansi i tehnička podrška koja vam je dostupna kada
             vam zatreba.
           </p>
-          <ul className=" text-gray-600 space-y-1 ml-4">
+          <ul className="space-y-1 ml-4">
             <li>• Redovni sigurnosni update-i</li>
             <li>• Dnevni automatski backup-i</li>
             <li>• 24/7 monitoring performansi</li>

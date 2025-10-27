@@ -39,18 +39,33 @@ const scaleUp = {
   },
 };
 
+// Hero animacija kao u SEOPageClient
+const heroVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
 const IzradaSajtaClient = () => {
   return (
     <div className=" bg-gray-900/90 ">
       {/* Hero sekcija */}
-      <motion.div
-        className="pt-24 pb-6 md:pb-16 px-4"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <HeroSajt />
-      </motion.div>
+      <section className="pt-24 pb-6 md:pb-16 px-4">
+        <motion.div variants={heroVariants} initial="hidden" animate="visible">
+          <HeroSajt />
+        </motion.div>
+      </section>
 
       {/* Glavna sekcija sa sadržajem */}
       <div className="container mx-auto px-3 md:px-16 pb-16">

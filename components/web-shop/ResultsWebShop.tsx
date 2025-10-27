@@ -5,9 +5,11 @@ const ResultsWebShop = () => {
     <div className="space-y-8">
       {" "}
       <div className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 text-center md:text-left rounded-2xl p-3 md:p-8 shadow-lg border border-gray-100">
-        <h3 className="text-xl md:text-3xl font-extrabold mb-6 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
-          Šta čini naše web shopove posebnim?
-        </h3>
+        <div className="flex justify-center mb-6">
+          <h3 className="text-xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+            Šta čini naše web shopove posebnim?
+          </h3>
+        </div>
         <div className="space-y-4">
           <p>
             <strong>Mobilna optimizacija:</strong> Preko 60% kupovina se vrši sa

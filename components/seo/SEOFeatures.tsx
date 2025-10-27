@@ -68,16 +68,16 @@ export default function SEOFeatures() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 50,
-      scale: 0.9
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
@@ -85,15 +85,15 @@ export default function SEOFeatures() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const iconVariants = {
-    hidden: { 
+    hidden: {
       scale: 0,
-      rotate: -180
+      rotate: -180,
     },
     visible: {
       scale: 1,
@@ -101,24 +101,26 @@ export default function SEOFeatures() {
       transition: {
         duration: 0.8,
         ease: "easeOut",
-        delay: 0.2
-      }
-    }
+        delay: 0.2,
+      },
+    },
   };
 
   return (
     <div className="mt-16">
-      <motion.h2 
-        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-gray-300 bg-clip-text text-transparent"
+      <motion.div
+        className="mb-12 flex justify-center"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Naše SEO Usluge
-      </motion.h2>
+        <h2 className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          Naše SEO Usluge
+        </h2>
+      </motion.div>
 
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         variants={containerVariants}
         initial="hidden"
@@ -128,10 +130,10 @@ export default function SEOFeatures() {
         {features.map((feature, index) => {
           // Alternativni gradienti za raznolikost
           const gradients = [
-            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-500",
-            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-500",
-            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-500",
-            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-500",
+            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
+            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-600",
+            "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
+            "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-600",
           ];
           return (
             <motion.div
@@ -140,20 +142,20 @@ export default function SEOFeatures() {
                 gradients[index % 4]
               } rounded-xl p-6 shadow-lg text-center`}
               variants={cardVariants}
-              whileHover={{ 
-                scale: 1.05, 
+              whileHover={{
+                scale: 1.05,
                 y: -10,
-                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)"
+                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
               }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div 
-                className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-300 rounded-full flex items-center justify-center mx-auto mb-4"
+              <motion.div
+                className="w-16 h-16 bg-gradient-to-r from-orange-600 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4"
                 variants={iconVariants}
-                whileHover={{ 
-                  scale: 1.2, 
+                whileHover={{
+                  scale: 1.2,
                   rotate: 360,
-                  transition: { duration: 0.6 }
+                  transition: { duration: 0.6 },
                 }}
               >
                 <feature.icon className="text-2xl text-white" />

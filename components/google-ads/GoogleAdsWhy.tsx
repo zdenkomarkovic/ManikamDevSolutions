@@ -48,7 +48,7 @@ const GoogleAdsWhy = () => {
   };
 
   return (
-    <div className="mt-16 bg-gradient-to-br from-orange-500 via-orange-400 to-red-500 rounded-2xl p-6 md:p-12 shadow-2xl border border-orange-300 relative overflow-hidden">
+    <div className="mt-16 bg-gradient-to-br from-orange-500 via-orange-700 to-orange-500 rounded-2xl p-6 md:p-12 shadow-2xl border border-orange-300 relative overflow-hidden">
       {/* Decorative elements */}
       <motion.div
         className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-y-16 translate-x-16"
@@ -113,7 +113,7 @@ const GoogleAdsWhy = () => {
                 <h3 className="text-xl font-bold text-white mb-2">
                   Odmah Vidljivost
                 </h3>
-                <p className="text-white text-opacity-90">
+                <p className="text-white ">
                   Dok SEO donosi rezultate kroz duži period, Google oglašavanje
                   vam omogućava da budete vidljivi odmah, od prvog dana
                   kampanje.
@@ -140,7 +140,7 @@ const GoogleAdsWhy = () => {
                 <h3 className="text-xl font-bold text-white mb-2">
                   Precizno Targetiranje
                 </h3>
-                <p className="text-white text-opacity-90">
+                <p className="text-white">
                   Ciljajte po lokaciji, vremenu dana, uređaju, demografskim
                   karakteristikama i interesovanjima. Svaki klik je merljiv i
                   transparentan.
@@ -167,7 +167,7 @@ const GoogleAdsWhy = () => {
                 <h3 className="text-xl font-bold text-white mb-2">
                   Detaljno Praćenje
                 </h3>
-                <p className="text-white text-opacity-90">
+                <p className="text-white">
                   Najdetaljnije mogućnosti praćenja rezultata od svih oglasnih
                   platformi. Svaki trošak, svaka konverzija - sve je
                   transparentno.
@@ -203,7 +203,7 @@ const GoogleAdsWhy = () => {
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ključni Moment
               </h3>
-              <p className="text-white text-opacity-90 text-lg leading-relaxed">
+              <p className="text-white text-lg leading-relaxed">
                 Kada neko pretražuje Google za proizvod ili uslugu koju nudite,
                 vi možete biti prva kompanija koju vide. To je trenutak kada je
                 potencijalni klijent najspremniji za kupovinu - aktivno traži

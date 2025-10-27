@@ -31,12 +31,12 @@ export default function Footer({
 
   return (
     <motion.footer
-      className="bg-gradient-to-b from-gray-300 via-gray-400 to-gray-900 py-8  shadow-[0px_-2px_5px_rgba(0,0,0,0.1)]"
+      className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 py-8  shadow-[0px_-2px_5px_#c9822414]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
     >
-      <div className="container mx-auto px-4 sm:px-6 md:px-16 text-">
+      <div className="container mx-auto px-4 sm:px-6 md:px-16 text-white">
         <div className="text-center md:text-left md:grid md:grid-cols-3 gap-8 mx-auto">
           <div>
             {navList.map((item, i) => {
@@ -73,7 +73,7 @@ export default function Footer({
               {" "}
               <a href="tel:+12408103730">
                 <p className="text-muted-foreground  flex gap-2 items-center hover:text-orange-500">
-                  Office: Washington, D.C., USA <FaPhone className="" />{" "}
+                  Office: Washington D.C. USA <FaPhone className="" />{" "}
                   +12408103730
                 </p>
               </a>
@@ -104,13 +104,13 @@ export default function Footer({
           <div className="md:col-span-1 col-span-2 text-center">
             <h3 className="text-lg font-semibold mb-2 md:mb-4 ">
               Manikam{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                 Web
               </span>{" "}
               Solutions
             </h3>
 
-            <p className="font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            <p className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
               {message}
             </p>
           </div>

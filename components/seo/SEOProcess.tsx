@@ -55,16 +55,16 @@ export default function SEOProcess() {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 50,
-      scale: 0.9
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
@@ -72,15 +72,15 @@ export default function SEOProcess() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const iconVariants = {
-    hidden: { 
+    hidden: {
       scale: 0,
-      rotate: -180
+      rotate: -180,
     },
     visible: {
       scale: 1,
@@ -88,24 +88,26 @@ export default function SEOProcess() {
       transition: {
         duration: 0.8,
         ease: "easeOut",
-        delay: 0.2
-      }
-    }
+        delay: 0.2,
+      },
+    },
   };
 
   return (
     <div>
-      <motion.h2 
-        className="text-2xl md:text-3xl font-extrabold text-center mb-8 md:mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Naš SEO Proces
-      </motion.h2>
+      <div className="flex justify-center mb-8 md:mb-12">
+        <motion.h2
+          className="text-2xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Naš SEO Proces
+        </motion.h2>
+      </div>
 
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         variants={containerVariants}
         initial="hidden"
@@ -117,20 +119,20 @@ export default function SEOProcess() {
             key={index}
             className="relative bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-100"
             variants={cardVariants}
-            whileHover={{ 
-              scale: 1.05, 
+            whileHover={{
+              scale: 1.05,
               y: -10,
-              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)"
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
             }}
             transition={{ duration: 0.3 }}
           >
-            <motion.div 
-              className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mb-4"
+            <motion.div
+              className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mb-4"
               variants={iconVariants}
-              whileHover={{ 
-                scale: 1.2, 
+              whileHover={{
+                scale: 1.2,
                 rotate: 360,
-                transition: { duration: 0.6 }
+                transition: { duration: 0.6 },
               }}
             >
               <step.icon className="text-2xl text-white" />
@@ -138,24 +140,24 @@ export default function SEOProcess() {
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               {step.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed">{step.description}</p>
+            <p className=" leading-relaxed">{step.description}</p>
           </motion.div>
         ))}
       </motion.div>
-      <motion.div 
+      <motion.div
         className="mt-8 md:mt-12 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl md:rounded-3xl p-6 md:p-8 text-center shadow-lg border border-gray-100"
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
         viewport={{ once: true }}
-        whileHover={{ 
-          scale: 1.02, 
+        whileHover={{
+          scale: 1.02,
           y: -5,
-          boxShadow: "0 25px 50px rgba(249, 115, 22, 0.15)"
+          boxShadow: "0 25px 50px rgba(249, 115, 22, 0.15)",
         }}
       >
-        <motion.p 
-          className="text-lg md:text-2xl font-semibold mb-2 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        <motion.p
+          className="text-lg md:text-2xl font-semibold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -163,7 +165,7 @@ export default function SEOProcess() {
         >
           Prosečno vreme do prvih vidljivih rezultata
         </motion.p>
-        <motion.p 
+        <motion.p
           className="text-4xl md:text-5xl font-bold mb-2 text-gray-900"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -172,8 +174,8 @@ export default function SEOProcess() {
         >
           3-6 meseci
         </motion.p>
-        <motion.p 
-          className="text-base md:text-lg text-gray-700"
+        <motion.p
+          className="text-base md:text-lg "
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1 }}
