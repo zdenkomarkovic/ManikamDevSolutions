@@ -112,10 +112,30 @@ export function middleware(request: VercelRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
+  // Geo detekcija pre nego što proverimo pathLocale
+  const country = request.geo?.country || "";
+  const serbianSpeakingCountries = ["RS", "BA", "ME", "MK"];
+
+  // DEBUG: Logovanje geo podataka
+  console.log("🌍 GEO DEBUG:", {
+    country,
+    fullGeo: request.geo,
+    pathname,
+    existingCookie: request.cookies.get("NEXT_LOCALE")?.value,
+  });
+
   if (pathLocale) {
-    // Jezik već postoji u putanji, samo nastavi
-    nextLocale = pathLocale;
-    response = NextResponse.next();
+    // Jezik već postoji u putanji
+    // ALI ako je korisnik iz Srbije i pokušava da pristupa /en, redirektuj na /sr
+    if (country && serbianSpeakingCountries.includes(country) && pathLocale === "en" && !isBot) {
+      console.log("🔄 Geo override: Redirekcija sa /en na /sr za region:", country);
+      const newPath = pathname.replace(/^\/en/, "/sr");
+      response = NextResponse.redirect(new URL(newPath, request.url));
+      nextLocale = "sr";
+    } else {
+      nextLocale = pathLocale;
+      response = NextResponse.next();
+    }
   } else {
     // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
     let locale: string;
@@ -124,22 +144,20 @@ export function middleware(request: VercelRequest) {
     if (isBot) {
       locale = "en";
     } else {
-      const country = request.geo?.country || "";
-
       // Ako je Srbija, Bosna, Crna Gora ili Makedonija - koristi srpski
-      const serbianSpeakingCountries = ["RS", "BA", "ME", "MK"];
-
       if (country && serbianSpeakingCountries.includes(country)) {
         locale = "sr";
+        console.log("✅ Detektovan srpski govorni region:", country);
       }
       // Ako geolokacija ne radi, koristi Accept-Language header iz browsera
       else if (!country) {
-        // Koristi postojeću getLocale funkciju koja čita Accept-Language header
         locale = getLocale(request, i18n);
+        console.log("⚠️ Geo nije dostupan, koristim Accept-Language:", locale);
       }
       // Sve ostalo (uključujući USA, EU, itd.) - engleski
       else {
         locale = "en";
+        console.log("🌐 Detektovan region van Balkana:", country);
       }
     }
 

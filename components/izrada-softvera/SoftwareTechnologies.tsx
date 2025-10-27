@@ -8,13 +8,15 @@ const technologies = [
   {
     icon: FaReact,
     name: "React.js",
-    description: "Moderna JavaScript biblioteka za kreiranje interaktivnih korisničkih interfejsa",
+    description:
+      "Moderna JavaScript biblioteka za kreiranje interaktivnih korisničkih interfejsa",
     category: "Frontend",
   },
   {
     icon: SiNextdotjs,
     name: "Next.js",
-    description: "Full-stack React framework sa serverskim renderingom i optimizacijom",
+    description:
+      "Full-stack React framework sa serverskim renderingom i optimizacijom",
     category: "Frontend",
   },
   {
@@ -108,7 +110,7 @@ export default function SoftwareTechnologies() {
         {technologies.map((tech, index) => (
           <motion.div
             key={index}
-            className="bg-gradient-to-br from-gray-100 via-white to-gray-100 rounded-2xl p-6 shadow-lg border border-gray-200 relative overflow-hidden"
+            className="bg-transparent rounded-2xl p-4 shadow-lg relative overflow-hidden"
             variants={cardVariants}
             whileHover={{
               scale: 1.05,
@@ -117,13 +119,6 @@ export default function SoftwareTechnologies() {
             }}
             transition={{ duration: 0.3 }}
           >
-            {/* Category Badge */}
-            <div className="absolute top-3 right-3">
-              <span className="text-xs font-semibold px-2 py-1 bg-orange-100 text-orange-600 rounded-full">
-                {tech.category}
-              </span>
-            </div>
-
             {/* Icon */}
             <motion.div
               className="w-16 h-16 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
@@ -138,14 +133,9 @@ export default function SoftwareTechnologies() {
             </motion.div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-center mb-3 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent min-h-[56px] flex items-center justify-center">
+            <h3 className="text-xl font-bold text-center bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent  flex items-center justify-center">
               {tech.name}
             </h3>
-
-            {/* Description */}
-            <p className="text-sm text-gray-600 text-center leading-relaxed">
-              {tech.description}
-            </p>
           </motion.div>
         ))}
       </motion.div>
