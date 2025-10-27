@@ -54,15 +54,17 @@ const GoogleAdsCTA = () => {
   return (
     <>
       <div className="text-gray-50 bg-gradient-to-br from-gray-700 via-gray-500 to-gray-200 rounded-2xl py-3 md:p-6 text-center">
-        <motion.h2
-          className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-5 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Spremni da povećate svoju online prodaju?
-        </motion.h2>
+        <div className="flex justify-center mb-3 md:mb-5">
+          <motion.h2
+            className="text-2xl md:text-4xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Spremni da povećate svoju online prodaju?
+          </motion.h2>
+        </div>
         <motion.div
           className="grid md:grid-cols-2 gap-6"
           variants={containerVariants}

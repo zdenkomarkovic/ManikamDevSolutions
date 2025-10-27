@@ -38,9 +38,11 @@ const reasons = [
 export default function SEOWhy() {
   return (
     <div>
-      <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-8 md:mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
-        Zašto Odabrati Nas?
-      </h2>
+      <div className="flex justify-center mb-8 md:mb-12">
+        <h2 className="text-2xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          Zašto Odabrati Nas?
+        </h2>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {reasons.map((reason, index) => (

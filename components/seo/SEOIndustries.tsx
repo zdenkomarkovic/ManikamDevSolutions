@@ -25,9 +25,11 @@ const industries = [
 export default function SEOIndustries() {
   return (
     <div>
-      <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
-        Industrije Sa Kojima Radimo
-      </h2>
+      <div className="flex justify-center mb-4">
+        <h2 className="text-2xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          Industrije Sa Kojima Radimo
+        </h2>
+      </div>
       <p className="text-center text-gray-100 mb-8 md:mb-12 max-w-2xl mx-auto">
         Imamo iskustvo u optimizaciji sajtova iz različitih industrija
       </p>

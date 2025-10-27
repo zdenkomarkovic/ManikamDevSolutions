@@ -51,15 +51,17 @@ const GoogleAdsFeatures = () => {
 
   return (
     <div className="mt-16">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Zašto klijenti biraju naše Google Ads usluge?
-      </motion.h2>
+      <div className="flex justify-center mb-12">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Zašto klijenti biraju naše Google Ads usluge?
+        </motion.h2>
+      </div>
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
         variants={containerVariants}

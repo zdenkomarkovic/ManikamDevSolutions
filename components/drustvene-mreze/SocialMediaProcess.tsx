@@ -96,15 +96,17 @@ export default function SocialMediaProcess() {
 
   return (
     <div>
-      <motion.h2
-        className="text-2xl md:text-3xl font-extrabold text-center mb-8 md:mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Naš Proces Upravljanja Društvenim Mrežama
-      </motion.h2>
+      <div className="flex justify-center mb-8 md:mb-12">
+        <motion.h2
+          className="text-2xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Naš Proces Upravljanja Društvenim Mrežama
+        </motion.h2>
+      </div>
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
@@ -126,7 +128,7 @@ export default function SocialMediaProcess() {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mb-4"
+              className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mb-4"
               variants={iconVariants}
               whileHover={{
                 scale: 1.2,
@@ -139,7 +141,7 @@ export default function SocialMediaProcess() {
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               {step.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed">{step.description}</p>
+            <p className=" leading-relaxed">{step.description}</p>
           </motion.div>
         ))}
       </motion.div>

@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "Koliko često treba objavljivati sadržaj na Facebook i Instagram?",
+    question:
+      "Koliko često treba objavljivati sadržaj na Facebook i Instagram?",
     answer:
       "Preporučujemo minimum 3-5 puta nedeljno na Facebook-u i 4-7 puta nedeljno na Instagram-u (uključujući Stories). Konzistentnost je ključna - bolje je redovno objavljivati kvalitetan sadržaj nego sporadično objavljivati veliku količinu. Instagram Reels i Stories mogu se koristiti češće jer imaju kraći životni vek.",
   },
@@ -52,16 +53,16 @@ export default function SocialMediaFAQ() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: {
       opacity: 0,
       y: 30,
-      x: -20
+      x: -20,
     },
     visible: {
       opacity: 1,
@@ -69,22 +70,24 @@ export default function SocialMediaFAQ() {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Često Postavljana Pitanja
-      </motion.h2>
+      <div className="flex justify-center mb-12">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Često Postavljana Pitanja
+        </motion.h2>
+      </div>
       <motion.div
         className="space-y-6"
         variants={containerVariants}
@@ -95,24 +98,28 @@ export default function SocialMediaFAQ() {
         {faqs.map((faq, index) => (
           <motion.div
             key={index}
-            className={`${index !== faqs.length - 1 ? "border-b border-gray-200 pb-6" : "pb-6"} border-l-4 border-orange-500 rounded-lg pl-4 md:pl-6`}
+            className={`${
+              index !== faqs.length - 1
+                ? "border-b border-gray-200 pb-6"
+                : "pb-6"
+            } border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6`}
             variants={itemVariants}
             whileHover={{
               x: 10,
-              transition: { duration: 0.3 }
+              transition: { duration: 0.3 },
             }}
           >
             <motion.h3
-              className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+              className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
-                transition: { duration: 0.2 }
+                transition: { duration: 0.2 },
               }}
             >
               {faq.question}
             </motion.h3>
             <motion.p
-              className="text-gray-600"
+              className=""
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}

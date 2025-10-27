@@ -125,10 +125,17 @@ export function middleware(request: VercelRequest) {
       locale = "en";
     } else {
       const country = request.geo?.country || "";
+
       // Ako je Srbija, Bosna, Crna Gora ili Makedonija - koristi srpski
       const serbianSpeakingCountries = ["RS", "BA", "ME", "MK"];
-      if (serbianSpeakingCountries.includes(country)) {
+
+      if (country && serbianSpeakingCountries.includes(country)) {
         locale = "sr";
+      }
+      // Ako geolokacija ne radi, koristi Accept-Language header iz browsera
+      else if (!country) {
+        // Koristi postojeću getLocale funkciju koja čita Accept-Language header
+        locale = getLocale(request, i18n);
       }
       // Sve ostalo (uključujući USA, EU, itd.) - engleski
       else {

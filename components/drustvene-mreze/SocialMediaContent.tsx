@@ -57,16 +57,16 @@ export default function SocialMediaContent() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const cardVariants = {
     hidden: {
       opacity: 0,
       y: 50,
-      scale: 0.9
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
@@ -74,37 +74,39 @@ export default function SocialMediaContent() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const itemVariants = {
     hidden: {
       opacity: 0,
-      x: -20
+      x: -20,
     },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
-    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Kreiranje Sadržaja Koji Angažuje
-      </motion.h2>
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <div className="flex justify-center mb-8">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Kreiranje Sadržaja Koji Angažuje
+        </motion.h2>
+      </div>
       <motion.p
         className="text-center text-gray-100 mb-12 max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
@@ -112,8 +114,9 @@ export default function SocialMediaContent() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Kvalitetan sadržaj je srce uspešnog social media marketinga. Kreiramo raznovrstan sadržaj
-        prilagođen vašoj publici i platformi, sa fokusom na engagement i konverzije.
+        Kvalitetan sadržaj je srce uspešnog social media marketinga. Kreiramo
+        raznovrstan sadržaj prilagođen vašoj publici i platformi, sa fokusom na
+        engagement i konverzije.
       </motion.p>
 
       <motion.div
@@ -131,11 +134,11 @@ export default function SocialMediaContent() {
             whileHover={{
               scale: 1.02,
               y: -5,
-              boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)"
+              boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
             }}
             transition={{ duration: 0.3 }}
           >
-            <h3 className="text-xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
               {type.category}
             </h3>
             <motion.ul
@@ -155,12 +158,12 @@ export default function SocialMediaContent() {
                     whileHover={{
                       scale: 1.2,
                       rotate: 360,
-                      transition: { duration: 0.6 }
+                      transition: { duration: 0.6 },
                     }}
                   >
-                    <FaCheckCircle className="text-orange-500 flex-shrink-0" />
+                    <FaCheckCircle className="text-orange-600 flex-shrink-0" />
                   </motion.div>
-                  <span className="text-gray-600">{item}</span>
+                  <span className="">{item}</span>
                 </motion.li>
               ))}
             </motion.ul>
@@ -177,18 +180,20 @@ export default function SocialMediaContent() {
         whileHover={{
           scale: 1.01,
           y: -3,
-          boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)"
+          boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
         }}
       >
-        <motion.h3
-          className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent text-center"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          Zašto je kvalitetan sadržaj ključan?
-        </motion.h3>
+        <div className="flex justify-center mb-6">
+          <motion.h3
+            className="text-xl md:text-2xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Zašto je kvalitetan sadržaj ključan?
+          </motion.h3>
+        </div>
         <motion.div
           className="grid md:grid-cols-3 gap-6"
           variants={containerVariants}
@@ -196,34 +201,32 @@ export default function SocialMediaContent() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div
-            variants={cardVariants}
-            className="text-center"
-          >
-            <h4 className="font-bold text-gray-900 mb-2 text-lg">Povećava Angažman</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Zanimljiv sadržaj podstiče lajkove, komentare, deljenje i čuvanje postova,
-              što algoritmi Facebook-a i Instagram-a nagrađuju većim doseom.
+          <motion.div variants={cardVariants} className="text-center">
+            <h4 className="font-bold text-gray-900 mb-2 text-lg">
+              Povećava Angažman
+            </h4>
+            <p className=" text-sm leading-relaxed">
+              Zanimljiv sadržaj podstiče lajkove, komentare, deljenje i čuvanje
+              postova, što algoritmi Facebook-a i Instagram-a nagrađuju većim
+              doseom.
             </p>
           </motion.div>
-          <motion.div
-            variants={cardVariants}
-            className="text-center"
-          >
-            <h4 className="font-bold text-gray-900 mb-2 text-lg">Gradi Brend</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Konzistentan, kvalitetan sadržaj pozicionira vas kao stručnjaka u industriji
-              i gradi prepoznatljivost brenda kod vaše publike.
+          <motion.div variants={cardVariants} className="text-center">
+            <h4 className="font-bold text-gray-900 mb-2 text-lg">
+              Gradi Brend
+            </h4>
+            <p className=" text-sm leading-relaxed">
+              Konzistentan, kvalitetan sadržaj pozicionira vas kao stručnjaka u
+              industriji i gradi prepoznatljivost brenda kod vaše publike.
             </p>
           </motion.div>
-          <motion.div
-            variants={cardVariants}
-            className="text-center"
-          >
-            <h4 className="font-bold text-gray-900 mb-2 text-lg">Konvertuje Pratiоce</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Dobro osmišljen sadržaj sa jasnim CTA-om transformiše pratioce u lead-ove
-              i kupce, direktno utiče na vašu prodaju.
+          <motion.div variants={cardVariants} className="text-center">
+            <h4 className="font-bold text-gray-900 mb-2 text-lg">
+              Konvertuje Pratiоce
+            </h4>
+            <p className=" text-sm leading-relaxed">
+              Dobro osmišljen sadržaj sa jasnim CTA-om transformiše pratioce u
+              lead-ove i kupce, direktno utiče na vašu prodaju.
             </p>
           </motion.div>
         </motion.div>

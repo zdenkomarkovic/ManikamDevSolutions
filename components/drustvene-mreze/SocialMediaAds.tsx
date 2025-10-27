@@ -56,16 +56,18 @@ export default function SocialMediaAds() {
   };
 
   return (
-    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Facebook i Instagram Oglašavanje
-      </motion.h2>
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+      <div className="flex justify-center mb-8">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Facebook i Instagram Oglašavanje
+        </motion.h2>
+      </div>
       <motion.p
         className="text-center text-gray-100 mb-12 max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
@@ -95,7 +97,7 @@ export default function SocialMediaAds() {
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
             variants={iconVariants}
             whileHover={{
               scale: 1.2,
@@ -105,10 +107,10 @@ export default function SocialMediaAds() {
           >
             <FaBullseye className="text-2xl text-white" />
           </motion.div>
-          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Precizno Targetiranje
           </h3>
-          <p className="text-gray-600">
+          <p className="">
             Targetirajte po demografiji, interesovanjima, ponašanju, lokaciji i
             custom audiences.
           </p>
@@ -125,7 +127,7 @@ export default function SocialMediaAds() {
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
             variants={iconVariants}
             whileHover={{
               scale: 1.2,
@@ -135,10 +137,10 @@ export default function SocialMediaAds() {
           >
             <FaDollarSign className="text-2xl text-white" />
           </motion.div>
-          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Kontrola Budžeta
           </h3>
-          <p className="text-gray-600">
+          <p className="">
             Postavite dnevni ili mesečni budžet. Plaćate samo za rezultate koje
             želite.
           </p>
@@ -155,7 +157,7 @@ export default function SocialMediaAds() {
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
             variants={iconVariants}
             whileHover={{
               scale: 1.2,
@@ -165,10 +167,10 @@ export default function SocialMediaAds() {
           >
             <FaChartBar className="text-2xl text-white" />
           </motion.div>
-          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Merljivi Rezultati
           </h3>
-          <p className="text-gray-600">
+          <p className="">
             Detaljne analytics - tačno znate koliko ste potrošili i šta ste
             dobili.
           </p>
@@ -185,7 +187,7 @@ export default function SocialMediaAds() {
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400  rounded-xl flex items-center justify-center mx-auto mb-4"
             variants={iconVariants}
             whileHover={{
               scale: 1.2,
@@ -195,24 +197,26 @@ export default function SocialMediaAds() {
           >
             <FaCrosshairs className="text-2xl text-white" />
           </motion.div>
-          <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+          <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Retargeting
           </h3>
-          <p className="text-gray-600">
+          <p className="">
             Ponovo dosegnite posetioce sajta ili one koji su već angažovani sa
             vašim sadržajem.
           </p>
         </motion.div>
       </motion.div>
-      <motion.h3
-        className="text-xl md:text-3xl mt-8 font-extrabold mb-6 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent text-center"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        Tipovi Reklamnih Kampanja
-      </motion.h3>
+      <div className="flex justify-center mt-8 mb-6">
+        <motion.h3
+          className="text-xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Tipovi Reklamnih Kampanja
+        </motion.h3>
+      </div>
 
       <motion.div
         className="mt-8 p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg"
@@ -234,7 +238,7 @@ export default function SocialMediaAds() {
           viewport={{ once: true }}
         >
           <motion.div variants={cardVariants}>
-            <h4 className="font-bold  text-xl bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+            <h4 className="font-bold text-xl inline-flex items-center gap-2 mb-4 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
               <motion.span
                 className="w-10 h-10 rounded-full flex items-center justify-center"
                 whileHover={{
@@ -256,9 +260,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600 ">
+                <span className="">
                   <strong>Lead Generation Ads</strong> - prikupljanje email i
                   kontakt informacija
                 </span>
@@ -271,9 +275,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600 ">
+                <span className="">
                   <strong>Traffic Ads</strong> - slanje posetilaca na vaš sajt
                   ili landing page
                 </span>
@@ -286,9 +290,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Engagement Ads</strong> - povećanje lajkova,
                   komentara, deljenja
                 </span>
@@ -301,9 +305,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Conversion Ads</strong> - direktna prodaja proizvoda
                   ili usluga
                 </span>
@@ -316,9 +320,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Video Views Ads</strong> - promovisanje video sadržaja
                 </span>
               </li>
@@ -330,9 +334,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Page Likes Ads</strong> - rast broja pratilaca
                   stranice
                 </span>
@@ -341,7 +345,7 @@ export default function SocialMediaAds() {
           </motion.div>
 
           <motion.div variants={cardVariants}>
-            <h4 className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent mb-4 flex items-center gap-2">
+            <h4 className="font-bold inline-flex items-center gap-2 mb-4 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
               <motion.span
                 className="w-10 h-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white rounded-full flex items-center justify-center"
                 whileHover={{
@@ -363,9 +367,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Feed Ads</strong> - reklame u glavnom Instagram feed-u
                 </span>
               </li>
@@ -377,9 +381,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Stories Ads</strong> - full-screen vertikalne reklame
                   između Stories
                 </span>
@@ -392,9 +396,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Reels Ads</strong> - reklame u Instagram Reels
                   (viralni video format)
                 </span>
@@ -407,9 +411,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Explore Ads</strong> - reklame u Explore sekciji
                 </span>
               </li>
@@ -421,9 +425,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Shopping Ads</strong> - direktna prodaja proizvoda
                   preko Instagram
                 </span>
@@ -436,9 +440,9 @@ export default function SocialMediaAds() {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <FaCheckCircle className="text-orange-500 flex-shrink-0 mt-1 md:mt-0" />
+                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
                 </motion.div>
-                <span className="text-gray-600">
+                <span className="">
                   <strong>Carousel Ads</strong> - višestruke slike/video u
                   jednoj reklami
                 </span>
@@ -448,7 +452,7 @@ export default function SocialMediaAds() {
         </motion.div>
 
         <motion.div
-          className="mt-6 p-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl text-white"
+          className="mt-6 p-4 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl text-white"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -459,7 +463,7 @@ export default function SocialMediaAds() {
           }}
         >
           <p className="font-semibold mb-2">💡 Savet za uspešne kampanje:</p>
-          <p className="text-sm opacity-90">
+          <p className="text-sm">
             Najbolji rezultati se postižu kombinovanjem organskog sadržaja i
             plaćenog oglašavanja. Redovno objavljujte kvalitetan sadržaj,
             gradite angažovanu publiku, a zatim koristite reklame da pojačate

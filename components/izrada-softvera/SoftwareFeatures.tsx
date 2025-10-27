@@ -1,38 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaShieldAlt, FaTachometerAlt, FaExpandArrowsAlt, FaMobileAlt, FaPlug, FaUsers } from "react-icons/fa";
+import {
+  FaShieldAlt,
+  FaTachometerAlt,
+  FaExpandArrowsAlt,
+  FaMobileAlt,
+  FaPlug,
+  FaUsers,
+} from "react-icons/fa";
 
 const features = [
   {
     icon: FaShieldAlt,
     title: "Sigurnost i Privatnost",
-    description: "Enterprise-level sigurnost, enkripcija podataka, GDPR compliance i redovni security audits.",
+    description:
+      "Enterprise-level sigurnost, enkripcija podataka, GDPR compliance i redovni security audits.",
   },
   {
     icon: FaTachometerAlt,
     title: "Visoke Performanse",
-    description: "Optimizovan kod, caching strategije, load balancing i CDN za brzo učitavanje.",
+    description:
+      "Optimizovan kod, caching strategije, load balancing i CDN za brzo učitavanje.",
   },
   {
     icon: FaExpandArrowsAlt,
     title: "Skalabilnost",
-    description: "Arhitektura dizajnirana za rast - lako dodajete korisnike, podatke i funkcionalnosti.",
+    description:
+      "Arhitektura dizajnirana za rast - lako dodajete korisnike, podatke i funkcionalnosti.",
   },
   {
     icon: FaMobileAlt,
     title: "Responsive Design",
-    description: "Savršeno funkcioniše na svim uređajima - desktop, tablet, mobilni telefon.",
+    description:
+      "Savršeno funkcioniše na svim uređajima - desktop, tablet, mobilni telefon.",
   },
   {
     icon: FaPlug,
     title: "Integracije",
-    description: "Povezivanje sa postojećim sistemima, API-jima i third-party servisima.",
+    description:
+      "Povezivanje sa postojećim sistemima, API-jima i third-party servisima.",
   },
   {
     icon: FaUsers,
     title: "User-Friendly",
-    description: "Intuitivan UI/UX dizajn, easy onboarding i minimalna kriva učenja za korisnike.",
+    description:
+      "Intuitivan UI/UX dizajn, easy onboarding i minimalna kriva učenja za korisnike.",
   },
 ];
 
@@ -43,16 +56,16 @@ export default function SoftwareFeatures() {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const cardVariants = {
     hidden: {
       opacity: 0,
       y: 50,
-      scale: 0.9
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
@@ -60,15 +73,15 @@ export default function SoftwareFeatures() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const iconVariants = {
     hidden: {
       scale: 0,
-      rotate: -180
+      rotate: -180,
     },
     visible: {
       scale: 1,
@@ -76,15 +89,15 @@ export default function SoftwareFeatures() {
       transition: {
         duration: 0.8,
         ease: "easeOut",
-        delay: 0.2
-      }
-    }
+        delay: 0.2,
+      },
+    },
   };
 
   return (
-    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-500 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
+    <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
       <motion.h2
-        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
+        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -108,25 +121,25 @@ export default function SoftwareFeatures() {
             whileHover={{
               scale: 1.05,
               y: -10,
-              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)"
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
             }}
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-300 rounded-xl flex items-center justify-center mx-auto mb-4"
+              className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
               variants={iconVariants}
               whileHover={{
                 scale: 1.2,
                 rotate: 360,
-                transition: { duration: 0.6 }
+                transition: { duration: 0.6 },
               }}
             >
               <feature.icon className="text-2xl text-white" />
             </motion.div>
-            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
               {feature.title}
             </h3>
-            <p className="text-gray-600">{feature.description}</p>
+            <p className="">{feature.description}</p>
           </motion.div>
         ))}
       </motion.div>

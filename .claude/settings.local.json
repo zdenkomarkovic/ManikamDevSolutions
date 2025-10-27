@@ -12,7 +12,8 @@
       "Bash(powershell -Command \"if (Test-Path .next) { Remove-Item -Recurse -Force .next }\")",
       "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\")",
       "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\")",
-      "Bash(powershell -Command \"Get-Content ''E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\\page.tsx'' | Select-Object -Index 48\")"
+      "Bash(powershell -Command \"Get-Content ''E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\\page.tsx'' | Select-Object -Index 48\")",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []

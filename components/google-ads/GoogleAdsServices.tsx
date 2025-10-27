@@ -34,15 +34,17 @@ const GoogleAdsServices = () => {
 
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Naše usluge Google oglašavanja
-      </motion.h2>
+      <div className="flex justify-center mb-8">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Naše usluge Google oglašavanja
+        </motion.h2>
+      </div>
       <motion.p
         className="text-center text-gray-100 mb-12 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
@@ -71,7 +73,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Search Kampanje
           </h3>
           <p className="">
@@ -91,7 +93,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Display Kampanje
           </h3>
           <p className="">
@@ -110,7 +112,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             YouTube Oglašavanje
           </h3>
           <p className="">
@@ -129,7 +131,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Shopping Kampanje
           </h3>
           <p className="">
@@ -148,7 +150,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Remarketing Kampanje
           </h3>
           <p className="">
@@ -168,7 +170,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             App Kampanje
           </h3>
           <p className="">
@@ -187,7 +189,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Smart Kampanje
           </h3>
           <p className="">
@@ -206,7 +208,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Performance Max
           </h3>
           <p className="">
@@ -225,7 +227,7 @@ const GoogleAdsServices = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Lokalno Oglašavanje
           </h3>
           <p className="">

@@ -9,24 +9,24 @@ export default function SocialMediaIntro() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 30
+      y: 30,
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -39,18 +39,20 @@ export default function SocialMediaIntro() {
       whileHover={{
         scale: 1.02,
         y: -5,
-        boxShadow: "0 20px 40px rgba(249, 115, 22, 0.15)"
+        boxShadow: "0 20px 40px rgba(249, 115, 22, 0.15)",
       }}
     >
-      <motion.h2
-        className="text-xl md:text-3xl font-extrabold mb-6 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Zašto su društvene mreže ključne za vaš biznis?
-      </motion.h2>
+      <div className="flex justify-center mb-6">
+        <motion.h2
+          className="text-xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Zašto su društvene mreže ključne za vaš biznis?
+        </motion.h2>
+      </div>
       <motion.div
         className="space-y-4"
         variants={containerVariants}

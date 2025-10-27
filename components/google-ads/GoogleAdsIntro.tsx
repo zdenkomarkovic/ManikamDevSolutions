@@ -42,15 +42,17 @@ export default function GoogleAdsIntro() {
         boxShadow: "0 20px 40px rgba(249, 115, 22, 0.15)",
       }}
     >
-      <motion.h2
-        className="text-xl md:text-3xl font-extrabold mb-6 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Vaš Partner za Uspešno Google Oglašavanje
-      </motion.h2>
+      <div className="flex justify-center mb-6">
+        <motion.h2
+          className="text-xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Vaš Partner za Uspešno Google Oglašavanje
+        </motion.h2>
+      </div>
 
       <motion.div
         className="space-y-4"

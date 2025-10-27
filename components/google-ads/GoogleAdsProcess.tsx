@@ -33,15 +33,17 @@ const GoogleAdsProcess = () => {
 
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
-      <motion.h2
-        className="text-3xl font-extrabold text-center mb-12 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Kako izgleda proces Google Ads kampanje?
-      </motion.h2>
+      <div className="flex justify-center mb-12">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Kako izgleda proces Google Ads kampanje?
+        </motion.h2>
+      </div>
       <motion.div
         className="space-y-8"
         variants={containerVariants}
@@ -69,7 +71,7 @@ const GoogleAdsProcess = () => {
               1
             </motion.div>
             <motion.h3
-              className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              className="text-xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
@@ -113,7 +115,7 @@ const GoogleAdsProcess = () => {
               2
             </motion.div>
             <motion.h3
-              className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              className="text-xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
@@ -157,7 +159,7 @@ const GoogleAdsProcess = () => {
               3
             </motion.div>
             <motion.h3
-              className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              className="text-xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
@@ -201,7 +203,7 @@ const GoogleAdsProcess = () => {
               4
             </motion.div>
             <motion.h3
-              className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              className="text-xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
@@ -245,7 +247,7 @@ const GoogleAdsProcess = () => {
               5
             </motion.div>
             <motion.h3
-              className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              className="text-xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
@@ -289,7 +291,7 @@ const GoogleAdsProcess = () => {
               6
             </motion.div>
             <motion.h3
-              className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              className="text-xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
