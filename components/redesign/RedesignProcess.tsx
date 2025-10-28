@@ -8,7 +8,6 @@ import {
   FaCode,
   FaVial,
   FaRocket,
-  FaHeadset,
 } from "react-icons/fa";
 
 const steps = [
@@ -174,7 +173,8 @@ export default function RedesignProcess() {
           transition={{ duration: 0.6, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          Vaš trenutni sajt ostaje potpuno funkcionalan tokom cele migracije. Prelazak na novi sajt se dešava trenutno bez prekida u radu.
+          Vaš trenutni sajt ostaje potpuno funkcionalan tokom cele migracije.
+          Prelazak na novi sajt se dešava trenutno bez prekida u radu.
         </motion.p>
       </motion.div>
     </div>

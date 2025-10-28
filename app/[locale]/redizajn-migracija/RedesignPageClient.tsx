@@ -5,7 +5,6 @@ import RedesignHero from "@/components/redesign/RedesignHero";
 import RedesignIntro from "@/components/redesign/RedesignIntro";
 import RedesignBenefits from "@/components/redesign/RedesignBenefits";
 import RedesignWhyNextJS from "@/components/redesign/RedesignWhyNextJS";
-import RedesignPlatforms from "@/components/redesign/RedesignPlatforms";
 import RedesignProcess from "@/components/redesign/RedesignProcess";
 import RedesignPerformance from "@/components/redesign/RedesignPerformance";
 import RedesignFAQ from "@/components/redesign/RedesignFAQ";
