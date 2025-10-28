@@ -1,20 +1,78 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const IndustrijeSajt = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl p-4 md:p-8 shadow-lg border border-gray-100">
       <div className="flex justify-center mb-8">
-        <h2 className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+        <motion.h2
+          className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Izrada sajtova za različite industrije
-        </h2>
+        </motion.h2>
       </div>
-      <p className="text-center text-gray-100 mb-12 max-w-3xl mx-auto">
+      <motion.p
+        className="text-center text-gray-100 mb-12 max-w-3xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         Naše iskustvo obuhvata širok spektar industrija. Bez obzira na vašu
         delatnost, kreiramo prilagođena rešenja koja odgovaraju specifičnim
         potrebama vaše branše.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+      </motion.p>
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Ugostiteljstvo i Restorani
           </h3>
@@ -22,9 +80,18 @@ const IndustrijeSajt = () => {
             Sajtovi sa online menijima, rezervacionim sistemima, galerijom jela
             i integracijom sa delivery platformama.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Medicinske ordinacije
           </h3>
@@ -32,9 +99,18 @@ const IndustrijeSajt = () => {
             Profesionalni sajtovi sa sistemom za zakazivanje termina, prikazom
             usluga, credentials doktora i GDPR usklađenošću.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             E-commerce i Trgovina
           </h3>
@@ -42,9 +118,18 @@ const IndustrijeSajt = () => {
             Moderne online prodavnice sa naprednim sistemima plaćanja,
             upravljanjem inventarom i integracijama sa kurirskim službama.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Nekretnine
           </h3>
@@ -52,9 +137,18 @@ const IndustrijeSajt = () => {
             Sajtovi sa naprednim filterima za pretragu nekretnina, virtuelnim
             turama, mapama i kontakt formama za svakih objekat.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Pravne kancelarije
           </h3>
@@ -62,9 +156,18 @@ const IndustrijeSajt = () => {
             Elegantni, profesionalni sajtovi sa prikazom oblasti rada,
             biografijama pravnika, blog sekcijom i sigurnim kontakt formama.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Fitnes i Wellness
           </h3>
@@ -72,9 +175,18 @@ const IndustrijeSajt = () => {
             Dinamični sajtovi sa rasporedom treninga, online zakazivanjem,
             prikazom trenera i integracijama sa fitness aplikacijama.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Edukacija i Kursevi
           </h3>
@@ -82,9 +194,18 @@ const IndustrijeSajt = () => {
             Platforme za online učenje sa video integracijama, sistemima za
             testiranje, pratećim napretka učenika i certifikatima.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Građevinarstvo
           </h3>
@@ -92,9 +213,18 @@ const IndustrijeSajt = () => {
             Sajtovi sa portfoliom projekata, galerijom realizacija, kalkulatorom
             cena i detaljnim prikazom usluga.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow">
+        <motion.div
+          className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-shadow"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.02,
+            y: -5,
+            boxShadow: "0 15px 30px rgba(249, 115, 22, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             Agencije i Freelance-ri
           </h3>
@@ -102,8 +232,8 @@ const IndustrijeSajt = () => {
             Kreativni portfolio sajtovi sa prikazom radova, testimonials-ima
             klijenata i integrisanim sistemima za ponude.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

@@ -18,16 +18,16 @@ export default function RedesignPageClient() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: {
       opacity: 0,
       y: 50,
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
@@ -35,16 +35,16 @@ export default function RedesignPageClient() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const heroVariants = {
     hidden: {
       opacity: 0,
       y: 100,
-      scale: 0.9
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
@@ -52,19 +52,15 @@ export default function RedesignPageClient() {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <div className="bg-gray-900/90">
       <section className="pt-24 pb-6 md:pb-16 px-4">
-        <motion.div
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.div variants={heroVariants} initial="hidden" animate="visible">
           <RedesignHero />
         </motion.div>
       </section>
@@ -90,10 +86,6 @@ export default function RedesignPageClient() {
 
           <motion.div variants={itemVariants}>
             <RedesignCTA />
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <RedesignPlatforms />
           </motion.div>
 
           <motion.div variants={itemVariants}>

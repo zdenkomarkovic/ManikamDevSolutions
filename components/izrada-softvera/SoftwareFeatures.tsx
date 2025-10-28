@@ -130,7 +130,6 @@ export default function SoftwareFeatures() {
               variants={iconVariants}
               whileHover={{
                 scale: 1.2,
-                rotate: 360,
                 transition: { duration: 0.6 },
               }}
             >

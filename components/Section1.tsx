@@ -226,8 +226,7 @@ const Card = ({
             src={text.img}
             alt=""
             fill
-            objectFit="cover"
-            className="rounded-3xl"
+            className="rounded-3xl object-cover"
           />
         </div>
       </div>

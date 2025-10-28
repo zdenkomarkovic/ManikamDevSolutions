@@ -247,7 +247,7 @@ export default function SocialMediaAds() {
                   transition: { duration: 0.6 },
                 }}
               >
-                <FaFacebook className="text-8xl text-blue-600" />
+                <FaFacebook className="text-5xl text-blue-600" />
               </motion.span>
               Facebook Ads Kampanje
             </h4>
@@ -462,7 +462,7 @@ export default function SocialMediaAds() {
             boxShadow: "0 10px 30px rgba(249, 115, 22, 0.4)",
           }}
         >
-          <p className="font-semibold mb-2">💡 Savet za uspešne kampanje:</p>
+          <p className="font-semibold mb-2"> Savet za uspešne kampanje:</p>
           <p className="text-sm">
             Najbolji rezultati se postižu kombinovanjem organskog sadržaja i
             plaćenog oglašavanja. Redovno objavljujte kvalitetan sadržaj,

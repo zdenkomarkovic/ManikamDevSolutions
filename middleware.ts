@@ -89,9 +89,6 @@ export function middleware(request: VercelRequest) {
   const userAgent = request.headers.get('user-agent') || '';
   const isBot = isCrawlerBot(userAgent);
 
-  console.log("USER-AGENT:", userAgent);
-  console.log("IS BOT:", isBot);
-
   // Geo-blocking: PRIVREMENO DEAKTIVIRANO ZA TESTIRANJE
   // const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
@@ -128,13 +125,6 @@ export function middleware(request: VercelRequest) {
   // Prvo detektuj zemlju
   const country = request.geo?.country || "";
 
-  console.log("🔍 MIDDLEWARE DEBUG:", {
-    pathname,
-    pathLocale,
-    country: country || "NEMA GEO",
-    cookie: request.cookies.get("NEXT_LOCALE")?.value,
-  });
-
   if (pathLocale) {
     // Jezik već postoji u putanji, samo nastavi
     nextLocale = pathLocale;
@@ -146,22 +136,18 @@ export function middleware(request: VercelRequest) {
     // Botovi uvek engleski
     if (isBot) {
       locale = "en";
-      console.log("→ BOT detektovan, engleski");
     }
     // Ako je Srbija, Bosna, Crna Gora, Makedonija - srpski
     else if (["RS", "BA", "ME", "MK"].includes(country)) {
       locale = "sr";
-      console.log("→ BALKAN detektovan:", country);
     }
     // Ako je Amerika, UK, Nemačka, Francuska... - engleski
     else if (["US", "GB", "DE", "FR", "IT", "ES", "CA", "AU"].includes(country)) {
       locale = "en";
-      console.log("→ ZAPAD detektovan:", country);
     }
     // Sve ostale zemlje ili ako geo ne radi - SRPSKI (default)
     else {
       locale = "sr";
-      console.log("→ NEMA GEO ili nepoznata zemlja - koristim SRPSKI");
     }
 
     let newPath = `/${locale}${pathname}`;
@@ -169,7 +155,6 @@ export function middleware(request: VercelRequest) {
 
     const url = basePath + newPath;
 
-    console.log("→ REDIREKCIJA:", pathname, "→", newPath);
     response = NextResponse.redirect(new URL(url, request.url));
     nextLocale = locale;
   }

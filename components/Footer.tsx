@@ -38,7 +38,7 @@ export default function Footer({
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-16 text-white">
         <div className="text-center md:text-left md:grid md:grid-cols-3 gap-8 mx-auto">
-          <div>
+          <div className=" mx-auto ">
             {navList.map((item, i) => {
               // Skip items without a route (like Services with submenu)
               if (!item.route) return null;
@@ -64,28 +64,33 @@ export default function Footer({
             <div>
               {" "}
               <a href="tel:+381641967267">
-                <p className="text-muted-foreground  flex gap-2 items-center hover:text-orange-500">
-                  Office: Serbia <FaPhone className="" /> +38164 1967 267
+                <p className="text-muted-foreground  flex flex-col gap-2 items-center hover:text-orange-500">
+                  Office: Serbia{" "}
+                  <span className="flex gap-2 items-center">
+                    <FaPhone className="" /> +38164 1967 267
+                  </span>
                 </p>
               </a>
             </div>
             <div>
               {" "}
               <a href="tel:+12408103730">
-                <p className="text-muted-foreground  flex gap-2 items-center hover:text-orange-500">
-                  Office: Washington D.C. USA <FaPhone className="" />{" "}
-                  +12408103730
+                <p className="text-muted-foreground  flex gap-2 flex-col items-center hover:text-orange-500">
+                  Office: Washington D.C. USA{" "}
+                  <span className="flex gap-2 items-center">
+                    <FaPhone className="" /> +12408103730
+                  </span>
                 </p>
               </a>
             </div>
-            <div>
+            <div className=" mx-auto w-fit">
               <a href="mailto:manikamwebsolutions@gmail.com">
-                <p className="flex gap-3 items-center  hover:text-orange-500 text-muted-foreground text-wrap">
+                <p className="flex gap-3 items-center hover:text-orange-500 text-muted-foreground text-wrap">
                   <TfiEmail /> manikamwebsolutions@gmail.com
                 </p>
               </a>
             </div>
-            <div className="flex space-x-4 justify-center md:justify-start">
+            <div className="flex space-x-4 justify-center ">
               <a
                 href="https://www.facebook.com/profile.php?id=61574784286298"
                 className="text-muted-foreground hover:text-orange-500"

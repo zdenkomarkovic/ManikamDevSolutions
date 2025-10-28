@@ -21,5 +21,9 @@ export async function generateMetadata({
 }
 
 export default function ContactPage() {
-  return <ContactForm />;
+  return (
+    <div className="bg-gray-900/90">
+      <ContactForm />
+    </div>
+  );
 }

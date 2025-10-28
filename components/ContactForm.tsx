@@ -1,5 +1,6 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 import {
   Form,
   FormField,
@@ -15,7 +16,15 @@ import { Textarea } from "./ui/textarea";
 import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
-import { FaInstagram, FaFacebook, FaPhone, FaViber, FaWhatsappSquare } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaPhone,
+  FaViber,
+  FaWhatsappSquare,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Molimo unesite vase ime i prezime" }),
@@ -48,148 +57,313 @@ export default function ContactForm() {
     });
 
     if (response?.messageId) {
-      toast.success("Application Submitted Successfully.");
+      toast.success("Poruka uspešno poslata!");
     } else {
-      toast.error("Failed To send application.");
+      toast.error("Slanje poruke nije uspelo.");
     }
     form.reset();
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div className="container mx-auto pt-28 pb-16 px-2 md:px-8 md:py-32 space-y-8 md:space-y-24 ">
-      <h1 className="text-2xl md:text-5xl pl-2 md:px-32">
-        Pa izvolite kako vam je zgodnije...
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        <div className=" mx-6 md:mx-20 md:space-y-10">
-          <div className="space-y-3 md:space-y-2 text-lg md:text-xl">
-            <p className="font-bold text-2xl">Office: Serbia Nis</p>
-            <a
-              href="tel:+381641967267"
-              className="py-[7px] flex border-b-[1px] border-gray-800"
-            >
-              <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaPhone className="text-[20px] lg:text-[22px]" /> +38164 1967 267
-              </button>
-            </a>
-            <a
-              href="viber://chat?number=%2B381641967267"
-              className="py-[7px] flex border-b-[1px] border-gray-800"
-            >
-              <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaViber className="text-[28px] lg:text-[27px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
-                +38164 1967 267
-              </button>
-            </a>
-            <a
-              href="https://wa.me/381641967267"
-              className="py-[7px] flex border-b-[1px] border-gray-800"
-            >
-              <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                <FaWhatsappSquare className="text-[30px] lg:text-[30px] rounded-2xl text-green-700 " />{" "}
-                +38164 1967 267
-              </button>
-            </a>
-          </div>
-          <div>
-            <a
+    <div className="container mx-auto pt-28 pb-16 px-3 md:px-16 md:py-32">
+      <div className="flex justify-center mb-12">
+        <motion.h1
+          className="text-[45px] leading-tight md:text-8xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Kontaktirajte Nas
+        </motion.h1>
+      </div>
+
+      <motion.p
+        className="text-center text-gray-100 mb-16 max-w-2xl mx-auto "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        Spremni smo da odgovorimo na sva vaša pitanja i započnemo vaš projekat.
+        Izaberite način komunikacije koji vam najviše odgovara.
+      </motion.p>
+
+      <motion.div
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div className="space-y-6" variants={cardVariants}>
+          {/* USA Office */}
+          <motion.div
+            className="p-6 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl shadow-lg"
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
+            }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <FaMapMarkerAlt className="text-2xl text-orange-400" />
+              <h3 className="text-2xl font-bold text-gray-100">
+                Washington D.C. USA
+              </h3>
+            </div>
+            <div className="space-y-4">
+              <motion.a
+                href="tel:+12408103730"
+                className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <FaPhone className="text-xl text-orange-600" />
+                <span className="font-semibold text-gray-900">
+                  +1 240 810 3730
+                </span>
+              </motion.a>
+              <motion.a
+                href="viber://chat?number=%2B12408103730"
+                className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <FaViber className="text-2xl text-purple-600" />
+                <span className="font-semibold text-gray-900">
+                  +1 240 810 3730
+                </span>
+              </motion.a>
+              <motion.a
+                href="https://wa.me/12408103730"
+                className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <FaWhatsappSquare className="text-2xl text-green-600" />
+                <span className="font-semibold text-gray-900">
+                  +1 240 810 3730
+                </span>
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Serbia Office */}
+          <motion.div
+            className="p-6 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl shadow-lg"
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
+            }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <FaMapMarkerAlt className="text-2xl text-orange-400" />
+              <h3 className="text-2xl font-bold text-gray-100">Niš, Srbija</h3>
+            </div>
+            <div className="space-y-4">
+              <motion.a
+                href="tel:+381641967267"
+                className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <FaPhone className="text-xl text-orange-600" />
+                <span className="font-semibold text-gray-900">
+                  +381 64 196 7267
+                </span>
+              </motion.a>
+              <motion.a
+                href="viber://chat?number=%2B381641967267"
+                className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <FaViber className="text-2xl text-purple-600" />
+                <span className="font-semibold text-gray-900">
+                  +381 64 196 7267
+                </span>
+              </motion.a>
+              <motion.a
+                href="https://wa.me/381641967267"
+                className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <FaWhatsappSquare className="text-2xl text-green-600" />
+                <span className="font-semibold text-gray-900">
+                  +381 64 196 7267
+                </span>
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Email and Social */}
+          <motion.div
+            className="p-6 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl shadow-lg"
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
+            }}
+          >
+            <motion.a
               href="mailto:manikamwebsolutions@gmail.com"
-              className="py-[7px] flex border-b-[1px] border-gray-800"
+              className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all mb-6"
+              whileHover={{ x: 5 }}
             >
-              <button className="hover:scale-110 transition-transform duration-500 px-auto md:px-8 text-xl">
-                Email: manikamwebsolutions@gmail.com
-              </button>
-            </a>
-            <div className="flex pt-4 lg:pt-12 gap-10 lg:gap-20 text-[33px] lg:text-[40px] justify-center items-center text-center">
-              <a
+              <FaEnvelope className="text-xl text-orange-600" />
+              <span className="font-semibold text-gray-900 text-sm md:text-base">
+                manikamwebsolutions@gmail.com
+              </span>
+            </motion.a>
+
+            <div className="flex justify-center gap-8 pt-4">
+              <motion.a
                 href="https://www.instagram.com/manikam.web.solutions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:scale-110 transition-transform duration-500"
+                className="w-14 h-14 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-full flex items-center justify-center"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+                transition={{ duration: 0.6 }}
               >
-                <FaInstagram className="" />
-              </a>
-              <a
+                <FaInstagram className="text-2xl text-orange-600" />
+              </motion.a>
+              <motion.a
                 href="https://www.facebook.com/profile.php?id=61574784286298"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:scale-110 transition-transform duration-500"
+                className="w-14 h-14 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-full flex items-center justify-center"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+                transition={{ duration: 0.6 }}
               >
-                <FaFacebook className="" />
-              </a>
+                <FaFacebook className="text-2xl text-orange-600" />
+              </motion.a>
             </div>
-          </div>
-        </div>
-        <div className="mx-6 md:mx-20 bg-gray-50 rounded-3xl shadow-2xl">
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-2xl shadow-lg p-6 md:p-8"
+          variants={cardVariants}
+        >
+          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+            Pošaljite Nam Poruku
+          </h3>
           <Form {...form}>
-            <form
-              className="grid grid-cols-3 items-center p-4 lg:p-10"
-              onSubmit={form.handleSubmit(onSubmit)}
-            >
-              <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-8">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="lg:text-xl">Ime i Prezime:</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Unesite ime i prezime" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="lg:text-xl">Broj telefona:</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Unesite vas broj telefona" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="lg:text-xl">Email:</FormLabel>
-                      <FormControl>
-                        <Input placeholder="john@example.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="lg:text-xl">Vasa poruka:</FormLabel>
-                      <FormControl>
-                        <Textarea {...field} placeholder="Vasa poruka za nas" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+            <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base font-semibold text-gray-900">
+                      Ime i Prezime
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Vaše ime i prezime"
+                        {...field}
+                        className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base font-semibold text-gray-900">
+                      Broj Telefona
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="+381 64 123 4567"
+                        {...field}
+                        className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base font-semibold text-gray-900">
+                      Email Adresa
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="vas.email@primer.com"
+                        {...field}
+                        className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base font-semibold text-gray-900">
+                      Vaša Poruka
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        {...field}
+                        placeholder="Opišite vaš projekat ili postavite pitanje..."
+                        rows={6}
+                        className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button
                   disabled={isLoading}
-                  className="bg-gray-800  hover:bg-gray-600 transition-colors ease-in-out duration-500"
+                  className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-6 text-lg transition-all"
                 >
-                  {isLoading ? "Sending....." : "Send"}
+                  {isLoading ? "Šaljem..." : "Pošalji Poruku"}
                 </Button>
-              </div>
+              </motion.div>
             </form>
           </Form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
