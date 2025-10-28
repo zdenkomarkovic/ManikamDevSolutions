@@ -6,7 +6,7 @@ import React from "react";
 import pravac from "../public/images/pravac.jpg";
 
 const class1 =
-  " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-10 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl  pt-[72px] md:pt-24";
+  " relative  text-md md:text-xl text-center  bg-white h-[450px] md:h-[500px] p-1 md:p-7 space-y-5 md:space-y-10 hover:text-white hover:bg-gray-800 transition-colors duration-700 rounded-xl  pt-[72px] md:pt-24";
 const imageClass =
   " w-[150px] h-[150px] md:w-[200px] md:h-[200px] mx-auto absolute -top-16 md:-top-24 left-0 right-0 ";
 
@@ -68,7 +68,7 @@ const Card = ({
       <div
         className={`${class1} ${i === 0 ? "mt-[140px] md:mt-[180px]" : ""} ${
           i !== 0 && (i === 1 || i % 2 === 0) ? "mt-[70px] md:mt-[90px]" : ""
-        }`}
+        } `}
       >
         <Image
           src={item.img}
@@ -78,7 +78,7 @@ const Card = ({
           className={`${imageClass}`}
         />
         <h3 className={`${h3Class}`}>{item.title}</h3>
-        <p>
+        <p className="">
           {item.text} <span className="font-bold">{item.span}</span>
         </p>
       </div>

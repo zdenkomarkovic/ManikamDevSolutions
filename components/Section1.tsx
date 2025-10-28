@@ -65,7 +65,7 @@ const Section1 = ({
         }}
         className="hidden md:block py-16 sticky top-10  z-20"
       >
-        <div className="container px-4 rounded-3xl mx-auto  bg-gradient-to-br from-black via-gray-900 to-orange-500 relative z-20  py-8 md:py-16 shadow-xl border-8 border-white text-center ">
+        <div className="container px-4 rounded-3xl mx-auto  bg-gradient-to-br from-black via-gray-900 to-orange-600 relative z-20  py-8 md:py-16 shadow-xl border-8 border-white text-center ">
           <div className="py-10 px-0 mx-auto relative z-20">
             <h2 className="text-xl text-white italic md:text-5xl pb-8 md:pb-12">
               <div className="">
@@ -215,7 +215,7 @@ const Card = ({
       <div
         className={`flex flex-col gap-6 pt-7  ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-        }  justify-between items-center rounded-3xl text-white bg-gradient-to-br  from-black via-gray-800 to-orange-500  h-[600px] mx-auto p-2 md:p-7`}
+        }  justify-between items-center rounded-3xl text-white bg-gradient-to-br  from-black via-gray-800 to-orange-600  h-[600px] mx-auto p-2 md:p-7`}
       >
         <div className="md:w-[45%] space-y-5 md:space-y-10">
           <h3 className=" text-2xl md:text-3xl xl:text-4xl">{text.title}</h3>

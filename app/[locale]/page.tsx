@@ -70,7 +70,7 @@ export default async function Home({
 
   return (
     <main>
-      <div className=" bg-gray-900/95">
+      <div className="bg-gray-900/95">
         <ParticlesBackground />
         <Hero title={heroTitle} section={section} />
         <Section1 section={section} cards={cards} />
