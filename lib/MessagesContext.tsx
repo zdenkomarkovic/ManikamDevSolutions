@@ -9,6 +9,9 @@ type MessagesContextType = {
   locale: Locale;
 };
 
+type MessageValue = string | Record<string, MessageValue>;
+type NestedMessages = Record<string, MessageValue>;
+
 const MessagesContext = createContext<MessagesContextType | null>(null);
 
 export function useMessages() {
@@ -28,7 +31,7 @@ export function useCurrentLocale() {
 }
 
 // Helper function to flatten nested messages object
-function flattenMessages(nestedMessages: Record<string, any>, prefix = ''): Record<string, string> {
+function flattenMessages(nestedMessages: NestedMessages, prefix = ''): Record<string, string> {
   return Object.keys(nestedMessages).reduce((messages, key) => {
     const value = nestedMessages[key];
     const prefixedKey = prefix ? `${prefix}.${key}` : key;
@@ -36,7 +39,7 @@ function flattenMessages(nestedMessages: Record<string, any>, prefix = ''): Reco
     if (typeof value === 'string') {
       messages[prefixedKey] = value;
     } else if (typeof value === 'object' && value !== null) {
-      Object.assign(messages, flattenMessages(value, prefixedKey));
+      Object.assign(messages, flattenMessages(value as NestedMessages, prefixedKey));
     }
 
     return messages;
@@ -50,8 +53,7 @@ export function MessagesProvider({
 }: {
   children: React.ReactNode;
   locale: Locale;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  messages: Record<string, any>;
+  messages: NestedMessages;
 }) {
   const flatMessages = flattenMessages(messages);
 

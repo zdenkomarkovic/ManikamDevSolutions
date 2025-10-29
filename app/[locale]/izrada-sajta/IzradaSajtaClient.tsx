@@ -15,6 +15,10 @@ import WhyUs from "@/components/izrada-sajta/WhyUs";
 import { MessagesProvider } from "@/lib/MessagesContext";
 import { useLocale } from "@/lib/LocaleContext";
 
+// Type for the message structure
+type MessageValue = string | Record<string, MessageValue>;
+type Messages = Record<string, MessageValue>;
+
 // Animacija varijante za fade in + slide up
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -61,8 +65,7 @@ const heroVariants = {
 
 const IzradaSajtaClient = () => {
   const locale = useLocale();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [messages, setMessages] = useState<Record<string, any> | null>(null);
+  const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {
     async function loadMessages() {
