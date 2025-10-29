@@ -1,15 +1,18 @@
-import { Metadata } from "next";
-import ContactForm from "@/components/ContactForm";
+import type { Metadata } from "next";
+import ContactClient from "@/components/contact/ContactClient";
+import { LocaleProvider } from "@/lib/LocaleContext";
 
-export async function generateMetadata({
-  params,
-}: {
+type Props = {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
+  const messages = await import(`@/lang/contact/${locale}.json`);
+
   return {
-    title: "Contact - Manikam Web Solutions",
+    title: messages.contact.page.title,
     alternates: {
       canonical: `https://manikamwebsolutions.com/${locale}/contact`,
       languages: {
@@ -20,10 +23,12 @@ export async function generateMetadata({
   };
 }
 
-export default function ContactPage() {
+export default async function ContactPage({ params }: Props) {
+  const { locale } = await params;
+
   return (
-    <div className="bg-gray-900/90">
-      <ContactForm />
-    </div>
+    <LocaleProvider locale={locale as "en" | "sr"}>
+      <ContactClient />
+    </LocaleProvider>
   );
 }

@@ -1,0 +1,38 @@
+{
+  "contact": {
+    "page": {
+      "title": "Contact - Manikam Web Solutions"
+    },
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're ready to answer all your questions and start your project. Choose the communication method that suits you best."
+    },
+    "offices": {
+      "usa": "Washington D.C. USA",
+      "serbia": "Niš, Serbia"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Your full name",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+1 240 810 3730",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Describe your project or ask a question...",
+      "submitButton": "Send Message",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "nameRequired": "Please enter your full name",
+      "phoneRequired": "Please enter your phone number",
+      "emailInvalid": "Please enter a valid email address",
+      "messageMinLength": "Message must be at least 10 characters long."
+    },
+    "toast": {
+      "success": "Message sent successfully!",
+      "error": "Failed to send message."
+    }
+  }
+}

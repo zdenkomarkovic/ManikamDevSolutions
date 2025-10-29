@@ -1,0 +1,38 @@
+{
+  "contact": {
+    "page": {
+      "title": "Kontakt - Manikam Web Solutions"
+    },
+    "hero": {
+      "title": "Kontaktirajte Nas",
+      "subtitle": "Spremni smo da odgovorimo na sva vaša pitanja i započnemo vaš projekat. Izaberite način komunikacije koji vam najviše odgovara."
+    },
+    "offices": {
+      "usa": "Washington D.C. USA",
+      "serbia": "Niš, Srbija"
+    },
+    "form": {
+      "title": "Pošaljite Nam Poruku",
+      "nameLabel": "Ime i Prezime",
+      "namePlaceholder": "Vaše ime i prezime",
+      "phoneLabel": "Broj Telefona",
+      "phonePlaceholder": "+381 64 123 4567",
+      "emailLabel": "Email Adresa",
+      "emailPlaceholder": "vas.email@primer.com",
+      "messageLabel": "Vaša Poruka",
+      "messagePlaceholder": "Opišite vaš projekat ili postavite pitanje...",
+      "submitButton": "Pošalji Poruku",
+      "submitting": "Šaljem..."
+    },
+    "validation": {
+      "nameRequired": "Molimo unesite vase ime i prezime",
+      "phoneRequired": "Molimo unesite vas broj telefona",
+      "emailInvalid": "Molimo unesite vasu email adresu",
+      "messageMinLength": "Poruka mora imati najmanje 10 karaktera."
+    },
+    "toast": {
+      "success": "Poruka uspešno poslata!",
+      "error": "Slanje poruke nije uspelo."
+    }
+  }
+}

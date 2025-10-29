@@ -25,17 +25,26 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Molimo unesite vase ime i prezime" }),
-  phone: z.string().min(2, { message: "Molimo unesite vas broj telefona" }),
-  email: z.string().email({ message: "Molimo unesite vasu email adresu" }),
-  message: z.string().min(10, {
-    message: "Poruka mora imati najmanje 10 karaktera.",
-  }),
-});
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function ContactForm() {
+  const intl = useMessages();
+
+  const contactFormSchema = z.object({
+    name: z.string().min(2, {
+      message: intl.formatMessage({ id: "contact.validation.nameRequired" })
+    }),
+    phone: z.string().min(2, {
+      message: intl.formatMessage({ id: "contact.validation.phoneRequired" })
+    }),
+    email: z.string().email({
+      message: intl.formatMessage({ id: "contact.validation.emailInvalid" })
+    }),
+    message: z.string().min(10, {
+      message: intl.formatMessage({ id: "contact.validation.messageMinLength" }),
+    }),
+  });
+
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -57,9 +66,9 @@ export default function ContactForm() {
     });
 
     if (response?.messageId) {
-      toast.success("Poruka uspešno poslata!");
+      toast.success(intl.formatMessage({ id: "contact.toast.success" }));
     } else {
-      toast.error("Slanje poruke nije uspelo.");
+      toast.error(intl.formatMessage({ id: "contact.toast.error" }));
     }
     form.reset();
   };
@@ -102,7 +111,7 @@ export default function ContactForm() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Kontaktirajte Nas
+          {intl.formatMessage({ id: "contact.hero.title" })}
         </motion.h1>
       </div>
 
@@ -113,8 +122,7 @@ export default function ContactForm() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Spremni smo da odgovorimo na sva vaša pitanja i započnemo vaš projekat.
-        Izaberite način komunikacije koji vam najviše odgovara.
+        {intl.formatMessage({ id: "contact.hero.subtitle" })}
       </motion.p>
 
       <motion.div
@@ -136,7 +144,7 @@ export default function ContactForm() {
             <div className="flex items-center gap-3 mb-6">
               <FaMapMarkerAlt className="text-2xl text-orange-400" />
               <h3 className="text-2xl font-bold text-gray-100">
-                Washington D.C. USA
+                {intl.formatMessage({ id: "contact.offices.usa" })}
               </h3>
             </div>
             <div className="space-y-4">
@@ -183,7 +191,7 @@ export default function ContactForm() {
           >
             <div className="flex items-center gap-3 mb-6">
               <FaMapMarkerAlt className="text-2xl text-orange-400" />
-              <h3 className="text-2xl font-bold text-gray-100">Niš, Srbija</h3>
+              <h3 className="text-2xl font-bold text-gray-100">{intl.formatMessage({ id: "contact.offices.serbia" })}</h3>
             </div>
             <div className="space-y-4">
               <motion.a
@@ -268,7 +276,7 @@ export default function ContactForm() {
           variants={cardVariants}
         >
           <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Pošaljite Nam Poruku
+            {intl.formatMessage({ id: "contact.form.title" })}
           </h3>
           <Form {...form}>
             <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
@@ -278,11 +286,11 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-base font-semibold text-gray-900">
-                      Ime i Prezime
+                      {intl.formatMessage({ id: "contact.form.nameLabel" })}
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Vaše ime i prezime"
+                        placeholder={intl.formatMessage({ id: "contact.form.namePlaceholder" })}
                         {...field}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -297,11 +305,11 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-base font-semibold text-gray-900">
-                      Broj Telefona
+                      {intl.formatMessage({ id: "contact.form.phoneLabel" })}
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="+381 64 123 4567"
+                        placeholder={intl.formatMessage({ id: "contact.form.phonePlaceholder" })}
                         {...field}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -316,11 +324,11 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-base font-semibold text-gray-900">
-                      Email Adresa
+                      {intl.formatMessage({ id: "contact.form.emailLabel" })}
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="vas.email@primer.com"
+                        placeholder={intl.formatMessage({ id: "contact.form.emailPlaceholder" })}
                         {...field}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -335,12 +343,12 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-base font-semibold text-gray-900">
-                      Vaša Poruka
+                      {intl.formatMessage({ id: "contact.form.messageLabel" })}
                     </FormLabel>
                     <FormControl>
                       <Textarea
                         {...field}
-                        placeholder="Opišite vaš projekat ili postavite pitanje..."
+                        placeholder={intl.formatMessage({ id: "contact.form.messagePlaceholder" })}
                         rows={6}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -357,7 +365,7 @@ export default function ContactForm() {
                   disabled={isLoading}
                   className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-6 text-lg transition-all"
                 >
-                  {isLoading ? "Šaljem..." : "Pošalji Poruku"}
+                  {isLoading ? intl.formatMessage({ id: "contact.form.submitting" }) : intl.formatMessage({ id: "contact.form.submitButton" })}
                 </Button>
               </motion.div>
             </form>
