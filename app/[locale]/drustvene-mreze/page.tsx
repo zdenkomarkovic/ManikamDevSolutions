@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Upravljanje Društvenim Mrežama - Facebook i Instagram Marketing | Manikam Dev Solutions",
-    "description":
+    description:
       "Profesionalno upravljanje Facebook i Instagram profilima. Povećajte angažman i doseg na društvenim mrežama.",
     type: "website",
   },

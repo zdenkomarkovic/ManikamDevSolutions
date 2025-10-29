@@ -9,7 +9,7 @@ type MessagesContextType = {
   locale: Locale;
 };
 
-type MessageValue = string | Record<string, MessageValue>;
+type MessageValue = string | { [key: string]: MessageValue };
 type NestedMessages = Record<string, MessageValue>;
 
 const MessagesContext = createContext<MessagesContextType | null>(null);

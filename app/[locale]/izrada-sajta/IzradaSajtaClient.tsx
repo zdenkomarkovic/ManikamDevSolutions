@@ -16,7 +16,7 @@ import { MessagesProvider } from "@/lib/MessagesContext";
 import { useLocale } from "@/lib/LocaleContext";
 
 // Type for the message structure
-type MessageValue = string | Record<string, MessageValue>;
+type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
 
 // Animacija varijante za fade in + slide up
