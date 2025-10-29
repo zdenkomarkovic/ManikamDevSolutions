@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const IntroWebshop = () => {
+  const intl = useMessages();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,7 +54,7 @@ const IntroWebshop = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Zašto je web shop ključan za vaš uspeh?
+            {intl.formatMessage({ id: "webshopDevelopment.intro.title" })}
           </motion.h2>
         </div>
         <motion.div
@@ -62,24 +65,13 @@ const IntroWebshop = () => {
           viewport={{ once: true }}
         >
           <motion.p variants={itemVariants}>
-            U digitalnom dobu, online prodavnica nije luksuz već neophodnost.
-            Vaši konkurenti već prodaju online 24 sata dnevno, 7 dana u nedelji.
-            Web shop vam omogućava da dosegnete kupce širom sveta, povećate
-            prihode i automatizujete prodajni proces.
+            {intl.formatMessage({ id: "webshopDevelopment.intro.p1" })}
           </motion.p>
           <motion.p variants={itemVariants}>
-            Naši web shopovi nisu samo digitalne prodavnice - to su moćni
-            poslovni alati koji transformišu način na koji vodite biznis. Sa
-            naprednim funkcionalnostima za upravljanje zalihama, automatskim
-            procesiranjem porudžbina i detaljnim analitikama, vaš web shop
-            postaje srce vašeg digitalnog poslovanja.
+            {intl.formatMessage({ id: "webshopDevelopment.intro.p2" })}
           </motion.p>
           <motion.p variants={itemVariants}>
-            Koristimo najnovije tehnologije poput React.js i Next.js koje
-            garantuju brzinu, sigurnost i odličnu poziciju na Google
-            pretraživačima. Za razliku od WordPress ili drugih template rešenja,
-            naši custom web shopovi su optimizovani za performanse i SEO od
-            prvog dana.
+            {intl.formatMessage({ id: "webshopDevelopment.intro.p3" })}
           </motion.p>
         </motion.div>
       </motion.div>

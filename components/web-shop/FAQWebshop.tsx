@@ -1,46 +1,42 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const faqs = [
-  {
-    question: "Koliko košta izrada web shopa?",
-    answer:
-      "Cena zavisi od brojnih faktora: broja proizvoda, kompleksnosti funkcionalnosti, integracija koje su potrebne, dizajna i specifičnih zahteva. Naš osnovni paket počinje od povoljnih cena za male biznise, dok premium rešenja sa naprednim funkcionalnostima mogu biti skuplja ali donose značajan ROI. Kontaktirajte nas za personalizovanu ponudu.",
-  },
-  {
-    question: "Koliko traje izrada web shopa?",
-    answer:
-      "Osnovni web shop se može završiti za 10-14 dana. Profesionalni web shopovi sa više funkcionalnosti obično traju 14-21 dan, dok kompleksna enterprise rešenja mogu trajati 21-30 dana ili više. Vreme zavisi od broja proizvoda, integracija i specifičnih zahteva. Tokom razvoja redovno vas ažuriramo o napretku.",
-  },
-  {
-    question: "Da li mogu sam dodavati i menjati proizvode?",
-    answer:
-      "Apsolutno! Svi naši web shopovi dolaze sa intuitivnim admin panelom gde možete lako dodavati nove proizvode, menjati cene, upravljati zalihama, pratiti porudžbine i sve ostale funkcije. Pružamo vam detaljnu obuku i dokumentaciju. Admin panel je dizajniran da bude jednostavan za korišćenje bez tehničkog znanja.",
-  },
-  {
-    question: "Koje payment gateway-e podržavate?",
-    answer:
-      "Integrišemo sve popularne payment gateway-e: bankarske kartice (Visa, MasterCard, Maestro), PayPal, Stripe, lokalne banke, pouzeće. Svi payment procesi su potpuno sigurni i kompatibilni sa PCI DSS standardima.",
-  },
-  {
-    question: "Da li je web shop SEO optimizovan?",
-    answer:
-      "Da, SEO optimizacija je ugrađena u sve naše web shopove. Implementiramo najbolje SEO prakse: optimizovane URL strukture, meta tagove za svaki proizvod, rich snippets, schema markup za proizvode, optimizaciju brzine, mobilnu prilagodljivost i sve ostalo što Google rangira. Rezultat je bolja vidljivost i više organskog saobraćaja.",
-  },
-  {
-    question: "Šta se dešava posle lansiranja? Da li pružate podršku?",
-    answer:
-      "Nakon lansiranja pružamo tehničku podršku koja je uključena u paket (3-6 meseci zavisno od paketa). Pomažemo vam sa svim pitanjima, rešavamo eventualne probleme i radimo na optimizacijama. Nakon inicijalnog perioda, možete nastaviti sa našim servisom održavanja ili upravljati web shopom samostalno.",
-  },
-  {
-    question: "Da li mogu migrirati postojeći web shop?",
-    answer:
-      "Da, možemo migrirati vaš postojeći web shop sa bilo koje platforme (WooCommerce, Shopify, Magento, PrestaShop) na našu optimizovanu custom platformu. Migracija uključuje sve proizvode, klijente, porudžbine, kategorije i ostale podatke. Vaš web shop će nakon migracije biti brži, sigurniji i bolje optimizovan.",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 const FAQWebshop = () => {
+  const intl = useMessages();
+
+  const faqs = [
+    {
+      questionId: "webshopDevelopment.faq.q1.question",
+      answerId: "webshopDevelopment.faq.q1.answer",
+    },
+    {
+      questionId: "webshopDevelopment.faq.q2.question",
+      answerId: "webshopDevelopment.faq.q2.answer",
+    },
+    {
+      questionId: "webshopDevelopment.faq.q3.question",
+      answerId: "webshopDevelopment.faq.q3.answer",
+    },
+    {
+      questionId: "webshopDevelopment.faq.q4.question",
+      answerId: "webshopDevelopment.faq.q4.answer",
+    },
+    {
+      questionId: "webshopDevelopment.faq.q5.question",
+      answerId: "webshopDevelopment.faq.q5.answer",
+    },
+    {
+      questionId: "webshopDevelopment.faq.q6.question",
+      answerId: "webshopDevelopment.faq.q6.answer",
+    },
+    {
+      questionId: "webshopDevelopment.faq.q7.question",
+      answerId: "webshopDevelopment.faq.q7.answer",
+    },
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,7 +75,7 @@ const FAQWebshop = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Često postavljana pitanja o web shopovima
+          {intl.formatMessage({ id: "webshopDevelopment.faq.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -110,7 +106,7 @@ const FAQWebshop = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              {faq.question}
+              {intl.formatMessage({ id: faq.questionId })}
             </motion.h3>
             <motion.p
               className=""
@@ -119,7 +115,7 @@ const FAQWebshop = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {faq.answer}
+              {intl.formatMessage({ id: faq.answerId })}
             </motion.p>
           </motion.div>
         ))}

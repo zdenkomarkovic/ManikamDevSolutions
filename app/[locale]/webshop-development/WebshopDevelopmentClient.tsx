@@ -61,7 +61,7 @@ const heroVariants = {
   },
 };
 
-const IzradaWebShopaClient = () => {
+const WebshopDevelopmentClient = () => {
   const locale = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
@@ -164,4 +164,4 @@ const IzradaWebShopaClient = () => {
   );
 };
 
-export default IzradaWebShopaClient;
+export default WebshopDevelopmentClient;

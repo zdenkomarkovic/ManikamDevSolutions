@@ -13,65 +13,59 @@ import {
   FaBell,
   FaMobile,
 } from "react-icons/fa";
-
-const features = [
-  {
-    icon: FaShoppingCart,
-    title: "Katalog Proizvoda",
-    description:
-      "Neograničen broj proizvoda sa kategorijama, filterima, varijantama (veličine, boje), galerijom slika i detaljnim opisima. Podrška za virtuelne i digitalne proizvode.",
-  },
-  {
-    icon: FaCreditCard,
-    title: "Sistemi Plaćanja",
-    description:
-      "Integracija sa svim popularnim gateway-ima: kartice (Visa, MasterCard), PayPal, bankarske uplate, pouzeće. Sigurno i brzo procesiranje svih transakcija.",
-  },
-  {
-    icon: FaBoxes,
-    title: "Upravljanje Zalihama",
-    description:
-      "Automatsko praćenje stanja zaliha, notifikacije kada je zaliha pri kraju, upravljanje varijantama proizvoda i skladišnim lokacijama.",
-  },
-  {
-    icon: FaTruck,
-    title: "Dostava i Logistika",
-    description:
-      "Integracija sa kurirskim službama (Post Express, AKS, BEX), automatsko kreiranje nalepnica, praćenje pošiljki i kalkulacija troškova dostave.",
-  },
-  {
-    icon: FaUserFriends,
-    title: "Korisnički Nalozi",
-    description:
-      "Registracija i prijava kupaca, history porudžbina, wish liste, sačuvane adrese, praćenje statusa narudžbina u realnom vremenu.",
-  },
-  {
-    icon: FaChartLine,
-    title: "Analitika i Izveštaji",
-    description:
-      "Detaljni izveštaji o prodaji, najprodavaniji proizvodi, analiza korisničkog ponašanja, konverzije, napuštene korpe i ROI praćenje.",
-  },
-  {
-    icon: FaSearch,
-    title: "SEO Optimizacija",
-    description:
-      "Ugrađena SEO optimizacija za sve stranice, meta tagovi za proizvode, rich snippets, sitemap, optimizovane URL strukture i schema markup.",
-  },
-  {
-    icon: FaBell,
-    title: "Email Notifikacije",
-    description:
-      "Automatski emailovi za potvrde porudžbina, promene statusa, tracking informacije, newsletter kampanje i personalizovane ponude.",
-  },
-  {
-    icon: FaMobile,
-    title: "Mobilna Aplikacija",
-    description:
-      "Opciono: Native mobilne aplikacije za iOS i Android sa push notifikacijama, QR skeniranjem i offline mogućnostima.",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 const FeaturesWebshop = () => {
+  const intl = useMessages();
+
+  const features = [
+    {
+      icon: FaShoppingCart,
+      titleId: "webshopDevelopment.features.catalog.title",
+      descriptionId: "webshopDevelopment.features.catalog.description",
+    },
+    {
+      icon: FaCreditCard,
+      titleId: "webshopDevelopment.features.payment.title",
+      descriptionId: "webshopDevelopment.features.payment.description",
+    },
+    {
+      icon: FaBoxes,
+      titleId: "webshopDevelopment.features.inventory.title",
+      descriptionId: "webshopDevelopment.features.inventory.description",
+    },
+    {
+      icon: FaTruck,
+      titleId: "webshopDevelopment.features.shipping.title",
+      descriptionId: "webshopDevelopment.features.shipping.description",
+    },
+    {
+      icon: FaUserFriends,
+      titleId: "webshopDevelopment.features.users.title",
+      descriptionId: "webshopDevelopment.features.users.description",
+    },
+    {
+      icon: FaChartLine,
+      titleId: "webshopDevelopment.features.analytics.title",
+      descriptionId: "webshopDevelopment.features.analytics.description",
+    },
+    {
+      icon: FaSearch,
+      titleId: "webshopDevelopment.features.seo.title",
+      descriptionId: "webshopDevelopment.features.seo.description",
+    },
+    {
+      icon: FaBell,
+      titleId: "webshopDevelopment.features.notifications.title",
+      descriptionId: "webshopDevelopment.features.notifications.description",
+    },
+    {
+      icon: FaMobile,
+      titleId: "webshopDevelopment.features.mobile.title",
+      descriptionId: "webshopDevelopment.features.mobile.description",
+    },
+  ];
+
   return (
     <div className="mt-16 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl p-8 shadow-lg border border-gray-100">
       <div className="flex justify-center mb-8">
@@ -82,7 +76,7 @@ const FeaturesWebshop = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Ključne funkcionalnosti našeg web shopa
+          {intl.formatMessage({ id: "webshopDevelopment.features.title" })}
         </motion.h2>
       </div>
       <motion.p
@@ -92,9 +86,7 @@ const FeaturesWebshop = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Naša platforma obuhvata sve što vam je potrebno za uspešan online
-        biznis. Svaka funkcionalnost je pažljivo dizajnirana da pruži najbolje
-        iskustvo kako vama tako i vašim kupcima.
+        {intl.formatMessage({ id: "webshopDevelopment.features.subtitle" })}
       </motion.p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => {
@@ -115,10 +107,10 @@ const FeaturesWebshop = () => {
               <div className="flex items-center gap-3 mb-2">
                 <Icon className="text-2xl text-orange-600" />
                 <h3 className="text-lg font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-                  {feature.title}
+                  {intl.formatMessage({ id: feature.titleId })}
                 </h3>
               </div>
-              <p className="text-sm">{feature.description}</p>
+              <p className="text-sm">{intl.formatMessage({ id: feature.descriptionId })}</p>
             </motion.div>
           );
         })}

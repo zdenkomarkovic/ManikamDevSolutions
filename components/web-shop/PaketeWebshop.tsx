@@ -15,8 +15,11 @@ import {
   FaServer,
   FaGlobe,
 } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const PaketeWebshop = () => {
+  const intl = useMessages();
+
   return (
     <div className="grid md:grid-cols-3 gap-6 ">
       {/* Osnovni paket */}
@@ -30,41 +33,41 @@ const PaketeWebshop = () => {
         <div>
           {" "}
           <h3 className="text-2xl font-bold mb-2 text-orange-600">
-            Osnovni Web Shop - 700€
+            {intl.formatMessage({ id: "webshopDevelopment.packages.basic.title" })}
           </h3>
           <p className="mb-4">
-            Idealno za manje biznise koji počinju online prodaju
+            {intl.formatMessage({ id: "webshopDevelopment.packages.basic.subtitle" })}
           </p>
           <div className="w-full h-1 bg-gray-200 mb-4"></div>
           <div className="space-y-3 mb-6">
             <div className="flex items-center">
               <FaShoppingCart className="text-orange-600 mr-3 flex-shrink-0" />
-              <span>Do 1000 proizvoda</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.feature1" })}</span>
             </div>
             <div className="flex items-center">
               <FaMobile className="text-orange-600 mr-3 flex-shrink-0" />
-              <span>Mobilna optimizacija</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.feature2" })}</span>
             </div>
             <div className="flex items-center">
               <FaLock className="text-orange-600 mr-3 flex-shrink-0" />
-              <span>SSL sertifikat</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.feature3" })}</span>
             </div>
             <div className="flex items-center">
               <FaBoxes className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Osnovno upravljanje zalihama</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.feature4" })}</span>
             </div>
             <div className="flex items-center">
               <FaServer className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Hosting za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.feature5" })}</span>
             </div>
             <div className="flex items-center">
               <FaGlobe className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Domen za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.feature6" })}</span>
             </div>
           </div>
         </div>
         <div className=" ">
-          <strong>Vreme izrade:</strong> 10-14 dana
+          <strong>{intl.formatMessage({ id: "webshopDevelopment.packages.basic.timeline" })}</strong> {intl.formatMessage({ id: "webshopDevelopment.packages.basic.timelineDays" })}
         </div>
       </motion.div>
 
@@ -78,57 +81,57 @@ const PaketeWebshop = () => {
       >
         <div>
           <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 py-1 rounded-bl-2xl text-xs">
-            <span className="font-bold">NAJPOPULARNIJI</span>
+            <span className="font-bold">{intl.formatMessage({ id: "webshopDevelopment.packages.professional.badge" })}</span>
           </div>
 
           <div className="">
             <h3 className="text-2xl font-bold mb-2 text-orange-600">
-              Profesionalni Web Shop - 1000€
+              {intl.formatMessage({ id: "webshopDevelopment.packages.professional.title" })}
             </h3>
             <p className=" mb-4">
-              Kompletno e-commerce rešenje za ozbiljan biznis
+              {intl.formatMessage({ id: "webshopDevelopment.packages.professional.subtitle" })}
             </p>
             <div className="w-full h-1 bg-gray-200 mb-4"></div>
             <div className="space-y-3 mb-6">
               <div className="flex items-center">
                 <FaShoppingCart className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-                <span>Do 5000 proizvoda</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature1" })}</span>
               </div>
 
               <div className="flex items-start">
                 <FaCreditCard className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-                <span>Osnovno plaćanje (kartice, pouzeće)</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature2" })}</span>
               </div>
               <div className="flex items-start">
                 <FaCog className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-                <span>Napredne upravljanje zalihama</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature3" })}</span>
               </div>
               <div className="flex items-start">
                 <FaMobile className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-                <span>Napredna mobilna optimizacija</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature4" })}</span>
               </div>
               <div className="flex items-start">
                 <FaChartLine className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-                <span>Analytics i izveštaji</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature5" })}</span>
               </div>
               <div className="flex items-start">
                 <FaBell className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-                <span>Email notifikacije za kupce</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature6" })}</span>
               </div>
               <div className="flex items-center">
                 <FaServer className="text-orange-600 mr-2 flex-shrink-0" />
-                <span>Hosting za prvu godinu</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature7" })}</span>
               </div>
               <div className="flex items-center">
                 <FaGlobe className="text-orange-600 mr-2 flex-shrink-0" />
-                <span>Domen za prvu godinu</span>
+                <span>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.feature8" })}</span>
               </div>
             </div>
           </div>
           <div className="">
-            <strong>Vreme izrade:</strong> 14-21 dan
+            <strong>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.timeline" })}</strong> {intl.formatMessage({ id: "webshopDevelopment.packages.professional.timelineDays" })}
             <br />
-            <strong>Podrška:</strong> 3 meseca besplatno
+            <strong>{intl.formatMessage({ id: "webshopDevelopment.packages.professional.support" })}</strong> {intl.formatMessage({ id: "webshopDevelopment.packages.professional.supportDuration" })}
           </div>
         </div>
       </motion.div>
@@ -143,44 +146,44 @@ const PaketeWebshop = () => {
       >
         <div>
           <h3 className="text-2xl font-bold mb-2 text-orange-600">
-            Premium Web Shop - cena po projektu
+            {intl.formatMessage({ id: "webshopDevelopment.packages.premium.title" })}
           </h3>
           <p className=" mb-4">
-            Enterprise rešenje sa naprednim funkcionalnostima
+            {intl.formatMessage({ id: "webshopDevelopment.packages.premium.subtitle" })}
           </p>
           <div className="w-full h-1 bg-gray-200 mb-4"></div>
           <div className="space-y-3 mb-6">
             <div className="flex items-center">
               <FaShoppingCart className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Neograničeno</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.feature1" })}</span>
             </div>
             <div className="flex items-center">
               <FaCreditCard className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Osnovno plaćanje (kartice, pouzeće)</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.feature2" })}</span>
             </div>
             <div className="flex items-center">
               <FaCog className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Razne funkcionalnosti - po želji</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.feature3" })}</span>
             </div>
 
             <div className="flex items-center">
               <FaLanguage className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Podrška za više jezika i valuta</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.feature4" })}</span>
             </div>
             <div className="flex items-center">
               <FaServer className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Hosting za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.feature5" })}</span>
             </div>
             <div className="flex items-center">
               <FaGlobe className="text-orange-600 mr-2 flex-shrink-0" />
-              <span>Domen za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.feature6" })}</span>
             </div>
           </div>
         </div>
         <div className="">
-          <strong>Vreme izrade:</strong> 21-30 dana
+          <strong>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.timeline" })}</strong> {intl.formatMessage({ id: "webshopDevelopment.packages.premium.timelineDays" })}
           <br />
-          <strong>Podrška:</strong> 6 meseci + prioritet
+          <strong>{intl.formatMessage({ id: "webshopDevelopment.packages.premium.support" })}</strong> {intl.formatMessage({ id: "webshopDevelopment.packages.premium.supportDuration" })}
         </div>
       </motion.div>
     </div>

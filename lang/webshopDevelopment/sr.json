@@ -1,0 +1,196 @@
+{
+  "webshopDevelopment": {
+    "page": {
+      "title": "Izrada Web Shopa - Profesionalne Online Prodavnice | Manikam Web Solutions",
+      "description": "Profesionalna izrada web shopova i e-commerce rešenja. Kompletne online prodavnice sa integrisanim plaćanjem, upravljanjem zalihama, SEO optimizacijom i mobilnom prilagodbom za maksimalne rezultate."
+    },
+    "hero": {
+      "title": "Izrada Web Shopa",
+      "subtitle": "Transformišite svoj biznis sa profesionalnom online prodavnicom koja radi 24/7. Kreiramo e-commerce rešenja koja povećavaju prodaju i automatizuju vaš posao.",
+      "badge1": "E-commerce Eksperti",
+      "badge2": "Integrisano Plaćanje",
+      "badge3": "SEO Optimizovano"
+    },
+    "intro": {
+      "title": "Zašto je web shop ključan za vaš uspeh?",
+      "p1": "U digitalnom dobu, online prodavnica nije luksuz već neophodnost. Vaši konkurenti već prodaju online 24 sata dnevno, 7 dana u nedelji. Web shop vam omogućava da dosegnete kupce širom sveta, povećate prihode i automatizujete prodajni proces.",
+      "p2": "Naši web shopovi nisu samo digitalne prodavnice - to su moćni poslovni alati koji transformišu način na koji vodite biznis. Sa naprednim funkcionalnostima za upravljanje zalihama, automatskim procesiranjem porudžbina i detaljnim analitikama, vaš web shop postaje srce vašeg digitalnog poslovanja.",
+      "p3": "Koristimo najnovije tehnologije poput React.js i Next.js koje garantuju brzinu, sigurnost i odličnu poziciju na Google pretraživačima. Za razliku od WordPress ili drugih template rešenja, naši custom web shopovi su optimizovani za performanse i SEO od prvog dana."
+    },
+    "packages": {
+      "basic": {
+        "title": "Osnovni Web Shop - 700€",
+        "subtitle": "Idealno za manje biznise koji počinju online prodaju",
+        "feature1": "Do 1000 proizvoda",
+        "feature2": "Mobilna optimizacija",
+        "feature3": "SSL sertifikat",
+        "feature4": "Osnovno upravljanje zalihama",
+        "feature5": "Hosting za prvu godinu",
+        "feature6": "Domen za prvu godinu",
+        "timeline": "Vreme izrade:",
+        "timelineDays": "10-14 dana"
+      },
+      "professional": {
+        "badge": "NAJPOPULARNIJI",
+        "title": "Profesionalni Web Shop - 1000€",
+        "subtitle": "Kompletno e-commerce rešenje za ozbiljan biznis",
+        "feature1": "Do 5000 proizvoda",
+        "feature2": "Osnovno plaćanje (kartice, pouzeće)",
+        "feature3": "Napredne upravljanje zalihama",
+        "feature4": "Napredna mobilna optimizacija",
+        "feature5": "Analytics i izveštaji",
+        "feature6": "Email notifikacije za kupce",
+        "feature7": "Hosting za prvu godinu",
+        "feature8": "Domen za prvu godinu",
+        "timeline": "Vreme izrade:",
+        "timelineDays": "14-21 dan",
+        "support": "Podrška:",
+        "supportDuration": "3 meseca besplatno"
+      },
+      "premium": {
+        "title": "Premium Web Shop - cena po projektu",
+        "subtitle": "Enterprise rešenje sa naprednim funkcionalnostima",
+        "feature1": "Neograničeno",
+        "feature2": "Osnovno plaćanje (kartice, pouzeće)",
+        "feature3": "Razne funkcionalnosti - po želji",
+        "feature4": "Podrška za više jezika i valuta",
+        "feature5": "Hosting za prvu godinu",
+        "feature6": "Domen za prvu godinu",
+        "timeline": "Vreme izrade:",
+        "timelineDays": "21-30 dana",
+        "support": "Podrška:",
+        "supportDuration": "6 meseci + prioritet"
+      }
+    },
+    "features": {
+      "title": "Ključne funkcionalnosti našeg web shopa",
+      "subtitle": "Naša platforma obuhvata sve što vam je potrebno za uspešan online biznis. Svaka funkcionalnost je pažljivo dizajnirana da pruži najbolje iskustvo kako vama tako i vašim kupcima.",
+      "catalog": {
+        "title": "Katalog Proizvoda",
+        "description": "Neograničen broj proizvoda sa kategorijama, filterima, varijantama (veličine, boje), galerijom slika i detaljnim opisima. Podrška za virtuelne i digitalne proizvode."
+      },
+      "payment": {
+        "title": "Sistemi Plaćanja",
+        "description": "Integracija sa svim popularnim gateway-ima: kartice (Visa, MasterCard), PayPal, bankarske uplate, pouzeće. Sigurno i brzo procesiranje svih transakcija."
+      },
+      "inventory": {
+        "title": "Upravljanje Zalihama",
+        "description": "Automatsko praćenje stanja zaliha, notifikacije kada je zaliha pri kraju, upravljanje varijantama proizvoda i skladišnim lokacijama."
+      },
+      "shipping": {
+        "title": "Dostava i Logistika",
+        "description": "Integracija sa kurirskim službama (Post Express, AKS, BEX), automatsko kreiranje nalepnica, praćenje pošiljki i kalkulacija troškova dostave."
+      },
+      "users": {
+        "title": "Korisnički Nalozi",
+        "description": "Registracija i prijava kupaca, history porudžbina, wish liste, sačuvane adrese, praćenje statusa narudžbina u realnom vremenu."
+      },
+      "analytics": {
+        "title": "Analitika i Izveštaji",
+        "description": "Detaljni izveštaji o prodaji, najprodavaniji proizvodi, analiza korisničkog ponašanja, konverzije, napuštene korpe i ROI praćenje."
+      },
+      "seo": {
+        "title": "SEO Optimizacija",
+        "description": "Ugrađena SEO optimizacija za sve stranice, meta tagovi za proizvode, rich snippets, sitemap, optimizovane URL strukture i schema markup."
+      },
+      "notifications": {
+        "title": "Email Notifikacije",
+        "description": "Automatski emailovi za potvrde porudžbina, promene statusa, tracking informacije, newsletter kampanje i personalizovane ponude."
+      },
+      "mobile": {
+        "title": "Mobilna Aplikacija",
+        "description": "Opciono: Native mobilne aplikacije za iOS i Android sa push notifikacijama, QR skeniranjem i offline mogućnostima."
+      }
+    },
+    "whatMakesSpecial": {
+      "title": "Šta čini naše web shopove posebnim?",
+      "mobile": {
+        "label": "Mobilna optimizacija:",
+        "text": "Preko 60% kupovina se vrši sa mobilnih uređaja. Naši web shopovi su potpuno responzivni i pružaju savršeno korisničko iskustvo na svim uređajima."
+      },
+      "speed": {
+        "label": "Brzina učitavanja:",
+        "text": "Svaka sekunda kašnjenja košta vas kupce. Naši web shopovi se učitavaju za manje od 3 sekunde, što značajno povećava konverzije."
+      },
+      "seo": {
+        "label": "SEO optimizacija:",
+        "text": "Vaš web shop mora biti pronađen. Implementiramo napredne SEO tehnike koje osiguravaju visoku poziciju na Google pretraživačima i više organskog saobraćaja."
+      },
+      "security": {
+        "label": "Sigurnost:",
+        "text": "SSL sertifikati, sigurno čuvanje podataka i PCI DSS kompatibilnost garantuju bezbednost vaših kupaca i njihovih finansijskih informacija."
+      }
+    },
+    "results": {
+      "title": "Rezultati koje možete očekivati",
+      "item1": "Povećanje prodaje za 40-60% u prvoj godini",
+      "item2": "Automatizacija 80% prodajnih procesa",
+      "item3": "Pristup globalnom tržištu 24/7",
+      "item4": "Smanjenje operativnih troškova za 30%"
+    },
+    "cta": {
+      "title": "Spremni za digitalni uspeh?",
+      "subtitle": "Kontaktirajte nas za besplatnu konsultaciju i procenu projekta",
+      "phone": "+1 240 810 3730",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "process": {
+      "title": "Kako izgleda proces izrade web shopa?",
+      "step1": {
+        "title": "Analiza i Planiranje",
+        "description": "Detaljno analiziramo vaše potrebe, ciljnu grupu, konkurenciju i poslovne ciljeve. Kreiramo strategiju za vaš web shop koja uključuje izbor proizvoda, cenovnu politiku, marketing strategiju i plan za implementaciju svih potrebnih funkcionalnosti."
+      },
+      "step2": {
+        "title": "Dizajn i UX/UI",
+        "description": "Kreiramo moderan, funkcionalan i konverzioni dizajn. Dizajn web shopa mora biti intuitivan, lako se navigirati i optimizovan za konverziju posetilaca u kupce. Fokusiramo se na korisničko iskustvo koje vodi do kupovine."
+      },
+      "step3": {
+        "title": "Razvoj i Integracije",
+        "description": "Koristimo najnovije e-commerce tehnologije za razvoj vašeg web shopa. Integrišemo sve potrebne sisteme: payment gateway, kurirske službe, CRM, email marketing, analitiku i druge third-party servise. Implementiramo sve dogovorene funkcionalnosti."
+      },
+      "step4": {
+        "title": "Unos Proizvoda i Sadržaja",
+        "description": "Pomažemo vam u unosu proizvoda, kategorija, opisa, slika i svih potrebnih informacija. Optimizujemo sadržaj za SEO i konverzije. Možete sami dodavati proizvode kroz intuitivan admin panel ili možemo to uraditi za vas."
+      },
+      "step5": {
+        "title": "Testiranje i Optimizacija",
+        "description": "Detaljno testiramo sve funkcionalnosti: proces kupovine, plaćanje, dostavu, email notifikacije, mobilnu verziju. Optimizujemo brzinu učitavanja, proveravamo sigurnost i testiramo na različitim uređajima i pretraživačima."
+      },
+      "step6": {
+        "title": "Lansiranje i Obuka",
+        "description": "Lansiramo vaš web shop, podešavamo Google Analytics, Search Console i druge alate za praćenje. Obučavamo vas za rad sa admin panelom, upravljanje porudžbinama, proizvodima i svim ostalim funkcijama. Pružamo podršku nakon lansiranja."
+      }
+    },
+    "faq": {
+      "title": "Često postavljana pitanja o web shopovima",
+      "q1": {
+        "question": "Koliko košta izrada web shopa?",
+        "answer": "Cena zavisi od brojnih faktora: broja proizvoda, kompleksnosti funkcionalnosti, integracija koje su potrebne, dizajna i specifičnih zahteva. Naš osnovni paket počinje od povoljnih cena za male biznise, dok premium rešenja sa naprednim funkcionalnostima mogu biti skuplja ali donose značajan ROI. Kontaktirajte nas za personalizovanu ponudu."
+      },
+      "q2": {
+        "question": "Koliko traje izrada web shopa?",
+        "answer": "Osnovni web shop se može završiti za 10-14 dana. Profesionalni web shopovi sa više funkcionalnosti obično traju 14-21 dan, dok kompleksna enterprise rešenja mogu trajati 21-30 dana ili više. Vreme zavisi od broja proizvoda, integracija i specifičnih zahteva. Tokom razvoja redovno vas ažuriramo o napretku."
+      },
+      "q3": {
+        "question": "Da li mogu sam dodavati i menjati proizvode?",
+        "answer": "Apsolutno! Svi naši web shopovi dolaze sa intuitivnim admin panelom gde možete lako dodavati nove proizvode, menjati cene, upravljati zalihama, pratiti porudžbine i sve ostale funkcije. Pružamo vam detaljnu obuku i dokumentaciju. Admin panel je dizajniran da bude jednostavan za korišćenje bez tehničkog znanja."
+      },
+      "q4": {
+        "question": "Koje payment gateway-e podržavate?",
+        "answer": "Integrišemo sve popularne payment gateway-e: bankarske kartice (Visa, MasterCard, Maestro), PayPal, Stripe, lokalne banke, pouzeće. Svi payment procesi su potpuno sigurni i kompatibilni sa PCI DSS standardima."
+      },
+      "q5": {
+        "question": "Da li je web shop SEO optimizovan?",
+        "answer": "Da, SEO optimizacija je ugrađena u sve naše web shopove. Implementiramo najbolje SEO prakse: optimizovane URL strukture, meta tagove za svaki proizvod, rich snippets, schema markup za proizvode, optimizaciju brzine, mobilnu prilagodljivost i sve ostalo što Google rangira. Rezultat je bolja vidljivost i više organskog saobraćaja."
+      },
+      "q6": {
+        "question": "Šta se dešava posle lansiranja? Da li pružate podršku?",
+        "answer": "Nakon lansiranja pružamo tehničku podršku koja je uključena u paket (3-6 meseci zavisno od paketa). Pomažemo vam sa svim pitanjima, rešavamo eventualne probleme i radimo na optimizacijama. Nakon inicijalnog perioda, možete nastaviti sa našim servisom održavanja ili upravljati web shopom samostalno."
+      },
+      "q7": {
+        "question": "Da li mogu migrirati postojeći web shop?",
+        "answer": "Da, možemo migrirati vaš postojeći web shop sa bilo koje platforme (WooCommerce, Shopify, Magento, PrestaShop) na našu optimizovanu custom platformu. Migracija uključuje sve proizvode, klijente, porudžbine, kategorije i ostale podatke. Vaš web shop će nakon migracije biti brži, sigurniji i bolje optimizovan."
+      }
+    }
+  }
+}
