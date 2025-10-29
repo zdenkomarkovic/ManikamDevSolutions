@@ -11,57 +11,53 @@ import {
   FaCog,
   FaUsers,
 } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const features = [
   {
     icon: FaSearch,
-    title: "Istraživanje Ključnih Reči",
-    description:
-      "Identifikujemo najprofitabilnije ključne reči za vaš biznis i industriju.",
+    titleId: "seoOptimization.features.keyword.title",
+    descriptionId: "seoOptimization.features.keyword.description",
   },
   {
     icon: FaFileAlt,
-    title: "Optimizacija Sadržaja",
-    description:
-      "Kreiramo i optimizujemo sadržaj koji rangira i privlači korisnike.",
+    titleId: "seoOptimization.features.content.title",
+    descriptionId: "seoOptimization.features.content.description",
   },
   {
     icon: FaCog,
-    title: "Tehnički SEO",
-    description:
-      "Optimizujemo brzinu, strukturu i tehničke aspekte vašeg sajta.",
+    titleId: "seoOptimization.features.technical.title",
+    descriptionId: "seoOptimization.features.technical.description",
   },
   {
     icon: FaLink,
-    title: "SEO Strategija",
-    description:
-      "Razvijamo sveobuhvatan plan optimizacije koji povezuje sadržaj, tehničke aspekte i poslovne ciljeve.",
+    titleId: "seoOptimization.features.strategy.title",
+    descriptionId: "seoOptimization.features.strategy.description",
   },
   {
     icon: FaMobileAlt,
-    title: "Mobile SEO",
-    description: "Osiguravamo savršenu optimizaciju za mobilne uređaje.",
+    titleId: "seoOptimization.features.mobile.title",
+    descriptionId: "seoOptimization.features.mobile.description",
   },
   {
     icon: FaMapMarkerAlt,
-    title: "Lokalni SEO",
-    description: "Poboljšavamo vidljivost u lokalnim rezultatima pretrage.",
+    titleId: "seoOptimization.features.local.title",
+    descriptionId: "seoOptimization.features.local.description",
   },
   {
     icon: FaChartLine,
-    title: "Analitika i Izveštaji",
-    description:
-      "Detaljno praćenje performansi i redovni izveštaji o napretku.",
+    titleId: "seoOptimization.features.analytics.title",
+    descriptionId: "seoOptimization.features.analytics.description",
   },
   {
     icon: FaUsers,
-    title: "Konkurentska Analiza",
-    description:
-      "Analiziramo konkurenciju i pronalazimo prilike za nadmašivanje.",
+    titleId: "seoOptimization.features.competitor.title",
+    descriptionId: "seoOptimization.features.competitor.description",
   },
 ];
 
 export default function SEOFeatures() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -116,7 +112,7 @@ export default function SEOFeatures() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-          Naše SEO Usluge
+          {intl.formatMessage({ id: "seoOptimization.features.title" })}
         </h2>
       </motion.div>
 
@@ -161,9 +157,11 @@ export default function SEOFeatures() {
                 <feature.icon className="text-2xl text-white" />
               </motion.div>
               <h4 className="text-xl font-bold mb-3 text-gray-100">
-                {feature.title}
+                {intl.formatMessage({ id: feature.titleId })}
               </h4>
-              <p className="text-gray-100">{feature.description}</p>
+              <p className="text-gray-100">
+                {intl.formatMessage({ id: feature.descriptionId })}
+              </p>
             </motion.div>
           );
         })}

@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SEOIntro() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -48,7 +50,7 @@ export default function SEOIntro() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Šta je SEO Optimizacija?
+        {intl.formatMessage({ id: "seoOptimization.intro.title" })}
       </motion.h2>
       <motion.div
         className="space-y-4"
@@ -57,22 +59,24 @@ export default function SEOIntro() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.p variants={itemVariants}>
-          <strong>SEO (Search Engine Optimization)</strong> je proces
-          optimizacije vašeg web sajta kako bi se poboljšalo njegovo rangiranje
-          u rezultatima pretrage na Google-u i drugim pretraživačima.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          Naš cilj je da vaš sajt bude vidljiv pravim korisnicima u pravo vreme.
-          Kombinujemo tehnički SEO, kvalitetan sadržaj i kvalitetne linkove kako
-          bismo ostvarili dugoročne rezultate.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          <strong>Više od 90% online iskustva počinje pretraživačem</strong> -
-          budite tu gde su vaši klijenti! Profesionalna SEO optimizacija nije
-          trošak, već investicija koja donosi dugoročne rezultate i organski
-          saobraćaj bez plaćanja za svaki klik.
-        </motion.p>
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "seoOptimization.intro.p1" }),
+          }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "seoOptimization.intro.p2" }),
+          }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "seoOptimization.intro.p3" }),
+          }}
+        />
       </motion.div>
     </motion.div>
   );

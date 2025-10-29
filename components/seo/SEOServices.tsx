@@ -2,54 +2,56 @@
 
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
-
-const services = [
-  {
-    category: "On-Page SEO",
-    items: [
-      "Optimizacija meta tagova i opisa",
-      "Optimizacija naslova i sadržaja",
-      "Optimizacija slika i alt atributa",
-      "Interna povezanost stranica",
-      "Optimizacija URL strukture",
-      "Schema markup implementacija",
-    ],
-  },
-  {
-    category: "Off-Page SEO",
-    items: [
-      "Guest posting na relevantnim sajtovima",
-      "Social signals optimizacija",
-      "Brand mention praćenje",
-      "Influencer outreach",
-      "PR strategija",
-    ],
-  },
-  {
-    category: "Tehnički SEO",
-    items: [
-      "Optimizacija brzine sajta",
-      "Mobile-first optimizacija",
-      "XML sitemap kreiranje",
-      "Robots.txt optimizacija",
-      "HTTPS i sigurnosni protokoli",
-      "Strukturirani podaci",
-    ],
-  },
-  {
-    category: "Lokalni SEO",
-    items: [
-      "Google My Business optimizacija",
-      "Lokalne citacije",
-      "Optimizacija za lokalne ključne reči",
-      "Google Maps rangiranje",
-      "Lokalni recenzije management",
-      "NAP konzistentnost",
-    ],
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SEOServices() {
+  const intl = useMessages();
+
+  const services = [
+    {
+      categoryId: "seoOptimization.services.onPage.title",
+      items: [
+        "seoOptimization.services.onPage.items.0",
+        "seoOptimization.services.onPage.items.1",
+        "seoOptimization.services.onPage.items.2",
+        "seoOptimization.services.onPage.items.3",
+        "seoOptimization.services.onPage.items.4",
+        "seoOptimization.services.onPage.items.5",
+      ],
+    },
+    {
+      categoryId: "seoOptimization.services.offPage.title",
+      items: [
+        "seoOptimization.services.offPage.items.0",
+        "seoOptimization.services.offPage.items.1",
+        "seoOptimization.services.offPage.items.2",
+        "seoOptimization.services.offPage.items.3",
+        "seoOptimization.services.offPage.items.4",
+      ],
+    },
+    {
+      categoryId: "seoOptimization.services.technical.title",
+      items: [
+        "seoOptimization.services.technical.items.0",
+        "seoOptimization.services.technical.items.1",
+        "seoOptimization.services.technical.items.2",
+        "seoOptimization.services.technical.items.3",
+        "seoOptimization.services.technical.items.4",
+        "seoOptimization.services.technical.items.5",
+      ],
+    },
+    {
+      categoryId: "seoOptimization.services.local.title",
+      items: [
+        "seoOptimization.services.local.items.0",
+        "seoOptimization.services.local.items.1",
+        "seoOptimization.services.local.items.2",
+        "seoOptimization.services.local.items.3",
+        "seoOptimization.services.local.items.4",
+        "seoOptimization.services.local.items.5",
+      ],
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -103,7 +105,7 @@ export default function SEOServices() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Kompletna SEO Rešenja
+          {intl.formatMessage({ id: "seoOptimization.services.title" })}
         </motion.h2>
       </div>
       <motion.p
@@ -113,9 +115,7 @@ export default function SEOServices() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Naš tim eksperata pruža sveobuhvatne SEO usluge koje pokrivaju sve
-        aspekte optimizacije. Od tehničkih detalja do sadržajnih strategija,
-        garantujemo rezultate koji donose vrednost vašem biznisu.
+        {intl.formatMessage({ id: "seoOptimization.services.subtitle" })}
       </motion.p>
 
       <motion.div
@@ -139,7 +139,7 @@ export default function SEOServices() {
           >
             <div className="flex justify-center mb-4">
               <h3 className="text-xl md:text-2xl font-bold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-                {service.category}
+                {intl.formatMessage({ id: service.categoryId })}
               </h3>
             </div>
             <motion.ul
@@ -149,7 +149,7 @@ export default function SEOServices() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              {service.items.map((item, itemIndex) => (
+              {service.items.map((itemId, itemIndex) => (
                 <motion.li
                   key={itemIndex}
                   className="flex items-center gap-2"
@@ -164,7 +164,9 @@ export default function SEOServices() {
                   >
                     <FaCheckCircle className="text-orange-600 flex-shrink-0 " />
                   </motion.div>
-                  <span className="">{item}</span>
+                  <span className="">
+                    {intl.formatMessage({ id: itemId })}
+                  </span>
                 </motion.li>
               ))}
             </motion.ul>

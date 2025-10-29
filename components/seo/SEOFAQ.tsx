@@ -1,51 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const faqs = [
-  {
-    question: "Koliko dugo traje da se vide rezultati SEO optimizacije?",
-    answer:
-      "Prva vidljiva poboljšanja se obično pojavljuju nakon 3-6 meseci, dok značajniji rezultati dolaze nakon 6-12 meseci kontinuiranog rada. SEO je dugoročna strategija koja zahteva strpljenje, ali rezultati su trajni i isplativi.",
-  },
-  {
-    question: "Šta je razlika između SEO i Google Ads oglašavanja?",
-    answer:
-      "SEO je organski način poboljšanja vidljivosti u rezultatima pretrage bez plaćanja po kliku, dok Google Ads predstavlja plaćeno oglašavanje. SEO donosi dugoročne rezultate, dok su Google Ads rezultati trenutni ali prestaju kad prestane plaćanje.",
-  },
-  {
-    question: "Da li garantujete prvu poziciju na Google-u?",
-    answer:
-      "Ne možemo garantovati tačne pozicije jer Google algoritam konstantno evoluira, ali garantujemo profesionalan pristup, transparentnost i merljiva poboljšanja. Fokusiramo se na povećanje kvalitetnog saobraćaja i konverzija, ne samo na rangiranje.",
-  },
-  {
-    question: "Šta uključa vaš SEO paket?",
-    answer:
-      "Naši paketi uključuju tehnički SEO audit, on-page optimizaciju, kvalitetan sadržaj, link building, lokalnu SEO optimizaciju, mesečne izveštaje i kontinuiranu podršku. Svaki paket prilagođavamo specifičnim potrebama klijenta.",
-  },
-  {
-    question: "Da li radite lokalni SEO?",
-    answer:
-      "Da! Specijalizujemo se za lokalni SEO uključujući Google My Business optimizaciju, lokalne citacije, optimizaciju za 'near me' pretrage i upravljanje recenzijama. Ovo je idealno za lokalne biznise koji žele da privuku klijente iz svoje oblasti.",
-  },
-  {
-    question: "Koliko košta SEO optimizacija?",
-    answer:
-      "Cena zavisi od trenutnog stanja sajta, konkurentnosti industrije i ciljeva. Nudimo različite pakete prilagođene različitim budžetima. Kontaktirajte nas za besplatnu konsultaciju i personalizovanu ponudu.",
-  },
-  {
-    question: "Da li mogu da radim SEO sam?",
-    answer:
-      "Možete raditi osnovni SEO sami, ali profesionalna SEO optimizacija zahteva duboko poznavanje algoritama, tehničkih aspekata, alata i konstantno praćenje promena. Naš tim ima iskustvo i resurse da postigne rezultate brže i efikasnije.",
-  },
-  {
-    question: "Kako merite uspeh SEO kampanje?",
-    answer:
-      "Pratimo više metrika: organski saobraćaj, rangiranje ključnih reči, kvalitet posetilaca, konverzije, bounce rate, domain autoritet i ROI. Dostavljamo detaljne mesečne izveštaje sa jasnim objašnjenjima napretka.",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SEOFAQ() {
+  const intl = useMessages();
+
+  const faqs = [
+    {
+      questionId: "seoOptimization.faq.q1.question",
+      answerId: "seoOptimization.faq.q1.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q2.question",
+      answerId: "seoOptimization.faq.q2.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q3.question",
+      answerId: "seoOptimization.faq.q3.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q4.question",
+      answerId: "seoOptimization.faq.q4.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q5.question",
+      answerId: "seoOptimization.faq.q5.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q6.question",
+      answerId: "seoOptimization.faq.q6.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q7.question",
+      answerId: "seoOptimization.faq.q7.answer",
+    },
+    {
+      questionId: "seoOptimization.faq.q8.question",
+      answerId: "seoOptimization.faq.q8.answer",
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -84,7 +78,7 @@ export default function SEOFAQ() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Često Postavljana Pitanja
+          {intl.formatMessage({ id: "seoOptimization.faq.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -115,7 +109,7 @@ export default function SEOFAQ() {
                 transition: { duration: 0.2 },
               }}
             >
-              {faq.question}
+              {intl.formatMessage({ id: faq.questionId })}
             </motion.h3>
             <motion.p
               className=""
@@ -124,7 +118,7 @@ export default function SEOFAQ() {
               transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {faq.answer}
+              {intl.formatMessage({ id: faq.answerId })}
             </motion.p>
           </motion.div>
         ))}

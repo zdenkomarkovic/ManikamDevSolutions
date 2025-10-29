@@ -1,0 +1,179 @@
+{
+  "seoOptimization": {
+    "page": {
+      "title": "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
+      "description": "Profesionalna SEO optimizacija koja donosi organsku posećenost. Povećajte rangiranje na Google-u, privucite ciljanu publiku i razvijte svoj biznis. Više od 10 godina iskustva."
+    },
+    "hero": {
+      "title": "SEO Optimizacija",
+      "subtitle": "Povećajte vidljivost vašeg sajta na Google-u. Profesionalna SEO optimizacija koja donosi organsku posećenost i privlači ciljanu publiku. Dugoročna strategija za rast vašeg online biznisa.",
+      "badge1": "Organski Rast",
+      "badge2": "Bolje Rangiranje",
+      "badge3": "Veća Konverzija"
+    },
+    "intro": {
+      "title": "Šta je SEO Optimizacija?",
+      "p1": "<strong>SEO (Search Engine Optimization)</strong> je proces optimizacije vašeg web sajta kako bi se poboljšalo njegovo rangiranje u rezultatima pretrage na Google-u i drugim pretraživačima.",
+      "p2": "Naš cilj je da vaš sajt bude vidljiv pravim korisnicima u pravo vreme. Kombinujemo tehnički SEO, kvalitetan sadržaj i kvalitetne linkove kako bismo ostvarili dugoročne rezultate.",
+      "p3": "<strong>Više od 90% online iskustva počinje pretraživačem</strong> - budite tu gde su vaši klijenti! Profesionalna SEO optimizacija nije trošak, već investicija koja donosi dugoročne rezultate i organski saobraćaj bez plaćanja za svaki klik."
+    },
+    "features": {
+      "title": "Naše SEO Usluge",
+      "keyword": {
+        "title": "Istraživanje Ključnih Reči",
+        "description": "Identifikujemo najprofitabilnije ključne reči za vaš biznis i industriju."
+      },
+      "content": {
+        "title": "Optimizacija Sadržaja",
+        "description": "Kreiramo i optimizujemo sadržaj koji rangira i privlači korisnike."
+      },
+      "technical": {
+        "title": "Tehnički SEO",
+        "description": "Optimizujemo brzinu, strukturu i tehničke aspekte vašeg sajta."
+      },
+      "strategy": {
+        "title": "SEO Strategija",
+        "description": "Razvijamo sveobuhvatan plan optimizacije koji povezuje sadržaj, tehničke aspekte i poslovne ciljeve."
+      },
+      "mobile": {
+        "title": "Mobile SEO",
+        "description": "Osiguravamo savršenu optimizaciju za mobilne uređaje."
+      },
+      "local": {
+        "title": "Lokalni SEO",
+        "description": "Poboljšavamo vidljivost u lokalnim rezultatima pretrage."
+      },
+      "analytics": {
+        "title": "Analitika i Izveštaji",
+        "description": "Detaljno praćenje performansi i redovni izveštaji o napretku."
+      },
+      "competitor": {
+        "title": "Konkurentska Analiza",
+        "description": "Analiziramo konkurenciju i pronalazimo prilike za nadmašivanje."
+      }
+    },
+    "services": {
+      "title": "Kompletna SEO Rešenja",
+      "subtitle": "Naš tim eksperata pruža sveobuhvatne SEO usluge koje pokrivaju sve aspekte optimizacije. Od tehničkih detalja do sadržajnih strategija, garantujemo rezultate koji donose vrednost vašem biznisu.",
+      "onPage": {
+        "title": "On-Page SEO",
+        "items": {
+          "0": "Optimizacija meta tagova i opisa",
+          "1": "Optimizacija naslova i sadržaja",
+          "2": "Optimizacija slika i alt atributa",
+          "3": "Interna povezanost stranica",
+          "4": "Optimizacija URL strukture",
+          "5": "Schema markup implementacija"
+        }
+      },
+      "offPage": {
+        "title": "Off-Page SEO",
+        "items": {
+          "0": "Guest posting na relevantnim sajtovima",
+          "1": "Social signals optimizacija",
+          "2": "Brand mention praćenje",
+          "3": "Influencer outreach",
+          "4": "PR strategija"
+        }
+      },
+      "technical": {
+        "title": "Tehnički SEO",
+        "items": {
+          "0": "Optimizacija brzine sajta",
+          "1": "Mobile-first optimizacija",
+          "2": "XML sitemap kreiranje",
+          "3": "Robots.txt optimizacija",
+          "4": "HTTPS i sigurnosni protokoli",
+          "5": "Strukturirani podaci"
+        }
+      },
+      "local": {
+        "title": "Lokalni SEO",
+        "items": {
+          "0": "Google My Business optimizacija",
+          "1": "Lokalne citacije",
+          "2": "Optimizacija za lokalne ključne reči",
+          "3": "Google Maps rangiranje",
+          "4": "Lokalni recenzije management",
+          "5": "NAP konzistentnost"
+        }
+      }
+    },
+    "cta": {
+      "title": "Spremni da Poboljšate Vidljivost?",
+      "subtitle": "Kontaktirajte nas za besplatnu konsultaciju",
+      "resultsTitle": "Rezultati koje možete očekivati",
+      "result1": "Poboljšanje Google rangiranja za 50-80%",
+      "result2": "Povećanje organskog saobraćaja",
+      "result3": "Bolja vidljivost brenda",
+      "result4": "Dugoročan ROI",
+      "phone": "+1 240 810 3730",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "process": {
+      "title": "Naš SEO Proces",
+      "step1": {
+        "title": "Analiza i Audit",
+        "description": "Detaljno analiziramo trenutno stanje vašeg sajta, konkurenciju i industriju."
+      },
+      "step2": {
+        "title": "Strategija i Planiranje",
+        "description": "Kreiramo prilagođenu SEO strategiju baziranu na vašim ciljevima i budžetu."
+      },
+      "step3": {
+        "title": "Implementacija",
+        "description": "Primenjujemo tehničke optimizacije, kreiramo sadržaj i gradimo linkove."
+      },
+      "step4": {
+        "title": "Monitoring i Optimizacija",
+        "description": "Kontinuirano pratimo performanse i optimizujemo strategiju za najbolje rezultate."
+      },
+      "step5": {
+        "title": "Izveštavanje",
+        "description": "Dostavljamo detaljne mesečne izveštaje sa jasnim metrikama."
+      },
+      "step6": {
+        "title": "Kontinuirano Poboljšanje",
+        "description": "SEO je kontinuiran proces - stalno unapređujemo strategiju i prilagođavamo se promenama."
+      },
+      "timeframeTitle": "Prosečno vreme do prvih vidljivih rezultata",
+      "timeframe": "3-6 meseci",
+      "timeframeNote": "SEO je maraton, ne sprint - ali rezultati traju dugoročno!"
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "q1": {
+        "question": "Koliko dugo traje da se vide rezultati SEO optimizacije?",
+        "answer": "Prva vidljiva poboljšanja se obično pojavljuju nakon 3-6 meseci, dok značajniji rezultati dolaze nakon 6-12 meseci kontinuiranog rada. SEO je dugoročna strategija koja zahteva strpljenje, ali rezultati su trajni i isplativi."
+      },
+      "q2": {
+        "question": "Šta je razlika između SEO i Google Ads oglašavanja?",
+        "answer": "SEO je organski način poboljšanja vidljivosti u rezultatima pretrage bez plaćanja po kliku, dok Google Ads predstavlja plaćeno oglašavanje. SEO donosi dugoročne rezultate, dok su Google Ads rezultati trenutni ali prestaju kad prestane plaćanje."
+      },
+      "q3": {
+        "question": "Da li garantujete prvu poziciju na Google-u?",
+        "answer": "Ne možemo garantovati tačne pozicije jer Google algoritam konstantno evoluira, ali garantujemo profesionalan pristup, transparentnost i merljiva poboljšanja. Fokusiramo se na povećanje kvalitetnog saobraćaja i konverzija, ne samo na rangiranje."
+      },
+      "q4": {
+        "question": "Šta uključa vaš SEO paket?",
+        "answer": "Naši paketi uključuju tehnički SEO audit, on-page optimizaciju, kvalitetan sadržaj, link building, lokalnu SEO optimizaciju, mesečne izveštaje i kontinuiranu podršku. Svaki paket prilagođavamo specifičnim potrebama klijenta."
+      },
+      "q5": {
+        "question": "Da li radite lokalni SEO?",
+        "answer": "Da! Specijalizujemo se za lokalni SEO uključujući Google My Business optimizaciju, lokalne citacije, optimizaciju za 'near me' pretrage i upravljanje recenzijama. Ovo je idealno za lokalne biznise koji žele da privuku klijente iz svoje oblasti."
+      },
+      "q6": {
+        "question": "Koliko košta SEO optimizacija?",
+        "answer": "Cena zavisi od trenutnog stanja sajta, konkurentnosti industrije i ciljeva. Nudimo različite pakete prilagođene različitim budžetima. Kontaktirajte nas za besplatnu konsultaciju i personalizovanu ponudu."
+      },
+      "q7": {
+        "question": "Da li mogu da radim SEO sam?",
+        "answer": "Možete raditi osnovni SEO sami, ali profesionalna SEO optimizacija zahteva duboko poznavanje algoritama, tehničkih aspekata, alata i konstantno praćenje promena. Naš tim ima iskustvo i resurse da postigne rezultate brže i efikasnije."
+      },
+      "q8": {
+        "question": "Kako merite uspeh SEO kampanje?",
+        "answer": "Pratimo više metrika: organski saobraćaj, rangiranje ključnih reči, kvalitet posetilaca, konverzije, bounce rate, domain autoritet i ROI. Dostavljamo detaljne mesečne izveštaje sa jasnim objašnjenjima napretka."
+      }
+    }
+  }
+}

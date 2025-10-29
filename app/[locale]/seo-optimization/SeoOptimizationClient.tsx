@@ -60,7 +60,7 @@ const heroVariants = {
   },
 };
 
-export default function SEOPageClient() {
+const SeoOptimizationClient = () => {
   const locale = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
@@ -70,9 +70,7 @@ export default function SEOPageClient() {
         // Load main messages
         const mainMsgs = await import(`@/lang/${locale}.json`);
         // Load seoOptimization messages
-        const seoOptMsgs = await import(
-          `@/lang/seoOptimization/${locale}.json`
-        );
+        const seoOptMsgs = await import(`@/lang/seoOptimization/${locale}.json`);
 
         // Merge messages
         const mergedMessages = {
@@ -161,4 +159,6 @@ export default function SEOPageClient() {
       </div>
     </MessagesProvider>
   );
-}
+};
+
+export default SeoOptimizationClient;

@@ -9,46 +9,43 @@ import {
   FaClipboardList,
   FaSyncAlt,
 } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const steps = [
   {
     icon: FaSearch,
-    title: "Analiza i Audit",
-    description:
-      "Detaljno analiziramo trenutno stanje vašeg sajta, konkurenciju i industriju.",
+    titleId: "seoOptimization.process.step1.title",
+    descriptionId: "seoOptimization.process.step1.description",
   },
   {
     icon: FaBullseye,
-    title: "Strategija i Planiranje",
-    description:
-      "Kreiramo prilagođenu SEO strategiju baziranu na vašim ciljevima i budžetu.",
+    titleId: "seoOptimization.process.step2.title",
+    descriptionId: "seoOptimization.process.step2.description",
   },
   {
     icon: FaTools,
-    title: "Implementacija",
-    description:
-      "Primenjujemo tehničke optimizacije, kreiramo sadržaj i gradimo linkove.",
+    titleId: "seoOptimization.process.step3.title",
+    descriptionId: "seoOptimization.process.step3.description",
   },
   {
     icon: FaChartLine,
-    title: "Monitoring i Optimizacija",
-    description:
-      "Kontinuirano pratimo performanse i optimizujemo strategiju za najbolje rezultate.",
+    titleId: "seoOptimization.process.step4.title",
+    descriptionId: "seoOptimization.process.step4.description",
   },
   {
     icon: FaClipboardList,
-    title: "Izveštavanje",
-    description: "Dostavljamo detaljne mesečne izveštaje sa jasnim metrikama.",
+    titleId: "seoOptimization.process.step5.title",
+    descriptionId: "seoOptimization.process.step5.description",
   },
   {
     icon: FaSyncAlt,
-    title: "Kontinuirano Poboljšanje",
-    description:
-      "SEO je kontinuiran proces - stalno unapređujemo strategiju i prilagođavamo se promenama.",
+    titleId: "seoOptimization.process.step6.title",
+    descriptionId: "seoOptimization.process.step6.description",
   },
 ];
 
 export default function SEOProcess() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -103,7 +100,7 @@ export default function SEOProcess() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Naš SEO Proces
+          {intl.formatMessage({ id: "seoOptimization.process.title" })}
         </motion.h2>
       </div>
 
@@ -138,9 +135,11 @@ export default function SEOProcess() {
               <step.icon className="text-2xl text-white" />
             </motion.div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {step.title}
+              {intl.formatMessage({ id: step.titleId })}
             </h3>
-            <p className=" leading-relaxed">{step.description}</p>
+            <p className=" leading-relaxed">
+              {intl.formatMessage({ id: step.descriptionId })}
+            </p>
           </motion.div>
         ))}
       </motion.div>
@@ -163,7 +162,9 @@ export default function SEOProcess() {
           transition={{ duration: 0.6, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          Prosečno vreme do prvih vidljivih rezultata
+          {intl.formatMessage({
+            id: "seoOptimization.process.timeframeTitle",
+          })}
         </motion.p>
         <motion.p
           className="text-4xl md:text-5xl font-bold mb-2 text-gray-900"
@@ -172,7 +173,7 @@ export default function SEOProcess() {
           transition={{ duration: 0.8, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          3-6 meseci
+          {intl.formatMessage({ id: "seoOptimization.process.timeframe" })}
         </motion.p>
         <motion.p
           className="text-base md:text-lg "
@@ -181,7 +182,7 @@ export default function SEOProcess() {
           transition={{ duration: 0.6, delay: 1.1 }}
           viewport={{ once: true }}
         >
-          SEO je maraton, ne sprint - ali rezultati traju dugoročno!
+          {intl.formatMessage({ id: "seoOptimization.process.timeframeNote" })}
         </motion.p>
       </motion.div>
     </div>
