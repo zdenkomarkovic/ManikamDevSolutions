@@ -9,56 +9,37 @@ import {
   FaDatabase,
   FaChartLine,
 } from "react-icons/fa";
-
-const types = [
-  {
-    icon: FaLaptopCode,
-    title: "Web Aplikacije",
-    description:
-      "Kompleksne SaaS platforme, portali, dashboardi i business intelligence alati.",
-    examples:
-      "CRM, ERP, project management, booking sistemi, e-learning platforme",
-  },
-  {
-    icon: FaMobileAlt,
-    title: "Mobilne Aplikacije",
-    description: "Native iOS i Android aplikacije ili cross-platform rešenja.",
-    examples: "Business apps, delivery apps, fitness apps, finance apps",
-  },
-  {
-    icon: FaCloud,
-    title: "Cloud Rešenja",
-    description:
-      "Razvijamo brze i pouzdane aplikacije optimizovane za cloud okruženja i automatsko skaliranje.",
-    examples:
-      "SaaS platforme, serverless aplikacije, modularni backend sistemi",
-  },
-  {
-    icon: FaCogs,
-    title: "Automatizacija Procesa",
-    description:
-      "Custom alati za automatizaciju repetitivnih poslovnih procesa.",
-    examples:
-      "Data processing, reporting automation, workflow engines, integration tools",
-  },
-  {
-    icon: FaDatabase,
-    title: "API i Integracije",
-    description: "Backend sistemi, REST API i integracije sa trećim servisima.",
-    examples:
-      "Payment gateways, shipping APIs, accounting software integrations",
-  },
-  {
-    icon: FaChartLine,
-    title: "Dashboard & Admin Paneli",
-    description:
-      "Interaktivni admin paneli sa vizualizacijom podataka i kontrolnim sistemima.",
-    examples:
-      "Analytics dashboards, admin CMS, management portali, reporting tools",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SoftwareTypes() {
+  const intl = useMessages();
+
+  const types = [
+    {
+      icon: FaLaptopCode,
+      key: "webApps",
+    },
+    {
+      icon: FaMobileAlt,
+      key: "mobileApps",
+    },
+    {
+      icon: FaCloud,
+      key: "cloudSolutions",
+    },
+    {
+      icon: FaCogs,
+      key: "automation",
+    },
+    {
+      icon: FaDatabase,
+      key: "apiIntegrations",
+    },
+    {
+      icon: FaChartLine,
+      key: "dashboards",
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -112,7 +93,7 @@ export default function SoftwareTypes() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Tipovi Softvera Koje Razvijamo
+        {intl.formatMessage({ id: "software.types.title" })}
       </motion.h2>
 
       <motion.div
@@ -122,40 +103,43 @@ export default function SoftwareTypes() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {types.map((type, index) => (
-          <motion.div
-            key={index}
-            className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
-            variants={cardVariants}
-            whileHover={{
-              scale: 1.05,
-              y: -10,
-              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-            }}
-            transition={{ duration: 0.3 }}
-          >
+        {types.map((type, index) => {
+          const Icon = type.icon;
+          return (
             <motion.div
-              className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
-              variants={iconVariants}
+              key={index}
+              className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
+              variants={cardVariants}
               whileHover={{
-                scale: 1.2,
-                rotate: 360,
-                transition: { duration: 0.6 },
+                scale: 1.05,
+                y: -10,
+                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
               }}
+              transition={{ duration: 0.3 }}
             >
-              <type.icon className="text-2xl text-white" />
+              <motion.div
+                className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
+                variants={iconVariants}
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 360,
+                  transition: { duration: 0.6 },
+                }}
+              >
+                <Icon className="text-2xl text-white" />
+              </motion.div>
+              <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+                {intl.formatMessage({ id: `software.types.${type.key}.title` })}
+              </h3>
+              <p className=" mb-3">{intl.formatMessage({ id: `software.types.${type.key}.description` })}</p>
+              <div className="bg-gray-200/50 rounded-lg p-3 mt-4">
+                <p className="text-sm ">
+                  <strong>Primeri:</strong> {intl.formatMessage({ id: `software.types.${type.key}.examples` })}
+                </p>
+              </div>
             </motion.div>
-            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-              {type.title}
-            </h3>
-            <p className=" mb-3">{type.description}</p>
-            <div className="bg-gray-200/50 rounded-lg p-3 mt-4">
-              <p className="text-sm ">
-                <strong>Primeri:</strong> {type.examples}
-              </p>
-            </div>
-          </motion.div>
-        ))}
+          );
+        })}
       </motion.div>
     </div>
   );

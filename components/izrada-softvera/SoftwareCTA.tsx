@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SoftwareCTA() {
+  const intl = useMessages();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,6 +46,7 @@ export default function SoftwareCTA() {
       },
     },
   };
+
   return (
     <div className="text-gray-50 bg-gradient-to-br from-gray-700 via-gray-500 to-gray-200 rounded-2xl py-3 md:p-6 text-center">
       <motion.h2
@@ -52,7 +56,7 @@ export default function SoftwareCTA() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Spremni da Automatizujete Vaš Biznis?
+        {intl.formatMessage({ id: "software.cta.title" })}
       </motion.h2>
       <motion.div
         className="grid md:grid-cols-2 gap-6"
@@ -64,7 +68,7 @@ export default function SoftwareCTA() {
         <motion.div className="md:space-y-8 md:px-20" variants={itemVariants}>
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Dobijte besplatnu konsultaciju
+              {intl.formatMessage({ id: "software.cta.consultationTitle" })}
             </h3>
             <motion.ul
               className="space-y-1 md:space-y-3 mx-auto w-fit"
@@ -86,7 +90,7 @@ export default function SoftwareCTA() {
                 >
                   <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                 </motion.svg>
-                Analiza vaših potreba
+                {intl.formatMessage({ id: "software.cta.benefit1" })}
               </motion.li>
               <motion.li className="flex items-center" variants={itemVariants}>
                 <motion.svg
@@ -101,7 +105,7 @@ export default function SoftwareCTA() {
                 >
                   <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                 </motion.svg>
-                Procena troškova i vremena
+                {intl.formatMessage({ id: "software.cta.benefit2" })}
               </motion.li>
               <motion.li className="flex items-center" variants={itemVariants}>
                 <motion.svg
@@ -116,7 +120,7 @@ export default function SoftwareCTA() {
                 >
                   <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                 </motion.svg>
-                Tehnološke preporuke
+                {intl.formatMessage({ id: "software.cta.benefit3" })}
               </motion.li>
               <motion.li className="flex items-center" variants={itemVariants}>
                 <motion.svg
@@ -131,7 +135,7 @@ export default function SoftwareCTA() {
                 >
                   <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                 </motion.svg>
-                Detaljni projektni plan
+                {intl.formatMessage({ id: "software.cta.benefit4" })}
               </motion.li>
             </motion.ul>
           </div>
@@ -144,7 +148,7 @@ export default function SoftwareCTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Kontaktirajte nas danas
+            {intl.formatMessage({ id: "software.cta.contactTitle" })}
           </motion.p>
 
           <motion.div
@@ -156,7 +160,7 @@ export default function SoftwareCTA() {
           >
             {/* Phone Call Button */}
             <motion.a
-              href={`tel:+381641967267`}
+              href={`tel:${intl.formatMessage({ id: "software.cta.phone" })}`}
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               variants={buttonVariants}
               whileHover={{
@@ -178,13 +182,13 @@ export default function SoftwareCTA() {
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </motion.svg>
               <span className="block text-lg md:text-2xl font-normal">
-                +381641967267
+                {intl.formatMessage({ id: "software.cta.phone" })}
               </span>
             </motion.a>
 
             {/* Email Button */}
             <motion.a
-              href="mailto:manikamwebsolutions@gmail.com"
+              href={`mailto:${intl.formatMessage({ id: "software.cta.email" })}`}
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               variants={buttonVariants}
               whileHover={{
@@ -208,7 +212,7 @@ export default function SoftwareCTA() {
               </motion.svg>
 
               <span className="block text-lg md:text-2xl font-normal">
-                manikamwebsolutions@gmail.com
+                {intl.formatMessage({ id: "software.cta.email" })}
               </span>
             </motion.a>
           </motion.div>

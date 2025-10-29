@@ -1,0 +1,262 @@
+{
+  "software": {
+    "page": {
+      "title": "Izrada Softvera i Custom Aplikacija po Meri | Manikam Dev Solutions",
+      "description": "Profesionalna izrada custom softvera, web aplikacija, desktop i mobilnih aplikacija po vašim potrebama. Automatizacija poslovnih procesa, ERP, CRM i integracioni sistemi. Skalabilna rešenja sa najnovijim tehnologijama."
+    },
+    "hero": {
+      "title": "Izrada Softvera po Meri",
+      "subtitle": "Razvijamo custom softverska rešenja koja automatizuju vaše poslovne procese, povećavaju efikasnost i omogućavaju rast. Od web i mobilnih aplikacija do kompleksnih ERP i CRM sistema - kreiramo softver koji radi za vas.",
+      "badge1": "Custom Software",
+      "badge2": "Web & Mobile Apps",
+      "badge3": "Automatizacija Procesa"
+    },
+    "intro": {
+      "title": "Zašto Vašem Biznisu Treba Custom Softver?",
+      "paragraph1": "Gotova softverska rešenja često ne pokrivaju specifične potrebe vašeg biznisa. Možda vam treba 80% funkcionalnosti, ali nemate potrebu za ostalih 20%, ili vam nedostaje ta ključna funkcija koja čini razliku. <strong>Custom softver je dizajniran tačno za vaše poslovne procese</strong> - dobijate ono što vam treba, bez nepotrebnih funkcija za koje plaćate skupu mesečnu pretplatu.",
+      "paragraph2": "U digitalnom dobu, <strong>automatizacija poslovnih procesa nije luksuz - to je neophodnost za konkurentnost</strong>. Svaki manuelni proces koji vaši zaposleni rade može biti automatizovan. Umesto da vaši ljudi troše vreme na ponavljajuće zadatke, custom softver radi za vas 24/7, bez greške, brže i jeftinije. Jedan dobar CRM sistem može zameniti 10 Excel tabela i smanjiti vreme obrade narudžbina sa 30 minuta na 30 sekundi.",
+      "paragraph3": "<strong>Prosečan povrat investicije (ROI) na custom softver je 300-500% u prve 2 godine.</strong> Nakon inicijalnog razvoja, trošite minimalno na održavanje, dok gotova rešenja naplaćuju mesečne/godišnje pretplate koje se gomilaju. Custom softver je vaše vlasništvo zauvek, možete ga integrisati sa bilo kojim sistemom i skalirati kako vaš biznis raste. Ne zavisete od spoljnih provajdera koji mogu povećati cene ili ugasiti servis."
+    },
+    "types": {
+      "title": "Tipovi Softvera Koje Razvijamo",
+      "webApps": {
+        "title": "Web Aplikacije",
+        "description": "Kompleksne SaaS platforme, portali, dashboardi i business intelligence alati.",
+        "examples": "CRM, ERP, project management, booking sistemi, e-learning platforme"
+      },
+      "mobileApps": {
+        "title": "Mobilne Aplikacije",
+        "description": "Native iOS i Android aplikacije ili cross-platform rešenja.",
+        "examples": "Business apps, delivery apps, fitness apps, finance apps"
+      },
+      "cloudSolutions": {
+        "title": "Cloud Rešenja",
+        "description": "Razvijamo brze i pouzdane aplikacije optimizovane za cloud okruženja i automatsko skaliranje.",
+        "examples": "SaaS platforme, serverless aplikacije, modularni backend sistemi"
+      },
+      "automation": {
+        "title": "Automatizacija Procesa",
+        "description": "Custom alati za automatizaciju repetitivnih poslovnih procesa.",
+        "examples": "Data processing, reporting automation, workflow engines, integration tools"
+      },
+      "apiIntegrations": {
+        "title": "API i Integracije",
+        "description": "Backend sistemi, REST API i integracije sa trećim servisima.",
+        "examples": "Payment gateways, shipping APIs, accounting software integrations"
+      },
+      "dashboards": {
+        "title": "Dashboard & Admin Paneli",
+        "description": "Interaktivni admin paneli sa vizualizacijom podataka i kontrolnim sistemima.",
+        "examples": "Analytics dashboards, admin CMS, management portali, reporting tools"
+      }
+    },
+    "cta": {
+      "title": "Spremni da Automatizujete Vaš Biznis?",
+      "consultationTitle": "Dobijte besplatnu konsultaciju",
+      "benefit1": "Analiza vaših potreba",
+      "benefit2": "Procena troškova i vremena",
+      "benefit3": "Tehnološke preporuke",
+      "benefit4": "Detaljni projektni plan",
+      "contactTitle": "Kontaktirajte nas danas",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "technologies": {
+      "title": "Tehnologije Koje Koristimo",
+      "subtitle": "Radimo sa najnovijim i najboljim tehnologijama za brz, siguran i skalabilan softver",
+      "react": {
+        "name": "React.js",
+        "description": "Moderna JavaScript biblioteka za kreiranje interaktivnih korisničkih interfejsa",
+        "category": "Frontend"
+      },
+      "nextjs": {
+        "name": "Next.js",
+        "description": "Full-stack React framework sa serverskim renderingom i optimizacijom",
+        "category": "Frontend"
+      },
+      "reactNative": {
+        "name": "React Native",
+        "description": "Cross-platform framework za iOS i Android mobilne aplikacije",
+        "category": "Mobile"
+      },
+      "nodejs": {
+        "name": "Node.js & Express",
+        "description": "Backend runtime i framework za scalable REST API servise",
+        "category": "Backend"
+      }
+    },
+    "features": {
+      "title": "Karakteristike Našeg Softvera",
+      "security": {
+        "title": "Sigurnost i Privatnost",
+        "description": "Enterprise-level sigurnost, enkripcija podataka, GDPR compliance i redovni security audits."
+      },
+      "performance": {
+        "title": "Visoke Performanse",
+        "description": "Optimizovan kod, caching strategije, load balancing i CDN za brzo učitavanje."
+      },
+      "scalability": {
+        "title": "Skalabilnost",
+        "description": "Arhitektura dizajnirana za rast - lako dodajete korisnike, podatke i funkcionalnosti."
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Savršeno funkcioniše na svim uređajima - desktop, tablet, mobilni telefon."
+      },
+      "integrations": {
+        "title": "Integracije",
+        "description": "Povezivanje sa postojećim sistemima, API-jima i third-party servisima."
+      },
+      "userFriendly": {
+        "title": "User-Friendly",
+        "description": "Intuitivan UI/UX dizajn, easy onboarding i minimalna kriva učenja za korisnike."
+      }
+    },
+    "process": {
+      "title": "Proces Razvoja Softvera",
+      "step1": {
+        "title": "Konsultacije i Analiza",
+        "description": "Razumemo vaše poslovne potrebe, procese i ciljeve. Definišemo requirements i scope projekta kroz detaljne razgovore. Analiziramo postojeća rešenja i konkurenciju kako bismo kreirali strategiju koja će vaš softver izdvojiti na tržištu."
+      },
+      "step2": {
+        "title": "Dizajn i Planiranje",
+        "description": "Kreiramo wireframes, mockups, arhitekturu sistema i projektni plan sa milestones. Dizajniramo user experience i tehničku arhitekturu. Usklađujemo sve detalje sa vama i vršimo potrebne korekcije dok ne budete potpuno zadovoljni."
+      },
+      "step3": {
+        "title": "Development",
+        "description": "Agile development proces sa redovnim sprint-ovima i prikazima napretka. Koristimo najnovije tehnologije (Next.js, React.js, Node.js) za izradu brzog, sigurnog i skalabilnog softvera. Redovno vas ažuriramo o napretku projekta."
+      },
+      "step4": {
+        "title": "Testiranje i QA",
+        "description": "Rigorozno testiranje funkcionalnosti, performansi, sigurnosti i user experience-a. Testiramo na različitim platformama i uređajima. Proveravamo sve edge case-ove i optimizujemo za maksimalne performanse."
+      },
+      "step5": {
+        "title": "Deployment",
+        "description": "Postavljanje na production, migracija podataka, obuka korisnika i go-live. Podešavamo cloud infrastructure, CI/CD pipeline i monitoring. Osiguravamo glatku tranziciju i stabilno pokretanje sistema."
+      },
+      "step6": {
+        "title": "Održavanje i Podrška",
+        "description": "Kontinuirana tehnička podrška, bugfixes, updates i nova funkcionalnost. Pratimo performanse sistema i predlažemo poboljšanja. Tu smo da vam pomognemo sa bilo kakvim pitanjima ili potrebnim izmenama."
+      },
+      "agile": {
+        "title": "Agile Metodologija",
+        "subtitle": "Koristimo <strong>Agile/Scrum metodologiju</strong> koja omogućava fleksibilnost, transparentnost i kontinuiranu isporuku vrednosti. Umesto da čekate mesecima na finalni proizvod, dobijate funkcionalne verzije softvera svakih 2-3 nedelje.",
+        "sprintPlanning": {
+          "title": "Sprint Planning",
+          "description": "Zajedno definišemo prioritete i funkcionalnosti za naredni sprint."
+        },
+        "dailyStandups": {
+          "title": "Daily Standups",
+          "description": "Redovna komunikacija i ažuriranje o napretku projekta."
+        },
+        "sprintReview": {
+          "title": "Sprint Review",
+          "description": "Prikazujemo gotov rad, prikupljamo feedback i prilagođavamo plan."
+        }
+      }
+    },
+    "industries": {
+      "title": "Industrije u Kojima Radimo",
+      "subtitle": "Naša ekspertiza pokriva širok spektar industrija",
+      "ecommerce": {
+        "name": "E-commerce i Retail",
+        "description": "Online prodavnice, inventory management, POS sistemi"
+      },
+      "b2b": {
+        "name": "B2B Servisi",
+        "description": "CRM, project management, billing sistemi"
+      },
+      "healthcare": {
+        "name": "Zdravstvo",
+        "description": "Patient management, appointment scheduling, telemedicine"
+      },
+      "education": {
+        "name": "Edukacija",
+        "description": "LMS platforme, online kursevi, student management"
+      },
+      "realEstate": {
+        "name": "Nekretnine",
+        "description": "Property management, listing portals, CRM za agencije"
+      },
+      "manufacturing": {
+        "name": "Proizvodnja",
+        "description": "MES sistemi, production tracking, quality control"
+      },
+      "logistics": {
+        "name": "Logistika",
+        "description": "Fleet management, route optimization, warehouse systems"
+      },
+      "hospitality": {
+        "name": "Hotelijerstvo",
+        "description": "Booking sistemi, PMS, revenue management"
+      }
+    },
+    "benefits": {
+      "title": "Prednosti Custom Softvera nad Gotovim Rešenjima",
+      "comparison": {
+        "custom": {
+          "title": "Custom Softver",
+          "point1": "<strong>Tačno ono što vam treba</strong> - bez nepotrebnih funkcija",
+          "point2": "<strong>Jednokratna investicija</strong> - vaše je zauvek, bez mesečnih pretplata",
+          "point3": "<strong>Puna kontrola i vlasništvo</strong> - source code je vaš",
+          "point4": "<strong>Integracija sa postojećim sistemima</strong> - bez ograničenja",
+          "point5": "<strong>Skalabilnost</strong> - raste sa vašim biznisom",
+          "point6": "<strong>Konkurentska prednost</strong> - unique funkcionalnosti",
+          "point7": "<strong>Brži procesi</strong> - automatizirano prema vašim workflow-ima",
+          "point8": "<strong>Bolja sigurnost</strong> - prilagođena vašim security zahtevima"
+        },
+        "ready": {
+          "title": "Gotova Rešenja (SaaS)",
+          "point1": "<strong>Generičke funkcije</strong> - mnogo toga vam ne treba",
+          "point2": "<strong>Mesečne pretplate</strong> - troškovi se gomilaju godinama",
+          "point3": "<strong>Nema vlasništva</strong> - zavisnost od provajdera",
+          "point4": "<strong>Ograničene integracije</strong> - samo ono što oni podržavaju",
+          "point5": "<strong>Naplaćuje se po broju korisnika</strong> - skuplji sa rastom",
+          "point6": "<strong>Isti alat kao konkurencija</strong> - nema differentiation",
+          "point7": "<strong>Spori procesi</strong> - prilagođavate se njihovom workflow-u",
+          "point8": "<strong>Vaši podaci na njihovim serverima</strong> - privacy concerns"
+        }
+      },
+      "conclusion": "Custom softver je dugoročno neuporedivo isplativije rešenje koje vam donosi potpunu kontrolu, sigurnost i moć da oblikujete tehnologiju prema svom biznisu — ne obrnuto."
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "faq1": {
+        "question": "Koliko košta izrada custom softvera?",
+        "answer": "Cena zavisi od kompleksnosti projekta, broja funkcionalnosti i vremena razvoja. Jednostavnije web aplikacije počinju od 5,000-10,000€, srednje složeni sistemi (CRM, ERP) od 15,000-30,000€, dok kompleksni enterprise sistemi mogu koštati 50,000€+. Važno je napomenuti da je ovo jednokratna investicija - nakon toga plaćate samo održavanje (~10-15% godišnje od inicijalne cene). Za poređenje, SaaS rešenja vas koštaju 1,000-5,000€ godišnje i ti troškovi se gomilaju bez kraja."
+      },
+      "faq2": {
+        "question": "Koliko dugo traje razvoj custom softvera?",
+        "answer": "Vreme zavisi od scope-a projekta. MVP (Minimum Viable Product) verzija može biti gotova za 2-3 meseca. Srednje složeni projekti traju 4-6 meseci, dok kompleksni enterprise sistemi mogu trajati 6-12+ meseci. Koristimo Agile metodologiju, tako da dobijate funkcionalne verzije svakih 2-3 nedelje umesto da čekate mesecima na finalni proizvod."
+      },
+      "faq3": {
+        "question": "Da li mogu da vidim napredak tokom razvoja?",
+        "answer": "Apsolutno! Radimo u sprint-ovima od 2-3 nedelje. Na kraju svakog sprint-a dobijate demo funkcionalne verzije softvera, možete da testirate, date feedback i zajedno definišemo prioritete za sledeći sprint. Imate pristup project management tool-u (Jira, Trello) gde pratite napredak u realnom vremenu. Takođe imamo redovne sastanke (weekly/bi-weekly) gde razgovaramo o napretku."
+      },
+      "faq4": {
+        "question": "Šta ako kasnije želim da dodam nove funkcionalnosti?",
+        "answer": "To je jedna od najvećih prednosti custom softvera! Kako vaš biznis raste i menja se, možete dodavati nove funkcionalnosti. Mi kreiramo softver sa modularnom arhitekturom koja omogućava lako proširivanje. Možete naručiti development po potrebi (hourly/daily rate) ili dogovoriti retainer za kontinuiranu podršku i razvoj. Niste ograničeni kao kod SaaS rešenja gde morate čekati da provajder doda funkciju (ako je ikad dodaju)."
+      },
+      "faq5": {
+        "question": "Ko će biti vlasnik source code-a?",
+        "answer": "Vi! Nakon finalne uplate, kompletan source code postaje vaša intelektualna svojina. Dobijate potpuno vlasništvo nad softverom i možete raditi šta god želite - dati ga drugom developeru na održavanje, prodati, licencirati, itd. Ovo je velika razlika u odnosu na SaaS rešenja gde nikad ne posedujete softver."
+      },
+      "faq6": {
+        "question": "Da li nudite održavanje i podršku nakon lansiranja?",
+        "answer": "Da. Nudimo različite support pakete - od basic support-a (bug fixes, security updates) do full-service paketa (bug fixes, updates, nove funkcionalnosti, 24/7 monitoring). Obično naplaćujemo 10-15% od inicijalne cene softvera godišnje za kontinuiranu podršku. Takođe možete da birate da li želite mesečni retainer ili pay-as-you-go model gde plaćate samo po potrebi."
+      },
+      "faq7": {
+        "question": "Šta ako imam već postojeći sistem koji treba integrisati?",
+        "answer": "Specijalizujemo se za integracije! Možemo integrisati novi softver sa vašim postojećim sistemima - accounting softverom (QuickBooks, Xero), CRM-om, ERP-om, e-commerce platformama, payment gateway-ima, shipping API-jima, email servisima i bilo kojim sistemom koji ima API. Takođe možemo kreirati API za vaš novi softver da bi se drugi sistemi mogli povezati sa njim."
+      },
+      "faq8": {
+        "question": "Da li mogu da vidim portfolio vaših projekata?",
+        "answer": "Zbog NDA sporazuma sa klijentima ne možemo javno prikazati sve projekte. Međutim, možemo organizovati call gde ćemo vam pokazati case studies sličnih projekata, dijeliti reference od zadovoljnih klijenata i demonstrirati našu ekspertizu. Mnogi naši klijenti su spremni da podele svoje iskustvo sa potencijalnim klijentima."
+      },
+      "faq9": {
+        "question": "Šta se dešava ako nisam zadovoljan tokom razvoja?",
+        "answer": "Naš Agile pristup minimizuje ovaj rizik jer konstantno dobijate feedback i kontrolu nad projektom. Plaćanje radimo u milestone-ima (npr. 30% početak, 30% nakon MVP-a, 30% nakon beta verzije, 10% finalizacija), tako da plaćate tek kada vidite rezultate. Ako niste zadovoljni, radimo revizije dok ne budete. Imamo satisfaction guarantee - ako funkcionalnost ne radi kako je specifikovan, ispravljamo bez dodatne naplate."
+      }
+    }
+  }
+}

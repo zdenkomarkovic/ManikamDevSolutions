@@ -1,41 +1,28 @@
-import { Metadata } from "next";
-import SoftwarePageClient from "./SoftwarePageClient";
+import type { Metadata } from "next";
+import { LocaleProvider } from "@/lib/LocaleContext";
+import SoftwareClient from "@/components/izrada-softvera/SoftwareClient";
 
-export const metadata: Metadata = {
-  title: "Izrada Softvera i Custom Aplikacija po Meri | Manikam Dev Solutions",
-  description:
-    "Profesionalna izrada custom softvera, web aplikacija, desktop i mobilnih aplikacija po vašim potrebama. Automatizacija poslovnih procesa, ERP, CRM i integracioni sistemi. Skalabilna rešenja sa najnovijim tehnologijama.",
-  keywords: [
-    "izrada softvera",
-    "custom software development",
-    "web aplikacije",
-    "desktop aplikacije",
-    "mobilne aplikacije",
-    "automatizacija procesa",
-    "erp sistem",
-    "crm sistem",
-    "business software",
-    "enterprise software",
-    "software po meri",
-    "custom aplikacije",
-    "fullstack development",
-    "backend development",
-    "frontend development",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/izrada-softvera",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/izrada-softvera",
-    },
-  },
-  openGraph: {
-    title: "Izrada Softvera i Custom Aplikacija po Meri | Manikam Dev Solutions",
-    description:
-      "Profesionalna izrada custom softvera i aplikacija po vašim potrebama. Automatizacija, ERP, CRM i integracioni sistemi.",
-    type: "website",
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function IzradaSoftveraPage() {
-  return <SoftwarePageClient />;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/software/${locale}.json`);
+
+  return {
+    title: messages.software.page.title,
+    description: messages.software.page.description,
+  };
+}
+
+export default async function IzradaSoftveraPage({ params }: Props) {
+  const { locale } = await params;
+
+  return (
+    <LocaleProvider locale={locale as "en" | "sr"}>
+      <SoftwareClient />
+    </LocaleProvider>
+  );
 }

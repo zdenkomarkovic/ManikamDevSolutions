@@ -9,47 +9,37 @@ import {
   FaPlug,
   FaUsers,
 } from "react-icons/fa";
-
-const features = [
-  {
-    icon: FaShieldAlt,
-    title: "Sigurnost i Privatnost",
-    description:
-      "Enterprise-level sigurnost, enkripcija podataka, GDPR compliance i redovni security audits.",
-  },
-  {
-    icon: FaTachometerAlt,
-    title: "Visoke Performanse",
-    description:
-      "Optimizovan kod, caching strategije, load balancing i CDN za brzo učitavanje.",
-  },
-  {
-    icon: FaExpandArrowsAlt,
-    title: "Skalabilnost",
-    description:
-      "Arhitektura dizajnirana za rast - lako dodajete korisnike, podatke i funkcionalnosti.",
-  },
-  {
-    icon: FaMobileAlt,
-    title: "Responsive Design",
-    description:
-      "Savršeno funkcioniše na svim uređajima - desktop, tablet, mobilni telefon.",
-  },
-  {
-    icon: FaPlug,
-    title: "Integracije",
-    description:
-      "Povezivanje sa postojećim sistemima, API-jima i third-party servisima.",
-  },
-  {
-    icon: FaUsers,
-    title: "User-Friendly",
-    description:
-      "Intuitivan UI/UX dizajn, easy onboarding i minimalna kriva učenja za korisnike.",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SoftwareFeatures() {
+  const intl = useMessages();
+
+  const features = [
+    {
+      icon: FaShieldAlt,
+      key: "security",
+    },
+    {
+      icon: FaTachometerAlt,
+      key: "performance",
+    },
+    {
+      icon: FaExpandArrowsAlt,
+      key: "scalability",
+    },
+    {
+      icon: FaMobileAlt,
+      key: "responsive",
+    },
+    {
+      icon: FaPlug,
+      key: "integrations",
+    },
+    {
+      icon: FaUsers,
+      key: "userFriendly",
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -103,7 +93,7 @@ export default function SoftwareFeatures() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Karakteristike Našeg Softvera
+        {intl.formatMessage({ id: "software.features.title" })}
       </motion.h2>
 
       <motion.div
@@ -113,34 +103,37 @@ export default function SoftwareFeatures() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
-            variants={cardVariants}
-            whileHover={{
-              scale: 1.05,
-              y: -10,
-              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-            }}
-            transition={{ duration: 0.3 }}
-          >
+        {features.map((feature, index) => {
+          const Icon = feature.icon;
+          return (
             <motion.div
-              className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
-              variants={iconVariants}
+              key={index}
+              className="p-4 md:p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
+              variants={cardVariants}
               whileHover={{
-                scale: 1.2,
-                transition: { duration: 0.6 },
+                scale: 1.05,
+                y: -10,
+                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
               }}
+              transition={{ duration: 0.3 }}
             >
-              <feature.icon className="text-2xl text-white" />
+              <motion.div
+                className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
+                variants={iconVariants}
+                whileHover={{
+                  scale: 1.2,
+                  transition: { duration: 0.6 },
+                }}
+              >
+                <Icon className="text-2xl text-white" />
+              </motion.div>
+              <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+                {intl.formatMessage({ id: `software.features.${feature.key}.title` })}
+              </h3>
+              <p className="">{intl.formatMessage({ id: `software.features.${feature.key}.description` })}</p>
             </motion.div>
-            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-              {feature.title}
-            </h3>
-            <p className="">{feature.description}</p>
-          </motion.div>
-        ))}
+          );
+        })}
       </motion.div>
     </div>
   );

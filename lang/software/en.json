@@ -1,0 +1,262 @@
+{
+  "software": {
+    "page": {
+      "title": "Custom Software Development & Applications | Manikam Dev Solutions",
+      "description": "Professional custom software development, web applications, desktop and mobile apps tailored to your needs. Business process automation, ERP, CRM and integration systems. Scalable solutions with latest technologies."
+    },
+    "hero": {
+      "title": "Custom Software Development",
+      "subtitle": "We develop custom software solutions that automate your business processes, increase efficiency and enable growth. From web and mobile applications to complex ERP and CRM systems - we create software that works for you.",
+      "badge1": "Custom Software",
+      "badge2": "Web & Mobile Apps",
+      "badge3": "Process Automation"
+    },
+    "intro": {
+      "title": "Why Your Business Needs Custom Software?",
+      "paragraph1": "Off-the-shelf software solutions often don't cover the specific needs of your business. You might need 80% of functionality but have no use for the other 20%, or you're missing that key feature that makes the difference. <strong>Custom software is designed exactly for your business processes</strong> - you get what you need, without unnecessary features you pay expensive monthly subscriptions for.",
+      "paragraph2": "In the digital age, <strong>business process automation is not a luxury - it's a necessity for competitiveness</strong>. Every manual process your employees perform can be automated. Instead of your people spending time on repetitive tasks, custom software works for you 24/7, without errors, faster and cheaper. One good CRM system can replace 10 Excel sheets and reduce order processing time from 30 minutes to 30 seconds.",
+      "paragraph3": "<strong>Average return on investment (ROI) on custom software is 300-500% in the first 2 years.</strong> After initial development, you spend minimally on maintenance, while ready-made solutions charge monthly/annual subscriptions that pile up. Custom software is your property forever, you can integrate it with any system and scale as your business grows. You don't depend on external providers who can increase prices or shut down the service."
+    },
+    "types": {
+      "title": "Types of Software We Develop",
+      "webApps": {
+        "title": "Web Applications",
+        "description": "Complex SaaS platforms, portals, dashboards and business intelligence tools.",
+        "examples": "CRM, ERP, project management, booking systems, e-learning platforms"
+      },
+      "mobileApps": {
+        "title": "Mobile Applications",
+        "description": "Native iOS and Android applications or cross-platform solutions.",
+        "examples": "Business apps, delivery apps, fitness apps, finance apps"
+      },
+      "cloudSolutions": {
+        "title": "Cloud Solutions",
+        "description": "We develop fast and reliable applications optimized for cloud environments and automatic scaling.",
+        "examples": "SaaS platforms, serverless applications, modular backend systems"
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "Custom tools for automating repetitive business processes.",
+        "examples": "Data processing, reporting automation, workflow engines, integration tools"
+      },
+      "apiIntegrations": {
+        "title": "API & Integrations",
+        "description": "Backend systems, REST API and integrations with third-party services.",
+        "examples": "Payment gateways, shipping APIs, accounting software integrations"
+      },
+      "dashboards": {
+        "title": "Dashboard & Admin Panels",
+        "description": "Interactive admin panels with data visualization and control systems.",
+        "examples": "Analytics dashboards, admin CMS, management portals, reporting tools"
+      }
+    },
+    "cta": {
+      "title": "Ready to Automate Your Business?",
+      "consultationTitle": "Get a free consultation",
+      "benefit1": "Analysis of your needs",
+      "benefit2": "Cost and time estimation",
+      "benefit3": "Technology recommendations",
+      "benefit4": "Detailed project plan",
+      "contactTitle": "Contact us today",
+      "phone": "+1 240 810 3730",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "technologies": {
+      "title": "Technologies We Use",
+      "subtitle": "We work with the latest and best technologies for fast, secure and scalable software",
+      "react": {
+        "name": "React.js",
+        "description": "Modern JavaScript library for creating interactive user interfaces",
+        "category": "Frontend"
+      },
+      "nextjs": {
+        "name": "Next.js",
+        "description": "Full-stack React framework with server-side rendering and optimization",
+        "category": "Frontend"
+      },
+      "reactNative": {
+        "name": "React Native",
+        "description": "Cross-platform framework for iOS and Android mobile applications",
+        "category": "Mobile"
+      },
+      "nodejs": {
+        "name": "Node.js & Express",
+        "description": "Backend runtime and framework for scalable REST API services",
+        "category": "Backend"
+      }
+    },
+    "features": {
+      "title": "Our Software Features",
+      "security": {
+        "title": "Security & Privacy",
+        "description": "Enterprise-level security, data encryption, GDPR compliance and regular security audits."
+      },
+      "performance": {
+        "title": "High Performance",
+        "description": "Optimized code, caching strategies, load balancing and CDN for fast loading."
+      },
+      "scalability": {
+        "title": "Scalability",
+        "description": "Architecture designed for growth - easily add users, data and functionality."
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Works perfectly on all devices - desktop, tablet, mobile phone."
+      },
+      "integrations": {
+        "title": "Integrations",
+        "description": "Connection with existing systems, APIs and third-party services."
+      },
+      "userFriendly": {
+        "title": "User-Friendly",
+        "description": "Intuitive UI/UX design, easy onboarding and minimal learning curve for users."
+      }
+    },
+    "process": {
+      "title": "Software Development Process",
+      "step1": {
+        "title": "Consultation & Analysis",
+        "description": "We understand your business needs, processes and goals. We define requirements and project scope through detailed discussions. We analyze existing solutions and competition to create a strategy that will make your software stand out in the market."
+      },
+      "step2": {
+        "title": "Design & Planning",
+        "description": "We create wireframes, mockups, system architecture and project plan with milestones. We design user experience and technical architecture. We align all details with you and make necessary corrections until you are completely satisfied."
+      },
+      "step3": {
+        "title": "Development",
+        "description": "Agile development process with regular sprints and progress demonstrations. We use the latest technologies (Next.js, React.js, Node.js) to create fast, secure and scalable software. We regularly update you on project progress."
+      },
+      "step4": {
+        "title": "Testing & QA",
+        "description": "Rigorous testing of functionality, performance, security and user experience. We test on different platforms and devices. We check all edge cases and optimize for maximum performance."
+      },
+      "step5": {
+        "title": "Deployment",
+        "description": "Production setup, data migration, user training and go-live. We configure cloud infrastructure, CI/CD pipeline and monitoring. We ensure smooth transition and stable system launch."
+      },
+      "step6": {
+        "title": "Maintenance & Support",
+        "description": "Continuous technical support, bugfixes, updates and new functionality. We monitor system performance and suggest improvements. We're here to help you with any questions or necessary changes."
+      },
+      "agile": {
+        "title": "Agile Methodology",
+        "subtitle": "We use <strong>Agile/Scrum methodology</strong> which enables flexibility, transparency and continuous value delivery. Instead of waiting months for the final product, you get functional software versions every 2-3 weeks.",
+        "sprintPlanning": {
+          "title": "Sprint Planning",
+          "description": "Together we define priorities and functionalities for the next sprint."
+        },
+        "dailyStandups": {
+          "title": "Daily Standups",
+          "description": "Regular communication and updates on project progress."
+        },
+        "sprintReview": {
+          "title": "Sprint Review",
+          "description": "We present completed work, collect feedback and adjust the plan."
+        }
+      }
+    },
+    "industries": {
+      "title": "Industries We Work In",
+      "subtitle": "Our expertise covers a wide range of industries",
+      "ecommerce": {
+        "name": "E-commerce & Retail",
+        "description": "Online stores, inventory management, POS systems"
+      },
+      "b2b": {
+        "name": "B2B Services",
+        "description": "CRM, project management, billing systems"
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "description": "Patient management, appointment scheduling, telemedicine"
+      },
+      "education": {
+        "name": "Education",
+        "description": "LMS platforms, online courses, student management"
+      },
+      "realEstate": {
+        "name": "Real Estate",
+        "description": "Property management, listing portals, CRM for agencies"
+      },
+      "manufacturing": {
+        "name": "Manufacturing",
+        "description": "MES systems, production tracking, quality control"
+      },
+      "logistics": {
+        "name": "Logistics",
+        "description": "Fleet management, route optimization, warehouse systems"
+      },
+      "hospitality": {
+        "name": "Hospitality",
+        "description": "Booking systems, PMS, revenue management"
+      }
+    },
+    "benefits": {
+      "title": "Advantages of Custom Software Over Ready Solutions",
+      "comparison": {
+        "custom": {
+          "title": "Custom Software",
+          "point1": "<strong>Exactly what you need</strong> - no unnecessary features",
+          "point2": "<strong>One-time investment</strong> - yours forever, no monthly subscriptions",
+          "point3": "<strong>Full control and ownership</strong> - source code is yours",
+          "point4": "<strong>Integration with existing systems</strong> - no limitations",
+          "point5": "<strong>Scalability</strong> - grows with your business",
+          "point6": "<strong>Competitive advantage</strong> - unique functionalities",
+          "point7": "<strong>Faster processes</strong> - automated according to your workflows",
+          "point8": "<strong>Better security</strong> - tailored to your security requirements"
+        },
+        "ready": {
+          "title": "Ready Solutions (SaaS)",
+          "point1": "<strong>Generic features</strong> - much of it you don't need",
+          "point2": "<strong>Monthly subscriptions</strong> - costs pile up over years",
+          "point3": "<strong>No ownership</strong> - dependency on provider",
+          "point4": "<strong>Limited integrations</strong> - only what they support",
+          "point5": "<strong>Charged per user</strong> - more expensive with growth",
+          "point6": "<strong>Same tool as competition</strong> - no differentiation",
+          "point7": "<strong>Slow processes</strong> - you adapt to their workflow",
+          "point8": "<strong>Your data on their servers</strong> - privacy concerns"
+        }
+      },
+      "conclusion": "Custom software is a long-term, incomparably more profitable solution that gives you complete control, security, and the power to shape technology according to your business — not the other way around."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faq1": {
+        "question": "How much does custom software development cost?",
+        "answer": "The price depends on project complexity, number of features and development time. Simple web applications start from $5,000-10,000, medium complexity systems (CRM, ERP) from $15,000-30,000, while complex enterprise systems can cost $50,000+. It's important to note this is a one-time investment - after that you only pay maintenance (~10-15% annually of initial price). For comparison, SaaS solutions cost you $1,000-5,000 annually and these costs pile up endlessly."
+      },
+      "faq2": {
+        "question": "How long does custom software development take?",
+        "answer": "Time depends on project scope. MVP (Minimum Viable Product) version can be ready in 2-3 months. Medium complexity projects take 4-6 months, while complex enterprise systems can take 6-12+ months. We use Agile methodology, so you get functional versions every 2-3 weeks instead of waiting months for the final product."
+      },
+      "faq3": {
+        "question": "Can I see progress during development?",
+        "answer": "Absolutely! We work in 2-3 week sprints. At the end of each sprint you get a demo of functional software version, you can test, give feedback and together we define priorities for the next sprint. You have access to project management tool (Jira, Trello) where you track progress in real-time. We also have regular meetings (weekly/bi-weekly) where we discuss progress."
+      },
+      "faq4": {
+        "question": "What if I want to add new features later?",
+        "answer": "That's one of the biggest advantages of custom software! As your business grows and changes, you can add new features. We create software with modular architecture that allows easy expansion. You can order development as needed (hourly/daily rate) or arrange a retainer for continuous support and development. You're not limited like with SaaS solutions where you have to wait for the provider to add a feature (if they ever do)."
+      },
+      "faq5": {
+        "question": "Who will own the source code?",
+        "answer": "You! After final payment, the complete source code becomes your intellectual property. You get full ownership of the software and can do whatever you want - give it to another developer for maintenance, sell it, license it, etc. This is a big difference compared to SaaS solutions where you never own the software."
+      },
+      "faq6": {
+        "question": "Do you offer maintenance and support after launch?",
+        "answer": "Yes. We offer different support packages - from basic support (bug fixes, security updates) to full-service package (bug fixes, updates, new features, 24/7 monitoring). We usually charge 10-15% of initial software price annually for continuous support. You can also choose whether you want monthly retainer or pay-as-you-go model where you only pay as needed."
+      },
+      "faq7": {
+        "question": "What if I have an existing system that needs integration?",
+        "answer": "We specialize in integrations! We can integrate new software with your existing systems - accounting software (QuickBooks, Xero), CRM, ERP, e-commerce platforms, payment gateways, shipping APIs, email services and any system that has an API. We can also create an API for your new software so other systems can connect to it."
+      },
+      "faq8": {
+        "question": "Can I see your project portfolio?",
+        "answer": "Due to NDA agreements with clients, we cannot publicly showcase all projects. However, we can organize a call where we'll show you case studies of similar projects, share references from satisfied clients and demonstrate our expertise. Many of our clients are willing to share their experience with potential clients."
+      },
+      "faq9": {
+        "question": "What happens if I'm not satisfied during development?",
+        "answer": "Our Agile approach minimizes this risk because you constantly get feedback and control over the project. We do payments in milestones (e.g. 30% start, 30% after MVP, 30% after beta, 10% finalization), so you only pay when you see results. If you're not satisfied, we do revisions until you are. We have a satisfaction guarantee - if functionality doesn't work as specified, we fix it at no additional charge."
+      }
+    }
+  }
+}

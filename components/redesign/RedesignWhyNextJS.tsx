@@ -191,7 +191,7 @@ export default function RedesignWhyNextJS() {
         </h3>
 
         <Link
-          href="#kontakt"
+          href="/contact"
           className="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
         >
           Započnite Vašu Transformaciju

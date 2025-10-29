@@ -1,9 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SoftwareBenefits() {
+  const intl = useMessages();
+
+  const customPoints = [
+    "point1",
+    "point2",
+    "point3",
+    "point4",
+    "point5",
+    "point6",
+    "point7",
+    "point8",
+  ];
+  const readyPoints = [
+    "point1",
+    "point2",
+    "point3",
+    "point4",
+    "point5",
+    "point6",
+    "point7",
+    "point8",
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,7 +64,7 @@ export default function SoftwareBenefits() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Prednosti Custom Softvera nad Gotovim Rešenjima
+          {intl.formatMessage({ id: "software.benefits.title" })}
         </motion.h2>
       </div>
 
@@ -64,126 +86,31 @@ export default function SoftwareBenefits() {
         >
           <h3 className="text-xl font-bold mb-4 flex items-center gap-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             <span className="text-orange-600 text-2xl">✓</span>
-            Custom Softver
+            {intl.formatMessage({
+              id: "software.benefits.comparison.custom.title",
+            })}
           </h3>
           <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Tačno ono što vam treba</strong> - bez nepotrebnih
-                funkcija
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Jednokratna investicija</strong> - vaše je zauvek, bez
-                mesečnih pretplata
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Puna kontrola i vlasništvo</strong> - source code je vaš
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Integracija sa postojećim sistemima</strong> - bez
-                ograničenja
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Skalabilnost</strong> - raste sa vašim biznisom
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Konkurentska prednost</strong> - unique funkcionalnosti
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Brži procesi</strong> - automatizirano prema vašim
-                workflow-ima
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Bolja sigurnost</strong> - prilagođena vašim security
-                zahtevima
-              </span>
-            </li>
+            {customPoints.map((point, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <span className="text-orange-600 text-2xl">✓</span>
+                </motion.div>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: intl.formatMessage({
+                      id: `software.benefits.comparison.custom.${point}`,
+                    }),
+                  }}
+                />
+              </li>
+            ))}
           </ul>
         </motion.div>
 
@@ -198,127 +125,31 @@ export default function SoftwareBenefits() {
         >
           <h3 className="text-xl font-bold mb-4 flex items-center gap-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             <span className="text-orange-600 text-2xl">✗</span>
-            Gotova Rešenja (SaaS)
+            {intl.formatMessage({
+              id: "software.benefits.comparison.ready.title",
+            })}
           </h3>
           <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Generičke funkcije</strong> - mnogo toga vam ne treba
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Mesečne pretplate</strong> - troškovi se gomilaju
-                godinama
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Nema vlasništva</strong> - zavisnost od provajdera
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Ograničene integracije</strong> - samo ono što oni
-                podržavaju
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Naplaćuje se po broju korisnika</strong> - skuplji sa
-                rastom
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Isti alat kao konkurencija</strong> - nema
-                differentiation
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Spori procesi</strong> - prilagođavate se njihovom
-                workflow-u
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
-                }}
-              >
-                <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1" />
-              </motion.div>
-              <span className="">
-                <strong>Vaši podaci na njihovim serverima</strong> - privacy
-                concerns
-              </span>
-            </li>
+            {readyPoints.map((point, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <motion.div
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <span className="text-orange-600 text-2xl">✗</span>
+                </motion.div>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: intl.formatMessage({
+                      id: `software.benefits.comparison.ready.${point}`,
+                    }),
+                  }}
+                />
+              </li>
+            ))}
           </ul>
         </motion.div>
       </motion.div>
@@ -335,9 +166,7 @@ export default function SoftwareBenefits() {
         }}
       >
         <p className="font-semibold text-center">
-          Custom softver je dugoročno neuporedivo isplativije rešenje koje vam
-          donosi potpunu kontrolu, sigurnost i moć da oblikujete tehnologiju
-          prema svom biznisu — ne obrnuto.
+          {intl.formatMessage({ id: "software.benefits.conclusion" })}
         </p>
       </motion.div>
     </div>

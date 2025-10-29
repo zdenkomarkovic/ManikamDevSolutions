@@ -270,7 +270,7 @@ export default function RedesignPerformance() {
         </p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
-            href="#kontakt"
+            href="/contact"
             className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
             Zatražite Besplatnu Analizu

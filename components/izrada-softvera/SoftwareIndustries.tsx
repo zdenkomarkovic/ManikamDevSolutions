@@ -11,51 +11,21 @@ import {
   FaTruck,
   FaHotel,
 } from "react-icons/fa";
-
-const industries = [
-  {
-    icon: FaShoppingCart,
-    name: "E-commerce i Retail",
-    description: "Online prodavnice, inventory management, POS sistemi",
-  },
-  {
-    icon: FaBriefcase,
-    name: "B2B Servisi",
-    description: "CRM, project management, billing sistemi",
-  },
-  {
-    icon: FaHeart,
-    name: "Zdravstvo",
-    description: "Patient management, appointment scheduling, telemedicine",
-  },
-  {
-    icon: FaGraduationCap,
-    name: "Edukacija",
-    description: "LMS platforme, online kursevi, student management",
-  },
-  {
-    icon: FaHome,
-    name: "Nekretnine",
-    description: "Property management, listing portals, CRM za agencije",
-  },
-  {
-    icon: FaIndustry,
-    name: "Proizvodnja",
-    description: "MES sistemi, production tracking, quality control",
-  },
-  {
-    icon: FaTruck,
-    name: "Logistika",
-    description: "Fleet management, route optimization, warehouse systems",
-  },
-  {
-    icon: FaHotel,
-    name: "Hotelijerstvo",
-    description: "Booking sistemi, PMS, revenue management",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SoftwareIndustries() {
+  const intl = useMessages();
+
+  const industries = [
+    { icon: FaShoppingCart, key: "ecommerce" },
+    { icon: FaBriefcase, key: "b2b" },
+    { icon: FaHeart, key: "healthcare" },
+    { icon: FaGraduationCap, key: "education" },
+    { icon: FaHome, key: "realEstate" },
+    { icon: FaIndustry, key: "manufacturing" },
+    { icon: FaTruck, key: "logistics" },
+    { icon: FaHotel, key: "hospitality" },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -110,7 +80,7 @@ export default function SoftwareIndustries() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-          Industrije Sa Kojima Radimo
+          {intl.formatMessage({ id: "software.industries.title" })}
         </h2>
       </motion.div>
 
@@ -121,7 +91,7 @@ export default function SoftwareIndustries() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Razvijamo custom softvere za različite industrije i poslovne sektore
+        {intl.formatMessage({ id: "software.industries.subtitle" })}
       </motion.p>
 
       <motion.div
@@ -132,6 +102,7 @@ export default function SoftwareIndustries() {
         viewport={{ once: true }}
       >
         {industries.map((industry, index) => {
+          const Icon = industry.icon;
           const gradients = [
             "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
             "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-600",
@@ -161,12 +132,14 @@ export default function SoftwareIndustries() {
                   transition: { duration: 0.6 },
                 }}
               >
-                <industry.icon className="text-2xl text-white" />
+                <Icon className="text-2xl text-white" />
               </motion.div>
               <h4 className="text-xl font-bold mb-3 text-gray-100">
-                {industry.name}
+                {intl.formatMessage({ id: `software.industries.${industry.key}.name` })}
               </h4>
-              <p className="text-gray-100">{industry.description}</p>
+              <p className="text-gray-100">
+                {intl.formatMessage({ id: `software.industries.${industry.key}.description` })}
+              </p>
             </motion.div>
           );
         })}

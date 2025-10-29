@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SoftwareIntro() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -48,7 +50,7 @@ export default function SoftwareIntro() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Zašto Vašem Biznisu Treba Custom Softver?
+        {intl.formatMessage({ id: "software.intro.title" })}
       </motion.h2>
       <motion.div
         className="space-y-4"
@@ -57,39 +59,24 @@ export default function SoftwareIntro() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.p variants={itemVariants}>
-          Gotova softverska rešenja često ne pokrivaju specifične potrebe vašeg
-          biznisa. Možda vam treba 80% funkcionalnosti, ali nemate potrebu za
-          ostalih 20%, ili vam nedostaje ta ključna funkcija koja čini razliku.{" "}
-          <strong>
-            Custom softver je dizajniran tačno za vaše poslovne procese
-          </strong>{" "}
-          - dobijate ono što vam treba, bez nepotrebnih funkcija za koje plaćate
-          skupu mesečnu pretplatu.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          U digitalnom dobu,{" "}
-          <strong>
-            automatizacija poslovnih procesa nije luksuz - to je neophodnost za
-            konkurentnost
-          </strong>
-          . Svaki manuelni proces koji vaši zaposleni rade može biti
-          automatizovan. Umesto da vaši ljudi troše vreme na ponavljajuće
-          zadatke, custom softver radi za vas 24/7, bez greške, brže i
-          jeftinije. Jedan dobar CRM sistem može zameniti 10 Excel tabela i
-          smanjiti vreme obrade narudžbina sa 30 minuta na 30 sekundi.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          <strong>
-            Prosečan povrat investicije (ROI) na custom softver je 300-500% u
-            prve 2 godine.
-          </strong>
-          Nakon inicijalnog razvoja, trošite minimalno na održavanje, dok gotova
-          rešenja naplaćuju mesečne/godišnje pretplate koje se gomilaju. Custom
-          softver je vaše vlasništvo zauvek, možete ga integrisati sa bilo kojim
-          sistemom i skalirati kako vaš biznis raste. Ne zavisete od spoljnih
-          provajdera koji mogu povećati cene ili ugasiti servis.
-        </motion.p>
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "software.intro.paragraph1" }),
+          }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "software.intro.paragraph2" }),
+          }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "software.intro.paragraph3" }),
+          }}
+        />
       </motion.div>
     </motion.div>
   );
