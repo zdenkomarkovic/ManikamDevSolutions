@@ -2,13 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import SEOHero from "@/components/seo/SEOHero";
-import SEOIntro from "@/components/seo/SEOIntro";
-import SEOFeatures from "@/components/seo/SEOFeatures";
-import SEOServices from "@/components/seo/SEOServices";
-import SEOCTA from "@/components/seo/SEOCTA";
-import SEOProcess from "@/components/seo/SEOProcess";
-import SEOFAQ from "@/components/seo/SEOFAQ";
+import GoogleAdsHero from "@/components/google-ads/GoogleAdsHero";
+import GoogleAdsIntro from "@/components/google-ads/GoogleAdsIntro";
+import GoogleAdsServices from "@/components/google-ads/GoogleAdsServices";
+import GoogleAdsProcess from "@/components/google-ads/GoogleAdsProcess";
+import GoogleAdsWhy from "@/components/google-ads/GoogleAdsWhy";
+import GoogleAdsFAQ from "@/components/google-ads/GoogleAdsFAQ";
+import GoogleAdsFeatures from "@/components/google-ads/GoogleAdsFeatures";
+import GoogleAdsCTA from "@/components/google-ads/GoogleAdsCTA";
 import { MessagesProvider } from "@/lib/MessagesContext";
 import { useLocale } from "@/lib/LocaleContext";
 
@@ -16,7 +17,7 @@ import { useLocale } from "@/lib/LocaleContext";
 type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
 
-// Animacija varijante za fade in + slide up
+// Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
   visible: {
@@ -29,20 +30,6 @@ const fadeInUp = {
   },
 };
 
-// Animacija za scale up (uvećavanje)
-const scaleUp = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Hero animacija
 const heroVariants = {
   hidden: {
     opacity: 0,
@@ -60,7 +47,7 @@ const heroVariants = {
   },
 };
 
-export default function SEOPageClient() {
+export default function GoogleAdsClient() {
   const locale = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
@@ -69,15 +56,13 @@ export default function SEOPageClient() {
       try {
         // Load main messages
         const mainMsgs = await import(`@/lang/${locale}.json`);
-        // Load seoOptimization messages
-        const seoOptMsgs = await import(
-          `@/lang/seoOptimization/${locale}.json`
-        );
+        // Load googleAds messages
+        const googleAdsMsgs = await import(`@/lang/googleAds/${locale}.json`);
 
         // Merge messages
         const mergedMessages = {
           ...mainMsgs.default,
-          ...seoOptMsgs.default,
+          ...googleAdsMsgs.default,
         };
 
         setMessages(mergedMessages);
@@ -95,18 +80,18 @@ export default function SEOPageClient() {
   return (
     <MessagesProvider locale={locale} messages={messages}>
       <div className="bg-gray-900/90">
-        {/* Hero sekcija */}
+        {/* Hero section */}
         <section className="pt-24 pb-6 md:pb-16 px-4">
           <motion.div
             variants={heroVariants}
             initial="hidden"
             animate="visible"
           >
-            <SEOHero />
+            <GoogleAdsHero />
           </motion.div>
         </section>
 
-        {/* Glavna sekcija sa sadržajem */}
+        {/* Main content section */}
         <div className="container mx-auto space-y-8 md:space-y-16 px-3 md:px-16 pb-16">
           <motion.div
             initial="hidden"
@@ -114,7 +99,7 @@ export default function SEOPageClient() {
             viewport={{ once: true, amount: 0.1 }}
             variants={fadeInUp}
           >
-            <SEOIntro />
+            <GoogleAdsIntro />
           </motion.div>
 
           <motion.div
@@ -123,24 +108,16 @@ export default function SEOPageClient() {
             viewport={{ once: true, amount: 0.05 }}
             variants={fadeInUp}
           >
-            <SEOFeatures />
+            <GoogleAdsServices />
           </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={fadeInUp}
           >
-            <SEOCTA />
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
-            variants={scaleUp}
-          >
-            <SEOServices />
+            <GoogleAdsCTA />
           </motion.div>
 
           <motion.div
@@ -149,7 +126,7 @@ export default function SEOPageClient() {
             viewport={{ once: true, amount: 0.05 }}
             variants={fadeInUp}
           >
-            <SEOProcess />
+            <GoogleAdsWhy />
           </motion.div>
 
           <motion.div
@@ -158,7 +135,25 @@ export default function SEOPageClient() {
             viewport={{ once: true, amount: 0.05 }}
             variants={fadeInUp}
           >
-            <SEOFAQ />
+            <GoogleAdsFeatures />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={fadeInUp}
+          >
+            <GoogleAdsProcess />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={fadeInUp}
+          >
+            <GoogleAdsFAQ />
           </motion.div>
         </div>
       </div>

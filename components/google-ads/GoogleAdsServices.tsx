@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const GoogleAdsServices = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,7 +44,7 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Naše usluge Google oglašavanja
+          {intl.formatMessage({ id: "googleAds.services.title" })}
         </motion.h2>
       </div>
       <motion.p
@@ -52,9 +54,7 @@ const GoogleAdsServices = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Pružamo kompletnu Google Ads uslugu koja pokriva sve tipove kampanja.
-        Bez obzira na vašu industriju ili cilj, imamo rešenje koje će doneti
-        maksimalne rezultate.
+        {intl.formatMessage({ id: "googleAds.services.subtitle" })}
       </motion.p>
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
@@ -74,12 +74,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Search Kampanje
+            {intl.formatMessage({ id: "googleAds.services.search.title" })}
           </h3>
           <p className="">
-            Pojavite se na vrhu Google pretrage kada klijenti traže vaše
-            proizvode. Optimizovane kampanje za maksimalnu konverziju uz
-            minimalan trošak.
+            {intl.formatMessage({ id: "googleAds.services.search.description" })}
           </p>
         </motion.div>
 
@@ -94,11 +92,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Display Kampanje
+            {intl.formatMessage({ id: "googleAds.services.display.title" })}
           </h3>
           <p className="">
-            Vizuelno privlačni oglasi na preko 2 miliona sajtova. Idealno za
-            remarketing i građenje prepoznatljivosti brenda.
+            {intl.formatMessage({ id: "googleAds.services.display.description" })}
           </p>
         </motion.div>
 
@@ -113,11 +110,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            YouTube Oglašavanje
+            {intl.formatMessage({ id: "googleAds.services.youtube.title" })}
           </h3>
           <p className="">
-            Video kampanje na najvećoj video platformi. Targetiranje na osnovu
-            demografskih podataka, interesovanja i ponašanja korisnika.
+            {intl.formatMessage({ id: "googleAds.services.youtube.description" })}
           </p>
         </motion.div>
 
@@ -132,11 +128,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Shopping Kampanje
+            {intl.formatMessage({ id: "googleAds.services.shopping.title" })}
           </h3>
           <p className="">
-            Savršeno rešenje za online prodavnice. Proizvodi se prikazuju
-            direktno u Google pretrazi sa slikom, cenom i nazivom.
+            {intl.formatMessage({ id: "googleAds.services.shopping.description" })}
           </p>
         </motion.div>
 
@@ -151,12 +146,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Remarketing Kampanje
+            {intl.formatMessage({ id: "googleAds.services.remarketing.title" })}
           </h3>
           <p className="">
-            Ponovo dosegnite posetioce koji nisu izvršili kupovinu.
-            Personalizovane poruke za različite segmente sa većom stopom
-            konverzije.
+            {intl.formatMessage({ id: "googleAds.services.remarketing.description" })}
           </p>
         </motion.div>
 
@@ -171,11 +164,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            App Kampanje
+            {intl.formatMessage({ id: "googleAds.services.app.title" })}
           </h3>
           <p className="">
-            Promovišite mobilne aplikacije kroz Google Play Store i App Store.
-            Optimizovane kampanje za preuzimanje i aktivnost korisnika.
+            {intl.formatMessage({ id: "googleAds.services.app.description" })}
           </p>
         </motion.div>
 
@@ -190,11 +182,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Smart Kampanje
+            {intl.formatMessage({ id: "googleAds.services.smart.title" })}
           </h3>
           <p className="">
-            Automatizovane kampanje koje Google optimizuje za vas. Idealno za
-            početnike ili manje složene ciljeve sa minimalnim upravljanjem.
+            {intl.formatMessage({ id: "googleAds.services.smart.description" })}
           </p>
         </motion.div>
 
@@ -209,11 +200,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Performance Max
+            {intl.formatMessage({ id: "googleAds.services.performanceMax.title" })}
           </h3>
           <p className="">
-            Najnoviji tip kampanje koji koristi AI za optimizaciju kroz sve
-            Google kanale. Maksimalni doseg i performanse u jednoj kampanji.
+            {intl.formatMessage({ id: "googleAds.services.performanceMax.description" })}
           </p>
         </motion.div>
 
@@ -228,11 +218,10 @@ const GoogleAdsServices = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Lokalno Oglašavanje
+            {intl.formatMessage({ id: "googleAds.services.local.title" })}
           </h3>
           <p className="">
-            Targetiranje korisnika u vašoj blizini. Idealno za lokalne biznise,
-            restorane, uslužne delatnosti i fizičke prodavnice.
+            {intl.formatMessage({ id: "googleAds.services.local.description" })}
           </p>
         </motion.div>
       </motion.div>

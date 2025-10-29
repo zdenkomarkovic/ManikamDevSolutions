@@ -1,0 +1,165 @@
+{
+  "googleAds": {
+    "page": {
+      "title": "Google Advertising and PPC Campaigns | Manikam Dev Solutions",
+      "description": "Professional Google Ads campaigns that deliver results. Increase your sales and brand visibility with our expert digital marketing team. Over 10 years of Google advertising experience."
+    },
+    "hero": {
+      "title": "Google Advertising",
+      "subtitle": "Increase your online visibility and sales with expertly managed Google Ads campaigns",
+      "badge1": "Google Ads Experts",
+      "badge2": "Maximum ROI",
+      "badge3": "Proven Results"
+    },
+    "intro": {
+      "title": "Your Partner for Successful Google Advertising",
+      "content": "With <strong>years of experience in digital marketing</strong>, our team of Google Ads specialists helps companies of all sizes achieve their business goals through precisely targeted and optimized advertising campaigns. We specialize in creating Google Ads strategies that maximize return on investment and deliver measurable results."
+    },
+    "services": {
+      "title": "Our Google Advertising Services",
+      "subtitle": "We provide complete Google Ads services covering all campaign types. Regardless of your industry or goal, we have a solution that will deliver maximum results.",
+      "search": {
+        "title": "Search Campaigns",
+        "description": "Appear at the top of Google search when customers search for your products. Optimized campaigns for maximum conversion with minimal cost."
+      },
+      "display": {
+        "title": "Display Campaigns",
+        "description": "Visually attractive ads on over 2 million websites. Ideal for remarketing and building brand recognition."
+      },
+      "youtube": {
+        "title": "YouTube Advertising",
+        "description": "Video campaigns on the largest video platform. Targeting based on demographic data, interests and user behavior."
+      },
+      "shopping": {
+        "title": "Shopping Campaigns",
+        "description": "Perfect solution for online stores. Products are displayed directly in Google search with image, price and name."
+      },
+      "remarketing": {
+        "title": "Remarketing Campaigns",
+        "description": "Re-engage visitors who didn't make a purchase. Personalized messages for different segments with higher conversion rates."
+      },
+      "app": {
+        "title": "App Campaigns",
+        "description": "Promote mobile apps through Google Play Store and App Store. Optimized campaigns for downloads and user activity."
+      },
+      "smart": {
+        "title": "Smart Campaigns",
+        "description": "Automated campaigns that Google optimizes for you. Ideal for beginners or simpler goals with minimal management."
+      },
+      "performanceMax": {
+        "title": "Performance Max",
+        "description": "The latest campaign type that uses AI to optimize across all Google channels. Maximum reach and performance in one campaign."
+      },
+      "local": {
+        "title": "Local Advertising",
+        "description": "Target users in your vicinity. Ideal for local businesses, restaurants, service providers and physical stores."
+      }
+    },
+    "cta": {
+      "title": "Ready to increase your online sales?",
+      "resultsTitle": "Results you can expect",
+      "result1": "200-400% increase in online sales",
+      "result2": "300-500% ROI in the first 3 months",
+      "result3": "Precise targeting of your target audience",
+      "result4": "40-60% reduction in cost per conversion",
+      "subtitle": "Contact us for a free campaign analysis",
+      "phone": "+1 240 810 3730",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "why": {
+      "title": "Why is Google Advertising Important for Your Business?",
+      "visibility": {
+        "title": "Immediate Visibility",
+        "description": "While SEO delivers results over a longer period, Google advertising allows you to be visible immediately, from day one of your campaign."
+      },
+      "targeting": {
+        "title": "Precise Targeting",
+        "description": "Target by location, time of day, device, demographic characteristics and interests. Every click is measurable and transparent."
+      },
+      "tracking": {
+        "title": "Detailed Tracking",
+        "description": "Most detailed result tracking capabilities of all advertising platforms. Every expense, every conversion - everything is transparent."
+      },
+      "momentTitle": "Key Moment",
+      "momentDescription": "When someone searches Google for a product or service you offer, you can be the first company they see. That's the moment when a potential customer is most ready to buy - actively seeking a solution to their problem.",
+      "momentHighlight": "Google Ads allows you to appear in that key moment"
+    },
+    "features": {
+      "title": "Why do clients choose our Google Ads services?",
+      "expertise": {
+        "title": "Proven Expertise",
+        "description": "Our team of Google Ads specialists manages campaigns with budgets from hundreds to thousands of euros per month, always achieving optimal results."
+      },
+      "transparency": {
+        "title": "Transparent Business",
+        "description": "You receive detailed monthly reports with all key metrics - conversions, cost per click and recommendations for further campaign improvements."
+      },
+      "individual": {
+        "title": "Individual Approach",
+        "description": "Each campaign is tailored to your business, industry and target audience. We don't use templates - every project is unique."
+      },
+      "optimization": {
+        "title": "Continuous Optimization",
+        "description": "Your campaigns are constantly monitored, tested and optimized to achieve the best performance. A/B testing and analysis are part of our daily routine."
+      }
+    },
+    "process": {
+      "title": "What does the Google Ads campaign process look like?",
+      "step1": {
+        "title": "Analysis and strategy",
+        "description": "We thoroughly analyze your business, competition, target audience and set clear, measurable campaign goals. We research the market, analyze competitive campaigns and create a strategy that will set your campaign apart. This phase is crucial as it helps us understand your vision and create a campaign that will deliver maximum results."
+      },
+      "step2": {
+        "title": "Keyword research",
+        "description": "We find the most relevant keywords with the best conversion potential, analyzing search volume and competition. We use professional keyword research tools and create a list of terms that will attract quality visits. We focus on long-tail keywords that have greater conversion potential."
+      },
+      "step3": {
+        "title": "Campaign creation",
+        "description": "We set up the campaign in the Google Ads account, create attractive ads, configure budget and targeting. We create different ad versions for A/B testing, set up geographic and demographic targeting, and optimize landing pages for maximum conversion. Everything is tailored to your specific needs."
+      },
+      "step4": {
+        "title": "Monitoring and optimization",
+        "description": "We monitor performance daily, test different ad versions, optimize bids and continuously improve results. We analyze metrics such as CTR, conversion rate, cost per acquisition and ROI. We regularly adjust strategy based on data and market trends."
+      },
+      "step5": {
+        "title": "Reporting and analysis",
+        "description": "You receive a detailed monthly report with all key metrics and our recommendations for the next period. The report includes performance analysis, comparison with previous periods, competitive analysis and specific recommendations for improvement. We regularly organize meetings to discuss results and strategy."
+      },
+      "step6": {
+        "title": "Continuous improvement",
+        "description": "We offer continuous optimization and improvement of campaign performance. We follow the latest Google Ads features, test new approaches and strategies, and adapt to market changes. We're here to help you with any questions or necessary campaign adjustments."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions about Google Ads advertising",
+      "q1": {
+        "question": "What budget is needed for a Google Ads campaign?",
+        "answer": "The minimum recommended monthly budget depends on industry and competition, but generally starts from 300-500 EUR per month. For more competitive areas, 1000+ EUR may be needed to see significant results. During consultation, we analyze your industry and competition to provide an accurate estimate of the optimal budget."
+      },
+      "q2": {
+        "question": "How quickly can I see results?",
+        "answer": "First results (clicks and traffic) are visible immediately after launching the campaign. However, for optimal performance and best ROI, 2-3 months of continuous work and optimization are needed. The Google algorithm learns about your campaign over time, resulting in better performance and lower cost per click."
+      },
+      "q3": {
+        "question": "Do you only do setup or also campaign management?",
+        "answer": "We offer both options - we can just do the initial campaign setup, or you can engage our team for continuous management, optimization and monthly reports. Most clients choose full management as it delivers the best results. Our team regularly monitors performance and adjusts strategy for maximum ROI."
+      },
+      "q4": {
+        "question": "What if the campaign doesn't deliver results?",
+        "answer": "We work transparently and provide realistic estimates. If after the initial period we see that results are not satisfactory, we analyze the reasons together and adjust the strategy or budget. Our goal is always maximum ROI for your budget."
+      },
+      "q5": {
+        "question": "What types of Google Ads campaigns do you do?",
+        "answer": "We do all types of Google Ads campaigns: Search campaigns for search, Display campaigns for visual advertising, Shopping campaigns for e-commerce, Video campaigns on YouTube, and App campaigns for mobile applications. We choose the best combination according to your goals and budget."
+      },
+      "q6": {
+        "question": "Do I need to have a Google Ads account?",
+        "answer": "You don't need to have an existing Google Ads account. We can create a new account for you or work with your existing account."
+      },
+      "q7": {
+        "question": "How do you measure campaign success?",
+        "answer": "We measure success through key metrics such as ROI (return on investment), cost per acquisition (CPA), conversion rate, and quality score. Additionally, we track business results such as increased sales, lead generation, and improved brand awareness. We regularly provide detailed reports with performance analysis and recommendations for improvement."
+      }
+    }
+  }
+}

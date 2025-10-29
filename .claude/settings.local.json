@@ -18,7 +18,8 @@
       "Bash(powershell -Command:*)",
       "Bash(git checkout:*)",
       "Bash(claude logout)",
-      "Bash(del:*)"
+      "Bash(del:*)",
+      "Bash(dir /B \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\google-ads\")"
     ],
     "deny": [],
     "ask": []

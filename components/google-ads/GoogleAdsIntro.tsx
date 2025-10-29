@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function GoogleAdsIntro() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,7 +52,7 @@ export default function GoogleAdsIntro() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Vaš Partner za Uspešno Google Oglašavanje
+          {intl.formatMessage({ id: "googleAds.intro.title" })}
         </motion.h2>
       </div>
 
@@ -61,14 +63,12 @@ export default function GoogleAdsIntro() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.p variants={itemVariants}>
-          Sa <strong>višegodišnjim iskustvom u digitalnom marketingu</strong>,
-          naš tim stručnjaka za Google Ads pomaže kompanijama svih veličina da
-          ostvare svoje poslovne ciljeve kroz precizno targetirane i
-          optimizovane oglasne kampanje. Specijalizujemo se za kreiranje Google
-          Ads strategija koje maksimizuju povrat ulaganja i donose merljive
-          rezultate.
-        </motion.p>
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "googleAds.intro.content" }),
+          }}
+        />
       </motion.div>
     </motion.div>
   );

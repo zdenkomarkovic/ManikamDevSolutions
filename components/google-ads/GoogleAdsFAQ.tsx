@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const GoogleAdsFAQ = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,7 +43,7 @@ const GoogleAdsFAQ = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Često postavljana pitanja o Google Ads oglašavanju
+          {intl.formatMessage({ id: "googleAds.faq.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -66,7 +68,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Koliki budžet je potreban za Google Ads kampanju?
+            {intl.formatMessage({ id: "googleAds.faq.q1.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -75,11 +77,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Minimalni preporučeni mesečni budžet zavisi od industrije i
-            konkurencije, ali uglavnom kreće od 300-500 EUR mesečno. Za
-            kompetitivnije oblasti može biti potrebno 1000+ EUR da bi se videli
-            značajni rezultati. Tokom konsultacije analiziramo vašu industriju i
-            konkurenciju da damo preciznu procenu optimalnog budžeta.
+            {intl.formatMessage({ id: "googleAds.faq.q1.answer" })}
           </motion.p>
         </motion.div>
 
@@ -98,7 +96,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Koliko brzo mogu videti rezultate?
+            {intl.formatMessage({ id: "googleAds.faq.q2.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -107,11 +105,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Prvi rezultati (klikovi i saobraćaj) su vidljivi odmah po pokretanju
-            kampanje. Međutim, za optimalne performanse i najbolji ROI, potrebno
-            je 2-3 meseca kontinuiranog rada i optimizacije. Google algoritam
-            uči o vašoj kampanji tokom vremena, što rezultuje boljim
-            performansama i nižim troškovima po kliku.
+            {intl.formatMessage({ id: "googleAds.faq.q2.answer" })}
           </motion.p>
         </motion.div>
 
@@ -130,7 +124,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Da li radite samo setup ili i upravljanje kampanjom?
+            {intl.formatMessage({ id: "googleAds.faq.q3.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -139,11 +133,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Nudimo obe opcije - možemo samo napraviti početni setup kampanje,
-            ili možete angažovati naš tim za kontinuirano upravljanje,
-            optimizaciju i mesečne izveštaje. Većina klijenata bira opciju
-            potpunog upravljanja jer donosi najbolje rezultate. Naš tim redovno
-            prati performanse i prilagođava strategiju za maksimalan ROI.
+            {intl.formatMessage({ id: "googleAds.faq.q3.answer" })}
           </motion.p>
         </motion.div>
 
@@ -162,7 +152,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Šta ako kampanja ne donese rezultate?
+            {intl.formatMessage({ id: "googleAds.faq.q4.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -171,10 +161,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Radimo transparentno i dajemo realne procene. Ako nakon inicijalnog
-            perioda vidimo da rezultati nisu zadovoljavajući, zajedno
-            analiziramo razloge i prilagođavamo strategiju ili budžet. Naš cilj
-            je uvek maksimalan ROI za vaš budžet.
+            {intl.formatMessage({ id: "googleAds.faq.q4.answer" })}
           </motion.p>
         </motion.div>
 
@@ -193,7 +180,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Koje tipove Google Ads kampanja radite?
+            {intl.formatMessage({ id: "googleAds.faq.q5.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -202,11 +189,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Radimo sve tipove Google Ads kampanja: Search kampanje za
-            pretraživanje, Display kampanje za vizuelno oglašavanje, Shopping
-            kampanje za e-commerce, Video kampanje na YouTube-u, i App kampanje
-            za mobilne aplikacije. Izaberemo najbolju kombinaciju prema vašim
-            ciljevima i budžetu.
+            {intl.formatMessage({ id: "googleAds.faq.q5.answer" })}
           </motion.p>
         </motion.div>
 
@@ -225,7 +208,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Da li je potrebno da imam Google Ads nalog?
+            {intl.formatMessage({ id: "googleAds.faq.q6.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -234,8 +217,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Nije potrebno da imate postojeći Google Ads nalog. Možemo kreirati
-            novi nalog za vas ili raditi sa vašim postojećim nalogom.
+            {intl.formatMessage({ id: "googleAds.faq.q6.answer" })}
           </motion.p>
         </motion.div>
 
@@ -254,7 +236,7 @@ const GoogleAdsFAQ = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Kako merite uspeh kampanje?
+            {intl.formatMessage({ id: "googleAds.faq.q7.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -263,12 +245,7 @@ const GoogleAdsFAQ = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Merimo uspeh kroz ključne metrike kao što su ROI (povrat
-            investicije), cost per acquisition (CPA), conversion rate, i
-            kvalitet skora. Pored toga, pratimo i poslovne rezultate kao što su
-            povećanje prodaje, generisanje leadova, i poboljšanje brand
-            awareness-a. Redovno dostavljamo detaljne izveštaje sa analizom
-            performansi i preporukama za poboljšanje.
+            {intl.formatMessage({ id: "googleAds.faq.q7.answer" })}
           </motion.p>
         </motion.div>
       </motion.div>

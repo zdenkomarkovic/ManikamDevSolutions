@@ -3,8 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaChartLine, FaEye, FaUserCog, FaCogs } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const GoogleAdsFeatures = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -59,7 +61,7 @@ const GoogleAdsFeatures = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Zašto klijenti biraju naše Google Ads usluge?
+          {intl.formatMessage({ id: "googleAds.features.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -91,12 +93,10 @@ const GoogleAdsFeatures = () => {
             <FaChartLine className="text-2xl text-white" />
           </motion.div>
           <h4 className="text-xl font-bold mb-3 text-gray-100">
-            Dokazana Stručnost
+            {intl.formatMessage({ id: "googleAds.features.expertise.title" })}
           </h4>
           <p className="text-gray-100">
-            Naš tim Google Ads stručnjaka upravlja kampanjama sa budžetima od
-            nekoliko stotina do više hiljada evra mesečno, uvek postižući
-            optimalne rezultate.
+            {intl.formatMessage({ id: "googleAds.features.expertise.description" })}
           </p>
         </motion.div>
 
@@ -122,12 +122,10 @@ const GoogleAdsFeatures = () => {
             <FaEye className="text-2xl text-white" />
           </motion.div>
           <h4 className="text-xl font-bold mb-3 text-gray-100">
-            Transparentno Poslovanje
+            {intl.formatMessage({ id: "googleAds.features.transparency.title" })}
           </h4>
           <p className="text-gray-100">
-            Dobijate detaljne mesečne izveštaje sa svim ključnim metrikama -
-            konverzije, trošak po kliku i preporuke za dalje unapređenje
-            kampanja.
+            {intl.formatMessage({ id: "googleAds.features.transparency.description" })}
           </p>
         </motion.div>
 
@@ -153,11 +151,10 @@ const GoogleAdsFeatures = () => {
             <FaUserCog className="text-2xl text-white" />
           </motion.div>
           <h4 className="text-xl font-bold mb-3 text-gray-100">
-            Individualni Pristup
+            {intl.formatMessage({ id: "googleAds.features.individual.title" })}
           </h4>
           <p className="text-gray-100">
-            Svaka kampanja je prilagođena vašem biznisu, industriji i ciljanoj
-            publici. Ne koristimo šablone - svaki projekat je jedinstven.
+            {intl.formatMessage({ id: "googleAds.features.individual.description" })}
           </p>
         </motion.div>
 
@@ -183,12 +180,10 @@ const GoogleAdsFeatures = () => {
             <FaCogs className="text-2xl text-white" />
           </motion.div>
           <h4 className="text-xl font-bold mb-3 text-gray-100">
-            Kontinuirana Optimizacija
+            {intl.formatMessage({ id: "googleAds.features.optimization.title" })}
           </h4>
           <p className="text-gray-100">
-            Vaše kampanje se konstantno prate, testiraju i optimizuju kako bi
-            performanse bile što bolje. A/B testiranje i analiza su naša
-            svakodnevica.
+            {intl.formatMessage({ id: "googleAds.features.optimization.description" })}
           </p>
         </motion.div>
       </motion.div>

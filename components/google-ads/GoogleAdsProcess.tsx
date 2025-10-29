@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const GoogleAdsProcess = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,7 +43,7 @@ const GoogleAdsProcess = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Kako izgleda proces Google Ads kampanje?
+          {intl.formatMessage({ id: "googleAds.process.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -77,7 +79,7 @@ const GoogleAdsProcess = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Analiza i strategija
+              {intl.formatMessage({ id: "googleAds.process.step1.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -87,11 +89,7 @@ const GoogleAdsProcess = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Detaljno analiziramo vaš biznis, konkurenciju, ciljnu grupu i
-            postavljamo jasne, merljive ciljeve kampanje. Istražujemo tržište,
-            analiziramo konkurentske kampanje i kreiramo strategiju koja će vašu
-            kampanju izdvojiti. Ova faza je ključna jer nam pomaže da razumemo
-            vašu viziju i kreiramo kampanju koja će doneti maksimalne rezultate.
+            {intl.formatMessage({ id: "googleAds.process.step1.description" })}
           </motion.p>
         </motion.div>
 
@@ -121,7 +119,7 @@ const GoogleAdsProcess = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Istraživanje ključnih reči
+              {intl.formatMessage({ id: "googleAds.process.step2.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -131,11 +129,7 @@ const GoogleAdsProcess = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Pronalazimo najrelevantnije ključne reči sa najboljim potencijalom
-            za konverziju, analizirajući obim pretrage i konkurenciju. Koristimo
-            profesionalne alate za istraživanje ključnih reči i kreiramo listu
-            termina koji će privući kvalitetnu posetu. Fokusiramo se na
-            long-tail ključne reči koje imaju veći potencijal za konverziju.
+            {intl.formatMessage({ id: "googleAds.process.step2.description" })}
           </motion.p>
         </motion.div>
 
@@ -165,7 +159,7 @@ const GoogleAdsProcess = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Kreiranje kampanje
+              {intl.formatMessage({ id: "googleAds.process.step3.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -175,11 +169,7 @@ const GoogleAdsProcess = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Postavljamo kampanju u Google Ads nalogu, kreiramo atraktivne
-            oglase, podešavamo budžet i targetiranje. Kreiramo različite verzije
-            oglasa za A/B testiranje, postavljamo geografsko i demografsko
-            targetiranje, i optimizujemo landing stranice za maksimalnu
-            konverziju. Sve je prilagođeno vašim specifičnim potrebama.
+            {intl.formatMessage({ id: "googleAds.process.step3.description" })}
           </motion.p>
         </motion.div>
 
@@ -209,7 +199,7 @@ const GoogleAdsProcess = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Praćenje i optimizacija
+              {intl.formatMessage({ id: "googleAds.process.step4.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -219,11 +209,7 @@ const GoogleAdsProcess = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Dnevno pratimo performanse, testiramo različite verzije oglasa,
-            optimizujemo ponude i kontinuirano unapređujemo rezultate.
-            Analiziramo metrike kao što su CTR, conversion rate, cost per
-            acquisition i ROI. Redovno prilagođavamo strategiju na osnovu
-            podataka i tržišnih trendova.
+            {intl.formatMessage({ id: "googleAds.process.step4.description" })}
           </motion.p>
         </motion.div>
 
@@ -253,7 +239,7 @@ const GoogleAdsProcess = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Izveštavanje i analiza
+              {intl.formatMessage({ id: "googleAds.process.step5.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -263,11 +249,7 @@ const GoogleAdsProcess = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Mesečno dobijate detaljan izveštaj sa svim ključnim metrikama i
-            našim preporukama za sledeći period. Izveštaj uključuje analizu
-            performansi, poređenje sa prethodnim periodima, konkurentsku analizu
-            i konkretne preporuke za poboljšanje. Redovno organizujemo sastanke
-            za diskusiju o rezultatima i strategiji.
+            {intl.formatMessage({ id: "googleAds.process.step5.description" })}
           </motion.p>
         </motion.div>
 
@@ -297,18 +279,14 @@ const GoogleAdsProcess = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Kontinuirano poboljšanje
+              {intl.formatMessage({ id: "googleAds.process.step6.title" })}
             </motion.h3>
           </div>
           <motion.p
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Nudimo kontinuiranu optimizaciju i poboljšanje performansi kampanje.
-            Pratimo najnovije Google Ads funkcionalnosti, testiramo nove
-            pristupe i strategije, i prilagođavamo se promenama na tržištu. Tu
-            smo da vam pomognemo sa bilo kakvim pitanjima ili potrebnim
-            prilagođavanjima kampanje.
+            {intl.formatMessage({ id: "googleAds.process.step6.description" })}
           </motion.p>
         </motion.div>
       </motion.div>

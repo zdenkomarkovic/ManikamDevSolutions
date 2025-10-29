@@ -1,0 +1,165 @@
+{
+  "googleAds": {
+    "page": {
+      "title": "Google Oglašavanje i PPC Kampanje | Manikam Dev Solutions",
+      "description": "Profesionalne Google Ads kampanje koje donose rezultate. Povećajte prodaju i vidljivost brenda sa našim stručnim timom za digitalni marketing. Više od 10 godina iskustva u Google oglašavanju."
+    },
+    "hero": {
+      "title": "Google Oglašavanje",
+      "subtitle": "Povećajte svoju online vidljivost i prodaju uz stručno vođene Google Ads kampanje",
+      "badge1": "Google Ads Eksperti",
+      "badge2": "Maksimalan ROI",
+      "badge3": "Dokazani Rezultati"
+    },
+    "intro": {
+      "title": "Vaš Partner za Uspešno Google Oglašavanje",
+      "content": "Sa <strong>višegodišnjim iskustvom u digitalnom marketingu</strong>, naš tim stručnjaka za Google Ads pomaže kompanijama svih veličina da ostvare svoje poslovne ciljeve kroz precizno targetirane i optimizovane oglasne kampanje. Specijalizujemo se za kreiranje Google Ads strategija koje maksimizuju povrat ulaganja i donose merljive rezultate."
+    },
+    "services": {
+      "title": "Naše usluge Google oglašavanja",
+      "subtitle": "Pružamo kompletnu Google Ads uslugu koja pokriva sve tipove kampanja. Bez obzira na vašu industriju ili cilj, imamo rešenje koje će doneti maksimalne rezultate.",
+      "search": {
+        "title": "Search Kampanje",
+        "description": "Pojavite se na vrhu Google pretrage kada klijenti traže vaše proizvode. Optimizovane kampanje za maksimalnu konverziju uz minimalan trošak."
+      },
+      "display": {
+        "title": "Display Kampanje",
+        "description": "Vizuelno privlačni oglasi na preko 2 miliona sajtova. Idealno za remarketing i građenje prepoznatljivosti brenda."
+      },
+      "youtube": {
+        "title": "YouTube Oglašavanje",
+        "description": "Video kampanje na najvećoj video platformi. Targetiranje na osnovu demografskih podataka, interesovanja i ponašanja korisnika."
+      },
+      "shopping": {
+        "title": "Shopping Kampanje",
+        "description": "Savršeno rešenje za online prodavnice. Proizvodi se prikazuju direktno u Google pretrazi sa slikom, cenom i nazivom."
+      },
+      "remarketing": {
+        "title": "Remarketing Kampanje",
+        "description": "Ponovo dosegnite posetioce koji nisu izvršili kupovinu. Personalizovane poruke za različite segmente sa većom stopom konverzije."
+      },
+      "app": {
+        "title": "App Kampanje",
+        "description": "Promovišite mobilne aplikacije kroz Google Play Store i App Store. Optimizovane kampanje za preuzimanje i aktivnost korisnika."
+      },
+      "smart": {
+        "title": "Smart Kampanje",
+        "description": "Automatizovane kampanje koje Google optimizuje za vas. Idealno za početnike ili manje složene ciljeve sa minimalnim upravljanjem."
+      },
+      "performanceMax": {
+        "title": "Performance Max",
+        "description": "Najnoviji tip kampanje koji koristi AI za optimizaciju kroz sve Google kanale. Maksimalni doseg i performanse u jednoj kampanji."
+      },
+      "local": {
+        "title": "Lokalno Oglašavanje",
+        "description": "Targetiranje korisnika u vašoj blizini. Idealno za lokalne biznise, restorane, uslužne delatnosti i fizičke prodavnice."
+      }
+    },
+    "cta": {
+      "title": "Spremni da povećate svoju online prodaju?",
+      "resultsTitle": "Rezultati koje možete očekivati",
+      "result1": "Povećanje online prodaje za 200-400%",
+      "result2": "ROI od 300-500% u prvih 3 meseca",
+      "result3": "Precizno targetiranje vaše ciljne grupe",
+      "result4": "Smanjenje troškova po konverziji za 40-60%",
+      "subtitle": "Kontaktirajte nas za besplatnu analizu kampanje",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "why": {
+      "title": "Zašto je Google Oglašavanje Važno za Vaš Biznis?",
+      "visibility": {
+        "title": "Odmah Vidljivost",
+        "description": "Dok SEO donosi rezultate kroz duži period, Google oglašavanje vam omogućava da budete vidljivi odmah, od prvog dana kampanje."
+      },
+      "targeting": {
+        "title": "Precizno Targetiranje",
+        "description": "Ciljajte po lokaciji, vremenu dana, uređaju, demografskim karakteristikama i interesovanjima. Svaki klik je merljiv i transparentan."
+      },
+      "tracking": {
+        "title": "Detaljno Praćenje",
+        "description": "Najdetaljnije mogućnosti praćenja rezultata od svih oglasnih platformi. Svaki trošak, svaka konverzija - sve je transparentno."
+      },
+      "momentTitle": "Ključni Moment",
+      "momentDescription": "Kada neko pretražuje Google za proizvod ili uslugu koju nudite, vi možete biti prva kompanija koju vide. To je trenutak kada je potencijalni klijent najspremniji za kupovinu - aktivno traži rešenje za svoj problem.",
+      "momentHighlight": "Google Ads vam omogućava da se pojavite u tom ključnom momentu"
+    },
+    "features": {
+      "title": "Zašto klijenti biraju naše Google Ads usluge?",
+      "expertise": {
+        "title": "Dokazana Stručnost",
+        "description": "Naš tim Google Ads stručnjaka upravlja kampanjama sa budžetima od nekoliko stotina do više hiljada evra mesečno, uvek postižući optimalne rezultate."
+      },
+      "transparency": {
+        "title": "Transparentno Poslovanje",
+        "description": "Dobijate detaljne mesečne izveštaje sa svim ključnim metrikama - konverzije, trošak po kliku i preporuke za dalje unapređenje kampanja."
+      },
+      "individual": {
+        "title": "Individualni Pristup",
+        "description": "Svaka kampanja je prilagođena vašem biznisu, industriji i ciljanoj publici. Ne koristimo šablone - svaki projekat je jedinstven."
+      },
+      "optimization": {
+        "title": "Kontinuirana Optimizacija",
+        "description": "Vaše kampanje se konstantno prate, testiraju i optimizuju kako bi performanse bile što bolje. A/B testiranje i analiza su naša svakodnevica."
+      }
+    },
+    "process": {
+      "title": "Kako izgleda proces Google Ads kampanje?",
+      "step1": {
+        "title": "Analiza i strategija",
+        "description": "Detaljno analiziramo vaš biznis, konkurenciju, ciljnu grupu i postavljamo jasne, merljive ciljeve kampanje. Istražujemo tržište, analiziramo konkurentske kampanje i kreiramo strategiju koja će vašu kampanju izdvojiti. Ova faza je ključna jer nam pomaže da razumemo vašu viziju i kreiramo kampanju koja će doneti maksimalne rezultate."
+      },
+      "step2": {
+        "title": "Istraživanje ključnih reči",
+        "description": "Pronalazimo najrelevantnije ključne reči sa najboljim potencijalom za konverziju, analizirajući obim pretrage i konkurenciju. Koristimo profesionalne alate za istraživanje ključnih reči i kreiramo listu termina koji će privući kvalitetnu posetu. Fokusiramo se na long-tail ključne reči koje imaju veći potencijal za konverziju."
+      },
+      "step3": {
+        "title": "Kreiranje kampanje",
+        "description": "Postavljamo kampanju u Google Ads nalogu, kreiramo atraktivne oglase, podešavamo budžet i targetiranje. Kreiramo različite verzije oglasa za A/B testiranje, postavljamo geografsko i demografsko targetiranje, i optimizujemo landing stranice za maksimalnu konverziju. Sve je prilagođeno vašim specifičnim potrebama."
+      },
+      "step4": {
+        "title": "Praćenje i optimizacija",
+        "description": "Dnevno pratimo performanse, testiramo različite verzije oglasa, optimizujemo ponude i kontinuirano unapređujemo rezultate. Analiziramo metrike kao što su CTR, conversion rate, cost per acquisition i ROI. Redovno prilagođavamo strategiju na osnovu podataka i tržišnih trendova."
+      },
+      "step5": {
+        "title": "Izveštavanje i analiza",
+        "description": "Mesečno dobijate detaljan izveštaj sa svim ključnim metrikama i našim preporukama za sledeći period. Izveštaj uključuje analizu performansi, poređenje sa prethodnim periodima, konkurentsku analizu i konkretne preporuke za poboljšanje. Redovno organizujemo sastanke za diskusiju o rezultatima i strategiji."
+      },
+      "step6": {
+        "title": "Kontinuirano poboljšanje",
+        "description": "Nudimo kontinuiranu optimizaciju i poboljšanje performansi kampanje. Pratimo najnovije Google Ads funkcionalnosti, testiramo nove pristupe i strategije, i prilagođavamo se promenama na tržištu. Tu smo da vam pomognemo sa bilo kakvim pitanjima ili potrebnim prilagođavanjima kampanje."
+      }
+    },
+    "faq": {
+      "title": "Često postavljana pitanja o Google Ads oglašavanju",
+      "q1": {
+        "question": "Koliki budžet je potreban za Google Ads kampanju?",
+        "answer": "Minimalni preporučeni mesečni budžet zavisi od industrije i konkurencije, ali uglavnom kreće od 300-500 EUR mesečno. Za kompetitivnije oblasti može biti potrebno 1000+ EUR da bi se videli značajni rezultati. Tokom konsultacije analiziramo vašu industriju i konkurenciju da damo preciznu procenu optimalnog budžeta."
+      },
+      "q2": {
+        "question": "Koliko brzo mogu videti rezultate?",
+        "answer": "Prvi rezultati (klikovi i saobraćaj) su vidljivi odmah po pokretanju kampanje. Međutim, za optimalne performanse i najbolji ROI, potrebno je 2-3 meseca kontinuiranog rada i optimizacije. Google algoritam uči o vašoj kampanji tokom vremena, što rezultuje boljim performansama i nižim troškovima po kliku."
+      },
+      "q3": {
+        "question": "Da li radite samo setup ili i upravljanje kampanjom?",
+        "answer": "Nudimo obe opcije - možemo samo napraviti početni setup kampanje, ili možete angažovati naš tim za kontinuirano upravljanje, optimizaciju i mesečne izveštaje. Većina klijenata bira opciju potpunog upravljanja jer donosi najbolje rezultate. Naš tim redovno prati performanse i prilagođava strategiju za maksimalan ROI."
+      },
+      "q4": {
+        "question": "Šta ako kampanja ne donese rezultate?",
+        "answer": "Radimo transparentno i dajemo realne procene. Ako nakon inicijalnog perioda vidimo da rezultati nisu zadovoljavajući, zajedno analiziramo razloge i prilagođavamo strategiju ili budžet. Naš cilj je uvek maksimalan ROI za vaš budžet."
+      },
+      "q5": {
+        "question": "Koje tipove Google Ads kampanja radite?",
+        "answer": "Radimo sve tipove Google Ads kampanja: Search kampanje za pretraživanje, Display kampanje za vizuelno oglašavanje, Shopping kampanje za e-commerce, Video kampanje na YouTube-u, i App kampanje za mobilne aplikacije. Izaberemo najbolju kombinaciju prema vašim ciljevima i budžetu."
+      },
+      "q6": {
+        "question": "Da li je potrebno da imam Google Ads nalog?",
+        "answer": "Nije potrebno da imate postojeći Google Ads nalog. Možemo kreirati novi nalog za vas ili raditi sa vašim postojećim nalogom."
+      },
+      "q7": {
+        "question": "Kako merite uspeh kampanje?",
+        "answer": "Merimo uspeh kroz ključne metrike kao što su ROI (povrat investicije), cost per acquisition (CPA), conversion rate, i kvalitet skora. Pored toga, pratimo i poslovne rezultate kao što su povećanje prodaje, generisanje leadova, i poboljšanje brand awareness-a. Redovno dostavljamo detaljne izveštaje sa analizom performansi i preporukama za poboljšanje."
+      }
+    }
+  }
+}

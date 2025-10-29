@@ -3,8 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaSearch, FaBullseye, FaChartBar, FaClock } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const GoogleAdsWhy = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -83,7 +85,7 @@ const GoogleAdsWhy = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Zašto je Google Oglašavanje Važno za Vaš Biznis?
+          {intl.formatMessage({ id: "googleAds.why.title" })}
         </motion.h2>
 
         <motion.div
@@ -111,12 +113,10 @@ const GoogleAdsWhy = () => {
               </motion.div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">
-                  Odmah Vidljivost
+                  {intl.formatMessage({ id: "googleAds.why.visibility.title" })}
                 </h3>
                 <p className="text-white ">
-                  Dok SEO donosi rezultate kroz duži period, Google oglašavanje
-                  vam omogućava da budete vidljivi odmah, od prvog dana
-                  kampanje.
+                  {intl.formatMessage({ id: "googleAds.why.visibility.description" })}
                 </p>
               </div>
             </motion.div>
@@ -138,12 +138,10 @@ const GoogleAdsWhy = () => {
               </motion.div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">
-                  Precizno Targetiranje
+                  {intl.formatMessage({ id: "googleAds.why.targeting.title" })}
                 </h3>
                 <p className="text-white">
-                  Ciljajte po lokaciji, vremenu dana, uređaju, demografskim
-                  karakteristikama i interesovanjima. Svaki klik je merljiv i
-                  transparentan.
+                  {intl.formatMessage({ id: "googleAds.why.targeting.description" })}
                 </p>
               </div>
             </motion.div>
@@ -165,12 +163,10 @@ const GoogleAdsWhy = () => {
               </motion.div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">
-                  Detaljno Praćenje
+                  {intl.formatMessage({ id: "googleAds.why.tracking.title" })}
                 </h3>
                 <p className="text-white">
-                  Najdetaljnije mogućnosti praćenja rezultata od svih oglasnih
-                  platformi. Svaki trošak, svaka konverzija - sve je
-                  transparentno.
+                  {intl.formatMessage({ id: "googleAds.why.tracking.description" })}
                 </p>
               </div>
             </motion.div>
@@ -201,13 +197,10 @@ const GoogleAdsWhy = () => {
                 <FaClock className="text-6xl text-white mx-auto mb-4 opacity-80" />
               </motion.div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Ključni Moment
+                {intl.formatMessage({ id: "googleAds.why.momentTitle" })}
               </h3>
               <p className="text-white text-lg leading-relaxed">
-                Kada neko pretražuje Google za proizvod ili uslugu koju nudite,
-                vi možete biti prva kompanija koju vide. To je trenutak kada je
-                potencijalni klijent najspremniji za kupovinu - aktivno traži
-                rešenje za svoj problem.
+                {intl.formatMessage({ id: "googleAds.why.momentDescription" })}
               </p>
               <motion.div
                 className="mt-6 inline-block bg-white bg-opacity-20 rounded-full px-6 py-3"
@@ -218,7 +211,7 @@ const GoogleAdsWhy = () => {
                 transition={{ duration: 0.3 }}
               >
                 <span className="text-white font-semibold text-lg">
-                  Google Ads vam omogućava da se pojavite u tom ključnom momentu
+                  {intl.formatMessage({ id: "googleAds.why.momentHighlight" })}
                 </span>
               </motion.div>
             </div>

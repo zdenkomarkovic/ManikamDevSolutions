@@ -8,8 +8,10 @@ import {
   FaBullseye,
   FaDollarSign,
 } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const GoogleAdsCTA = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -62,7 +64,7 @@ const GoogleAdsCTA = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Spremni da povećate svoju online prodaju?
+            {intl.formatMessage({ id: "googleAds.cta.title" })}
           </motion.h2>
         </div>
         <motion.div
@@ -75,7 +77,7 @@ const GoogleAdsCTA = () => {
           <motion.div className="md:space-y-8 md:px-20" variants={itemVariants}>
             <div>
               <h3 className="text-xl font-bold mb-4">
-                Rezultati koje možete očekivati
+                {intl.formatMessage({ id: "googleAds.cta.resultsTitle" })}
               </h3>
               <motion.ul
                 className="space-y-1 md:space-y-3 mx-auto w-fit"
@@ -91,7 +93,7 @@ const GoogleAdsCTA = () => {
                   >
                     <FaRocket className="mr-3 text-orange-600" />
                   </motion.div>
-                  Povećanje online prodaje za 200-400%
+                  {intl.formatMessage({ id: "googleAds.cta.result1" })}
                 </motion.li>
                 <motion.li
                   className="flex items-center"
@@ -103,7 +105,7 @@ const GoogleAdsCTA = () => {
                   >
                     <FaChartLine className="mr-3 text-orange-600" />
                   </motion.div>
-                  ROI od 300-500% u prvih 3 meseca
+                  {intl.formatMessage({ id: "googleAds.cta.result2" })}
                 </motion.li>
                 <motion.li
                   className="flex items-center"
@@ -115,7 +117,7 @@ const GoogleAdsCTA = () => {
                   >
                     <FaBullseye className="mr-3 text-orange-600" />
                   </motion.div>
-                  Precizno targetiranje vaše ciljne grupe
+                  {intl.formatMessage({ id: "googleAds.cta.result3" })}
                 </motion.li>
                 <motion.li
                   className="flex items-center"
@@ -127,7 +129,7 @@ const GoogleAdsCTA = () => {
                   >
                     <FaDollarSign className="mr-3 text-orange-600" />
                   </motion.div>
-                  Smanjenje troškova po konverziji za 40-60%
+                  {intl.formatMessage({ id: "googleAds.cta.result4" })}
                 </motion.li>
               </motion.ul>
             </div>
@@ -135,7 +137,7 @@ const GoogleAdsCTA = () => {
 
           <motion.div variants={itemVariants}>
             <p className="mb-4 text-2xl md:text-3xl font-bold px-2">
-              Kontaktirajte nas za besplatnu analizu kampanje
+              {intl.formatMessage({ id: "googleAds.cta.subtitle" })}
             </p>
 
             <motion.div
@@ -144,7 +146,7 @@ const GoogleAdsCTA = () => {
             >
               {/* Phone Call Button */}
               <motion.a
-                href={`tel:+381641967267`}
+                href={`tel:${intl.formatMessage({ id: "googleAds.cta.phone" })}`}
                 className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold"
                 variants={buttonVariants}
                 whileHover={{
@@ -165,13 +167,13 @@ const GoogleAdsCTA = () => {
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </motion.svg>
                 <span className="block text-lg md:text-2xl font-normal">
-                  +381641967267
+                  {intl.formatMessage({ id: "googleAds.cta.phone" })}
                 </span>
               </motion.a>
 
               {/* Email Button */}
               <motion.a
-                href="mailto:manikamwebsolutions@gmail.com"
+                href={`mailto:${intl.formatMessage({ id: "googleAds.cta.email" })}`}
                 className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold"
                 variants={buttonVariants}
                 whileHover={{
@@ -194,7 +196,7 @@ const GoogleAdsCTA = () => {
                 </motion.svg>
 
                 <span className="block text-lg md:text-2xl font-normal">
-                  manikamwebsolutions@gmail.com
+                  {intl.formatMessage({ id: "googleAds.cta.email" })}
                 </span>
               </motion.a>
             </motion.div>

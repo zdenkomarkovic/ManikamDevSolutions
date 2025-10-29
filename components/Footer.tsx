@@ -21,10 +21,12 @@ export default function Footer({
   locale,
   message,
   rights,
+  instagram,
 }: {
   locale: string;
   message: string;
   rights: string;
+  instagram: string;
 }) {
   const currentLocale = getSafeLocale(locale);
   const navList = getNavList(currentLocale);
@@ -98,7 +100,7 @@ export default function Footer({
                 <Facebook />
               </a>
               <a
-                href="https://www.instagram.com/manikam.web.solutions/"
+                href={instagram}
                 target={"_blank"}
                 className="text-muted-foreground hover:text-orange-500"
               >

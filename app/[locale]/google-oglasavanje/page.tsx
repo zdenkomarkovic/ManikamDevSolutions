@@ -1,36 +1,28 @@
-import { Metadata } from "next";
-import GoogleAdsPageClient from "./GoogleAdsPageClient";
+import type { Metadata } from "next";
+import { LocaleProvider } from "@/lib/LocaleContext";
+import GoogleAdsClient from "../google-ads/GoogleAdsClient";
 
-export const metadata: Metadata = {
-  title: "Google Oglašavanje i PPC Kampanje | Manikam Dev Solutions",
-  description:
-    "Profesionalne Google Ads kampanje koje donose rezultate. Povećajte prodaju i vidljivost brenda sa našim stručnim timom za digitalni marketing. Više od 10 godina iskustva u Google oglašavanju.",
-  keywords: [
-    "google oglašavanje",
-    "google ads",
-    "ppc kampanje",
-    "google ads srbija",
-    "digitalni marketing",
-    "internet marketing",
-    "google reklamiranje",
-    "ads kampanje",
-    "plaćeno oglašavanje",
-    "sem kampanje",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/google-oglasavanje",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/google-oglasavanje",
-    },
-  },
-  openGraph: {
-    title: "Google Oglašavanje i PPC Kampanje | Manikam Dev Solutions",
-    description:
-      "Profesionalne Google Ads kampanje koje donose rezultate. Povećajte prodaju i vidljivost brenda.",
-    type: "website",
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function GoogleOglasavanjePage() {
-  return <GoogleAdsPageClient />;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/googleAds/${locale}.json`);
+
+  return {
+    title: messages.googleAds.page.title,
+    description: messages.googleAds.page.description,
+  };
+}
+
+export default async function GoogleOglasavanjePage({ params }: Props) {
+  const { locale } = await params;
+
+  return (
+    <LocaleProvider locale={locale as "en" | "sr"}>
+      <GoogleAdsClient />
+    </LocaleProvider>
+  );
 }

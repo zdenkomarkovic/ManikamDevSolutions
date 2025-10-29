@@ -66,6 +66,7 @@ export default async function LocaleLayout({
   const intl = await getIntl(locale);
   const message = intl.formatMessage({ id: "footer.message" });
   const rights = intl.formatMessage({ id: "footer.rights" });
+  const instagram = intl.formatMessage({ id: "instagram" });
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
@@ -77,7 +78,12 @@ export default async function LocaleLayout({
         <LocaleProvider locale={locale}>
           <Header locale={locale} />
           {children}
-          <Footer locale={locale} rights={rights} message={message} />
+          <Footer
+            locale={locale}
+            rights={rights}
+            message={message}
+            instagram={instagram}
+          />
         </LocaleProvider>
       </body>
     </html>

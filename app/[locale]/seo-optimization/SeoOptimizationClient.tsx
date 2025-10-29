@@ -70,7 +70,9 @@ const SeoOptimizationClient = () => {
         // Load main messages
         const mainMsgs = await import(`@/lang/${locale}.json`);
         // Load seoOptimization messages
-        const seoOptMsgs = await import(`@/lang/seoOptimization/${locale}.json`);
+        const seoOptMsgs = await import(
+          `@/lang/seoOptimization/${locale}.json`
+        );
 
         // Merge messages
         const mergedMessages = {
@@ -95,7 +97,11 @@ const SeoOptimizationClient = () => {
       <div className="bg-gray-900/90">
         {/* Hero sekcija */}
         <section className="pt-24 pb-6 md:pb-16 px-4">
-          <motion.div variants={heroVariants} initial="hidden" animate="visible">
+          <motion.div
+            variants={heroVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <SEOHero />
           </motion.div>
         </section>
@@ -119,16 +125,6 @@ const SeoOptimizationClient = () => {
           >
             <SEOFeatures />
           </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
-            variants={scaleUp}
-          >
-            <SEOServices />
-          </motion.div>
-
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -136,6 +132,14 @@ const SeoOptimizationClient = () => {
             variants={fadeInUp}
           >
             <SEOCTA />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={scaleUp}
+          >
+            <SEOServices />
           </motion.div>
 
           <motion.div
