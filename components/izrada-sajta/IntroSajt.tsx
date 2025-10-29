@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const IntroSajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,7 +52,7 @@ const IntroSajt = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Zašto je profesionalan sajt ključan za vaš uspeh?
+          {intl.formatMessage({ id: "websiteDevelopment.intro.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -61,25 +63,16 @@ const IntroSajt = () => {
         viewport={{ once: true }}
       >
         <motion.p variants={itemVariants}>
-          U digitalnom svetu, vaš sajt je često prvi kontakt sa potencijalnim
-          klijentima. Profesionalno izrađen sajt ne samo da predstavlja vaš
-          brend, već aktivno radi na privlačenju novih kupaca 24 sata dnevno, 7
-          dana u nedelji.
+          {intl.formatMessage({ id: "websiteDevelopment.intro.p1" })}
         </motion.p>
         <motion.p variants={itemVariants}>
           <strong>
-            Tehnologije koje koristimo - React.js, Node.js i Next.js
-          </strong>{" "}
-          - nisu slučajan izbor. Ove napredne tehnologije garantuju da će vaš
-          sajt biti tehnički superiorniji, brži i bolje optimizovan od
-          konkurencije koja koristi WordPress ili druge popularne sajt bildere.
+            {intl.formatMessage({ id: "websiteDevelopment.intro.p2strong" })}
+          </strong>
+          {intl.formatMessage({ id: "websiteDevelopment.intro.p2" })}
         </motion.p>
         <motion.p variants={itemVariants}>
-          Brzina učitavanja sajta direktno utiče na SEO rangiranje i korisničko
-          iskustvo. Google favorizuje brze sajtove, što znači bolju poziciju u
-          rezultatima pretrage i veću vidljivost za vaš biznis. Naši sajtovi se
-          učitavaju za manje od 2 sekunde, što je značajno brže od proseka
-          industrije.
+          {intl.formatMessage({ id: "websiteDevelopment.intro.p3" })}
         </motion.p>
       </motion.div>
     </motion.div>

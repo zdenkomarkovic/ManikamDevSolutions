@@ -13,8 +13,11 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import { MdDevices, MdEmail, MdLanguage } from "react-icons/md";
+import { useMessages } from "@/lib/MessagesContext";
 
 const PaketiSajt = () => {
+  const intl = useMessages();
+
   return (
     <div className="grid md:grid-cols-3 gap-4 md:">
       {/* Osnovni paket */}
@@ -27,53 +30,53 @@ const PaketiSajt = () => {
       >
         <div>
           <h3 className=" text-2xl font-bold mb-5 text-orange-600">
-            Osnovni paket - 399€
+            {intl.formatMessage({ id: "websiteDevelopment.packages.basic.title" })}
           </h3>
-          <p className=" mb-4">Idealno za manje biznise i startapove</p>
+          <p className=" mb-4">{intl.formatMessage({ id: "websiteDevelopment.packages.basic.subtitle" })}</p>
           <div className="w-full h-1 bg-gray-200 mb-4"></div>
           <div className="space-y-3 mb-6">
             <div className="flex items-start">
               <FaCode className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Do 5 stranica</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature1" })}</span>
             </div>
             <div className="flex items-start">
               <MdDevices className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
               <span>
-                Responzivni pregled prilagodjen za mobilne i desktop uredjaje
+                {intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature2" })}
               </span>
             </div>
             <div className="flex items-start">
               <FaPaintBrush className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Moderni dizajn pravljen po vasim zeljama i potrebama</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature3" })}</span>
             </div>
             <div className="flex items-start">
               <MdEmail className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Kontakt forma + Google Maps</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature4" })}</span>
             </div>
             <div className="flex items-start">
               <FaShareAlt className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Integracija sa socijalnim mrezama</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature5" })}</span>
             </div>
             <div className="flex items-start">
               <FaSearch className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Osnovna SEO optimizacija</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature6" })}</span>
             </div>
             <div className="flex items-start">
               <FaShieldAlt className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>SSL sertifikat i zaštita veb-sajta</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature7" })}</span>
             </div>
             <div className="flex items-start">
               <FaServer className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Hosting za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature8" })}</span>
             </div>
             <div className="flex items-start">
               <FaGlobe className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Domen za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.feature9" })}</span>
             </div>
           </div>
         </div>
         <div className="">
-          <strong>Vreme izrade:</strong> 7-10 dana
+          <strong>{intl.formatMessage({ id: "websiteDevelopment.packages.basic.timeline" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.packages.basic.timelineDays" })}
         </div>
       </motion.div>
 
@@ -86,62 +89,62 @@ const PaketiSajt = () => {
         className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-xl border-2 border-blue-200 relative overflow-hidden"
       >
         <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 py-1 rounded-bl-2xl text-xs">
-          <span className="font-bold">NAJPOPULARNIJI</span>
+          <span className="font-bold">{intl.formatMessage({ id: "websiteDevelopment.packages.professional.badge" })}</span>
         </div>
 
         <div>
           <h3 className="m text-2xl font-bold mb-5 text-orange-600">
-            Profesionalni Sajt - 499€
+            {intl.formatMessage({ id: "websiteDevelopment.packages.professional.title" })}
           </h3>
-          <p className="mb-4">Kompletno rešenje za ozbiljan biznis</p>
+          <p className="mb-4">{intl.formatMessage({ id: "websiteDevelopment.packages.professional.subtitle" })}</p>
           <div className="w-full h-1 bg-gray-200 mb-4"></div>
           <div className="space-y-3 mb-6">
             <div className="flex items-start">
               <FaCode className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Do 10 stranica</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature1" })}</span>
             </div>
             <div className="flex items-start">
               <MdDevices className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
               <span>
-                Responzivni pregled prilagodjen za mobilne i desktop uredjaje
+                {intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature2" })}
               </span>
             </div>
             <div className="flex items-start">
               <FaPaintBrush className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Moderni dizajn pravljen po vasim zeljama i potrebama</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature3" })}</span>
             </div>
             <div className="flex items-start">
               <FaCog className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>CMS za samostalno ažuriranje</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature4" })}</span>
             </div>
             <div className="flex items-start">
               <MdEmail className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Kontakt forma + Google Maps</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature5" })}</span>
             </div>
             <div className="flex items-start">
               <FaShareAlt className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Integracija sa socijalnim mrezama</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature6" })}</span>
             </div>
             <div className="flex items-start">
               <FaSearch className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Osnovna SEO optimizacija</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature7" })}</span>
             </div>
             <div className="flex items-start">
               <FaShieldAlt className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>SSL sertifikat i zaštita veb-sajta</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature8" })}</span>
             </div>
             <div className="flex items-start">
               <FaServer className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Hosting za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature9" })}</span>
             </div>
             <div className="flex items-start">
               <FaGlobe className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Domen za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.feature10" })}</span>
             </div>
           </div>
         </div>
         <div className="">
-          <strong>Vreme izrade:</strong> 10-14 dana
+          <strong>{intl.formatMessage({ id: "websiteDevelopment.packages.professional.timeline" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.packages.professional.timelineDays" })}
         </div>
       </motion.div>
 
@@ -155,62 +158,62 @@ const PaketiSajt = () => {
       >
         <div>
           <h3 className=" text-2xl font-bold mb-5 text-orange-600">
-            Premium Sajt - cena po projektu
+            {intl.formatMessage({ id: "websiteDevelopment.packages.premium.title" })}
           </h3>
-          <p className="mb-2">Za velike biznise sa specifičnim potrebama</p>
+          <p className="mb-2">{intl.formatMessage({ id: "websiteDevelopment.packages.premium.subtitle" })}</p>
           <div className="w-full h-1 bg-gray-200 mb-4"></div>
 
           <div className="space-y-3 mb-6">
             <div className="flex items-start">
               <FaCode className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Neograničen broj stranica</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature1" })}</span>
             </div>
             <div className="flex items-start">
               <MdDevices className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
               <span>
-                Responzivni pregled prilagodjen za mobilne i desktop uredjaje
+                {intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature2" })}
               </span>
             </div>
             <div className="flex items-start">
               <FaPaintBrush className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Moderni dizajn pravljen po vasim zeljama i potrebama</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature3" })}</span>
             </div>
             <div className="flex items-start">
               <FaCog className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>CMS za samostalno ažuriranje</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature4" })}</span>
             </div>
             <div className="flex items-start">
               <MdEmail className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Kontakt forma + Google Maps</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature5" })}</span>
             </div>
             <div className="flex items-start">
               <FaShareAlt className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Integracija sa socijalnim mrezama</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature6" })}</span>
             </div>
             <div className="flex items-start">
               <FaSearch className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>SEO optimizacija</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature7" })}</span>
             </div>
             <div className="flex items-start">
               <MdLanguage className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>Mogucnost vise jezika</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature8" })}</span>
             </div>
             <div className="flex items-start">
               <FaShieldAlt className="text-orange-600 mt-1 mr-2 flex-shrink-0" />
-              <span>SSL sertifikat i zaštita veb-sajta</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature9" })}</span>
             </div>
             <div className="flex items-start">
               <FaServer className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Hosting za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature10" })}</span>
             </div>
             <div className="flex items-start">
               <FaGlobe className="text-orange-600  mt-1 mr-2 flex-shrink-0" />
-              <span>Domen za prvu godinu</span>
+              <span>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.feature11" })}</span>
             </div>
           </div>
         </div>
         <div className="">
-          <strong>Vreme izrade:</strong> 10-14 dana
+          <strong>{intl.formatMessage({ id: "websiteDevelopment.packages.premium.timeline" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.packages.premium.timelineDays" })}
         </div>
       </motion.div>
     </div>

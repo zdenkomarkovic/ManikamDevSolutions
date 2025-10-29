@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const IndustrijeSajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,7 +44,7 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Izrada sajtova za različite industrije
+          {intl.formatMessage({ id: "websiteDevelopment.industries.title" })}
         </motion.h2>
       </div>
       <motion.p
@@ -52,9 +54,7 @@ const IndustrijeSajt = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Naše iskustvo obuhvata širok spektar industrija. Bez obzira na vašu
-        delatnost, kreiramo prilagođena rešenja koja odgovaraju specifičnim
-        potrebama vaše branše.
+        {intl.formatMessage({ id: "websiteDevelopment.industries.subtitle" })}
       </motion.p>
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
@@ -74,11 +74,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Ugostiteljstvo i Restorani
+            {intl.formatMessage({ id: "websiteDevelopment.industries.hospitality.title" })}
           </h3>
           <p className="">
-            Sajtovi sa online menijima, rezervacionim sistemima, galerijom jela
-            i integracijom sa delivery platformama.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.hospitality.text" })}
           </p>
         </motion.div>
 
@@ -93,11 +92,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Medicinske ordinacije
+            {intl.formatMessage({ id: "websiteDevelopment.industries.medical.title" })}
           </h3>
           <p className="">
-            Profesionalni sajtovi sa sistemom za zakazivanje termina, prikazom
-            usluga, credentials doktora i GDPR usklađenošću.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.medical.text" })}
           </p>
         </motion.div>
 
@@ -112,11 +110,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            E-commerce i Trgovina
+            {intl.formatMessage({ id: "websiteDevelopment.industries.ecommerce.title" })}
           </h3>
           <p className="">
-            Moderne online prodavnice sa naprednim sistemima plaćanja,
-            upravljanjem inventarom i integracijama sa kurirskim službama.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.ecommerce.text" })}
           </p>
         </motion.div>
 
@@ -131,11 +128,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Nekretnine
+            {intl.formatMessage({ id: "websiteDevelopment.industries.realEstate.title" })}
           </h3>
           <p className="">
-            Sajtovi sa naprednim filterima za pretragu nekretnina, virtuelnim
-            turama, mapama i kontakt formama za svakih objekat.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.realEstate.text" })}
           </p>
         </motion.div>
 
@@ -150,11 +146,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Pravne kancelarije
+            {intl.formatMessage({ id: "websiteDevelopment.industries.legal.title" })}
           </h3>
           <p className="">
-            Elegantni, profesionalni sajtovi sa prikazom oblasti rada,
-            biografijama pravnika, blog sekcijom i sigurnim kontakt formama.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.legal.text" })}
           </p>
         </motion.div>
 
@@ -169,11 +164,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Fitnes i Wellness
+            {intl.formatMessage({ id: "websiteDevelopment.industries.fitness.title" })}
           </h3>
           <p className="">
-            Dinamični sajtovi sa rasporedom treninga, online zakazivanjem,
-            prikazom trenera i integracijama sa fitness aplikacijama.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.fitness.text" })}
           </p>
         </motion.div>
 
@@ -188,11 +182,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Edukacija i Kursevi
+            {intl.formatMessage({ id: "websiteDevelopment.industries.education.title" })}
           </h3>
           <p className="">
-            Platforme za online učenje sa video integracijama, sistemima za
-            testiranje, pratećim napretka učenika i certifikatima.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.education.text" })}
           </p>
         </motion.div>
 
@@ -207,11 +200,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Građevinarstvo
+            {intl.formatMessage({ id: "websiteDevelopment.industries.construction.title" })}
           </h3>
           <p className="">
-            Sajtovi sa portfoliom projekata, galerijom realizacija, kalkulatorom
-            cena i detaljnim prikazom usluga.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.construction.text" })}
           </p>
         </motion.div>
 
@@ -226,11 +218,10 @@ const IndustrijeSajt = () => {
           transition={{ duration: 0.3 }}
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Agencije i Freelance-ri
+            {intl.formatMessage({ id: "websiteDevelopment.industries.agency.title" })}
           </h3>
           <p className="">
-            Kreativni portfolio sajtovi sa prikazom radova, testimonials-ima
-            klijenata i integrisanim sistemima za ponude.
+            {intl.formatMessage({ id: "websiteDevelopment.industries.agency.text" })}
           </p>
         </motion.div>
       </motion.div>

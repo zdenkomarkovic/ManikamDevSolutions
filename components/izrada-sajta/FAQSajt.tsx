@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const FAQSajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,7 +43,7 @@ const FAQSajt = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Često postavljana pitanja o izradi sajtova
+          {intl.formatMessage({ id: "websiteDevelopment.faq.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -66,7 +68,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Koliko traje proces izrade sajta?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q1.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -75,11 +77,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Vreme izrade zavisi od izabranog paketa i složenosti projekta.
-            Osnovni sajt izrađujemo za 7-10 dana, profesionalni i premium paketi
-            obično traju 10-14 dana. Za složenije projekte sa custom
-            funkcionalnostima, rok može biti duži. Tokom inicijalne konsultacije
-            dajemo vam precizan vremenski okvir za vaš projekat.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q1.answer" })}
           </motion.p>
         </motion.div>
 
@@ -98,7 +96,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Da li moram da imam tehničko znanje da upravljam sajtom?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q2.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -107,11 +105,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Ne, nije potrebno tehničko znanje. Ako izaberete paket sa CMS
-            sistemom (Profesionalni ili Premium), dobićete intuitivan sistem za
-            upravljanje sadržajem i detaljnu obuku. Moći ćete da menjate
-            tekstove, slike i osnovne elemente bez potrebe za programiranjem. Za
-            složenije izmene, naš tim je uvek dostupan za pomoć.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q2.answer" })}
           </motion.p>
         </motion.div>
 
@@ -130,7 +124,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Šta je uključeno u hosting i koliko košta nakon prve godine?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q3.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -139,9 +133,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Prva godina hostinga je uključena u cenu svih naših paketa. Hosting
-            uključuje SSD prostor, SSL sertifikat, redovne backup-e i tehničku
-            podršku.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q3.answer" })}
           </motion.p>
         </motion.div>
 
@@ -160,7 +152,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Zašto je Next.js bolji izbor od WordPress-a?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q4.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -169,12 +161,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Next.js nudi superiorne performanse sa brzinom učitavanja do 10 puta
-            većom od WordPress-a. Sigurnost je znatno bolja jer nema plugin-ova
-            koji su čest cilj hakera. SEO optimizacija je ugrađena na nivou koda
-            što garantuje bolje rangiranje. Takođe, ne plaćate skupe premium
-            plugin-ove koji su često neophodni za WordPress. Naši Next.js
-            sajtovi se lakše održavaju i skaliraju sa rastom vašeg poslovanja.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q4.answer" })}
           </motion.p>
         </motion.div>
 
@@ -193,7 +180,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Da li mogu da migriram postojeći WordPress sajt na Next.js?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q5.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -202,11 +189,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Apsolutno! Nudimo specijalizovanu uslugu modernizacije i migracije
-            WordPress sajtova na Next.js platformu. Migriramo celokupan sadržaj,
-            optimizujemo slike, poboljšavamo SEO, i dodatno ubrzavamo
-            performanse. Većina klijenata primeti poboljšanje Google rangiranja
-            za 50-80% nakon migracije, uz dramatično povećanje brzine sajta.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q5.answer" })}
           </motion.p>
         </motion.div>
 
@@ -225,8 +208,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Šta ako mi treba dodatna funkcionalnost koja nije navedena u
-            paketima?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q6.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -235,12 +217,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Svi naši paketi su prilagodljivi i možemo dodati custom
-            funkcionalnosti prema vašim potrebama. To može uključivati
-            rezervacione sisteme, integraciju sa eksternim API-jima, custom
-            forme, kalkulator cena, članarine, galerije, blog sistem i mnogo
-            više. Tokom konzultacije ćemo razgovarati o vašim potrebama i dati
-            precenu za dodatne funkcionalnosti.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q6.answer" })}
           </motion.p>
         </motion.div>
 
@@ -259,7 +236,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Da li je sajt prilagođen za mobilne telefone?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q7.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -268,12 +245,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Da, svi naši sajtovi su potpuno responzivni i savršeno se
-            prilagođavaju svim uređajima - od mobilnih telefona do desktop
-            računara. Više od 60% korisnika danas koristi mobilne uređaje za
-            pretragu interneta, zato je mobilna optimizacija jedna od naših
-            prioriteta. Sajt će se brzo učitavati i biti lak za korišćenje bez
-            obzira na veličinu ekrana.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q7.answer" })}
           </motion.p>
         </motion.div>
 
@@ -292,7 +264,7 @@ const FAQSajt = () => {
               transition: { duration: 0.2 },
             }}
           >
-            Kako SEO optimizacija pomaže mom biznisu?
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q8.question" })}
           </motion.h3>
           <motion.p
             className=""
@@ -301,14 +273,7 @@ const FAQSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            SEO optimizacija je ključna za vidljivost na Google-u i drugim
-            pretraživačima. Kvalitetna SEO optimizacija donosi organsku
-            besplatnu posetu vašem sajtu od ljudi koji aktivno traže vaše
-            proizvode ili usluge. To znači više potencijalnih klijenata bez
-            troškova plaćenog oglašavanja. Naši sajtovi imaju ugrađenu SEO
-            optimizaciju koja uključuje meta tagove, strukturirane podatke,
-            optimizaciju brzine, mobilnu prilagodljivost i Core Web Vitals - sve
-            faktore koje Google koristi za rangiranje.
+            {intl.formatMessage({ id: "websiteDevelopment.faq.q8.answer" })}
           </motion.p>
         </motion.div>
       </motion.div>

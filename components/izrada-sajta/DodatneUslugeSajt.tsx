@@ -3,8 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaSearch, FaCog } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const DodatneUslugeSajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,7 +45,7 @@ const DodatneUslugeSajt = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Dodatne usluge koje nudimo
+          {intl.formatMessage({ id: "websiteDevelopment.additionalServices.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -65,18 +67,16 @@ const DodatneUslugeSajt = () => {
         >
           <h3 className="text-xl font-bold mb-3 inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             <FaSearch className="text-orange-600" />
-            SEO Optimizacija i Marketing
+            {intl.formatMessage({ id: "websiteDevelopment.additionalServices.seo.title" })}
           </h3>
           <p className="mb-3">
-            Kompleksna SEO optimizacija koja uključuje istraživanje ključnih
-            reči, on-page i off-page optimizaciju, link building, i mesečne
-            izveštaje o napretku rangiranja.
+            {intl.formatMessage({ id: "websiteDevelopment.additionalServices.seo.text" })}
           </p>
           <ul className="  space-y-1 ml-4">
-            <li>• Keyword research i strategija sadržaja</li>
-            <li>• Google My Business optimizacija</li>
-            <li>• Local SEO za lokalne biznise</li>
-            <li>• Mesečni izveštaji i analitika</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.seo.feature1" })}</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.seo.feature2" })}</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.seo.feature3" })}</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.seo.feature4" })}</li>
           </ul>
         </motion.div>
 
@@ -110,18 +110,16 @@ const DodatneUslugeSajt = () => {
         >
           <h3 className="text-xl bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent font-bold mb-3 inline-flex items-center gap-2">
             <FaCog className="text-orange-600" />
-            Održavanje i Podrška
+            {intl.formatMessage({ id: "websiteDevelopment.additionalServices.maintenance.title" })}
           </h3>
           <p className=" mb-3">
-            Redovno održavanje sajta, sigurnosni update-i, backup-ovi,
-            monitoring performansi i tehnička podrška koja vam je dostupna kada
-            vam zatreba.
+            {intl.formatMessage({ id: "websiteDevelopment.additionalServices.maintenance.text" })}
           </p>
           <ul className="space-y-1 ml-4">
-            <li>• Redovni sigurnosni update-i</li>
-            <li>• Dnevni automatski backup-i</li>
-            <li>• 24/7 monitoring performansi</li>
-            <li>• Prioritetna tehnička podrška</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.maintenance.feature1" })}</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.maintenance.feature2" })}</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.maintenance.feature3" })}</li>
+            <li>• {intl.formatMessage({ id: "websiteDevelopment.additionalServices.maintenance.feature4" })}</li>
           </ul>
         </motion.div>
       </motion.div>

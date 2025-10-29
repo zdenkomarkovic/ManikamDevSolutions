@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const CTASajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -55,7 +57,7 @@ const CTASajt = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Spremni za digitalni uspeh?
+            {intl.formatMessage({ id: "websiteDevelopment.cta.title" })}
           </motion.h2>
         </div>
         <motion.div
@@ -68,7 +70,7 @@ const CTASajt = () => {
           <motion.div className="md:space-y-8 md:px-20" variants={itemVariants}>
             <div>
               <h3 className="text-xl font-bold mb-4">
-                Rezultati koje možete očekivati
+                {intl.formatMessage({ id: "websiteDevelopment.cta.resultsTitle" })}
               </h3>
               <motion.ul
                 className="space-y-1 md:space-y-3 mx-auto w-fit"
@@ -93,7 +95,7 @@ const CTASajt = () => {
                   >
                     <path d="M9 9a2 2 0 114 0 2 2 0 01-4 0zm-4.5 0a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM11 17a8 8 0 100-16 8 8 0 000 16z" />
                   </motion.svg>
-                  Poboljšanje Google rangiranja za 50-80%
+                  {intl.formatMessage({ id: "websiteDevelopment.cta.result1" })}
                 </motion.li>
                 <motion.li
                   className="flex items-center"
@@ -111,7 +113,7 @@ const CTASajt = () => {
                   >
                     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
                   </motion.svg>
-                  Povećanje brzine sajta za 300-500%
+                  {intl.formatMessage({ id: "websiteDevelopment.cta.result2" })}
                 </motion.li>
                 <motion.li
                   className="flex items-center"
@@ -129,7 +131,7 @@ const CTASajt = () => {
                   >
                     <path d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" />
                   </motion.svg>
-                  Bolje korisničko iskustvo na svim uređajima
+                  {intl.formatMessage({ id: "websiteDevelopment.cta.result3" })}
                 </motion.li>
                 <motion.li
                   className="flex items-center"
@@ -151,7 +153,7 @@ const CTASajt = () => {
                       clipRule="evenodd"
                     />
                   </motion.svg>
-                  Maksimalna sigurnost i stabilnost
+                  {intl.formatMessage({ id: "websiteDevelopment.cta.result4" })}
                 </motion.li>
               </motion.ul>
             </div>
@@ -164,7 +166,7 @@ const CTASajt = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Kontaktirajte nas za besplatnu konsultaciju
+              {intl.formatMessage({ id: "websiteDevelopment.cta.contactTitle" })}
             </motion.p>
 
             <motion.div

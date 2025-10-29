@@ -1,0 +1,258 @@
+{
+  "websiteDevelopment": {
+    "page": {
+      "title": "Izrada Sajta - Profesionalna Web Rešenja | Manikam Web Solutions",
+      "description": "Profesionalna izrada sajtova u Next.js tehnologiji. Brži, sigurniji i SEO optimizovani sajtovi za vaš biznis."
+    },
+    "hero": {
+      "title": "Profesionalna Izrada Sajtova",
+      "subtitle": "Kreiramo moderne, brze i SEO optimizovane sajtove koji privlače klijente i povećavaju vašu online prisutnost. Koristimo najnovije tehnologije za maksimalne rezultate.",
+      "badge1": "Next.js Eksperti",
+      "badge2": "SEO Optimizovano",
+      "badge3": "Mobilno Prilagođeno"
+    },
+    "intro": {
+      "title": "Zašto je profesionalan sajt ključan za vaš uspeh?",
+      "p1": "U digitalnom svetu, vaš sajt je često prvi kontakt sa potencijalnim klijentima. Profesionalno izrađen sajt ne samo da predstavlja vaš brend, već aktivno radi na privlačenju novih kupaca 24 sata dnevno, 7 dana u nedelji.",
+      "p2strong": "Tehnologije koje koristimo - React.js, Node.js i Next.js",
+      "p2": " - nisu slučajan izbor. Ove napredne tehnologije garantuju da će vaš sajt biti tehnički superiorniji, brži i bolje optimizovan od konkurencije koja koristi WordPress ili druge popularne sajt bildere.",
+      "p3": "Brzina učitavanja sajta direktno utiče na SEO rangiranje i korisničko iskustvo. Google favorizuje brze sajtove, što znači bolju poziciju u rezultatima pretrage i veću vidljivost za vaš biznis. Naši sajtovi se učitavaju za manje od 2 sekunde, što je značajno brže od proseka industrije."
+    },
+    "packages": {
+      "basic": {
+        "title": "Osnovni paket - 390€",
+        "subtitle": "Idealno za manje biznise i startapove",
+        "feature1": "Do 5 stranica",
+        "feature2": "Responzivni pregled prilagođen za mobilne i desktop uređaje",
+        "feature3": "Moderni dizajn pravljen po vašim željama i potrebama",
+        "feature4": "Kontakt forma + Google Maps",
+        "feature5": "Integracija sa socijalnim mrežama",
+        "feature6": "Osnovna SEO optimizacija",
+        "feature7": "SSL sertifikat i zaštita veb-sajta",
+        "feature8": "Hosting za prvu godinu",
+        "feature9": "Domen za prvu godinu",
+        "timeline": "Vreme izrade:",
+        "timelineDays": "7-10 dana"
+      },
+      "professional": {
+        "badge": "NAJPOPULARNIJI",
+        "title": "Profesionalni Sajt - 490€",
+        "subtitle": "Kompletno rešenje za ozbiljan biznis",
+        "feature1": "Do 10 stranica",
+        "feature2": "Responzivni pregled prilagođen za mobilne i desktop uređaje",
+        "feature3": "Moderni dizajn pravljen po vašim željama i potrebama",
+        "feature4": "CMS za samostalno ažuriranje",
+        "feature5": "Kontakt forma + Google Maps",
+        "feature6": "Integracija sa socijalnim mrežama",
+        "feature7": "Osnovna SEO optimizacija",
+        "feature8": "SSL sertifikat i zaštita veb-sajta",
+        "feature9": "Hosting za prvu godinu",
+        "feature10": "Domen za prvu godinu",
+        "timeline": "Vreme izrade:",
+        "timelineDays": "10-14 dana"
+      },
+      "premium": {
+        "title": "Premium Sajt - cena po projektu",
+        "subtitle": "Za velike biznise sa specifičnim potrebama",
+        "feature1": "Neograničen broj stranica",
+        "feature2": "Responzivni pregled prilagođen za mobilne i desktop uređaje",
+        "feature3": "Moderni dizajn pravljen po vašim željama i potrebama",
+        "feature4": "CMS za samostalno ažuriranje",
+        "feature5": "Kontakt forma + Google Maps",
+        "feature6": "Integracija sa socijalnim mrežama",
+        "feature7": "SEO optimizacija",
+        "feature8": "Mogućnost više jezika",
+        "feature9": "SSL sertifikat i zaštita veb-sajta",
+        "feature10": "Hosting za prvu godinu",
+        "feature11": "Domen za prvu godinu",
+        "timeline": "Vreme izrade:",
+        "timelineDays": "10-14 dana"
+      }
+    },
+    "advantages": {
+      "title": "Prednosti naših sajtova nad WordPress rešenjima",
+      "speed": {
+        "title": "Brzina performansi:",
+        "text": " Next.js tehnologija omogućava server-side rendering i statičku generaciju, što rezultuje brzinom učitavanja do 10 puta bržom od WordPress sajtova."
+      },
+      "seo": {
+        "title": "SEO optimizacija:",
+        "text": "Ugrađena SEO optimizacija na nivou koda, meta tagovi, strukturirani podaci i optimizacija za Core Web Vitals garantuju bolje rangiranje na Google-u."
+      },
+      "security": {
+        "title": "Sigurnost:",
+        "text": " Za razliku od WordPress-a koji je čest cilj hakera, naši custom sajtovi imaju minimalnu površinu za napade i redovno se ažuriraju sa najnovijim sigurnosnim standardima"
+      },
+      "mobile": {
+        "title": "Mobilna optimizacija:",
+        "text": " Responsive dizajn koji se savršeno prilagođava svim uređajima, od mobilnih telefona do desktop računara, bez kompromisa u funkcionalnosti."
+      },
+      "migration": {
+        "title": "Modernizacija & Migracija - cena po projektu",
+        "subtitle": "Transformacija WordPress sajta u Next.js",
+        "feature1": "Kompletna migracija sadržaja",
+        "feature2": "I do 10x brži sajt",
+        "feature3": "Eliminacija sigurnosnih rizika",
+        "feature4": "Poboljšanje SEO rangiranja",
+        "feature5": "Moderniji dizajn",
+        "whyMigrate": "Zašto migrirati sa WordPress-a?",
+        "reason1": " Eliminacija čestih hakovanja",
+        "reason2": " Prestanak plaćanja skupih plugin-ova",
+        "reason3": " Drastično poboljšanje brzine",
+        "reason4": " Bolje Google rangiranje",
+        "reason5": " Smanjenje troškova održavanja",
+        "migrationTime": "Vreme migracije:",
+        "migrationTimeDays": "7-14 dana",
+        "guarantee": "Garancija:",
+        "guaranteeText": "Potpuna funkcionalnost"
+      }
+    },
+    "whyUs": {
+      "title": "Zašto klijenti biraju naše usluge?",
+      "speed": {
+        "title": "Brzina i Performanse",
+        "text": "Naši sajtovi se učitavaju 5-10 puta brže od WordPress sajtova, što direktno utiče na SEO i korisničko iskustvo."
+      },
+      "seo": {
+        "title": "SEO Optimizacija",
+        "text": "Ugrađena SEO optimizacija na nivou koda garantuje bolje rangiranje i veću vidljivost na Google-u."
+      },
+      "security": {
+        "title": "Sigurnost",
+        "text": "Custom kod i najnoviji sigurnosni standardi štite vaš sajt od hakovanja i malware napada."
+      }
+    },
+    "process": {
+      "title": "Kako izgleda proces izrade sajta?",
+      "step1": {
+        "title": "Inicijalna konsultacija i analiza potreba",
+        "text": "Detaljno razgovaramo o vašim poslovnim ciljevima, ciljnoj grupi i funkcionalnostima koje vam trebaju. Analiziramo konkurenciju i tržište kako bismo kreirali strategiju koja će vaš sajt izdvojiti. Ova faza je ključna jer nam pomaže da razumemo vašu viziju i kreiramo sajt koji će doneti rezultate."
+      },
+      "step2": {
+        "title": "Dizajn i prototip",
+        "text": "Kreiramo moderan i funkcionalan dizajn koji odražava identitet vašeg brenda. Pravimo wireframe-ove i prototipove kako biste vizualizovali kako će sajt izgledati pre nego što počnemo sa razvojem. Usklađujemo sve detalje sa vama i vršimo potrebne korekcije dok ne budete potpuno zadovoljni."
+      },
+      "step3": {
+        "title": "Razvoj i programiranje",
+        "text": "Naš tim programera koristi najnovije tehnologije (Next.js, React.js, Node.js) za izradu brzog, sigurnog i skalabilnog sajta. Tokom razvoja pažljivo integrišemo sve dogovorene funkcionalnosti, optimizujemo kod za brzinu i SEO, i redovno vas ažuriramo o napretku projekta."
+      },
+      "step4": {
+        "title": "Testiranje i optimizacija",
+        "text": "Pre lansiranja, detaljno testiramo sajt na različitim uređajima i pretraživačima. Proveravamo brzinu učitavanja, funkcionalnost svih formi i linkova, SEO postavke, i responsivnost dizajna. Optimizujemo slike i kod za maksimalne performanse."
+      },
+      "step5": {
+        "title": "Lansiranje i obuka",
+        "text": "Nakon vašeg odobrenja, sajt lansiramo na željeni hosting i domen. Pružamo vam detaljnu obuku za upravljanje sadržajem (ako paket uključuje CMS), podešavamo analitiku i alate za praćenje performansi. Ostajemo dostupni za podršku i nakon lansiranja."
+      },
+      "step6": {
+        "title": "Održavanje i podrška",
+        "text": "Nudimo redovno održavanje, sigurnosne ažuriranja i tehničku podršku. Pratimo performanse sajta i predlažemo poboljšanja. Tu smo da vam pomognemo sa bilo kakvim pitanjima ili potrebnim izmenama."
+      }
+    },
+    "faq": {
+      "title": "Često postavljana pitanja o izradi sajtova",
+      "q1": {
+        "question": "Koliko traje proces izrade sajta?",
+        "answer": "Vreme izrade zavisi od izabranog paketa i složenosti projekta. Osnovni sajt izrađujemo za 7-10 dana, profesionalni i premium paketi obično traju 10-14 dana. Za složenije projekte sa custom funkcionalnostima, rok može biti duži. Tokom inicijalne konsultacije dajemo vam precizan vremenski okvir za vaš projekat."
+      },
+      "q2": {
+        "question": "Da li moram da imam tehničko znanje da upravljam sajtom?",
+        "answer": "Ne, nije potrebno tehničko znanje. Ako izaberete paket sa CMS sistemom (Profesionalni ili Premium), dobićete intuitivan sistem za upravljanje sadržajem i detaljnu obuku. Moći ćete da menjate tekstove, slike i osnovne elemente bez potrebe za programiranjem. Za složenije izmene, naš tim je uvek dostupan za pomoć."
+      },
+      "q3": {
+        "question": "Šta je uključeno u hosting?",
+        "answer": "Prva godina hostinga je uključena u cenu svih naših paketa. Hosting uključuje SSD prostor, SSL sertifikat, redovne backup-e i tehničku podršku."
+      },
+      "q4": {
+        "question": "Zašto je Next.js bolji izbor od WordPress-a?",
+        "answer": "Next.js nudi superiorne performanse sa brzinom učitavanja do 10 puta većom od WordPress-a. Sigurnost je znatno bolja jer nema plugin-ova koji su čest cilj hakera. SEO optimizacija je ugrađena na nivou koda što garantuje bolje rangiranje. Takođe, ne plaćate skupe premium plugin-ove koji su često neophodni za WordPress. Naši Next.js sajtovi se lakše održavaju i skaliraju sa rastom vašeg poslovanja."
+      },
+      "q5": {
+        "question": "Da li mogu da migriram postojeći WordPress sajt na Next.js?",
+        "answer": "Apsolutno! Nudimo specijalizovanu uslugu modernizacije i migracije WordPress sajtova na Next.js platformu. Migriramo celokupan sadržaj, optimizujemo slike, poboljšavamo SEO, i dodatno ubrzavamo performanse. Većina klijenata primeti poboljšanje Google rangiranja za 50-80% nakon migracije, uz dramatično povećanje brzine sajta."
+      },
+      "q6": {
+        "question": "Šta ako mi treba dodatna funkcionalnost koja nije navedena u paketima?",
+        "answer": "Svi naši paketi su prilagodljivi i možemo dodati custom funkcionalnosti prema vašim potrebama. To može uključivati rezervacione sisteme, integraciju sa eksternim API-jima, custom forme, kalkulator cena, članarine, galerije, blog sistem i mnogo više. Tokom konzultacije ćemo razgovarati o vašim potrebama i dati precenu za dodatne funkcionalnosti."
+      },
+      "q7": {
+        "question": "Da li je sajt prilagođen za mobilne telefone?",
+        "answer": "Da, svi naši sajtovi su potpuno responzivni i savršeno se prilagođavaju svim uređajima - od mobilnih telefona do desktop računara. Više od 60% korisnika danas koristi mobilne uređaje za pretragu interneta, zato je mobilna optimizacija jedna od naših prioriteta. Sajt će se brzo učitavati i biti lak za korišćenje bez obzira na veličinu ekrana."
+      },
+      "q8": {
+        "question": "Kako SEO optimizacija pomaže mom biznisu?",
+        "answer": "SEO optimizacija je ključna za vidljivost na Google-u i drugim pretraživačima. Kvalitetna SEO optimizacija donosi organsku besplatnu posetu vašem sajtu od ljudi koji aktivno traže vaše proizvode ili usluge. To znači više potencijalnih klijenata bez troškova plaćenog oglašavanja. Naši sajtovi imaju ugrađenu SEO optimizaciju koja uključuje meta tagove, strukturirane podatke, optimizaciju brzine, mobilnu prilagodljivost i Core Web Vitals - sve faktore koje Google koristi za rangiranje."
+      }
+    },
+    "industries": {
+      "title": "Izrada sajtova za različite industrije",
+      "subtitle": "Naše iskustvo obuhvata širok spektar industrija. Bez obzira na vašu delatnost, kreiramo prilagođena rešenja koja odgovaraju specifičnim potrebama vaše branše.",
+      "hospitality": {
+        "title": "Ugostiteljstvo i Restorani",
+        "text": "Sajtovi sa online menijima, rezervacionim sistemima, galerijom jela i integracijom sa delivery platformama."
+      },
+      "medical": {
+        "title": "Medicinske ordinacije",
+        "text": "Profesionalni sajtovi sa sistemom za zakazivanje termina, prikazom usluga, credentials doktora i GDPR usklađenošću."
+      },
+      "ecommerce": {
+        "title": "E-commerce i Trgovina",
+        "text": "Moderne online prodavnice sa naprednim sistemima plaćanja, upravljanjem inventarom i integracijama sa kurirskim službama."
+      },
+      "realEstate": {
+        "title": "Nekretnine",
+        "text": "Sajtovi sa naprednim filterima za pretragu nekretnina, virtuelnim turama, mapama i kontakt formama za svakih objekat."
+      },
+      "legal": {
+        "title": "Pravne kancelarije",
+        "text": "Elegantni, profesionalni sajtovi sa prikazom oblasti rada, biografijama pravnika, blog sekcijom i sigurnim kontakt formama."
+      },
+      "fitness": {
+        "title": "Fitnes i Wellness",
+        "text": "Dinamični sajtovi sa rasporedom treninga, online zakazivanjem, prikazom trenera i integracijama sa fitness aplikacijama."
+      },
+      "education": {
+        "title": "Edukacija i Kursevi",
+        "text": "Platforme za online učenje sa video integracijama, sistemima za testiranje, pratećim napretka učenika i certifikatima."
+      },
+      "construction": {
+        "title": "Građevinarstvo",
+        "text": "Sajtovi sa portfoliom projekata, galerijom realizacija, kalkulatorom cena i detaljnim prikazom usluga."
+      },
+      "agency": {
+        "title": "Agencije i Freelance-ri",
+        "text": "Kreativni portfolio sajtovi sa prikazom radova, testimonials-ima klijenata i integrisanim sistemima za ponude."
+      }
+    },
+    "additionalServices": {
+      "title": "Dodatne usluge koje nudimo",
+      "seo": {
+        "title": "SEO Optimizacija i Marketing",
+        "text": "Kompleksna SEO optimizacija koja uključuje istraživanje ključnih reči, on-page i off-page optimizaciju, link building, i mesečne izveštaje o napretku rangiranja.",
+        "feature1": " Keyword research i strategija sadržaja",
+        "feature2": " Google My Business optimizacija",
+        "feature3": " Local SEO za lokalne biznise",
+        "feature4": " Mesečni izveštaji i analitika"
+      },
+      "maintenance": {
+        "title": "Održavanje i Podrška",
+        "text": "Redovno održavanje sajta, sigurnosni update-i, backup-ovi, monitoring performansi i tehnička podrška koja vam je dostupna kada vam zatreba.",
+        "feature1": " Redovni sigurnosni update-i",
+        "feature2": " Dnevni automatski backup-i",
+        "feature3": " 24/7 monitoring performansi",
+        "feature4": " Prioritetna tehnička podrška"
+      }
+    },
+    "cta": {
+      "title": "Spremni za digitalni uspeh?",
+      "resultsTitle": "Rezultati koje možete očekivati",
+      "result1": "Poboljšanje Google rangiranja za 50-80%",
+      "result2": "Povećanje brzine sajta za 300-500%",
+      "result3": "Bolje korisničko iskustvo na svim uređajima",
+      "result4": "Maksimalna sigurnost i stabilnost",
+      "contactTitle": "Kontaktirajte nas za besplatnu konsultaciju",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    }
+  }
+}

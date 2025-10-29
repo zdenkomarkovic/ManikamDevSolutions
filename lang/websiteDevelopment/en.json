@@ -1,0 +1,258 @@
+{
+  "websiteDevelopment": {
+    "page": {
+      "title": "Website Development - Professional Web Solutions | Manikam Web Solutions",
+      "description": "Professional website development using Next.js technology. Faster, more secure, and SEO-optimized websites for your business. WordPress modernization and migration to advanced technologies."
+    },
+    "hero": {
+      "title": "Professional Website Development",
+      "subtitle": "We create modern, fast, and SEO-optimized websites that attract clients and increase your online presence. We use the latest technologies for maximum results.",
+      "badge1": "Next.js Experts",
+      "badge2": "SEO Optimized",
+      "badge3": "Mobile Responsive"
+    },
+    "intro": {
+      "title": "Why is a professional website crucial for your success?",
+      "p1": "In the digital world, your website is often the first contact with potential clients. A professionally developed website not only represents your brand but actively works on attracting new customers 24 hours a day, 7 days a week.",
+      "p2strong": "The technologies we use - React.js, Node.js, and Next.js",
+      "p2": " - are not a random choice. These advanced technologies guarantee that your website will be technically superior, faster, and better optimized than the competition using WordPress or other popular site builders.",
+      "p3": "Website loading speed directly affects SEO ranking and user experience. Google favors fast websites, which means a better position in search results and greater visibility for your business. Our websites load in less than 2 seconds, which is significantly faster than the industry average."
+    },
+    "packages": {
+      "basic": {
+        "title": "Basic Package - €390",
+        "subtitle": "Ideal for small businesses and startups",
+        "feature1": "Up to 5 pages",
+        "feature2": "Responsive view adapted for mobile and desktop devices",
+        "feature3": "Modern design tailored to your wishes and needs",
+        "feature4": "Contact form + Google Maps",
+        "feature5": "Social media integration",
+        "feature6": "Basic SEO optimization",
+        "feature7": "SSL certificate and website protection",
+        "feature8": "Hosting for the first year",
+        "feature9": "Domain for the first year",
+        "timeline": "Development time:",
+        "timelineDays": "7-10 days"
+      },
+      "professional": {
+        "badge": "MOST POPULAR",
+        "title": "Professional Website - €490",
+        "subtitle": "Complete solution for serious business",
+        "feature1": "Up to 10 pages",
+        "feature2": "Responsive view adapted for mobile and desktop devices",
+        "feature3": "Modern design tailored to your wishes and needs",
+        "feature4": "CMS for independent updating",
+        "feature5": "Contact form + Google Maps",
+        "feature6": "Social media integration",
+        "feature7": "Basic SEO optimization",
+        "feature8": "SSL certificate and website protection",
+        "feature9": "Hosting for the first year",
+        "feature10": "Domain for the first year",
+        "timeline": "Development time:",
+        "timelineDays": "10-14 days"
+      },
+      "premium": {
+        "title": "Premium Website - price per project",
+        "subtitle": "For large businesses with specific needs",
+        "feature1": "Unlimited number of pages",
+        "feature2": "Responsive view adapted for mobile and desktop devices",
+        "feature3": "Modern design tailored to your wishes and needs",
+        "feature4": "CMS for independent updating",
+        "feature5": "Contact form + Google Maps",
+        "feature6": "Social media integration",
+        "feature7": "SEO optimization",
+        "feature8": "Multiple language support",
+        "feature9": "SSL certificate and website protection",
+        "feature10": "Hosting for the first year",
+        "feature11": "Domain for the first year",
+        "timeline": "Development time:",
+        "timelineDays": "10-14 days"
+      }
+    },
+    "advantages": {
+      "title": "Advantages of our websites over WordPress solutions",
+      "speed": {
+        "title": "Performance speed:",
+        "text": "Next.js technology enables server-side rendering and static generation, resulting in loading speeds up to 10 times faster than WordPress websites."
+      },
+      "seo": {
+        "title": "SEO optimization:",
+        "text": "Built-in code-level SEO optimization, meta tags, structured data, and Core Web Vitals optimization guarantee better Google ranking."
+      },
+      "security": {
+        "title": "Security:",
+        "text": "Unlike WordPress, which is a frequent target for hackers, our custom websites have minimal attack surface and are regularly updated with the latest security standards."
+      },
+      "mobile": {
+        "title": "Mobile optimization:",
+        "text": "Responsive design that perfectly adapts to all devices, from mobile phones to desktop computers, without compromising functionality."
+      },
+      "migration": {
+        "title": "Modernization & Migration - price per project",
+        "subtitle": "WordPress to Next.js transformation",
+        "feature1": "Complete content migration",
+        "feature2": "Up to 10x faster website",
+        "feature3": "Elimination of security risks",
+        "feature4": "SEO ranking improvement",
+        "feature5": "Modern design",
+        "whyMigrate": "Why migrate from WordPress?",
+        "reason1": " Eliminate frequent hacking",
+        "reason2": " Stop paying expensive plugins",
+        "reason3": " Dramatically improve speed",
+        "reason4": " Better Google ranking",
+        "reason5": " Reduced maintenance costs",
+        "migrationTime": "Migration time:",
+        "migrationTimeDays": "7-14 days",
+        "guarantee": "Guarantee:",
+        "guaranteeText": "Full functionality"
+      }
+    },
+    "whyUs": {
+      "title": "Why do clients choose our services?",
+      "speed": {
+        "title": "Speed and Performance",
+        "text": "Our websites load 5-10 times faster than WordPress sites, which directly affects SEO and user experience."
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "text": "Built-in code-level SEO optimization guarantees better ranking and greater visibility on Google."
+      },
+      "security": {
+        "title": "Security",
+        "text": "Custom code and the latest security standards protect your website from hacking and malware attacks."
+      }
+    },
+    "process": {
+      "title": "What does the website development process look like?",
+      "step1": {
+        "title": "Initial consultation and needs analysis",
+        "text": "We discuss your business goals, target audience, and features you need in detail. We analyze the competition and market to create a strategy that will set your website apart. This phase is crucial as it helps us understand your vision and create a website that will deliver results."
+      },
+      "step2": {
+        "title": "Design and prototype",
+        "text": "We create a modern and functional design that reflects your brand identity. We make wireframes and prototypes so you can visualize how the website will look before we start development. We align all details with you and make necessary corrections until you are completely satisfied."
+      },
+      "step3": {
+        "title": "Development and programming",
+        "text": "Our team of programmers uses the latest technologies (Next.js, React.js, Node.js) to build a fast, secure, and scalable website. During development, we carefully integrate all agreed features, optimize code for speed and SEO, and regularly update you on project progress."
+      },
+      "step4": {
+        "title": "Testing and optimization",
+        "text": "Before launch, we thoroughly test the website on different devices and browsers. We check loading speed, functionality of all forms and links, SEO settings, and design responsiveness. We optimize images and code for maximum performance."
+      },
+      "step5": {
+        "title": "Launch and training",
+        "text": "After your approval, we launch the website on the desired hosting and domain. We provide you with detailed training for content management (if the package includes CMS), set up analytics and performance tracking tools. We remain available for support even after launch."
+      },
+      "step6": {
+        "title": "Maintenance and support",
+        "text": "We offer regular maintenance, security updates, and technical support. We monitor website performance and suggest improvements. We are here to help you with any questions or necessary changes."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions about website development",
+      "q1": {
+        "question": "How long does the website development process take?",
+        "answer": "The development time depends on the chosen package and project complexity. We develop a basic website in 7-10 days, professional and premium packages usually take 10-14 days. For more complex projects with custom features, the deadline may be longer. During the initial consultation, we give you a precise timeframe for your project."
+      },
+      "q2": {
+        "question": "Do I need to have technical knowledge to manage the website?",
+        "answer": "No, technical knowledge is not required. If you choose a package with a CMS system (Professional or Premium), you will get an intuitive content management system and detailed training. You will be able to change texts, images, and basic elements without the need for programming. For more complex changes, our team is always available to help."
+      },
+      "q3": {
+        "question": "What is included in hosting?",
+        "answer": "The first year of hosting is included in the price of all our packages. Hosting includes SSD space, SSL certificate, regular backups, and technical support."
+      },
+      "q4": {
+        "question": "Why is Next.js a better choice than WordPress?",
+        "answer": "Next.js offers superior performance with loading speeds up to 10 times greater than WordPress. Security is much better because there are no plugins that are a frequent target for hackers. SEO optimization is built into the code level, which guarantees better ranking. Also, you don't pay expensive premium plugins that are often necessary for WordPress. Our Next.js websites are easier to maintain and scale with your business growth."
+      },
+      "q5": {
+        "question": "Can I migrate my existing WordPress site to Next.js?",
+        "answer": "Absolutely! We offer a specialized service for modernizing and migrating WordPress websites to the Next.js platform. We migrate all content, optimize images, improve SEO, and additionally speed up performance. Most clients notice a 50-80% improvement in Google ranking after migration, along with a dramatic increase in website speed."
+      },
+      "q6": {
+        "question": "What if I need additional functionality not listed in the packages?",
+        "answer": "All our packages are customizable and we can add custom features according to your needs. This may include booking systems, integration with external APIs, custom forms, price calculators, memberships, galleries, blog systems, and much more. During the consultation, we will discuss your needs and provide an estimate for additional features."
+      },
+      "q7": {
+        "question": "Is the website adapted for mobile phones?",
+        "answer": "Yes, all our websites are fully responsive and perfectly adapt to all devices - from mobile phones to desktop computers. More than 60% of users today use mobile devices to browse the internet, which is why mobile optimization is one of our priorities. The website will load quickly and be easy to use regardless of screen size."
+      },
+      "q8": {
+        "question": "How does SEO optimization help my business?",
+        "answer": "SEO optimization is crucial for visibility on Google and other search engines. Quality SEO optimization brings organic free visits to your website from people actively searching for your products or services. This means more potential clients without paid advertising costs. Our websites have built-in SEO optimization that includes meta tags, structured data, speed optimization, mobile adaptability, and Core Web Vitals - all factors that Google uses for ranking."
+      }
+    },
+    "industries": {
+      "title": "Website development for various industries",
+      "subtitle": "Our experience covers a wide range of industries. Regardless of your activity, we create tailored solutions that meet the specific needs of your industry.",
+      "hospitality": {
+        "title": "Hospitality and Restaurants",
+        "text": "Websites with online menus, reservation systems, food galleries, and integration with delivery platforms."
+      },
+      "medical": {
+        "title": "Medical Clinics",
+        "text": "Professional websites with appointment scheduling systems, service displays, doctor credentials, and GDPR compliance."
+      },
+      "ecommerce": {
+        "title": "E-commerce and Trade",
+        "text": "Modern online stores with advanced payment systems, inventory management, and courier service integrations."
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "text": "Websites with advanced filters for property search, virtual tours, maps, and contact forms for each property."
+      },
+      "legal": {
+        "title": "Law Firms",
+        "text": "Elegant, professional websites with practice area displays, lawyer biographies, blog sections, and secure contact forms."
+      },
+      "fitness": {
+        "title": "Fitness and Wellness",
+        "text": "Dynamic websites with training schedules, online booking, trainer displays, and fitness app integrations."
+      },
+      "education": {
+        "title": "Education and Courses",
+        "text": "Online learning platforms with video integrations, testing systems, student progress tracking, and certificates."
+      },
+      "construction": {
+        "title": "Construction",
+        "text": "Websites with project portfolios, realization galleries, price calculators, and detailed service displays."
+      },
+      "agency": {
+        "title": "Agencies and Freelancers",
+        "text": "Creative portfolio websites with work displays, client testimonials, and integrated quote systems."
+      }
+    },
+    "additionalServices": {
+      "title": "Additional services we offer",
+      "seo": {
+        "title": "SEO Optimization and Marketing",
+        "text": "Comprehensive SEO optimization that includes keyword research, on-page and off-page optimization, link building, and monthly ranking progress reports.",
+        "feature1": " Keyword research and content strategy",
+        "feature2": " Google My Business optimization",
+        "feature3": " Local SEO for local businesses",
+        "feature4": " Monthly reports and analytics"
+      },
+      "maintenance": {
+        "title": "Maintenance and Support",
+        "text": "Regular website maintenance, security updates, backups, performance monitoring, and technical support available when you need it.",
+        "feature1": " Regular security updates",
+        "feature2": " Daily automatic backups",
+        "feature3": " 24/7 performance monitoring",
+        "feature4": " Priority technical support"
+      }
+    },
+    "cta": {
+      "title": "Ready for digital success?",
+      "resultsTitle": "Results you can expect",
+      "result1": "Improve Google ranking by 50-80%",
+      "result2": "Increase website speed by 300-500%",
+      "result3": "Better user experience on all devices",
+      "result4": "Maximum security and stability",
+      "contactTitle": "Contact us for a free consultation",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    }
+  }
+}

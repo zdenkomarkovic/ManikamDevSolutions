@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const ProcesSajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,7 +43,7 @@ const ProcesSajt = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Kako izgleda proces izrade sajta?
+          {intl.formatMessage({ id: "websiteDevelopment.process.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -77,7 +79,7 @@ const ProcesSajt = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Inicijalna konsultacija i analiza potreba
+              {intl.formatMessage({ id: "websiteDevelopment.process.step1.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -87,11 +89,7 @@ const ProcesSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Detaljno razgovaramo o vašim poslovnim ciljevima, ciljnoj grupi i
-            funkcionalnostima koje vam trebaju. Analiziramo konkurenciju i
-            tržište kako bismo kreirali strategiju koja će vaš sajt izdvojiti.
-            Ova faza je ključna jer nam pomaže da razumemo vašu viziju i
-            kreiramo sajt koji će doneti rezultate.
+            {intl.formatMessage({ id: "websiteDevelopment.process.step1.text" })}
           </motion.p>
         </motion.div>
 
@@ -121,7 +119,7 @@ const ProcesSajt = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Dizajn i prototip
+              {intl.formatMessage({ id: "websiteDevelopment.process.step2.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -131,11 +129,7 @@ const ProcesSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Kreiramo moderan i funkcionalan dizajn koji odražava identitet vašeg
-            brenda. Pravimo wireframe-ove i prototipove kako biste vizualizovali
-            kako će sajt izgledati pre nego što počnemo sa razvojem. Usklađujemo
-            sve detalje sa vama i vršimo potrebne korekcije dok ne budete
-            potpuno zadovoljni.
+            {intl.formatMessage({ id: "websiteDevelopment.process.step2.text" })}
           </motion.p>
         </motion.div>
 
@@ -165,7 +159,7 @@ const ProcesSajt = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Razvoj i programiranje
+              {intl.formatMessage({ id: "websiteDevelopment.process.step3.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -175,11 +169,7 @@ const ProcesSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Naš tim programera koristi najnovije tehnologije (Next.js, React.js,
-            Node.js) za izradu brzog, sigurnog i skalabilnog sajta. Tokom
-            razvoja pažljivo integrišemo sve dogovorene funkcionalnosti,
-            optimizujemo kod za brzinu i SEO, i redovno vas ažuriramo o napretku
-            projekta.
+            {intl.formatMessage({ id: "websiteDevelopment.process.step3.text" })}
           </motion.p>
         </motion.div>
 
@@ -209,7 +199,7 @@ const ProcesSajt = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Testiranje i optimizacija
+              {intl.formatMessage({ id: "websiteDevelopment.process.step4.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -219,10 +209,7 @@ const ProcesSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Pre lansiranja, detaljno testiramo sajt na različitim uređajima i
-            pretraživačima. Proveravamo brzinu učitavanja, funkcionalnost svih
-            formi i linkova, SEO postavke, i responsivnost dizajna. Optimizujemo
-            slike i kod za maksimalne performanse.
+            {intl.formatMessage({ id: "websiteDevelopment.process.step4.text" })}
           </motion.p>
         </motion.div>
 
@@ -252,7 +239,7 @@ const ProcesSajt = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Lansiranje i obuka
+              {intl.formatMessage({ id: "websiteDevelopment.process.step5.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -262,10 +249,7 @@ const ProcesSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Nakon vašeg odobrenja, sajt lansiramo na željeni hosting i domen.
-            Pružamo vam detaljnu obuku za upravljanje sadržajem (ako paket
-            uključuje CMS), podešavamo analitiku i alate za praćenje
-            performansi. Ostajemo dostupni za podršku i nakon lansiranja.
+            {intl.formatMessage({ id: "websiteDevelopment.process.step5.text" })}
           </motion.p>
         </motion.div>
 
@@ -295,7 +279,7 @@ const ProcesSajt = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              Održavanje i podrška
+              {intl.formatMessage({ id: "websiteDevelopment.process.step6.title" })}
             </motion.h3>
           </div>
           <motion.p
@@ -305,9 +289,7 @@ const ProcesSajt = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Nudimo redovno održavanje, sigurnosne ažuriranja i tehničku podršku.
-            Pratimo performanse sajta i predlažemo poboljšanja. Tu smo da vam
-            pomognemo sa bilo kakvim pitanjima ili potrebnim izmenama.
+            {intl.formatMessage({ id: "websiteDevelopment.process.step6.text" })}
           </motion.p>
         </motion.div>
       </motion.div>

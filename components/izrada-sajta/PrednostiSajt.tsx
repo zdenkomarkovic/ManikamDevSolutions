@@ -10,8 +10,10 @@ import {
   FaCog,
   FaTools,
 } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 const PrednostiSajt = () => {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -92,7 +94,7 @@ const PrednostiSajt = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              Prednosti naših sajtova nad WordPress rešenjima
+              {intl.formatMessage({ id: "websiteDevelopment.advantages.title" })}
             </motion.h3>
           </div>
           <motion.div
@@ -117,10 +119,7 @@ const PrednostiSajt = () => {
                 <FaRocket className="text-orange-600 mt-1 -mr-6 flex-shrink-0" />
               </motion.div>
               <div className="first-letter:ml-10">
-                <strong>Brzina performansi:</strong> Next.js tehnologija
-                omogućava server-side rendering i statičku generaciju, što
-                rezultuje brzinom učitavanja do 10 puta bržom od WordPress
-                sajtova.
+                <strong>{intl.formatMessage({ id: "websiteDevelopment.advantages.speed.title" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.advantages.speed.text" })}
               </div>
             </motion.div>
             <motion.div
@@ -138,9 +137,7 @@ const PrednostiSajt = () => {
                 <FaSearch className="text-orange-600 mt-1 -mr-6 flex-shrink-0" />
               </motion.div>
               <div className="first-letter:ml-10">
-                <strong>SEO optimizacija:</strong> Ugrađena SEO optimizacija na
-                nivou koda, meta tagovi, strukturirani podaci i optimizacija za
-                Core Web Vitals garantuju bolje rangiranje na Google-u.
+                <strong>{intl.formatMessage({ id: "websiteDevelopment.advantages.seo.title" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.advantages.seo.text" })}
               </div>
             </motion.div>
             <motion.div
@@ -158,10 +155,7 @@ const PrednostiSajt = () => {
                 <FaShieldAlt className="text-orange-600 mt-1 -mr-6 flex-shrink-0" />
               </motion.div>
               <div className="first-letter:ml-10">
-                <strong>Sigurnost:</strong> Za razliku od WordPress-a koji je
-                čest cilj hakera, naši custom sajtovi imaju minimalnu površinu
-                za napade i redovno se ažuriraju sa najnovijim sigurnosnim
-                standardima.
+                <strong>{intl.formatMessage({ id: "websiteDevelopment.advantages.security.title" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.advantages.security.text" })}
               </div>
             </motion.div>
             <motion.div
@@ -179,9 +173,7 @@ const PrednostiSajt = () => {
                 <FaMobile className="text-orange-600 mt-1 -mr-6 flex-shrink-0" />
               </motion.div>
               <div className="first-letter:ml-10">
-                <strong>Mobilna optimizacija:</strong> Responsive dizajn koji se
-                savršeno prilagođava svim uređajima, od mobilnih telefona do
-                desktop računara, bez kompromisa u funkcionalnosti.
+                <strong>{intl.formatMessage({ id: "websiteDevelopment.advantages.mobile.title" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.advantages.mobile.text" })}
               </div>
             </motion.div>
           </motion.div>
@@ -199,10 +191,10 @@ const PrednostiSajt = () => {
         >
           <div>
             <h3 className="text-2xl font-bold mb-5">
-              Modernizacija & Migracija - cena po projektu
+              {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.title" })}
             </h3>
             <p className="mb-2 opacity-90">
-              Transformacija WordPress sajta u Next.js
+              {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.subtitle" })}
             </p>
             <div className="w-full h-1 bg-gray-200 mb-4"></div>
             <div className="space-y-3 mb-6">
@@ -219,7 +211,7 @@ const PrednostiSajt = () => {
                 >
                   <FaTools className=" mt-1 mr-2 flex-shrink-0 " />
                 </motion.div>
-                <span>Kompletna migracija sadržaja</span>
+                <span>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.feature1" })}</span>
               </div>
               <div className="flex items-start">
                 <motion.div
@@ -234,15 +226,15 @@ const PrednostiSajt = () => {
                 >
                   <FaRocket className=" mt-1 mr-2 flex-shrink-0" />
                 </motion.div>
-                <span> I do 10x brži sajt</span>
+                <span>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.feature2" })}</span>
               </div>
               <div className="flex items-start">
                 <FaShieldAlt className=" mt-1 mr-2 flex-shrink-0" />
-                <span>Eliminacija sigurnosnih rizika</span>
+                <span>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.feature3" })}</span>
               </div>
               <div className="flex items-start">
                 <FaSearch className=" mt-1 mr-2 flex-shrink-0" />
-                <span>Poboljšanje SEO rangiranja</span>
+                <span>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.feature4" })}</span>
               </div>
               <div className="flex items-start">
                 <motion.div
@@ -257,27 +249,27 @@ const PrednostiSajt = () => {
                 >
                   <FaCog className=" mt-1 mr-2 flex-shrink-0" />
                 </motion.div>
-                <span>Moderniji dizajn</span>
+                <span>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.feature5" })}</span>
               </div>
             </div>
 
             <div className="bg-gray-800/10 backdrop-blur rounded-xl p-4 mb-4">
               <h4 className="font-bold mb-2">
-                Zašto migrirati sa WordPress-a?
+                {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.whyMigrate" })}
               </h4>
               <ul className="text-base space-y-1">
-                <li>• Eliminacija čestih hakovanja</li>
-                <li>• Prestanak plaćanja skupih plugin-ova</li>
-                <li>• Drastično poboljšanje brzine</li>
-                <li>• Bolje Google rangiranje</li>
-                <li>• Smanjenje troškova održavanja</li>
+                <li>• {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.reason1" })}</li>
+                <li>• {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.reason2" })}</li>
+                <li>• {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.reason3" })}</li>
+                <li>• {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.reason4" })}</li>
+                <li>• {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.reason5" })}</li>
               </ul>
             </div>
           </div>
           <div>
-            <strong>Vreme migracije:</strong> 7-14 dana
+            <strong>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.migrationTime" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.migrationTimeDays" })}
             <br />
-            <strong>Garancija:</strong> Potpuna funkcionalnost
+            <strong>{intl.formatMessage({ id: "websiteDevelopment.advantages.migration.guarantee" })}</strong> {intl.formatMessage({ id: "websiteDevelopment.advantages.migration.guaranteeText" })}
           </div>
         </motion.div>
       </div>

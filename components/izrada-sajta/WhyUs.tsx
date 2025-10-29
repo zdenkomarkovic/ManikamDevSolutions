@@ -2,32 +2,31 @@
 
 import { motion } from "framer-motion";
 import { FaRocket, FaSearch, FaShieldAlt } from "react-icons/fa";
-
-const features = [
-  {
-    icon: FaRocket,
-    title: "Brzina i Performanse",
-    description:
-      "Naši sajtovi se učitavaju 5-10 puta brže od WordPress sajtova, što direktno utiče na SEO i korisničko iskustvo.",
-    gradient: "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
-  },
-  {
-    icon: FaSearch,
-    title: "SEO Optimizacija",
-    description:
-      "Ugrađena SEO optimizacija na nivou koda garantuje bolje rangiranje i veću vidljivost na Google-u.",
-    gradient: "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-600",
-  },
-  {
-    icon: FaShieldAlt,
-    title: "Sigurnost",
-    description:
-      "Custom kod i najnoviji sigurnosni standardi štite vaš sajt od hakovanja i malware napada.",
-    gradient: "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 const WhyUs = () => {
+  const intl = useMessages();
+
+  const features = [
+    {
+      icon: FaRocket,
+      title: intl.formatMessage({ id: "websiteDevelopment.whyUs.speed.title" }),
+      description: intl.formatMessage({ id: "websiteDevelopment.whyUs.speed.text" }),
+      gradient: "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
+    },
+    {
+      icon: FaSearch,
+      title: intl.formatMessage({ id: "websiteDevelopment.whyUs.seo.title" }),
+      description: intl.formatMessage({ id: "websiteDevelopment.whyUs.seo.text" }),
+      gradient: "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-600",
+    },
+    {
+      icon: FaShieldAlt,
+      title: intl.formatMessage({ id: "websiteDevelopment.whyUs.security.title" }),
+      description: intl.formatMessage({ id: "websiteDevelopment.whyUs.security.text" }),
+      gradient: "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -82,7 +81,7 @@ const WhyUs = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-          Zašto klijenti biraju naše usluge?
+          {intl.formatMessage({ id: "websiteDevelopment.whyUs.title" })}
         </h2>
       </motion.div>
 

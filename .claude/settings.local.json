@@ -13,7 +13,12 @@
       "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\")",
       "Bash(dir /B /S \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\")",
       "Bash(powershell -Command \"Get-Content ''E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\drustvene-mreze\\page.tsx'' | Select-Object -Index 48\")",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(powershell -Command \"Get-Content ''lang/en.json'' | Select-Object -Last 5\")",
+      "Bash(powershell -Command:*)",
+      "Bash(git checkout:*)",
+      "Bash(claude logout)",
+      "Bash(del:*)"
     ],
     "deny": [],
     "ask": []
