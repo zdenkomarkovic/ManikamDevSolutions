@@ -136,22 +136,17 @@ export function middleware(request: VercelRequest) {
     if (isBot) {
       locale = "en";
     }
-    // Ako geo radi I ako je Srbija, Bosna, Crna Gora, Makedonija - srpski
+    // Ako geo detektuje Srbiju, Bosnu, Crnu Goru, Makedoniju - srpski
     else if (country && ["RS", "BA", "ME", "MK"].includes(country)) {
       locale = "sr";
     }
-    // Svi ostali (poznata druga zemlja ILI geo ne radi) - koristi browser language kao fallback
+    // Ako geo detektuje drugu zemlju (Amerika, UK, itd.) - engleski
+    else if (country && !["RS", "BA", "ME", "MK"].includes(country)) {
+      locale = "en";
+    }
+    // Ako geo NE radi (development ili problem sa Vercel geo) - SRPSKI kao default
     else {
-      // Prvo probaj browser language
-      const browserLocale = getLocale(request, i18n);
-
-      // Ako je browser srpski ALI geo detektuje drugu zemlju → forsira engleski
-      // Ako geo NE radi (country je prazan) → dozvoli browser language
-      if (browserLocale === "sr" && country && !["RS", "BA", "ME", "MK"].includes(country)) {
-        locale = "en"; // Forsira engleski za srpski browser van regiona
-      } else {
-        locale = browserLocale;
-      }
+      locale = "sr";
     }
 
     let newPath = `/${locale}${pathname}`;
