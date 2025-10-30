@@ -94,6 +94,14 @@ export function middleware(request: VercelRequest) {
   // Prvo detektuj zemlju
   const country = request.geo?.country || "";
 
+  // DEBUG: Log za proveru geo detekcije
+  console.log('🌍 Middleware Debug:', {
+    pathname,
+    country: country || 'NO GEO DATA',
+    isBot,
+    userAgent: userAgent.substring(0, 50)
+  });
+
   // Geo-ograničenje za srpske stranice van Srbije, Bosne, Crne Gore i Makedonije
   // Dozvoljene zemlje za srpski puni sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
@@ -125,9 +133,20 @@ export function middleware(request: VercelRequest) {
   );
 
   if (pathLocale) {
-    // Jezik već postoji u putanji, samo nastavi
+    // Jezik već postoji u putanji
     nextLocale = pathLocale;
-    response = NextResponse.next();
+
+    // GEO ZAŠTITA: Ako je korisnik na /sr verziji ALI je van regiona → redirektuj na /en
+    if (pathLocale === "sr" && !isBot && country && !allowedCountriesForSerbianContent.includes(country)) {
+      console.log('🚫 Blocking Serbian for country:', country, '→ Redirecting to /en');
+
+      // Zameni /sr sa /en u putanji
+      const newPath = pathname.replace(/^\/sr(\/|$)/, '/en$1') + (request.nextUrl.search || '');
+      response = NextResponse.redirect(new URL(newPath, request.url));
+      nextLocale = "en";
+    } else {
+      response = NextResponse.next();
+    }
   } else {
     // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
     let locale: string;
@@ -149,6 +168,8 @@ export function middleware(request: VercelRequest) {
       locale = "sr";
     }
 
+    console.log('🎯 Selected locale:', locale, 'for country:', country || 'NO GEO');
+
     let newPath = `/${locale}${pathname}`;
     if (request.nextUrl.search) newPath += request.nextUrl.search;
 
@@ -159,6 +180,16 @@ export function middleware(request: VercelRequest) {
   }
 
   if (nextLocale && response) {
+    // Proveri da li treba obrisati srpski cookie van regiona
+    const currentCookie = request.cookies.get("NEXT_LOCALE")?.value;
+
+    // Ako je korisnik van regiona ALI ima srpski cookie → obriši ga i postavi engleski
+    if (currentCookie === "sr" && !isBot && country && !allowedCountriesForSerbianContent.includes(country)) {
+      console.log('🍪 Deleting Serbian cookie for country:', country);
+      response.cookies.delete("NEXT_LOCALE");
+      nextLocale = "en"; // Forsira engleski
+    }
+
     response.cookies.set("NEXT_LOCALE", nextLocale, {
       path: "/",
       maxAge: 60 * 60 * 24 * 365, // 1 godina
