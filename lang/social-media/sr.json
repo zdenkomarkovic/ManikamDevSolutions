@@ -1,0 +1,298 @@
+{
+  "socialMedia": {
+    "page": {
+      "title": "Upravljanje Društvenim Mrežama - Facebook i Instagram Marketing | Manikam Dev Solutions",
+      "description": "Profesionalno upravljanje Facebook i Instagram profilima. Kreiranje sadržaja, oglašavanje, povećanje angažmana i izgradnja brenda na društvenim mrežama. Prilagođene strategije za vaš biznis."
+    },
+    "hero": {
+      "title": "Upravljanje Društvenim Mrežama",
+      "subtitle": "Profesionalno upravljanje Facebook i Instagram profilima. Kreiramo sadržaj koji privlači, oglašavamo vaš brend i gradimo lojalnu zajednicu oko vašeg biznisa. Povećajte angažman, doseg i prodaju preko društvenih mreža.",
+      "badge1": "Facebook Marketing",
+      "badge2": "Instagram Marketing",
+      "badge3": "Povećanje Angažmana"
+    },
+    "intro": {
+      "title": "Zašto su društvene mreže ključne za vaš biznis?",
+      "paragraph1": "U 2024. godini, <strong>preko 4.9 milijardi ljudi koristi društvene mreže</strong> - to je više od polovine svetske populacije! Facebook i Instagram nisu samo platforme za zabavu, već moćni alati za razvoj biznisa, komunikaciju sa klijentima i izgradnju brenda.",
+      "paragraph2": "<strong>Facebook</strong> i <strong>Instagram</strong> omogućavaju vam da direktno komunicirate sa vašom ciljnom publikom, gradite poverenje i lojalnost, i transformišete pratioce u kupce. Preko 80% korisnika Instagram-a prati bar jedan biznis profil, dok je Facebook i dalje najkorišćenija društvena mreža za B2C marketing.",
+      "paragraph3": "<strong>Profesionalno upravljanje društvenim mrežama nije luksuz - to je neophodnost.</strong> Algoritmi Facebook-a i Instagram-a konstantno se menjaju, a konkurencija je velika. Potrebna vam je strategija koja kombinuje kvalitetan sadržaj, precizno targetiranje, plaćeno oglašavanje i kontinuiranu analitiku da biste se istakli i postigli rezultate."
+    },
+    "services": {
+      "title": "Naše Usluge Upravljanja Društvenim Mrežama",
+      "service1": {
+        "title": "Kreiranje Sadržaja",
+        "description": "Profesionalni tekstovi, grafike i video sadržaj prilagođen vašoj publici."
+      },
+      "service2": {
+        "title": "Planiranje i Objava",
+        "description": "Strateško planiranje sadržaja i redovna objava u optimalna vremena."
+      },
+      "service3": {
+        "title": "Facebook i Instagram Oglašavanje",
+        "description": "Ciljane reklamne kampanje koje donose merljive rezultate i ROI."
+      },
+      "service4": {
+        "title": "Analitika i Izveštaji",
+        "description": "Praćenje performansi, analiza podataka i detaljni mesečni izveštaji."
+      },
+      "service5": {
+        "title": "Rast Pratilaca",
+        "description": "Strategije za organsko i plaćeno povećanje broja kvalitetnih pratilaca."
+      },
+      "service6": {
+        "title": "Community Management",
+        "description": "Odgovaranje na komentare, poruke i izgradnja angažovane zajednice."
+      },
+      "service7": {
+        "title": "Stories i Reels",
+        "description": "Kreiranje dinamičnog vizuelnog sadržaja za Stories i Instagram Reels."
+      },
+      "service8": {
+        "title": "Hashtag Strategija",
+        "description": "Istraživanje i primena optimalnih hashtag-ova za veći doseg."
+      }
+    },
+    "packages": {
+      "highlightLabel": "NAJPOPULARNIJI",
+      "starter": {
+        "name": "Starter Paket",
+        "price": "Od 200€",
+        "period": "/mesečno",
+        "description": "Idealno za male biznise koji počinju sa društvenim mrežama",
+        "feature1": "Post - 3 nedeljno",
+        "feature2": "Stories - 2 nedeljno",
+        "feature3": "Reel - 1 nedeljno",
+        "feature4": "Osnovno grafičko dizajniranje",
+        "feature5": "Hashtag research",
+        "feature6": "Content calendar planiranje"
+      },
+      "professional": {
+        "name": "Profesionalni Paket",
+        "price": "Od 300€",
+        "period": "/mesečno",
+        "description": "Kompletno rešenje za ozbiljan online rast",
+        "feature1": "Post - 3 nedeljno",
+        "feature2": "Stories - 2 nedeljno",
+        "feature3": "Reel - 1 nedeljno",
+        "feature4": "Profesionalni grafički dizajn i foto editing",
+        "feature5": "Hashtag research",
+        "feature6": "Content calendar planiranje",
+        "feature7": "Upravljanje plaćenim oglasima"
+      },
+      "premium": {
+        "name": "Premium Paket",
+        "price": "Od 450€",
+        "period": "/mesečno",
+        "description": "Maksimalan rast sa video sadržajem i reklamama",
+        "feature1": "Post - 3 nedeljno",
+        "feature2": "Stories - 3 nedeljno",
+        "feature3": "Reel - 2 nedeljno",
+        "feature4": "Premium grafički dizajn",
+        "feature5": "Hashtag research",
+        "feature6": "Content calendar planiranje",
+        "feature7": "Upravljanje plaćenim oglasima",
+        "feature8": "Odgovaranje na poruke i komentare"
+      }
+    },
+    "ads": {
+      "title": "Facebook i Instagram Oglašavanje",
+      "subtitle": "Plaćeno oglašavanje na društvenim mrežama omogućava vam da dosegnete tačno onu publiku koja je zainteresovana za vaš proizvod ili uslugu.",
+      "features": {
+        "targeting": {
+          "title": "Precizno Targetiranje",
+          "description": "Targetirajte po demografiji, interesovanjima, ponašanju, lokaciji i custom audiences."
+        },
+        "budget": {
+          "title": "Kontrola Budžeta",
+          "description": "Postavite dnevni ili mesečni budžet. Plaćate samo za rezultate koje želite."
+        },
+        "results": {
+          "title": "Merljivi Rezultati",
+          "description": "Detaljne analytics - tačno znate koliko ste potrošili i šta ste dobili."
+        },
+        "retargeting": {
+          "title": "Retargeting",
+          "description": "Ponovo dosegnite posetioce sajta ili one koji su već angažovani sa vašim sadržajem."
+        }
+      },
+      "campaignTypesTitle": "Tipovi Reklamnih Kampanja",
+      "facebookCampaigns": {
+        "title": "Facebook Ads Kampanje",
+        "campaign1": "<strong>Lead Generation Ads</strong> - prikupljanje email i kontakt informacija",
+        "campaign2": "<strong>Traffic Ads</strong> - slanje posetilaca na vaš sajt ili landing page",
+        "campaign3": "<strong>Engagement Ads</strong> - povećanje lajkova, komentara, deljenja",
+        "campaign4": "<strong>Conversion Ads</strong> - direktna prodaja proizvoda ili usluga",
+        "campaign5": "<strong>Video Views Ads</strong> - promovisanje video sadržaja",
+        "campaign6": "<strong>Page Likes Ads</strong> - rast broja pratilaca stranice"
+      },
+      "instagramCampaigns": {
+        "title": "Instagram Ads Kampanje",
+        "campaign1": "<strong>Feed Ads</strong> - reklame u glavnom Instagram feed-u",
+        "campaign2": "<strong>Stories Ads</strong> - full-screen vertikalne reklame između Stories",
+        "campaign3": "<strong>Reels Ads</strong> - reklame u Instagram Reels (viralni video format)",
+        "campaign4": "<strong>Explore Ads</strong> - reklame u Explore sekciji",
+        "campaign5": "<strong>Shopping Ads</strong> - direktna prodaja proizvoda preko Instagram",
+        "campaign6": "<strong>Carousel Ads</strong> - višestruke slike/video u jednoj reklami"
+      },
+      "adviceTitle": "Savet za uspešne kampanje:",
+      "adviceText": "Najbolji rezultati se postižu kombinovanjem organskog sadržaja i plaćenog oglašavanja. Redovno objavljujte kvalitetan sadržaj, gradite angažovanu publiku, a zatim koristite reklame da pojačate doseg i targetirate nove potencijalne kupce."
+    },
+    "cta": {
+      "title": "Spremni da Povećate Vašu Online Prisutnost?",
+      "resultsTitle": "Rezultati koje možete očekivati",
+      "result1": "Rast broja pratilaca i angažmana",
+      "result2": "Profesionalan brend image",
+      "result3": "Više lead-ova i prodaje",
+      "result4": "Lojalna online zajednica",
+      "contactTitle": "Kontaktirajte nas za besplatnu konsultaciju",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "content": {
+      "title": "Kreiranje Sadržaja Koji Angažuje",
+      "subtitle": "Kvalitetan sadržaj je srce uspešnog social media marketinga. Kreiramo raznovrstan sadržaj prilagođen vašoj publici i platformi, sa fokusom na engagement i konverzije.",
+      "graphicDesign": {
+        "title": "Grafički Dizajn",
+        "item1": "Profesionalne grafike za postove",
+        "item2": "Infografike sa statistikama i podacima",
+        "item3": "Quote grafike i motivacioni sadržaj",
+        "item4": "Carousel postovi (swipe postovi sa više slika)",
+        "item5": "Cover fotografije i branding elementi",
+        "item6": "Thumbnail dizajn za video sadržaj"
+      },
+      "videoContent": {
+        "title": "Video Sadržaj",
+        "item1": "Instagram Reels (15-90 sekundi)",
+        "item2": "Facebook video postovi",
+        "item3": "Stories video sadržaj sa animacijama",
+        "item4": "Tutorial i how-to video snimci",
+        "item5": "Product showcase i unboxing",
+        "item6": "Behind-the-scenes sadržaj"
+      },
+      "copywriting": {
+        "title": "Copywriting",
+        "item1": "Angažujući caption tekstovi",
+        "item2": "Call-to-action (CTA) optimizacija",
+        "item3": "Storytelling pristup",
+        "item4": "SEO optimizovani opisi",
+        "item5": "Hashtag strategija i research",
+        "item6": "Emoji marketing i vizuelna organizacija teksta"
+      },
+      "contentStrategy": {
+        "title": "Content Strategija",
+        "item1": "Content calendar planiranje (30-90 dana unapred)",
+        "item2": "Mix obrazovnog, zabavnog i promotivnog sadržaja",
+        "item3": "Trendovi i sezonski sadržaj",
+        "item4": "User-generated content kampanje",
+        "item5": "Konkurentska analiza sadržaja",
+        "item6": "A/B testiranje različitih formata"
+      },
+      "whyImportantTitle": "Zašto je kvalitetan sadržaj ključan?",
+      "reason1": {
+        "title": "Povećava Angažman",
+        "description": "Zanimljiv sadržaj podstiče lajkove, komentare, deljenje i čuvanje postova, što algoritmi Facebook-a i Instagram-a nagrađuju većim doseom."
+      },
+      "reason2": {
+        "title": "Gradi Brend",
+        "description": "Konzistentan, kvalitetan sadržaj pozicionira vas kao stručnjaka u industriji i gradi prepoznatljivost brenda kod vaše publike."
+      },
+      "reason3": {
+        "title": "Konvertuje Pratiоce",
+        "description": "Dobro osmišljen sadržaj sa jasnim CTA-om transformiše pratioce u lead-ove i kupce, direktno utiče na vašu prodaju."
+      }
+    },
+    "process": {
+      "title": "Naš Proces Upravljanja Društvenim Mrežama",
+      "step1": {
+        "title": "Analiza i Istraživanje",
+        "description": "Analiziramo vašu industriju, konkurenciju, ciljnu publiku i trenutno stanje na društvenim mrežama."
+      },
+      "step2": {
+        "title": "Strategija i Planiranje",
+        "description": "Kreiramo personalizovanu strategiju sa ciljevima, tipovima sadržaja i planom objava."
+      },
+      "step3": {
+        "title": "Kreiranje Sadržaja",
+        "description": "Dizajniramo grafike, pišemo tekstove i kreiramo video sadržaj prema content calendar-u."
+      },
+      "step4": {
+        "title": "Objava i Oglašavanje",
+        "description": "Redovno objavljujemo sadržaj i pokrećemo ciljane reklamne kampanje."
+      },
+      "step5": {
+        "title": "Praćenje i Analiza",
+        "description": "Pratimo performanse, angažman, doseg i konverzije kroz detaljne analytics."
+      },
+      "step6": {
+        "title": "Optimizacija",
+        "description": "Kontinuirano testiramo, učimo i optimizujemo strategiju za najbolje rezultate."
+      }
+    },
+    "platforms": {
+      "facebook": {
+        "title": "Facebook",
+        "description": "Facebook je najkorišćenija društvena mreža sa <strong>preko 3 milijarde aktivnih korisnika</strong>. Idealna je platforma za izgradnju zajednice, komunikaciju sa klijentima i precizno targetiranje različitih demografskih grupa.",
+        "whatWeDoTitle": "Šta radimo na Facebook-u:",
+        "item1": "Kreiranje i optimizacija Facebook Business stranice",
+        "item2": "Redovno objavljivanje angažujućeg sadržaja (postovi, slike, video)",
+        "item3": "Facebook Ads kampanje (Lead Ads, Conversion, Traffic, Engagement)",
+        "item4": "Facebook Groups upravljanje i moderacija",
+        "item5": "Facebook Stories i live video streaming",
+        "item6": "Odgovaranje na komentare, poruke i recenzije",
+        "item7": "Messenger chatbot integracija za automatizaciju",
+        "idealForTitle": "Facebook je idealan za:",
+        "idealForDescription": "B2C biznise, lokalne kompanije, e-commerce, event marketing, community building, customer service i generisanje lead-ova."
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "Instagram je vizuelna platforma sa <strong>preko 2 milijarde aktivnih korisnika</strong>, dominantna među mlađom publikom (18-34 godine). Idealna je za brendove koji se oslanjaju na estetiku, lifestyle proizvode i vizuelno pripovedanje priča.",
+        "whatWeDoTitle": "Šta radimo na Instagram-u:",
+        "item1": "Optimizacija Instagram Business profila i bio sekcije",
+        "item2": "Kreiranje profesionalnog feed-a sa konzistentnom estetikom",
+        "item3": "Instagram Stories sa interactive stickers (polls, quiz, Q&A)",
+        "item4": "Instagram Reels - kratki viralni video sadržaj",
+        "item5": "Instagram Ads kampanje (Feed, Stories, Reels, Explore)",
+        "item6": "Hashtag research i strategija za organičan doseg",
+        "item7": "Influencer marketing i saradnje",
+        "item8": "Instagram Shopping i product tagging",
+        "idealForTitle": "Instagram je idealan za:",
+        "idealForDescription": "Fashion, beauty, fitness, food & beverage, travel, lifestyle brendove, e-commerce, kreativne industrije i vizuelno orijentisane biznise."
+      }
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "faq1": {
+        "question": "Koliko često treba objavljivati sadržaj na Facebook i Instagram?",
+        "answer": "Preporučujemo minimum 3-5 puta nedeljno na Facebook-u i 4-7 puta nedeljno na Instagram-u (uključujući Stories). Konzistentnost je ključna - bolje je redovno objavljivati kvalitetan sadržaj nego sporadično objavljivati veliku količinu. Instagram Reels i Stories mogu se koristiti češće jer imaju kraći životni vek."
+      },
+      "faq2": {
+        "question": "Koliko traje da se vide rezultati na društvenim mrežama?",
+        "answer": "Prvi vidljivi rezultati (rast pratilaca, povećan angažman) obično dolaze nakon 1-3 meseca konzistentnog rada. Značajniji rezultati kao što su povećane konverzije i prodaja dolaze nakon 3-6 meseci. Social media marketing je maraton, ne sprint - potrebno je vreme da izgradite angažovanu zajednicu i etablirate brend."
+      },
+      "faq3": {
+        "question": "Da li je potreban budžet za plaćeno oglašavanje?",
+        "answer": "Dok je moguće postići rezultate i sa organskim sadržajem, plaćeno oglašavanje značajno ubrzava rast. Organski doseg na Facebook-u i Instagram-u je drastično opao (obično 1-6% vaših pratilaca vidi organsku objavu). Preporučujemo mesečni oglasni budžet od minimum 100-200€ za male biznise, 300-500€ za srednje i 500€+ za velike biznise."
+      },
+      "faq4": {
+        "question": "Šta je razlika između organskog i plaćenog sadržaja?",
+        "answer": "Organski sadržaj je sve što objavite bez plaćanja - vidljiv je vašim pratiocima i može se pojaviti u Explore/Discover sekcijama. Plaćeni sadržaj (reklame) omogućava vam da targetirate specifičnu publiku koja možda ne prati vaš profil, ali odgovara vašoj buyer personi. Najbolji rezultati dolaze kombinovanjem oba pristupa."
+      },
+      "faq5": {
+        "question": "Da li mogu sam da upravljam svojim društvenim mrežama?",
+        "answer": "Možete, ali profesionalno upravljanje zahteva značajno vreme, kreativne veštine (dizajn, copywriting, video editing), poznavanje algoritama, advertising platformi, analytics alata i konstantno praćenje trendova. Većina vlasnika biznisa nema vreme ni resurse za kvalitetno upravljanje društvenim mrežama pored vođenja biznisa. Mi imamo tim specijalista i alate koji garantuju rezultate."
+      },
+      "faq6": {
+        "question": "Kako merite uspeh na društvenim mrežama?",
+        "answer": "Pratimo više metrika: rast pratilaca, engagement rate (lajkovi, komentari, deljenja, čuvanja), reach i impressions, click-through rate (CTR), website traffic sa društvenih mreža, lead generisanje, konverzije i ROI na reklamne kampanje. Fokusiramo se na metrike koje direktno utiču na vaš biznis, ne samo na taštine metrike (vanity metrics)."
+      },
+      "faq7": {
+        "question": "Da li radite i sa drugim platformama osim Facebook i Instagram?",
+        "answer": "Naša primarna specijalizacija su Facebook i Instagram jer su to najkorišćenije platforme u Srbiji i regionu sa najvećim potencijalom za većinu biznisa. Ove dve platforme pokrivaju širok spektar demografskih grupa i industrija. Za specifične potrebe možemo razmotriti i druge platforme u dogovoru sa klijentom."
+      },
+      "faq8": {
+        "question": "Šta ako nisam zadovoljan sadržajem?",
+        "answer": "Pre svake objave šaljemo vam sadržaj na odobrenje. Imate mogućnost da tražite izmene i prilagođavanja dok ne budete potpuno zadovoljni. Radimo revizije sve dok sadržaj ne bude savršen. Takođe, nakon prvog meseca saradnje upoznajemo vaš brend i ton komunikacije, što rezultira sadržajem koji u potpunosti odgovara vašoj viziji."
+      }
+    }
+  }
+}

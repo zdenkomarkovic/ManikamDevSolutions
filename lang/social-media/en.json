@@ -1,0 +1,298 @@
+{
+  "socialMedia": {
+    "page": {
+      "title": "Social Media Management - Facebook & Instagram Marketing | Manikam Dev Solutions",
+      "description": "Professional Facebook and Instagram profile management. Content creation, advertising, increasing engagement and building your brand on social media. Customized strategies for your business."
+    },
+    "hero": {
+      "title": "Social Media Management",
+      "subtitle": "Professional Facebook and Instagram profile management. We create content that attracts, advertise your brand and build a loyal community around your business. Increase engagement, reach and sales through social media.",
+      "badge1": "Facebook Marketing",
+      "badge2": "Instagram Marketing",
+      "badge3": "Engagement Growth"
+    },
+    "intro": {
+      "title": "Why are social media crucial for your business?",
+      "paragraph1": "In 2024, <strong>over 4.9 billion people use social media</strong> - that's more than half the world's population! Facebook and Instagram are not just entertainment platforms, but powerful tools for business development, customer communication and brand building.",
+      "paragraph2": "<strong>Facebook</strong> and <strong>Instagram</strong> allow you to directly communicate with your target audience, build trust and loyalty, and transform followers into customers. Over 80% of Instagram users follow at least one business profile, while Facebook remains the most used social network for B2C marketing.",
+      "paragraph3": "<strong>Professional social media management is not a luxury - it's a necessity.</strong> Facebook and Instagram algorithms are constantly changing, and competition is high. You need a strategy that combines quality content, precise targeting, paid advertising and continuous analytics to stand out and achieve results."
+    },
+    "services": {
+      "title": "Our Social Media Management Services",
+      "service1": {
+        "title": "Content Creation",
+        "description": "Professional texts, graphics and video content tailored to your audience."
+      },
+      "service2": {
+        "title": "Planning and Publishing",
+        "description": "Strategic content planning and regular posting at optimal times."
+      },
+      "service3": {
+        "title": "Facebook and Instagram Advertising",
+        "description": "Targeted advertising campaigns that deliver measurable results and ROI."
+      },
+      "service4": {
+        "title": "Analytics and Reports",
+        "description": "Performance tracking, data analysis and detailed monthly reports."
+      },
+      "service5": {
+        "title": "Follower Growth",
+        "description": "Strategies for organic and paid growth of quality followers."
+      },
+      "service6": {
+        "title": "Community Management",
+        "description": "Responding to comments, messages and building an engaged community."
+      },
+      "service7": {
+        "title": "Stories and Reels",
+        "description": "Creating dynamic visual content for Stories and Instagram Reels."
+      },
+      "service8": {
+        "title": "Hashtag Strategy",
+        "description": "Research and application of optimal hashtags for greater reach."
+      }
+    },
+    "packages": {
+      "highlightLabel": "MOST POPULAR",
+      "starter": {
+        "name": "Starter Package",
+        "price": "From €200",
+        "period": "/monthly",
+        "description": "Ideal for small businesses starting with social media",
+        "feature1": "Posts - 3 weekly",
+        "feature2": "Stories - 2 weekly",
+        "feature3": "Reel - 1 weekly",
+        "feature4": "Basic graphic design",
+        "feature5": "Hashtag research",
+        "feature6": "Content calendar planning"
+      },
+      "professional": {
+        "name": "Professional Package",
+        "price": "From €300",
+        "period": "/monthly",
+        "description": "Complete solution for serious online growth",
+        "feature1": "Posts - 3 weekly",
+        "feature2": "Stories - 2 weekly",
+        "feature3": "Reel - 1 weekly",
+        "feature4": "Professional graphic design and photo editing",
+        "feature5": "Hashtag research",
+        "feature6": "Content calendar planning",
+        "feature7": "Paid ads management"
+      },
+      "premium": {
+        "name": "Premium Package",
+        "price": "From €450",
+        "period": "/monthly",
+        "description": "Maximum growth with video content and ads",
+        "feature1": "Posts - 3 weekly",
+        "feature2": "Stories - 3 weekly",
+        "feature3": "Reels - 2 weekly",
+        "feature4": "Premium graphic design",
+        "feature5": "Hashtag research",
+        "feature6": "Content calendar planning",
+        "feature7": "Paid ads management",
+        "feature8": "Message and comment management"
+      }
+    },
+    "ads": {
+      "title": "Facebook and Instagram Advertising",
+      "subtitle": "Paid advertising on social media allows you to reach exactly the audience that is interested in your product or service.",
+      "features": {
+        "targeting": {
+          "title": "Precise Targeting",
+          "description": "Target by demographics, interests, behavior, location and custom audiences."
+        },
+        "budget": {
+          "title": "Budget Control",
+          "description": "Set daily or monthly budget. Pay only for the results you want."
+        },
+        "results": {
+          "title": "Measurable Results",
+          "description": "Detailed analytics - you know exactly how much you spent and what you got."
+        },
+        "retargeting": {
+          "title": "Retargeting",
+          "description": "Re-reach website visitors or those already engaged with your content."
+        }
+      },
+      "campaignTypesTitle": "Types of Advertising Campaigns",
+      "facebookCampaigns": {
+        "title": "Facebook Ads Campaigns",
+        "campaign1": "<strong>Lead Generation Ads</strong> - collecting email and contact information",
+        "campaign2": "<strong>Traffic Ads</strong> - sending visitors to your website or landing page",
+        "campaign3": "<strong>Engagement Ads</strong> - increasing likes, comments, shares",
+        "campaign4": "<strong>Conversion Ads</strong> - direct product or service sales",
+        "campaign5": "<strong>Video Views Ads</strong> - promoting video content",
+        "campaign6": "<strong>Page Likes Ads</strong> - growing page followers"
+      },
+      "instagramCampaigns": {
+        "title": "Instagram Ads Campaigns",
+        "campaign1": "<strong>Feed Ads</strong> - ads in main Instagram feed",
+        "campaign2": "<strong>Stories Ads</strong> - full-screen vertical ads between Stories",
+        "campaign3": "<strong>Reels Ads</strong> - ads in Instagram Reels (viral video format)",
+        "campaign4": "<strong>Explore Ads</strong> - ads in Explore section",
+        "campaign5": "<strong>Shopping Ads</strong> - direct product sales via Instagram",
+        "campaign6": "<strong>Carousel Ads</strong> - multiple images/videos in one ad"
+      },
+      "adviceTitle": "Tip for successful campaigns:",
+      "adviceText": "Best results are achieved by combining organic content and paid advertising. Regularly post quality content, build an engaged audience, then use ads to boost reach and target new potential customers."
+    },
+    "cta": {
+      "title": "Ready to Increase Your Online Presence?",
+      "resultsTitle": "Results you can expect",
+      "result1": "Growth in followers and engagement",
+      "result2": "Professional brand image",
+      "result3": "More leads and sales",
+      "result4": "Loyal online community",
+      "contactTitle": "Contact us for a free consultation",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "content": {
+      "title": "Creating Engaging Content",
+      "subtitle": "Quality content is the heart of successful social media marketing. We create diverse content tailored to your audience and platform, focusing on engagement and conversions.",
+      "graphicDesign": {
+        "title": "Graphic Design",
+        "item1": "Professional post graphics",
+        "item2": "Infographics with statistics and data",
+        "item3": "Quote graphics and motivational content",
+        "item4": "Carousel posts (swipe posts with multiple images)",
+        "item5": "Cover photos and branding elements",
+        "item6": "Thumbnail design for video content"
+      },
+      "videoContent": {
+        "title": "Video Content",
+        "item1": "Instagram Reels (15-90 seconds)",
+        "item2": "Facebook video posts",
+        "item3": "Stories video content with animations",
+        "item4": "Tutorial and how-to videos",
+        "item5": "Product showcase and unboxing",
+        "item6": "Behind-the-scenes content"
+      },
+      "copywriting": {
+        "title": "Copywriting",
+        "item1": "Engaging caption texts",
+        "item2": "Call-to-action (CTA) optimization",
+        "item3": "Storytelling approach",
+        "item4": "SEO optimized descriptions",
+        "item5": "Hashtag strategy and research",
+        "item6": "Emoji marketing and visual text organization"
+      },
+      "contentStrategy": {
+        "title": "Content Strategy",
+        "item1": "Content calendar planning (30-90 days ahead)",
+        "item2": "Mix of educational, entertaining and promotional content",
+        "item3": "Trends and seasonal content",
+        "item4": "User-generated content campaigns",
+        "item5": "Competitive content analysis",
+        "item6": "A/B testing different formats"
+      },
+      "whyImportantTitle": "Why is quality content crucial?",
+      "reason1": {
+        "title": "Increases Engagement",
+        "description": "Interesting content encourages likes, comments, shares and post saves, which Facebook and Instagram algorithms reward with greater reach."
+      },
+      "reason2": {
+        "title": "Builds Brand",
+        "description": "Consistent, quality content positions you as an industry expert and builds brand recognition with your audience."
+      },
+      "reason3": {
+        "title": "Converts Followers",
+        "description": "Well-designed content with clear CTA transforms followers into leads and customers, directly impacting your sales."
+      }
+    },
+    "process": {
+      "title": "Our Social Media Management Process",
+      "step1": {
+        "title": "Analysis and Research",
+        "description": "We analyze your industry, competition, target audience and current social media status."
+      },
+      "step2": {
+        "title": "Strategy and Planning",
+        "description": "We create a personalized strategy with goals, content types and posting plan."
+      },
+      "step3": {
+        "title": "Content Creation",
+        "description": "We design graphics, write texts and create video content according to the content calendar."
+      },
+      "step4": {
+        "title": "Publishing and Advertising",
+        "description": "We regularly post content and launch targeted advertising campaigns."
+      },
+      "step5": {
+        "title": "Monitoring and Analysis",
+        "description": "We track performance, engagement, reach and conversions through detailed analytics."
+      },
+      "step6": {
+        "title": "Optimization",
+        "description": "We continuously test, learn and optimize strategy for best results."
+      }
+    },
+    "platforms": {
+      "facebook": {
+        "title": "Facebook",
+        "description": "Facebook is the most used social network with <strong>over 3 billion active users</strong>. It's an ideal platform for community building, customer communication and precise targeting of different demographic groups.",
+        "whatWeDoTitle": "What we do on Facebook:",
+        "item1": "Creating and optimizing Facebook Business page",
+        "item2": "Regular posting of engaging content (posts, images, videos)",
+        "item3": "Facebook Ads campaigns (Lead Ads, Conversion, Traffic, Engagement)",
+        "item4": "Facebook Groups management and moderation",
+        "item5": "Facebook Stories and live video streaming",
+        "item6": "Responding to comments, messages and reviews",
+        "item7": "Messenger chatbot integration for automation",
+        "idealForTitle": "Facebook is ideal for:",
+        "idealForDescription": "B2C businesses, local companies, e-commerce, event marketing, community building, customer service and lead generation."
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "Instagram is a visual platform with <strong>over 2 billion active users</strong>, dominant among younger audiences (18-34 years). It's ideal for brands relying on aesthetics, lifestyle products and visual storytelling.",
+        "whatWeDoTitle": "What we do on Instagram:",
+        "item1": "Optimizing Instagram Business profile and bio section",
+        "item2": "Creating professional feed with consistent aesthetics",
+        "item3": "Instagram Stories with interactive stickers (polls, quiz, Q&A)",
+        "item4": "Instagram Reels - short viral video content",
+        "item5": "Instagram Ads campaigns (Feed, Stories, Reels, Explore)",
+        "item6": "Hashtag research and strategy for organic reach",
+        "item7": "Influencer marketing and collaborations",
+        "item8": "Instagram Shopping and product tagging",
+        "idealForTitle": "Instagram is ideal for:",
+        "idealForDescription": "Fashion, beauty, fitness, food & beverage, travel, lifestyle brands, e-commerce, creative industries and visually-oriented businesses."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faq1": {
+        "question": "How often should content be posted on Facebook and Instagram?",
+        "answer": "We recommend a minimum of 3-5 times weekly on Facebook and 4-7 times weekly on Instagram (including Stories). Consistency is key - it's better to regularly post quality content than sporadically post large amounts. Instagram Reels and Stories can be used more frequently as they have a shorter lifespan."
+      },
+      "faq2": {
+        "question": "How long does it take to see results on social media?",
+        "answer": "First visible results (follower growth, increased engagement) usually come after 1-3 months of consistent work. More significant results such as increased conversions and sales come after 3-6 months. Social media marketing is a marathon, not a sprint - it takes time to build an engaged community and establish a brand."
+      },
+      "faq3": {
+        "question": "Is a budget needed for paid advertising?",
+        "answer": "While it's possible to achieve results with organic content, paid advertising significantly accelerates growth. Organic reach on Facebook and Instagram has drastically declined (usually 1-6% of your followers see an organic post). We recommend a monthly advertising budget of minimum €100-200 for small businesses, €300-500 for medium and €500+ for large businesses."
+      },
+      "faq4": {
+        "question": "What's the difference between organic and paid content?",
+        "answer": "Organic content is everything you post without paying - it's visible to your followers and may appear in Explore/Discover sections. Paid content (ads) allows you to target a specific audience that may not follow your profile but matches your buyer persona. Best results come from combining both approaches."
+      },
+      "faq5": {
+        "question": "Can I manage my social media myself?",
+        "answer": "You can, but professional management requires significant time, creative skills (design, copywriting, video editing), knowledge of algorithms, advertising platforms, analytics tools and constant trend tracking. Most business owners don't have the time or resources for quality social media management while running their business. We have a team of specialists and tools that guarantee results."
+      },
+      "faq6": {
+        "question": "How do you measure success on social media?",
+        "answer": "We track multiple metrics: follower growth, engagement rate (likes, comments, shares, saves), reach and impressions, click-through rate (CTR), website traffic from social media, lead generation, conversions and ROI on advertising campaigns. We focus on metrics that directly impact your business, not just vanity metrics."
+      },
+      "faq7": {
+        "question": "Do you work with other platforms besides Facebook and Instagram?",
+        "answer": "Our primary specialization is Facebook and Instagram as these are the most used platforms in Serbia and the region with the greatest potential for most businesses. These two platforms cover a wide spectrum of demographic groups and industries. For specific needs, we can consider other platforms in consultation with the client."
+      },
+      "faq8": {
+        "question": "What if I'm not satisfied with the content?",
+        "answer": "Before each post, we send you the content for approval. You have the option to request changes and adjustments until you're completely satisfied. We do revisions until the content is perfect. Also, after the first month of collaboration, we learn your brand and communication tone, resulting in content that fully matches your vision."
+      }
+    }
+  }
+}

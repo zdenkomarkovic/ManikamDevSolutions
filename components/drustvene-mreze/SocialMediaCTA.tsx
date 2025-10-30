@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SocialMediaCTA() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +56,7 @@ export default function SocialMediaCTA() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Spremni da Povećate Vašu Online Prisutnost?
+          {intl.formatMessage({ id: "socialMedia.cta.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -67,7 +69,7 @@ export default function SocialMediaCTA() {
         <motion.div className="md:space-y-8 md:px-20" variants={itemVariants}>
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Rezultati koje možete očekivati
+              {intl.formatMessage({ id: "socialMedia.cta.resultsTitle" })}
             </h3>
             <motion.ul
               className="space-y-1 md:space-y-3 mx-auto w-fit"
@@ -76,66 +78,23 @@ export default function SocialMediaCTA() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Rast broja pratilaca i angažmana
-              </motion.li>
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Profesionalan brend image
-              </motion.li>
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Više lead-ova i prodaje
-              </motion.li>
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Lojalna online zajednica
-              </motion.li>
+              {["result1", "result2", "result3", "result4"].map((key) => (
+                <motion.li key={key} className="flex items-center" variants={itemVariants}>
+                  <motion.svg
+                    className="w-5 h-5 mr-3 text-orange-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </motion.svg>
+                  {intl.formatMessage({ id: `socialMedia.cta.${key}` })}
+                </motion.li>
+              ))}
             </motion.ul>
           </div>
         </motion.div>
@@ -147,7 +106,7 @@ export default function SocialMediaCTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Kontaktirajte nas za besplatnu konsultaciju
+            {intl.formatMessage({ id: "socialMedia.cta.contactTitle" })}
           </motion.p>
 
           <motion.div
@@ -181,7 +140,7 @@ export default function SocialMediaCTA() {
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </motion.svg>
               <span className="block text-lg md:text-2xl font-normal">
-                +381641967267
+                {intl.formatMessage({ id: "socialMedia.cta.phone" })}
               </span>
             </motion.a>
 
@@ -211,7 +170,7 @@ export default function SocialMediaCTA() {
               </motion.svg>
 
               <span className="block text-lg md:text-2xl font-normal">
-                manikamwebsolutions@gmail.com
+                {intl.formatMessage({ id: "socialMedia.cta.email" })}
               </span>
             </motion.a>
           </motion.div>

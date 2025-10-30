@@ -50,7 +50,7 @@ export default function SoftwareClient() {
 
   return (
     <MessagesProvider locale={locale} messages={messages}>
-      <div className="min-h-screen bg-gray-900/90  py-8 md:py-16">
+      <div className=" bg-gray-900/90  pt-24 pb-6 md:pb-16">
         <div className="container mx-auto px-3 md:px-16 space-y-8 md:space-y-16">
           <SoftwareHero />
           <SoftwareIntro />

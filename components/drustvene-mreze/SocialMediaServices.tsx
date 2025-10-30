@@ -11,58 +11,21 @@ import {
   FaCamera,
   FaHashtag,
 } from "react-icons/fa";
-
-const services = [
-  {
-    icon: FaPenFancy,
-    title: "Kreiranje Sadržaja",
-    description:
-      "Profesionalni tekstovi, grafike i video sadržaj prilagođen vašoj publici.",
-  },
-  {
-    icon: FaCalendarAlt,
-    title: "Planiranje i Objava",
-    description:
-      "Strateško planiranje sadržaja i redovna objava u optimalna vremena.",
-  },
-  {
-    icon: FaBullhorn,
-    title: "Facebook i Instagram Oglašavanje",
-    description:
-      "Ciljane reklamne kampanje koje donose merljive rezultate i ROI.",
-  },
-  {
-    icon: FaChartLine,
-    title: "Analitika i Izveštaji",
-    description:
-      "Praćenje performansi, analiza podataka i detaljni mesečni izveštaji.",
-  },
-  {
-    icon: FaUsers,
-    title: "Rast Pratilaca",
-    description:
-      "Strategije za organsko i plaćeno povećanje broja kvalitetnih pratilaca.",
-  },
-  {
-    icon: FaComments,
-    title: "Community Management",
-    description:
-      "Odgovaranje na komentare, poruke i izgradnja angažovane zajednice.",
-  },
-  {
-    icon: FaCamera,
-    title: "Stories i Reels",
-    description:
-      "Kreiranje dinamičnog vizuelnog sadržaja za Stories i Instagram Reels.",
-  },
-  {
-    icon: FaHashtag,
-    title: "Hashtag Strategija",
-    description: "Istraživanje i primena optimalnih hashtag-ova za veći doseg.",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SocialMediaServices() {
+  const intl = useMessages();
+
+  const services = [
+    { icon: FaPenFancy, key: "service1" },
+    { icon: FaCalendarAlt, key: "service2" },
+    { icon: FaBullhorn, key: "service3" },
+    { icon: FaChartLine, key: "service4" },
+    { icon: FaUsers, key: "service5" },
+    { icon: FaComments, key: "service6" },
+    { icon: FaCamera, key: "service7" },
+    { icon: FaHashtag, key: "service8" },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -117,7 +80,7 @@ export default function SocialMediaServices() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Naše Usluge Upravljanja Društvenim Mrežama
+          {intl.formatMessage({ id: "socialMedia.services.title" })}
         </motion.h2>
       </div>
 
@@ -162,9 +125,9 @@ export default function SocialMediaServices() {
                 <service.icon className="text-2xl text-white" />
               </motion.div>
               <h4 className="text-xl font-bold mb-3 text-gray-100">
-                {service.title}
+                {intl.formatMessage({ id: `socialMedia.services.${service.key}.title` })}
               </h4>
-              <p className="text-gray-100">{service.description}</p>
+              <p className="text-gray-100">{intl.formatMessage({ id: `socialMedia.services.${service.key}.description` })}</p>
             </motion.div>
           );
         })}

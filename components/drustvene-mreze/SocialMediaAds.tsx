@@ -9,8 +9,10 @@ import {
   FaCrosshairs,
   FaCheckCircle,
 } from "react-icons/fa";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SocialMediaAds() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,7 +67,7 @@ export default function SocialMediaAds() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Facebook i Instagram Oglašavanje
+          {intl.formatMessage({ id: "socialMedia.ads.title" })}
         </motion.h2>
       </div>
       <motion.p
@@ -75,8 +77,7 @@ export default function SocialMediaAds() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Plaćeno oglašavanje na društvenim mrežama omogućava vam da dosegnete
-        tačno onu publiku koja je zainteresovana za vaš proizvod ili uslugu.
+        {intl.formatMessage({ id: "socialMedia.ads.subtitle" })}
       </motion.p>
 
       <motion.div
@@ -108,11 +109,10 @@ export default function SocialMediaAds() {
             <FaBullseye className="text-2xl text-white" />
           </motion.div>
           <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Precizno Targetiranje
+            {intl.formatMessage({ id: "socialMedia.ads.features.targeting.title" })}
           </h3>
           <p className="">
-            Targetirajte po demografiji, interesovanjima, ponašanju, lokaciji i
-            custom audiences.
+            {intl.formatMessage({ id: "socialMedia.ads.features.targeting.description" })}
           </p>
         </motion.div>
 
@@ -138,11 +138,10 @@ export default function SocialMediaAds() {
             <FaDollarSign className="text-2xl text-white" />
           </motion.div>
           <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Kontrola Budžeta
+            {intl.formatMessage({ id: "socialMedia.ads.features.budget.title" })}
           </h3>
           <p className="">
-            Postavite dnevni ili mesečni budžet. Plaćate samo za rezultate koje
-            želite.
+            {intl.formatMessage({ id: "socialMedia.ads.features.budget.description" })}
           </p>
         </motion.div>
 
@@ -168,11 +167,10 @@ export default function SocialMediaAds() {
             <FaChartBar className="text-2xl text-white" />
           </motion.div>
           <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Merljivi Rezultati
+            {intl.formatMessage({ id: "socialMedia.ads.features.results.title" })}
           </h3>
           <p className="">
-            Detaljne analytics - tačno znate koliko ste potrošili i šta ste
-            dobili.
+            {intl.formatMessage({ id: "socialMedia.ads.features.results.description" })}
           </p>
         </motion.div>
 
@@ -198,11 +196,10 @@ export default function SocialMediaAds() {
             <FaCrosshairs className="text-2xl text-white" />
           </motion.div>
           <h3 className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-            Retargeting
+            {intl.formatMessage({ id: "socialMedia.ads.features.retargeting.title" })}
           </h3>
           <p className="">
-            Ponovo dosegnite posetioce sajta ili one koji su već angažovani sa
-            vašim sadržajem.
+            {intl.formatMessage({ id: "socialMedia.ads.features.retargeting.description" })}
           </p>
         </motion.div>
       </motion.div>
@@ -214,7 +211,7 @@ export default function SocialMediaAds() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Tipovi Reklamnih Kampanja
+          {intl.formatMessage({ id: "socialMedia.ads.campaignTypesTitle" })}
         </motion.h3>
       </div>
 
@@ -249,98 +246,25 @@ export default function SocialMediaAds() {
               >
                 <FaFacebook className="text-5xl text-blue-600" />
               </motion.span>
-              Facebook Ads Kampanje
+              {intl.formatMessage({ id: "socialMedia.ads.facebookCampaigns.title" })}
             </h4>
             <ul className="space-y-2">
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Lead Generation Ads</strong> - prikupljanje email i
-                  kontakt informacija
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Traffic Ads</strong> - slanje posetilaca na vaš sajt
-                  ili landing page
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Engagement Ads</strong> - povećanje lajkova,
-                  komentara, deljenja
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Conversion Ads</strong> - direktna prodaja proizvoda
-                  ili usluga
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Video Views Ads</strong> - promovisanje video sadržaja
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Page Likes Ads</strong> - rast broja pratilaca
-                  stranice
-                </span>
-              </li>
+              {[1, 2, 3, 4, 5, 6].map((num) => (
+                <li key={num} className="flex items-start md:items-center gap-2">
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
+                  </motion.div>
+                  <span className="" dangerouslySetInnerHTML={{
+                    __html: intl.formatMessage({ id: `socialMedia.ads.facebookCampaigns.campaign${num}` })
+                  }} />
+                </li>
+              ))}
             </ul>
           </motion.div>
 
@@ -356,97 +280,25 @@ export default function SocialMediaAds() {
               >
                 <FaInstagram className="text-3xl text-white" />
               </motion.span>
-              Instagram Ads Kampanje
+              {intl.formatMessage({ id: "socialMedia.ads.instagramCampaigns.title" })}
             </h4>
             <ul className="space-y-2">
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Feed Ads</strong> - reklame u glavnom Instagram feed-u
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Stories Ads</strong> - full-screen vertikalne reklame
-                  između Stories
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Reels Ads</strong> - reklame u Instagram Reels
-                  (viralni video format)
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Explore Ads</strong> - reklame u Explore sekciji
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Shopping Ads</strong> - direktna prodaja proizvoda
-                  preko Instagram
-                </span>
-              </li>
-              <li className="flex items-start md:items-center gap-2">
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
-                </motion.div>
-                <span className="">
-                  <strong>Carousel Ads</strong> - višestruke slike/video u
-                  jednoj reklami
-                </span>
-              </li>
+              {[1, 2, 3, 4, 5, 6].map((num) => (
+                <li key={num} className="flex items-start md:items-center gap-2">
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <FaCheckCircle className="text-orange-600 flex-shrink-0 mt-1 md:mt-0" />
+                  </motion.div>
+                  <span className="" dangerouslySetInnerHTML={{
+                    __html: intl.formatMessage({ id: `socialMedia.ads.instagramCampaigns.campaign${num}` })
+                  }} />
+                </li>
+              ))}
             </ul>
           </motion.div>
         </motion.div>
@@ -462,12 +314,9 @@ export default function SocialMediaAds() {
             boxShadow: "0 10px 30px rgba(249, 115, 22, 0.4)",
           }}
         >
-          <p className="font-semibold mb-2"> Savet za uspešne kampanje:</p>
+          <p className="font-semibold mb-2">{intl.formatMessage({ id: "socialMedia.ads.adviceTitle" })}</p>
           <p className="text-sm">
-            Najbolji rezultati se postižu kombinovanjem organskog sadržaja i
-            plaćenog oglašavanja. Redovno objavljujte kvalitetan sadržaj,
-            gradite angažovanu publiku, a zatim koristite reklame da pojačate
-            doseg i targetirate nove potencijalne kupce.
+            {intl.formatMessage({ id: "socialMedia.ads.adviceText" })}
           </p>
         </motion.div>
       </motion.div>

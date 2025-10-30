@@ -1,45 +1,36 @@
 import React from "react";
 import type { Metadata } from "next";
-import DrustveneМrezeClient from "./DrustveneМrezeClient";
+import SocialMediaClient from "@/components/drustvene-mreze/SocialMediaClient";
+import { LocaleProvider } from "@/lib/LocaleContext";
 
-export const metadata: Metadata = {
-  title: "Upravljanje Društvenim Mrežama - Facebook i Instagram Marketing | Manikam Dev Solutions",
-  description:
-    "Profesionalno upravljanje Facebook i Instagram profilima. Kreiranje sadržaja, oglašavanje, povećanje angažmana i izgradnja brenda na društvenim mrežama. Prilagođene strategije za vaš biznis.",
-  keywords: [
-    "društvene mreže",
-    "social media marketing",
-    "facebook marketing",
-    "instagram marketing",
-    "upravljanje drustvenim mrezama",
-    "facebook oglašavanje",
-    "instagram oglašavanje",
-    "kreiranje sadržaja",
-    "content marketing",
-    "social media strategy",
-    "facebook ads",
-    "instagram ads",
-    "povećanje pratilaca",
-    "engagement",
-    "influencer marketing",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/drustvene-mreze",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/drustvene-mreze",
-      en: "https://manikamwebsolutions.com/en/social-media",
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/social-media/${locale}.json`);
+
+  return {
+    title: messages.socialMedia.page.title,
+    description: messages.socialMedia.page.description,
+    alternates: {
+      canonical: `https://manikamwebsolutions.com/${locale}/${locale === "sr" ? "drustvene-mreze" : "social-media"}`,
+      languages: {
+        sr: "https://manikamwebsolutions.com/sr/drustvene-mreze",
+        en: "https://manikamwebsolutions.com/en/social-media",
+      },
     },
-  },
-  openGraph: {
-    title: "Upravljanje Društvenim Mrežama - Facebook i Instagram Marketing | Manikam Dev Solutions",
-    description:
-      "Profesionalno upravljanje Facebook i Instagram profilima. Povećajte angažman i doseg na društvenim mrežama.",
-    type: "website",
-  },
-};
+  };
+}
 
-const page = () => {
-  return <DrustveneМrezeClient />;
-};
+export default async function DrustveneМrezePage({ params }: Props) {
+  const { locale } = await params;
 
-export default page;
+  return (
+    <LocaleProvider locale={locale as "en" | "sr"}>
+      <SocialMediaClient />
+    </LocaleProvider>
+  );
+}

@@ -9,47 +9,19 @@ import {
   FaChartLine,
   FaSyncAlt,
 } from "react-icons/fa";
-
-const steps = [
-  {
-    icon: FaSearch,
-    title: "Analiza i Istraživanje",
-    description:
-      "Analiziramo vašu industriju, konkurenciju, ciljnu publiku i trenutno stanje na društvenim mrežama.",
-  },
-  {
-    icon: FaBullseye,
-    title: "Strategija i Planiranje",
-    description:
-      "Kreiramo personalizovanu strategiju sa ciljevima, tipovima sadržaja i planom objava.",
-  },
-  {
-    icon: FaPencilAlt,
-    title: "Kreiranje Sadržaja",
-    description:
-      "Dizajniramo grafike, pišemo tekstove i kreiramo video sadržaj prema content calendar-u.",
-  },
-  {
-    icon: FaRocket,
-    title: "Objava i Oglašavanje",
-    description:
-      "Redovno objavljujemo sadržaj i pokrećemo ciljane reklamne kampanje.",
-  },
-  {
-    icon: FaChartLine,
-    title: "Praćenje i Analiza",
-    description:
-      "Pratimo performanse, angažman, doseg i konverzije kroz detaljne analytics.",
-  },
-  {
-    icon: FaSyncAlt,
-    title: "Optimizacija",
-    description:
-      "Kontinuirano testiramo, učimo i optimizujemo strategiju za najbolje rezultate.",
-  },
-];
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SocialMediaProcess() {
+  const intl = useMessages();
+
+  const steps = [
+    { icon: FaSearch, key: "step1" },
+    { icon: FaBullseye, key: "step2" },
+    { icon: FaPencilAlt, key: "step3" },
+    { icon: FaRocket, key: "step4" },
+    { icon: FaChartLine, key: "step5" },
+    { icon: FaSyncAlt, key: "step6" },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -104,7 +76,7 @@ export default function SocialMediaProcess() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Naš Proces Upravljanja Društvenim Mrežama
+          {intl.formatMessage({ id: "socialMedia.process.title" })}
         </motion.h2>
       </div>
 
@@ -139,9 +111,9 @@ export default function SocialMediaProcess() {
               <step.icon className="text-2xl text-white" />
             </motion.div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {step.title}
+              {intl.formatMessage({ id: `socialMedia.process.${step.key}.title` })}
             </h3>
-            <p className=" leading-relaxed">{step.description}</p>
+            <p className=" leading-relaxed">{intl.formatMessage({ id: `socialMedia.process.${step.key}.description` })}</p>
           </motion.div>
         ))}
       </motion.div>

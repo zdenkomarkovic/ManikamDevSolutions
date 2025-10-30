@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 export default function SocialMediaIntro() {
+  const intl = useMessages();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,7 +52,7 @@ export default function SocialMediaIntro() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Zašto su društvene mreže ključne za vaš biznis?
+          {intl.formatMessage({ id: "socialMedia.intro.title" })}
         </motion.h2>
       </div>
       <motion.div
@@ -60,30 +62,15 @@ export default function SocialMediaIntro() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.p variants={itemVariants}>
-          U 2024. godini,{" "}
-          <strong>preko 4.9 milijardi ljudi koristi društvene mreže</strong> -
-          to je više od polovine svetske populacije! Facebook i Instagram nisu
-          samo platforme za zabavu, već moćni alati za razvoj biznisa,
-          komunikaciju sa klijentima i izgradnju brenda.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          <strong>Facebook</strong> i <strong>Instagram</strong> omogućavaju vam
-          da direktno komunicirate sa vašom ciljnom publikom, gradite poverenje
-          i lojalnost, i transformišete pratioce u kupce. Preko 80% korisnika
-          Instagram-a prati bar jedan biznis profil, dok je Facebook i dalje
-          najkorišćenija društvena mreža za B2C marketing.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          <strong>
-            Profesionalno upravljanje društvenim mrežama nije luksuz - to je
-            neophodnost.
-          </strong>{" "}
-          Algoritmi Facebook-a i Instagram-a konstantno se menjaju, a
-          konkurencija je velika. Potrebna vam je strategija koja kombinuje
-          kvalitetan sadržaj, precizno targetiranje, plaćeno oglašavanje i
-          kontinuiranu analitiku da biste se istakli i postigli rezultate.
-        </motion.p>
+        <motion.p variants={itemVariants} dangerouslySetInnerHTML={{
+          __html: intl.formatMessage({ id: "socialMedia.intro.paragraph1" })
+        }} />
+        <motion.p variants={itemVariants} dangerouslySetInnerHTML={{
+          __html: intl.formatMessage({ id: "socialMedia.intro.paragraph2" })
+        }} />
+        <motion.p variants={itemVariants} dangerouslySetInnerHTML={{
+          __html: intl.formatMessage({ id: "socialMedia.intro.paragraph3" })
+        }} />
       </motion.div>
     </motion.div>
   );
