@@ -95,15 +95,8 @@ export function middleware(request: VercelRequest) {
   const country = request.geo?.country || "";
 
   // Geo-ograničenje za srpske stranice van Srbije, Bosne, Crne Gore i Makedonije
-  // Dozvoljene zemlje za srpski sadržaj
+  // Dozvoljene zemlje za srpski puni sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
-
-  // Blokirane zemlje (sve ostale van regiona)
-  const blockedCountries = ["US", "GB", "DE", "FR", "IT", "ES", "CA", "AU", "NL", "BE", "CH", "AT", "SE", "NO", "DK", "FI", "PT", "GR", "IE", "PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "EE", "LV", "LT"];
-
-  // Blokira samo ako ZNAMO da korisnik nije iz dozvoljene zemlje
-  // Ako geo ne radi (country je prazan), NE blokiraj (dozvoli pristup)
-  const isFromBlockedCountry = country && blockedCountries.includes(country);
 
   // Proveri da li je srpska podstranica (ali ne i početna)
   // Početna je: /sr ili /sr/
@@ -112,9 +105,10 @@ export function middleware(request: VercelRequest) {
   const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr";
   const isSerbianSubpage = isSerbianPage && !isSerbianHomepage;
 
-  // Blokiraj SAMO ako je iz blokirane zemlje i pokušava pristup srpskoj podstranici
-  // Ali NE primenjuj ograničenje na botove (za SEO)
-  if (!isBot && isFromBlockedCountry && isSerbianSubpage) {
+  // Blokiraj pristup srpskim podstranicama van dozvoljenih zemalja
+  // Ali samo ako geo radi (country postoji)
+  // Botovi nisu blokirani (za SEO)
+  if (!isBot && country && isSerbianSubpage && !allowedCountriesForSerbianContent.includes(country)) {
     // Redirektuj na početnu srpsku stranicu
     return NextResponse.redirect(new URL("/sr", request.url));
   }
@@ -142,17 +136,22 @@ export function middleware(request: VercelRequest) {
     if (isBot) {
       locale = "en";
     }
-    // Ako je Srbija, Bosna, Crna Gora, Makedonija - srpski
-    else if (["RS", "BA", "ME", "MK"].includes(country)) {
+    // Ako geo radi I ako je Srbija, Bosna, Crna Gora, Makedonija - srpski
+    else if (country && ["RS", "BA", "ME", "MK"].includes(country)) {
       locale = "sr";
     }
-    // Ako je Amerika, UK, Nemačka, Francuska... - engleski
-    else if (["US", "GB", "DE", "FR", "IT", "ES", "CA", "AU"].includes(country)) {
-      locale = "en";
-    }
-    // Sve ostale zemlje ili ako geo ne radi - SRPSKI (default)
+    // Svi ostali (poznata druga zemlja ILI geo ne radi) - koristi browser language kao fallback
     else {
-      locale = "sr";
+      // Prvo probaj browser language
+      const browserLocale = getLocale(request, i18n);
+
+      // Ako je browser srpski ALI geo detektuje drugu zemlju → forsira engleski
+      // Ako geo NE radi (country je prazan) → dozvoli browser language
+      if (browserLocale === "sr" && country && !["RS", "BA", "ME", "MK"].includes(country)) {
+        locale = "en"; // Forsira engleski za srpski browser van regiona
+      } else {
+        locale = browserLocale;
+      }
     }
 
     let newPath = `/${locale}${pathname}`;
