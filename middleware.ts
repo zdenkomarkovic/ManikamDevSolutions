@@ -89,27 +89,29 @@ export function middleware(request: VercelRequest) {
   const userAgent = request.headers.get('user-agent') || '';
   const isBot = isCrawlerBot(userAgent);
 
-  // Geo-blocking: PRIVREMENO DEAKTIVIRANO ZA TESTIRANJE
-  // const country = request.geo?.country || "";
   const { pathname } = request.nextUrl;
 
-  // Debug - ispisuje geo podatke
-  // console.log("GEO:", request.geo, "Country:", country, "Pathname:", pathname);
+  // Prvo detektuj zemlju
+  const country = request.geo?.country || "";
 
-  // Blokira samo /sr/izrada-sajta i /sr/izrada-web-shopa
-  // const blockedPagesForUS = ["/sr/izrada-sajta", "/sr/izrada-web-shopa"];
-  // const isBlockedPage = blockedPagesForUS.some(page => pathname.startsWith(page));
+  // Geo-ograničenje za srpske stranice van Srbije, Bosne, Crne Gore i Makedonije
+  // Dozvoljene zemlje za srpski sadržaj
+  const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
+  const isFromAllowedCountry = allowedCountriesForSerbianContent.includes(country);
 
-  // if (country === "US" && isBlockedPage) {
-  //   // Redirektuj na englesku verziju iste stranice
-  //   const pageMapping: Record<string, string> = {
-  //     "/sr/izrada-sajta": "/en/website-development",
-  //     "/sr/izrada-web-shopa": "/en/webshop-development",
-  //   };
+  // Proveri da li je srpska podstranica (ali ne i početna)
+  // Početna je: /sr ili /sr/
+  // Podstranica je: /sr/bilo-sta (izrada-sajta, contact, itd.)
+  const isSerbianHomepage = pathname === "/sr" || pathname === "/sr/";
+  const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr";
+  const isSerbianSubpage = isSerbianPage && !isSerbianHomepage;
 
-  //   const redirectUrl = pageMapping[pathname] || "/en";
-  //   return NextResponse.redirect(new URL(redirectUrl, request.url));
-  // }
+  // Ako korisnik nije iz dozvoljene zemlje i pokušava da pristupi srpskoj podstranici
+  // Ali NE primenjuj ograničenje na botove (za SEO)
+  if (!isBot && !isFromAllowedCountry && isSerbianSubpage) {
+    // Redirektuj na početnu srpsku stranicu
+    return NextResponse.redirect(new URL("/sr", request.url));
+  }
 
   let response: NextResponse | undefined;
   let nextLocale: string | undefined;
@@ -121,9 +123,6 @@ export function middleware(request: VercelRequest) {
   const pathLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
-
-  // Prvo detektuj zemlju
-  const country = request.geo?.country || "";
 
   if (pathLocale) {
     // Jezik već postoji u putanji, samo nastavi
