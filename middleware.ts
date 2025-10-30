@@ -106,20 +106,16 @@ export function middleware(request: VercelRequest) {
   // Dozvoljene zemlje za srpski puni sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
 
-  // Proveri da li je srpska podstranica (ali ne i početna)
-  // Početna je: /sr ili /sr/
-  // Podstranica je: /sr/bilo-sta (izrada-sajta, contact, itd.)
-  const isSerbianHomepage = pathname === "/sr" || pathname === "/sr/";
+  // Proveri da li je BILO KOJA srpska stranica (uključujući početnu)
   const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr";
-  const isSerbianSubpage = isSerbianPage && !isSerbianHomepage;
 
-  // Blokiraj pristup srpskim podstranicama samo ako geo RADI i detektuje drugu zemlju
+  // Blokiraj pristup CELOJ srpskoj verziji ako geo detektuje drugu zemlju
   // Botovi nisu blokirani (za SEO)
   const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
 
-  if (!isBot && isSerbianSubpage && isFromOtherCountry) {
-    console.log('🚫 Blocking Serbian subpage for country:', country);
-    // Redirektuj na englesku početnu umesto srpske
+  if (!isBot && isSerbianPage && isFromOtherCountry) {
+    console.log('🚫 Blocking ALL Serbian pages for country:', country);
+    // Redirektuj na englesku verziju
     return NextResponse.redirect(new URL("/en", request.url));
   }
 
@@ -168,9 +164,9 @@ export function middleware(request: VercelRequest) {
         locale = "en"; // Ostale zemlje → engleski (ignoriše browser!)
       }
     }
-    // Ako geo NE radi (development) - koristi browser language
+    // Ako geo NE radi (development) - SRPSKI kao default
     else {
-      locale = getLocale(request, i18n);
+      locale = "sr";
     }
 
     console.log('🎯 Selected locale:', locale, 'for country:', country || 'NO GEO');
