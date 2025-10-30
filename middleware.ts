@@ -80,15 +80,14 @@ export function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  // Prvo detektuj zemlju - Next.js 15 koristi headers umesto request.geo
-  const country = request.headers.get('x-vercel-ip-country') || request.geo?.country || "";
+  // Prvo detektuj zemlju - Next.js 15 koristi headers
+  const country = request.headers.get('x-vercel-ip-country') || "";
 
   // DEBUG: Log za proveru geo detekcije
   console.log('🌍 Middleware Debug:', {
     pathname,
     country: country || 'NO GEO DATA',
     'x-vercel-ip-country': request.headers.get('x-vercel-ip-country') || 'NO HEADER',
-    'request.geo': request.geo?.country || 'NO GEO',
     isBot,
     userAgent: userAgent.substring(0, 50)
   });
