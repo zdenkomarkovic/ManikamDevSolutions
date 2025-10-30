@@ -97,7 +97,13 @@ export function middleware(request: VercelRequest) {
   // Geo-ograničenje za srpske stranice van Srbije, Bosne, Crne Gore i Makedonije
   // Dozvoljene zemlje za srpski sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
-  const isFromAllowedCountry = allowedCountriesForSerbianContent.includes(country);
+
+  // Blokirane zemlje (sve ostale van regiona)
+  const blockedCountries = ["US", "GB", "DE", "FR", "IT", "ES", "CA", "AU", "NL", "BE", "CH", "AT", "SE", "NO", "DK", "FI", "PT", "GR", "IE", "PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "EE", "LV", "LT"];
+
+  // Blokira samo ako ZNAMO da korisnik nije iz dozvoljene zemlje
+  // Ako geo ne radi (country je prazan), NE blokiraj (dozvoli pristup)
+  const isFromBlockedCountry = country && blockedCountries.includes(country);
 
   // Proveri da li je srpska podstranica (ali ne i početna)
   // Početna je: /sr ili /sr/
@@ -106,9 +112,9 @@ export function middleware(request: VercelRequest) {
   const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr";
   const isSerbianSubpage = isSerbianPage && !isSerbianHomepage;
 
-  // Ako korisnik nije iz dozvoljene zemlje i pokušava da pristupi srpskoj podstranici
+  // Blokiraj SAMO ako je iz blokirane zemlje i pokušava pristup srpskoj podstranici
   // Ali NE primenjuj ograničenje na botove (za SEO)
-  if (!isBot && !isFromAllowedCountry && isSerbianSubpage) {
+  if (!isBot && isFromBlockedCountry && isSerbianSubpage) {
     // Redirektuj na početnu srpsku stranicu
     return NextResponse.redirect(new URL("/sr", request.url));
   }
