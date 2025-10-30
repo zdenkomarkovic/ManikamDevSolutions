@@ -7,17 +7,6 @@ import Negotiator from "negotiator";
 import { i18n } from "./i18n-config";
 import type { I18nConfig } from "./i18n-config";
 
-// Proširenje NextRequest tipa za Vercel geo podatke
-interface VercelRequest extends NextRequest {
-  geo?: {
-    city?: string;
-    country?: string;
-    region?: string;
-    latitude?: string;
-    longitude?: string;
-  };
-}
-
 function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
   const { locales, defaultLocale } = i18nConfig;
 
@@ -85,19 +74,21 @@ function isCrawlerBot(userAgent: string): boolean {
   return botPatterns.some(pattern => lowerUA.includes(pattern));
 }
 
-export function middleware(request: VercelRequest) {
+export function middleware(request: NextRequest) {
   const userAgent = request.headers.get('user-agent') || '';
   const isBot = isCrawlerBot(userAgent);
 
   const { pathname } = request.nextUrl;
 
-  // Prvo detektuj zemlju
-  const country = request.geo?.country || "";
+  // Prvo detektuj zemlju - Next.js 15 koristi headers umesto request.geo
+  const country = request.headers.get('x-vercel-ip-country') || request.geo?.country || "";
 
   // DEBUG: Log za proveru geo detekcije
   console.log('🌍 Middleware Debug:', {
     pathname,
     country: country || 'NO GEO DATA',
+    'x-vercel-ip-country': request.headers.get('x-vercel-ip-country') || 'NO HEADER',
+    'request.geo': request.geo?.country || 'NO GEO',
     isBot,
     userAgent: userAgent.substring(0, 50)
   });
@@ -199,5 +190,3 @@ export const config = {
   matcher:
     "/((?!api|_next/static|_next/image|images/|favicon.ico|.*\\.svg$|.*\\.webmanifest$|.*\\.png$|.*\\.jpg$|.*\\.jpeg$|.*\\.ico$|.*\\.xml$|.*\\.txt$).*)",
 };
-
-export const runtime = "edge";
