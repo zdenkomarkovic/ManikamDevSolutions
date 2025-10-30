@@ -74,12 +74,12 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-10 left-4 md:left-16 z-20">
           <h1 className="font-extrabold   flex flex-col gap-4 mb:gap-8  relative  text-[3rem] md:text-[8.5rem] pb-5 md:pb-10">
-            <span className="pt-10 pb-3 md:pb-24 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
+            <span className="w-fit pt-10 pb-3 md:pb-24 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
               Manikam{" "}
             </span>
             <span className="">
-              <span className=" bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent ">
+              <span className="w-fit bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent ">
                 Web{" "}
               </span>
               <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
