@@ -102,21 +102,39 @@ export function middleware(request: VercelRequest) {
     userAgent: userAgent.substring(0, 50)
   });
 
-  // Geo-ograničenje za srpske stranice van Srbije, Bosne, Crne Gore i Makedonije
-  // Dozvoljene zemlje za srpski puni sadržaj
+  // Dozvoljene zemlje za srpski sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
 
-  // Proveri da li je BILO KOJA srpska stranica (uključujući početnu)
-  const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr";
-
-  // Blokiraj pristup CELOJ srpskoj verziji ako geo detektuje drugu zemlju
-  // Botovi nisu blokirani (za SEO)
+  // PRIORITET 1: Ako geo radi i detektuje drugu zemlju (ne region) → forsira engleski!
   const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
 
-  if (!isBot && isSerbianPage && isFromOtherCountry) {
-    console.log('🚫 Blocking ALL Serbian pages for country:', country);
-    // Redirektuj na englesku verziju
-    return NextResponse.redirect(new URL("/en", request.url));
+  if (isFromOtherCountry && !isBot) {
+    console.log('⚠️ User from', country, '- forcing English only!');
+
+    // Proveri da li ima srpski cookie i obriši ga
+    const currentCookie = request.cookies.get("NEXT_LOCALE")?.value;
+    if (currentCookie === "sr") {
+      console.log('🍪 Deleting Serbian cookie for country:', country);
+    }
+
+    // Proveri da li je BILO KOJA srpska stranica (uključujući početnu)
+    const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr" || pathname.startsWith("/sr?");
+
+    if (isSerbianPage) {
+      console.log('🚫 Blocking Serbian page → Redirecting to /en');
+      // Zameni /sr sa /en
+      const newPath = pathname.replace(/^\/sr(\/|$|\?)/, '/en$1') + (request.nextUrl.search || '');
+      const response = NextResponse.redirect(new URL(newPath, request.url));
+
+      // Obriši srpski cookie i postavi engleski
+      response.cookies.delete("NEXT_LOCALE");
+      response.cookies.set("NEXT_LOCALE", "en", {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 365,
+      });
+
+      return response;
+    }
   }
 
   let response: NextResponse | undefined;
@@ -131,22 +149,9 @@ export function middleware(request: VercelRequest) {
   );
 
   if (pathLocale) {
-    // Jezik već postoji u putanji
+    // Jezik već postoji u putanji, samo nastavi
     nextLocale = pathLocale;
-
-    // GEO ZAŠTITA: Samo ako geo RADI i detektuje drugu zemlju → blokiraj /sr
-    const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
-
-    if (pathLocale === "sr" && !isBot && isFromOtherCountry) {
-      console.log('🚫 Blocking Serbian for country:', country, '→ Redirecting to /en');
-
-      // Zameni /sr sa /en u putanji
-      const newPath = pathname.replace(/^\/sr(\/|$)/, '/en$1') + (request.nextUrl.search || '');
-      response = NextResponse.redirect(new URL(newPath, request.url));
-      nextLocale = "en";
-    } else {
-      response = NextResponse.next();
-    }
+    response = NextResponse.next();
   } else {
     // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
     let locale: string;
@@ -181,17 +186,6 @@ export function middleware(request: VercelRequest) {
   }
 
   if (nextLocale && response) {
-    // Proveri da li treba obrisati srpski cookie samo ako geo RADI i detektuje drugu zemlju
-    const currentCookie = request.cookies.get("NEXT_LOCALE")?.value;
-    const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
-
-    // Ako korisnik ima srpski cookie ALI geo detektuje drugu zemlju → obriši ga i postavi engleski
-    if (currentCookie === "sr" && !isBot && isFromOtherCountry) {
-      console.log('🍪 Deleting Serbian cookie for country:', country);
-      response.cookies.delete("NEXT_LOCALE");
-      nextLocale = "en"; // Forsira engleski
-    }
-
     response.cookies.set("NEXT_LOCALE", nextLocale, {
       path: "/",
       maxAge: 60 * 60 * 24 * 365, // 1 godina
@@ -205,3 +199,5 @@ export const config = {
   matcher:
     "/((?!api|_next/static|_next/image|images/|favicon.ico|.*\\.svg$|.*\\.webmanifest$|.*\\.png$|.*\\.jpg$|.*\\.jpeg$|.*\\.ico$|.*\\.xml$|.*\\.txt$).*)",
 };
+
+export const runtime = "edge";
