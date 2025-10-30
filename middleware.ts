@@ -113,12 +113,12 @@ export function middleware(request: VercelRequest) {
   const isSerbianPage = pathname.startsWith("/sr/") || pathname === "/sr";
   const isSerbianSubpage = isSerbianPage && !isSerbianHomepage;
 
-  // Blokiraj pristup srpskim podstranicama van dozvoljenih zemalja
+  // Blokiraj pristup srpskim podstranicama samo ako geo RADI i detektuje drugu zemlju
   // Botovi nisu blokirani (za SEO)
-  const isFromAllowedRegion = country && allowedCountriesForSerbianContent.includes(country);
+  const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
 
-  if (!isBot && isSerbianSubpage && !isFromAllowedRegion) {
-    console.log('🚫 Blocking Serbian subpage for country:', country || 'NO GEO');
+  if (!isBot && isSerbianSubpage && isFromOtherCountry) {
+    console.log('🚫 Blocking Serbian subpage for country:', country);
     // Redirektuj na englesku početnu umesto srpske
     return NextResponse.redirect(new URL("/en", request.url));
   }
@@ -138,11 +138,11 @@ export function middleware(request: VercelRequest) {
     // Jezik već postoji u putanji
     nextLocale = pathLocale;
 
-    // GEO ZAŠTITA: Ako je korisnik na /sr verziji ALI NIJE iz dozvoljenih zemalja → redirektuj na /en
-    const isFromAllowedRegion = country && allowedCountriesForSerbianContent.includes(country);
+    // GEO ZAŠTITA: Samo ako geo RADI i detektuje drugu zemlju → blokiraj /sr
+    const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
 
-    if (pathLocale === "sr" && !isBot && !isFromAllowedRegion) {
-      console.log('🚫 Blocking Serbian for country:', country || 'NO GEO', '→ Redirecting to /en');
+    if (pathLocale === "sr" && !isBot && isFromOtherCountry) {
+      console.log('🚫 Blocking Serbian for country:', country, '→ Redirecting to /en');
 
       // Zameni /sr sa /en u putanji
       const newPath = pathname.replace(/^\/sr(\/|$)/, '/en$1') + (request.nextUrl.search || '');
@@ -159,13 +159,18 @@ export function middleware(request: VercelRequest) {
     if (isBot) {
       locale = "en";
     }
-    // Ako geo detektuje Srbiju, Bosnu, Crnu Goru, Makedoniju - srpski
-    else if (country && ["RS", "BA", "ME", "MK"].includes(country)) {
-      locale = "sr";
+    // Ako geo RADI (country postoji)
+    else if (country) {
+      // Proveri da li je iz dozvoljenog regiona
+      if (["RS", "BA", "ME", "MK"].includes(country)) {
+        locale = "sr"; // Region → srpski
+      } else {
+        locale = "en"; // Ostale zemlje → engleski (ignoriše browser!)
+      }
     }
-    // Sve ostalo (druge zemlje ILI geo ne radi) - ENGLESKI kao default
+    // Ako geo NE radi (development) - koristi browser language
     else {
-      locale = "en";
+      locale = getLocale(request, i18n);
     }
 
     console.log('🎯 Selected locale:', locale, 'for country:', country || 'NO GEO');
@@ -180,13 +185,13 @@ export function middleware(request: VercelRequest) {
   }
 
   if (nextLocale && response) {
-    // Proveri da li treba obrisati srpski cookie van regiona
+    // Proveri da li treba obrisati srpski cookie samo ako geo RADI i detektuje drugu zemlju
     const currentCookie = request.cookies.get("NEXT_LOCALE")?.value;
-    const isFromAllowedRegion = country && allowedCountriesForSerbianContent.includes(country);
+    const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
 
-    // Ako korisnik ima srpski cookie ALI NIJE iz dozvoljenog regiona → obriši ga i postavi engleski
-    if (currentCookie === "sr" && !isBot && !isFromAllowedRegion) {
-      console.log('🍪 Deleting Serbian cookie for country:', country || 'NO GEO');
+    // Ako korisnik ima srpski cookie ALI geo detektuje drugu zemlju → obriši ga i postavi engleski
+    if (currentCookie === "sr" && !isBot && isFromOtherCountry) {
+      console.log('🍪 Deleting Serbian cookie for country:', country);
       response.cookies.delete("NEXT_LOCALE");
       nextLocale = "en"; // Forsira engleski
     }
