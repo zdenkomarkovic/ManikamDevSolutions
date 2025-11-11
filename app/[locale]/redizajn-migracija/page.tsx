@@ -1,19 +1,28 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { LocaleProvider } from "@/lib/LocaleContext";
 import RedesignPageClient from "./RedesignPageClient";
 
-export const metadata: Metadata = {
-  title: "Redizajn i Migracija Sajtova na Next.js | WordPress → Next.js",
-  description:
-    "Profesionalna migracija i redizajn sajtova sa WordPresa, Wix, Joomla i drugih platformi na Next.js. Poboljšajte performanse, SEO i korisničko iskustvo. Brže učitavanje, bolja sigurnost i moderne funkcionalnosti.",
-  keywords:
-    "migracija sajta, WordPress na Next.js, redizajn sajta, migracija WordPress, Next.js migracija, modernizacija sajta, Wix migracija, Joomla migracija, poboljšanje performansi sajta",
-  openGraph: {
-    title: "Redizajn i Migracija Sajtova na Next.js",
-    description:
-      "Migrirajte svoj sajt na modernu Next.js platformu. Bolje performanse, SEO i korisničko iskustvo.",
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function RedesignMigrationPage() {
-  return <RedesignPageClient />;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/redesignMigration/${locale}.json`);
+
+  return {
+    title: messages.redesignMigration.page.title,
+    description: messages.redesignMigration.page.description,
+  };
+}
+
+export default async function RedesignMigrationPage({ params }: Props) {
+  const { locale } = await params;
+
+  return (
+    <LocaleProvider locale={locale as "en" | "sr"}>
+      <RedesignPageClient />
+    </LocaleProvider>
+  );
 }

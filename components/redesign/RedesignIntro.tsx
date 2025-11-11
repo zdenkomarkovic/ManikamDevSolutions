@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function RedesignIntro() {
+  const { t } = useLocale();
+  const intro = t.redesignMigration.intro;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,7 +52,7 @@ export default function RedesignIntro() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Zašto je Vreme za Redizajn i Migraciju Vašeg Sajta?
+        {intro.title}
       </motion.h2>
       <motion.div
         className="space-y-4"
@@ -59,11 +62,7 @@ export default function RedesignIntro() {
         viewport={{ once: true }}
       >
         <motion.p variants={itemVariants} className="text-center">
-          U digitalnom svetu koji se brzo razvija, sajt napravljen pre nekoliko
-          godina možda više ne zadovoljava moderne standarde. WordPress, Wix,
-          Joomla i slične platforme bile su odličan izbor u prošlosti, ali danas
-          postoje naprednije tehnologije koje nude neuporedivo bolje
-          performanse, sigurnost i korisničko iskustvo.
+          {intro.content}
         </motion.p>
 
         <motion.div
@@ -72,37 +71,37 @@ export default function RedesignIntro() {
         >
           <div className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 p-6 md:p-8 rounded-lg border border-orange-100">
             <h3 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-              Problemi Starih Platformi
+              {intro.oldPlatforms.title}
             </h3>
             <ul className="space-y-4 ">
               <li className="flex items-start gap-3">
                 <span className="text-orange-600 mt-1">✗</span>
                 <span className="">
-                  Sporo učitavanje stranica (3-10 sekundi)
+                  {intro.oldPlatforms.item1}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-orange-600 mt-1">✗</span>
-                <span className="">Loše performanse na mobilnim uređajima</span>
+                <span className="">{intro.oldPlatforms.item2}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-orange-600 mt-1">✗</span>
-                <span className="">Sigurnosni rizici i česte ranjivosti</span>
+                <span className="">{intro.oldPlatforms.item3}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-orange-600 mt-1">✗</span>
                 <span className="">
-                  Zastareli dizajn koji ne prati moderne trendove
+                  {intro.oldPlatforms.item4}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-orange-600 mt-1">✗</span>
-                <span className="">Loš SEO ranking na Google-u</span>
+                <span className="">{intro.oldPlatforms.item5}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-orange-600 mt-1">✗</span>
                 <span className="">
-                  Skupo održavanje i redovni troškovi pluginova
+                  {intro.oldPlatforms.item6}
                 </span>
               </li>
             </ul>
@@ -110,42 +109,42 @@ export default function RedesignIntro() {
 
           <div className="bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 p-6 md:p-8 rounded-lg border border-green-100">
             <h3 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-              Prednosti Next.js Migracije
+              {intro.nextjsBenefits.title}
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
                 <span className="">
-                  Velika brzina učitavanja (0.5-2 sekunde)
+                  {intro.nextjsBenefits.item1}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
                 <span className="">
-                  Savršen responsive dizajn za sve uređaje
+                  {intro.nextjsBenefits.item2}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
                 <span className="">
-                  Vrhunska sigurnost bez dodatnih pluginova
+                  {intro.nextjsBenefits.item3}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
                 <span className="">
-                  Moderan dizajn sa najnovijim UI/UX trendovima
+                  {intro.nextjsBenefits.item4}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
                 <span className="">
-                  Odličan SEO i viša pozicija u Google rezultatima
+                  {intro.nextjsBenefits.item5}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
-                <span className="">Niži troškovi održavanja i hosting-a</span>
+                <span className="">{intro.nextjsBenefits.item6}</span>
               </li>
             </ul>
           </div>

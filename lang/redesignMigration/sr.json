@@ -1,0 +1,252 @@
+{
+  "redesignMigration": {
+    "page": {
+      "title": "Redizajn i Migracija Sajtova na Next.js | WordPress → Next.js",
+      "description": "Profesionalna migracija i redizajn sajtova sa WordPresa, Wix, Joomla i drugih platformi na Next.js. Poboljšajte performanse, SEO i korisničko iskustvo. Brže učitavanje, bolja sigurnost i moderne funkcionalnosti."
+    },
+    "hero": {
+      "title": "Redizajn i Migracija Sajtova",
+      "subtitle": "Modernizujte svoj sajt sa WordPresa, Wix, Joomla ili drugih platformi na Next.js. Transformišemo zastarele sajtove u brze, moderne i SEO optimizovane web aplikacije. Povećajte performanse do 10x i pružite korisnicima vrhunsko iskustvo.",
+      "badge1": "10x Brže",
+      "badge2": "Bolji SEO",
+      "badge3": "Vrhunska Sigurnost"
+    },
+    "intro": {
+      "title": "Zašto je Vreme za Redizajn i Migraciju Vašeg Sajta?",
+      "content": "U digitalnom svetu koji se brzo razvija, sajt napravljen pre nekoliko godina možda više ne zadovoljava moderne standarde. WordPress, Wix, Joomla i slične platforme bile su odličan izbor u prošlosti, ali danas postoje naprednije tehnologije koje nude neuporedivo bolje performanse, sigurnost i korisničko iskustvo.",
+      "oldPlatforms": {
+        "title": "Problemi Starih Platformi",
+        "item1": "Sporo učitavanje stranica (3-10 sekundi)",
+        "item2": "Loše performanse na mobilnim uređajima",
+        "item3": "Sigurnosni rizici i česte ranjivosti",
+        "item4": "Zastareli dizajn koji ne prati moderne trendove",
+        "item5": "Loš SEO ranking na Google-u",
+        "item6": "Skupo održavanje i redovni troškovi pluginova"
+      },
+      "nextjsBenefits": {
+        "title": "Prednosti Next.js Migracije",
+        "item1": "Velika brzina učitavanja (0.5-2 sekunde)",
+        "item2": "Savršen responsive dizajn za sve uređaje",
+        "item3": "Vrhunska sigurnost bez dodatnih pluginova",
+        "item4": "Moderan dizajn sa najnovijim UI/UX trendovima",
+        "item5": "Odličan SEO i viša pozicija u Google rezultatima",
+        "item6": "Niži troškovi održavanja i hosting-a"
+      }
+    },
+    "benefits": {
+      "title": "Ključne Prednosti Migracije na Next.js",
+      "items": [
+        {
+          "title": "Neuporedive Performanse",
+          "description": "Next.js koristi najmodernije tehnologije kao što su Server-Side Rendering (SSR), Static Site Generation (SSG) i Incremental Static Regeneration (ISR). Ovo znači da se vaš sajt učitava munjevitom brzinom, što direktno utiče na zadovoljstvo korisnika i stopu konverzije. Studije pokazuju da čak 40% korisnika napusti sajt ako se ne učita za 3 sekunde - sa Next.js, vaš sajt će se učitavati za manje od sekunde."
+        },
+        {
+          "title": "Superioran SEO i Vidljivost",
+          "description": "Google rangira brze sajtove više u rezultatima pretrage. Next.js omogućava server-side rendering što znači da pretraživači mogu odmah da indeksiraju vaš sadržaj, za razliku od tradicionalnih Single Page Applications. Automatska optimizacija slika, meta tagova i strukturiranih podataka osigurava da vaš sajt dobije maksimalnu vidljivost. Klijenti koji su migrirali na Next.js u proseku beleže 30-50% povećanje organskog saobraćaja."
+        },
+        {
+          "title": "Perfektno Mobilno Iskustvo",
+          "description": "Više od 60% internet saobraćaja dolazi sa mobilnih uređaja. Next.js obezbeđuje savršen responsive dizajn koji se automatski prilagođava svim veličinama ekrana. Progressive Web App (PWA) funkcionalnosti omogućavaju da vaš sajt radi čak i offline, šalje push notifikacije i pruža iskustvo koje nadmašuje native aplikacije. Google Core Web VitalsScore od 90+ garantovan."
+        },
+        {
+          "title": "Značajna Ušteda Novca",
+          "description": "Eliminišite mesečne troškove skupih WordPress plugin-ova, tema i dodataka. Next.js aplikacije mogu se hostovati na platformama kao što su Vercel, Netlify ili Cloudflare Pages potpuno BESPLATNO za male i srednje sajtove. Nema potrebe za skupim managed hosting-om ili VPS serverima. Automatsko skaliranje znači da plaćate samo ono što koristite. Klijenti u proseku štede 200-500€ godišnje nakon migracije."
+        },
+        {
+          "title": "Maksimalna Sigurnost",
+          "description": "WordPress sajtovi su česta meta hakera zbog popularnosti i brojnih ranjivosti u plugin-ima. Next.js aplikacije su značajno sigurnije jer ne koriste baze podataka na tradicionalan način i nemaju admin panel koji može biti hakovan. Nema potrebe za stalnim ažuriranjem pluginova i brigom o sigurnosnim zakrpama. Built-in zaštita od XSS, CSRF i SQL injection napada. Automatsko HTTPS i najbolje sigurnosne prakse iz kutije."
+        },
+        {
+          "title": "Bolja Konverzija i Angažman",
+          "description": "Brži sajt znači više zadovoljnih korisnika i više konverzija. Svako smanjenje vremena učitavanja za 100ms rezultuje povećanjem konverzije za 1%. Moderna animacija i interakcije prave nezaboravno korisničko iskustvo. Real-time funkcionalnosti, personalizacija sadržaja i brzo navigacija između stranica drže korisnike angažovanim. Analytics pokazuju da Next.js sajtovi imaju 25-40% nižu bounce rate od tradicionalnih platformi."
+        }
+      ]
+    },
+    "whyNextJS": {
+      "title": "Zašto Baš Next.js?",
+      "subtitle": "Next.js je napredni React framework koji koriste svetski giganti kao što su Netflix, Nike, Twitch, TikTok, Uber i Hulu",
+      "features": [
+        {
+          "title": "Moderna Tehnologija",
+          "description1": "Next.js je izgrađen na React-u, najpopularnijoj JavaScript biblioteci na svetu. Koristi najnovije web standarde i najbolje prakse industrije. Za razliku od WordPress-a koji je izgrađen na PHP tehnologiji staroj 30 godina, Next.js predstavlja budućnost web razvoja.",
+          "description2": "Automatska code splitting optimizacija znači da korisnici preuzimaju samo kod koji im je potreban za trenutnu stranicu, drastično smanjujući vreme učitavanja. Image optimization automatski kompresuje i servira slike u modernim formatima kao što je WebP."
+        },
+        {
+          "title": "Fleksibilnost i Skalabilnost",
+          "description1": "Next.js vam daje potpunu kontrolu nad svakim aspektom vašeg sajta. Nije ograničen temama i plugin-ima kao WordPress. Možete implementirati bilo koju funkcionalnost koja vam padne na pamet, od jednostavnih landing stranica do kompleksnih web aplikacija.",
+          "description2": "Kako vaš biznis raste, sajt lako skalira. Bilo da imate 100 ili 10 miliona posetilaca mesečno, Next.js sajt će raditi besprekorno. Automatsko skaliranje na platformama kao Vercel osigurava da nikada ne izgubite posetioce zbog pada servera."
+        },
+        {
+          "title": "Neverovatne Performanse",
+          "description1": "Next.js koristi hibridni pristup koji kombinuje Static Site Generation (SSG) i Server-Side Rendering (SSR). Statičke stranice se generišu tokom build procesa i servuju se munjevitom brzinom sa CDN-a širom sveta.",
+          "description2": "Prefetching tehnologija automatski učitava linkove koji su vidljivi na ekranu, tako da navigacija između stranica bude trenutna. Lazy loading osigurava da se resursi učitavaju samo kada su potrebni. Rezultat? Google PageSpeed Score od 95-100."
+        },
+        {
+          "title": "Globalna Dostupnost",
+          "description1": "Vaš sajt će biti dostupan korisnicima širom sveta sa neverovatnom brzinom zahvaljujući Edge Network tehnologiji. Sadržaj se automatski distribuira na stotine servera širom planete i servuje se sa najbližeg servera svakom posetiocu.",
+          "description2": "Internacionalizacija (i18n) je ugrađena u Next.js, što znači da možete lako kreirati višejezične sajtove. Automatsko detektovanje jezika, SEO-friendly URL-ovi za svaki jezik i optimizacija za lokalna tržišta."
+        }
+      ],
+      "cta": {
+        "title": "Pridružite se Hiljadama Kompanija Koje su Migrirali na Next.js",
+        "button": "Započnite Vašu Transformaciju"
+      }
+    },
+    "cta": {
+      "title": "Spremni Za Transformaciju Vašeg Sajta?",
+      "resultsTitle": "Rezultati koje možete očekivati",
+      "results": [
+        "Drastično brže vreme učitavanja",
+        "Poboljšano SEO rangiranje",
+        "Moderna, profesionalna vizija",
+        "Bolja konverzija posetilaca"
+      ],
+      "subtitle": "Kontaktirajte nas za besplatnu konsultaciju",
+      "phone": "+381641967267",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "process": {
+      "title": "Naš Proces Migracije",
+      "steps": [
+        {
+          "title": "Analiza i Procena",
+          "description": "Detaljno analiziramo vaš trenutni sajt - sadržaj, dizajn, funkcionalnosti i SEO metriku."
+        },
+        {
+          "title": "Izvoz i Backup Sadržaja",
+          "description": "Kreiramo kompletan backup vašeg sajta i izvozimo sav sadržaj - tekstove, slike, video i bazu podataka."
+        },
+        {
+          "title": "Dizajn i Prototip",
+          "description": "Kreiramo moderan dizajn koji poštuje vaš brand ali koristi najnovije UI/UX trendove."
+        },
+        {
+          "title": "Razvoj i Migracija",
+          "description": "Razvijamo sajt u Next.js-u, implementiramo sve funkcionalnosti i migriramo sadržaj."
+        },
+        {
+          "title": "Testiranje i Optimizacija",
+          "description": "Rigorozno testiramo sajt na svim uređajima i browser-ima. Optimizujemo performanse za maksimalan PageSpeed score."
+        },
+        {
+          "title": "Launch i Go-Live",
+          "description": "Postavljamo sajt na production server. Konfigurišemo DNS i custom domain. Pratimo performanse 24/7."
+        }
+      ],
+      "guarantee": {
+        "title": "Zero Downtime Garancija",
+        "description": "Vaš trenutni sajt ostaje potpuno funkcionalan tokom cele migracije. Prelazak na novi sajt se dešava trenutno bez prekida u radu."
+      }
+    },
+    "performance": {
+      "title": "Realne Performanse, Merljivi Rezultati",
+      "subtitle": "Ovo nisu samo marketinške priče - evo konkretnih podataka naših klijenata nakon migracije",
+      "metrics": [
+        {
+          "value": "-75%",
+          "title": "Vreme Učitavanja",
+          "description": "Sa 6.2s na 1.5s prosečno"
+        },
+        {
+          "value": "+45%",
+          "title": "Organski Saobraćaj",
+          "description": "U prvih 3 meseca nakon migracije"
+        },
+        {
+          "value": "95+",
+          "title": "PageSpeed Score",
+          "description": "Google lighthouse rezultat"
+        }
+      ],
+      "comparison": {
+        "title": "Comparison: WordPress vs Next.js",
+        "wordpress": {
+          "title": "Tipičan WordPress Sajt",
+          "loadTime": "4-8 sekundi",
+          "pageSpeed": "30-60",
+          "requests": "80-150",
+          "pageSize": "3-8 MB",
+          "hosting": "€15-50",
+          "security": "Weekly",
+          "mobile": "Poor"
+        },
+        "nextjs": {
+          "title": "Next.js Sajt",
+          "loadTime": "0.5-2 sekunde",
+          "pageSpeed": "90-100",
+          "requests": "10-30",
+          "pageSize": "200-800 KB",
+          "hosting": "€0-10",
+          "security": "Automatic",
+          "mobile": "Excellent"
+        },
+        "labels": {
+          "loadTime": "Vreme učitavanja:",
+          "pageSpeed": "PageSpeed Score:",
+          "requests": "Server Requests:",
+          "pageSize": "Page Size:",
+          "hosting": "Monthly Hosting:",
+          "security": "Security Updates:",
+          "mobile": "Mobile Score:"
+        }
+      },
+      "cta": {
+        "text": "Svaki aspekt je izmeren i dokumentovan. Nudimo before/after analizu vašeg sajta.",
+        "button": "Zatražite Besplatnu Analizu"
+      }
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "items": [
+        {
+          "question": "Koliko dugo traje proces migracije?",
+          "answer": "Zavisi od veličine i kompleksnosti sajta. Mali sajt (5-10 stranica) može biti migriran za 2-3 nedelje. Srednji sajt (20-50 stranica) obično traje 4-6 nedelja. Veliki sajt ili e-commerce platforma može trajati 8-12 nedelja. Dajemo vam tačan timeline nakon inicijalne analize."
+        },
+        {
+          "question": "Da li će moj sajt biti nedostupan tokom migracije?",
+          "answer": "Ne! Vaš trenutni sajt ostaje potpuno funkcionalan tokom celog procesa. Razvijamo novi sajt na staging serveru i testiramo ga kompletno pre lansiranja. Prelazak sa starog na novi sajt se dešava trenutno, obično traje samo nekoliko minuta za DNS propagaciju."
+        },
+        {
+          "question": "Šta se dešava sa mojim SEO rankingom?",
+          "answer": "SEO je naš prioritet! Implementiramo 301 redirects za sve stare URL-ove, zadržavamo sve meta tagove, strukturirane podatke i optimizujemo tehnički SEO. U većini slučajeva, klijenti vide poboljšanje SEO rangiranja nakon migracije zbog boljih performansi i Core Web Vitals. Nudimo 90-dana SEO monitoring nakon lansiranja."
+        },
+        {
+          "question": "Mogu li zadržati trenutni dizajn?",
+          "answer": "Apsolutno! Možete izabrati između tri opcije: (1) Identičan transfer - zadržavamo trenutni dizajn pixel-perfect, (2) Refresh - zadržavamo strukturu ali modernizujemo elemente, ili (3) Potpuni redizajn - kreiramo nov moderan dizajn. Većina klijenata bira opciju 2 za najbolji balans."
+        },
+        {
+          "question": "Koliko košta migracija?",
+          "answer": "Cena zavisi od obima posla. Mali sajt počinje od €1,500, srednji sajt €3,000-€6,000, a veliki kompleksni projekti ili e-commerce mogu biti €8,000+. Nudimo besplatnu procenu nakon što analiziramo vaš sajt. Plaćanje je podeljeno u nekoliko faza (deposit, milestones, final payment)."
+        },
+        {
+          "question": "Da li mogu ažurirati sajt nakon migracije?",
+          "answer": "Da! Možemo integrisati headless CMS kao što je Sanity, Contentful ili Strapi koji vam omogućava da lako ažurirate sadržaj kao u WordPress-u. Alternativno, nudimo maintenance pakete gde mi radimo ažuriranja za vas. Takođe obezbeđujemo video tutoriale i dokumentaciju."
+        },
+        {
+          "question": "Šta se dešava sa slikama i video fajlovima?",
+          "answer": "Svi mediji se migriraju i automatski optimizuju. Next.js Image component automatski kompresuje slike, generiše responsive verzije i servuje ih u modernim formatima (WebP, AVIF). Video fajlovi se mogu hostovati na vašem serveru ili migrirati na cloud storage (Cloudinary, AWS S3) za bolje performanse."
+        },
+        {
+          "question": "Da li zadržavam kontrolu nad domenom?",
+          "answer": "Potpuno! Vi zadržavate vlasništvo nad domenom. Mi samo ažuriramo DNS zapise da pokazuju na novi server. Možete koristiti bilo koji domain registrar (GoDaddy, Namecheap, CloudFlare, itd.). Pomoći ćemo vam sa DNS konfiguracijom i SSL sertifikatom."
+        },
+        {
+          "question": "Šta ako pronađem bug nakon lansiranja?",
+          "answer": "Nudimo 30 dana besplatne post-launch podrške. Svi bugovi i problemi koji nastanu tokom ovog perioda biće ispravljeni bez dodatnih troškova. Nakon toga, možete birati između hourly support ili mesečnog maintenance paketa."
+        },
+        {
+          "question": "Mogu li zadržati blog i postojeće postove?",
+          "answer": "Naravno! Svi blog postovi, kategorije, tagovi i komentari će biti migrirani. Možemo integrisati CMS za lake buduće blog postove, ili implementirati Markdown-based blog sistem. URL struktura može ostati ista radi SEO-a (/blog/post-name) ili biti optimizovana."
+        },
+        {
+          "question": "Da li će moje forme i integracije raditi?",
+          "answer": "Da! Migriramo sve kontakt forme, newsletter subscribe forme, payment integracije, CRM konekcije (HubSpot, Salesforce), email marketing (Mailchimp), analytics (Google Analytics, Meta Pixel) i sve ostale third-party servise koje koristite."
+        },
+        {
+          "question": "Gde će sajt biti hostovan?",
+          "answer": "Preporučujemo Vercel (kompanija koja razvija Next.js) jer nude najbolju integraciju, automatsko skaliranje i često besplatan hosting za male sajtove. Alternative su Netlify, CloudFlare Pages, ili vaš sopstveni server. Možete izabrati šta vam odgovara - mi podržavamo sve opcije."
+        }
+      ]
+    }
+  }
+}

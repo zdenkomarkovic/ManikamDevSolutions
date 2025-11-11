@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Code, Layers, Zap, Globe } from "lucide-react";
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function RedesignWhyNextJS() {
+  const { t } = useLocale();
+  const whyNextJS = t.redesignMigration.whyNextJS;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,7 +46,7 @@ export default function RedesignWhyNextJS() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Zašto Baš Next.js?
+          {whyNextJS.title}
         </motion.h2>
       </div>
 
@@ -54,8 +57,7 @@ export default function RedesignWhyNextJS() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Next.js je napredni React framework koji koriste svetski giganti kao što
-        su Netflix, Nike, Twitch, TikTok, Uber i Hulu
+        {whyNextJS.subtitle}
       </motion.p>
 
       <motion.div

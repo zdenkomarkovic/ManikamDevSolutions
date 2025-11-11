@@ -1,0 +1,252 @@
+{
+  "redesignMigration": {
+    "page": {
+      "title": "Website Redesign and Migration to Next.js | WordPress → Next.js",
+      "description": "Professional website migration and redesign from WordPress, Wix, Joomla and other platforms to Next.js. Improve performance, SEO and user experience. Faster loading, better security and modern functionality."
+    },
+    "hero": {
+      "title": "Website Redesign and Migration",
+      "subtitle": "Modernize your site from WordPress, Wix, Joomla or other platforms to Next.js. We transform outdated websites into fast, modern and SEO-optimized web applications. Increase performance up to 10x and provide users with an exceptional experience.",
+      "badge1": "10x Faster",
+      "badge2": "Better SEO",
+      "badge3": "Top Security"
+    },
+    "intro": {
+      "title": "Why It's Time for a Redesign and Migration of Your Site?",
+      "content": "In the rapidly evolving digital world, a website created a few years ago may no longer meet modern standards. WordPress, Wix, Joomla and similar platforms were an excellent choice in the past, but today there are more advanced technologies that offer incomparably better performance, security and user experience.",
+      "oldPlatforms": {
+        "title": "Problems with Old Platforms",
+        "item1": "Slow page loading (3-10 seconds)",
+        "item2": "Poor performance on mobile devices",
+        "item3": "Security risks and frequent vulnerabilities",
+        "item4": "Outdated design that doesn't follow modern trends",
+        "item5": "Poor SEO ranking on Google",
+        "item6": "Expensive maintenance and regular plugin costs"
+      },
+      "nextjsBenefits": {
+        "title": "Benefits of Next.js Migration",
+        "item1": "Lightning-fast loading (0.5-2 seconds)",
+        "item2": "Perfect responsive design for all devices",
+        "item3": "Top-notch security without additional plugins",
+        "item4": "Modern design with latest UI/UX trends",
+        "item5": "Excellent SEO and higher Google rankings",
+        "item6": "Lower maintenance and hosting costs"
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits of Migrating to Next.js",
+      "items": [
+        {
+          "title": "Unmatched Performance",
+          "description": "Next.js uses the most modern technologies such as Server-Side Rendering (SSR), Static Site Generation (SSG) and Incremental Static Regeneration (ISR). This means your site loads at lightning speed, directly impacting user satisfaction and conversion rates. Studies show that 40% of users abandon a site if it doesn't load within 3 seconds - with Next.js, your site will load in under a second."
+        },
+        {
+          "title": "Superior SEO and Visibility",
+          "description": "Google ranks fast sites higher in search results. Next.js enables server-side rendering, meaning search engines can immediately index your content, unlike traditional Single Page Applications. Automatic optimization of images, meta tags and structured data ensures your site gets maximum visibility. Clients who migrated to Next.js see an average 30-50% increase in organic traffic."
+        },
+        {
+          "title": "Perfect Mobile Experience",
+          "description": "Over 60% of internet traffic comes from mobile devices. Next.js provides perfect responsive design that automatically adapts to all screen sizes. Progressive Web App (PWA) functionality allows your site to work even offline, send push notifications and provide an experience that surpasses native apps. Google Core Web Vitals Score of 90+ guaranteed."
+        },
+        {
+          "title": "Significant Cost Savings",
+          "description": "Eliminate monthly costs of expensive WordPress plugins, themes and add-ons. Next.js applications can be hosted on platforms like Vercel, Netlify or Cloudflare Pages completely FREE for small and medium sites. No need for expensive managed hosting or VPS servers. Auto-scaling means you only pay for what you use. Clients save an average of €200-500 per year after migration."
+        },
+        {
+          "title": "Maximum Security",
+          "description": "WordPress sites are frequent targets for hackers due to their popularity and numerous plugin vulnerabilities. Next.js applications are significantly more secure as they don't use databases in the traditional way and have no admin panel that can be hacked. No need for constant plugin updates and security patch worries. Built-in protection from XSS, CSRF and SQL injection attacks. Automatic HTTPS and best security practices out of the box."
+        },
+        {
+          "title": "Better Conversion and Engagement",
+          "description": "Faster site means more satisfied users and more conversions. Every 100ms reduction in load time results in a 1% increase in conversion. Modern animations and interactions create an unforgettable user experience. Real-time functionality, content personalization and fast navigation between pages keep users engaged. Analytics show that Next.js sites have 25-40% lower bounce rates than traditional platforms."
+        }
+      ]
+    },
+    "whyNextJS": {
+      "title": "Why Next.js?",
+      "subtitle": "Next.js is an advanced React framework used by global giants like Netflix, Nike, Twitch, TikTok, Uber and Hulu",
+      "features": [
+        {
+          "title": "Modern Technology",
+          "description1": "Next.js is built on React, the world's most popular JavaScript library. It uses the latest web standards and industry best practices. Unlike WordPress, which is built on 30-year-old PHP technology, Next.js represents the future of web development.",
+          "description2": "Automatic code splitting optimization means users only download the code they need for the current page, drastically reducing load time. Image optimization automatically compresses and serves images in modern formats like WebP."
+        },
+        {
+          "title": "Flexibility and Scalability",
+          "description1": "Next.js gives you complete control over every aspect of your site. It's not limited by themes and plugins like WordPress. You can implement any functionality you can think of, from simple landing pages to complex web applications.",
+          "description2": "As your business grows, the site easily scales. Whether you have 100 or 10 million monthly visitors, your Next.js site will run flawlessly. Automatic scaling on platforms like Vercel ensures you never lose visitors due to server crashes."
+        },
+        {
+          "title": "Incredible Performance",
+          "description1": "Next.js uses a hybrid approach combining Static Site Generation (SSG) and Server-Side Rendering (SSR). Static pages are generated during the build process and served at lightning speed from CDNs worldwide.",
+          "description2": "Prefetching technology automatically loads links visible on screen, making navigation between pages instant. Lazy loading ensures resources load only when needed. The result? Google PageSpeed Score of 95-100."
+        },
+        {
+          "title": "Global Availability",
+          "description1": "Your site will be available to users worldwide at incredible speed thanks to Edge Network technology. Content is automatically distributed to hundreds of servers around the planet and served from the closest server to each visitor.",
+          "description2": "Internationalization (i18n) is built into Next.js, meaning you can easily create multilingual sites. Automatic language detection, SEO-friendly URLs for each language and optimization for local markets."
+        }
+      ],
+      "cta": {
+        "title": "Join Thousands of Companies That Have Migrated to Next.js",
+        "button": "Start Your Transformation"
+      }
+    },
+    "cta": {
+      "title": "Ready for Your Site's Transformation?",
+      "resultsTitle": "Results you can expect",
+      "results": [
+        "Drastically faster load times",
+        "Improved SEO rankings",
+        "Modern, professional look",
+        "Better visitor conversion"
+      ],
+      "subtitle": "Contact us for a free consultation",
+      "phone": "+1 240 810 3730",
+      "email": "manikamwebsolutions@gmail.com"
+    },
+    "process": {
+      "title": "Our Migration Process",
+      "steps": [
+        {
+          "title": "Analysis and Assessment",
+          "description": "We thoroughly analyze your current site - content, design, functionality and SEO metrics."
+        },
+        {
+          "title": "Content Export and Backup",
+          "description": "We create a complete backup of your site and export all content - texts, images, videos and database."
+        },
+        {
+          "title": "Design and Prototype",
+          "description": "We create a modern design that respects your brand but uses the latest UI/UX trends."
+        },
+        {
+          "title": "Development and Migration",
+          "description": "We develop the site in Next.js, implement all functionality and migrate content."
+        },
+        {
+          "title": "Testing and Optimization",
+          "description": "We rigorously test the site on all devices and browsers. We optimize performance for maximum PageSpeed score."
+        },
+        {
+          "title": "Launch and Go-Live",
+          "description": "We deploy the site to production server. Configure DNS and custom domain. Monitor performance 24/7."
+        }
+      ],
+      "guarantee": {
+        "title": "Zero Downtime Guarantee",
+        "description": "Your current site remains fully functional throughout the entire migration. The transition to the new site happens instantly without work interruption."
+      }
+    },
+    "performance": {
+      "title": "Real Performance, Measurable Results",
+      "subtitle": "These aren't just marketing stories - here's concrete data from our clients after migration",
+      "metrics": [
+        {
+          "value": "-75%",
+          "title": "Load Time",
+          "description": "From 6.2s to 1.5s average"
+        },
+        {
+          "value": "+45%",
+          "title": "Organic Traffic",
+          "description": "In the first 3 months after migration"
+        },
+        {
+          "value": "95+",
+          "title": "PageSpeed Score",
+          "description": "Google Lighthouse result"
+        }
+      ],
+      "comparison": {
+        "title": "Comparison: WordPress vs Next.js",
+        "wordpress": {
+          "title": "Typical WordPress Site",
+          "loadTime": "4-8 seconds",
+          "pageSpeed": "30-60",
+          "requests": "80-150",
+          "pageSize": "3-8 MB",
+          "hosting": "€15-50",
+          "security": "Weekly",
+          "mobile": "Poor"
+        },
+        "nextjs": {
+          "title": "Next.js Site",
+          "loadTime": "0.5-2 seconds",
+          "pageSpeed": "90-100",
+          "requests": "10-30",
+          "pageSize": "200-800 KB",
+          "hosting": "€0-10",
+          "security": "Automatic",
+          "mobile": "Excellent"
+        },
+        "labels": {
+          "loadTime": "Load Time:",
+          "pageSpeed": "PageSpeed Score:",
+          "requests": "Server Requests:",
+          "pageSize": "Page Size:",
+          "hosting": "Monthly Hosting:",
+          "security": "Security Updates:",
+          "mobile": "Mobile Score:"
+        }
+      },
+      "cta": {
+        "text": "Every aspect is measured and documented. We offer before/after analysis of your site.",
+        "button": "Request Free Analysis"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How long does the migration process take?",
+          "answer": "It depends on the size and complexity of the site. A small site (5-10 pages) can be migrated in 2-3 weeks. A medium site (20-50 pages) usually takes 4-6 weeks. A large site or e-commerce platform can take 8-12 weeks. We provide you with an exact timeline after the initial analysis."
+        },
+        {
+          "question": "Will my site be unavailable during migration?",
+          "answer": "No! Your current site remains fully functional throughout the entire process. We develop the new site on a staging server and test it completely before launch. The transition from old to new site happens instantly, usually taking only a few minutes for DNS propagation."
+        },
+        {
+          "question": "What happens to my SEO ranking?",
+          "answer": "SEO is our priority! We implement 301 redirects for all old URLs, retain all meta tags, structured data and optimize technical SEO. In most cases, clients see improved SEO rankings after migration due to better performance and Core Web Vitals. We offer 90-day SEO monitoring after launch."
+        },
+        {
+          "question": "Can I keep my current design?",
+          "answer": "Absolutely! You can choose between three options: (1) Identical transfer - we keep the current design pixel-perfect, (2) Refresh - we keep the structure but modernize elements, or (3) Complete redesign - we create a new modern design. Most clients choose option 2 for the best balance."
+        },
+        {
+          "question": "How much does migration cost?",
+          "answer": "The price depends on the scope of work. Small sites start from €1,500, medium sites €3,000-€6,000, and large complex projects or e-commerce can be €8,000+. We offer a free estimate after analyzing your site. Payment is divided into several phases (deposit, milestones, final payment)."
+        },
+        {
+          "question": "Can I update the site after migration?",
+          "answer": "Yes! We can integrate a headless CMS like Sanity, Contentful or Strapi that allows you to easily update content like in WordPress. Alternatively, we offer maintenance packages where we do updates for you. We also provide video tutorials and documentation."
+        },
+        {
+          "question": "What happens to images and video files?",
+          "answer": "All media is migrated and automatically optimized. The Next.js Image component automatically compresses images, generates responsive versions and serves them in modern formats (WebP, AVIF). Video files can be hosted on your server or migrated to cloud storage (Cloudinary, AWS S3) for better performance."
+        },
+        {
+          "question": "Do I retain control over the domain?",
+          "answer": "Completely! You retain ownership of the domain. We only update DNS records to point to the new server. You can use any domain registrar (GoDaddy, Namecheap, CloudFlare, etc.). We'll help you with DNS configuration and SSL certificate."
+        },
+        {
+          "question": "What if I find a bug after launch?",
+          "answer": "We offer 30 days of free post-launch support. All bugs and issues that occur during this period will be fixed at no additional cost. After that, you can choose between hourly support or a monthly maintenance package."
+        },
+        {
+          "question": "Can I keep my blog and existing posts?",
+          "answer": "Of course! All blog posts, categories, tags and comments will be migrated. We can integrate a CMS for easy future blog posts, or implement a Markdown-based blog system. URL structure can remain the same for SEO (/blog/post-name) or be optimized."
+        },
+        {
+          "question": "Will my forms and integrations work?",
+          "answer": "Yes! We migrate all contact forms, newsletter subscription forms, payment integrations, CRM connections (HubSpot, Salesforce), email marketing (Mailchimp), analytics (Google Analytics, Meta Pixel) and all other third-party services you use."
+        },
+        {
+          "question": "Where will the site be hosted?",
+          "answer": "We recommend Vercel (the company that develops Next.js) as they offer the best integration, automatic scaling and often free hosting for small sites. Alternatives are Netlify, CloudFlare Pages, or your own server. You can choose what works for you - we support all options."
+        }
+      ]
+    }
+  }
+}

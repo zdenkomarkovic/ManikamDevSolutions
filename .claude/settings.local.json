@@ -20,7 +20,8 @@
       "Bash(claude logout)",
       "Bash(del:*)",
       "Bash(dir /B \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\google-ads\")",
-      "Bash(dir /B \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\izrada-softvera\")"
+      "Bash(dir /B \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\izrada-softvera\")",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
