@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LocaleProvider } from "@/lib/LocaleContext";
-import SocialMediaClient from "../drustvene-mreze/DrustveneМrezeClient";
+import SocialMediaClient from "@/components/drustvene-mreze/SocialMediaClient";
 
 type Props = {
   params: Promise<{ locale: string }>;
