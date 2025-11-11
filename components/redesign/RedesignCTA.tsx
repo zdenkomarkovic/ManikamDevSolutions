@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function RedesignCTA() {
+  const { t } = useLocale();
+  const cta = t.redesignMigration.cta;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +57,7 @@ export default function RedesignCTA() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Spremni Za Transformaciju Vašeg Sajta?
+          {cta.title}
         </motion.h2>
       </div>
       <motion.div
@@ -66,9 +69,7 @@ export default function RedesignCTA() {
       >
         <motion.div className="md:space-y-8 md:px-20" variants={itemVariants}>
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              Rezultati koje možete očekivati
-            </h3>
+            <h3 className="text-xl font-bold mb-4">{cta.resultsTitle}</h3>
             <motion.ul
               className="space-y-1 md:space-y-3 mx-auto w-fit"
               variants={containerVariants}
@@ -76,66 +77,27 @@ export default function RedesignCTA() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
+              {cta.results.map((result, index) => (
+                <motion.li
+                  key={index}
+                  className="flex items-center"
+                  variants={itemVariants}
                 >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Drastično brže vreme učitavanja
-              </motion.li>
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Poboljšano SEO rangiranje
-              </motion.li>
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Moderna, profesionalna vizija
-              </motion.li>
-              <motion.li className="flex items-center" variants={itemVariants}>
-                <motion.svg
-                  className="w-5 h-5 mr-3 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                    transition: { duration: 0.6 },
-                  }}
-                >
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                </motion.svg>
-                Bolja konverzija posetilaca
-              </motion.li>
+                  <motion.svg
+                    className="w-5 h-5 mr-3 text-orange-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </motion.svg>
+                  {result}
+                </motion.li>
+              ))}
             </motion.ul>
           </div>
         </motion.div>
@@ -147,7 +109,7 @@ export default function RedesignCTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Kontaktirajte nas za besplatnu konsultaciju
+            {cta.subtitle}
           </motion.p>
 
           <motion.div
@@ -159,7 +121,7 @@ export default function RedesignCTA() {
           >
             {/* Phone Call Button */}
             <motion.a
-              href={`tel:+381641967267`}
+              href={`tel:${cta.phone}`}
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               variants={buttonVariants}
               whileHover={{
@@ -181,13 +143,13 @@ export default function RedesignCTA() {
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </motion.svg>
               <span className="block text-lg md:text-2xl font-normal opacity-90">
-                +381641967267
+                {cta.phone}
               </span>
             </motion.a>
 
             {/* Email Button */}
             <motion.a
-              href="mailto:manikamwebsolutions@gmail.com"
+              href={`mailto:${cta.email}`}
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               variants={buttonVariants}
               whileHover={{
@@ -211,7 +173,7 @@ export default function RedesignCTA() {
               </motion.svg>
 
               <span className="block text-lg md:text-2xl font-normal">
-                manikamwebsolutions@gmail.com
+                {cta.email}
               </span>
             </motion.a>
           </motion.div>

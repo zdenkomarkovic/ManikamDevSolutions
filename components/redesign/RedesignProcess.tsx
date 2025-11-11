@@ -9,47 +9,20 @@ import {
   FaVial,
   FaRocket,
 } from "react-icons/fa";
-
-const steps = [
-  {
-    icon: FaSearch,
-    title: "Analiza i Procena",
-    description:
-      "Detaljno analiziramo vaš trenutni sajt - sadržaj, dizajn, funkcionalnosti i SEO metriku.",
-  },
-  {
-    icon: FaFileExport,
-    title: "Izvoz i Backup Sadržaja",
-    description:
-      "Kreiramo kompletan backup vašeg sajta i izvozimo sav sadržaj - tekstove, slike, video i bazu podataka.",
-  },
-  {
-    icon: FaPalette,
-    title: "Dizajn i Prototip",
-    description:
-      "Kreiramo moderan dizajn koji poštuje vaš brand ali koristi najnovije UI/UX trendove.",
-  },
-  {
-    icon: FaCode,
-    title: "Razvoj i Migracija",
-    description:
-      "Razvijamo sajt u Next.js-u, implementiramo sve funkcionalnosti i migriramo sadržaj.",
-  },
-  {
-    icon: FaVial,
-    title: "Testiranje i Optimizacija",
-    description:
-      "Rigorozno testiramo sajt na svim uređajima i browser-ima. Optimizujemo performanse za maksimalan PageSpeed score.",
-  },
-  {
-    icon: FaRocket,
-    title: "Launch i Go-Live",
-    description:
-      "Postavljamo sajt na production server. Konfigurišemo DNS i custom domain. Pratimo performanse 24/7.",
-  },
-];
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function RedesignProcess() {
+  const { t } = useLocale();
+  const process = t.redesignMigration.process;
+
+  const stepIcons = [
+    FaSearch,
+    FaFileExport,
+    FaPalette,
+    FaCode,
+    FaVial,
+    FaRocket,
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -104,7 +77,7 @@ export default function RedesignProcess() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Naš Proces Migracije
+          {process.title}
         </motion.h2>
       </div>
 
@@ -115,35 +88,38 @@ export default function RedesignProcess() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {steps.map((step, index) => (
-          <motion.div
-            key={index}
-            className="relative bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-100"
-            variants={cardVariants}
-            whileHover={{
-              scale: 1.05,
-              y: -10,
-              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-            }}
-            transition={{ duration: 0.3 }}
-          >
+        {process.steps.map((step, index) => {
+          const StepIcon = stepIcons[index];
+          return (
             <motion.div
-              className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mb-4"
-              variants={iconVariants}
+              key={index}
+              className="relative bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl p-6 shadow-lg border border-gray-100"
+              variants={cardVariants}
               whileHover={{
-                scale: 1.2,
-                rotate: 360,
-                transition: { duration: 0.6 },
+                scale: 1.05,
+                y: -10,
+                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
               }}
+              transition={{ duration: 0.3 }}
             >
-              <step.icon className="text-2xl text-white" />
+              <motion.div
+                className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mb-4"
+                variants={iconVariants}
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 360,
+                  transition: { duration: 0.6 },
+                }}
+              >
+                <StepIcon className="text-2xl text-white" />
+              </motion.div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                {step.title}
+              </h3>
+              <p className=" leading-relaxed">{step.description}</p>
             </motion.div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {step.title}
-            </h3>
-            <p className=" leading-relaxed">{step.description}</p>
-          </motion.div>
-        ))}
+          );
+        })}
       </motion.div>
       <motion.div
         className="mt-8 md:mt-12 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 rounded-2xl md:rounded-3xl p-6 md:p-8 text-center shadow-lg border border-gray-100"
@@ -164,7 +140,7 @@ export default function RedesignProcess() {
           transition={{ duration: 0.6, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          Zero Downtime Garancija
+          {process.guarantee.title}
         </motion.p>
         <motion.p
           className="text-base md:text-lg "
@@ -173,8 +149,7 @@ export default function RedesignProcess() {
           transition={{ duration: 0.6, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          Vaš trenutni sajt ostaje potpuno funkcionalan tokom cele migracije.
-          Prelazak na novi sajt se dešava trenutno bez prekida u radu.
+          {process.guarantee.description}
         </motion.p>
       </motion.div>
     </div>

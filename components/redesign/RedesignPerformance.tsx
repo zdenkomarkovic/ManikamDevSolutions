@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaTachometerAlt, FaChartLine, FaTrophy } from "react-icons/fa";
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function RedesignPerformance() {
+  const { t } = useLocale();
+  const performance = t.redesignMigration.performance;
+
+  const metricIcons = [FaTachometerAlt, FaChartLine, FaTrophy];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -59,7 +64,7 @@ export default function RedesignPerformance() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Realne Performanse, Merljivi Rezultati
+          {performance.title}
         </motion.h2>
       </div>
 
@@ -70,8 +75,7 @@ export default function RedesignPerformance() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Ovo nisu samo marketinške priče - evo konkretnih podataka naših
-        klijenata nakon migracije
+        {performance.subtitle}
       </motion.p>
 
       <motion.div
@@ -81,89 +85,41 @@ export default function RedesignPerformance() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.div
-          className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
-          variants={cardVariants}
-          whileHover={{
-            scale: 1.05,
-            y: -10,
-            boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
-            variants={iconVariants}
-            whileHover={{
-              scale: 1.2,
-              rotate: 360,
-              transition: { duration: 0.6 },
-            }}
-          >
-            <FaTachometerAlt className="text-2xl text-white" />
-          </motion.div>
-          <div className="text-5xl font-bold text-orange-600 mb-2">-75%</div>
-          <div className="text-xl font-semibold mb-2 text-gray-900">
-            Vreme Učitavanja
-          </div>
-          <div className="text-sm">Sa 6.2s na 1.5s prosečno</div>
-        </motion.div>
-
-        <motion.div
-          className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
-          variants={cardVariants}
-          whileHover={{
-            scale: 1.05,
-            y: -10,
-            boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
-            variants={iconVariants}
-            whileHover={{
-              scale: 1.2,
-              rotate: 360,
-              transition: { duration: 0.6 },
-            }}
-          >
-            <FaChartLine className="text-2xl text-white" />
-          </motion.div>
-          <div className="text-5xl font-bold text-orange-600 mb-2">+45%</div>
-          <div className="text-xl font-semibold mb-2 text-gray-900">
-            Organski Saobraćaj
-          </div>
-          <div className="text-sm">U prvih 3 meseca nakon migracije</div>
-        </motion.div>
-
-        <motion.div
-          className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
-          variants={cardVariants}
-          whileHover={{
-            scale: 1.05,
-            y: -10,
-            boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <motion.div
-            className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
-            variants={iconVariants}
-            whileHover={{
-              scale: 1.2,
-              rotate: 360,
-              transition: { duration: 0.6 },
-            }}
-          >
-            <FaTrophy className="text-2xl text-white" />
-          </motion.div>
-          <div className="text-5xl font-bold text-orange-600 mb-2">95+</div>
-          <div className="text-xl font-semibold mb-2 text-gray-900">
-            PageSpeed Score
-          </div>
-          <div className="text-sm">Google lighthouse rezultat</div>
-        </motion.div>
+        {performance.metrics.map((metric, index) => {
+          const MetricIcon = metricIcons[index];
+          return (
+            <motion.div
+              key={index}
+              className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div
+                className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
+                variants={iconVariants}
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 360,
+                  transition: { duration: 0.6 },
+                }}
+              >
+                <MetricIcon className="text-2xl text-white" />
+              </motion.div>
+              <div className="text-5xl font-bold text-orange-600 mb-2">
+                {metric.value}
+              </div>
+              <div className="text-xl font-semibold mb-2 text-gray-900">
+                {metric.title}
+              </div>
+              <div className="text-sm">{metric.description}</div>
+            </motion.div>
+          );
+        })}
       </motion.div>
 
       <motion.div
@@ -179,78 +135,106 @@ export default function RedesignPerformance() {
         }}
       >
         <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-          Comparison: WordPress vs Next.js
+          {performance.comparison.title}
         </h3>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h4 className="text-xl font-bold mb-6 text-orange-600">
-              Tipičan WordPress Sajt
+              {performance.comparison.wordpress.title}
             </h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Vreme učitavanja:</span>
-                <span className="font-bold text-orange-600">4-8 sekundi</span>
+                <span className="">{performance.comparison.labels.loadTime}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.loadTime}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">PageSpeed Score:</span>
-                <span className="font-bold text-orange-600">30-60</span>
+                <span className="">{performance.comparison.labels.pageSpeed}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.pageSpeed}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Server Requests:</span>
-                <span className="font-bold text-orange-600">80-150</span>
+                <span className="">{performance.comparison.labels.requests}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.requests}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Page Size:</span>
-                <span className="font-bold text-orange-600">3-8 MB</span>
+                <span className="">{performance.comparison.labels.pageSize}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.pageSize}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Monthly Hosting:</span>
-                <span className="font-bold text-orange-600">€15-50</span>
+                <span className="">{performance.comparison.labels.hosting}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.hosting}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Security Updates:</span>
-                <span className="font-bold text-orange-600">Weekly</span>
+                <span className="">{performance.comparison.labels.security}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.security}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Mobile Score:</span>
-                <span className="font-bold text-orange-600">Poor</span>
+                <span className="">{performance.comparison.labels.mobile}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.wordpress.mobile}
+                </span>
               </div>
             </div>
           </div>
 
           <div>
             <h4 className="text-xl font-bold mb-6 text-orange-600">
-              Next.js Sajt
+              {performance.comparison.nextjs.title}
             </h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Vreme učitavanja:</span>
-                <span className="font-bold text-orange-600">0.5-2 sekunde</span>
+                <span className="">{performance.comparison.labels.loadTime}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.loadTime}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">PageSpeed Score:</span>
-                <span className="font-bold text-orange-600">90-100</span>
+                <span className="">{performance.comparison.labels.pageSpeed}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.pageSpeed}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Server Requests:</span>
-                <span className="font-bold text-orange-600">10-30</span>
+                <span className="">{performance.comparison.labels.requests}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.requests}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Page Size:</span>
-                <span className="font-bold text-orange-600">200-800 KB</span>
+                <span className="">{performance.comparison.labels.pageSize}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.pageSize}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Monthly Hosting:</span>
-                <span className="font-bold text-orange-600">€0-10</span>
+                <span className="">{performance.comparison.labels.hosting}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.hosting}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Security Updates:</span>
-                <span className="font-bold text-orange-600">Automatic</span>
+                <span className="">{performance.comparison.labels.security}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.security}
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">Mobile Score:</span>
-                <span className="font-bold text-orange-600">Excellent</span>
+                <span className="">{performance.comparison.labels.mobile}</span>
+                <span className="font-bold text-orange-600">
+                  {performance.comparison.nextjs.mobile}
+                </span>
               </div>
             </div>
           </div>
@@ -264,16 +248,13 @@ export default function RedesignPerformance() {
         transition={{ duration: 0.6, delay: 0.7 }}
         viewport={{ once: true }}
       >
-        <p className="text-xl text-gray-100 mb-6">
-          Svaki aspekt je izmeren i dokumentovan. Nudimo before/after analizu
-          vašeg sajta.
-        </p>
+        <p className="text-xl text-gray-100 mb-6">{performance.cta.text}</p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             href="/contact"
             className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
-            Zatražite Besplatnu Analizu
+            {performance.cta.button}
           </Link>
         </motion.div>
       </motion.div>
