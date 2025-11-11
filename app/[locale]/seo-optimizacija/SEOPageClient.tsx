@@ -61,7 +61,7 @@ const heroVariants = {
 };
 
 export default function SEOPageClient() {
-  const locale = useLocale();
+  const { locale } = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {

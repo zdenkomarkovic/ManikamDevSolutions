@@ -62,7 +62,7 @@ const heroVariants = {
 };
 
 const WebshopDevelopmentClient = () => {
-  const locale = useLocale();
+  const { locale } = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {

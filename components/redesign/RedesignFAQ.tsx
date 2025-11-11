@@ -52,7 +52,7 @@ export default function RedesignFAQ() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {faq.items.map((item, index) => (
+        {faq.items.map((item: any, index: number) => (
           <motion.div
             key={index}
             className={`${

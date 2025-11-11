@@ -10,7 +10,7 @@ type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
 
 export default function ContactClient() {
-  const locale = useLocale();
+  const { locale } = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {

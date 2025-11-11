@@ -62,7 +62,7 @@ const heroVariants = {
 };
 
 const IzradaWebShopaClient = () => {
-  const locale = useLocale();
+  const { locale } = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {

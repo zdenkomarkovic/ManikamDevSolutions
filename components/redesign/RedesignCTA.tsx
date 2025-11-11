@@ -77,7 +77,7 @@ export default function RedesignCTA() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              {cta.results.map((result, index) => (
+              {cta.results.map((result: string, index: number) => (
                 <motion.li
                   key={index}
                   className="flex items-center"

@@ -48,7 +48,7 @@ const heroVariants = {
 };
 
 export default function GoogleAdsClient() {
-  const locale = useLocale();
+  const { locale } = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {

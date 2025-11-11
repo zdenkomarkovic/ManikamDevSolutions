@@ -3,8 +3,8 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import type { Locale } from "@/i18n-config";
 
-type TranslationValue = string | number | { [key: string]: TranslationValue };
-type Translations = Record<string, TranslationValue>;
+// Define a more flexible type for translations that allows deep nesting
+type Translations = any;
 
 type LocaleContextType = {
   locale: Locale;

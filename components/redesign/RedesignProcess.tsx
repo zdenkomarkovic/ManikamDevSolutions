@@ -88,7 +88,7 @@ export default function RedesignProcess() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {process.steps.map((step, index) => {
+        {process.steps.map((step: any, index: number) => {
           const StepIcon = stepIcons[index];
           return (
             <motion.div

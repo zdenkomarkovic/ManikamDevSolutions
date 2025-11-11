@@ -85,7 +85,7 @@ export default function RedesignPerformance() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {performance.metrics.map((metric, index) => {
+        {performance.metrics.map((metric: any, index: number) => {
           const MetricIcon = metricIcons[index];
           return (
             <motion.div

@@ -67,7 +67,7 @@ export default function RedesignWhyNextJS() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {whyNextJS.features.map((feature, index) => {
+        {whyNextJS.features.map((feature: any, index: number) => {
           const icons = [Code, Layers, Zap, Globe];
           const Icon = icons[index];
           return (

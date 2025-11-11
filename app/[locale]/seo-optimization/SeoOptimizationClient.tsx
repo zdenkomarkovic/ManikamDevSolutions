@@ -61,7 +61,7 @@ const heroVariants = {
 };
 
 const SeoOptimizationClient = () => {
-  const locale = useLocale();
+  const { locale } = useLocale();
   const [messages, setMessages] = useState<Messages | null>(null);
 
   useEffect(() => {

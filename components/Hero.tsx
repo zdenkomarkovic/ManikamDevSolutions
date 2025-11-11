@@ -25,7 +25,7 @@ type SectionData = {
 };
 
 const Hero = ({ title, section }: { title: string; section: SectionData }) => {
-  const locale = useLocale();
+  const { locale } = useLocale();
 
   // Lokalizovani tekstovi za usluge
   const services =
