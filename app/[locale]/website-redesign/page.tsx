@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LocaleProvider } from "@/lib/LocaleContext";
-import RedesignPageClient from "./RedesignPageClient";
+import RedesignPageClient from "../redizajn-migracija/RedesignPageClient";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.redesignMigration.page.title,
     description: messages.redesignMigration.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/redizajn-migracija`,
+      canonical: `https://manikamwebsolutions.com/${locale}/website-redesign`,
       languages: {
         sr: "https://manikamwebsolutions.com/sr/redizajn-migracija",
         en: "https://manikamwebsolutions.com/en/website-redesign",
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function RedesignMigrationPage({ params }: Props) {
+export default async function WebsiteRedesignPage({ params }: Props) {
   const { locale } = await params;
 
   return (
