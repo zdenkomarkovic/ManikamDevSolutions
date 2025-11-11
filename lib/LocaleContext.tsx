@@ -1,22 +1,62 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import type { Locale } from "@/i18n-config";
 
-export const LocaleContext = createContext<Locale>("en");
+type TranslationValue = string | number | { [key: string]: TranslationValue };
+type Translations = Record<string, TranslationValue>;
+
+type LocaleContextType = {
+  locale: Locale;
+  t: Translations;
+};
+
+const LocaleContext = createContext<LocaleContextType | null>(null);
 
 export function useLocale() {
-  return useContext(LocaleContext);
+  const context = useContext(LocaleContext);
+  if (!context) {
+    throw new Error("useLocale must be used within LocaleProvider");
+  }
+  return context;
 }
 
 export function LocaleProvider({
   children,
   locale,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   locale: Locale;
 }) {
+  const [translations, setTranslations] = useState<Translations>({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadTranslations() {
+      try {
+        const mainMsgs = await import(`../lang/${locale}.json`);
+        const redesignMsgs = await import(`../lang/redesignMigration/${locale}.json`);
+
+        setTranslations({
+          ...mainMsgs.default,
+          ...redesignMsgs.default,
+        });
+      } catch (error) {
+        console.error("Failed to load translations:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    loadTranslations();
+  }, [locale]);
+
+  if (isLoading) {
+    return null;
+  }
+
   return (
-    <LocaleContext.Provider value={locale}>{children}</LocaleContext.Provider>
+    <LocaleContext.Provider value={{ locale, t: translations }}>
+      {children}
+    </LocaleContext.Provider>
   );
 }
