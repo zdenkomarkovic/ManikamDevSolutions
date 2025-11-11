@@ -139,8 +139,10 @@ export default function Header({ locale }: { locale: string }) {
               const pageMapping: Record<string, string> = {
                 "/izrada-sajta": "/website-development",
                 "/izrada-web-shopa": "/webshop-development",
+                "/redizajn-migracija": "/website-redesign",
                 "/website-development": "/izrada-sajta",
                 "/webshop-development": "/izrada-web-shopa",
+                "/website-redesign": "/redizajn-migracija",
               };
 
               let pathWithoutLocale =
