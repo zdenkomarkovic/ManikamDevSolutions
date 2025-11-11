@@ -140,9 +140,11 @@ export default function Header({ locale }: { locale: string }) {
                 "/izrada-sajta": "/website-development",
                 "/izrada-web-shopa": "/webshop-development",
                 "/redizajn-migracija": "/website-redesign",
+                "/drustvene-mreze": "/social-media",
                 "/website-development": "/izrada-sajta",
                 "/webshop-development": "/izrada-web-shopa",
                 "/website-redesign": "/redizajn-migracija",
+                "/social-media": "/drustvene-mreze",
               };
 
               let pathWithoutLocale =
