@@ -6,7 +6,7 @@ import { Code, Layers, Zap, Globe } from "lucide-react";
 import { useLocale } from "@/lib/LocaleContext";
 
 export default function RedesignWhyNextJS() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const whyNextJS = t.redesignMigration.whyNextJS;
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -108,7 +108,7 @@ export default function RedesignWhyNextJS() {
         </h3>
 
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
         >
           {whyNextJS.cta.button}
