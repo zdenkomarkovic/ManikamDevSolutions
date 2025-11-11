@@ -79,7 +79,7 @@ export default function RedesignBenefits() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {benefits.items.map((benefit: any, index: number) => {
+        {benefits.items.map((benefit: { title: string; description: string }, index: number) => {
           const gradients = [
             "bg-gradient-to-bl from-gray-900 via-gray-800 to-orange-600",
             "bg-gradient-to-br from-gray-900 via-gray-800 to-orange-600",

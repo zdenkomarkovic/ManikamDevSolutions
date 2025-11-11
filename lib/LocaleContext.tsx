@@ -3,7 +3,8 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import type { Locale } from "@/i18n-config";
 
-// Define a more flexible type for translations that allows deep nesting
+// Define a flexible type for translations that allows deep nesting
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Translations = any;
 
 type LocaleContextType = {
