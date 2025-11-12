@@ -1,6 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
 import IzradaSajtaClient from "./IzradaSajtaClient";
+import type { Locale } from "@/i18n-config";
+
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
 
 export const metadata: Metadata = {
   title: "Izrada Sajta - Profesionalna Web Rešenja | Manikam Web Solutions",
@@ -29,8 +34,18 @@ export const metadata: Metadata = {
   },
 };
 
-const page = () => {
-  return <IzradaSajtaClient />;
-};
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
 
-export default page;
+  // Load translations on server side for instant rendering
+  const mainMsgs = await import(`@/lang/${locale}.json`);
+  const websiteDevMsgs = await import(`@/lang/websiteDevelopment/${locale}.json`);
+
+  const messages = {
+    ...mainMsgs.default,
+    ...websiteDevMsgs.default,
+  };
+
+  return <IzradaSajtaClient locale={locale} messages={messages} />;
+}
+
