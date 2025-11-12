@@ -122,7 +122,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         <div className="absolute top-28 right-16 z-20 hidden md:block">
           <div className="space-y-3 relative z-20">
             {services.map((service, index) => (
-              <Link key={index} href={service.href}>
+              <Link key={index} href={service.href} className="block">
                 <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{
@@ -147,7 +147,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         <div className="absolute top-24 right-2 z-20 md:hidden">
           <div className="space-y-2">
             {services.map((service, index) => (
-              <Link key={index} href={service.href}>
+              <Link key={index} href={service.href} className="block">
                 <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{
