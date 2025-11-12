@@ -122,23 +122,25 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         <div className="absolute top-28 right-16 z-20 hidden md:block">
           <div className="space-y-3 relative z-20">
             {services.map((service, index) => (
-              <Link key={index} href={service.href} className="block">
-                <motion.div
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{
-                    opacity: visibleServices.includes(index) ? 1 : 0,
-                    x: visibleServices.includes(index) ? 0 : 100,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                  }}
-                  style={{ marginLeft: `${index * 20}px` }}
-                  className="relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-all duration-300 cursor-pointer"
-                >
-                  {service.text}
-                </motion.div>
-              </Link>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: visibleServices.includes(index) ? 1 : 0,
+                  x: visibleServices.includes(index) ? 0 : 100,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+                style={{ marginLeft: `${index * 20}px` }}
+              >
+                <Link href={service.href} className="block">
+                  <div className="relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
+                    {service.text}
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -147,23 +149,25 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         <div className="absolute top-24 right-2 z-20 md:hidden">
           <div className="space-y-2">
             {services.map((service, index) => (
-              <Link key={index} href={service.href} className="block">
-                <motion.div
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{
-                    opacity: visibleServices.includes(index) ? 1 : 0,
-                    x: visibleServices.includes(index) ? 0 : 100,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                  }}
-                  style={{ marginLeft: `${index * 12}px` }}
-                  className="text-sm bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left px-3 py-0.5 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-all duration-300 cursor-pointer"
-                >
-                  {service.text}
-                </motion.div>
-              </Link>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: visibleServices.includes(index) ? 1 : 0,
+                  x: visibleServices.includes(index) ? 0 : 100,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                }}
+                style={{ marginLeft: `${index * 12}px` }}
+              >
+                <Link href={service.href} className="block">
+                  <div className="text-sm bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left px-3 py-0.5 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
+                    {service.text}
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
