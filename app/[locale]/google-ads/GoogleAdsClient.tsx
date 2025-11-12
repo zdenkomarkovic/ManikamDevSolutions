@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import GoogleAdsHero from "@/components/google-ads/GoogleAdsHero";
 import GoogleAdsIntro from "@/components/google-ads/GoogleAdsIntro";
 import GoogleAdsServices from "@/components/google-ads/GoogleAdsServices";
+import GoogleAdsPackages from "@/components/google-ads/GoogleAdsPackages";
 import GoogleAdsProcess from "@/components/google-ads/GoogleAdsProcess";
 import GoogleAdsWhy from "@/components/google-ads/GoogleAdsWhy";
 import GoogleAdsFAQ from "@/components/google-ads/GoogleAdsFAQ";
@@ -109,6 +110,15 @@ export default function GoogleAdsClient() {
             variants={fadeInUp}
           >
             <GoogleAdsServices />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={fadeInUp}
+          >
+            <GoogleAdsPackages />
           </motion.div>
 
           <motion.div

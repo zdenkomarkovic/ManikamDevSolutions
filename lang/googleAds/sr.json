@@ -160,6 +160,55 @@
         "question": "Kako merite uspeh kampanje?",
         "answer": "Merimo uspeh kroz ključne metrike kao što su ROI (povrat investicije), cost per acquisition (CPA), conversion rate, i kvalitet skora. Pored toga, pratimo i poslovne rezultate kao što su povećanje prodaje, generisanje leadova, i poboljšanje brand awareness-a. Redovno dostavljamo detaljne izveštaje sa analizom performansi i preporukama za poboljšanje."
       }
+    },
+    "packages": {
+      "title": "Naši Google Ads Paketi",
+      "subtitle": "Izaberite paket koji najbolje odgovara vašem budžetu i poslovnim ciljevima",
+      "popular": "Najpopularniji",
+      "perMonth": "/mesečno",
+      "included": "Šta je uključeno:",
+      "starter": {
+        "name": "Starter Paket",
+        "tagline": "Savršen za početak vaše Google Ads avanture",
+        "price": "200€",
+        "budget": "Preporučeni mesečni budžet do 500€",
+        "cta": "Započnite kampanju",
+        "feature1": "Google Search kampanje prilagođene vašem biznisu",
+        "feature2": "Kompletno postavljanje kampanja i podešavanja",
+        "feature3": "Osnovno istraživanje ključnih reči i analiza tržišta",
+        "feature4": "Kreiranje oglasnih tekstova i kreativa",
+        "feature5": "Mesečni izveštaj o rezultatima kampanje",
+        "feature6": "Dnevna optimizacija budžeta i kampanja",
+        "feature7": "Email podrška tokom radnih dana"
+      },
+      "professional": {
+        "name": "Professional Paket",
+        "tagline": "Za biznise koji ozbiljno shvataju digitalno oglašavanje",
+        "price": "350€",
+        "budget": "Preporučeni mesečni budžet do 1000€",
+        "cta": "Pređite na profesionalni nivo",
+        "feature1": "Multi-platform strategija (Search, Display, Remarketing)",
+        "feature2": "Detaljno istraživanje ključnih reči i konkurentske analize",
+        "feature3": "A/B testiranje oglasa i kreativa za bolje performanse",
+        "feature4": "Napredno targetiranje publike i segmentacija",
+        "feature5": "Bi-nedeljne strateške konsultacije i preporuke",
+        "feature6": "Detaljno praćenje konkurencije u realnom vremenu",
+        "feature7": "Personalizovani dashboard sa ključnim metrikama"
+      },
+      "premium": {
+        "name": "Premium Paket",
+        "tagline": "Za lidere tržišta koji žele da dominiraju",
+        "price": "500€ + 10% budžeta",
+        "budget": "Preporučeni mesečni budžet preko 1000€",
+        "cta": "Zakazite konsultacije",
+        "feature1": "Kompletna multi-channel strategija (Search, Display, YouTube, Shopping)",
+        "feature2": "Napredne AI strategije bidovanja i mašinskog učenja",
+        "feature3": "Kreiranje i optimizacija landing stranica (1 mesečno)",
+        "feature4": "24/7 monitoring kampanja i brze optimizacije",
+        "feature5": "Nedeljne strateške konsultacije sa vašim ekspertom",
+        "feature6": "CRO optimizacije za maksimalne stope konverzije",
+        "feature7": "Direktan pristup senior Google Ads stručnjaku"
+      }
     }
   }
 }
