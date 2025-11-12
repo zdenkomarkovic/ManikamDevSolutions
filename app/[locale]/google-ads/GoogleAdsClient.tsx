@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import GoogleAdsHero from "@/components/google-ads/GoogleAdsHero";
 import GoogleAdsIntro from "@/components/google-ads/GoogleAdsIntro";
@@ -12,11 +12,16 @@ import GoogleAdsFAQ from "@/components/google-ads/GoogleAdsFAQ";
 import GoogleAdsFeatures from "@/components/google-ads/GoogleAdsFeatures";
 import GoogleAdsCTA from "@/components/google-ads/GoogleAdsCTA";
 import { MessagesProvider } from "@/lib/MessagesContext";
-import { useLocale } from "@/lib/LocaleContext";
+import type { Locale } from "@/i18n-config";
 
 // Type for the message structure
 type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
+
+type Props = {
+  locale: Locale;
+  messages: Messages;
+};
 
 // Animation variants
 const fadeInUp = {
@@ -48,36 +53,7 @@ const heroVariants = {
   },
 };
 
-export default function GoogleAdsClient() {
-  const { locale } = useLocale();
-  const [messages, setMessages] = useState<Messages | null>(null);
-
-  useEffect(() => {
-    async function loadMessages() {
-      try {
-        // Load main messages
-        const mainMsgs = await import(`@/lang/${locale}.json`);
-        // Load googleAds messages
-        const googleAdsMsgs = await import(`@/lang/googleAds/${locale}.json`);
-
-        // Merge messages
-        const mergedMessages = {
-          ...mainMsgs.default,
-          ...googleAdsMsgs.default,
-        };
-
-        setMessages(mergedMessages);
-      } catch (error) {
-        console.error("Failed to load messages:", error);
-      }
-    }
-    loadMessages();
-  }, [locale]);
-
-  if (!messages) {
-    return null; // or loading spinner
-  }
-
+export default function GoogleAdsClient({ locale, messages }: Props) {
   return (
     <MessagesProvider locale={locale} messages={messages}>
       <div className="bg-gray-900/90">
