@@ -170,44 +170,41 @@
       "starter": {
         "name": "Starter Package",
         "tagline": "Perfect for starting your Google Ads journey",
-        "price": "€200",
-        "budget": "Recommended monthly budget up to €500",
+        "price": "$500",
+        "budget": "Recommended monthly budget up to $1000",
         "cta": "Start Campaign",
         "feature1": "Google Search campaigns tailored to your business",
         "feature2": "Complete campaign setup and configuration",
-        "feature3": "Basic keyword research and market analysis",
-        "feature4": "Ad copy creation and creative development",
+        "feature3": "Keyword research and market analysis",
+        "feature4": "Creating ad copy",
         "feature5": "Monthly campaign performance report",
         "feature6": "Daily budget and campaign optimization",
-        "feature7": "Email support during business hours"
+        "feature7": "Consultations twice a month"
       },
       "professional": {
         "name": "Professional Package",
         "tagline": "For businesses serious about digital advertising",
-        "price": "€350",
-        "budget": "Recommended monthly budget up to €1000",
+        "price": "$1000",
+        "budget": "Recommended monthly budget up to $3000",
         "cta": "Go Professional",
         "feature1": "Multi-platform strategy (Search, Display, Remarketing)",
-        "feature2": "In-depth keyword research and competitive analysis",
-        "feature3": "A/B testing of ads and creatives for better performance",
-        "feature4": "Advanced audience targeting and segmentation",
-        "feature5": "Bi-weekly strategic consultations and recommendations",
-        "feature6": "Detailed competitor tracking in real-time",
-        "feature7": "Personalized dashboard with key metrics"
+        "feature2": "Keyword research and competitive analysis",
+        "feature3": "Advanced audience targeting and segmentation",
+        "feature4": "Weekly strategic consultations and recommendations",
+        "feature5": "Detailed competitor tracking in real-time",
+        "feature6": "Monthly campaign performance report"
       },
       "premium": {
         "name": "Premium Package",
         "tagline": "For market leaders who want to dominate",
-        "price": "€500 + 10% of budget",
-        "budget": "Recommended monthly budget over €1000",
+        "price": "$2000 + 10% of budget",
+        "budget": "Recommended monthly budget over $3000",
         "cta": "Schedule Consultation",
         "feature1": "Complete multi-channel strategy (Search, Display, YouTube, Shopping)",
-        "feature2": "Advanced AI bidding strategies and machine learning",
-        "feature3": "Landing page creation and optimization (1 per month)",
+        "feature2": "On-demand consultations",
+        "feature3": "Landing page optimization",
         "feature4": "24/7 campaign monitoring and rapid optimizations",
-        "feature5": "Weekly strategic consultations with your expert",
-        "feature6": "CRO optimizations for maximum conversion rates",
-        "feature7": "Direct access to senior Google Ads specialist"
+        "feature5": "A/B testing of ads and creatives for better performance"
       }
     }
   }
