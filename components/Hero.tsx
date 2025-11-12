@@ -4,6 +4,7 @@ import Image from "@/node_modules/next/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLocale } from "@/lib/LocaleContext";
+import Link from "next/link";
 import heroImg from "../public/images/laptop.jpg";
 
 type SectionData = {
@@ -27,26 +28,26 @@ type SectionData = {
 const Hero = ({ title, section }: { title: string; section: SectionData }) => {
   const { locale } = useLocale();
 
-  // Lokalizovani tekstovi za usluge
+  // Lokalizovani tekstovi za usluge sa linkovima
   const services =
     locale === "sr"
       ? [
-          "Izrada web sajta",
-          "Izrada web shopa",
-          "Redizajn sajta",
-          "Google oglasavanje",
-          "SEO optimizacija",
-          "Društvene mreže",
-          "Izrada softvera",
+          { text: "Izrada web sajta", href: "/sr/izrada-sajta" },
+          { text: "Izrada online prodavnica", href: "/sr/izrada-web-shopa" },
+          { text: "Redizajn sajta", href: "/sr/redizajn-migracija" },
+          { text: "Google Ads kampanje", href: "/sr/google-oglasavanje" },
+          { text: "SEO usluge", href: "/sr/seo-optimizacija" },
+          { text: "Marketing društvenih mreža", href: "/sr/drustvene-mreze" },
+          { text: "Razvoj softvera", href: "/sr/izrada-softvera" },
         ]
       : [
-          "Website Development",
-          "Web Shop Development",
-          "Redesign website",
-          "Google Advertising",
-          "SEO Optimization",
-          "Social Networks",
-          "Software Development",
+          { text: "Web Development Services", href: "/en/website-development" },
+          { text: "Web Shop Development", href: "/en/webshop-development" },
+          { text: "Website Redesign", href: "/en/website-redesign" },
+          { text: "Google Ads", href: "/en/google-ads" },
+          { text: "SEO Services", href: "/en/seo-optimization" },
+          { text: "Social Media Marketing", href: "/en/social-media" },
+          { text: "Custom Software", href: "/en/software-development" },
         ];
 
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
@@ -121,22 +122,23 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         <div className="absolute top-28 right-16 z-20 hidden md:block">
           <div className="space-y-3 relative z-20">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{
-                  opacity: visibleServices.includes(index) ? 1 : 0,
-                  x: visibleServices.includes(index) ? 0 : 100,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                }}
-                style={{ marginLeft: `${index * 20}px` }}
-                className="relative z-20  bg-gradient-to-r from-orange-600  to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit"
-              >
-                {service}
-              </motion.div>
+              <Link key={index} href={service.href}>
+                <motion.div
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{
+                    opacity: visibleServices.includes(index) ? 1 : 0,
+                    x: visibleServices.includes(index) ? 0 : 100,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeOut",
+                  }}
+                  style={{ marginLeft: `${index * 20}px` }}
+                  className="relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  {service.text}
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -145,22 +147,23 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
         <div className="absolute top-24 right-2 z-20 md:hidden">
           <div className="space-y-2">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{
-                  opacity: visibleServices.includes(index) ? 1 : 0,
-                  x: visibleServices.includes(index) ? 0 : 100,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                }}
-                style={{ marginLeft: `${index * 12}px` }}
-                className="text-sm bg-gradient-to-r from-orange-600  to-gray-600 text-white text-left  px-3 py-0.5 rounded-lg w-fit"
-              >
-                {service}
-              </motion.div>
+              <Link key={index} href={service.href}>
+                <motion.div
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{
+                    opacity: visibleServices.includes(index) ? 1 : 0,
+                    x: visibleServices.includes(index) ? 0 : 100,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeOut",
+                  }}
+                  style={{ marginLeft: `${index * 12}px` }}
+                  className="text-sm bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left px-3 py-0.5 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  {service.text}
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
