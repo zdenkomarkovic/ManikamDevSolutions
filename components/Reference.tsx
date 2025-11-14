@@ -14,8 +14,8 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
     return [...reference2, ...reference1];
   }, []);
 
-  // Funkcija za kreiranje naizmeničnog teksta (crna sa belim outline-om / žuta)
-  const createAlternatingText = (count: number) => {
+  // Funkcija za kreiranje naizmeničnog teksta sa custom tekstom
+  const createAlternatingTextWithCustomTitle = (text: string, count: number) => {
     const items = [];
     for (let i = 0; i < count; i++) {
       const isOrange = i % 2 === 0;
@@ -36,7 +36,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
               : undefined
           }
         >
-          {title}
+          {text}
         </span>
       );
       items.push(<span key={`dot-${i}`} className={isOrange ? "" : "text-white"}> • </span>);
@@ -94,11 +94,8 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   };
 
   return (
-    <div
-      id="reference"
-      className="container px-2 md:px-16 mx-auto py-10 border-t"
-    >
-      {/* Animated text naslov - 2 reda */}
+    <div id="reference" className="py-10 border-t">
+      {/* Animated text naslov - puna širina ekrana */}
       <div className="w-full pb-10 md:py-10 overflow-hidden">
         {/* Gornji red - ide DESNO */}
         <div className="mb-4 overflow-hidden">
@@ -113,10 +110,10 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             }}
           >
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingText(6)}
+              {createAlternatingTextWithCustomTitle("Our Work", 6)}
             </h3>
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingText(6)}
+              {createAlternatingTextWithCustomTitle("Our Work", 6)}
             </h3>
           </motion.div>
         </div>
@@ -134,17 +131,18 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             }}
           >
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingText(6)}
+              {createAlternatingTextWithCustomTitle("Our Work", 6)}
             </h3>
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingText(6)}
+              {createAlternatingTextWithCustomTitle("Our Work", 6)}
             </h3>
           </motion.div>
         </div>
       </div>
 
-      {/* Reference grid */}
-      <div className="grid md:grid-cols-3 gap-8 mb-8">
+      {/* Reference grid - zadržava container */}
+      <div className="container px-2 md:px-16 mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
         {currentReferences.map((item, i) => {
           return (
             <motion.div
@@ -214,6 +212,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
           </button>
         </div>
       )}
+      </div>
     </div>
   );
 };
