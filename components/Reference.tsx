@@ -110,10 +110,10 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             }}
           >
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle("Our Work", 6)}
+              {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle("Our Work", 6)}
+              {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
           </motion.div>
         </div>
@@ -131,10 +131,10 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             }}
           >
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle("Our Work", 6)}
+              {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
             <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle("Our Work", 6)}
+              {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
           </motion.div>
         </div>
