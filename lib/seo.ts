@@ -8,8 +8,8 @@ export function generateAlternateLinks(pathname: string, locale?: string) {
     languages[loc] = `${baseUrl}/${loc}${pathname}`;
   });
 
-  // x-default uvek pokazuje na /en verziju (default za botove)
-  languages["x-default"] = `${baseUrl}/en${pathname}`;
+  // x-default pokazuje na /sr verziju (default za korisnike u Srbiji i regionu)
+  languages["x-default"] = `${baseUrl}/sr${pathname}`;
 
   // Canonical pokazuje na trenutnu locale verziju
   const canonicalPath = locale ? `/${locale}${pathname}` : pathname;
