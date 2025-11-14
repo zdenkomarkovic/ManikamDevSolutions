@@ -21,7 +21,7 @@ type OurWorkProps = {
 };
 
 const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
-  // Funkcija za kreiranje naizmeničnog teksta (bela-žuta)
+  // Funkcija za kreiranje naizmeničnog teksta (crna sa belim outline-om / žuta)
   const createAlternatingText = (count: number) => {
     const items = [];
     for (let i = 0; i < count; i++) {
@@ -32,13 +32,21 @@ const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
           className={
             isOrange
               ? "bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-              : "text-white"
+              : "text-black"
+          }
+          style={
+            !isOrange
+              ? {
+                  WebkitTextStroke: "2px white",
+                  paintOrder: "stroke fill",
+                }
+              : undefined
           }
         >
           {title}
         </span>
       );
-      items.push(<span key={`dot-${i}`}> • </span>);
+      items.push(<span key={`dot-${i}`} className={isOrange ? "" : "text-white"}> • </span>);
     }
     items.push(<span key="nbsp">&nbsp;</span>);
     return items;
