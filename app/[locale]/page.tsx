@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Reference from "@/components/Reference";
 import Section1 from "@/components/Section1";
 import Usluge from "@/components/Usluge";
+import OurWork from "@/components/OurWork";
 import { generateAlternateLinks } from "@/lib/seo";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
@@ -67,6 +68,9 @@ export default async function Home({
   const uslugeTitle = intl.formatMessage({ id: "usluge.title" });
   const refLink = intl.formatMessage({ id: "reference.link" });
   const refTitle = intl.formatMessage({ id: "reference.title" });
+  const ourWorkTitle = intl.formatMessage({ id: "ourWork.title" });
+  const ourWorkSubtitle = intl.formatMessage({ id: "ourWork.subtitle" });
+  const ourWorkItems = messages["ourWork.items"] ?? [];
 
   return (
     <main>
@@ -76,6 +80,7 @@ export default async function Home({
         <Section1 section={section} cards={cards} />
         <Usluge usluge={usluge} title={uslugeTitle} />
         <Reference refLink={refLink} title={refTitle} />
+        <OurWork title={ourWorkTitle} subtitle={ourWorkSubtitle} works={ourWorkItems} />
       </div>
     </main>
   );
