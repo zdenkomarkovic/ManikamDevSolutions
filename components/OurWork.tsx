@@ -21,6 +21,29 @@ type OurWorkProps = {
 };
 
 const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
+  // Funkcija za kreiranje naizmeničnog teksta (bela-žuta)
+  const createAlternatingText = (count: number) => {
+    const items = [];
+    for (let i = 0; i < count; i++) {
+      const isOrange = i % 2 === 0;
+      items.push(
+        <span
+          key={i}
+          className={
+            isOrange
+              ? "bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              : "text-white"
+          }
+        >
+          {title}
+        </span>
+      );
+      items.push(<span key={`dot-${i}`}> • </span>);
+    }
+    items.push(<span key="nbsp">&nbsp;</span>);
+    return items;
+  };
+
   return (
     <section className="w-full py-16 md:py-24 overflow-hidden relative">
       {/* Animated text - gornji red ide DESNO */}
@@ -35,11 +58,11 @@ const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
             repeatType: "loop",
           }}
         >
-          <h2 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
-            {title} • {title} • {title} • {title} • {title} • {title} •&nbsp;
+          <h2 className="text-6xl md:text-8xl font-extrabold whitespace-nowrap">
+            {createAlternatingText(6)}
           </h2>
-          <h2 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
-            {title} • {title} • {title} • {title} • {title} • {title} •&nbsp;
+          <h2 className="text-6xl md:text-8xl font-extrabold whitespace-nowrap">
+            {createAlternatingText(6)}
           </h2>
         </motion.div>
       </div>
@@ -56,12 +79,12 @@ const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
             repeatType: "loop",
           }}
         >
-          <p className="text-3xl md:text-5xl text-gray-400 font-light whitespace-nowrap">
-            {title} • {title} • {title} • {title} • {title} •&nbsp;
-          </p>
-          <p className="text-3xl md:text-5xl text-gray-400 font-light whitespace-nowrap">
-            {title} • {title} • {title} • {title} • {title} •&nbsp;
-          </p>
+          <h2 className="text-6xl md:text-8xl font-extrabold whitespace-nowrap">
+            {createAlternatingText(6)}
+          </h2>
+          <h2 className="text-6xl md:text-8xl font-extrabold whitespace-nowrap">
+            {createAlternatingText(6)}
+          </h2>
         </motion.div>
       </div>
 
