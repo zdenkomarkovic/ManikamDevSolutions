@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import SEOHero from "@/components/seo/SEOHero";
 import SEOIntro from "@/components/seo/SEOIntro";
@@ -10,11 +10,16 @@ import SEOCTA from "@/components/seo/SEOCTA";
 import SEOProcess from "@/components/seo/SEOProcess";
 import SEOFAQ from "@/components/seo/SEOFAQ";
 import { MessagesProvider } from "@/lib/MessagesContext";
-import { useLocale } from "@/lib/LocaleContext";
+import type { Locale } from "@/i18n-config";
 
 // Type for the message structure
 type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
+
+type Props = {
+  locale: Locale;
+  messages: Messages;
+};
 
 // Animacija varijante za fade in + slide up
 const fadeInUp = {
@@ -60,38 +65,7 @@ const heroVariants = {
   },
 };
 
-const SeoOptimizationClient = () => {
-  const { locale } = useLocale();
-  const [messages, setMessages] = useState<Messages | null>(null);
-
-  useEffect(() => {
-    async function loadMessages() {
-      try {
-        // Load main messages
-        const mainMsgs = await import(`@/lang/${locale}.json`);
-        // Load seoOptimization messages
-        const seoOptMsgs = await import(
-          `@/lang/seoOptimization/${locale}.json`
-        );
-
-        // Merge messages
-        const mergedMessages = {
-          ...mainMsgs.default,
-          ...seoOptMsgs.default,
-        };
-
-        setMessages(mergedMessages);
-      } catch (error) {
-        console.error("Failed to load messages:", error);
-      }
-    }
-    loadMessages();
-  }, [locale]);
-
-  if (!messages) {
-    return null; // or loading spinner
-  }
-
+const SeoOptimizationClient = ({ locale, messages }: Props) => {
   return (
     <MessagesProvider locale={locale} messages={messages}>
       <div className="bg-gray-900/90">

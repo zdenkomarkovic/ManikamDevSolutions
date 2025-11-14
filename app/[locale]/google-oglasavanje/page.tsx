@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { LocaleProvider } from "@/lib/LocaleContext";
+import type { Locale } from "@/i18n-config";
 import GoogleAdsClient from "../google-ads/GoogleAdsClient";
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -20,9 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function GoogleOglasavanjePage({ params }: Props) {
   const { locale } = await params;
 
-  return (
-    <LocaleProvider locale={locale as "en" | "sr"}>
-      <GoogleAdsClient />
-    </LocaleProvider>
-  );
+  // Load translations on server side for instant rendering
+  const mainMsgs = await import(`@/lang/${locale}.json`);
+  const googleAdsMsgs = await import(`@/lang/googleAds/${locale}.json`);
+
+  const messages = {
+    ...mainMsgs.default,
+    ...googleAdsMsgs.default,
+  };
+
+  return <GoogleAdsClient locale={locale} messages={messages} />;
 }

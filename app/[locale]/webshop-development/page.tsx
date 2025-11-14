@@ -1,6 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
+import type { Locale } from "@/i18n-config";
 import WebshopDevelopmentClient from "./WebshopDevelopmentClient";
+
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
 
 export const metadata: Metadata = {
   title: "Webshop Development - Professional E-commerce Solutions | Manikam Web Solutions",
@@ -26,8 +31,17 @@ export const metadata: Metadata = {
   },
 };
 
-const page = () => {
-  return <WebshopDevelopmentClient />;
-};
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
 
-export default page;
+  // Load translations on server side for instant rendering
+  const mainMsgs = await import(`@/lang/${locale}.json`);
+  const webshopDevMsgs = await import(`@/lang/webshopDevelopment/${locale}.json`);
+
+  const messages = {
+    ...mainMsgs.default,
+    ...webshopDevMsgs.default,
+  };
+
+  return <WebshopDevelopmentClient locale={locale} messages={messages} />;
+}

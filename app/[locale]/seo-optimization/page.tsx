@@ -1,6 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
+import type { Locale } from "@/i18n-config";
 import SeoOptimizationClient from "./SeoOptimizationClient";
+
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
 
 export const metadata: Metadata = {
   title:
@@ -28,8 +33,17 @@ export const metadata: Metadata = {
   },
 };
 
-const page = () => {
-  return <SeoOptimizationClient />;
-};
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
 
-export default page;
+  // Load translations on server side for instant rendering
+  const mainMsgs = await import(`@/lang/${locale}.json`);
+  const seoOptMsgs = await import(`@/lang/seoOptimization/${locale}.json`);
+
+  const messages = {
+    ...mainMsgs.default,
+    ...seoOptMsgs.default,
+  };
+
+  return <SeoOptimizationClient locale={locale} messages={messages} />;
+}
