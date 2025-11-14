@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { LocaleProvider } from "@/lib/LocaleContext";
+import type { Locale } from "@/i18n-config";
 import SocialMediaClient from "@/components/drustvene-mreze/SocialMediaClient";
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -26,9 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SocialMediaPage({ params }: Props) {
   const { locale } = await params;
 
-  return (
-    <LocaleProvider locale={locale as "en" | "sr"}>
-      <SocialMediaClient />
-    </LocaleProvider>
-  );
+  // Load translations on server side for instant rendering
+  const mainMsgs = await import(`@/lang/${locale}.json`);
+  const socialMediaMsgs = await import(`@/lang/social-media/${locale}.json`);
+
+  const messages = {
+    ...mainMsgs.default,
+    ...socialMediaMsgs.default,
+  };
+
+  return <SocialMediaClient locale={locale} messages={messages} />;
 }
