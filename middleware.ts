@@ -142,6 +142,26 @@ export function middleware(request: NextRequest) {
   );
 
   if (pathLocale) {
+    // PRIORITET 2: Korisnici iz RS/BA/ME/MK treba da vide srpsku verziju
+    // Ako pokušaju da pristupe engleskoj verziji, redirektuj ih na srpsku
+    const isEnglishPage = pathLocale === "en";
+    const shouldRedirectToSerbian = !isBot && isFromAllowedCountry && isEnglishPage;
+
+    if (shouldRedirectToSerbian) {
+      console.log('🔄 User from', country, 'accessing /en → Redirecting to /sr');
+      // Zameni /en sa /sr
+      const newPath = pathname.replace(/^\/en(\/|$|\?)/, '/sr$1') + (request.nextUrl.search || '');
+      const response = NextResponse.redirect(new URL(newPath, request.url));
+
+      // Postavi srpski cookie
+      response.cookies.set("NEXT_LOCALE", "sr", {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 365,
+      });
+
+      return response;
+    }
+
     // Jezik već postoji u putanji, samo nastavi
     nextLocale = pathLocale;
     response = NextResponse.next();
