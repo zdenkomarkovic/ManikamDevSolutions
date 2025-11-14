@@ -79,7 +79,7 @@ export default async function Home({
         <Hero title={heroTitle} section={section} />
         <Section1 section={section} cards={cards} />
         <Usluge usluge={usluge} title={uslugeTitle} />
-        <Reference refLink={refLink} title={refTitle} />
+        <Reference refLink={refLink} title={ourWorkTitle} />
         <OurWork title={ourWorkTitle} subtitle={ourWorkSubtitle} works={ourWorkItems} />
       </div>
     </main>
