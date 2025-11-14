@@ -95,16 +95,19 @@ export function middleware(request: NextRequest) {
   // Dozvoljene zemlje za srpski sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
 
-  // PRIORITET 1: Ako geo radi i detektuje drugu zemlju (ne region) → forsira engleski!
-  const isFromOtherCountry = country && !allowedCountriesForSerbianContent.includes(country);
+  // PRIORITET 1: Blokiranje srpskog jezika za korisnike van regiona
+  // Proveri da li je korisnik iz druge zemlje ILI nema geo podataka (bezbedonosni fallback)
+  const isFromAllowedCountry = country && allowedCountriesForSerbianContent.includes(country);
+  const shouldBlockSerbian = !isBot && !isFromAllowedCountry;
 
-  if (isFromOtherCountry && !isBot) {
-    console.log('⚠️ User from', country, '- forcing English only!');
+  if (shouldBlockSerbian) {
+    const reason = country ? `from ${country}` : 'no geo data (blocking Serbian for safety)';
+    console.log('⚠️ User', reason, '- forcing English only!');
 
     // Proveri da li ima srpski cookie i obriši ga
     const currentCookie = request.cookies.get("NEXT_LOCALE")?.value;
     if (currentCookie === "sr") {
-      console.log('🍪 Deleting Serbian cookie for country:', country);
+      console.log('🍪 Deleting Serbian cookie:', reason);
     }
 
     // Proveri da li je BILO KOJA srpska stranica (uključujući početnu)
@@ -153,15 +156,17 @@ export function middleware(request: NextRequest) {
     // Ako geo RADI (country postoji)
     else if (country) {
       // Proveri da li je iz dozvoljenog regiona
-      if (["RS", "BA", "ME", "MK"].includes(country)) {
-        locale = "sr"; // Region → srpski
+      if (allowedCountriesForSerbianContent.includes(country)) {
+        locale = "sr"; // Region (RS, BA, ME, MK) → srpski
       } else {
         locale = "en"; // Ostale zemlje → engleski (ignoriše browser!)
       }
     }
-    // Ako geo NE radi (development) - SRPSKI kao default
+    // BEZBEDONOSNI FALLBACK: Ako geo NE radi → Engleski za sve korisnike
+    // (Samo korisnici iz RS/BA/ME/MK treba da vide srpski)
     else {
-      locale = "sr";
+      locale = "en";
+      console.log('⚠️ No geo data available - defaulting to English for safety');
     }
 
     console.log('🎯 Selected locale:', locale, 'for country:', country || 'NO GEO');
