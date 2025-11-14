@@ -14,6 +14,37 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
     return [...reference2, ...reference1];
   }, []);
 
+  // Funkcija za kreiranje naizmeničnog teksta (crna sa belim outline-om / žuta)
+  const createAlternatingText = (count: number) => {
+    const items = [];
+    for (let i = 0; i < count; i++) {
+      const isOrange = i % 2 === 0;
+      items.push(
+        <span
+          key={i}
+          className={
+            isOrange
+              ? "bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              : "text-black"
+          }
+          style={
+            !isOrange
+              ? {
+                  WebkitTextStroke: "2px white",
+                  paintOrder: "stroke fill",
+                }
+              : undefined
+          }
+        >
+          {title}
+        </span>
+      );
+      items.push(<span key={`dot-${i}`} className={isOrange ? "" : "text-white"}> • </span>);
+    }
+    items.push(<span key="nbsp">&nbsp;</span>);
+    return items;
+  };
+
   // Kalkulišemo paginaciju
   const totalPages = Math.ceil(allReferences.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -67,9 +98,50 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
       id="reference"
       className="container px-2 md:px-16 mx-auto py-10 border-t"
     >
-      <h3 className="text-4xl md:text-6xl text-center pb-10 md:py-10 font-extrabold bg-gradient-to-r from-orange-600  to-orange-400 bg-clip-text text-transparent">
-        {title}
-      </h3>
+      {/* Animated text naslov - 2 reda */}
+      <div className="w-full pb-10 md:py-10 overflow-hidden">
+        {/* Gornji red - ide DESNO */}
+        <div className="mb-4 overflow-hidden">
+          <motion.div
+            className="flex"
+            animate={{ x: ["-50%", "0%"] }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          >
+            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+              {createAlternatingText(6)}
+            </h3>
+            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+              {createAlternatingText(6)}
+            </h3>
+          </motion.div>
+        </div>
+
+        {/* Donji red - ide LEVO */}
+        <div className="overflow-hidden">
+          <motion.div
+            className="flex"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          >
+            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+              {createAlternatingText(6)}
+            </h3>
+            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+              {createAlternatingText(6)}
+            </h3>
+          </motion.div>
+        </div>
+      </div>
 
       {/* Reference grid */}
       <div className="grid md:grid-cols-3 gap-8 mb-8">
