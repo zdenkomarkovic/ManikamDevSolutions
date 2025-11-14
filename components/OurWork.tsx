@@ -26,17 +26,20 @@ const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
       {/* Animated text - gornji red ide DESNO */}
       <div className="mb-8 overflow-hidden">
         <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: "100%" }}
+          className="flex"
+          animate={{ x: ["-50%", "0%"] }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear",
+            repeatType: "loop",
           }}
-          className="whitespace-nowrap"
         >
-          <h2 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent inline-block">
-            {title} • {title} • {title} • {title} •
+          <h2 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
+            {title} • {title} • {title} • {title} • {title} • {title} •&nbsp;
+          </h2>
+          <h2 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
+            {title} • {title} • {title} • {title} • {title} • {title} •&nbsp;
           </h2>
         </motion.div>
       </div>
@@ -44,17 +47,20 @@ const OurWork = ({ title, subtitle, works }: OurWorkProps) => {
       {/* Animated text - donji red ide LEVO */}
       <div className="mb-12 overflow-hidden">
         <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: "-100%" }}
+          className="flex"
+          animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: 25,
             repeat: Infinity,
             ease: "linear",
+            repeatType: "loop",
           }}
-          className="whitespace-nowrap"
         >
-          <p className="text-3xl md:text-5xl text-gray-400 font-light inline-block">
-            {subtitle} • {subtitle} • {subtitle} •
+          <p className="text-3xl md:text-5xl text-gray-400 font-light whitespace-nowrap">
+            {title} • {title} • {title} • {title} • {title} •&nbsp;
+          </p>
+          <p className="text-3xl md:text-5xl text-gray-400 font-light whitespace-nowrap">
+            {title} • {title} • {title} • {title} • {title} •&nbsp;
           </p>
         </motion.div>
       </div>
