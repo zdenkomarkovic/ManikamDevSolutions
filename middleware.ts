@@ -146,9 +146,9 @@ export function middleware(request: NextRequest) {
     // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
     let locale: string;
 
-    // Botovi uvek engleski
+    // Botovi vide srpsku verziju kao default (za SEO)
     if (isBot) {
-      locale = "en";
+      locale = "sr";
     }
     // Ako geo RADI (country postoji)
     else if (country) {
