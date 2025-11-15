@@ -30,4 +30,11 @@ export type Messages = {
     text: string;
     span: string;
   }[];
+  "ourWork.title"?: string;
+  "ourWork.subtitle"?: string;
+  "ourWork.items"?: {
+    title: string;
+    description: string;
+    image: string;
+  }[];
 };

@@ -123,6 +123,35 @@
   ],
   "reference.title": "Reference",
   "reference.link": "Posetite sajt",
+  "ourWork.title": "Naši radovi",
+  "ourWork.subtitle": "Pogledajte neke od projekata koje smo realizovali. Svaki projekat je jedinstvena priča uspeha.",
+  "ourWork.items": [
+    {
+      "title": "E-commerce platforma",
+      "description": "Moderna online prodavnica sa integrisanim plaćanjem i upravljanjem zalihama.",
+      "image": "/images/SS2.png"
+    },
+    {
+      "title": "Korporativni sajt",
+      "description": "Elegantna web prezentacija sa CMS sistemom za lako ažuriranje sadržaja.",
+      "image": "/images/SS3.png"
+    },
+    {
+      "title": "Booking sistem",
+      "description": "Napredna aplikacija za online rezervacije sa kalendar integracijom.",
+      "image": "/images/SS4.png"
+    },
+    {
+      "title": "Portfolio sajt",
+      "description": "Kreativan dizajn za prikazivanje radova i usluga.",
+      "image": "/images/SS5.png"
+    },
+    {
+      "title": "Restoranski sajt",
+      "description": "Vizualno privlačan sajt sa online menijem i sistemom za poručivanje.",
+      "image": "/images/SS6.png"
+    }
+  ],
   "footer.message": "Mi stvaramo priče koje se pamte.",
   "footer.rights": "Sva prava zadržana.",
   "instagram": "https://www.instagram.com/manikam.web.solutions/",

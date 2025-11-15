@@ -123,6 +123,35 @@
   ],
   "reference.title": "References",
   "reference.link": "Visit the website",
+  "ourWork.title": "Our Work",
+  "ourWork.subtitle": "Take a look at some of the projects we've completed. Each project is a unique success story.",
+  "ourWork.items": [
+    {
+      "title": "E-commerce Platform",
+      "description": "Modern online store with integrated payment and inventory management.",
+      "image": "/images/SS2.png"
+    },
+    {
+      "title": "Corporate Website",
+      "description": "Elegant web presentation with CMS system for easy content updates.",
+      "image": "/images/SS3.png"
+    },
+    {
+      "title": "Booking System",
+      "description": "Advanced application for online reservations with calendar integration.",
+      "image": "/images/SS4.png"
+    },
+    {
+      "title": "Portfolio Website",
+      "description": "Creative design for showcasing work and services.",
+      "image": "/images/SS5.png"
+    },
+    {
+      "title": "Restaurant Website",
+      "description": "Visually appealing site with online menu and ordering system.",
+      "image": "/images/SS6.png"
+    }
+  ],
   "footer.message": "We create stories that are remembered.",
   "footer.rights": "All rights reserved.",
   "instagram": "https://www.instagram.com/manikam_websolutions/",
