@@ -46,7 +46,7 @@ const LanguageSwitcher = () => {
     >
       <span className="flex items-center gap-1.5 text-sm md:text-base">
         <Image
-          src={`/images/flags/${currentLocale}.svg`}
+          src={`/images/flags/${currentLocale}.png`}
           alt={`${currentLocale} flag`}
           width={20}
           height={14}
@@ -57,7 +57,7 @@ const LanguageSwitcher = () => {
       <span className="text-xs opacity-75">→</span>
       <span className="flex items-center gap-1.5 text-sm md:text-base opacity-75">
         <Image
-          src={`/images/flags/${otherLocale}.svg`}
+          src={`/images/flags/${otherLocale}.png`}
           alt={`${otherLocale} flag`}
           width={20}
           height={14}
