@@ -33,7 +33,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
           style={
             !isOrange
               ? {
-                  WebkitTextStroke: "2px white",
+                  WebkitTextStroke: "4px white",
                   paintOrder: "stroke fill",
                 }
               : undefined
