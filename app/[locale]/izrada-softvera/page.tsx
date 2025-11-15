@@ -14,6 +14,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: messages.software.page.title,
     description: messages.software.page.description,
+    alternates: {
+      canonical: `https://manikamwebsolutions.com/${locale}/izrada-softvera`,
+      languages: {
+        sr: "https://manikamwebsolutions.com/sr/izrada-softvera",
+        en: "https://manikamwebsolutions.com/en/software-development",
+      },
+    },
   };
 }
 

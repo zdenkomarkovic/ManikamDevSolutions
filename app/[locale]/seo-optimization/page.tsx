@@ -7,31 +7,23 @@ type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-export const metadata: Metadata = {
-  title:
-    "SEO Optimization - Improve Your Site's Visibility | Manikam Dev Solutions",
-  description:
-    "Professional SEO optimization that delivers organic traffic. Increase your Google ranking, attract targeted audience and grow your business. Over 10 years of experience.",
-  keywords: [
-    "SEO optimization",
-    "search engine optimization",
-    "Google ranking",
-    "organic traffic",
-    "SEO services",
-    "website optimization",
-    "local SEO",
-    "technical SEO",
-    "SEO strategy",
-    "search visibility",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/en/seo-optimization",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/seo-optimizacija",
-      en: "https://manikamwebsolutions.com/en/seo-optimization",
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/seoOptimization/${locale}.json`);
+
+  return {
+    title: messages.seoOptimization.page.title,
+    description: messages.seoOptimization.page.description,
+    alternates: {
+      canonical: `https://manikamwebsolutions.com/${locale}/seo-optimization`,
+      languages: {
+        sr: "https://manikamwebsolutions.com/sr/seo-optimizacija",
+        en: "https://manikamwebsolutions.com/en/seo-optimization",
+      },
     },
-  },
-};
+  };
+}
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;

@@ -6,38 +6,23 @@ type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-export const metadata: Metadata = {
-  title:
-    "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
-  description:
-    "Profesionalna SEO optimizacija koja donosi organsku posećenost. Povećajte rangiranje na Google-u, privucite ciljanu publiku i razvijte svoj biznis. Više od 10 godina iskustva.",
-  keywords: [
-    "seo optimizacija",
-    "seo srbija",
-    "optimizacija sajta",
-    "google seo",
-    "seo usluge",
-    "organski seo",
-    "lokalni seo",
-    "tehnički seo",
-    "seo konsultacije",
-    "povećanje rangiranja",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/seo-optimizacija",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/seo-optimizacija",
-      en: "https://manikamwebsolutions.com/en/seo-optimization",
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/seoOptimization/${locale}.json`);
+
+  return {
+    title: messages.seoOptimization.page.title,
+    description: messages.seoOptimization.page.description,
+    alternates: {
+      canonical: `https://manikamwebsolutions.com/${locale}/seo-optimizacija`,
+      languages: {
+        sr: "https://manikamwebsolutions.com/sr/seo-optimizacija",
+        en: "https://manikamwebsolutions.com/en/seo-optimization",
+      },
     },
-  },
-  openGraph: {
-    title:
-      "SEO Optimizacija - Poboljšajte Vidljivost Vašeg Sajta | Manikam Dev Solutions",
-    description:
-      "Profesionalna SEO optimizacija koja donosi organsku posećenost. Povećajte rangiranje na Google-u i razvijte svoj biznis.",
-    type: "website",
-  },
-};
+  };
+}
 
 export default async function SEOOptimizacijaPage({ params }: Props) {
   const { locale } = await params;

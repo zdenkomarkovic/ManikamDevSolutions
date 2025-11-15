@@ -7,31 +7,23 @@ type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-export const metadata: Metadata = {
-  title:
-    "Izrada Web Shopa - Profesionalne Online Prodavnice | Manikam Web Solutions",
-  description:
-    "Profesionalna izrada web shopova i e-commerce rešenja. Kompletne online prodavnice sa integrisanim plaćanjem, upravljanjem zalihama, SEO optimizacijom i mobilnom prilagodbom za maksimalne rezultate.",
-  keywords: [
-    "izrada web shopa",
-    "online prodavnica",
-    "e-commerce",
-    "web shop",
-    "internet prodavnica",
-    "online trgovina",
-    "e-commerce rešenja",
-    "web shop development",
-    "online store",
-    "digitalna prodavnica",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
-      en: "https://manikamwebsolutions.com/en/webshop-development",
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/webshopDevelopment/${locale}.json`);
+
+  return {
+    title: messages.webshopDevelopment.page.title,
+    description: messages.webshopDevelopment.page.description,
+    alternates: {
+      canonical: `https://manikamwebsolutions.com/${locale}/izrada-web-shopa`,
+      languages: {
+        sr: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
+        en: "https://manikamwebsolutions.com/en/webshop-development",
+      },
     },
-  },
-};
+  };
+}
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
