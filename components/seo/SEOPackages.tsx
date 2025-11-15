@@ -44,7 +44,9 @@ const SEOPackages = () => {
     },
     {
       id: "professional",
-      badge: intl.formatMessage({ id: "seoOptimization.packages.professional.badge" }),
+      badge: intl.formatMessage({
+        id: "seoOptimization.packages.professional.badge",
+      }),
     },
     {
       id: "enterprise",
@@ -104,11 +106,15 @@ const SEOPackages = () => {
             )}
 
             <h3 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-              {intl.formatMessage({ id: `seoOptimization.packages.${pkg.id}.title` })}
+              {intl.formatMessage({
+                id: `seoOptimization.packages.${pkg.id}.title`,
+              })}
             </h3>
 
             <p className="text-gray-600 mb-6 italic">
-              {intl.formatMessage({ id: `seoOptimization.packages.${pkg.id}.subtitle` })}
+              {intl.formatMessage({
+                id: `seoOptimization.packages.${pkg.id}.subtitle`,
+              })}
             </p>
 
             <motion.a
@@ -131,27 +137,21 @@ const SEOPackages = () => {
                 return (
                   <div key={num} className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+                    <span className="text-gray-700 text-sm leading-relaxed">
+                      {feature}
+                    </span>
                   </div>
                 );
               })}
             </div>
 
-            <div className="border-t border-gray-300 pt-4 mt-4">
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-600 font-semibold">
-                  {intl.formatMessage({ id: `seoOptimization.packages.${pkg.id}.duration` })}
-                </span>
-                <span className="text-orange-600 font-bold">
-                  {intl.formatMessage({ id: `seoOptimization.packages.${pkg.id}.durationMonths` })}
-                </span>
-              </div>
-              {pkg.id === "enterprise" && (
-                <p className="text-xs text-gray-500 mt-2 italic">
-                  {intl.formatMessage({ id: `seoOptimization.packages.${pkg.id}.note` })}
-                </p>
-              )}
-            </div>
+            {pkg.id === "enterprise" && (
+              <p className="text-xs text-gray-500 mt-2 italic">
+                {intl.formatMessage({
+                  id: `seoOptimization.packages.${pkg.id}.note`,
+                })}
+              </p>
+            )}
           </motion.div>
         ))}
       </motion.div>

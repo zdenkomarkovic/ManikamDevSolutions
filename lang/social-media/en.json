@@ -56,7 +56,7 @@
       "highlightLabel": "MOST POPULAR",
       "starter": {
         "name": "Starter Package",
-        "price": "From €500",
+        "price": "From €600",
         "period": "/monthly",
         "description": "Ideal for small businesses starting with social media",
         "feature1": "Posts - 3 weekly",
@@ -68,7 +68,7 @@
       },
       "professional": {
         "name": "Professional Package",
-        "price": "From €900",
+        "price": "From €1000",
         "period": "/monthly",
         "description": "Complete solution for serious online growth",
         "feature1": "Posts - 3 weekly",
