@@ -12,7 +12,6 @@ import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
 import logo from "../public/images/android-chrome-192x192.png";
-import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 function isValidLocale(locale: string): locale is Locale {
@@ -27,7 +26,6 @@ function getSafeLocale(locale: string): Locale {
 }
 
 export default function Header({ locale }: { locale: string }) {
-  const { locales } = i18n;
   const currentLocale = getSafeLocale(locale);
   const navList = getNavList(currentLocale);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +34,6 @@ export default function Header({ locale }: { locale: string }) {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<number | null>(
     null
   );
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
