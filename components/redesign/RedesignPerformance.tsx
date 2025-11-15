@@ -85,41 +85,46 @@ export default function RedesignPerformance() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {performance.metrics.map((metric: { value: string; title: string; description: string }, index: number) => {
-          const MetricIcon = metricIcons[index];
-          return (
-            <motion.div
-              key={index}
-              className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.05,
-                y: -10,
-                boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
-              }}
-              transition={{ duration: 0.3 }}
-            >
+        {performance.metrics.map(
+          (
+            metric: { value: string; title: string; description: string },
+            index: number
+          ) => {
+            const MetricIcon = metricIcons[index];
+            return (
               <motion.div
-                className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
-                variants={iconVariants}
+                key={index}
+                className="p-6 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl shadow-lg text-center"
+                variants={cardVariants}
                 whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                  transition: { duration: 0.6 },
+                  scale: 1.05,
+                  y: -10,
+                  boxShadow: "0 20px 40px rgba(249, 115, 22, 0.2)",
                 }}
+                transition={{ duration: 0.3 }}
               >
-                <MetricIcon className="text-2xl text-white" />
+                <motion.div
+                  className="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4"
+                  variants={iconVariants}
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <MetricIcon className="text-2xl text-white" />
+                </motion.div>
+                <div className="text-5xl font-bold text-orange-600 mb-2">
+                  {metric.value}
+                </div>
+                <div className="text-xl font-semibold mb-2 text-gray-900">
+                  {metric.title}
+                </div>
+                <div className="text-sm">{metric.description}</div>
               </motion.div>
-              <div className="text-5xl font-bold text-orange-600 mb-2">
-                {metric.value}
-              </div>
-              <div className="text-xl font-semibold mb-2 text-gray-900">
-                {metric.title}
-              </div>
-              <div className="text-sm">{metric.description}</div>
-            </motion.div>
-          );
-        })}
+            );
+          }
+        )}
       </motion.div>
 
       <motion.div
@@ -145,37 +150,42 @@ export default function RedesignPerformance() {
             </h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.loadTime}</span>
+                <span className="">
+                  {performance.comparison.labels.loadTime}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.wordpress.loadTime}
                 </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.pageSpeed}</span>
+                <span className="">
+                  {performance.comparison.labels.pageSpeed}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.wordpress.pageSpeed}
                 </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.requests}</span>
+                <span className="">
+                  {performance.comparison.labels.requests}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.wordpress.requests}
                 </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.pageSize}</span>
+                <span className="">
+                  {performance.comparison.labels.pageSize}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.wordpress.pageSize}
                 </span>
               </div>
+
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.hosting}</span>
-                <span className="font-bold text-orange-600">
-                  {performance.comparison.wordpress.hosting}
+                <span className="">
+                  {performance.comparison.labels.security}
                 </span>
-              </div>
-              <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.security}</span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.wordpress.security}
                 </span>
@@ -195,37 +205,42 @@ export default function RedesignPerformance() {
             </h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.loadTime}</span>
+                <span className="">
+                  {performance.comparison.labels.loadTime}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.nextjs.loadTime}
                 </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.pageSpeed}</span>
+                <span className="">
+                  {performance.comparison.labels.pageSpeed}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.nextjs.pageSpeed}
                 </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.requests}</span>
+                <span className="">
+                  {performance.comparison.labels.requests}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.nextjs.requests}
                 </span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.pageSize}</span>
+                <span className="">
+                  {performance.comparison.labels.pageSize}
+                </span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.nextjs.pageSize}
                 </span>
               </div>
+
               <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.hosting}</span>
-                <span className="font-bold text-orange-600">
-                  {performance.comparison.nextjs.hosting}
+                <span className="">
+                  {performance.comparison.labels.security}
                 </span>
-              </div>
-              <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                <span className="">{performance.comparison.labels.security}</span>
                 <span className="font-bold text-orange-600">
                   {performance.comparison.nextjs.security}
                 </span>

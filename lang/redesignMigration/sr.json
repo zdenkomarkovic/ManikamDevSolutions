@@ -30,7 +30,7 @@
         "item3": "Vrhunska sigurnost bez dodatnih pluginova",
         "item4": "Moderan dizajn sa najnovijim UI/UX trendovima",
         "item5": "Odličan SEO i viša pozicija u Google rezultatima",
-        "item6": "Niži troškovi održavanja i hosting-a"
+        "item6": "Niži troškovi održavanja"
       }
     },
     "benefits": {
@@ -50,7 +50,7 @@
         },
         {
           "title": "Značajna Ušteda Novca",
-          "description": "Eliminišite mesečne troškove skupih WordPress plugin-ova, tema i dodataka. Next.js aplikacije mogu se hostovati na platformama kao što su Vercel, Netlify ili Cloudflare Pages potpuno BESPLATNO za male i srednje sajtove. Nema potrebe za skupim managed hosting-om ili VPS serverima. Automatsko skaliranje znači da plaćate samo ono što koristite. Klijenti u proseku štede 200-500€ godišnje nakon migracije."
+          "description": "Eliminišite mesečne troškove skupih WordPress plugin-ova, tema i dodataka. Klijenti u proseku štede 200-500€ godišnje nakon migracije."
         },
         {
           "title": "Maksimalna Sigurnost",
@@ -166,7 +166,7 @@
           "pageSpeed": "30-60",
           "requests": "80-150",
           "pageSize": "3-8 MB",
-          "hosting": "€15-50",
+
           "security": "Weekly",
           "mobile": "Poor"
         },
@@ -176,7 +176,7 @@
           "pageSpeed": "90-100",
           "requests": "10-30",
           "pageSize": "200-800 KB",
-          "hosting": "€0-10",
+
           "security": "Automatic",
           "mobile": "Excellent"
         },
@@ -241,10 +241,6 @@
         {
           "question": "Da li će moje forme i integracije raditi?",
           "answer": "Da! Migriramo sve kontakt forme, newsletter subscribe forme, payment integracije, CRM konekcije (HubSpot, Salesforce), email marketing (Mailchimp), analytics (Google Analytics, Meta Pixel) i sve ostale third-party servise koje koristite."
-        },
-        {
-          "question": "Gde će sajt biti hostovan?",
-          "answer": "Preporučujemo Vercel (kompanija koja razvija Next.js) jer nude najbolju integraciju, automatsko skaliranje i često besplatan hosting za male sajtove. Alternative su Netlify, CloudFlare Pages, ili vaš sopstveni server. Možete izabrati šta vam odgovara - mi podržavamo sve opcije."
         }
       ]
     }

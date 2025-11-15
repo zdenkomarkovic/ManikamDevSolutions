@@ -66,7 +66,7 @@ export default async function Home({
   const section = messages.section ?? defaultSection;
   const uslugeTitle = intl.formatMessage({ id: "usluge.title" });
   const refLink = intl.formatMessage({ id: "reference.link" });
-  const ourWorkTitle = intl.formatMessage({ id: "ourWork.title" });
+  const referenceTitle = intl.formatMessage({ id: "reference.title" });
 
   return (
     <main>
@@ -75,7 +75,7 @@ export default async function Home({
         <Hero title={heroTitle} section={section} />
         <Section1 section={section} cards={cards} />
         <Usluge usluge={usluge} title={uslugeTitle} />
-        <Reference refLink={refLink} title={ourWorkTitle} />
+        <Reference refLink={refLink} title={referenceTitle} />
       </div>
     </main>
   );

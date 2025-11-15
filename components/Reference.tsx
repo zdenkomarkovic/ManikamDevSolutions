@@ -160,7 +160,9 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
                     className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <p className="absolute bottom-5 left-8 text-xl text-black group-hover:scale-110 transition-transform duration-300">
-                    {refLink}...
+                    <span className="flex flex-col">
+                      {refLink} <span>{item.title}</span>
+                    </span>
                   </p>
                 </Link>
               </motion.div>

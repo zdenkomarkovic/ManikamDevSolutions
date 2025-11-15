@@ -8,138 +8,133 @@ export interface Reference {
 
 export const reference1: Reference[] = [
   {
-    title: "Kreditni Savetnik",
+    title: "kreditnisavetniksrbija.rs",
     image: "/images/SS11.png",
     link: "https://www.kreditnisavetniksrbija.rs/",
   },
   {
-    title: "Pure Clean Solutions",
+    title: "ciscenje-nis.rs",
     image: "/images/SS3.png",
     link: "https://www.ciscenje-nis.rs/",
   },
   {
-    title: "Enterijeri Kankan",
+    title: "separei.rs",
     image: "/images/SS4.png",
     link: "https://www.separei.rs/",
   },
 
   {
-    title: " Dm Rustic 24",
+    title: "dekorativneciglice.rs",
     image: "/images/SS5.png",
     link: "https://www.dekorativneciglice.rs/",
   },
   {
-    title: "Cool Taxi Nis",
+    title: "taxinis.rs",
     image: "/images/SS2.png",
     link: "https://www.taxinis.rs/",
   },
   {
-    title: "STEEL AM CONSTRUCTIONS",
+    title: "celicnekonstrukcije.rs",
     image: "/images/SS12.png",
     link: "https://www.celicnekonstrukcije.rs/",
   },
   {
-    title: "Autoring",
+    title: "kombiprevozputnikapozega.rs",
     image: "/images/SS9.png",
     link: "https://www.kombiprevozputnikapozega.rs/",
   },
   {
-    title: "Sushi Wasabi",
+    title: "sushiwasabi.rs",
     image: "/images/SS7.png",
     link: "https://www.sushiwasabi.rs/",
   },
   {
-    title: "Lucky Fitness",
+    title: "luckyfitness.rs",
     image: "/images/SS8.png",
     link: "https://www.luckyfitness.rs/",
   },
   {
-    title: "Šlep služba Purić 032 Čačak",
+    title: "slep-cacak.rs",
     image: "/images/SS6.png",
     link: "https://www.slep-cacak.rs/",
   },
 
   {
-    title: "Tolić Inženjering",
+    title: "celicne-konstrukcije.rs",
     image: "/images/SS13.png",
     link: "https://www.celicne-konstrukcije.rs/",
   },
 
   {
-    title: "M Migić",
+    title: "alpinistickiradovi.rs",
     image: "/images/SS10.png",
     link: "https://www.alpinistickiradovi.rs/",
   },
 ];
 export const reference2: Reference[] = [
   {
-    title: "HATTA AI",
+    title: "hatta.ai",
     image: "/images/reference (14).jpg",
-    link: "https://hatta-ai.vercel.app/",
+    link: "https://hatta.ai/",
   },
   {
-    title: "Micro Hair Clinic",
+    title: "microhairclinic.si",
     image: "/images/reference (13).jpg",
-    link: "https://microhairclinic.si/",
+    link: "https://microhairclinic.si/en",
   },
   {
-    title: "Ketering",
+    title: "ketering.rs",
     image: "/images/reference (12).jpg",
     link: "https://ketering-two.vercel.app/",
   },
   {
-    title: "Pustolovi",
+    title: "pustolovi.rs",
     image: "/images/reference (11).jpg",
     link: "https://pustolovi.vercel.app/",
   },
   {
-    title: "Slep Laki",
+    title: "slep-beograd.rs",
     image: "/images/reference (10).jpg",
     link: "https://slep-beograd.rs/",
   },
   {
-    title: "Amberg Pvc",
+    title: "aluipvcstolarija.com",
     image: "/images/reference (9).jpg",
     link: "https://aluipvcstolarija.com/",
   },
   {
-    title: "San Spremanje",
+    title: "ciscenjenovisad.rs",
     image: "/images/reference (8).jpg",
     link: "https://www.ciscenjenovisad.rs/",
   },
   {
-    title: "Institut Lira",
+    title: "zastitanaradu.rs",
     image: "/images/reference (7).jpg",
     link: "https://www.zastitanaradu.rs/",
   },
   {
-    title: "Fgc",
+    title: "fgc.rs",
     image: "/images/reference (6).jpg",
     link: "https://fgc.rs/",
   },
   {
-    title: "Grad Mont",
+    title: "izrada-bazena.rs",
     image: "/images/reference (5).jpg",
     link: "https://www.izrada-bazena.rs/",
   },
   {
-    title: "Trubaci",
-    image: "/images/reference (4).jpg",
-    link: "https://trubaci.vercel.app",
-  },
-  {
-    title: "Kuca Znanja",
+    title: "kucaznanja.edu.rs",
     image: "/images/reference (3).jpg",
     link: "https://kucaznanja.edu.rs",
   },
   {
-    title: "Servis Mgm",
+    title: "servisracunaramgm.rs",
     image: "/images/reference (2).jpg",
     link: "https://servisracunaramgm.rs",
   },
 
   {
-    title: "Bliss",
+    title: "blisscollectionofficial.rs",
     image: "/images/reference (15).jpg",
     link: "https://www.blisscollectionofficial.rs/",
   },

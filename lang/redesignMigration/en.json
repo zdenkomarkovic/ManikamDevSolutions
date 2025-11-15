@@ -30,7 +30,7 @@
         "item3": "Top-notch security without additional plugins",
         "item4": "Modern design with latest UI/UX trends",
         "item5": "Excellent SEO and higher Google rankings",
-        "item6": "Lower maintenance and hosting costs"
+        "item6": "Lower maintenance costs"
       }
     },
     "benefits": {
@@ -50,7 +50,7 @@
         },
         {
           "title": "Significant Cost Savings",
-          "description": "Eliminate monthly costs of expensive WordPress plugins, themes and add-ons. Next.js applications can be hosted on platforms like Vercel, Netlify or Cloudflare Pages completely FREE for small and medium sites. No need for expensive managed hosting or VPS servers. Auto-scaling means you only pay for what you use. Clients save an average of €200-500 per year after migration."
+          "description": "Eliminate monthly costs of expensive WordPress plugins, themes and add-ons. Clients save an average of €300-1000 per year after migration."
         },
         {
           "title": "Maximum Security",
@@ -241,10 +241,6 @@
         {
           "question": "Will my forms and integrations work?",
           "answer": "Yes! We migrate all contact forms, newsletter subscription forms, payment integrations, CRM connections (HubSpot, Salesforce), email marketing (Mailchimp), analytics (Google Analytics, Meta Pixel) and all other third-party services you use."
-        },
-        {
-          "question": "Where will the site be hosted?",
-          "answer": "We recommend Vercel (the company that develops Next.js) as they offer the best integration, automatic scaling and often free hosting for small sites. Alternatives are Netlify, CloudFlare Pages, or your own server. You can choose what works for you - we support all options."
         }
       ]
     }

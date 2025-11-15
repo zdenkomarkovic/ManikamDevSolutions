@@ -19,7 +19,7 @@
     },
     "packages": {
       "basic": {
-        "title": "Basic Webshop - €700",
+        "title": "Basic Webshop - €1200",
         "subtitle": "Ideal for small businesses starting online sales",
         "feature1": "Up to 1000 products",
         "feature2": "Mobile optimization",
@@ -32,7 +32,7 @@
       },
       "professional": {
         "badge": "MOST POPULAR",
-        "title": "Professional Webshop - €1000",
+        "title": "Professional Webshop - €2000",
         "subtitle": "Complete e-commerce solution for serious business",
         "feature1": "Up to 5000 products",
         "feature2": "Basic payment (cards, cash on delivery)",
