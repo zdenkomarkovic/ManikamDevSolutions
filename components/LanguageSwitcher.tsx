@@ -22,11 +22,14 @@ const LanguageSwitcher = () => {
       `/${otherLocale}`
     );
 
-    // Postavi cookie za USER_LOCALE_OVERRIDE
-    document.cookie = `USER_LOCALE_OVERRIDE=${otherLocale}; path=/; max-age=${60 * 60 * 24 * 365}`;
+    // Postavi cookie za USER_LOCALE_OVERRIDE sa SameSite atributom
+    document.cookie = `USER_LOCALE_OVERRIDE=${otherLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 
-    // Redirektuj na novu stranicu
-    router.push(newPath);
+    // Postavi i NEXT_LOCALE cookie za konzistentnost
+    document.cookie = `NEXT_LOCALE=${otherLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
+
+    // Hard refresh da bi middleware mogao da pročita cookie
+    window.location.href = newPath;
   };
 
   return (

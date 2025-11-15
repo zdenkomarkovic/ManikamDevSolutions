@@ -17,6 +17,59 @@
       "p2": "Naš cilj je da vaš sajt bude vidljiv pravim korisnicima u pravo vreme. Kombinujemo tehnički SEO, kvalitetan sadržaj i kvalitetne linkove kako bismo ostvarili dugoročne rezultate.",
       "p3": "<strong>Više od 90% online iskustva počinje pretraživačem</strong> - budite tu gde su vaši klijenti! Profesionalna SEO optimizacija nije trošak, već investicija koja donosi dugoročne rezultate i organski saobraćaj bez plaćanja za svaki klik."
     },
+    "packages": {
+      "title": "Naši SEO Paketi",
+      "subtitle": "Izaberite paket koji odgovara vašim potrebama i budžetu",
+      "starter": {
+        "title": "Starter SEO - 250€/mesečno",
+        "subtitle": "Idealno za male biznise i startove",
+        "feature1": "Osnovni tehnički SEO audit",
+        "feature2": "Optimizacija do 10 stranica",
+        "feature3": "Istraživanje do 20 ključnih reči",
+        "feature4": "Osnovna on-page optimizacija",
+        "feature5": "Google My Business setup",
+        "feature6": "Mesečni izveštaj o performansama",
+        "feature7": "Email podrška",
+        "duration": "Minimalni period:",
+        "durationMonths": "3 meseca"
+      },
+      "professional": {
+        "badge": "NAJPOPULARNIJI",
+        "title": "Professional SEO - 450€/mesečno",
+        "subtitle": "Za ozbiljne biznise koji žele rast",
+        "feature1": "Detaljan tehnički SEO audit",
+        "feature2": "Optimizacija do 30 stranica",
+        "feature3": "Istraživanje do 50 ključnih reči",
+        "feature4": "Kompletna on-page optimizacija",
+        "feature5": "Kreiranje 4 SEO optimizovana članka mesečno",
+        "feature6": "Link building strategija",
+        "feature7": "Google My Business optimizacija",
+        "feature8": "Konkurentska analiza",
+        "feature9": "Mesečni detaljni izveštaji",
+        "feature10": "Prioritetna email i telefonska podrška",
+        "duration": "Minimalni period:",
+        "durationMonths": "6 meseci"
+      },
+      "enterprise": {
+        "title": "Enterprise SEO - po dogovoru",
+        "subtitle": "Za velike kompanije sa specifičnim potrebama",
+        "feature1": "Neograničen broj stranica",
+        "feature2": "Kompletna SEO strategija",
+        "feature3": "Napredna keyword research",
+        "feature4": "Kreiranje 8+ SEO članaka mesečno",
+        "feature5": "Agresivna link building kampanja",
+        "feature6": "Tehnička SEO optimizacija",
+        "feature7": "Lokalni SEO za više lokacija",
+        "feature8": "Konkurentska analiza i praćenje",
+        "feature9": "Redizajn i migracija konsultacije",
+        "feature10": "Nedeljni detaljni izveštaji",
+        "feature11": "Dedicated account manager",
+        "feature12": "24/7 prioritetna podrška",
+        "duration": "Minimalni period:",
+        "durationMonths": "12 meseci",
+        "note": "Prilagođen paket sa custom rešenjima"
+      }
+    },
     "features": {
       "title": "Naše SEO Usluge",
       "keyword": {
