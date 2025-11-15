@@ -84,9 +84,28 @@ export function middleware(request: NextRequest) {
   const country = request.headers.get('x-vercel-ip-country') || "";
 
   // Proveri da li je localhost/development mode
-  const isDevelopment = !country; // Na localhost-u nema geo headera
-  const isLocalhost = request.headers.get('host')?.includes('localhost') ||
-                      request.headers.get('host')?.includes('127.0.0.1');
+  const host = request.headers.get('host') || '';
+  const isLocalhost = host.includes('localhost') ||
+                      host.includes('127.0.0.1') ||
+                      host.startsWith('192.168.') ||
+                      host.startsWith('10.') ||
+                      host.startsWith('172.16.') ||
+                      host.startsWith('172.17.') ||
+                      host.startsWith('172.18.') ||
+                      host.startsWith('172.19.') ||
+                      host.startsWith('172.20.') ||
+                      host.startsWith('172.21.') ||
+                      host.startsWith('172.22.') ||
+                      host.startsWith('172.23.') ||
+                      host.startsWith('172.24.') ||
+                      host.startsWith('172.25.') ||
+                      host.startsWith('172.26.') ||
+                      host.startsWith('172.27.') ||
+                      host.startsWith('172.28.') ||
+                      host.startsWith('172.29.') ||
+                      host.startsWith('172.30.') ||
+                      host.startsWith('172.31.');
+  const isDevelopment = process.env.NODE_ENV === 'development' || isLocalhost;
 
   // Proveri da li korisnik ima ručno postavljen jezik
   const userLocaleOverride = request.cookies.get('USER_LOCALE_OVERRIDE')?.value;
