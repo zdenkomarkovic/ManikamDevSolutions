@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SEOHero from "@/components/seo/SEOHero";
 import SEOIntro from "@/components/seo/SEOIntro";
@@ -21,51 +21,76 @@ type Props = {
   messages: Messages;
 };
 
-// Animacija varijante za fade in + slide up
-const fadeInUp = {
-  hidden: { opacity: 0, y: 60 },
+// Detektuj da li je mobilni uređaj
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
+
+// Optimizovane animacije - GPU ubrzane, kraće duration za mobile
+const createFadeInUp = (isMobile: boolean) => ({
+  hidden: { opacity: 0, y: isMobile ? 20 : 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: isMobile ? 0.3 : 0.5,
       ease: "easeOut",
     },
   },
-};
+});
 
-// Animacija za scale up (uvećavanje)
-const scaleUp = {
-  hidden: { opacity: 0, scale: 0.8 },
+const createScaleUp = (isMobile: boolean) => ({
+  hidden: { opacity: 0, scale: 0.95 },
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.7,
+      duration: isMobile ? 0.3 : 0.5,
       ease: "easeOut",
     },
   },
-};
+});
 
-// Hero animacija
-const heroVariants = {
+const createHeroVariants = (isMobile: boolean) => ({
   hidden: {
     opacity: 0,
-    y: 100,
-    scale: 0.9,
+    y: isMobile ? 30 : 60,
+    scale: 0.98,
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: isMobile ? 0.4 : 0.6,
       ease: "easeOut",
     },
   },
-};
+});
 
 export default function SEOPageClient({ locale, messages }: Props) {
+  const isMobile = useIsMobile();
+
+  // Kreiraj varijante na osnovu device type-a
+  const fadeInUp = createFadeInUp(isMobile);
+  const scaleUp = createScaleUp(isMobile);
+  const heroVariants = createHeroVariants(isMobile);
+
+  // Viewport threshold - viši za mobilne uređaje
+  const viewportAmount = isMobile ? 0.15 : 0.2;
+
   return (
     <MessagesProvider locale={locale} messages={messages}>
       <div className="bg-gray-900/90">
@@ -75,6 +100,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
             variants={heroVariants}
             initial="hidden"
             animate="visible"
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOHero />
           </motion.div>
@@ -85,8 +111,9 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOIntro />
           </motion.div>
@@ -94,16 +121,19 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOFeatures />
           </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOCTA />
           </motion.div>
@@ -111,8 +141,9 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount }}
             variants={scaleUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOServices />
           </motion.div>
@@ -120,8 +151,9 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOProcess />
           </motion.div>
@@ -129,8 +161,9 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SEOFAQ />
           </motion.div>
@@ -139,7 +172,3 @@ export default function SEOPageClient({ locale, messages }: Props) {
     </MessagesProvider>
   );
 }
-
-
-
-
