@@ -26,9 +26,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
 
+  // Load translations on server side for instant rendering
+  const mainMsgs = await import(`@/lang/${locale}.json`);
+  const contactMsgs = await import(`@/lang/contact/${locale}.json`);
+
+  // Merge messages
+  const messages = {
+    ...mainMsgs.default,
+    ...contactMsgs.default,
+  };
+
   return (
     <LocaleProvider locale={locale as "en" | "sr"}>
-      <ContactClient />
+      <ContactClient messages={messages} />
     </LocaleProvider>
   );
 }

@@ -240,3 +240,30 @@ html {
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
 }
+
+/* Smooth scroll animations - no glitching */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-left {
+  animation: scroll-left 35s linear infinite;
+}
