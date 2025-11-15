@@ -13,6 +13,7 @@ import { getNavList } from "@/locales/navUtils";
 import type { Locale } from "@/i18n-config";
 import logo from "../public/images/android-chrome-192x192.png";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function isValidLocale(locale: string): locale is Locale {
   return (i18n.locales as readonly string[]).includes(locale);
@@ -134,38 +135,9 @@ export default function Header({ locale }: { locale: string }) {
             })}
           </div>
 
-          <div dir="ltr" className="flex flex-col">
-            {[...locales].sort().map((loc) => {
-              const pageMapping: Record<string, string> = {
-                "/izrada-sajta": "/website-development",
-                "/izrada-web-shopa": "/webshop-development",
-                "/redizajn-migracija": "/website-redesign",
-                "/drustvene-mreze": "/social-media",
-                "/website-development": "/izrada-sajta",
-                "/webshop-development": "/izrada-web-shopa",
-                "/website-redesign": "/redizajn-migracija",
-                "/social-media": "/drustvene-mreze",
-              };
-
-              let pathWithoutLocale =
-                pathname.replace(`/${currentLocale}`, "") || "/";
-
-              if (loc !== currentLocale && pageMapping[pathWithoutLocale]) {
-                pathWithoutLocale = pageMapping[pathWithoutLocale];
-              }
-
-              const newPath = `/${loc}${pathWithoutLocale}`;
-
-              return (
-                <Link
-                  key={loc}
-                  href={newPath}
-                  className={loc === currentLocale ? "font-bold" : ""}
-                >
-                  {loc}
-                </Link>
-              );
-            })}
+          {/* Language Switcher - Desktop */}
+          <div className="hidden md:block">
+            <LanguageSwitcher />
           </div>
 
           <div className="md:hidden">
@@ -251,7 +223,10 @@ export default function Header({ locale }: { locale: string }) {
               );
             })}
 
-            <div className="mt-4"></div>
+            {/* Language Switcher - Mobile */}
+            <div className="mt-4 flex justify-center">
+              <LanguageSwitcher />
+            </div>
           </div>
         </motion.div>
       )}

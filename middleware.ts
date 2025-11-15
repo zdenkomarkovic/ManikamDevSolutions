@@ -83,22 +83,39 @@ export function middleware(request: NextRequest) {
   // Prvo detektuj zemlju - Next.js 15 koristi headers
   const country = request.headers.get('x-vercel-ip-country') || "";
 
+  // Proveri da li je localhost/development mode
+  const isDevelopment = !country; // Na localhost-u nema geo headera
+  const isLocalhost = request.headers.get('host')?.includes('localhost') ||
+                      request.headers.get('host')?.includes('127.0.0.1');
+
+  // Proveri da li korisnik ima ručno postavljen jezik
+  const userLocaleOverride = request.cookies.get('USER_LOCALE_OVERRIDE')?.value;
+
   // DEBUG: Log za proveru geo detekcije
   console.log('🌍 Middleware Debug:', {
     pathname,
     country: country || 'NO GEO DATA',
     'x-vercel-ip-country': request.headers.get('x-vercel-ip-country') || 'NO HEADER',
     isBot,
+    isLocalhost,
+    isDevelopment,
+    userLocaleOverride: userLocaleOverride || 'NONE',
     userAgent: userAgent.substring(0, 50)
   });
+
+  // LOCALHOST MODE: Dozvoli sve jezike bez redirecta
+  if (isLocalhost || isDevelopment) {
+    console.log('🏠 Localhost detected - allowing all languages');
+  }
 
   // Dozvoljene zemlje za srpski sadržaj
   const allowedCountriesForSerbianContent = ["RS", "BA", "ME", "MK"];
 
   // PRIORITET 1: Blokiranje srpskog jezika za korisnike van regiona
-  // Proveri da li je korisnik iz druge zemlje ILI nema geo podataka (bezbedonosni fallback)
+  // ALI: Poštuj korisnikov ručni izbor i dozvoli sve jezike na localhost-u
   const isFromAllowedCountry = country && allowedCountriesForSerbianContent.includes(country);
-  const shouldBlockSerbian = !isBot && !isFromAllowedCountry;
+  const hasUserOverride = !!userLocaleOverride;
+  const shouldBlockSerbian = !isBot && !isFromAllowedCountry && !hasUserOverride && !isLocalhost && !isDevelopment;
 
   if (shouldBlockSerbian) {
     const reason = country ? `from ${country}` : 'no geo data (blocking Serbian for safety)';
@@ -143,12 +160,12 @@ export function middleware(request: NextRequest) {
 
   if (pathLocale) {
     // PRIORITET 2: Korisnici iz RS/BA/ME/MK treba da vide srpsku verziju
-    // Ako pokušaju da pristupe engleskoj verziji, redirektuj ih na srpsku
+    // ALI: Poštuj korisnikov ručni izbor jezika i dozvoli sve jezike na localhost-u
     const isEnglishPage = pathLocale === "en";
-    const shouldRedirectToSerbian = !isBot && isFromAllowedCountry && isEnglishPage;
+    const shouldRedirectToSerbian = !isBot && isFromAllowedCountry && isEnglishPage && !hasUserOverride && !isLocalhost && !isDevelopment;
 
     if (shouldRedirectToSerbian) {
-      console.log('🔄 User from', country, 'accessing /en → Redirecting to /sr');
+      console.log('🔄 User from', country, 'accessing /en → Redirecting to /sr (first visit, no override)');
       // Zameni /en sa /sr
       const newPath = pathname.replace(/^\/en(\/|$|\?)/, '/sr$1') + (request.nextUrl.search || '');
       const response = NextResponse.redirect(new URL(newPath, request.url));
@@ -162,18 +179,33 @@ export function middleware(request: NextRequest) {
       return response;
     }
 
+    // Korisnik ima override ili je na localhost-u - poštuj njegov izbor
+    if (hasUserOverride || isLocalhost || isDevelopment) {
+      console.log('✅ Respecting user choice:', pathLocale, '(override:', userLocaleOverride || 'localhost', ')');
+    }
+
     // Jezik već postoji u putanji, samo nastavi
     nextLocale = pathLocale;
     response = NextResponse.next();
   } else {
-    // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje
+    // Nema jezika u URL-u, automatski redirektuj na osnovu zemlje ili korisnikovog izbora
     let locale: string;
 
-    // Botovi vide srpsku verziju kao default (za SEO)
-    if (isBot) {
+    // PRIORITET 1: Korisnikov ručni izbor
+    if (userLocaleOverride) {
+      locale = userLocaleOverride;
+      console.log('🎯 Using user override locale:', locale);
+    }
+    // PRIORITET 2: Botovi vide srpsku verziju kao default (za SEO)
+    else if (isBot) {
       locale = "sr";
     }
-    // Ako geo RADI (country postoji)
+    // PRIORITET 3: Localhost/development - default srpski (za lakše testiranje)
+    else if (isLocalhost || isDevelopment) {
+      locale = "sr";
+      console.log('🏠 Localhost - defaulting to Serbian');
+    }
+    // PRIORITET 4: Ako geo RADI (country postoji)
     else if (country) {
       // Proveri da li je iz dozvoljenog regiona
       if (allowedCountriesForSerbianContent.includes(country)) {
