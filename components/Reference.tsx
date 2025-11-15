@@ -15,7 +15,10 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   }, []);
 
   // Funkcija za kreiranje naizmeničnog teksta sa custom tekstom
-  const createAlternatingTextWithCustomTitle = (text: string, count: number) => {
+  const createAlternatingTextWithCustomTitle = (
+    text: string,
+    count: number
+  ) => {
     const items = [];
     for (let i = 0; i < count; i++) {
       const isOrange = i % 2 === 0;
@@ -39,7 +42,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
           {text}
         </span>
       );
-      items.push(<span key={`dot-${i}`} className={isOrange ? "" : "text-white"}> • </span>);
+      items.push(<span className="text-white"> • </span>);
     }
     items.push(<span key="nbsp">&nbsp;</span>);
     return items;
@@ -94,9 +97,9 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   };
 
   return (
-    <div id="reference" className="py-10 border-t">
+    <div id="reference" className="pb-10">
       {/* Animated text naslov - puna širina ekrana */}
-      <div className="w-full pb-10 md:py-10 overflow-hidden">
+      <div className="w-full pb-10 md:py-16 overflow-hidden">
         {/* Gornji red - ide DESNO */}
         <div className="mb-4 overflow-hidden">
           <motion.div
@@ -109,10 +112,10 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
               repeatType: "loop",
             }}
           >
-            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+            <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
               {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
-            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+            <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
               {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
           </motion.div>
@@ -130,10 +133,10 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
               repeatType: "loop",
             }}
           >
-            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+            <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
               {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
-            <h3 className="text-4xl md:text-6xl font-extrabold whitespace-nowrap">
+            <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
               {createAlternatingTextWithCustomTitle(title, 6)}
             </h3>
           </motion.div>
@@ -143,75 +146,79 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
       {/* Reference grid - zadržava container */}
       <div className="container px-2 md:px-16 mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-        {currentReferences.map((item, i) => {
-          return (
-            <motion.div
-              key={`${item.title}-${i}`}
-              className="relative z-20 rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-            >
-              <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                <Image
-                  src={item.image}
-                  width={2000}
-                  height={2000}
-                  alt={`${item.title} - manikam web solutions`}
-                  className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <p className="absolute bottom-5 left-8 text-xl text-black group-hover:scale-110 transition-transform duration-300">
-                  {refLink}...
-                </p>
-              </Link>
-            </motion.div>
-          );
-        })}
-      </div>
+          {currentReferences.map((item, i) => {
+            return (
+              <motion.div
+                key={`${item.title}-${i}`}
+                className="relative z-20 rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={item.image}
+                    width={2000}
+                    height={2000}
+                    alt={`${item.title} - manikam web solutions`}
+                    className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <p className="absolute bottom-5 left-8 text-xl text-black group-hover:scale-110 transition-transform duration-300">
+                    {refLink}...
+                  </p>
+                </Link>
+              </motion.div>
+            );
+          })}
+        </div>
 
-      {/* Paginacija - strelice + 3 dugmića */}
-      {totalPages > 1 && (
-        <div className="flex justify-center items-center gap-2 mt-8 px-4 relative z-20">
-          {/* Prethodna stranica */}
-          <button
-            onClick={goToPreviousPage}
-            disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-              currentPage === 1
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-orange-600 to-orange-400 text-white hover:scale-105"
-            }`}
-          >
-            ←
-          </button>
-          {/* 3 dugmića za stranice */}
-          {getPageNumbers().map((page, index) => (
+        {/* Paginacija - strelice + 3 dugmića */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-2 mt-8 px-4 relative z-20">
+            {/* Prethodna stranica */}
             <button
-              key={index}
-              onClick={() => goToPage(page)}
+              onClick={goToPreviousPage}
+              disabled={currentPage === 1}
               className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-                page === currentPage
-                  ? "bg-gradient-to-r from-orange-600 to-orange-400 text-white scale-110"
-                  : "bg-gray-200 text-gray-700  hover:text-white hover:scale-105"
+                currentPage === 1
+                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  : "bg-gradient-to-r from-orange-600 to-orange-400 text-white hover:scale-105"
               }`}
             >
-              {page}
+              ←
             </button>
-          ))}
-          {/* Sledeća stranica */}
-          <button
-            onClick={goToNextPage}
-            disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-              currentPage === totalPages
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-orange-600 to-orange-400 text-white  hover:scale-105"
-            }`}
-          >
-            →
-          </button>
-        </div>
-      )}
+            {/* 3 dugmića za stranice */}
+            {getPageNumbers().map((page, index) => (
+              <button
+                key={index}
+                onClick={() => goToPage(page)}
+                className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                  page === currentPage
+                    ? "bg-gradient-to-r from-orange-600 to-orange-400 text-white scale-110"
+                    : "bg-gray-200 text-gray-700  hover:text-white hover:scale-105"
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+            {/* Sledeća stranica */}
+            <button
+              onClick={goToNextPage}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                currentPage === totalPages
+                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  : "bg-gradient-to-r from-orange-600 to-orange-400 text-white  hover:scale-105"
+              }`}
+            >
+              →
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
