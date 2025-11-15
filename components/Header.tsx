@@ -137,7 +137,9 @@ export default function Header({ locale }: { locale: string }) {
             <LanguageSwitcher />
           </div>
 
-          <div className="md:hidden">
+          {/* Mobile: Language Switcher + Menu Button */}
+          <div className="md:hidden flex items-center gap-3">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="icon"
@@ -219,11 +221,6 @@ export default function Header({ locale }: { locale: string }) {
                 </Link>
               );
             })}
-
-            {/* Language Switcher - Mobile */}
-            <div className="mt-4 flex justify-center">
-              <LanguageSwitcher />
-            </div>
           </div>
         </motion.div>
       )}
