@@ -7,32 +7,23 @@ type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-export const metadata: Metadata = {
-  title: "Izrada Sajta - Profesionalna Web Rešenja | Manikam Web Solutions",
-  description:
-    "Profesionalna izrada sajtova u Next.js tehnologiji. Brži, sigurniji i SEO optimizovani sajtovi za vaš biznis. Modernizacija WordPress sajtova i migracija na napredne tehnologije.",
-  keywords: [
-    "izrada sajta",
-    "web sajt",
-    "web dizajn",
-    "Next.js",
-    "React.js",
-    "SEO optimizacija",
-    "responzivni dizajn",
-    "brzi sajt",
-    "modernizacija sajta",
-    "WordPress migracija",
-    "web development",
-    "profesionalni sajt",
-  ],
-  alternates: {
-    canonical: "https://manikamwebsolutions.com/sr/izrada-sajta",
-    languages: {
-      sr: "https://manikamwebsolutions.com/sr/izrada-sajta",
-      en: "https://manikamwebsolutions.com/en/website-development",
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const messages = await import(`@/lang/websiteDevelopment/${locale}.json`);
+
+  return {
+    title: messages.websiteDevelopment.page.title,
+    description: messages.websiteDevelopment.page.description,
+    alternates: {
+      canonical: `https://manikamwebsolutions.com/${locale}/izrada-sajta`,
+      languages: {
+        sr: "https://manikamwebsolutions.com/sr/izrada-sajta",
+        en: "https://manikamwebsolutions.com/en/website-development",
+      },
     },
-  },
-};
+  };
+}
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
