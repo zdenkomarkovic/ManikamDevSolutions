@@ -102,44 +102,36 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
       <div className="w-full pb-10 md:py-16 overflow-hidden">
         {/* Gornji red - ide DESNO */}
         <div className="mb-4 overflow-hidden">
-          <motion.div
-            className="flex"
-            animate={{ x: ["-50%", "0%"] }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
+          <div
+            className="flex animate-scroll-right"
+            style={{
+              willChange: "transform",
             }}
           >
             <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle(title, 6)}
+              {createAlternatingTextWithCustomTitle(title, 8)}
             </h3>
             <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle(title, 6)}
+              {createAlternatingTextWithCustomTitle(title, 8)}
             </h3>
-          </motion.div>
+          </div>
         </div>
 
         {/* Donji red - ide LEVO */}
         <div className="overflow-hidden">
-          <motion.div
-            className="flex"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
+          <div
+            className="flex animate-scroll-left"
+            style={{
+              willChange: "transform",
             }}
           >
             <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle(title, 6)}
+              {createAlternatingTextWithCustomTitle(title, 8)}
             </h3>
             <h3 className="text-4xl md:text-8xl font-extrabold whitespace-nowrap">
-              {createAlternatingTextWithCustomTitle(title, 6)}
+              {createAlternatingTextWithCustomTitle(title, 8)}
             </h3>
-          </motion.div>
+          </div>
         </div>
       </div>
 
