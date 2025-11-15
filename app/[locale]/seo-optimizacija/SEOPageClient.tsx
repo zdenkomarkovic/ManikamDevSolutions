@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SEOHero from "@/components/seo/SEOHero";
 import SEOIntro from "@/components/seo/SEOIntro";
+import SEOPackages from "@/components/seo/SEOPackages";
 import SEOFeatures from "@/components/seo/SEOFeatures";
 import SEOServices from "@/components/seo/SEOServices";
 import SEOCTA from "@/components/seo/SEOCTA";
@@ -116,6 +117,16 @@ export default function SEOPageClient({ locale, messages }: Props) {
             style={{ willChange: 'transform, opacity' }}
           >
             <SEOIntro />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: viewportAmount }}
+            variants={scaleUp}
+            style={{ willChange: 'transform, opacity' }}
+          >
+            <SEOPackages />
           </motion.div>
 
           <motion.div

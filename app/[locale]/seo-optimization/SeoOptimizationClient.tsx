@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SEOHero from "@/components/seo/SEOHero";
 import SEOIntro from "@/components/seo/SEOIntro";
+import SEOPackages from "@/components/seo/SEOPackages";
 import SEOFeatures from "@/components/seo/SEOFeatures";
 import SEOServices from "@/components/seo/SEOServices";
 import SEOCTA from "@/components/seo/SEOCTA";
@@ -89,6 +90,15 @@ const SeoOptimizationClient = ({ locale, messages }: Props) => {
             variants={fadeInUp}
           >
             <SEOIntro />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={scaleUp}
+          >
+            <SEOPackages />
           </motion.div>
 
           <motion.div

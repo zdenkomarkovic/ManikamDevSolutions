@@ -17,6 +17,59 @@
       "p2": "Our goal is to make your site visible to the right users at the right time. We combine technical SEO, quality content and quality links to achieve long-term results.",
       "p3": "<strong>Over 90% of online experiences start with a search engine</strong> - be where your clients are! Professional SEO optimization is not an expense, but an investment that brings long-term results and organic traffic without paying for every click."
     },
+    "packages": {
+      "title": "Our SEO Packages",
+      "subtitle": "Choose a package that fits your needs and budget",
+      "starter": {
+        "title": "Starter SEO - €250/month",
+        "subtitle": "Ideal for small businesses and startups",
+        "feature1": "Basic technical SEO audit",
+        "feature2": "Optimization of up to 10 pages",
+        "feature3": "Research of up to 20 keywords",
+        "feature4": "Basic on-page optimization",
+        "feature5": "Google My Business setup",
+        "feature6": "Monthly performance report",
+        "feature7": "Email support",
+        "duration": "Minimum period:",
+        "durationMonths": "3 months"
+      },
+      "professional": {
+        "badge": "MOST POPULAR",
+        "title": "Professional SEO - €450/month",
+        "subtitle": "For serious businesses that want growth",
+        "feature1": "Detailed technical SEO audit",
+        "feature2": "Optimization of up to 30 pages",
+        "feature3": "Research of up to 50 keywords",
+        "feature4": "Complete on-page optimization",
+        "feature5": "Creation of 4 SEO-optimized articles monthly",
+        "feature6": "Link building strategy",
+        "feature7": "Google My Business optimization",
+        "feature8": "Competitive analysis",
+        "feature9": "Monthly detailed reports",
+        "feature10": "Priority email and phone support",
+        "duration": "Minimum period:",
+        "durationMonths": "6 months"
+      },
+      "enterprise": {
+        "title": "Enterprise SEO - by agreement",
+        "subtitle": "For large companies with specific needs",
+        "feature1": "Unlimited number of pages",
+        "feature2": "Complete SEO strategy",
+        "feature3": "Advanced keyword research",
+        "feature4": "Creation of 8+ SEO articles monthly",
+        "feature5": "Aggressive link building campaign",
+        "feature6": "Technical SEO optimization",
+        "feature7": "Local SEO for multiple locations",
+        "feature8": "Competitive analysis and tracking",
+        "feature9": "Redesign and migration consultation",
+        "feature10": "Weekly detailed reports",
+        "feature11": "Dedicated account manager",
+        "feature12": "24/7 priority support",
+        "duration": "Minimum period:",
+        "durationMonths": "12 months",
+        "note": "Custom package with tailored solutions"
+      }
+    },
     "features": {
       "title": "Our SEO Services",
       "keyword": {
