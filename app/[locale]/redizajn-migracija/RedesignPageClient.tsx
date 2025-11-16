@@ -47,13 +47,11 @@ const createItemVariants = (isMobile: boolean) => ({
 const createHeroVariants = (isMobile: boolean) => ({
   hidden: {
     opacity: 0,
-    y: isMobile ? 30 : 60,
-    scale: 0.98,
+    y: isMobile ? 20 : 40,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
       duration: isMobile ? 0.4 : 0.6,
       ease: "easeOut",
@@ -69,7 +67,8 @@ export default function RedesignPageClient() {
   const heroVariants = createHeroVariants(isMobile);
 
   // Viewport threshold - viši za mobilne uređaje
-  const viewportAmount = isMobile ? 0.15 : 0.2;
+  const viewportAmount = 0.01;
+  const viewportMargin = isMobile ? "-80px" : "-120px";
 
   return (
     <div className="bg-gray-900/90">
@@ -90,7 +89,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignIntro />
@@ -100,7 +99,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignBenefits />
@@ -110,7 +109,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignWhyNextJS />
@@ -120,7 +119,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignCTA />
@@ -130,7 +129,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignProcess />
@@ -140,7 +139,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignPerformance />
@@ -150,7 +149,7 @@ export default function RedesignPageClient() {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             style={{ willChange: 'transform, opacity' }}
           >
             <RedesignFAQ />

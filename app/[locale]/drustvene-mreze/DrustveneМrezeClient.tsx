@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SocialMediaHero from "@/components/drustvene-mreze/SocialMediaHero";
 import SocialMediaIntro from "@/components/drustvene-mreze/SocialMediaIntro";
@@ -13,56 +13,85 @@ import SocialMediaPackages from "@/components/drustvene-mreze/SocialMediaPackage
 import SocialMediaFAQ from "@/components/drustvene-mreze/SocialMediaFAQ";
 import SocialMediaCTA from "@/components/drustvene-mreze/SocialMediaCTA";
 
-// Animacija varijante za fade in + slide up
-const fadeInUp = {
-  hidden: { opacity: 0, y: 60 },
+// Detektuj da li je mobilni uređaj
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
+
+// Optimizovane animacije - GPU ubrzane, kraće duration za mobile
+const createFadeInUp = (isMobile: boolean) => ({
+  hidden: { opacity: 0, y: isMobile ? 20 : 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: isMobile ? 0.3 : 0.5,
       ease: "easeOut",
     },
   },
-};
+});
 
-// Animacija za scale up (uvećavanje)
-const scaleUp = {
-  hidden: { opacity: 0, scale: 0.8 },
+const createScaleUp = (isMobile: boolean) => ({
+  hidden: { opacity: 0, y: isMobile ? 15 : 30 },
   visible: {
     opacity: 1,
-    scale: 1,
+    y: 0,
     transition: {
-      duration: 0.7,
+      duration: isMobile ? 0.3 : 0.5,
       ease: "easeOut",
     },
   },
-};
+});
 
-// Hero animacija kao u SEOPageClient
-const heroVariants = {
+const createHeroVariants = (isMobile: boolean) => ({
   hidden: {
     opacity: 0,
-    y: 100,
-    scale: 0.9,
+    y: isMobile ? 20 : 40,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      duration: 0.8,
+      duration: isMobile ? 0.4 : 0.6,
       ease: "easeOut",
     },
   },
-};
+});
 
 const DrustveneМrezeClient = () => {
+  const isMobile = useIsMobile();
+
+  // Kreiraj varijante na osnovu device type-a
+  const fadeInUp = createFadeInUp(isMobile);
+  const scaleUp = createScaleUp(isMobile);
+  const heroVariants = createHeroVariants(isMobile);
+
+  // Viewport threshold
+  const viewportAmount = 0.01;
+  const viewportMargin = isMobile ? "-80px" : "-120px";
+
   return (
     <div className=" bg-gray-900/90 ">
       {/* Hero sekcija */}
       <section className="pt-24 pb-6 md:pb-16 px-4">
-        <motion.div variants={heroVariants} initial="hidden" animate="visible">
+        <motion.div
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
+          style={{ willChange: 'transform, opacity' }}
+        >
           <SocialMediaHero />
         </motion.div>
       </section>
@@ -73,8 +102,9 @@ const DrustveneМrezeClient = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaIntro />
           </motion.div>
@@ -82,32 +112,36 @@ const DrustveneМrezeClient = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaServices />
           </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaPackages />
           </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaAds />
           </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={scaleUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaCTA />
           </motion.div>
@@ -115,8 +149,9 @@ const DrustveneМrezeClient = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaContent />
           </motion.div>
@@ -124,24 +159,27 @@ const DrustveneМrezeClient = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaProcess />
           </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaPlatforms />
           </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
+            style={{ willChange: 'transform, opacity' }}
           >
             <SocialMediaFAQ />
           </motion.div>

@@ -53,10 +53,10 @@ const createFadeInUp = (isMobile: boolean) => ({
 });
 
 const createScaleUp = (isMobile: boolean) => ({
-  hidden: { opacity: 0, scale: 0.95 },
+  hidden: { opacity: 0, y: isMobile ? 15 : 30 },
   visible: {
     opacity: 1,
-    scale: 1,
+    y: 0,
     transition: {
       duration: isMobile ? 0.3 : 0.5,
       ease: "easeOut",
@@ -67,13 +67,11 @@ const createScaleUp = (isMobile: boolean) => ({
 const createHeroVariants = (isMobile: boolean) => ({
   hidden: {
     opacity: 0,
-    y: isMobile ? 30 : 60,
-    scale: 0.98,
+    y: isMobile ? 20 : 40,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
       duration: isMobile ? 0.4 : 0.6,
       ease: "easeOut",
@@ -90,7 +88,8 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
   const heroVariants = createHeroVariants(isMobile);
 
   // Viewport threshold - viši za mobilne uređaje
-  const viewportAmount = isMobile ? 0.15 : 0.2;
+  const viewportAmount = 0.01;
+  const viewportMargin = isMobile ? "-80px" : "-120px";
 
   return (
     <MessagesProvider locale={locale} messages={messages}>
@@ -112,7 +111,7 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -124,7 +123,7 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -134,7 +133,7 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={scaleUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -144,7 +143,7 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -154,7 +153,7 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -164,7 +163,7 @@ const IzradaWebShopaClient = ({ locale, messages }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >

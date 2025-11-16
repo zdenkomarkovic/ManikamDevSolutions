@@ -23,15 +23,13 @@ export default function GoogleAdsPageClient() {
   };
 
   const itemVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      scale: 0.95
+    hidden: {
+      opacity: 0,
+      y: 50
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
         duration: 0.6,
         ease: "easeOut"
@@ -40,15 +38,13 @@ export default function GoogleAdsPageClient() {
   };
 
   const heroVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 100,
-      scale: 0.9
+    hidden: {
+      opacity: 0,
+      y: 100
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
         duration: 0.8,
         ease: "easeOut"
@@ -63,43 +59,44 @@ export default function GoogleAdsPageClient() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
+          style={{ willChange: 'transform, opacity' }}
         >
           <GoogleAdsHero />
         </motion.div>
       </section>
 
       <section className="container mx-auto px-3 md:px-16 pb-16">
-        <motion.div 
+        <motion.div
           className="space-y-8 md:space-y-16"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsIntro />
           </motion.div>
-          
-          <motion.div variants={itemVariants}>
+
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsServices />
-          </motion.div>  
-          
-          <motion.div variants={itemVariants}>
+          </motion.div>
+
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsCTA />
           </motion.div>
-          
-          <motion.div variants={itemVariants}>
+
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsWhy />
-          </motion.div>    
-          
-          <motion.div variants={itemVariants}>
+          </motion.div>
+
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsFeatures />
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsProcess />
           </motion.div>
-          
-          <motion.div variants={itemVariants}>
+
+          <motion.div variants={itemVariants} style={{ willChange: 'transform, opacity' }}>
             <GoogleAdsFAQ />
           </motion.div>
         </motion.div>
