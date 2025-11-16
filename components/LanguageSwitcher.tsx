@@ -42,7 +42,7 @@ const LanguageSwitcher = () => {
       onClick={handleLanguageChange}
       disabled={isChanging}
       className="flex items-center  gap-2 px-3 md:px-4 py-2 rounded-lg font-semibold transition-all duration-300  text-white hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-      aria-label={`Switch to ${otherLocale.toUpperCase()}`}
+      aria-label={`Switch to ${otherLocale}`}
     >
       <span className="flex items-center gap-1.5 text-sm md:text-base">
         <Image
@@ -52,7 +52,7 @@ const LanguageSwitcher = () => {
           height={14}
           className=""
         />
-        <span>{currentLocale.toUpperCase()}</span>
+        <span>{currentLocale}</span>
       </span>
       <span className="text-xs opacity-75">→</span>
       <span className="flex items-center gap-1.5 text-sm md:text-base opacity-75">
@@ -63,7 +63,7 @@ const LanguageSwitcher = () => {
           height={14}
           className=""
         />
-        <span>{otherLocale.toUpperCase()}</span>
+        <span>{otherLocale}</span>
       </span>
     </button>
   );
