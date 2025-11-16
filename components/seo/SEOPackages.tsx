@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
 import { Check } from "lucide-react";
@@ -8,14 +8,20 @@ import { Check } from "lucide-react";
 const SEOPackages = () => {
   const intl = useMessages();
   const locale = useCurrentLocale();
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    // Detect touch device to disable hover animations
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: 0.15,
+        delayChildren: 0.05,
       },
     },
   };
@@ -23,15 +29,13 @@ const SEOPackages = () => {
   const cardVariants = {
     hidden: {
       opacity: 0,
-      y: 50,
-      scale: 0.95,
+      y: 30,
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.4,
         ease: "easeOut",
       },
     },
@@ -59,10 +63,10 @@ const SEOPackages = () => {
       <div className="flex justify-center mb-4">
         <motion.h2
           className="text-3xl md:text-4xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true, margin: "-50px" }}
         >
           {intl.formatMessage({ id: "seoOptimization.packages.title" })}
         </motion.h2>
@@ -70,10 +74,10 @@ const SEOPackages = () => {
 
       <motion.p
         className="text-center text-gray-100 mb-12 max-w-3xl mx-auto text-lg"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
+        viewport={{ once: true, margin: "-50px" }}
       >
         {intl.formatMessage({ id: "seoOptimization.packages.subtitle" })}
       </motion.p>
@@ -92,12 +96,14 @@ const SEOPackages = () => {
               pkg.badge ? "ring-4 ring-orange-500" : ""
             }`}
             variants={cardVariants}
-            whileHover={{
-              scale: 1.03,
-              y: -10,
-              boxShadow: "0 20px 40px rgba(249, 115, 22, 0.3)",
-            }}
-            transition={{ duration: 0.3 }}
+            {...(!isTouchDevice && {
+              whileHover: {
+                scale: 1.02,
+                y: -5,
+              },
+              transition: { duration: 0.2 },
+            })}
+            style={{ willChange: 'transform' }}
           >
             {pkg.badge && (
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 py-1 rounded-full text-sm font-bold">
@@ -119,8 +125,7 @@ const SEOPackages = () => {
 
             <motion.a
               href={`/${locale}/contact`}
-              className="block w-full text-center bg-gradient-to-r from-orange-600 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold mb-6 hover:shadow-lg transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
+              className="block w-full text-center bg-gradient-to-r from-orange-600 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold mb-6 hover:shadow-lg transition-shadow duration-200"
               whileTap={{ scale: 0.98 }}
             >
               {intl.formatMessage({ id: "seoOptimization.cta.subtitle" })}

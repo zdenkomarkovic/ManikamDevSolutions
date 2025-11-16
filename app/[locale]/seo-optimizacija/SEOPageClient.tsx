@@ -53,12 +53,12 @@ const createFadeInUp = (isMobile: boolean) => ({
 });
 
 const createScaleUp = (isMobile: boolean) => ({
-  hidden: { opacity: 0, scale: 0.95 },
+  hidden: { opacity: 0, y: isMobile ? 15 : 30 },
   visible: {
     opacity: 1,
-    scale: 1,
+    y: 0,
     transition: {
-      duration: isMobile ? 0.3 : 0.5,
+      duration: isMobile ? 0.25 : 0.4,
       ease: "easeOut",
     },
   },
@@ -67,15 +67,13 @@ const createScaleUp = (isMobile: boolean) => ({
 const createHeroVariants = (isMobile: boolean) => ({
   hidden: {
     opacity: 0,
-    y: isMobile ? 30 : 60,
-    scale: 0.98,
+    y: isMobile ? 20 : 40,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      duration: isMobile ? 0.4 : 0.6,
+      duration: isMobile ? 0.3 : 0.5,
       ease: "easeOut",
     },
   },
@@ -89,8 +87,9 @@ export default function SEOPageClient({ locale, messages }: Props) {
   const scaleUp = createScaleUp(isMobile);
   const heroVariants = createHeroVariants(isMobile);
 
-  // Viewport threshold - viši za mobilne uređaje
-  const viewportAmount = isMobile ? 0.15 : 0.2;
+  // Viewport threshold - niži za mobilne uređaje za ranije pokretanje animacija
+  const viewportAmount = isMobile ? 0.05 : 0.15;
+  const viewportMargin = isMobile ? "-50px" : "-100px";
 
   return (
     <MessagesProvider locale={locale} messages={messages}>
@@ -112,7 +111,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -122,7 +121,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={scaleUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -132,7 +131,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -142,7 +141,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -152,7 +151,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={scaleUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -162,7 +161,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
@@ -172,7 +171,7 @@ export default function SEOPageClient({ locale, messages }: Props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: viewportAmount }}
+            viewport={{ once: true, amount: viewportAmount, margin: viewportMargin }}
             variants={fadeInUp}
             style={{ willChange: 'transform, opacity' }}
           >
