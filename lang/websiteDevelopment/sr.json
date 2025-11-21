@@ -5,32 +5,31 @@
       "description": "Profesionalna izrada sajtova u Next.js tehnologiji. Brži, sigurniji i SEO optimizovani sajtovi za vaš biznis."
     },
     "hero": {
-      "title": "Profesionalna Izrada Sajtova",
-      "subtitle": "Kreiramo moderne, brze i SEO optimizovane sajtove koji privlače klijente i povećavaju vašu online prisutnost. Koristimo najnovije tehnologije za maksimalne rezultate.",
-      "badge1": "Next.js Eksperti",
+      "title": "Profesionalna Izrada Sajtova – Moderni, Brzi i SEO Optimizovani Web Sajtovi",
+      "subtitle": "Kreiramo moderne, brze i SEO optimizovane web sajtove koji privlače klijente i povećavaju vašu online vidljivost. Koristimo najnovije tehnologije kako biste dobili maksimalne rezultate i konkurentsku prednost.",
+      "badge1": "Next.js izrada sajtova",
       "badge2": "SEO Optimizovano",
       "badge3": "Mobilno Prilagođeno"
     },
     "intro": {
-      "title": "Zašto je profesionalan sajt ključan za vaš uspeh?",
-      "p1": "U digitalnom svetu, vaš sajt je često prvi kontakt sa potencijalnim klijentima. Profesionalno izrađen sajt ne samo da predstavlja vaš brend, već aktivno radi na privlačenju novih kupaca 24 sata dnevno, 7 dana u nedelji.",
+      "title": "Zašto je profesionalna izrada sajta ključ vašeg online uspeha?",
+      "p1": "U digitalnom svetu, vaš sajt je prvi kontakt sa potencijalnim klijentima. Kvalitetno izrađen sajt ne predstavlja samo vaš brend — on aktivno radi za vas 24/7.",
       "p2strong": "Tehnologije koje koristimo - React.js, Node.js i Next.js",
       "p2": " - nisu slučajan izbor. Ove napredne tehnologije garantuju da će vaš sajt biti tehnički superiorniji, brži i bolje optimizovan od konkurencije koja koristi WordPress ili druge popularne sajt bildere.",
-      "p3": "Brzina učitavanja sajta direktno utiče na SEO rangiranje i korisničko iskustvo. Google favorizuje brze sajtove, što znači bolju poziciju u rezultatima pretrage i veću vidljivost za vaš biznis. Naši sajtovi se učitavaju za manje od 2 sekunde, što je značajno brže od proseka industrije."
+      "p3": "Brzina učitavanja sajta direktno utiče na SEO. Google favorizuje brze sajtove. Naši sajtovi se učitavaju za manje od 2 sekunde, što je značajno brže od proseka industrije."
     },
     "packages": {
       "basic": {
         "title": "Osnovni paket - 340€",
         "subtitle": "Idealno za manje biznise i startapove",
         "feature1": "Do 5 stranica",
-        "feature2": "Responzivni pregled prilagođen za mobilne i desktop uređaje",
-        "feature3": "Moderni dizajn pravljen po vašim željama i potrebama",
+        "feature2": "Responzivni pregled (mobilni + desktop)",
+        "feature3": "Moderni dizajn po vašoj meri",
         "feature4": "Kontakt forma + Google Maps",
-        "feature5": "Integracija sa socijalnim mrežama",
+        "feature5": "Integracija sa društvenim mrežama",
         "feature6": "Osnovna SEO optimizacija",
-        "feature7": "SSL sertifikat i zaštita veb-sajta",
-        "feature8": "Hosting za prvu godinu",
-        "feature9": "Domen za prvu godinu",
+        "feature7": "SSL sertifikat, zaštita veb-sajta",
+        "feature8": "Hosting i Domen za prvu godinu",
         "timeline": "Vreme izrade:",
         "timelineDays": "7-10 dana"
       },
