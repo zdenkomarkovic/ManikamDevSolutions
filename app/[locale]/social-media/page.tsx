@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.socialMedia.page.title,
     description: messages.socialMedia.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/social-media`,
+      canonical: "https://manikamwebsolutions.com/en/social-media",
       languages: {
         sr: "https://manikamwebsolutions.com/sr/drustvene-mreze",
         en: "https://manikamwebsolutions.com/en/social-media",

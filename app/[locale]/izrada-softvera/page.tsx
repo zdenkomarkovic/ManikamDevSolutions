@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.software.page.title,
     description: messages.software.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/izrada-softvera`,
+      canonical: "https://manikamwebsolutions.com/sr/izrada-softvera",
       languages: {
         sr: "https://manikamwebsolutions.com/sr/izrada-softvera",
         en: "https://manikamwebsolutions.com/en/software-development",

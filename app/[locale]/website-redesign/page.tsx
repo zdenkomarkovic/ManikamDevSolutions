@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.redesignMigration.page.title,
     description: messages.redesignMigration.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/website-redesign`,
+      canonical: "https://manikamwebsolutions.com/en/website-redesign",
       languages: {
         sr: "https://manikamwebsolutions.com/sr/redizajn-migracija",
         en: "https://manikamwebsolutions.com/en/website-redesign",

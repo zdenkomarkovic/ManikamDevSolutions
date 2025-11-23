@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.googleAds.page.title,
     description: messages.googleAds.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/google-ads`,
+      canonical: "https://manikamwebsolutions.com/en/google-ads",
       languages: {
         sr: "https://manikamwebsolutions.com/sr/google-oglasavanje",
         en: "https://manikamwebsolutions.com/en/google-ads",

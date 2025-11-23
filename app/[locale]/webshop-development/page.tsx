@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.webshopDevelopment.page.title,
     description: messages.webshopDevelopment.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/webshop-development`,
+      canonical: "https://manikamwebsolutions.com/en/webshop-development",
       languages: {
         sr: "https://manikamwebsolutions.com/sr/izrada-web-shopa",
         en: "https://manikamwebsolutions.com/en/webshop-development",

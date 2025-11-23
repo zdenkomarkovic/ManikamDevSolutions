@@ -24,16 +24,7 @@ function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
 function isCrawlerBot(userAgent: string): boolean {
   const lowerUA = userAgent.toLowerCase();
 
-  // Prvo proveri da li je normalan browser
-  const browserPatterns = ['mozilla', 'chrome', 'safari', 'firefox', 'edge', 'opera'];
-  const isBrowser = browserPatterns.some(pattern => lowerUA.includes(pattern));
-
-  // Ako je browser, NIJE bot (čak i ako sadrži "bot" negde)
-  if (isBrowser) {
-    return false;
-  }
-
-  // Samo ako nije browser, proveri da li je bot
+  // PRVO proveri da li je bot (ključno za Googlebot koji ima "Mozilla" u UA)
   const botPatterns = [
     'googlebot',
     'bingbot',
@@ -43,7 +34,7 @@ function isCrawlerBot(userAgent: string): boolean {
     'yandexbot',
     'facebookexternalhit',
     'twitterbot',
-    'rogerbot',
+    'rogerbot', // Moz SEO alat
     'linkedinbot',
     'embedly',
     'quora link preview',
@@ -67,11 +58,17 @@ function isCrawlerBot(userAgent: string): boolean {
     'seobility', // SEO alat
     'screaming frog', // SEO alat
     'semrush', // SEO alat
-    'ahrefs', // SEO alat
-    'moz', // SEO alat
+    'ahrefsbot', // SEO alat
+    'dotbot', // SEO alat (Moz crawler)
   ];
 
-  return botPatterns.some(pattern => lowerUA.includes(pattern));
+  // Ako je bot, odmah vrati true (čak i ako ima "mozilla")
+  if (botPatterns.some(pattern => lowerUA.includes(pattern))) {
+    return true;
+  }
+
+  // Ako nije bot, vrati false (smatramo ga browserom)
+  return false;
 }
 
 export function middleware(request: NextRequest) {

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: messages.seoOptimization.page.title,
     description: messages.seoOptimization.page.description,
     alternates: {
-      canonical: `https://manikamwebsolutions.com/${locale}/seo-optimizacija`,
+      canonical: "https://manikamwebsolutions.com/sr/seo-optimizacija",
       languages: {
         sr: "https://manikamwebsolutions.com/sr/seo-optimizacija",
         en: "https://manikamwebsolutions.com/en/seo-optimization",
