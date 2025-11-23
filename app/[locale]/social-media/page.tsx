@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sr: "https://manikamwebsolutions.com/sr/drustvene-mreze",
         en: "https://manikamwebsolutions.com/en/social-media",
+        "x-default": "https://manikamwebsolutions.com/sr/drustvene-mreze",
       },
     },
   };

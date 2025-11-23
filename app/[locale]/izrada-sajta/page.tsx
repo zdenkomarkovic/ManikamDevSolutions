@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sr: "https://manikamwebsolutions.com/sr/izrada-sajta",
         en: "https://manikamwebsolutions.com/en/website-development",
+        "x-default": "https://manikamwebsolutions.com/sr/izrada-sajta",
       },
     },
   };

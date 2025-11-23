@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sr: "https://manikamwebsolutions.com/sr/google-oglasavanje",
         en: "https://manikamwebsolutions.com/en/google-ads",
+        "x-default": "https://manikamwebsolutions.com/sr/google-oglasavanje",
       },
     },
   };
