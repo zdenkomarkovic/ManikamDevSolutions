@@ -12,6 +12,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+html {
+  -webkit-text-size-adjust: 100%; /* Safari, iOS */
+  -ms-text-size-adjust: 100%; /* IE */
+}
 
 @layer base {
   :root {
@@ -159,7 +163,8 @@ html {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -168,7 +173,8 @@ html {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
