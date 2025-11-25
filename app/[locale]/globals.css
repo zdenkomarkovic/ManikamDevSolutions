@@ -13,10 +13,11 @@ html {
   scroll-behavior: smooth;
 }
 html {
-  -webkit-text-size-adjust: 100%; /* Safari, iOS */
-  -ms-text-size-adjust: 100%; /* IE */
+  -webkit-text-size-adjust: 100%; /* iOS Safari + in-app browser */
+  -moz-text-size-adjust: 100%; /* stari Firefox */
+  -ms-text-size-adjust: 100%; /* stari IE */
+  text-size-adjust: 100%; /* standard */
 }
-
 @layer base {
   :root {
     --background: 0 0% 100%;
