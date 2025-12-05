@@ -72,7 +72,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={getDirection(locale)}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-900 bg-gray-50 text-base md:text-xl`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-900 bg-gray-50 text-base `}
         suppressHydrationWarning={true}
       >
         <GoogleAnalytics />
