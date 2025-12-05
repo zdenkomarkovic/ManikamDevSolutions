@@ -92,7 +92,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             {title}
           </p>
           <div className="md:hidden">
-            <p className="ig-scale-text text-[19px] text-white italic md:text-5xl pb-5 md:pb-12">
+            <p className="ig-scale-text  text-[19px] text-white italic md:text-5xl pb-5 md:pb-12">
               {section.title} {section.title3}
               <span className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                 {section.span}{" "}
@@ -101,7 +101,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             </p>
             <a
               href={`tel:${section.phone}`}
-              className="ig-scale-text inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="ig-scale-text  inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-[16px] md:text-[36px] font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
                 className="w-6 h-6 md:w-8 md:h-8"
@@ -111,7 +111,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               {section.span4}
-              <span className="ig-scale-text text-white text-base md:text-3xl font-normal block">
+              <span className="ig-scale-text  text-white text-base md:text-3xl font-normal block">
                 {section.span2}
               </span>
             </a>
@@ -136,7 +136,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                 style={{ marginLeft: `${index * 20}px` }}
               >
                 <Link href={service.href} className="block">
-                  <div className="relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
+                  <div className="ig-scale-text relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
                     {service.text}
                   </div>
                 </Link>
@@ -163,7 +163,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                 style={{ marginLeft: `${index * 12}px` }}
               >
                 <Link href={service.href} className="block">
-                  <div className="text-sm bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left px-3 py-0.5 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
+                  <div className="ig-scale-text text-sm bg-gradient-to-r from-orange-600 to-gray-600 text-white text-left px-3 py-0.5 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
                     {service.text}
                   </div>
                 </Link>
