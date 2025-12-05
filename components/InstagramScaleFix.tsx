@@ -1,11 +1,13 @@
 "use client";
 import { useEffect } from "react";
 
-export default function InstagramScaleFix() {
+export default function InstagramTextScale() {
   useEffect(() => {
-    const ua = navigator.userAgent || "";
-    if (ua.includes("Instagram")) {
-      document.documentElement.style.zoom = "0.80";
+    if (navigator.userAgent.includes("Instagram")) {
+      const textContainers = document.querySelectorAll(".ig-scale-text");
+      textContainers.forEach((el) => {
+        (el as HTMLElement).style.zoom = "0.80"; // prilagodi po potrebi
+      });
     }
   }, []);
 

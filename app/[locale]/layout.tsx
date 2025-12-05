@@ -79,12 +79,12 @@ export default async function LocaleLayout({
         />
       </head>
 
-      <InstagramScaleFix />
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-900 bg-gray-50 text-base md:text-xl`}
         suppressHydrationWarning={true}
       >
+        {" "}
+        <InstagramScaleFix />
         <GoogleAnalytics />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
@@ -100,7 +100,6 @@ export default async function LocaleLayout({
     fbq('track', 'PageView');
   `}
         </Script>
-
         <LocaleProvider locale={locale}>
           <Header locale={locale} />
           {children}
