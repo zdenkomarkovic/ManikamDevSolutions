@@ -9,6 +9,7 @@ import { LocaleProvider } from "../../lib/LocaleContext";
 import { Metadata } from "@/node_modules/next/types";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
+import InstagramScaleFix from "@/components/InstagramScaleFix";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,6 +78,9 @@ export default async function LocaleLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
       </head>
+
+      <InstagramScaleFix />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-900 bg-gray-50 text-base md:text-xl`}
         suppressHydrationWarning={true}
