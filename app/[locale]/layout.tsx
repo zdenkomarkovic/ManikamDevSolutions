@@ -71,6 +71,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-900 bg-gray-50 text-base md:text-xl`}
         suppressHydrationWarning={true}
