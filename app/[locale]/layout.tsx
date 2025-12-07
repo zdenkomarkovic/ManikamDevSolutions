@@ -9,7 +9,7 @@ import { LocaleProvider } from "../../lib/LocaleContext";
 import { Metadata } from "@/node_modules/next/types";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
-import InstagramScaleFix from "@/components/InstagramScaleFix";
+import InstagramFontFix from "@/components/InstagramFontFix";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -84,7 +84,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning={true}
       >
         {" "}
-        <InstagramScaleFix />
+        <InstagramFontFix />
         <GoogleAnalytics />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
