@@ -70,7 +70,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
   }, [services.length]);
 
   return (
-    <div className="relative h-[100dvh] w-full   overflow-hidden">
+    <div id="hero" className="relative h-[100dvh] w-full   overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-10 left-4 md:left-16 z-20">

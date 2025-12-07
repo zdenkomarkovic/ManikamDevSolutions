@@ -10,6 +10,7 @@ import { Metadata } from "@/node_modules/next/types";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 import InstagramSmartFix from "@/components/InstagramSmartFix";
+import FixHeroHeight from "@/components/FixHeroHeight";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
       >
         {" "}
         <InstagramSmartFix />
+        <FixHeroHeight />
         <GoogleAnalytics />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
