@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-title {
+  font-size: clamp(2.8rem, 8vw, 8.5rem) !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
