@@ -19,7 +19,7 @@ html {
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 8vw, 8.5rem) !important;
+  font-size: clamp(2.6rem, 8vw, 8.5rem) !important;
 }
 
 @layer base {
