@@ -73,7 +73,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
     <div className="relative h-[100dvh] w-full   overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
-        <div className="absolute bottom-8 md:bottom-10 left-4 md:left-16 z-20">
+        <div className="absolute bottom-6 md:bottom-10 left-4 md:left-16 z-20">
           <h1 className=" font-extrabold   flex flex-col gap-1 mb:gap-8  relative text-[11.5vw] md:text-[150px] pb-2 md:pb-10">
             <span className="w-fit pt-10 pb-4 md:pb-28 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
@@ -88,13 +88,13 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
               </span>
             </span>
           </h1>
-          <p className=" text-lg font-bold md:text-6xl  py-1 pt-3 md:pt-8 text-white">
+          <p className=" leading-none text-base font-bold md:text-6xl  py-2 pt-3 md:pt-8 text-white">
             {title}
           </p>
           <div className="md:hidden">
-            <p className="text-lg text-white italic md:text-5xl pb-5 md:pb-12">
+            <p className="text-lg leading-tight text-white italic md:text-5xl pb-5 md:pb-12">
               {section.title} {section.title3}
-              <span className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+              <span className=" font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                 {section.span}{" "}
               </span>
               {section.title2}
