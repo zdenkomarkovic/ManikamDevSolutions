@@ -70,12 +70,12 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
   }, [services.length]);
 
   return (
-    <div id="hero" className="relative h-[100dvh] w-full   overflow-hidden">
+    <div className="relative h-[100dvh] w-full   overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-10 left-4 md:left-16 z-20">
-          <h1 className=" font-extrabold   flex flex-col gap-4 mb:gap-8  relative  hero-title pb-5 md:pb-10">
-            <span className="w-fit pt-10 pb-3 md:pb-24 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
+          <h1 className="ig-scale-text font-extrabold   flex flex-col gap-1 mb:gap-8  relative  text-4xl md:text-9xl pb-2 md:pb-10">
+            <span className="w-fit pt-10  bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
               Manikam{" "}
             </span>
@@ -88,11 +88,11 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
               </span>
             </span>
           </h1>
-          <p className="ig-scale-text text-[19px] font-bold md:text-6xl  py-2 pt-3 md:pt-8 text-white">
+          <p className=" text-lg font-bold md:text-6xl  py-1 pt-3 md:pt-8 text-white">
             {title}
           </p>
           <div className="md:hidden">
-            <p className="ig-scale-text  text-[19px] text-white italic md:text-5xl pb-5 md:pb-12">
+            <p className="text-lg text-white italic md:text-5xl pb-5 md:pb-12">
               {section.title} {section.title3}
               <span className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                 {section.span}{" "}
@@ -101,7 +101,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             </p>
             <a
               href={`tel:${section.phone}`}
-              className="ig-scale-text  inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-[16px] md:text-[36px] font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-[16px] md:text-[36px] font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
                 className="w-6 h-6 md:w-8 md:h-8"
@@ -111,7 +111,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               {section.span4}
-              <span className="ig-scale-text  text-white text-base md:text-3xl font-normal block">
+              <span className="  text-white text-sm md:text-3xl font-normal block">
                 {section.span2}
               </span>
             </a>
