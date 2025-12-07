@@ -74,7 +74,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">
         {/* H1 naslov - pozicioniran apsolutno */}
         <div className="absolute bottom-8 md:bottom-10 left-4 md:left-16 z-20">
-          <h1 className=" font-extrabold   flex flex-col gap-1 mb:gap-8  relative text-[12vw] md:text-[6vw] pb-2 md:pb-10">
+          <h1 className=" font-extrabold   flex flex-col gap-1 mb:gap-8  relative text-[11vw] md:text-[150px] pb-2 md:pb-10">
             <span className="w-fit pt-10 pb-4 md:pb-28 bg-gradient-to-r from-white  to-gray-500 bg-clip-text text-transparent">
               {" "}
               Manikam{" "}
