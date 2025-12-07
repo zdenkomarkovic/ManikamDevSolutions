@@ -3,15 +3,15 @@ import { useEffect } from "react";
 
 export default function InstagramFontFix() {
   useEffect(() => {
-    if (!navigator.userAgent.includes("Instagram")) return;
+    const ua = navigator.userAgent.toLowerCase();
+    if (!ua.includes("instagram")) return;
 
-    const selectors = ["h1", "h2", "h3", "p", "li", "span"]; // sve tekstualne elemente
-    selectors.forEach((tag) => {
-      document.querySelectorAll(tag).forEach((el) => {
-        const style = window.getComputedStyle(el);
-        const fontSize = style.fontSize;
-        (el as HTMLElement).style.fontSize = fontSize; // fiksira trenutno izračunato
-      });
+    const elements = document.querySelectorAll(
+      "h1,h2,h3,h4,p,li,span,a,button"
+    );
+    elements.forEach((el) => {
+      const style = window.getComputedStyle(el);
+      (el as HTMLElement).style.fontSize = style.fontSize; // zaključava font
     });
   }, []);
 
