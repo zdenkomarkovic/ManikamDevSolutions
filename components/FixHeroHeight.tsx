@@ -7,7 +7,7 @@ export default function FixHeroHeight() {
     if (!hero) return;
 
     function setHeroHeight() {
-      hero.style.height = window.innerHeight + "px";
+      hero?.style.height = window.innerHeight + "px";
     }
 
     setHeroHeight();
