@@ -1,0 +1,103 @@
+{
+  "marketingPaket": {
+    "page": {
+      "title": "Marketing Paket - Full Service Digital Marketing | Manikam Web Solutions",
+      "description": "Kompletno digitalno marketinško rešenje - održavanje društvenih mreža, reklamiranje, Google Ads i BESPLATAN sajt uz ugovor na 4 meseca!"
+    },
+    "hero": {
+      "title": "Marketing Paket Full Service",
+      "subtitle": "Sve što vam je potrebno za uspešan online biznis u jednom paketu. Društvene mreže, Google Ads, profesionalno reklamiranje i BESPLATAN sajt!",
+      "badge1": "Društvene mreže",
+      "badge2": "Google Ads",
+      "badge3": "Reklamiranje",
+      "badge4": "Besplatan sajt"
+    },
+    "intro": {
+      "title": "Zašto izabrati naš Full Service Marketing Paket?",
+      "paragraph1": "U digitalnom svetu, uspeh dolazi iz kombinacije pravih strategija. Ne možete se fokusirati samo na društvene mreže ili samo na Google Ads - potrebna vam je sveobuhvatna strategija koja pokriva sve aspekte digitalnog marketinga.",
+      "paragraph2": "Naš Full Service Marketing Paket nudi kompletno rešenje koje obuhvata sve što vam je potrebno: profesionalno održavanje društvenih mreža, efikasne reklamne kampanje na Facebooku i Instagramu, Google Ads oglašavanje koje donosi rezultate, i kao bonus - BESPLATAN sajt ili redizajn postojećeg uz ugovor na 4 meseca!"
+    },
+    "package": {
+      "title": "Šta dobijate u Full Service paketu?",
+      "badge": "NAJPOPULARNIJI PAKET",
+      "name": "Marketing Paket - Full Service",
+      "price": "500€",
+      "period": "/mesečno",
+      "description": "Kompletno digitalno marketinško rešenje sa BESPLATNIM sajtom uz ugovor na 4 meseca",
+      "section1": {
+        "title": "Održavanje Facebook stranice",
+        "feature1": "12 profesionalnih postova mesečno",
+        "feature2": "Kreativni i angažujući sadržaj prilagođen vašoj publici",
+        "feature3": "Storytelling i vizuelno atraktivni dizajni",
+        "feature4": "Praćenje trendova i optimizacija sadržaja",
+        "feature5": "Odgovori na komentare i poruke (Community Management)",
+        "feature6": "Mesečni izveštaji o performansama",
+        "feature7": "Upotreba profesionalnih alata za dizajn (Canva Pro, Adobe Suite)",
+        "feature8": "Hashtagovi i SEO optimizacija za društvene mreže"
+      },
+      "section2": {
+        "title": "Održavanje Instagram profila",
+        "feature1": "12 kvalitetnih postova mesečno",
+        "feature2": "Instagram Stories (3-4 puta nedeljno)",
+        "feature3": "Reels kreiranje i optimizacija",
+        "feature4": "Vizualno koherentan feed koji privlači pažnju",
+        "feature5": "Upotreba influencer strategija i user-generated content",
+        "feature6": "Hashtag istraživanje i optimizacija za veći reach",
+        "feature7": "Angažovanje sa pratiocima (komentari, poruke, interakcije)",
+        "feature8": "Mesečni izveštaji sa analitikom profila"
+      },
+      "section3": {
+        "title": "Google Ads kampanje",
+        "feature1": "Kreiranje i optimizacija Google Ads kampanja",
+        "feature2": "Keyword istraživanje i analiza konkurencije",
+        "feature3": "Budžetiranje i strategija ponuda za najbolje rezultate",
+        "feature4": "A/B testiranje oglasa za maksimalnu efikasnost",
+        "feature5": "Mesečni izveštaji sa detaljnom analitikom"
+      },
+      "section4": {
+        "title": "Reklamiranje na društvenim mrežama",
+        "feature1": "Facebook i Instagram Ads kampanje",
+        "feature2": "Targetiranje po demografiji, interesovanjima i ponašanju",
+        "feature3": "Kreiranje i testiranje različitih oglasnih kreativa"
+      },
+      "bonus": {
+        "title": "BONUS uz ugovor na 4 meseca",
+        "feature1": "BESPLATAN profesionalni sajt (vrednost do 800€)",
+        "feature2": "BESPLATAN redizajn postojećeg sajta (vrednost do 600€)"
+      }
+    },
+    "cta": {
+      "title": "Spremni ste da povećate svoj online uspeh?",
+      "subtitle": "Kontaktirajte nas danas i dobijte besplatnu konsultaciju za vaš biznis!",
+      "whatsappButton": "Kontakt WhatsApp",
+      "emailButton": "Pošalji email"
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "faq1": {
+        "question": "Kako funkcioniše bonus besplatnog sajta?",
+        "answer": "Uz potpis ugovora na 4 meseca za Marketing Paket Full Service, dobijate profesionalni sajt potpuno BESPLATNO (vrednost do 800€). Ako već imate sajt, možemo uraditi njegov redizajn (vrednost do 600€). Sajt ostaje vaše vlasništvo i nakon isteka ugovora."
+      },
+      "faq2": {
+        "question": "Šta se dešava nakon 4 meseca ugovora?",
+        "answer": "Nakon 4 meseca, možete nastaviti sa uslugama po istoj ceni, prilagoditi paket svojim potrebama, ili prekinuti ugovor. Sajt koji ste dobili ostaje u vašem vlasništvu bez obzira na vašu odluku."
+      },
+      "faq3": {
+        "question": "Koliki budžet treba da izdvojim za reklamiranje?",
+        "answer": "Budžet za oglašavanje zavisi od vaših ciljeva i industrije. Preporučujemo minimalni budžet od 200-300€ mesečno za kombinovane Facebook/Instagram i Google Ads kampanje. Mi ćemo vam pomoći da optimizujemo budžet za najbolje rezultate."
+      },
+      "faq4": {
+        "question": "Da li mogu da pratim rezultate kampanja?",
+        "answer": "Apsolutno! Dobijate mesečne detaljne izveštaje o svim aktivnostima - performanse postova, reach, engagement, statistike oglasa, konverzije i ROI (povraćaj investicije). Možete pratiti napredak u realnom vremenu."
+      },
+      "faq5": {
+        "question": "Kako izgleda proces saradnje?",
+        "answer": "Nakon potpisivanja ugovora, održavamo inicijalni sastanak gde definišemo strategiju, ciljeve i ton komunikacije. Zatim kreiramo sadržaj koji možete pregledati i odobriti pre objavljivanja. Redovno komuniciramo i prilagođavamo strategiju na osnovu rezultata."
+      },
+      "faq6": {
+        "question": "Mogu li da biram koji sadržaj ide na društvene mreže?",
+        "answer": "Naravno! Vi imate potpunu kontrolu i odobrenje nad svim sadržajem pre nego što bude objavljen. Radimo kao tim i ciljamo da kreiramo sadržaj koji najbolje predstavlja vaš brend."
+      }
+    }
+  }
+}

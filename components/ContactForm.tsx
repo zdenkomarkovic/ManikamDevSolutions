@@ -32,16 +32,18 @@ export default function ContactForm() {
 
   const contactFormSchema = z.object({
     name: z.string().min(2, {
-      message: intl.formatMessage({ id: "contact.validation.nameRequired" })
+      message: intl.formatMessage({ id: "contact.validation.nameRequired" }),
     }),
     phone: z.string().min(2, {
-      message: intl.formatMessage({ id: "contact.validation.phoneRequired" })
+      message: intl.formatMessage({ id: "contact.validation.phoneRequired" }),
     }),
     email: z.string().email({
-      message: intl.formatMessage({ id: "contact.validation.emailInvalid" })
+      message: intl.formatMessage({ id: "contact.validation.emailInvalid" }),
     }),
     message: z.string().min(10, {
-      message: intl.formatMessage({ id: "contact.validation.messageMinLength" }),
+      message: intl.formatMessage({
+        id: "contact.validation.messageMinLength",
+      }),
     }),
   });
 
@@ -191,7 +193,9 @@ export default function ContactForm() {
           >
             <div className="flex items-center gap-3 mb-6">
               <FaMapMarkerAlt className="text-2xl text-orange-400" />
-              <h3 className="text-2xl font-bold text-gray-100">{intl.formatMessage({ id: "contact.offices.serbia" })}</h3>
+              <h3 className="text-2xl font-bold text-gray-100">
+                {intl.formatMessage({ id: "contact.offices.serbia" })}
+              </h3>
             </div>
             <div className="space-y-4">
               <motion.a
@@ -290,7 +294,9 @@ export default function ContactForm() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder={intl.formatMessage({ id: "contact.form.namePlaceholder" })}
+                        placeholder={intl.formatMessage({
+                          id: "contact.form.namePlaceholder",
+                        })}
                         {...field}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -309,7 +315,9 @@ export default function ContactForm() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder={intl.formatMessage({ id: "contact.form.phonePlaceholder" })}
+                        placeholder={intl.formatMessage({
+                          id: "contact.form.phonePlaceholder",
+                        })}
                         {...field}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -328,7 +336,9 @@ export default function ContactForm() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder={intl.formatMessage({ id: "contact.form.emailPlaceholder" })}
+                        placeholder={intl.formatMessage({
+                          id: "contact.form.emailPlaceholder",
+                        })}
                         {...field}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -348,7 +358,9 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         {...field}
-                        placeholder={intl.formatMessage({ id: "contact.form.messagePlaceholder" })}
+                        placeholder={intl.formatMessage({
+                          id: "contact.form.messagePlaceholder",
+                        })}
                         rows={6}
                         className="bg-white border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                       />
@@ -365,7 +377,9 @@ export default function ContactForm() {
                   disabled={isLoading}
                   className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-6 text-lg transition-all"
                 >
-                  {isLoading ? intl.formatMessage({ id: "contact.form.submitting" }) : intl.formatMessage({ id: "contact.form.submitButton" })}
+                  {isLoading
+                    ? intl.formatMessage({ id: "contact.form.submitting" })
+                    : intl.formatMessage({ id: "contact.form.submitButton" })}
                 </Button>
               </motion.div>
             </form>

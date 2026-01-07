@@ -1,0 +1,103 @@
+{
+  "marketingPaket": {
+    "page": {
+      "title": "Marketing Package - Full Service Digital Marketing | Manikam Web Solutions",
+      "description": "Complete digital marketing solution - social media management, advertising, Google Ads and FREE website with 4-month contract!"
+    },
+    "hero": {
+      "title": "Full Service Marketing Package",
+      "subtitle": "Everything you need for successful online business in one package. Social media, Google Ads, professional advertising and a FREE website!",
+      "badge1": "Social Media",
+      "badge2": "Google Ads",
+      "badge3": "Advertising",
+      "badge4": "Free Website"
+    },
+    "intro": {
+      "title": "Why choose our Full Service Marketing Package?",
+      "paragraph1": "In the digital world, success comes from combining the right strategies. You can't focus only on social media or only on Google Ads - you need a comprehensive strategy that covers all aspects of digital marketing.",
+      "paragraph2": "Our Full Service Marketing Package offers a complete solution that includes everything you need: professional social media management, effective Facebook and Instagram advertising campaigns, result-driven Google Ads advertising, and as a bonus - a FREE website or redesign of your existing one with a 4-month contract!"
+    },
+    "package": {
+      "title": "What do you get in the Full Service package?",
+      "badge": "MOST POPULAR PACKAGE",
+      "name": "Marketing Package - Full Service",
+      "price": "€450",
+      "period": "/monthly",
+      "description": "Complete digital marketing solution with FREE website on 4-month contract",
+      "section1": {
+        "title": "Facebook Page Management",
+        "feature1": "12 professional posts per month",
+        "feature2": "Creative and engaging content tailored to your audience",
+        "feature3": "Storytelling and visually attractive designs",
+        "feature4": "Trend monitoring and content optimization",
+        "feature5": "Responses to comments and messages (Community Management)",
+        "feature6": "Monthly performance reports",
+        "feature7": "Use of professional design tools (Canva Pro, Adobe Suite)",
+        "feature8": "Hashtags and SEO optimization for social media"
+      },
+      "section2": {
+        "title": "Instagram Profile Management",
+        "feature1": "12 quality posts per month",
+        "feature2": "Instagram Stories (3-4 times per week)",
+        "feature3": "Reels creation and optimization",
+        "feature4": "Visually coherent feed that attracts attention",
+        "feature5": "Use of influencer strategies and user-generated content",
+        "feature6": "Hashtag research and optimization for greater reach",
+        "feature7": "Engagement with followers (comments, messages, interactions)",
+        "feature8": "Monthly reports with profile analytics"
+      },
+      "section3": {
+        "title": "Google Ads Campaigns",
+        "feature1": "Creation and optimization of Google Ads campaigns",
+        "feature2": "Keyword research and competitor analysis",
+        "feature3": "Budgeting and bidding strategy for best results",
+        "feature4": "A/B testing of ads for maximum efficiency",
+        "feature5": "Monthly reports with detailed analytics"
+      },
+      "section4": {
+        "title": "Social Media Advertising",
+        "feature1": "Facebook and Instagram Ads campaigns",
+        "feature2": "Targeting by demographics, interests and behavior",
+        "feature3": "Creation and testing of different ad creatives"
+      },
+      "bonus": {
+        "title": "BONUS with 4-month contract",
+        "feature1": "FREE professional website (value up to €800)",
+        "feature2": "FREE redesign of existing website (value up to €600)"
+      }
+    },
+    "cta": {
+      "title": "Ready to boost your online success?",
+      "subtitle": "Contact us today and get a free consultation for your business!",
+      "whatsappButton": "WhatsApp Contact",
+      "emailButton": "Send Email"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faq1": {
+        "question": "How does the free website bonus work?",
+        "answer": "When you sign a 4-month contract for the Marketing Package Full Service, you get a professional website completely FREE (value up to €800). If you already have a website, we can redesign it (value up to €600). The website remains your property even after the contract expires."
+      },
+      "faq2": {
+        "question": "What happens after the 4-month contract?",
+        "answer": "After 4 months, you can continue with the services at the same price, customize the package to your needs, or terminate the contract. The website you received remains your property regardless of your decision."
+      },
+      "faq3": {
+        "question": "How much budget should I allocate for advertising?",
+        "answer": "Advertising budget depends on your goals and industry. We recommend a minimum budget of €200-300 per month for combined Facebook/Instagram and Google Ads campaigns. We will help you optimize your budget for the best results."
+      },
+      "faq4": {
+        "question": "Can I track campaign results?",
+        "answer": "Absolutely! You receive detailed monthly reports on all activities - post performance, reach, engagement, ad statistics, conversions and ROI (return on investment). You can track progress in real-time."
+      },
+      "faq5": {
+        "question": "What does the collaboration process look like?",
+        "answer": "After signing the contract, we hold an initial meeting where we define the strategy, goals and tone of communication. Then we create content that you can review and approve before publishing. We communicate regularly and adjust the strategy based on results."
+      },
+      "faq6": {
+        "question": "Can I choose what content goes on social media?",
+        "answer": "Of course! You have complete control and approval over all content before it is published. We work as a team and aim to create content that best represents your brand."
+      }
+    }
+  }
+}
