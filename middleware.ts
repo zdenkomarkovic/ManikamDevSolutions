@@ -230,11 +230,10 @@ export function middleware(request: NextRequest) {
         locale = "en"; // Ostale zemlje → engleski (ignoriše browser!)
       }
     }
-    // BEZBEDONOSNI FALLBACK: Ako geo NE radi → Engleski za sve korisnike
-    // (Samo korisnici iz RS/BA/ME/MK treba da vide srpski)
+    // BEZBEDONOSNI FALLBACK: Ako geo NE radi → Srpski kao podrazumevani jezik
     else {
-      locale = "en";
-      console.log('⚠️ No geo data available - defaulting to English for safety');
+      locale = defaultLocale;
+      console.log('⚠️ No geo data available - defaulting to Serbian');
     }
 
     console.log('🎯 Selected locale:', locale, 'for country:', country || 'NO GEO');
