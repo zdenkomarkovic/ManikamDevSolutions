@@ -74,7 +74,7 @@ export default function Footer({
                 </p>
               </a>
             </div>
-            <div>
+            {/* <div>
               {" "}
               <a href="tel:+12408103730">
                 <p className="text-muted-foreground  flex gap-2 flex-col items-center hover:text-orange-500">
@@ -84,7 +84,7 @@ export default function Footer({
                   </span>
                 </p>
               </a>
-            </div>
+            </div> */}
             <div className=" mx-auto w-fit">
               <a href="mailto:manikamwebsolutions@gmail.com">
                 <p className="flex gap-3 items-center hover:text-orange-500 text-muted-foreground text-wrap">

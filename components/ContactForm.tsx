@@ -136,7 +136,7 @@ export default function ContactForm() {
       >
         <motion.div className="space-y-6" variants={cardVariants}>
           {/* USA Office */}
-          <motion.div
+          {/* <motion.div
             className="p-6 bg-gradient-to-br from-gray-900 via-gray-700 to-orange-600 rounded-2xl shadow-lg"
             whileHover={{
               scale: 1.02,
@@ -181,7 +181,7 @@ export default function ContactForm() {
                 </span>
               </motion.a>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Serbia Office */}
           <motion.div
