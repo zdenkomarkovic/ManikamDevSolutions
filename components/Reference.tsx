@@ -3,7 +3,7 @@ import { reference1, reference2 } from "@/constants/index";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import { motion } from "framer-motion";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,6 +12,20 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   // Kombinujemo oba niza referenci
   const allReferences = useMemo(() => {
     return [...reference2, ...reference1];
+  }, []);
+
+  // Handle hash scrolling on initial load
+  useEffect(() => {
+    // Check if URL has #reference hash
+    if (window.location.hash === "#reference") {
+      // Small delay to ensure content is rendered
+      setTimeout(() => {
+        const element = document.getElementById("reference");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
   }, []);
 
   // Funkcija za kreiranje naizmeničnog teksta sa custom tekstom
