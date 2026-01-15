@@ -11,12 +11,36 @@ import { Button } from "../ui/button";
 type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
 
+interface ThankYouMessages {
+  thankYou: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    content: {
+      message: string;
+      responseTime: string;
+      nextSteps: string;
+      step1: string;
+      step2: string;
+      step3: string;
+    };
+    cta: {
+      title: string;
+      description: string;
+      servicesButton: string;
+      homeButton: string;
+    };
+  };
+}
+
 interface ThankYouClientProps {
   messages: Messages;
 }
 
 export default function ThankYouClient({ messages }: ThankYouClientProps) {
   const { locale } = useLocale();
+  const thankYouMessages = messages as unknown as ThankYouMessages;
 
   // Google Ads Conversion Tracking - korisnik će dodati svoj kod ovde
   useEffect(() => {
@@ -80,7 +104,7 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
             className="text-[45px] leading-tight md:text-8xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center w-full mb-6"
             variants={itemVariants}
           >
-            {(messages.thankYou as any).hero.title}
+            {thankYouMessages.thankYou.hero.title}
           </motion.h1>
 
           {/* Subtitle */}
@@ -88,7 +112,7 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
             className="text-center text-gray-100 text-xl md:text-2xl mb-12 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            {(messages.thankYou as any).hero.subtitle}
+            {thankYouMessages.thankYou.hero.subtitle}
           </motion.p>
 
           {/* Content Card */}
@@ -97,22 +121,22 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
             variants={itemVariants}
           >
             <p className="text-gray-800 text-lg mb-6 text-center">
-              {(messages.thankYou as any).content.message}
+              {thankYouMessages.thankYou.content.message}
             </p>
 
             <div className="bg-gradient-to-r from-orange-600 to-orange-400 text-white p-4 rounded-xl mb-6 text-center font-semibold">
-              {(messages.thankYou as any).content.responseTime}
+              {thankYouMessages.thankYou.content.responseTime}
             </div>
 
             <div className="space-y-4">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-                {(messages.thankYou as any).content.nextSteps}
+                {thankYouMessages.thankYou.content.nextSteps}
               </h3>
               <div className="space-y-3">
                 {[
-                  (messages.thankYou as any).content.step1,
-                  (messages.thankYou as any).content.step2,
-                  (messages.thankYou as any).content.step3,
+                  thankYouMessages.thankYou.content.step1,
+                  thankYouMessages.thankYou.content.step2,
+                  thankYouMessages.thankYou.content.step3,
                 ].map((step, index) => (
                   <motion.div
                     key={index}
@@ -137,10 +161,10 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
             variants={itemVariants}
           >
             <h3 className="text-3xl font-bold text-gray-100 mb-4">
-              {(messages.thankYou as any).cta.title}
+              {thankYouMessages.thankYou.cta.title}
             </h3>
             <p className="text-gray-300 mb-8">
-              {(messages.thankYou as any).cta.description}
+              {thankYouMessages.thankYou.cta.description}
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">
@@ -148,7 +172,7 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
                 <Link href={`/${locale}`}>
                   <Button className="w-full md:w-auto bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold px-8 py-6 text-lg">
                     <FaHome className="mr-2" />
-                    {(messages.thankYou as any).cta.homeButton}
+                    {thankYouMessages.thankYou.cta.homeButton}
                   </Button>
                 </Link>
               </motion.div>
@@ -157,7 +181,7 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
                 <Link href={`/${locale}#services`}>
                   <Button className="w-full md:w-auto bg-white text-orange-600 hover:bg-gray-100 font-semibold px-8 py-6 text-lg border-2 border-orange-600">
                     <FaServicestack className="mr-2" />
-                    {(messages.thankYou as any).cta.servicesButton}
+                    {thankYouMessages.thankYou.cta.servicesButton}
                   </Button>
                 </Link>
               </motion.div>

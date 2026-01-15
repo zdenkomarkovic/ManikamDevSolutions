@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "@/node_modules/next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useLocale } from "@/lib/LocaleContext";
 import Link from "next/link";
@@ -28,32 +28,38 @@ type SectionData = {
 const Hero = ({ title, section }: { title: string; section: SectionData }) => {
   const { locale } = useLocale();
 
-  // Lokalizovani tekstovi za usluge sa linkovima
-  const services =
-    locale === "sr"
-      ? [
-          { text: "Izrada web sajta", href: "/sr/izrada-sajta" },
-          { text: "Izrada online prodavnica", href: "/sr/izrada-web-shopa" },
-          { text: "Redizajn sajta", href: "/sr/redizajn-migracija" },
-          { text: "Google Ads kampanje", href: "/sr/google-oglasavanje" },
-          { text: "SEO usluge", href: "/sr/seo-optimizacija" },
-          { text: "Marketing društvenih mreža", href: "/sr/drustvene-mreze" },
-          { text: "Razvoj softvera", href: "/sr/izrada-softvera" },
-        ]
-      : [
-          { text: "Web Development Services", href: "/en/website-development" },
-          { text: "Web Shop Development", href: "/en/webshop-development" },
-          { text: "Website Redesign", href: "/en/website-redesign" },
-          { text: "Google Ads", href: "/en/google-ads" },
-          { text: "SEO Services", href: "/en/seo-optimization" },
-          { text: "Social Media Marketing", href: "/en/social-media" },
-          { text: "Custom Software", href: "/en/software-development" },
-        ];
+  // Lokalizovani tekstovi za usluge sa linkovima - koristi useMemo za optimizaciju
+  const services = useMemo(
+    () =>
+      locale === "sr"
+        ? [
+            { text: "Izrada web sajta", href: "/sr/izrada-sajta" },
+            { text: "Izrada online prodavnica", href: "/sr/izrada-web-shopa" },
+            { text: "Redizajn sajta", href: "/sr/redizajn-migracija" },
+            { text: "Google Ads kampanje", href: "/sr/google-oglasavanje" },
+            { text: "SEO usluge", href: "/sr/seo-optimizacija" },
+            { text: "Marketing društvenih mreža", href: "/sr/drustvene-mreze" },
+            { text: "Razvoj softvera", href: "/sr/izrada-softvera" },
+          ]
+        : [
+            { text: "Web Development Services", href: "/en/website-development" },
+            { text: "Web Shop Development", href: "/en/webshop-development" },
+            { text: "Website Redesign", href: "/en/website-redesign" },
+            { text: "Google Ads", href: "/en/google-ads" },
+            { text: "SEO Services", href: "/en/seo-optimization" },
+            { text: "Social Media Marketing", href: "/en/social-media" },
+            { text: "Custom Software", href: "/en/software-development" },
+          ],
+    [locale]
+  );
 
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
 
   useEffect(() => {
     const intervals: NodeJS.Timeout[] = [];
+
+    // Reset visible services when services change
+    setVisibleServices([]);
 
     // Dodajemo usluge jednu po jednu sa razlicitim kasnjenjima
     services.forEach((_, index) => {
@@ -67,7 +73,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
     return () => {
       intervals.forEach(clearTimeout);
     };
-  }, [services.length]);
+  }, [services]);
 
   return (
     <div className="relative h-[100dvh] w-full   overflow-hidden">

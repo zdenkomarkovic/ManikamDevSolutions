@@ -1,10 +1,6 @@
 import Script from "next/script";
 import React from "react";
 
-// ZAMENI OVAJ ID sa tvojim pravim Google Ads ID-jem
-// Format: AW-XXXXXXXXX ili G-XXXXXXXXXX
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-XXXXXXXXX";
-
 const GoogleAdsConversion = () => {
   return (
     <>
