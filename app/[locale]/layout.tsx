@@ -8,6 +8,7 @@ import { isValidLocale } from "@/lib/locale";
 import { LocaleProvider } from "../../lib/LocaleContext";
 import { Metadata } from "@/node_modules/next/types";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAdsTag from "@/components/GoogleAdsTag";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
       >
         {" "}
         <GoogleAnalytics />
+        <GoogleAdsTag />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
     !function(f,b,e,v,n,t,s)

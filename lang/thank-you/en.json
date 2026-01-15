@@ -1,0 +1,25 @@
+{
+  "thankYou": {
+    "page": {
+      "title": "Thank You - Manikam Web Solutions"
+    },
+    "hero": {
+      "title": "Thank You!",
+      "subtitle": "Your message has been successfully received"
+    },
+    "content": {
+      "message": "We appreciate your interest in our services. Our team will contact you as soon as possible.",
+      "responseTime": "We respond within 24 hours",
+      "nextSteps": "Next steps:",
+      "step1": "We'll review your message",
+      "step2": "We'll contact you to discuss the details",
+      "step3": "We'll prepare a customized proposal for your project"
+    },
+    "cta": {
+      "title": "In the meantime...",
+      "description": "Explore our services and learn more about how we can help your business",
+      "servicesButton": "View Services",
+      "homeButton": "Back to Home"
+    }
+  }
+}

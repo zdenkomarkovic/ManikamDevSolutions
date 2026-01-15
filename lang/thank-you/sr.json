@@ -1,0 +1,25 @@
+{
+  "thankYou": {
+    "page": {
+      "title": "Hvala Vam - Manikam Web Solutions"
+    },
+    "hero": {
+      "title": "Hvala Vam!",
+      "subtitle": "Vaša poruka je uspešno primljena"
+    },
+    "content": {
+      "message": "Cenimo vaše interesovanje za naše usluge. Naš tim će vas kontaktirati u najkraćem mogućem roku.",
+      "responseTime": "Odgovaramo u roku od 24 sata",
+      "nextSteps": "Sledeći koraci:",
+      "step1": "Proučićemo vašu poruku",
+      "step2": "Kontaktiraćemo vas kako bismo razgovarali o detaljima",
+      "step3": "Pripremićemo prilagođenu ponudu za vaš projekat"
+    },
+    "cta": {
+      "title": "U međuvremenu...",
+      "description": "Istražite naše usluge i saznajte više o tome kako možemo pomoći vašem biznisu",
+      "servicesButton": "Pogledaj Usluge",
+      "homeButton": "Nazad na Početnu"
+    }
+  }
+}
