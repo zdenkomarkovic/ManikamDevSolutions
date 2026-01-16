@@ -1,6 +1,13 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+
+// Declare gtag_report_conversion function type
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url: string) => boolean;
+  }
+}
 import {
   Form,
   FormField,
@@ -207,6 +214,11 @@ export default function ContactForm() {
                 href="tel:+381641967267"
                 className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
                 whileHover={{ x: 5 }}
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion("tel:+381641967267");
+                  }
+                }}
               >
                 <FaPhone className="text-xl text-orange-600" />
                 <span className="font-semibold text-gray-900">
@@ -217,6 +229,11 @@ export default function ContactForm() {
                 href="viber://chat?number=%2B381641967267"
                 className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
                 whileHover={{ x: 5 }}
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion("viber://chat?number=%2B381641967267");
+                  }
+                }}
               >
                 <FaViber className="text-2xl text-purple-600" />
                 <span className="font-semibold text-gray-900">
@@ -227,6 +244,11 @@ export default function ContactForm() {
                 href="https://wa.me/381641967267"
                 className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
                 whileHover={{ x: 5 }}
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion("https://wa.me/381641967267");
+                  }
+                }}
               >
                 <FaWhatsappSquare className="text-2xl text-green-600" />
                 <span className="font-semibold text-gray-900">

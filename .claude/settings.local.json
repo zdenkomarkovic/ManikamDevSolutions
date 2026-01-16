@@ -22,7 +22,11 @@
       "Bash(dir /B \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\google-ads\")",
       "Bash(dir /B \"E:\\Sajtovi\\manikam_dev_solutions\\app\\[locale]\\izrada-softvera\")",
       "Bash(dir:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:manikamwebsolutions.com)",
+      "Bash(for file in seo/SEOCTA.tsx google-ads/GoogleAdsCTA.tsx redesign/RedesignCTA.tsx drustvene-mreze/SocialMediaCTA.tsx izrada-softvera/SoftwareCTA.tsx web-shop/CtaWebShop.tsx)",
+      "Bash(do grep -n \"formatMessage.*phone\" \"$file\")",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

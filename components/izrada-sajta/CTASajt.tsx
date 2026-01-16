@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { useMessages } from "@/lib/MessagesContext";
 
+// Declare gtag_report_conversion function type
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url: string) => boolean;
+  }
+}
+
 const CTASajt = () => {
   const intl = useMessages();
   const containerVariants = {
@@ -187,6 +194,11 @@ const CTASajt = () => {
                   boxShadow: "0 20px 40px rgba(249, 115, 22, 0.4)",
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion(`tel:${intl.formatMessage({ id: "websiteDevelopment.cta.phone" }).replace(/\s/g, "")}`);
+                  }
+                }}
               >
                 <motion.svg
                   className="w-6 h-6 md:w-8 md:h-8"

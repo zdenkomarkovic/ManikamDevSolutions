@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { useMessages } from "@/lib/MessagesContext";
 
+// Declare gtag_report_conversion function type
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url: string) => boolean;
+  }
+}
+
 export default function SEOCTA() {
   const intl = useMessages();
   const containerVariants = {
@@ -132,6 +139,11 @@ export default function SEOCTA() {
                 boxShadow: "0 20px 40px rgba(249, 115, 22, 0.4)",
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                if (window.gtag_report_conversion) {
+                  window.gtag_report_conversion(`tel:${intl.formatMessage({ id: "seoOptimization.cta.phone" })}`);
+                }
+              }}
             >
               <motion.svg
                 className="w-6 h-6 md:w-8 md:h-8"

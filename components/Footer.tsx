@@ -7,6 +7,13 @@ import { getNavList } from "@/locales/navUtils";
 import { FaPhone } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 
+// Declare gtag_report_conversion function type
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url: string) => boolean;
+  }
+}
+
 function isValidLocale(locale: string): locale is Locale {
   return (i18n.locales as readonly string[]).includes(locale);
 }
@@ -65,7 +72,14 @@ export default function Footer({
           <div className="space-y-3 pb-5 md:pb-0">
             <div>
               {" "}
-              <a href="tel:+381641967267">
+              <a
+                href="tel:+381641967267"
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion("tel:+381641967267");
+                  }
+                }}
+              >
                 <p className="text-muted-foreground  flex flex-col gap-2 items-center hover:text-orange-500">
                   Office: Serbia{" "}
                   <span className="flex gap-2 items-center">
