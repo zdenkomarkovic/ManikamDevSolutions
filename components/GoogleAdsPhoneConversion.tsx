@@ -15,7 +15,9 @@ const GoogleAdsPhoneConversion = () => {
               }
             };
             gtag('event', 'conversion', {
-              'send_to': 'AW-17745015417/Bb1CCIb0leYbEPnkvY1C',
+              'send_to': 'AW-17745015417/tGbBCLeV3YUcEPnkvY1C',
+              'value': 1.0,
+              'currency': 'RSD',
               'event_callback': callback
             });
             return false;

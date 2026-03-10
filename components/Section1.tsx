@@ -78,6 +78,7 @@ const Section1 = ({
             </h2>
             <a
               href={`tel:${section.phone}`}
+              onClick={() => window.gtag_report_conversion(`tel:${section.phone}`)}
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-4xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
@@ -129,6 +130,7 @@ const Section1 = ({
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center">
                 <a
                   href={`tel:${section.phone}`}
+                  onClick={() => window.gtag_report_conversion(`tel:${section.phone}`)}
                   className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-base md:text-3xl font-semibold hover:from-orange-500 hover:to-orange-300 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <svg

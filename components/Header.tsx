@@ -100,7 +100,7 @@ export default function Header({ locale }: { locale: string }) {
                       </motion.div>
                     </button>
                     {openDropdown === i && (
-                      <div className="absolute top-full left-0  bg-white shadow-lg rounded-md border border-gray-200 overflow-hidden z-50">
+                      <div className="absolute top-full left-0  bg-white shadow-lg rounded-full border border-gray-200 overflow-hidden z-50">
                         {item.submenu.map((subItem, j) => {
                           if (!subItem.route) return null;
                           return (
@@ -132,14 +132,24 @@ export default function Header({ locale }: { locale: string }) {
             })}
           </div>
 
-          {/* Language Switcher - Desktop */}
-          {/* <div className="hidden md:block">
-            <LanguageSwitcher />
-          </div> */}
+          {/* Phone - Desktop */}
+          <a
+            href="tel:+381641967267"
+            onClick={() => window.gtag_report_conversion("tel:+381641967267")}
+            className="hidden md:flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-4 py-2 rounded-full transition-colors font-bold"
+          >
+            +381 64 196 7267
+          </a>
 
-          {/* Mobile: Language Switcher + Menu Button */}
+          {/* Mobile: Phone + Menu Button */}
           <div className="md:hidden flex items-center gap-3">
-            {/* <LanguageSwitcher /> */}
+            <a
+              href="tel:+381641967267"
+              onClick={() => window.gtag_report_conversion("tel:+381641967267")}
+              className="flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-3 py-2 rounded-full transition-colors font-bold text-sm"
+            >
+              +381 64 196 7267
+            </a>
             <Button
               variant="ghost"
               size="icon"

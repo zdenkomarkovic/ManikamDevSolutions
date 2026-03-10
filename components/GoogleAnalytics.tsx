@@ -1,12 +1,11 @@
 import Script from "next/script";
 import React from "react";
 
-// ZAMENI OVAJ ID sa tvojim pravim Google Analytics Measurement ID-jem
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX";
+const GOOGLE_ADS_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_TAG_ID || "";
 
 const GoogleAnalytics = () => (
   <>
-    {/* Global site tag (gtag.js) - Google Analytics */}
     <Script
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       strategy="afterInteractive"
@@ -17,6 +16,7 @@ const GoogleAnalytics = () => (
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', '${GA_MEASUREMENT_ID}');
+        ${GOOGLE_ADS_TAG_ID ? `gtag('config', '${GOOGLE_ADS_TAG_ID}');` : ""}
       `}
     </Script>
   </>

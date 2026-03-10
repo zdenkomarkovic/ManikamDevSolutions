@@ -107,6 +107,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             </p>
             <a
               href={`tel:${section.phone}`}
+              onClick={() => window.gtag_report_conversion(`tel:${section.phone}`)}
               className="mx-auto inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-sm md:text-[36px] font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg
@@ -142,7 +143,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
                 style={{ marginLeft: `${index * 20}px` }}
               >
                 <Link href={service.href} className="block">
-                  <div className="ig-scale-text relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-lg w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
+                  <div className="ig-scale-text relative z-20 bg-gradient-to-r from-orange-600 to-transparent text-white text-left font-bold px-3 py-1 rounded-full w-fit hover:from-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer">
                     {service.text}
                   </div>
                 </Link>
