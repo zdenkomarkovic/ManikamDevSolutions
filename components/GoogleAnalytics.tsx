@@ -2,7 +2,7 @@ import Script from "next/script";
 import React from "react";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX";
-const GOOGLE_ADS_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_TAG_ID || "";
+const GOOGLE_ADS_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_TAG_ID || "AW-17745015417";
 
 const GoogleAnalytics = () => (
   <>
