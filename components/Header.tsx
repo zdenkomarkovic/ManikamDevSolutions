@@ -135,7 +135,7 @@ export default function Header({ locale }: { locale: string }) {
           {/* Phone - Desktop */}
           <a
             href="tel:+381641967267"
-            onClick={() => window.gtag_report_conversion("tel:+381641967267")}
+            onClick={() => window.gtag_report_conversion?.("tel:+381641967267")}
             className="hidden md:flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-4 py-2 rounded-full transition-colors font-bold"
           >
             +381 64 196 7267
@@ -145,7 +145,7 @@ export default function Header({ locale }: { locale: string }) {
           <div className="md:hidden flex items-center gap-3">
             <a
               href="tel:+381641967267"
-              onClick={() => window.gtag_report_conversion("tel:+381641967267")}
+              onClick={() => window.gtag_report_conversion?.("tel:+381641967267")}
               className="flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-3 py-2 rounded-full transition-colors font-bold text-sm"
             >
               +381 64 196 7267
