@@ -138,7 +138,7 @@ export default function Footer({
         </div>
         <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-gray-100">
           <p>
-            &copy; {new Date().getFullYear()} ManikamWebSolutions. {rights}
+            &copy; {new Date().getFullYear()} Manikam. {rights}
           </p>
         </div>
       </div>
