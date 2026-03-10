@@ -77,6 +77,11 @@ export function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
+  // PRIVREMENO: engleski onemogućen
+  if (pathname.startsWith("/en")) {
+    return NextResponse.redirect(new URL("/sr", request.url), 302);
+  }
+
   // Prvo detektuj zemlju - Next.js 15 koristi headers
   const country = request.headers.get('x-vercel-ip-country') || "";
 

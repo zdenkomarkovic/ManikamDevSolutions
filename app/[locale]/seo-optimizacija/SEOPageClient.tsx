@@ -182,3 +182,4 @@ export default function SEOPageClient({ locale, messages }: Props) {
     </MessagesProvider>
   );
 }
+

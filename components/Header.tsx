@@ -133,13 +133,13 @@ export default function Header({ locale }: { locale: string }) {
           </div>
 
           {/* Language Switcher - Desktop */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <LanguageSwitcher />
-          </div>
+          </div> */}
 
           {/* Mobile: Language Switcher + Menu Button */}
           <div className="md:hidden flex items-center gap-3">
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             <Button
               variant="ghost"
               size="icon"
