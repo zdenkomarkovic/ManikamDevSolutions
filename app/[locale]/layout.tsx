@@ -7,7 +7,6 @@ import { i18n } from "@/i18n-config";
 import { isValidLocale } from "@/lib/locale";
 import { LocaleProvider } from "../../lib/LocaleContext";
 import { Metadata } from "@/node_modules/next/types";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAdsPhoneConversion from "@/components/GoogleAdsPhoneConversion";
 import Script from "next/script";
 
@@ -77,6 +76,15 @@ export default async function LocaleLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
+        {/* Google Ads tag - direktno u head da ga skener detektuje */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17745015417"></script>
+        <script dangerouslySetInnerHTML={{__html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17745015417');
+          gtag('config', 'G-E5DEDZ9E2H');
+        `}} />
       </head>
 
       <body
@@ -84,7 +92,6 @@ export default async function LocaleLayout({
         suppressHydrationWarning={true}
       >
         {" "}
-        <GoogleAnalytics />
         <GoogleAdsPhoneConversion />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
