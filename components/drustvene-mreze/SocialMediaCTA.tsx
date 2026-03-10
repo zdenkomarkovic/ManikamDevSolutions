@@ -128,7 +128,7 @@ export default function SocialMediaCTA() {
               href={`tel:${intl.formatMessage({ id: "socialMedia.cta.phone" }).replace(/\s/g, "")}`}
               onClick={() => {
                 if (window.gtag_report_conversion) {
-                  window.gtag_report_conversion(`tel:${intl.formatMessage({ id: "socialMedia.cta.phone" }).replace(/\s/g, "")}`);
+                  window.gtag_report_conversion?.(`tel:${intl.formatMessage({ id: "socialMedia.cta.phone" }).replace(/\s/g, "")}`);
                 }
               }}
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-2 md:px-8 py-1 md:py-3 rounded-xl text-base md:text-3xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"

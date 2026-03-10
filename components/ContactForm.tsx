@@ -216,7 +216,7 @@ export default function ContactForm() {
                 whileHover={{ x: 5 }}
                 onClick={() => {
                   if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion("tel:+381641967267");
+                    window.gtag_report_conversion?.("tel:+381641967267");
                   }
                 }}
               >
@@ -231,7 +231,7 @@ export default function ContactForm() {
                 whileHover={{ x: 5 }}
                 onClick={() => {
                   if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion("viber://chat?number=%2B381641967267");
+                    window.gtag_report_conversion?.("viber://chat?number=%2B381641967267");
                   }
                 }}
               >
@@ -246,7 +246,7 @@ export default function ContactForm() {
                 whileHover={{ x: 5 }}
                 onClick={() => {
                   if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion("https://wa.me/381641967267");
+                    window.gtag_report_conversion?.("https://wa.me/381641967267");
                   }
                 }}
               >

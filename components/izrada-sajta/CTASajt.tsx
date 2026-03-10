@@ -196,7 +196,7 @@ const CTASajt = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion(`tel:${intl.formatMessage({ id: "websiteDevelopment.cta.phone" }).replace(/\s/g, "")}`);
+                    window.gtag_report_conversion?.(`tel:${intl.formatMessage({ id: "websiteDevelopment.cta.phone" }).replace(/\s/g, "")}`);
                   }
                 }}
               >

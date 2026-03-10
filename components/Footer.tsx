@@ -76,7 +76,7 @@ export default function Footer({
                 href="tel:+381641967267"
                 onClick={() => {
                   if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion("tel:+381641967267");
+                    window.gtag_report_conversion?.("tel:+381641967267");
                   }
                 }}
               >

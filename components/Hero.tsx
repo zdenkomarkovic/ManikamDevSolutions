@@ -107,7 +107,7 @@ const Hero = ({ title, section }: { title: string; section: SectionData }) => {
             </p>
             <a
               href={`tel:${section.phone}`}
-              onClick={() => window.gtag_report_conversion(`tel:${section.phone}`)}
+              onClick={() => window.gtag_report_conversion?.(`tel:${section.phone}`)}
               className="mx-auto inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 md:px-8 py-2 md:py-4 rounded-xl text-sm md:text-[36px] font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <svg

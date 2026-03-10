@@ -141,7 +141,7 @@ export default function SEOCTA() {
               whileTap={{ scale: 0.95 }}
               onClick={() => {
                 if (window.gtag_report_conversion) {
-                  window.gtag_report_conversion(`tel:${intl.formatMessage({ id: "seoOptimization.cta.phone" })}`);
+                  window.gtag_report_conversion?.(`tel:${intl.formatMessage({ id: "seoOptimization.cta.phone" })}`);
                 }
               }}
             >
