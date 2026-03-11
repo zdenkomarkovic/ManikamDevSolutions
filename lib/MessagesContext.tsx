@@ -33,7 +33,6 @@ function flattenMessages(nestedMessages: NestedMessages, prefix = ''): Record<st
 
 export function MessagesProvider({
   children,
-  locale: _locale,
   messages,
 }: {
   children: React.ReactNode;

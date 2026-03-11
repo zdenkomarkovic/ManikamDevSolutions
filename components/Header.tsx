@@ -43,10 +43,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 md:px-16 py-[10px] font-bold ">
         <div className="flex justify-between items-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              href="/"
-              className="flex items-center space-x-4 "
-            >
+            <Link href="/" className="flex items-center space-x-4 ">
               <Image
                 src={logo}
                 alt="manikamwebsolutions logo"
@@ -86,7 +83,7 @@ export default function Header() {
                       </motion.div>
                     </button>
                     {openDropdown === i && (
-                      <div className="absolute top-full left-0  bg-white shadow-lg rounded-full border border-gray-200 overflow-hidden z-50">
+                      <div className="absolute top-full left-0  bg-white shadow-lg  border border-gray-200 overflow-hidden z-50">
                         {item.submenu.map((subItem, j) => {
                           if (!subItem.route) return null;
                           return (
@@ -131,7 +128,9 @@ export default function Header() {
           <div className="md:hidden flex items-center gap-3">
             <a
               href="tel:+381641967267"
-              onClick={() => window.gtag_report_conversion?.("tel:+381641967267")}
+              onClick={() =>
+                window.gtag_report_conversion?.("tel:+381641967267")
+              }
               className="flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-3 py-2 rounded-full transition-colors font-bold text-sm"
             >
               +381 64 196 7267

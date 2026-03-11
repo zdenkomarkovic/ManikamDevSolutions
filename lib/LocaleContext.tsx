@@ -1,6 +1,7 @@
 "use client";
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Translations = any;
 type LocaleContextType = { locale: "sr"; t: Translations };
 
@@ -12,7 +13,7 @@ export function useLocale() {
   return context;
 }
 
-export function LocaleProvider({ children, locale: _locale }: { children: ReactNode; locale?: string }) {
+export function LocaleProvider({ children }: { children: ReactNode; locale?: string }) {
   const [translations, setTranslations] = useState<Translations>({});
   const [isLoading, setIsLoading] = useState(true);
 

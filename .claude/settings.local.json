@@ -37,7 +37,11 @@
       "Bash(ls app/[locale]/)",
       "Bash(for dir:*)",
       "Bash(do echo:*)",
-      "Read(//e/Sajtovi/manikam_dev_solutions/**)"
+      "Read(//e/Sajtovi/manikam_dev_solutions/**)",
+      "Bash(npx tsc:*)",
+      "Bash(grep -r \"en.json\" /e/Sajtovi/manikam_dev_solutions --include=\"*.ts\" --include=\"*.tsx\" --include=\"*.js\" 2>/dev/null | head -20)",
+      "Bash(ls -la /e/Sajtovi/manikam_dev_solutions/app/\\\\[locale\\\\]/ 2>/dev/null | head -20)",
+      "Bash(npx next:*)"
     ],
     "deny": [],
     "ask": []

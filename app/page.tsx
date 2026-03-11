@@ -9,11 +9,26 @@ import ParticlesBackground from "@/components/ParticlesBackground";
 
 export async function generateMetadata(): Promise<Metadata> {
   const intl = await getIntl("sr");
+  const title = intl.formatMessage({ id: "page.home.head.title" });
+  const description = intl.formatMessage({ id: "page.home.head.meta.description" });
+  const ogImage = `https://manikamwebsolutions.com/api/og?title=${encodeURIComponent(title)}`;
   return {
-    title: intl.formatMessage({ id: "page.home.head.title" }),
-    description: intl.formatMessage({ id: "page.home.head.meta.description" }),
+    title,
+    description,
     alternates: {
       canonical: "https://manikamwebsolutions.com/",
+    },
+    openGraph: {
+      url: "https://manikamwebsolutions.com/",
+      title,
+      description,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
     },
   };
 }

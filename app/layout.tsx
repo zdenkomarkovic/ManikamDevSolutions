@@ -20,14 +20,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Manikam Web Solutions",
-  description: "Agencija za izradu softvera i sajtova",
+  description: "Agencija za izradu softvera i sajtova | Izrada sajtova, web shopova, SEO optimizacija, Google oglašavanje i društvene mreže.",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon.ico", sizes: "any" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "/images/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
   keywords: [
@@ -37,7 +37,32 @@ export const metadata: Metadata = {
     "web dizajn",
     "softver",
     "izrada softvera",
+    "seo optimizacija",
+    "google oglasavanje",
+    "web shop",
+    "digitalni marketing",
   ],
+  openGraph: {
+    type: "website",
+    locale: "sr_RS",
+    siteName: "Manikam Web Solutions",
+    title: "Manikam Web Solutions",
+    description: "Agencija za izradu softvera i sajtova | Izrada sajtova, web shopova, SEO optimizacija, Google oglašavanje i društvene mreže.",
+    images: [
+      {
+        url: "https://manikamwebsolutions.com/api/og?title=Manikam%20Web%20Solutions",
+        width: 1200,
+        height: 630,
+        alt: "Manikam Web Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Manikam Web Solutions",
+    description: "Agencija za izradu softvera i sajtova | Izrada sajtova, web shopova, SEO optimizacija, Google oglašavanje i društvene mreže.",
+    images: ["https://manikamwebsolutions.com/api/og?title=Manikam%20Web%20Solutions"],
+  },
   // Ne postavljamo canonical ovde - svaka stranica ima svoj
 };
 
@@ -66,15 +91,41 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        {/* Google Ads tag - direktno u head da ga skener detektuje */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17745015417"></script>
-        <script dangerouslySetInnerHTML={{__html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17745015417');
-          gtag('config', 'G-E5DEDZ9E2H');
-        `}} />
+        {/* hreflang */}
+        <link rel="alternate" hrefLang="sr" href="https://manikamwebsolutions.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://manikamwebsolutions.com/" />
+        {/* JSON-LD Organization schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Manikam Web Solutions",
+              url: "https://manikamwebsolutions.com",
+              logo: "https://manikamwebsolutions.com/images/manikamlogo.png",
+              description: "Agencija za izradu softvera i sajtova, web shopova, SEO optimizaciju, Google oglašavanje i upravljanje društvenim mrežama.",
+              address: [
+                {
+                  "@type": "PostalAddress",
+                  addressLocality: "Niš",
+                  addressCountry: "RS",
+                },
+                {
+                  "@type": "PostalAddress",
+                  addressLocality: "Washington D.C.",
+                  addressCountry: "US",
+                },
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                availableLanguage: ["Serbian", "English"],
+              },
+              sameAs: [],
+            }),
+          }}
+        />
       </head>
 
       <body
@@ -83,6 +134,20 @@ export default async function RootLayout({
       >
         {" "}
         <GoogleAdsPhoneConversion />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17745015417"
+        />
+        <Script id="google-analytics-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17745015417');
+            gtag('config', 'G-E5DEDZ9E2H');
+          `}
+        </Script>
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
     !function(f,b,e,v,n,t,s)

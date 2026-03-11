@@ -4,11 +4,20 @@ import { LocaleProvider } from "@/lib/LocaleContext";
 
 export async function generateMetadata(): Promise<Metadata> {
   const messages = await import(`@/lang/contact/sr.json`);
+  const title = messages.contact.page.title;
+  const description = messages.contact.page.description;
+  const ogImage = `https://manikamwebsolutions.com/api/og?title=${encodeURIComponent(title)}`;
   return {
-    title: messages.contact.page.title,
-    alternates: {
-      canonical: "https://manikamwebsolutions.com/contact",
+    title,
+    description,
+    alternates: { canonical: "https://manikamwebsolutions.com/contact" },
+    openGraph: {
+      url: "https://manikamwebsolutions.com/contact",
+      title,
+      description,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

@@ -15,6 +15,6 @@ export async function getIntl(locale: Locale) {
   return createIntl({ locale, messages: messages as Record<string, string> });
 }
 
-export function getDirection(_locale: Locale) {
+export function getDirection() {
   return "ltr";
 }
