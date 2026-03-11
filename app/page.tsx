@@ -2,30 +2,19 @@ import Hero from "@/components/Hero";
 import Reference from "@/components/Reference";
 import Section1 from "@/components/Section1";
 import Usluge from "@/components/Usluge";
-import { generateAlternateLinks } from "@/lib/seo";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
-import { getIntl } from "../../lib/intl";
-import { i18n } from "@/i18n-config";
-import { isValidLocale } from "@/lib/locale";
+import { getIntl } from "@/lib/intl";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const awaitedParams = await params;
-  const localeParam = awaitedParams.locale;
-
-  const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
-
-  const intl = await getIntl(locale);
-
+export async function generateMetadata(): Promise<Metadata> {
+  const intl = await getIntl("sr");
   return {
     title: intl.formatMessage({ id: "page.home.head.title" }),
     description: intl.formatMessage({ id: "page.home.head.meta.description" }),
-    alternates: generateAlternateLinks(""),
+    alternates: {
+      canonical: "https://manikamwebsolutions.com/",
+    },
   };
 }
 
@@ -47,17 +36,8 @@ const defaultSection = {
   call_button: "",
 };
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const awaitedParams = await params;
-  const localeParam = awaitedParams.locale;
-
-  const locale = isValidLocale(localeParam) ? localeParam : i18n.defaultLocale;
-
-  const intl = await getIntl(locale);
+export default async function Home() {
+  const intl = await getIntl("sr");
   const messages = intl.messages as unknown as Messages;
 
   const heroTitle = intl.formatMessage({ id: "hero.title" });

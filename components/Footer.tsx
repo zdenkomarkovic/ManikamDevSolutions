@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
-import { Locale, i18n } from "@/i18n-config";
 import { getNavList } from "@/locales/navUtils";
 import { FaPhone } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
@@ -14,29 +13,16 @@ declare global {
   }
 }
 
-function isValidLocale(locale: string): locale is Locale {
-  return (i18n.locales as readonly string[]).includes(locale);
-}
-function getSafeLocale(locale: string): Locale {
-  if (isValidLocale(locale)) {
-    return locale;
-  }
-  return i18n.defaultLocale as Locale;
-}
-
 export default function Footer({
-  locale,
   message,
   rights,
   instagram,
 }: {
-  locale: string;
   message: string;
   rights: string;
   instagram: string;
 }) {
-  const currentLocale = getSafeLocale(locale);
-  const navList = getNavList(currentLocale);
+  const navList = getNavList();
 
   return (
     <motion.footer
@@ -88,17 +74,6 @@ export default function Footer({
                 </p>
               </a>
             </div>
-            {/* <div>
-              {" "}
-              <a href="tel:+12408103730">
-                <p className="text-muted-foreground  flex gap-2 flex-col items-center hover:text-orange-500">
-                  Office: Washington D.C. USA{" "}
-                  <span className="flex gap-2 items-center">
-                    <FaPhone className="" /> +12408103730
-                  </span>
-                </p>
-              </a>
-            </div> */}
             <div className=" mx-auto w-fit">
               <a href="mailto:manikamwebsolutions@gmail.com">
                 <p className="flex gap-3 items-center hover:text-orange-500 text-muted-foreground text-wrap">

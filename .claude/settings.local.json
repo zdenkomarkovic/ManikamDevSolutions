@@ -30,7 +30,14 @@
       "Bash(ls E:/Sajtovi/manikam_dev_solutions/app/\\\\[locale\\\\]/)",
       "Bash(cd E:/Sajtovi/manikam_dev_solutions && npx tsc --noEmit 2>&1 | head -50)",
       "Bash(cd E:/Sajtovi/manikam_dev_solutions && sed -i 's/locale as \"en\" | \"sr\"/locale as \"sr\"/g' app/\\\\[locale\\\\]/contact/page.tsx app/\\\\[locale\\\\]/hvala/page.tsx app/\\\\[locale\\\\]/redizajn-migracija/page.tsx app/\\\\[locale\\\\]/website-redesign/page.tsx)",
-      "Bash(cd E:/Sajtovi/manikam_dev_solutions && npx tsc --noEmit 2>&1 | head -30)"
+      "Bash(cd E:/Sajtovi/manikam_dev_solutions && npx tsc --noEmit 2>&1 | head -30)",
+      "Bash(find /e/Sajtovi/manikam_dev_solutions/app/\\\\[locale\\\\] -name \"page.tsx\" | head -20)",
+      "Bash(cd E:/Sajtovi/manikam_dev_solutions && npx tsc --noEmit 2>&1)",
+      "Bash(cd \"E:/Sajtovi/manikam_dev_solutions\" && cp \"app/[locale]/page.tsx\" \"app/page.tsx\" && cp -r \"app/[locale]/contact\" \"app/contact\" && cp -r \"app/[locale]/drustvene-mreze\" \"app/drustvene-mreze\" && cp -r \"app/[locale]/google-oglasavanje\" \"app/google-oglasavanje\" && cp -r \"app/[locale]/hvala\" \"app/hvala\" && cp -r \"app/[locale]/izrada-sajta\" \"app/izrada-sajta\" && cp -r \"app/[locale]/izrada-softvera\" \"app/izrada-softvera\" && cp -r \"app/[locale]/izrada-web-shopa\" \"app/izrada-web-shopa\" && cp -r \"app/[locale]/marketing-paket\" \"app/marketing-paket\" && cp -r \"app/[locale]/redizajn-migracija\" \"app/redizajn-migracija\" && cp -r \"app/[locale]/seo-optimizacija\" \"app/seo-optimizacija\" && echo \"done\")",
+      "Bash(ls app/[locale]/)",
+      "Bash(for dir:*)",
+      "Bash(do echo:*)",
+      "Read(//e/Sajtovi/manikam_dev_solutions/**)"
     ],
     "deny": [],
     "ask": []

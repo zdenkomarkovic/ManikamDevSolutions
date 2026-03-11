@@ -8,26 +8,12 @@ import { Button } from "../components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
-import { i18n } from "../i18n-config";
 import { getNavList } from "@/locales/navUtils";
-import type { Locale } from "@/i18n-config";
 import logo from "../public/images/android-chrome-192x192.png";
 // import LanguageSwitcher from "./LanguageSwitcher";
 
-function isValidLocale(locale: string): locale is Locale {
-  return (i18n.locales as readonly string[]).includes(locale);
-}
-
-function getSafeLocale(locale: string): Locale {
-  if (isValidLocale(locale)) {
-    return locale;
-  }
-  return i18n.defaultLocale as Locale;
-}
-
-export default function Header({ locale }: { locale: string }) {
-  const currentLocale = getSafeLocale(locale);
-  const navList = getNavList(currentLocale);
+export default function Header() {
+  const navList = getNavList();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
@@ -58,7 +44,7 @@ export default function Header({ locale }: { locale: string }) {
         <div className="flex justify-between items-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
-              href={`/${currentLocale}`}
+              href="/"
               className="flex items-center space-x-4 "
             >
               <Image

@@ -3,7 +3,6 @@
 import Image from "@/node_modules/next/image";
 import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { useLocale } from "@/lib/LocaleContext";
 import Link from "next/link";
 import heroImg from "../public/images/laptop.jpg";
 
@@ -26,31 +25,18 @@ type SectionData = {
 };
 
 const Hero = ({ title, section }: { title: string; section: SectionData }) => {
-  const { locale } = useLocale();
-
-  // Lokalizovani tekstovi za usluge sa linkovima - koristi useMemo za optimizaciju
+  // Lokalizovani tekstovi za usluge sa linkovima
   const services = useMemo(
-    () =>
-      locale === "sr"
-        ? [
-            { text: "Izrada web sajta", href: "/sr/izrada-sajta" },
-            { text: "Izrada online prodavnica", href: "/sr/izrada-web-shopa" },
-            { text: "Redizajn sajta", href: "/sr/redizajn-migracija" },
-            { text: "Google Ads kampanje", href: "/sr/google-oglasavanje" },
-            { text: "SEO usluge", href: "/sr/seo-optimizacija" },
-            { text: "Marketing društvenih mreža", href: "/sr/drustvene-mreze" },
-            { text: "Razvoj softvera", href: "/sr/izrada-softvera" },
-          ]
-        : [
-            { text: "Web Development Services", href: "/en/website-development" },
-            { text: "Web Shop Development", href: "/en/webshop-development" },
-            { text: "Website Redesign", href: "/en/website-redesign" },
-            { text: "Google Ads", href: "/en/google-ads" },
-            { text: "SEO Services", href: "/en/seo-optimization" },
-            { text: "Social Media Marketing", href: "/en/social-media" },
-            { text: "Custom Software", href: "/en/software-development" },
-          ],
-    [locale]
+    () => [
+      { text: "Izrada web sajta", href: "/izrada-sajta" },
+      { text: "Izrada online prodavnica", href: "/izrada-web-shopa" },
+      { text: "Redizajn sajta", href: "/redizajn-migracija" },
+      { text: "Google Ads kampanje", href: "/google-oglasavanje" },
+      { text: "SEO usluge", href: "/seo-optimizacija" },
+      { text: "Marketing društvenih mreža", href: "/drustvene-mreze" },
+      { text: "Razvoj softvera", href: "/izrada-softvera" },
+    ],
+    []
   );
 
   const [visibleServices, setVisibleServices] = useState<number[]>([]);

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Mapiranje engleskih slugova na srpske (za redirect starih /en/ linkova)
+// Mapiranje engleskih slugova na srpske
 const enToSrSlugMap: Record<string, string> = {
   "website-redesign": "redizajn-migracija",
   "google-ads": "google-oglasavanje",
@@ -15,34 +15,22 @@ const enToSrSlugMap: Record<string, string> = {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Redirect sve /en/* putanje na /sr/* (sa mapiranjem slugova)
+  // Redirect /en/* na srpske ekvivalente (bez /sr/ prefiksa)
   if (pathname.startsWith("/en")) {
-    const afterEn = pathname.slice(3); // npr. "/website-development" ili ""
-    const slug = afterEn.replace(/^\//, ""); // ukloni leading slash
+    const afterEn = pathname.slice(3);
+    const slug = afterEn.replace(/^\//, "");
     const srSlug = enToSrSlugMap[slug] ?? slug;
-    const newPath = srSlug ? `/sr/${srSlug}` : "/sr";
+    const newPath = srSlug ? `/${srSlug}` : "/";
     return NextResponse.redirect(new URL(newPath, request.url), 301);
   }
 
-  // Ako nema locale-a u URL-u, redirektuj na /sr
-  const hasLocale = pathname.startsWith("/sr/") || pathname === "/sr";
-  if (!hasLocale) {
-    const newPath = `/sr${pathname}`;
-    const response = NextResponse.redirect(new URL(newPath, request.url));
-    response.cookies.set("NEXT_LOCALE", "sr", {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 365,
-    });
-    return response;
+  // Redirect /sr/* na iste rute bez /sr/ prefiksa
+  if (pathname.startsWith("/sr")) {
+    const afterSr = pathname.slice(3) || "/";
+    return NextResponse.redirect(new URL(afterSr, request.url), 301);
   }
 
-  // Srpska putanja - nastavi normalno
-  const response = NextResponse.next();
-  response.cookies.set("NEXT_LOCALE", "sr", {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 365,
-  });
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
