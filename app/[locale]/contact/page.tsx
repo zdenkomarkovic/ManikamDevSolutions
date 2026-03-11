@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: Props) {
   };
 
   return (
-    <LocaleProvider locale={locale as "en" | "sr"}>
+    <LocaleProvider locale={locale as "sr"}>
       <ContactClient messages={messages} />
     </LocaleProvider>
   );

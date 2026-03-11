@@ -51,7 +51,7 @@ export const viewport = {
 };
 
 export async function generateStaticParams(): Promise<{ locale: string }[]> {
-  return [{ locale: "sr" }, { locale: "en" }];
+  return [{ locale: "sr" }];
 }
 
 export default async function LocaleLayout({

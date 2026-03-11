@@ -26,7 +26,11 @@
       "WebFetch(domain:manikamwebsolutions.com)",
       "Bash(for file in seo/SEOCTA.tsx google-ads/GoogleAdsCTA.tsx redesign/RedesignCTA.tsx drustvene-mreze/SocialMediaCTA.tsx izrada-softvera/SoftwareCTA.tsx web-shop/CtaWebShop.tsx)",
       "Bash(do grep -n \"formatMessage.*phone\" \"$file\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(ls E:/Sajtovi/manikam_dev_solutions/app/\\\\[locale\\\\]/)",
+      "Bash(cd E:/Sajtovi/manikam_dev_solutions && npx tsc --noEmit 2>&1 | head -50)",
+      "Bash(cd E:/Sajtovi/manikam_dev_solutions && sed -i 's/locale as \"en\" | \"sr\"/locale as \"sr\"/g' app/\\\\[locale\\\\]/contact/page.tsx app/\\\\[locale\\\\]/hvala/page.tsx app/\\\\[locale\\\\]/redizajn-migracija/page.tsx app/\\\\[locale\\\\]/website-redesign/page.tsx)",
+      "Bash(cd E:/Sajtovi/manikam_dev_solutions && npx tsc --noEmit 2>&1 | head -30)"
     ],
     "deny": [],
     "ask": []

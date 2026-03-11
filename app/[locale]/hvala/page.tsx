@@ -35,7 +35,7 @@ export default async function ThankYouPage({ params }: Props) {
   };
 
   return (
-    <LocaleProvider locale={locale as "en" | "sr"}>
+    <LocaleProvider locale={locale as "sr"}>
       <GoogleAdsConversion />
       <ThankYouClient messages={messages} />
     </LocaleProvider>

@@ -1,21 +1,11 @@
 const baseUrl = "https://manikamwebsolutions.com";
-const supportedLocales = ["sr", "en"];
 
-export function generateAlternateLinks(pathname: string, locale?: string) {
-  const languages: Record<string, string> = {};
-
-  supportedLocales.forEach((loc) => {
-    languages[loc] = `${baseUrl}/${loc}${pathname}`;
-  });
-
-  // x-default pokazuje na /sr verziju (default za korisnike u Srbiji i regionu)
-  languages["x-default"] = `${baseUrl}/sr${pathname}`;
-
-  // Canonical pokazuje na trenutnu locale verziju
-  const canonicalPath = locale ? `/${locale}${pathname}` : pathname;
-
+export function generateAlternateLinks(pathname: string) {
   return {
-    canonical: `${baseUrl}${canonicalPath}`,
-    languages,
+    canonical: `${baseUrl}/sr${pathname}`,
+    languages: {
+      "sr": `${baseUrl}/sr${pathname}`,
+      "x-default": `${baseUrl}/sr${pathname}`,
+    },
   };
 }

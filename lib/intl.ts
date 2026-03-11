@@ -8,18 +8,13 @@ export async function getIntl(locale: Locale) {
   try {
     messages = (await import(`../lang/${locale}.json`)).default;
   } catch {
-    // fallback na engleski
-    messages = (await import(`../lang/en.json`)).default;
-    locale = "en"; // da bude konzistentno
+    // fallback na srpski
+    messages = (await import(`../lang/sr.json`)).default;
+    locale = "sr";
   }
   return createIntl({ locale, messages: messages as Record<string, string> });
 }
 
-export function getDirection(locale: Locale) {
-  switch (locale) {
-    case "en":
-    case "sr":
-    default:
-      return "ltr";
-  }
+export function getDirection(_locale: Locale) {
+  return "ltr";
 }

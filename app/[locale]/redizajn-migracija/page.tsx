@@ -29,7 +29,7 @@ export default async function RedesignMigrationPage({ params }: Props) {
   const { locale } = await params;
 
   return (
-    <LocaleProvider locale={locale as "en" | "sr"}>
+    <LocaleProvider locale={locale as "sr"}>
       <RedesignPageClient />
     </LocaleProvider>
   );
