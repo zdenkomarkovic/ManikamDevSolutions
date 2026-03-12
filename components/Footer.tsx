@@ -85,13 +85,16 @@ export default function Footer({
               <a
                 href="https://www.facebook.com/profile.php?id=61574784286298"
                 className="text-muted-foreground hover:text-orange-500"
+                aria-label="Manikam Web Solutions na Facebooku"
               >
                 <Facebook />
               </a>
               <a
                 href={instagram}
-                target={"_blank"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-orange-500"
+                aria-label="Manikam Web Solutions na Instagramu"
               >
                 <Instagram />
               </a>
