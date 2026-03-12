@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
 import { getNavList } from "@/locales/navUtils";
@@ -25,11 +24,8 @@ export default function Footer({
   const navList = getNavList();
 
   return (
-    <motion.footer
-      className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 py-8  shadow-[0px_-2px_5px_#c9822414]"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
+    <footer
+      className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 py-8  shadow-[0px_-2px_5px_#c9822414] animate-fade-in-up"
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-16 text-white">
         <div className="text-center md:text-left md:grid md:grid-cols-3 gap-8 mx-auto">
@@ -120,6 +116,6 @@ export default function Footer({
           </p>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }

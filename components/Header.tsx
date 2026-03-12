@@ -43,7 +43,7 @@ export default function Header() {
                 width={55}
                 height={55}
                 className="rounded-full"
-
+                priority
               />
               <span className="hidden md:block">
                 <span>Manikam </span>
