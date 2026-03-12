@@ -31,10 +31,10 @@ type SectionData = {
 };
 
 type UslugeItem = {
+  img: string;
   title: string;
-  description: string;
-  icon: string;
-  link: string;
+  text: string;
+  span: string;
 };
 
 export default function HomeBelowFold({
