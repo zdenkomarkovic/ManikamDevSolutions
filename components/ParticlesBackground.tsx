@@ -1,94 +1,52 @@
-"use client";
-import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
-import type { Engine } from "tsparticles-engine";
+const particles = [
+  { top: "10%", left: "15%", size: 2, duration: "8s", delay: "0s" },
+  { top: "20%", left: "80%", size: 1, duration: "12s", delay: "1s" },
+  { top: "35%", left: "45%", size: 2, duration: "10s", delay: "2s" },
+  { top: "50%", left: "25%", size: 1, duration: "9s", delay: "0.5s" },
+  { top: "65%", left: "70%", size: 2, duration: "11s", delay: "3s" },
+  { top: "75%", left: "10%", size: 1, duration: "7s", delay: "1.5s" },
+  { top: "85%", left: "55%", size: 2, duration: "13s", delay: "0.8s" },
+  { top: "15%", left: "60%", size: 1, duration: "9s", delay: "2.5s" },
+  { top: "45%", left: "90%", size: 2, duration: "10s", delay: "1.2s" },
+  { top: "60%", left: "35%", size: 1, duration: "8s", delay: "3.5s" },
+  { top: "30%", left: "5%", size: 2, duration: "11s", delay: "0.3s" },
+  { top: "90%", left: "85%", size: 1, duration: "14s", delay: "2s" },
+  { top: "5%", left: "40%", size: 2, duration: "9s", delay: "4s" },
+  { top: "55%", left: "60%", size: 1, duration: "12s", delay: "1.8s" },
+  { top: "70%", left: "20%", size: 2, duration: "10s", delay: "0.6s" },
+  { top: "25%", left: "75%", size: 1, duration: "8s", delay: "3.2s" },
+  { top: "40%", left: "50%", size: 2, duration: "11s", delay: "1.4s" },
+  { top: "80%", left: "40%", size: 1, duration: "9s", delay: "2.8s" },
+  { top: "95%", left: "65%", size: 2, duration: "13s", delay: "0.2s" },
+  { top: "12%", left: "30%", size: 1, duration: "10s", delay: "4.5s" },
+];
 
 const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async () => {
-    // Particles su ucitani
-  }, []);
-
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        background: {
-          color: {
-            value: "transparent",
-          },
-        },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-            resize: true,
-          },
-          modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            color: "#717b8a",
-            distance: 150,
-            enable: true,
-            opacity: 0.2,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 1,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.3,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 0, max: 0 },
-          },
-        },
-        detectRetina: true,
-      }}
-      className="absolute inset-0 z-10 pointer-events-none"
-    />
+    <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+      {particles.map((p, i) => (
+        <span
+          key={i}
+          style={{
+            position: "absolute",
+            top: p.top,
+            left: p.left,
+            width: p.size,
+            height: p.size,
+            borderRadius: "50%",
+            backgroundColor: "rgba(255,255,255,0.3)",
+            animation: `floatParticle ${p.duration} ease-in-out ${p.delay} infinite alternate`,
+          }}
+        />
+      ))}
+      <style>{`
+        @keyframes floatParticle {
+          0%   { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+          50%  { opacity: 0.5; }
+          100% { transform: translateY(-30px) translateX(10px); opacity: 0.2; }
+        }
+      `}</style>
+    </div>
   );
 };
 

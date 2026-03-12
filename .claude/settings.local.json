@@ -41,7 +41,10 @@
       "Bash(npx tsc:*)",
       "Bash(grep -r \"en.json\" /e/Sajtovi/manikam_dev_solutions --include=\"*.ts\" --include=\"*.tsx\" --include=\"*.js\" 2>/dev/null | head -20)",
       "Bash(ls -la /e/Sajtovi/manikam_dev_solutions/app/\\\\[locale\\\\]/ 2>/dev/null | head -20)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(grep -r \"from \\\\\"framer-motion\\\\\"\\\\|from 'framer-motion'\" components/ app/ --include=\"*.tsx\" -l 2>/dev/null)",
+      "Bash(node -e \"require\\('./app/izrada-web-shopa/page'\\)\" 2>&1 | head -5)"
     ],
     "deny": [],
     "ask": []
