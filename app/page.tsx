@@ -1,13 +1,9 @@
-import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
+import HomeBelowFold from "@/components/HomeBelowFold";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
 import { getIntl } from "@/lib/intl";
 import ParticlesBackground from "@/components/ParticlesBackground";
-
-const Section1 = dynamic(() => import("@/components/Section1"), { ssr: false });
-const Usluge = dynamic(() => import("@/components/Usluge"), { ssr: false });
-const Reference = dynamic(() => import("@/components/Reference"), { ssr: false });
 
 export async function generateMetadata(): Promise<Metadata> {
   const intl = await getIntl("sr");
@@ -70,9 +66,14 @@ export default async function Home() {
       <div className="bg-gray-900/95">
         <ParticlesBackground />
         <Hero title={heroTitle} section={section} />
-        <Section1 section={section} cards={cards} />
-        <Usluge usluge={usluge} title={uslugeTitle} />
-        <Reference refLink={refLink} title={referenceTitle} />
+        <HomeBelowFold
+          section={section}
+          cards={cards}
+          usluge={usluge}
+          uslugeTitle={uslugeTitle}
+          refLink={refLink}
+          referenceTitle={referenceTitle}
+        />
       </div>
     </main>
   );
