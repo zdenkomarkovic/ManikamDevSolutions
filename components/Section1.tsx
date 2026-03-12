@@ -220,7 +220,7 @@ const Card = ({
         }  justify-between items-center rounded-3xl text-white bg-gradient-to-br  from-black via-gray-800 to-orange-600  h-[600px] mx-auto p-2 md:p-7`}
       >
         <div className="md:w-[45%] space-y-5 md:space-y-10">
-          <h3 className=" text-2xl md:text-3xl xl:text-4xl">{text.title}</h3>
+          <h2 className=" text-2xl md:text-3xl xl:text-4xl">{text.title}</h2>
           <p className="">{text.mim}</p>
         </div>
         <div className="relative w-full md:w-[50%] h-full">
