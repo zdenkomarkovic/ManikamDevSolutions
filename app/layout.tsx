@@ -91,12 +91,6 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        {/* Preconnect za third-party resurse */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         {/* hreflang */}
         <link rel="alternate" hrefLang="sr" href="https://manikamwebsolutions.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://manikamwebsolutions.com/" />
