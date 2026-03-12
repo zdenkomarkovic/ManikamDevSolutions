@@ -3,6 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes heroServiceIn {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out forwards;
+}
+
+.hero-service-item {
+  opacity: 0;
+  animation: heroServiceIn 0.5s ease-out forwards;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: calc(1rem * var(--ig-scale));
