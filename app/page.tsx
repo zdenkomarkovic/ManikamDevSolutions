@@ -1,11 +1,13 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
-import Reference from "@/components/Reference";
-import Section1 from "@/components/Section1";
-import Usluge from "@/components/Usluge";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
 import { getIntl } from "@/lib/intl";
 import ParticlesBackground from "@/components/ParticlesBackground";
+
+const Section1 = dynamic(() => import("@/components/Section1"), { ssr: false });
+const Usluge = dynamic(() => import("@/components/Usluge"), { ssr: false });
+const Reference = dynamic(() => import("@/components/Reference"), { ssr: false });
 
 export async function generateMetadata(): Promise<Metadata> {
   const intl = await getIntl("sr");
