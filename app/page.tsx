@@ -3,7 +3,6 @@ import HomeBelowFold from "@/components/HomeBelowFold";
 import { Messages } from "@/types/messages";
 import { Metadata } from "next";
 import { getIntl } from "@/lib/intl";
-import ParticlesBackground from "@/components/ParticlesBackground";
 
 export async function generateMetadata(): Promise<Metadata> {
   const intl = await getIntl("sr");
@@ -64,7 +63,6 @@ export default async function Home() {
   return (
     <main>
       <div className="bg-gray-900/95">
-        <ParticlesBackground />
         <Hero title={heroTitle} section={section} />
         <HomeBelowFold
           section={section}
