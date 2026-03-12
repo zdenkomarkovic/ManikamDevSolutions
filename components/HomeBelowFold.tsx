@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 
-const Section1 = dynamic(() => import("@/components/Section1"), { ssr: false });
-const Usluge = dynamic(() => import("@/components/Usluge"), { ssr: false });
-const Reference = dynamic(() => import("@/components/Reference"), { ssr: false });
+const Section1 = dynamic(() => import("@/components/Section1"));
+const Usluge = dynamic(() => import("@/components/Usluge"));
+const Reference = dynamic(() => import("@/components/Reference"));
 
 type CardData = {
   title: string;
