@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getIntl } from "@/lib/intl";
-import { LocaleProvider } from "../lib/LocaleContext";
+
 import { Metadata } from "next/types";
 import GoogleAdsPhoneConversion from "@/components/GoogleAdsPhoneConversion";
 import Script from "next/script";
@@ -160,7 +160,6 @@ export default async function RootLayout({
     fbq('track', 'PageView');
   `}
         </Script>
-        <LocaleProvider locale={"sr"}>
           <Header />
           {children}
           <Footer
@@ -168,7 +167,6 @@ export default async function RootLayout({
             message={message}
             instagram={instagram}
           />
-        </LocaleProvider>
       </body>
     </html>
   );
