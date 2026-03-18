@@ -225,6 +225,24 @@ const IndustrijeSajt = () => {
           </p>
         </motion.div>
       </motion.div>
+
+      <motion.div
+        className="flex justify-center mt-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <a
+          href="/#reference"
+          className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold text-base md:text-lg transition-colors group"
+        >
+          Pogledajte naše realizovane projekte
+          <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </motion.div>
     </div>
   );
 };

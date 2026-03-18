@@ -37,44 +37,39 @@
         "feature5": "Integracija sa društvenim mrežama",
         "feature6": "Osnovna SEO optimizacija",
         "feature7": "SSL sertifikat, zaštita veb-sajta",
-        "feature8": "Domen za prvu godinu",
-        "feature9": "Hosting za prvu godinu",
+
         "timeline": "Vreme izrade:",
-        "timelineDays": "7-10 dana"
+        "timelineDays": "do 7 dana"
       },
       "professional": {
         "badge": "NAJPOPULARNIJI",
         "title": "Profesionalni Sajt - 450€",
         "subtitle": "Kompletno rešenje za ozbiljan biznis",
         "feature1": "Do 10 stranica",
-        "feature2": "Responzivni pregled prilagođen za mobilne i desktop uređaje",
-        "feature3": "Moderni dizajn pravljen po vašim željama i potrebama",
+        "feature2": "Responzivni pregled (mobilni + desktop)",
+        "feature3": "Moderni dizajn po vašoj meri",
         "feature4": "CMS za samostalno ažuriranje",
         "feature5": "Kontakt forma + Google Maps",
         "feature6": "Integracija sa socijalnim mrežama",
         "feature7": "Osnovna SEO optimizacija",
         "feature8": "SSL sertifikat i zaštita veb-sajta",
-        "feature9": "Hosting za prvu godinu",
-        "feature10": "Domen za prvu godinu",
         "timeline": "Vreme izrade:",
-        "timelineDays": "10-14 dana"
+        "timelineDays": "do 7 dana"
       },
       "premium": {
         "title": "Premium Sajt - cena po projektu",
         "subtitle": "Za velike biznise sa specifičnim potrebama",
         "feature1": "Neograničen broj stranica",
-        "feature2": "Responzivni pregled prilagođen za mobilne i desktop uređaje",
-        "feature3": "Moderni dizajn pravljen po vašim željama i potrebama",
+        "feature2": "Responzivni pregled (mobilni + desktop)",
+        "feature3": "Moderni dizajn po vašoj meri",
         "feature4": "CMS za samostalno ažuriranje",
         "feature5": "Kontakt forma + Google Maps",
         "feature6": "Integracija sa socijalnim mrežama",
         "feature7": "SEO optimizacija",
         "feature8": "Mogućnost više jezika",
         "feature9": "SSL sertifikat i zaštita veb-sajta",
-        "feature10": "Hosting za prvu godinu",
-        "feature11": "Domen za prvu godinu",
         "timeline": "Vreme izrade:",
-        "timelineDays": "10-14 dana"
+        "timelineDays": "do 10 dana"
       }
     },
     "advantages": {
