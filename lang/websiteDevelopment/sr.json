@@ -5,18 +5,26 @@
       "description": "Profesionalna izrada sajtova u Next.js tehnologiji. Brži, sigurniji i SEO optimizovani sajtovi za vaš biznis."
     },
     "hero": {
-      "title": "Profesionalna Izrada Web Sajtova",
-      "subtitle": "Kreiramo moderne, brze i SEO optimizovane web sajtove koji privlače klijente i povećavaju vašu online vidljivost. Koristimo najnovije tehnologije kako biste dobili maksimalne rezultate i konkurentsku prednost.",
+      "titleLine1": "Profesionalna Izrada Web Sajta",
+      "titleLine2": "Brz, Siguran i Optimizovan za Google",
+      "subtitlePre": "Gradimo sajtove u",
+      "subtitleTech": "Next.js",
+      "subtitleTechSuffix": "tehnologiji",
+      "subtitleMid": "— istoj koju koriste",
+      "subtitleCompanies": "Netflix, TikTok, Airbnb i Nike",
+      "subtitlePost": ". Isporuka za 7 dana, hosting i domen uključeni.",
       "badge1": "Next.js izrada sajtova",
       "badge2": "SEO Optimizovano",
       "badge3": "Mobilno Prilagođeno"
     },
     "intro": {
-      "title": "Zašto je profesionalna izrada sajta ključ vašeg online uspeha?",
-      "p1": "U digitalnom svetu, vaš sajt je prvi kontakt sa potencijalnim klijentima. Kvalitetno izrađen sajt ne predstavlja samo vaš brend — on aktivno radi za vas 24/7.",
-      "p2strong": "Tehnologije koje koristimo - React.js, Node.js i Next.js",
-      "p2": " - nisu slučajan izbor. Ove napredne tehnologije garantuju da će vaš sajt biti tehnički superiorniji, brži i bolje optimizovan od konkurencije koja koristi WordPress ili druge popularne sajt bildere.",
-      "p3": "Brzina učitavanja sajta direktno utiče na SEO. Google favorizuje brze sajtove. Naši sajtovi se učitavaju za manje od 2 sekunde, što je značajno brže od proseka industrije."
+      "title": "Šta dobijate umesto WordPress sajta",
+      "card1Title": "Brzina koja prodaje",
+      "card1Text": "Vaš sajt se učitava za manje od 2 sekunde. WordPress prosek je 5-8 sekundi. Svaka sekunda kašnjenja znači manje kupaca.",
+      "card2Title": "Nema hakovanja",
+      "card2Text": "WordPress je meta 90% svih napada na sajtove. Naši sajtovi nemaju plugin-ove ni ranjivosti.",
+      "card3Title": "Bolje rangiranje na Guglu",
+      "card3Text": "Brzina je jedan od glavnih faktora rangiranja. Brži sajt = viša pozicija = više klijenata bez plaćanja oglasa."
     },
     "packages": {
       "basic": {

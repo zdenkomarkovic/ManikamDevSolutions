@@ -8,23 +8,26 @@ const HeroSajt = () => {
 
   return (
     <div className="container mx-auto text-center">
-      <h1 className="text-[41px] leading-tight md:text-8xl bg-gradient-to-r from-gray-100 to-gray-500 bg-clip-text text-transparent font-[1000] py-6 md:py-14">
-        {intl.formatMessage({ id: "websiteDevelopment.hero.title" })}
+      <h1 className="py-6 md:py-14 flex flex-col items-center gap-2">
+        <span className="text-[36px] leading-tight md:text-7xl bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent font-[1000]">
+          {intl.formatMessage({ id: "websiteDevelopment.hero.titleLine1" })}
+        </span>
+        <span className="text-[28px] leading-tight md:text-5xl bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent font-[800] pb-2">
+          {intl.formatMessage({ id: "websiteDevelopment.hero.titleLine2" })}
+        </span>
       </h1>
-      <p className="text-base md:text-2xl text-gray-100 mb-5 md:mb-8 max-w-4xl mx-auto md:first-letter:leading-relaxed">
-        {intl.formatMessage({ id: "websiteDevelopment.hero.subtitle" })}
+      <p className="text-base md:text-2xl text-gray-100 mb-5 md:mb-8 max-w-4xl mx-auto leading-relaxed">
+        {intl.formatMessage({ id: "websiteDevelopment.hero.subtitlePre" })}{" "}
+        <span className="font-bold text-orange-400">
+          {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleTech" })}
+        </span>{" "}
+        {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleTechSuffix" })}{" "}
+        {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleMid" })}{" "}
+        <span className="font-bold text-orange-400">
+          {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleCompanies" })}
+        </span>
+        {intl.formatMessage({ id: "websiteDevelopment.hero.subtitlePost" })}
       </p>
-      <div className="flex flex-wrap justify-center gap-4">
-        <span className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 px-4 py-2 rounded-full text-sm font-semibold">
-          {intl.formatMessage({ id: "websiteDevelopment.hero.badge1" })}
-        </span>
-        <span className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 px-4 py-2 rounded-full text-sm font-semibold">
-          {intl.formatMessage({ id: "websiteDevelopment.hero.badge2" })}
-        </span>
-        <span className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 px-4 py-2 rounded-full text-sm font-semibold">
-          {intl.formatMessage({ id: "websiteDevelopment.hero.badge3" })}
-        </span>
-      </div>
     </div>
   );
 };
