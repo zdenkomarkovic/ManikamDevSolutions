@@ -138,91 +138,7 @@ const FAQSajt = () => {
         </motion.div>
 
         <motion.div
-          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
-          variants={itemVariants}
-          whileHover={{
-            x: 10,
-            transition: { duration: 0.3 },
-          }}
-        >
-          <motion.h3
-            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
-            }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q4.question" })}
-          </motion.h3>
-          <motion.p
-            className=""
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q4.answer" })}
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          className="border-b  pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
-          variants={itemVariants}
-          whileHover={{
-            x: 10,
-            transition: { duration: 0.3 },
-          }}
-        >
-          <motion.h3
-            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
-            }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q5.question" })}
-          </motion.h3>
-          <motion.p
-            className=""
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q5.answer" })}
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
-          variants={itemVariants}
-          whileHover={{
-            x: 10,
-            transition: { duration: 0.3 },
-          }}
-        >
-          <motion.h3
-            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
-            }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q6.question" })}
-          </motion.h3>
-          <motion.p
-            className=""
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q6.answer" })}
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          className="border-b pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
+          className="pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
           variants={itemVariants}
           whileHover={{
             x: 10,
@@ -246,34 +162,6 @@ const FAQSajt = () => {
             viewport={{ once: true }}
           >
             {intl.formatMessage({ id: "websiteDevelopment.faq.q7.answer" })}
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          className="pb-6 border-l-4 border-orange-600 rounded-lg pl-4 md:pl-6"
-          variants={itemVariants}
-          whileHover={{
-            x: 10,
-            transition: { duration: 0.3 },
-          }}
-        >
-          <motion.h3
-            className="text-xl font-bold mb-3 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
-            }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q8.question" })}
-          </motion.h3>
-          <motion.p
-            className=""
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {intl.formatMessage({ id: "websiteDevelopment.faq.q8.answer" })}
           </motion.p>
         </motion.div>
       </motion.div>

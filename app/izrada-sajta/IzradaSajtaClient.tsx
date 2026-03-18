@@ -10,7 +10,6 @@ import CTASajt from "@/components/izrada-sajta/CTASajt";
 import ProcesSajt from "@/components/izrada-sajta/ProcesSajt";
 import FAQSajt from "@/components/izrada-sajta/FAQSajt";
 import IndustrijeSajt from "@/components/izrada-sajta/IndustrijeSajt";
-import DodatneUslugeSajt from "@/components/izrada-sajta/DodatneUslugeSajt";
 import WhyUs from "@/components/izrada-sajta/WhyUs";
 import { MessagesProvider } from "@/lib/MessagesContext";
 import { LocaleProvider } from "@/lib/LocaleContext";
@@ -212,19 +211,6 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
               <IndustrijeSajt />
             </motion.div>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: viewportAmount,
-                margin: viewportMargin,
-              }}
-              variants={fadeInUp}
-              style={{ willChange: "transform, opacity" }}
-            >
-              <DodatneUslugeSajt />
-            </motion.div>
           </div>
         </div>
       </MessagesProvider>
