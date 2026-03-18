@@ -5,12 +5,10 @@ import { motion } from "framer-motion";
 import HeroSajt from "@/components/izrada-sajta/HeroSajt";
 import IntroSajt from "@/components/izrada-sajta/IntroSajt";
 import PaketiSajt from "@/components/izrada-sajta/PaketiSajt";
-import PrednostiSajt from "@/components/izrada-sajta/PrednostiSajt";
 import CTASajt from "@/components/izrada-sajta/CTASajt";
 import ProcesSajt from "@/components/izrada-sajta/ProcesSajt";
 import FAQSajt from "@/components/izrada-sajta/FAQSajt";
 import IndustrijeSajt from "@/components/izrada-sajta/IndustrijeSajt";
-import WhyUs from "@/components/izrada-sajta/WhyUs";
 import { MessagesProvider } from "@/lib/MessagesContext";
 import { LocaleProvider } from "@/lib/LocaleContext";
 import type { Locale } from "@/i18n-config";
@@ -140,34 +138,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
               >
                 <CTASajt />
               </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{
-                  once: true,
-                  amount: viewportAmount,
-                  margin: viewportMargin,
-                }}
-                variants={fadeInUp}
-                style={{ willChange: "transform, opacity" }}
-              >
-                <PrednostiSajt />
-              </motion.div>
             </div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: viewportAmount,
-                margin: viewportMargin,
-              }}
-              variants={scaleUp}
-              style={{ willChange: "transform, opacity" }}
-            >
-              <WhyUs />
-            </motion.div>
 
             <motion.div
               initial="hidden"
