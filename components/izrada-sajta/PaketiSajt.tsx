@@ -19,6 +19,7 @@ const PaketiSajt = () => {
   const intl = useMessages();
 
   return (
+    <>
     <div className="grid md:grid-cols-3 gap-4 md:">
       {/* Osnovni paket */}
       <motion.div
@@ -217,6 +218,17 @@ const PaketiSajt = () => {
         </div>
       </motion.div>
     </div>
+
+    <motion.p
+      className="text-center text-gray-400 text-base md:text-lg mt-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      Sve cene uključuju hosting i domen za prvu godinu — bez skrivenih troškova.
+    </motion.p>
+    </>
   );
 };
 

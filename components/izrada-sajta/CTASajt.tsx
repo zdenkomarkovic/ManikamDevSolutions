@@ -270,9 +270,12 @@ const CTASajt = () => {
           className="md:col-span-2 bg-gray-950/60 border-l-4 border-orange-500 rounded-2xl shadow-xl p-4 md:p-5 text-left"
           variants={itemVariants}
         >
-          <h3 className="text-base font-bold mb-3 text-orange-400">
-            {intl.formatMessage({ id: "contact.form.title" })}
+          <h3 className="text-base font-bold text-orange-400">
+            {intl.formatMessage({ id: "websiteDevelopment.cta.contactTitle" })}
           </h3>
+          <p className="text-gray-400 text-xs mb-3">
+            {intl.formatMessage({ id: "websiteDevelopment.cta.contactSubtitle" })}
+          </p>
           <Form {...form}>
             <form className="space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
               <FormField
@@ -334,9 +337,6 @@ const CTASajt = () => {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-semibold text-gray-900">
-                      {intl.formatMessage({ id: "contact.form.messageLabel" })}
-                    </FormLabel>
                     <FormControl>
                       <Textarea
                         {...field}
