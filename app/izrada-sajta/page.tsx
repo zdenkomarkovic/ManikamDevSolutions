@@ -37,7 +37,8 @@ const jsonLd = {
 export default async function Page() {
   const mainMsgs = await import(`@/lang/sr.json`);
   const websiteDevMsgs = await import(`@/lang/websiteDevelopment/sr.json`);
-  const messages = { ...mainMsgs.default, ...websiteDevMsgs.default };
+  const contactMsgs = await import(`@/lang/contact/sr.json`);
+  const messages = { ...mainMsgs.default, ...websiteDevMsgs.default, ...contactMsgs.default };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

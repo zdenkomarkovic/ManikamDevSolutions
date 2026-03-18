@@ -244,13 +244,15 @@
       }
     },
     "cta": {
-      "title": "Spremni za digitalni uspeh?",
-      "resultsTitle": "Rezultati koje možete očekivati",
-      "result1": "Poboljšanje Google rangiranja za 50-80%",
-      "result2": "Povećanje brzine sajta za 300-500%",
-      "result3": "Bolje korisničko iskustvo na svim uređajima",
-      "result4": "Maksimalna sigurnost i stabilnost",
-      "contactTitle": "Kontaktirajte nas za besplatnu konsultaciju",
+      "badge": "Besplatna konsultacija",
+      "title": "Sa nama dobijate najbolje tehničko rešenje",
+      "resultsTitle": "Vaši konkurenti imaju WordPress. Vi možete imati više",
+      "resultsSubtitle": "Tehnički superiorni sajt koji Google favorizuje",
+      "result1": "Sajt isporučen za 7 dana",
+      "result2": "Besplatna konsultacija bez obaveze",
+      "result3": "Podrška i nakon lansiranja",
+      "result4": "100% prilagođeno vašem brendu",
+      "contactTitle": "Pošaljite upit — odgovaramo u roku od 24h",
       "phone": "+381641967267",
       "email": "manikamwebsolutions@gmail.com"
     }
