@@ -9,8 +9,6 @@ import {
   FaCog,
   FaPaintBrush,
   FaShareAlt,
-  FaServer,
-  FaGlobe,
 } from "react-icons/fa";
 import { MdDevices, MdEmail, MdLanguage } from "react-icons/md";
 import { useMessages } from "@/lib/MessagesContext";
@@ -28,7 +26,8 @@ const PaketiSajt = () => {
         viewport={{ once: true }}
       >
         <span className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-orange-400 font-semibold text-sm md:text-lg px-5 py-2 md:px-7 md:py-3 rounded-full">
-          ✓ Sve cene uključuju hosting i domen za prvu godinu — bez skrivenih troškova.
+          ✓ Sve cene uključuju hosting i domen za prvu godinu — bez skrivenih
+          troškova.
         </span>
       </motion.div>
 
@@ -339,7 +338,6 @@ const PaketiSajt = () => {
           </div>
         </motion.div>
       </div>
-
     </>
   );
 };
