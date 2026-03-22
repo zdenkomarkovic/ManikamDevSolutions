@@ -134,10 +134,10 @@ export default async function RootLayout({
         <GoogleAdsPhoneConversion />
         <Script
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=AW-17745015417"
         />
-        <Script id="google-analytics-init" strategy="afterInteractive">
+        <Script id="google-analytics-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -146,7 +146,7 @@ export default async function RootLayout({
             gtag('config', 'G-E5DEDZ9E2H');
           `}
         </Script>
-        <Script id="meta-pixel" strategy="afterInteractive">
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

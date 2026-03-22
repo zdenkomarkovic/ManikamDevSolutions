@@ -6,7 +6,7 @@ const GoogleAdsPhoneConversion = () => {
   return (
     <>
       {/* Phone call conversion tracking function */}
-      <Script id="google-ads-phone-conversion" strategy="afterInteractive">
+      <Script id="google-ads-phone-conversion" strategy="lazyOnload">
         {`
           function gtag_report_conversion(url) {
             var callback = function () {
@@ -14,12 +14,14 @@ const GoogleAdsPhoneConversion = () => {
                 window.location = url;
               }
             };
-            gtag('event', 'conversion', {
-              'send_to': 'AW-17745015417/tGbBCLeV3YUcEPnkvY1C',
-              'value': 1.0,
-              'currency': 'RSD',
-              'event_callback': callback
-            });
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17745015417/tGbBCLeV3YUcEPnkvY1C',
+                'value': 1.0,
+                'currency': 'RSD',
+                'event_callback': callback
+              });
+            }
             return false;
           }
 
