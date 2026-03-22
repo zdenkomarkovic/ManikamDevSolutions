@@ -111,19 +111,9 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
           {/* Glavna sekcija sa sadržajem */}
           <div className="container mx-auto px-3 md:px-16 pb-16">
             <div className="space-y-8 md:space-y-16 mb-8">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{
-                  once: true,
-                  amount: viewportAmount,
-                  margin: viewportMargin,
-                }}
-                variants={fadeInUp}
-                style={{ willChange: "transform, opacity" }}
-              >
+              <div>
                 <IntroSajt />
-              </motion.div>
+              </div>
 
               <motion.div
                 initial="hidden"
