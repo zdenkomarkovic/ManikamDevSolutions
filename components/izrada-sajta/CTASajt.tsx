@@ -131,9 +131,6 @@ const CTASajt = () => {
             <h3 className="text-xl font-bold mb-1 text-center md:text-left">
               {intl.formatMessage({ id: "websiteDevelopment.cta.resultsTitle" })}
             </h3>
-            <p className="text-sm text-orange-400 mb-4 text-center md:text-left">
-              {intl.formatMessage({ id: "websiteDevelopment.cta.resultsSubtitle" })}
-            </p>
             <motion.ul
               className="space-y-1 md:space-y-3"
               variants={containerVariants}
