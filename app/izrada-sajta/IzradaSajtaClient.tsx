@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import HeroSajt from "@/components/izrada-sajta/HeroSajt";
 import IntroSajt from "@/components/izrada-sajta/IntroSajt";
+import PoredjenjeSajt from "@/components/izrada-sajta/PoredjenjeSajt";
 import PaketiSajt from "@/components/izrada-sajta/PaketiSajt";
 import CTASajt from "@/components/izrada-sajta/CTASajt";
 import ProcesSajt from "@/components/izrada-sajta/ProcesSajt";
@@ -94,7 +95,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
   return (
     <LocaleProvider locale={locale}>
       <MessagesProvider locale={locale} messages={messages}>
-        <div className="bg-gray-900/90">
+        <div className="bg-gray-900/90 overflow-x-hidden">
           {/* Hero sekcija */}
           <section className="pt-24 pb-6 md:pb-16 px-4">
             <motion.div
@@ -122,6 +123,20 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
                 style={{ willChange: "transform, opacity" }}
               >
                 <IntroSajt />
+              </motion.div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: true,
+                  amount: viewportAmount,
+                  margin: viewportMargin,
+                }}
+                variants={fadeInUp}
+                style={{ willChange: "transform, opacity" }}
+              >
+                <PoredjenjeSajt />
               </motion.div>
 
               <PaketiSajt />
