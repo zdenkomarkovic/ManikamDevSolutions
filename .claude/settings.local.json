@@ -47,7 +47,8 @@
       "Bash(node -e \"require\\('./app/izrada-web-shopa/page'\\)\" 2>&1 | head -5)",
       "Bash(grep -r \"hero2\" components/ app/ --include=\"*.tsx\" --include=\"*.ts\" -rn 2>/dev/null | head -10)",
       "Bash(grep -r \"hero2\\\\|Hero2\" . --include=\"*.tsx\" --include=\"*.ts\" --include=\"*.jsx\" --include=\"*.js\" --exclude-dir=node_modules --exclude-dir=.next 2>/dev/null | head -10)",
-      "Bash(find . -name \"*.tsx\" -not -path \"*/node_modules/*\" -not -path \"*/.next/*\" | xargs grep -l \"hero2\" 2>/dev/null)"
+      "Bash(find . -name \"*.tsx\" -not -path \"*/node_modules/*\" -not -path \"*/.next/*\" | xargs grep -l \"hero2\" 2>/dev/null)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []
