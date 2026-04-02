@@ -16,7 +16,7 @@ const HeroSajt = () => {
           {intl.formatMessage({ id: "websiteDevelopment.hero.titleLine2" })}
         </span>
       </h1>
-      <p className="text-base md:text-2xl text-gray-100 mb-2 md:mb-4 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-base md:text-2xl text-gray-100 mb-6 md:mb-10 max-w-4xl mx-auto leading-relaxed">
         {intl.formatMessage({ id: "websiteDevelopment.hero.subtitlePre" })}{" "}
         <span className="font-bold">
           {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleTech" })}
@@ -28,6 +28,15 @@ const HeroSajt = () => {
         </span>
         {intl.formatMessage({ id: "websiteDevelopment.hero.subtitlePost" })}
       </p>
+      <button
+        onClick={() => {
+          const el = document.getElementById("kontakt-forma");
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+        className="bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold text-base md:text-lg px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30"
+      >
+        Zatražite besplatnu ponudu
+      </button>
     </div>
   );
 };

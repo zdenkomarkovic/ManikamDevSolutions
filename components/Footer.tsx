@@ -75,9 +75,9 @@ export default function Footer({
               </a>
             </div>
             <div className=" mx-auto w-fit">
-              <a href="mailto:manikamwebsolutions@gmail.com">
+              <a href="mailto:office@manikamwebsolutions.com">
                 <p className="flex gap-3 items-center hover:text-orange-500 text-muted-foreground text-wrap">
-                  <TfiEmail /> manikamwebsolutions@gmail.com
+                  <TfiEmail /> office@manikamwebsolutions.com
                 </p>
               </a>
             </div>

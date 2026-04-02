@@ -74,10 +74,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.hospitality.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.hospitality.text" })}
           </p>
         </motion.div>
@@ -92,10 +92,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.medical.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.medical.text" })}
           </p>
         </motion.div>
@@ -110,10 +110,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.ecommerce.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.ecommerce.text" })}
           </p>
         </motion.div>
@@ -128,10 +128,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.realEstate.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.realEstate.text" })}
           </p>
         </motion.div>
@@ -146,10 +146,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.legal.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.legal.text" })}
           </p>
         </motion.div>
@@ -164,10 +164,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.fitness.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.fitness.text" })}
           </p>
         </motion.div>
@@ -182,10 +182,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.education.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.education.text" })}
           </p>
         </motion.div>
@@ -200,10 +200,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.construction.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.construction.text" })}
           </p>
         </motion.div>
@@ -218,10 +218,10 @@ const IndustrijeSajt = () => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-xl font-bold mb-2 inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
             {intl.formatMessage({ id: "websiteDevelopment.industries.agency.title" })}
           </h3>
-          <p className="">
+          <p className="text-sm">
             {intl.formatMessage({ id: "websiteDevelopment.industries.agency.text" })}
           </p>
         </motion.div>

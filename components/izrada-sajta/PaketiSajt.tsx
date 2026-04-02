@@ -13,8 +13,18 @@ import {
 import { MdDevices, MdEmail, MdLanguage } from "react-icons/md";
 import { useMessages } from "@/lib/MessagesContext";
 
-const PaketiSajt = () => {
+interface PaketiSajtProps {
+  onSelectPaket: (paket: string) => void;
+}
+
+const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
   const intl = useMessages();
+
+  const handleUpit = (paket: string) => {
+    onSelectPaket(paket);
+    const el = document.getElementById("kontakt-forma");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <>
@@ -122,15 +132,23 @@ const PaketiSajt = () => {
               </div>
             </div>
           </div>
-          <div className="">
-            <strong>
+          <div className="space-y-3">
+            <div>
+              <strong>
+                {intl.formatMessage({
+                  id: "websiteDevelopment.packages.basic.timeline",
+                })}
+              </strong>{" "}
               {intl.formatMessage({
-                id: "websiteDevelopment.packages.basic.timeline",
+                id: "websiteDevelopment.packages.basic.timelineDays",
               })}
-            </strong>{" "}
-            {intl.formatMessage({
-              id: "websiteDevelopment.packages.basic.timelineDays",
-            })}
+            </div>
+            <button
+              onClick={() => handleUpit("Osnovni sajt (279€)")}
+              className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-3 rounded-xl transition-all"
+            >
+              Pošalji upit
+            </button>
           </div>
         </motion.div>
 
@@ -236,15 +254,23 @@ const PaketiSajt = () => {
               </div>
             </div>
           </div>
-          <div className="">
-            <strong>
+          <div className="space-y-3">
+            <div>
+              <strong>
+                {intl.formatMessage({
+                  id: "websiteDevelopment.packages.professional.timeline",
+                })}
+              </strong>{" "}
               {intl.formatMessage({
-                id: "websiteDevelopment.packages.professional.timeline",
+                id: "websiteDevelopment.packages.professional.timelineDays",
               })}
-            </strong>{" "}
-            {intl.formatMessage({
-              id: "websiteDevelopment.packages.professional.timelineDays",
-            })}
+            </div>
+            <button
+              onClick={() => handleUpit("Profesionalni sajt (450€)")}
+              className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-3 rounded-xl transition-all"
+            >
+              Pošalji upit
+            </button>
           </div>
         </motion.div>
 
@@ -257,12 +283,15 @@ const PaketiSajt = () => {
           className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3  shadow-lg border border-gray-200"
         >
           <div>
-            <h3 className=" text-2xl font-bold mb-5 text-orange-600">
+            <h3 className="text-base font-semibold mb-2 text-orange-600">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.premium.title",
               })}
             </h3>
-            <p className="mb-2">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="text-4xl font-bold text-orange-600">800+€</span>
+            </div>
+            <p className="mb-4">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.premium.subtitle",
               })}
@@ -344,15 +373,23 @@ const PaketiSajt = () => {
               </div>
             </div>
           </div>
-          <div className="">
-            <strong>
+          <div className="space-y-3">
+            <div>
+              <strong>
+                {intl.formatMessage({
+                  id: "websiteDevelopment.packages.premium.timeline",
+                })}
+              </strong>{" "}
               {intl.formatMessage({
-                id: "websiteDevelopment.packages.premium.timeline",
+                id: "websiteDevelopment.packages.premium.timelineDays",
               })}
-            </strong>{" "}
-            {intl.formatMessage({
-              id: "websiteDevelopment.packages.premium.timelineDays",
-            })}
+            </div>
+            <button
+              onClick={() => handleUpit("Premijum sajt (800+€)")}
+              className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-3 rounded-xl transition-all"
+            >
+              Pošalji upit
+            </button>
           </div>
         </motion.div>
       </div>

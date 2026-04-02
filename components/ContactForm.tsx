@@ -271,13 +271,13 @@ export default function ContactForm() {
             }}
           >
             <motion.a
-              href="mailto:manikamwebsolutions@gmail.com"
+              href="mailto:office@manikamwebsolutions.com"
               className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all mb-6"
               whileHover={{ x: 5 }}
             >
               <FaEnvelope className="text-xl text-orange-600" />
               <span className="font-semibold text-gray-900 text-sm md:text-base">
-                manikamwebsolutions@gmail.com
+                office@manikamwebsolutions.com
               </span>
             </motion.a>
 

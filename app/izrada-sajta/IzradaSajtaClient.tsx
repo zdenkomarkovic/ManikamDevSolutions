@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import HeroSajt from "@/components/izrada-sajta/HeroSajt";
 import IntroSajt from "@/components/izrada-sajta/IntroSajt";
@@ -82,6 +82,8 @@ const createHeroVariants = (isMobile: boolean) => ({
 
 const IzradaSajtaClient = ({ locale, messages }: Props) => {
   const isMobile = useIsMobile();
+  const [selectedPaket, setSelectedPaket] = useState<string | undefined>(undefined);
+  const handleSelectPaket = useCallback((paket: string) => setSelectedPaket(paket), []);
 
   // Kreiraj varijante na osnovu device type-a
   const fadeInUp = createFadeInUp(isMobile);
@@ -129,7 +131,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
                 <PoredjenjeSajt />
               </motion.div>
 
-              <PaketiSajt />
+              <PaketiSajt onSelectPaket={handleSelectPaket} />
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -141,7 +143,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
                 variants={scaleUp}
                 style={{ willChange: "transform, opacity" }}
               >
-                <CTASajt />
+                <CTASajt selectedPaket={selectedPaket} />
               </motion.div>
             </div>
 

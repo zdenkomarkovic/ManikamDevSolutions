@@ -19,6 +19,7 @@ import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useLocale } from "@/lib/LocaleContext";
+import { useEffect } from "react";
 
 // Declare gtag_report_conversion function type
 declare global {
@@ -27,7 +28,11 @@ declare global {
   }
 }
 
-const CTASajt = () => {
+interface CTASajtProps {
+  selectedPaket?: string;
+}
+
+const CTASajt = ({ selectedPaket }: CTASajtProps) => {
   const intl = useMessages();
   const router = useRouter();
   const { locale } = useLocale();
@@ -53,6 +58,12 @@ const CTASajt = () => {
     resolver: zodResolver(formSchema),
     defaultValues: { name: "", phone: "", email: "", message: "" },
   });
+
+  useEffect(() => {
+    if (selectedPaket) {
+      form.setValue("message", `Zainteresovan/a sam za: ${selectedPaket}`);
+    }
+  }, [selectedPaket, form]);
 
   const isLoading = form.formState.isSubmitting;
 
@@ -102,7 +113,7 @@ const CTASajt = () => {
   };
 
   return (
-    <div className="text-gray-50 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-orange-500/20 rounded-2xl py-5 md:p-8 text-center">
+    <div id="kontakt-forma" className="text-gray-50 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-orange-500/20 rounded-2xl py-5 md:p-8 text-center">
       <div className="flex justify-center mb-5 md:mb-7">
         <motion.h2
           className="text-2xl md:text-4xl font-extrabold inline-block bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent"
@@ -242,7 +253,7 @@ const CTASajt = () => {
             </motion.a>
 
             <motion.a
-              href="mailto:manikamwebsolutions@gmail.com"
+              href="mailto:office@manikamwebsolutions.com"
               className="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-orange-600 to-orange-400 text-white px-4 py-2 rounded-xl text-base md:text-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
               variants={buttonVariants}
               whileHover={{
@@ -256,7 +267,7 @@ const CTASajt = () => {
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              manikamwebsolutions@gmail.com
+              office@manikamwebsolutions.com
             </motion.a>
           </motion.div>
         </motion.div>
