@@ -25,7 +25,7 @@ const PaketiSajt = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <span className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-orange-400 font-semibold text-sm md:text-lg px-5 py-2 md:px-7 md:py-3 rounded-full">
+        <span className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-gray-300 font-semibold text-sm md:text-lg px-5 py-2 md:px-7 md:py-3 rounded-full">
           ✓ Sve cene uključuju hosting i domen za prvu godinu — bez skrivenih
           troškova.
         </span>
@@ -41,11 +41,22 @@ const PaketiSajt = () => {
           className="bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 flex flex-col justify-between rounded-2xl py-8 px-3 shadow-lg border border-gray-200"
         >
           <div>
-            <h3 className=" text-2xl font-bold mb-5 text-orange-600">
-              {intl.formatMessage({
-                id: "websiteDevelopment.packages.basic.title",
-              })}
+            <h3 className="text-base font-semibold mb-2 text-orange-600">
+              Osnovni paket
             </h3>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-gray-400 line-through text-xl">
+                {intl.formatMessage({
+                  id: "websiteDevelopment.packages.basic.originalPrice",
+                })}
+              </span>
+              <span className="text-4xl font-bold text-orange-600">279€</span>
+            </div>
+            <div className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white text-sm font-bold px-3 py-1 rounded-full mb-5 animate-pulse">
+              {intl.formatMessage({
+                id: "websiteDevelopment.packages.basic.badge",
+              })}
+            </div>
             <p className=" mb-4">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.basic.subtitle",
@@ -140,11 +151,18 @@ const PaketiSajt = () => {
           </div>
 
           <div>
-            <h3 className="m text-2xl font-bold mb-5 text-orange-600">
+            <h3 className="text-base font-semibold mb-2 text-orange-600">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.professional.title",
               })}
             </h3>
+            <div className="mb-5">
+              <span className="text-4xl font-bold text-orange-600">
+                {intl.formatMessage({
+                  id: "websiteDevelopment.packages.professional.price",
+                })}
+              </span>
+            </div>
             <p className="mb-4">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.professional.subtitle",

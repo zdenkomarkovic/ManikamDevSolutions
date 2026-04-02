@@ -53,7 +53,7 @@ const IntroSajt = () => {
     <div>
       <div className="flex justify-center mb-8">
         <motion.h2
-          className="text-xl md:text-3xl font-extrabold inline-block bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center"
+          className="text-xl md:text-3xl font-extrabold text-white text-center"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -77,12 +77,14 @@ const IntroSajt = () => {
             variants={itemVariants}
             whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(249, 115, 22, 0.15)" }}
           >
-            <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center">
-              {card.icon}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                {card.icon}
+              </div>
+              <h3 className="text-lg font-bold text-gray-100">
+                {intl.formatMessage({ id: card.titleId })}
+              </h3>
             </div>
-            <h3 className="text-lg font-bold text-gray-100">
-              {intl.formatMessage({ id: card.titleId })}
-            </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               {intl.formatMessage({ id: card.textId })}
             </p>

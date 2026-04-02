@@ -12,18 +12,18 @@ const HeroSajt = () => {
         <span className="text-[36px] leading-tight md:text-7xl bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent font-[1000]">
           {intl.formatMessage({ id: "websiteDevelopment.hero.titleLine1" })}
         </span>
-        <span className="text-[28px] leading-tight md:text-5xl bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent font-[800] pb-2">
+        <span className="text-[17px] leading-tight md:text-5xl bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent font-[800] pb-2">
           {intl.formatMessage({ id: "websiteDevelopment.hero.titleLine2" })}
         </span>
       </h1>
-      <p className="text-base md:text-2xl text-gray-100 mb-5 md:mb-8 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-base md:text-2xl text-gray-100 mb-2 md:mb-4 max-w-4xl mx-auto leading-relaxed">
         {intl.formatMessage({ id: "websiteDevelopment.hero.subtitlePre" })}{" "}
-        <span className="font-bold text-orange-400">
+        <span className="font-bold">
           {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleTech" })}
         </span>{" "}
         {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleTechSuffix" })}{" "}
         {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleMid" })}{" "}
-        <span className="font-bold text-orange-400">
+        <span className="font-bold">
           {intl.formatMessage({ id: "websiteDevelopment.hero.subtitleCompanies" })}
         </span>
         {intl.formatMessage({ id: "websiteDevelopment.hero.subtitlePost" })}

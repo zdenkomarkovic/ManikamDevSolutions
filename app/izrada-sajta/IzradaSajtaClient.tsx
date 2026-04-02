@@ -97,7 +97,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
       <MessagesProvider locale={locale} messages={messages}>
         <div className="bg-gray-900/90 overflow-x-hidden">
           {/* Hero sekcija */}
-          <section className="pt-24 pb-6 md:pb-16 px-4">
+          <section className="pt-24 pb-2 md:pb-6 px-4">
             <motion.div
               variants={heroVariants}
               initial="hidden"
