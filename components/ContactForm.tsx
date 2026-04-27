@@ -34,12 +34,10 @@ import {
 } from "react-icons/fa";
 import { useMessages } from "@/lib/MessagesContext";
 import { useRouter } from "next/navigation";
-import { useLocale } from "@/lib/LocaleContext";
 
 export default function ContactForm() {
   const intl = useMessages();
   const router = useRouter();
-  const { locale } = useLocale();
 
   const contactFormSchema = z.object({
     name: z.string().min(2, {

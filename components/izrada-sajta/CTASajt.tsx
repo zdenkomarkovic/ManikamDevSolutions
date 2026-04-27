@@ -18,7 +18,6 @@ import { Button } from "@/components/ui/button";
 import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { useLocale } from "@/lib/LocaleContext";
 import { useEffect } from "react";
 
 // Declare gtag_report_conversion function type
@@ -35,7 +34,6 @@ interface CTASajtProps {
 const CTASajt = ({ selectedPaket }: CTASajtProps) => {
   const intl = useMessages();
   const router = useRouter();
-  const { locale } = useLocale();
 
   const formSchema = z.object({
     name: z.string().min(2, {
