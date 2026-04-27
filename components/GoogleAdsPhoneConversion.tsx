@@ -6,7 +6,7 @@ const GoogleAdsPhoneConversion = () => {
   return (
     <>
       {/* Phone call conversion tracking function */}
-      <Script id="google-ads-phone-conversion" strategy="lazyOnload">
+      <Script id="google-ads-phone-conversion" strategy="afterInteractive">
         {`
           function gtag_report_conversion(url) {
             var callback = function () {

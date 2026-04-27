@@ -138,10 +138,10 @@ export default async function RootLayout({
         <GoogleAdsPhoneConversion />
         <Script
           id="google-analytics"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=AW-17745015417"
         />
-        <Script id="google-analytics-init" strategy="lazyOnload">
+        <Script id="google-analytics-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
