@@ -42,15 +42,16 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
   const { locale } = useLocale();
   const thankYouMessages = messages as unknown as ThankYouMessages;
 
-  // Google Ads Conversion Tracking - korisnik će dodati svoj kod ovde
   useEffect(() => {
-    // TODO: Dodaj Google Ads conversion snippet ovde
-    // Primer:
-    // if (typeof window !== 'undefined' && window.gtag) {
-    //   window.gtag('event', 'conversion', {
-    //     'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXX'
-    //   });
-    // }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gtag = (window as any).gtag;
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17745015417/kup7CP60nqMcEPnkvY1C',
+        'value': 1.0,
+        'currency': 'RSD'
+      });
+    }
   }, []);
 
   const containerVariants = {
