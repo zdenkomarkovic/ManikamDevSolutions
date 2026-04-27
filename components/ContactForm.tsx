@@ -79,12 +79,7 @@ export default function ContactForm() {
     });
 
     if (response?.messageId) {
-      // Fire conversion tracking on successful form submission
-      if (typeof window !== "undefined" && window.gtag_report_conversion) {
-        window.gtag_report_conversion(window.location.href);
-      }
-      // Redirect to thank you page after successful submission
-      router.push(`/${locale}/hvala`);
+      router.push(`/hvala`);
     } else {
       toast.error(intl.formatMessage({ id: "contact.toast.error" }));
     }

@@ -76,10 +76,7 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
     });
 
     if (response?.messageId) {
-      if (typeof window !== "undefined" && window.gtag_report_conversion) {
-        window.gtag_report_conversion(window.location.href);
-      }
-      router.push(`/${locale}/hvala`);
+      router.push(`/hvala`);
     } else {
       toast.error(intl.formatMessage({ id: "contact.toast.error" }));
     }
