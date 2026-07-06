@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ThankYouClient from "@/components/thank-you/ThankYouClient";
-import { LocaleProvider } from "@/lib/LocaleContext";
 export async function generateMetadata(): Promise<Metadata> {
   const messages = await import(`@/lang/thank-you/sr.json`);
   return {
@@ -17,9 +16,7 @@ export default async function ThankYouPage() {
   const thankYouMsgs = await import(`@/lang/thank-you/sr.json`);
   const messages = { ...mainMsgs.default, ...thankYouMsgs.default };
   return (
-    <LocaleProvider locale={"sr"}>
-{/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <ThankYouClient messages={messages as any} />
-    </LocaleProvider>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    <ThankYouClient messages={messages as any} />
   );
 }

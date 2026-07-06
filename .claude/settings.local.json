@@ -48,7 +48,20 @@
       "Bash(grep -r \"hero2\" components/ app/ --include=\"*.tsx\" --include=\"*.ts\" -rn 2>/dev/null | head -10)",
       "Bash(grep -r \"hero2\\\\|Hero2\" . --include=\"*.tsx\" --include=\"*.ts\" --include=\"*.jsx\" --include=\"*.js\" --exclude-dir=node_modules --exclude-dir=.next 2>/dev/null | head -10)",
       "Bash(find . -name \"*.tsx\" -not -path \"*/node_modules/*\" -not -path \"*/.next/*\" | xargs grep -l \"hero2\" 2>/dev/null)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(curl -sI https://manikamwebsolutions.com/)",
+      "Bash(curl -s https://manikamwebsolutions.com/robots.txt)",
+      "Bash(curl -s https://manikamwebsolutions.com/sitemap.xml)",
+      "Bash(curl -sI https://www.manikamwebsolutions.com/)",
+      "Bash(curl -sI http://manikamwebsolutions.com/)",
+      "Bash(curl -s https://manikamwebsolutions.com/izrada-sajta -o /tmp/izrada-sajta.html)",
+      "Read(//tmp/**)",
+      "Bash(git fetch *)",
+      "Bash(where.exe izrada-sajta.html)",
+      "Read(//e//**)",
+      "Bash(curl *)",
+      "Bash(grep -o '<body[^>]*>.\\\\{0,300\\\\}' \"C:/Users/DELL/AppData/Local/Temp/claude/E--Sajtovi-manikam-dev-solutions/6bccc20b-cd02-49d2-a7a7-672fd37fb495/scratchpad/home.html\")",
+      "Bash(grep -o '<body[^>]*>.\\\\{0,400\\\\}' .next/server/app/izrada-sajta.html)"
     ],
     "deny": [],
     "ask": []

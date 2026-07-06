@@ -3,7 +3,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MessagesProvider } from "@/lib/MessagesContext";
-import { useLocale } from "@/lib/LocaleContext";
 import { FaCheckCircle, FaHome, FaServicestack } from "react-icons/fa";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -39,10 +38,12 @@ interface ThankYouClientProps {
 }
 
 export default function ThankYouClient({ messages }: ThankYouClientProps) {
-  const { locale } = useLocale();
+  const locale = "sr";
   const thankYouMessages = messages as unknown as ThankYouMessages;
 
   useEffect(() => {
+    if (sessionStorage.getItem('lead_conversion_fired')) return;
+    sessionStorage.setItem('lead_conversion_fired', '1');
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gtag = (window as any).gtag;
     if (typeof gtag === 'function') {

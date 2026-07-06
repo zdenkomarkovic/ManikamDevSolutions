@@ -11,7 +11,6 @@ import ProcesSajt from "@/components/izrada-sajta/ProcesSajt";
 import FAQSajt from "@/components/izrada-sajta/FAQSajt";
 import IndustrijeSajt from "@/components/izrada-sajta/IndustrijeSajt";
 import { MessagesProvider } from "@/lib/MessagesContext";
-import { LocaleProvider } from "@/lib/LocaleContext";
 import type { Locale } from "@/i18n-config";
 
 // Type for the message structure
@@ -95,7 +94,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
   const viewportMargin = isMobile ? "-80px" : "-120px";
 
   return (
-    <LocaleProvider locale={locale}>
+    <>
       <MessagesProvider locale={locale} messages={messages}>
         <div className="bg-gray-900/90 overflow-x-hidden">
           {/* Hero sekcija */}
@@ -192,7 +191,7 @@ const IzradaSajtaClient = ({ locale, messages }: Props) => {
           </div>
         </div>
       </MessagesProvider>
-    </LocaleProvider>
+    </>
   );
 };
 

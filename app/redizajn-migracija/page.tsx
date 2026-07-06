@@ -35,8 +35,11 @@ const jsonLd = {
 };
 
 export default async function RedesignMigrationPage() {
+  const mainMsgs = await import(`@/lang/sr.json`);
+  const redesignMsgs = await import(`@/lang/redesignMigration/sr.json`);
+  const translations = { ...mainMsgs.default, ...redesignMsgs.default };
   return (
-    <LocaleProvider locale={"sr"}>
+    <LocaleProvider translations={translations}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <RedesignPageClient />
     </LocaleProvider>

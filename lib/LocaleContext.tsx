@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, ReactNode } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Translations = any;
@@ -13,27 +13,14 @@ export function useLocale() {
   return context;
 }
 
-export function LocaleProvider({ children }: { children: ReactNode; locale?: string }) {
-  const [translations, setTranslations] = useState<Translations>({});
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadTranslations() {
-      try {
-        const mainMsgs = await import(`../lang/sr.json`);
-        const redesignMsgs = await import(`../lang/redesignMigration/sr.json`);
-        setTranslations({ ...mainMsgs.default, ...redesignMsgs.default });
-      } catch (error) {
-        console.error("Failed to load translations:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    loadTranslations();
-  }, []);
-
-  if (isLoading) return null;
-
+export function LocaleProvider({
+  children,
+  translations,
+}: {
+  children: ReactNode;
+  locale?: string;
+  translations: Translations;
+}) {
   return (
     <LocaleContext.Provider value={{ locale: "sr", t: translations }}>
       {children}
