@@ -47,7 +47,7 @@ const ProcesSajt = () => {
                   {intl.formatMessage({ id: `websiteDevelopment.process.${stepId}.title` })}
                 </p>
                 <div className="flex items-center gap-1 mt-1 md:mt-2 text-orange-500 text-[10px] md:text-xs font-medium">
-                  <span>Saznaj više</span>
+                  <span>{intl.formatMessage({ id: "websiteDevelopment.process.readMore" })}</span>
                   <span>›</span>
                 </div>
               </div>

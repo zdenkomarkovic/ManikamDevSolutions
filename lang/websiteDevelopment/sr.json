@@ -15,7 +15,8 @@
       "subtitlePost": ". Isporuka za 7 dana, hosting i domen uključeni.",
       "badge1": "Next.js izrada sajtova",
       "badge2": "SEO Optimizovano",
-      "badge3": "Mobilno Prilagođeno"
+      "badge3": "Mobilno Prilagođeno",
+      "ctaButton": "Zatražite besplatnu ponudu"
     },
     "intro": {
       "title": "Šta dobijate umesto WordPress sajta",
@@ -27,10 +28,10 @@
       "card3Text": "Brzina je jedan od glavnih faktora rangiranja. Brži sajt = viša pozicija = više klijenata bez plaćanja oglasa."
     },
     "packages": {
+      "banner": "Hosting i domen za prvu godinu uključeni — bez skrivenih troškova.",
+      "sendInquiry": "Pošalji upit",
       "basic": {
-        "title": "Osnovni paket - 279€",
-        "originalPrice": "340€",
-        "badge": "AKCIJA do 05.05.2026.",
+        "title": "Osnovni paket",
         "subtitle": "Idealno za manje biznise i startapove",
         "feature1": "Do 5 stranica",
         "feature2": "Responzivni pregled (mobilni + desktop)",
@@ -130,6 +131,7 @@
     },
     "process": {
       "title": "Kako izgleda proces izrade sajta?",
+      "readMore": "Saznaj više",
       "step1": {
         "title": "Inicijalna konsultacija i analiza potreba",
         "text": "Detaljno razgovaramo o vašim poslovnim ciljevima, ciljnoj grupi i funkcionalnostima koje vam trebaju. Analiziramo konkurenciju i tržište kako bismo kreirali strategiju koja će vaš sajt izdvojiti. Ova faza je ključna jer nam pomaže da razumemo vašu viziju i kreiramo sajt koji će doneti rezultate."
@@ -193,6 +195,7 @@
     "industries": {
       "title": "Izrada sajtova za različite industrije",
       "subtitle": "Naše iskustvo obuhvata širok spektar industrija. Bez obzira na vašu delatnost, kreiramo prilagođena rešenja koja odgovaraju specifičnim potrebama vaše branše.",
+      "viewProjects": "Pogledajte naše realizovane projekte",
       "hospitality": {
         "title": "Izrada sajta za restorane",
         "text": "Restorani danas dobijaju veliki deo gostiju preko Google pretrage. Profesionalan sajt omogućava prikaz menija, rezervacije i integraciju sa Google mapama. Radimo izradu sajtova za restorane koji su brzi, optimizovani za mobilne telefone i spremni za Google rangiranje."
@@ -249,6 +252,14 @@
         "feature4": " Prioritetna tehnička podrška"
       }
     },
+    "comparison": {
+      "intro": "Naši sajtovi su optimizovani prema standardima koje preporučuje Google, sa fokusom na performanse, brzinu učitavanja i Core Web Vitals metrike koje utiču na rangiranje u pretrazi. Rezultati optimizacije proveravaju se alatima kao što su Google Lighthouse i Google PageSpeed Insights.",
+      "averageTitle": "Uobičajene performanse sajtova na internetu",
+      "averageAlt": "Prosečan sajt {index}",
+      "ourTitle": "Naše performanse",
+      "ourAlt": "Manikam rezultat",
+      "guarantee": "Garantujemo performanse iznad 95"
+    },
     "cta": {
       "badge": "Besplatna konsultacija",
       "title": "Spremni da pokrenete vaš online nastup?",
@@ -260,6 +271,7 @@
       "result4": "100% prilagođeno vašem brendu",
       "contactTitle": "Pošaljite upit danas — odgovaramo u roku od 2 sata",
       "contactSubtitle": "Besplatna konsultacija, bez obaveza.",
+      "interestedIn": "Zainteresovan/a sam za:",
       "phone": "+381641967267",
       "email": "manikamwebsolutions@gmail.com"
     }

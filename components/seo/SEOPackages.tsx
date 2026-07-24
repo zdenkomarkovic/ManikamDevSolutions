@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
+import { contactHref } from "@/locales/localeLinks";
 import { Check } from "lucide-react";
 
 const SEOPackages = () => {
@@ -124,7 +125,7 @@ const SEOPackages = () => {
             </p>
 
             <motion.a
-              href={`/${locale}/contact`}
+              href={contactHref(locale)}
               className="block w-full text-center bg-gradient-to-r from-orange-600 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold mb-6 hover:shadow-lg transition-shadow duration-200"
               whileTap={{ scale: 0.98 }}
             >

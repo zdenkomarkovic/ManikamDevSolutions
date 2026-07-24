@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useMessages } from "@/lib/MessagesContext";
+import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
+import { thankYouHref } from "@/locales/localeLinks";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -33,6 +34,7 @@ interface CTASajtProps {
 
 const CTASajt = ({ selectedPaket }: CTASajtProps) => {
   const intl = useMessages();
+  const locale = useCurrentLocale();
   const router = useRouter();
 
   const formSchema = z.object({
@@ -59,9 +61,10 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
 
   useEffect(() => {
     if (selectedPaket) {
-      form.setValue("message", `Zainteresovan/a sam za: ${selectedPaket}`);
+      const prefix = intl.formatMessage({ id: "websiteDevelopment.cta.interestedIn" });
+      form.setValue("message", `${prefix} ${selectedPaket}`);
     }
-  }, [selectedPaket, form]);
+  }, [selectedPaket, form, intl]);
 
   const isLoading = form.formState.isSubmitting;
 
@@ -74,7 +77,7 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
     });
 
     if (response?.messageId) {
-      router.push(`/hvala`);
+      router.push(thankYouHref(locale));
     } else {
       toast.error(intl.formatMessage({ id: "contact.toast.error" }));
     }

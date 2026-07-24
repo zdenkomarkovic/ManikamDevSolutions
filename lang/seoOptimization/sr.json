@@ -21,7 +21,7 @@
       "title": "Naši SEO Paketi",
       "subtitle": "Izaberite paket koji odgovara vašim potrebama i budžetu",
       "starter": {
-        "title": "Starter SEO - 300€/mesečno",
+        "title": "Starter SEO",
         "subtitle": "Idealno za male biznise i startove",
         "feature1": "Osnovni tehnički SEO audit",
         "feature2": "Optimizacija do 10 stranica",
@@ -33,7 +33,7 @@
       },
       "professional": {
         "badge": "NAJPOPULARNIJI",
-        "title": "Professional SEO - 500€/mesečno",
+        "title": "Professional SEO",
         "subtitle": "Za ozbiljne biznise koji žele rast",
         "feature1": "Detaljan tehnički SEO audit",
         "feature2": "Optimizacija do 30 stranica",
@@ -46,7 +46,7 @@
         "feature9": "Email i telefonska podrška"
       },
       "enterprise": {
-        "title": "Enterprise SEO - po dogovoru",
+        "title": "Enterprise SEO",
         "subtitle": "Za velike kompanije sa specifičnim potrebama",
         "feature1": "Neograničen broj stranica",
         "feature2": "Kompletna SEO strategija",

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Facebook, Instagram } from "lucide-react";
 import { getNavList } from "@/locales/navUtils";
 import { FaPhone } from "react-icons/fa6";
@@ -22,7 +23,11 @@ export default function Footer({
   rights: string;
   instagram: string;
 }) {
-  const navList = getNavList();
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "sr";
+  const navList = getNavList(locale);
+  const footerMessage = locale === "en" ? "We create stories worth remembering." : message;
+  const footerRights = locale === "en" ? "All rights reserved." : rights;
 
   return (
     <motion.footer
@@ -85,7 +90,7 @@ export default function Footer({
               <a
                 href="https://www.facebook.com/profile.php?id=61574784286298"
                 className="text-muted-foreground hover:text-orange-500"
-                aria-label="Manikam Web Solutions na Facebooku"
+                aria-label={locale === "en" ? "Manikam Web Solutions on Facebook" : "Manikam Web Solutions na Facebooku"}
               >
                 <Facebook />
               </a>
@@ -94,7 +99,7 @@ export default function Footer({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-orange-500"
-                aria-label="Manikam Web Solutions na Instagramu"
+                aria-label={locale === "en" ? "Manikam Web Solutions on Instagram" : "Manikam Web Solutions na Instagramu"}
               >
                 <Instagram />
               </a>
@@ -110,13 +115,13 @@ export default function Footer({
             </h3>
 
             <p className="font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-              {message}
+              {footerMessage}
             </p>
           </div>
         </div>
         <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-gray-100">
           <p>
-            &copy; {new Date().getFullYear()} Manikam. {rights}
+            &copy; {new Date().getFullYear()} Manikam. {footerRights}
           </p>
         </div>
       </div>

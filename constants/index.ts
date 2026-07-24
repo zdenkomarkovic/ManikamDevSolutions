@@ -73,6 +73,85 @@ export const reference1: Reference[] = [
 ];
 export const reference2: Reference[] = [
   {
+    title: "pbarchitect.rs",
+    image: "/images/reference (24).png",
+    link: "https://www.pbarchitect.rs/en",
+  },
+  {
+    title: "villamaremar.com",
+    image: "/images/reference (26).png",
+    link: "https://www.villamaremar.com/",
+  },
+  {
+    title: "postarcade.de",
+    image: "/images/reference (25).png",
+    link: "https://www.postarcade.de/",
+  },
+  {
+    title: "dicamo-dogs.com",
+    image: "/images/reference (20).png",
+    link: "https://www.dicamo-dogs.com/",
+  },
+  {
+    title: "zenskecarapebg.rs",
+    image: "/images/reference (23).png",
+    link: "https://www.zenskecarapebg.rs/",
+  },
+  {
+    title: "nimfaizpodsvesti.com",
+    image: "/images/reference (19).png",
+    link: "https://www.nimfaizpodsvesti.com/",
+  },
+  {
+    title: "psihoterapijavladana.rs",
+    image: "/images/reference (21).png",
+    link: "https://www.psihoterapijavladana.rs/",
+  },
+
+  {
+    title: "terenskesestre.rs",
+    image: "/images/reference (16).png",
+    link: "https://www.terenskesestre.rs/",
+  },
+  {
+    title: "vesnaparojcic.com",
+    image: "/images/reference (17).png",
+    link: "https://www.vesnaparojcic.com/",
+  },
+  {
+    title: "udruzenjeops.rs",
+    image: "/images/reference (30).png",
+    link: "https://www.udruzenjeops.rs/",
+  },
+  {
+    title: "slepsluzbabucko.rs",
+    image: "/images/reference (29).png",
+    link: "https://www.slepsluzbabucko.rs/",
+  },
+  {
+    title: "nspasicgradnja.rs",
+    image: "/images/reference (28).png",
+    link: "https://www.nspasicgradnja.rs/",
+  },
+  {
+    title: "upravnikbeocity.com",
+    image: "/images/reference (27).png",
+    link: "https://www.upravnikbeocity.com/",
+  },
+
+  {
+    title: "frioni.rs",
+    image: "/images/reference (22).png",
+    link: "https://frioni.rs/",
+  },
+
+  {
+    title: "naturkop.rs",
+    image: "/images/reference (18).png",
+    link: "https://www.naturkop.rs/",
+  },
+
+  {
     title: "hatta.ai",
     image: "/images/reference (14).jpg",
     link: "https://hatta.ai/",

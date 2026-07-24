@@ -1,9 +1,10 @@
 "use client";
 import { createContext, useContext, ReactNode } from "react";
+import type { Locale } from "@/i18n-config";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Translations = any;
-type LocaleContextType = { locale: "sr"; t: Translations };
+type LocaleContextType = { locale: Locale; t: Translations };
 
 const LocaleContext = createContext<LocaleContextType | null>(null);
 
@@ -15,14 +16,15 @@ export function useLocale() {
 
 export function LocaleProvider({
   children,
+  locale = "sr",
   translations,
 }: {
   children: ReactNode;
-  locale?: string;
+  locale?: Locale;
   translations: Translations;
 }) {
   return (
-    <LocaleContext.Provider value={{ locale: "sr", t: translations }}>
+    <LocaleContext.Provider value={{ locale, t: translations }}>
       {children}
     </LocaleContext.Provider>
   );

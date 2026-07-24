@@ -1,0 +1,196 @@
+{
+  "webshopDevelopment": {
+    "page": {
+      "title": "Webshop Development - Professional Online Stores | Manikam Web Solutions",
+      "description": "Professional webshop development and e-commerce solutions. Complete online stores with integrated payments, inventory management, SEO optimization, and mobile responsiveness for maximum results."
+    },
+    "hero": {
+      "title": "Webshop Development",
+      "subtitle": "Transform your business with a professional online store that works 24/7. We build e-commerce solutions that increase sales and automate your work.",
+      "badge1": "E-commerce Experts",
+      "badge2": "Integrated Payments",
+      "badge3": "SEO Optimized"
+    },
+    "intro": {
+      "title": "Why is a webshop essential for your success?",
+      "p1": "In the digital age, an online store isn't a luxury - it's a necessity. Your competitors are already selling online 24 hours a day, 7 days a week. A webshop lets you reach customers worldwide, increase revenue, and automate the sales process.",
+      "p2": "Our webshops aren't just digital storefronts - they're powerful business tools that transform the way you run your business. With advanced inventory management features, automated order processing, and detailed analytics, your webshop becomes the heart of your digital business.",
+      "p3": "We use the latest technologies like React.js and Next.js, which guarantee speed, security, and a great position on Google search. Unlike WordPress or other template solutions, our custom webshops are optimized for performance and SEO from day one."
+    },
+    "packages": {
+      "basic": {
+        "title": "Basic Webshop",
+        "subtitle": "Ideal for smaller businesses starting to sell online",
+        "feature1": "Up to 1,000 products",
+        "feature2": "Mobile optimization",
+        "feature3": "SSL certificate",
+        "feature4": "Basic inventory management",
+        "feature5": "Hosting for the first year",
+        "feature6": "Domain for the first year",
+        "timeline": "Delivery time:",
+        "timelineDays": "10-14 days"
+      },
+      "professional": {
+        "badge": "MOST POPULAR",
+        "title": "Professional Webshop",
+        "subtitle": "A complete e-commerce solution for a serious business",
+        "feature1": "Up to 5,000 products",
+        "feature2": "Basic payment methods (cards, cash on delivery)",
+        "feature3": "Advanced inventory management",
+        "feature4": "Advanced mobile optimization",
+        "feature5": "Analytics and reports",
+        "feature6": "Email notifications for customers",
+        "feature7": "Hosting for the first year",
+        "feature8": "Domain for the first year",
+        "timeline": "Delivery time:",
+        "timelineDays": "14-21 days",
+        "support": "Support:",
+        "supportDuration": "3 months free"
+      },
+      "premium": {
+        "title": "Premium Webshop",
+        "subtitle": "An enterprise solution with advanced features",
+        "feature1": "Unlimited",
+        "feature2": "Basic payment methods (cards, cash on delivery)",
+        "feature3": "Various features - built on request",
+        "feature4": "Multi-language and multi-currency support",
+        "feature5": "Hosting for the first year",
+        "feature6": "Domain for the first year",
+        "timeline": "Delivery time:",
+        "timelineDays": "21-30 days",
+        "support": "Support:",
+        "supportDuration": "6 months + priority"
+      }
+    },
+    "features": {
+      "title": "Key features of our webshop",
+      "subtitle": "Our platform covers everything you need for a successful online business. Every feature is carefully designed to deliver the best experience for both you and your customers.",
+      "catalog": {
+        "title": "Product Catalog",
+        "description": "Unlimited products with categories, filters, variants (sizes, colors), image galleries, and detailed descriptions. Support for virtual and digital products."
+      },
+      "payment": {
+        "title": "Payment Systems",
+        "description": "Integration with all popular gateways: cards (Visa, MasterCard), PayPal, bank transfers, cash on delivery. Secure and fast processing of every transaction."
+      },
+      "inventory": {
+        "title": "Inventory Management",
+        "description": "Automatic stock tracking, low-stock notifications, management of product variants and warehouse locations."
+      },
+      "shipping": {
+        "title": "Shipping and Logistics",
+        "description": "Integration with courier services (Post Express, AKS, BEX), automatic label creation, shipment tracking, and shipping cost calculation."
+      },
+      "users": {
+        "title": "Customer Accounts",
+        "description": "Customer registration and login, order history, wish lists, saved addresses, and real-time order status tracking."
+      },
+      "analytics": {
+        "title": "Analytics and Reports",
+        "description": "Detailed sales reports, best-selling products, customer behavior analysis, conversions, abandoned carts, and ROI tracking."
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "description": "Built-in SEO optimization for every page, product meta tags, rich snippets, sitemap, optimized URL structures, and schema markup."
+      },
+      "notifications": {
+        "title": "Email Notifications",
+        "description": "Automatic emails for order confirmations, status changes, tracking information, newsletter campaigns, and personalized offers."
+      },
+      "mobile": {
+        "title": "Mobile App",
+        "description": "Optional: native mobile apps for iOS and Android with push notifications, QR scanning, and offline capabilities."
+      }
+    },
+    "whatMakesSpecial": {
+      "title": "What makes our webshops special?",
+      "mobile": {
+        "label": "Mobile optimization:",
+        "text": "Over 60% of purchases are made from mobile devices. Our webshops are fully responsive and deliver a perfect user experience on every device."
+      },
+      "speed": {
+        "label": "Load speed:",
+        "text": "Every second of delay costs you customers. Our webshops load in under 3 seconds, which significantly increases conversions."
+      },
+      "seo": {
+        "label": "SEO optimization:",
+        "text": "Your webshop needs to be found. We implement advanced SEO techniques that ensure a high position on Google search and more organic traffic."
+      },
+      "security": {
+        "label": "Security:",
+        "text": "SSL certificates, secure data storage, and PCI DSS compliance guarantee the safety of your customers and their financial information."
+      }
+    },
+    "results": {
+      "title": "Results you can expect",
+      "item1": "Sales increase of 40-60% in the first year",
+      "item2": "Automation of 80% of sales processes",
+      "item3": "Access to the global market 24/7",
+      "item4": "Reduction of operating costs by 30%"
+    },
+    "cta": {
+      "title": "Ready for digital success?",
+      "subtitle": "Contact us for a free consultation and project estimate",
+      "phone": "+381641967267",
+      "email": "office@manikamwebsolutions.com"
+    },
+    "process": {
+      "title": "What does the webshop development process look like?",
+      "step1": {
+        "title": "Analysis and Planning",
+        "description": "We thoroughly analyze your needs, target audience, competitors, and business goals. We create a strategy for your webshop that includes product selection, pricing policy, marketing strategy, and an implementation plan for every required feature."
+      },
+      "step2": {
+        "title": "Design and UX/UI",
+        "description": "We create a modern, functional, conversion-focused design. A webshop's design must be intuitive, easy to navigate, and optimized for turning visitors into customers. We focus on a user experience that leads to a purchase."
+      },
+      "step3": {
+        "title": "Development and Integrations",
+        "description": "We use the latest e-commerce technologies to build your webshop. We integrate all necessary systems: payment gateway, courier services, CRM, email marketing, analytics, and other third-party services. We implement every agreed-upon feature."
+      },
+      "step4": {
+        "title": "Product and Content Entry",
+        "description": "We help you enter products, categories, descriptions, images, and all necessary information. We optimize content for SEO and conversions. You can add products yourself through an intuitive admin panel, or we can do it for you."
+      },
+      "step5": {
+        "title": "Testing and Optimization",
+        "description": "We thoroughly test every feature: the purchase process, payment, shipping, email notifications, and the mobile version. We optimize load speed, check security, and test across different devices and browsers."
+      },
+      "step6": {
+        "title": "Launch and Training",
+        "description": "We launch your webshop, set up Google Analytics, Search Console, and other tracking tools. We train you to use the admin panel, manage orders, products, and every other feature. We provide support after launch."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions about webshops",
+      "q1": {
+        "question": "How much does a webshop cost?",
+        "answer": "The price depends on many factors: the number of products, the complexity of the features, the required integrations, the design, and specific requirements. Our basic package starts at an affordable price for small businesses, while premium solutions with advanced features may cost more but deliver significant ROI. Contact us for a personalized quote."
+      },
+      "q2": {
+        "question": "How long does it take to build a webshop?",
+        "answer": "A basic webshop can be completed in 10-14 days. Professional webshops with more features usually take 14-21 days, while complex enterprise solutions can take 21-30 days or more. The timeline depends on the number of products, integrations, and specific requirements. We keep you regularly updated on progress during development."
+      },
+      "q3": {
+        "question": "Can I add and change products myself?",
+        "answer": "Absolutely! All our webshops come with an intuitive admin panel where you can easily add new products, change prices, manage inventory, track orders, and handle every other function. We provide detailed training and documentation. The admin panel is designed to be simple to use without any technical knowledge."
+      },
+      "q4": {
+        "question": "Which payment gateways do you support?",
+        "answer": "We integrate all popular payment gateways: bank cards (Visa, MasterCard, Maestro), PayPal, Stripe, local banks, cash on delivery. Every payment process is fully secure and compliant with PCI DSS standards."
+      },
+      "q5": {
+        "question": "Is the webshop SEO optimized?",
+        "answer": "Yes, SEO optimization is built into all our webshops. We implement SEO best practices: optimized URL structures, meta tags for every product, rich snippets, product schema markup, speed optimization, mobile responsiveness, and everything else Google factors into rankings. The result is better visibility and more organic traffic."
+      },
+      "q6": {
+        "question": "What happens after launch? Do you provide support?",
+        "answer": "After launch, we provide technical support included in your package (3-6 months depending on the package). We help with any questions, resolve any issues, and work on optimizations. After the initial period, you can continue with our maintenance service or manage the webshop on your own."
+      },
+      "q7": {
+        "question": "Can I migrate an existing webshop?",
+        "answer": "Yes, we can migrate your existing webshop from any platform (WooCommerce, Shopify, Magento, PrestaShop) to our optimized custom platform. The migration includes all products, customers, orders, categories, and other data. After migration, your webshop will be faster, more secure, and better optimized."
+      }
+    }
+  }
+}

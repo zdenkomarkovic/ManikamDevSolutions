@@ -1,0 +1,103 @@
+{
+  "marketingPaket": {
+    "page": {
+      "title": "Marketing Package - Full Service Digital Marketing | Manikam Web Solutions",
+      "description": "A complete digital marketing solution - social media management, advertising, Google Ads, and a FREE website with a 4-month contract!"
+    },
+    "hero": {
+      "title": "Full Service Marketing Package",
+      "subtitle": "Everything you need for a successful online business in one package. Social media, Google Ads, professional advertising, and a FREE website!",
+      "badge1": "Social Media",
+      "badge2": "Google Ads",
+      "badge3": "Advertising",
+      "badge4": "Free Website"
+    },
+    "intro": {
+      "title": "Why choose our Full Service Marketing Package?",
+      "paragraph1": "In the digital world, success comes from combining the right strategies. You can't focus only on social media or only on Google Ads - you need a comprehensive strategy that covers every aspect of digital marketing.",
+      "paragraph2": "Our Full Service Marketing Package offers a complete solution covering everything you need: professional social media management, effective ad campaigns on Facebook and Instagram, Google Ads advertising that delivers results, and as a bonus - a FREE website or a redesign of your existing one with a 4-month contract!"
+    },
+    "package": {
+      "title": "What do you get in the Full Service package?",
+      "badge": "MOST POPULAR PACKAGE",
+      "name": "Marketing Package - Full Service",
+      "price": "€500",
+      "period": "/month",
+      "description": "A complete digital marketing solution with a FREE website on a 4-month contract",
+      "section1": {
+        "title": "Facebook page management",
+        "feature1": "12 professional posts per month",
+        "feature2": "Creative, engaging content tailored to your audience",
+        "feature3": "Storytelling and visually striking designs",
+        "feature4": "Trend tracking and content optimization",
+        "feature5": "Replying to comments and messages (community management)",
+        "feature6": "Monthly performance reports",
+        "feature7": "Use of professional design tools (Canva Pro, Adobe Suite)",
+        "feature8": "Hashtags and SEO optimization for social media"
+      },
+      "section2": {
+        "title": "Instagram profile management",
+        "feature1": "12 quality posts per month",
+        "feature2": "Instagram Stories (3-4 times a week)",
+        "feature3": "Reels creation and optimization",
+        "feature4": "A visually cohesive feed that grabs attention",
+        "feature5": "Use of influencer strategies and user-generated content",
+        "feature6": "Hashtag research and optimization for greater reach",
+        "feature7": "Engaging with followers (comments, messages, interactions)",
+        "feature8": "Monthly reports with profile analytics"
+      },
+      "section3": {
+        "title": "Google Ads campaigns",
+        "feature1": "Creation and optimization of Google Ads campaigns",
+        "feature2": "Keyword research and competitor analysis",
+        "feature3": "Budgeting and bid strategy for the best results",
+        "feature4": "A/B testing of ads for maximum effectiveness",
+        "feature5": "Monthly reports with detailed analytics"
+      },
+      "section4": {
+        "title": "Social media advertising",
+        "feature1": "Facebook and Instagram Ads campaigns",
+        "feature2": "Targeting by demographics, interests, and behavior",
+        "feature3": "Creating and testing different ad creatives"
+      },
+      "bonus": {
+        "title": "BONUS with a 4-month contract",
+        "feature1": "A FREE professional website (worth up to €800)",
+        "feature2": "A FREE redesign of your existing website (worth up to €600)"
+      }
+    },
+    "cta": {
+      "title": "Ready to grow your online success?",
+      "subtitle": "Contact us today and get a free consultation for your business!",
+      "whatsappButton": "Contact via WhatsApp",
+      "emailButton": "Send an email"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faq1": {
+        "question": "How does the free website bonus work?",
+        "answer": "By signing a 4-month contract for the Full Service Marketing Package, you get a professional website completely FREE (worth up to €800). If you already have a website, we can redesign it instead (worth up to €600). The website remains yours even after the contract ends."
+      },
+      "faq2": {
+        "question": "What happens after the 4-month contract?",
+        "answer": "After 4 months, you can continue the services at the same price, adjust the package to your needs, or end the contract. The website you received remains yours regardless of your decision."
+      },
+      "faq3": {
+        "question": "What budget should I set aside for advertising?",
+        "answer": "Your advertising budget depends on your goals and industry. We recommend a minimum budget of €200-300 per month for combined Facebook/Instagram and Google Ads campaigns. We'll help you optimize the budget for the best results."
+      },
+      "faq4": {
+        "question": "Can I track campaign results?",
+        "answer": "Absolutely! You get detailed monthly reports on all activities - post performance, reach, engagement, ad statistics, conversions, and ROI (return on investment). You can track progress in real time."
+      },
+      "faq5": {
+        "question": "What does the collaboration process look like?",
+        "answer": "After signing the contract, we hold an initial meeting where we define the strategy, goals, and tone of voice. We then create content for you to review and approve before it's published. We communicate regularly and adjust the strategy based on results."
+      },
+      "faq6": {
+        "question": "Can I choose what content goes on social media?",
+        "answer": "Of course! You have full control and approval over all content before it's published. We work as a team and aim to create content that best represents your brand."
+      }
+    }
+  }
+}

@@ -56,8 +56,6 @@
       "highlightLabel": "NAJPOPULARNIJI",
       "starter": {
         "name": "Starter Paket",
-        "price": "Od 200€",
-        "period": "/mesečno",
         "description": "Idealno za male biznise koji počinju sa društvenim mrežama",
         "feature1": "Post - 3 nedeljno",
         "feature2": "Stories - 2 nedeljno",
@@ -68,8 +66,6 @@
       },
       "professional": {
         "name": "Profesionalni Paket",
-        "price": "Od 320€",
-        "period": "/mesečno",
         "description": "Kompletno rešenje za ozbiljan online rast",
         "feature1": "Post - 3 nedeljno",
         "feature2": "Stories - 2 nedeljno",
@@ -81,8 +77,6 @@
       },
       "premium": {
         "name": "Premium Paket",
-        "price": "Cena je fleksibilna i zavisi od obima usluge",
-        "period": "/mesečno",
         "description": "Maksimalan rast sa sadržajem i reklamama",
         "feature1": "Post - broj objava po zahtevu klijenta",
         "feature2": "Stories - broj objava po zahtevu klijenta",

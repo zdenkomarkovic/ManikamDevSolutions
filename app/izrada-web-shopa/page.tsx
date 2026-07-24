@@ -10,7 +10,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical: "https://manikamwebsolutions.com/izrada-web-shopa" },
+    alternates: {
+      canonical: "https://manikamwebsolutions.com/izrada-web-shopa",
+      languages: {
+        sr: "https://manikamwebsolutions.com/izrada-web-shopa",
+        en: "https://manikamwebsolutions.com/en/webshop-development",
+      },
+    },
     openGraph: {
       url: "https://manikamwebsolutions.com/izrada-web-shopa",
       title,

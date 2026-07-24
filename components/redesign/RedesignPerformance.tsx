@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaTachometerAlt, FaChartLine, FaTrophy } from "react-icons/fa";
 import { useLocale } from "@/lib/LocaleContext";
+import { contactHref } from "@/locales/localeLinks";
 
 export default function RedesignPerformance() {
   const { locale, t } = useLocale();
@@ -266,7 +267,7 @@ export default function RedesignPerformance() {
         <p className="text-xl text-gray-100 mb-6">{performance.cta.text}</p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
-            href={`/${locale}/contact`}
+            href={contactHref(locale)}
             className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
             {performance.cta.button}

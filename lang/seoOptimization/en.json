@@ -1,0 +1,225 @@
+{
+  "seoOptimization": {
+    "page": {
+      "title": "SEO Optimization - Improve Your Website's Visibility | Manikam Dev Solutions",
+      "description": "Professional SEO optimization that drives organic traffic. Improve your Google rankings, attract a targeted audience, and grow your business. Over 10 years of experience."
+    },
+    "hero": {
+      "title": "SEO Optimization",
+      "subtitle": "Increase your website's visibility on Google. Professional SEO optimization that drives organic traffic and attracts a targeted audience. A long-term strategy for growing your online business.",
+      "badge1": "Organic Growth",
+      "badge2": "Better Rankings",
+      "badge3": "Higher Conversion"
+    },
+    "intro": {
+      "title": "What Is SEO Optimization?",
+      "p1": "<strong>SEO (Search Engine Optimization)</strong> is the process of optimizing your website to improve its ranking in search results on Google and other search engines.",
+      "p2": "Our goal is to make your website visible to the right users at the right time. We combine technical SEO, quality content, and quality links to achieve long-term results.",
+      "p3": "<strong>Over 90% of online experiences start with a search engine</strong> - be there where your customers are! Professional SEO optimization isn't a cost - it's an investment that delivers long-term results and organic traffic without paying for every click."
+    },
+    "packages": {
+      "title": "Our SEO Packages",
+      "subtitle": "Choose the package that fits your needs and budget",
+      "starter": {
+        "title": "Starter SEO",
+        "subtitle": "Ideal for small businesses and startups",
+        "feature1": "Basic technical SEO audit",
+        "feature2": "Optimization of up to 10 pages",
+        "feature3": "Research of up to 20 keywords",
+        "feature4": "On-page optimization",
+        "feature5": "Google My Business setup",
+        "feature6": "Monthly performance report",
+        "feature7": "Email and phone support"
+      },
+      "professional": {
+        "badge": "MOST POPULAR",
+        "title": "Professional SEO",
+        "subtitle": "For serious businesses looking to grow",
+        "feature1": "Detailed technical SEO audit",
+        "feature2": "Optimization of up to 30 pages",
+        "feature3": "Research of up to 50 keywords",
+        "feature4": "On-page optimization",
+        "feature5": "Creation of 2 SEO-optimized articles per month",
+        "feature6": "Google My Business optimization",
+        "feature7": "Competitor analysis",
+        "feature8": "Detailed monthly reports",
+        "feature9": "Email and phone support"
+      },
+      "enterprise": {
+        "title": "Enterprise SEO",
+        "subtitle": "For large companies with specific needs",
+        "feature1": "Unlimited pages",
+        "feature2": "Complete SEO strategy",
+        "feature3": "Advanced keyword research",
+        "feature4": "Creation of multiple SEO articles per month",
+        "feature5": "Link building strategy",
+        "feature6": "Technical SEO optimization",
+        "feature7": "Local SEO for multiple locations",
+        "feature8": "Competitor analysis and tracking",
+        "feature9": "Redesign and migration consulting",
+        "feature10": "Weekly detailed reports",
+        "feature11": "Dedicated account manager",
+        "feature12": "24/7 support",
+        "note": "A custom package with tailored solutions"
+      }
+    },
+    "features": {
+      "title": "Our SEO Services",
+      "keyword": {
+        "title": "Keyword Research",
+        "description": "We identify the most profitable keywords for your business and industry."
+      },
+      "content": {
+        "title": "Content Optimization",
+        "description": "We create and optimize content that ranks and attracts users."
+      },
+      "technical": {
+        "title": "Technical SEO",
+        "description": "We optimize the speed, structure, and technical aspects of your website."
+      },
+      "strategy": {
+        "title": "SEO Strategy",
+        "description": "We develop a comprehensive optimization plan that connects content, technical aspects, and business goals."
+      },
+      "mobile": {
+        "title": "Mobile SEO",
+        "description": "We ensure perfect optimization for mobile devices."
+      },
+      "local": {
+        "title": "Local SEO",
+        "description": "We improve visibility in local search results."
+      },
+      "analytics": {
+        "title": "Analytics and Reports",
+        "description": "Detailed performance tracking and regular progress reports."
+      },
+      "competitor": {
+        "title": "Competitor Analysis",
+        "description": "We analyze the competition and find opportunities to outperform them."
+      }
+    },
+    "services": {
+      "title": "Complete SEO Solutions",
+      "subtitle": "Our team of experts provides comprehensive SEO services covering every aspect of optimization. From technical details to content strategies, we guarantee results that add value to your business.",
+      "onPage": {
+        "title": "On-Page SEO",
+        "items": {
+          "0": "Meta tag and description optimization",
+          "1": "Title and content optimization",
+          "2": "Image and alt attribute optimization",
+          "3": "Internal page linking",
+          "4": "URL structure optimization",
+          "5": "Schema markup implementation"
+        }
+      },
+      "offPage": {
+        "title": "Off-Page SEO",
+        "items": {
+          "0": "Guest posting on relevant websites",
+          "1": "Social signals optimization",
+          "2": "Brand mention tracking",
+          "3": "Influencer outreach",
+          "4": "PR strategy"
+        }
+      },
+      "technical": {
+        "title": "Technical SEO",
+        "items": {
+          "0": "Website speed optimization",
+          "1": "Mobile-first optimization",
+          "2": "XML sitemap creation",
+          "3": "Robots.txt optimization",
+          "4": "HTTPS and security protocols",
+          "5": "Structured data"
+        }
+      },
+      "local": {
+        "title": "Local SEO",
+        "items": {
+          "0": "Google My Business optimization",
+          "1": "Local citations",
+          "2": "Optimization for local keywords",
+          "3": "Google Maps ranking",
+          "4": "Local review management",
+          "5": "NAP consistency"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Improve Your Visibility?",
+      "subtitle": "Contact us for a free consultation",
+      "resultsTitle": "Results you can expect",
+      "result1": "50-80% improvement in Google rankings",
+      "result2": "Increased organic traffic",
+      "result3": "Better brand visibility",
+      "result4": "Long-term ROI",
+      "phone": "+381641967267",
+      "email": "office@manikamwebsolutions.com"
+    },
+    "process": {
+      "title": "Our SEO Process",
+      "step1": {
+        "title": "Analysis and Audit",
+        "description": "We thoroughly analyze your website's current state, your competitors, and your industry."
+      },
+      "step2": {
+        "title": "Strategy and Planning",
+        "description": "We create a tailored SEO strategy based on your goals and budget."
+      },
+      "step3": {
+        "title": "Implementation",
+        "description": "We apply technical optimizations, create content, and build links."
+      },
+      "step4": {
+        "title": "Monitoring and Optimization",
+        "description": "We continuously track performance and optimize the strategy for the best results."
+      },
+      "step5": {
+        "title": "Reporting",
+        "description": "We deliver detailed monthly reports with clear metrics."
+      },
+      "step6": {
+        "title": "Continuous Improvement",
+        "description": "SEO is an ongoing process - we constantly refine the strategy and adapt to changes."
+      },
+      "timeframeTitle": "Average time to the first visible results",
+      "timeframe": "3-6 months",
+      "timeframeNote": "SEO is a marathon, not a sprint - but the results last long-term!"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "How long does it take to see SEO results?",
+        "answer": "The first visible improvements usually appear after 3-6 months, while more significant results come after 6-12 months of continuous work. SEO is a long-term strategy that requires patience, but the results are lasting and cost-effective."
+      },
+      "q2": {
+        "question": "What's the difference between SEO and Google Ads?",
+        "answer": "SEO is an organic way of improving visibility in search results without paying per click, while Google Ads is paid advertising. SEO delivers long-term results, while Google Ads results are immediate but stop once you stop paying."
+      },
+      "q3": {
+        "question": "Do you guarantee the #1 position on Google?",
+        "answer": "We can't guarantee exact positions since Google's algorithm is constantly evolving, but we do guarantee a professional approach, transparency, and measurable improvements. We focus on increasing quality traffic and conversions, not just rankings."
+      },
+      "q4": {
+        "question": "What does your SEO package include?",
+        "answer": "Our packages include a technical SEO audit, on-page optimization, quality content, link building, local SEO optimization, monthly reports, and continuous support. We tailor every package to the client's specific needs."
+      },
+      "q5": {
+        "question": "Do you do local SEO?",
+        "answer": "Yes! We specialize in local SEO, including Google My Business optimization, local citations, optimization for 'near me' searches, and review management. This is ideal for local businesses looking to attract customers from their area."
+      },
+      "q6": {
+        "question": "How much does SEO optimization cost?",
+        "answer": "The price depends on your website's current state, industry competitiveness, and goals. We offer different packages tailored to different budgets. Contact us for a free consultation and a personalized quote."
+      },
+      "q7": {
+        "question": "Can I do SEO myself?",
+        "answer": "You can handle basic SEO yourself, but professional SEO optimization requires deep knowledge of algorithms, technical aspects, tools, and constant tracking of changes. Our team has the experience and resources to achieve results faster and more efficiently."
+      },
+      "q8": {
+        "question": "How do you measure the success of an SEO campaign?",
+        "answer": "We track multiple metrics: organic traffic, keyword rankings, visitor quality, conversions, bounce rate, domain authority, and ROI. We deliver detailed monthly reports with clear explanations of progress."
+      }
+    }
+  }
+}

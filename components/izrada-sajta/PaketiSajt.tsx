@@ -36,8 +36,7 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
         viewport={{ once: true }}
       >
         <span className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-gray-300 font-semibold text-sm md:text-lg px-5 py-2 md:px-7 md:py-3 rounded-full">
-          ✓ Sve cene uključuju hosting i domen za prvu godinu — bez skrivenih
-          troškova.
+          ✓ {intl.formatMessage({ id: "websiteDevelopment.packages.banner" })}
         </span>
       </motion.div>
 
@@ -52,21 +51,8 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
         >
           <div>
             <h3 className="text-base font-semibold mb-2 text-orange-600">
-              Osnovni paket
+              {intl.formatMessage({ id: "websiteDevelopment.packages.basic.title" })}
             </h3>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-gray-400 line-through text-xl">
-                {intl.formatMessage({
-                  id: "websiteDevelopment.packages.basic.originalPrice",
-                })}
-              </span>
-              <span className="text-4xl font-bold text-orange-600">279€</span>
-            </div>
-            <div className="inline-block bg-gradient-to-r from-orange-600 to-orange-400 text-white text-sm font-bold px-3 py-1 rounded-full mb-5 animate-pulse">
-              {intl.formatMessage({
-                id: "websiteDevelopment.packages.basic.badge",
-              })}
-            </div>
             <p className=" mb-4">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.basic.subtitle",
@@ -144,10 +130,10 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
               })}
             </div>
             <button
-              onClick={() => handleUpit("Osnovni sajt (279€)")}
+              onClick={() => handleUpit(intl.formatMessage({ id: "websiteDevelopment.packages.basic.title" }))}
               className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-3 rounded-xl transition-all"
             >
-              Pošalji upit
+              {intl.formatMessage({ id: "websiteDevelopment.packages.sendInquiry" })}
             </button>
           </div>
         </motion.div>
@@ -174,13 +160,6 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
                 id: "websiteDevelopment.packages.professional.title",
               })}
             </h3>
-            <div className="mb-5">
-              <span className="text-4xl font-bold text-orange-600">
-                {intl.formatMessage({
-                  id: "websiteDevelopment.packages.professional.price",
-                })}
-              </span>
-            </div>
             <p className="mb-4">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.professional.subtitle",
@@ -266,10 +245,10 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
               })}
             </div>
             <button
-              onClick={() => handleUpit("Profesionalni sajt (450€)")}
+              onClick={() => handleUpit(intl.formatMessage({ id: "websiteDevelopment.packages.professional.title" }))}
               className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-3 rounded-xl transition-all"
             >
-              Pošalji upit
+              {intl.formatMessage({ id: "websiteDevelopment.packages.sendInquiry" })}
             </button>
           </div>
         </motion.div>
@@ -288,9 +267,6 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
                 id: "websiteDevelopment.packages.premium.title",
               })}
             </h3>
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-4xl font-bold text-orange-600">800+€</span>
-            </div>
             <p className="mb-4">
               {intl.formatMessage({
                 id: "websiteDevelopment.packages.premium.subtitle",
@@ -385,10 +361,10 @@ const PaketiSajt = ({ onSelectPaket }: PaketiSajtProps) => {
               })}
             </div>
             <button
-              onClick={() => handleUpit("Premijum sajt (800+€)")}
+              onClick={() => handleUpit(intl.formatMessage({ id: "websiteDevelopment.packages.premium.title" }))}
               className="w-full bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold py-3 rounded-xl transition-all"
             >
-              Pošalji upit
+              {intl.formatMessage({ id: "websiteDevelopment.packages.sendInquiry" })}
             </button>
           </div>
         </motion.div>

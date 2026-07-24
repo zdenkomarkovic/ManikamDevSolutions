@@ -19,7 +19,7 @@
     },
     "packages": {
       "basic": {
-        "title": "Osnovni Web Shop - 700€",
+        "title": "Osnovni Web Shop",
         "subtitle": "Idealno za manje biznise koji počinju online prodaju",
         "feature1": "Do 1000 proizvoda",
         "feature2": "Mobilna optimizacija",
@@ -32,7 +32,7 @@
       },
       "professional": {
         "badge": "NAJPOPULARNIJI",
-        "title": "Profesionalni Web Shop - 1000€",
+        "title": "Profesionalni Web Shop",
         "subtitle": "Kompletno e-commerce rešenje za ozbiljan biznis",
         "feature1": "Do 5000 proizvoda",
         "feature2": "Osnovno plaćanje (kartice, pouzeće)",
@@ -48,7 +48,7 @@
         "supportDuration": "3 meseca besplatno"
       },
       "premium": {
-        "title": "Premium Web Shop - cena po projektu",
+        "title": "Premium Web Shop",
         "subtitle": "Enterprise rešenje sa naprednim funkcionalnostima",
         "feature1": "Neograničeno",
         "feature2": "Osnovno plaćanje (kartice, pouzeće)",

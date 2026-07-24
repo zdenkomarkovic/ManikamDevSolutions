@@ -1,8 +1,9 @@
 "use client";
 import { createContext, useContext } from "react";
 import { createIntl, IntlShape } from "@formatjs/intl";
+import type { Locale } from "@/i18n-config";
 
-type MessagesContextType = { intl: IntlShape; locale: "sr" };
+type MessagesContextType = { intl: IntlShape; locale: Locale };
 type MessageValue = string | { [key: string]: MessageValue };
 type NestedMessages = Record<string, MessageValue>;
 
@@ -14,8 +15,10 @@ export function useMessages() {
   return context.intl;
 }
 
-export function useCurrentLocale() {
-  return "sr" as const;
+export function useCurrentLocale(): Locale {
+  const context = useContext(MessagesContext);
+  if (!context) throw new Error("useCurrentLocale must be used within MessagesProvider");
+  return context.locale;
 }
 
 function flattenMessages(nestedMessages: NestedMessages, prefix = ''): Record<string, string> {
@@ -33,16 +36,17 @@ function flattenMessages(nestedMessages: NestedMessages, prefix = ''): Record<st
 
 export function MessagesProvider({
   children,
+  locale = "sr",
   messages,
 }: {
   children: React.ReactNode;
-  locale?: string;
+  locale?: Locale;
   messages: NestedMessages;
 }) {
   const flatMessages = flattenMessages(messages);
-  const intl = createIntl({ locale: "sr", messages: flatMessages });
+  const intl = createIntl({ locale, messages: flatMessages });
   return (
-    <MessagesContext.Provider value={{ intl, locale: "sr" }}>
+    <MessagesContext.Provider value={{ intl, locale }}>
       {children}
     </MessagesContext.Provider>
   );

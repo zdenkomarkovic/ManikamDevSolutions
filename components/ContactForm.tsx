@@ -32,11 +32,13 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { useMessages } from "@/lib/MessagesContext";
+import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
+import { thankYouHref } from "@/locales/localeLinks";
 import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
   const intl = useMessages();
+  const locale = useCurrentLocale();
   const router = useRouter();
 
   const contactFormSchema = z.object({
@@ -77,7 +79,7 @@ export default function ContactForm() {
     });
 
     if (response?.messageId) {
-      router.push(`/hvala`);
+      router.push(thankYouHref(locale));
     } else {
       toast.error(intl.formatMessage({ id: "contact.toast.error" }));
     }

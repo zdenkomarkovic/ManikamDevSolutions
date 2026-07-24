@@ -53,10 +53,6 @@ export default function SocialMediaPackages() {
             <h3 className="text-2xl font-bold mb-5 text-orange-600">
               {intl.formatMessage({ id: `socialMedia.packages.${pkg.key}.name` })}
             </h3>
-            <div className="text-3xl font-bold text-orange-600 mb-2">
-              {intl.formatMessage({ id: `socialMedia.packages.${pkg.key}.price` })}
-              <span className="text-lg text-gray-900">{intl.formatMessage({ id: `socialMedia.packages.${pkg.key}.period` })}</span>
-            </div>
             <p className=" mb-4">{intl.formatMessage({ id: `socialMedia.packages.${pkg.key}.description` })}</p>
             <div className="w-full h-1 bg-gray-200 mb-4"></div>
             <div className="space-y-3 mb-6">

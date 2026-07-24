@@ -1,0 +1,186 @@
+{
+  "page.home.head.title": "Manikam Web Solutions – Professional Website and Software Development",
+  "page.home.head.meta.description": "Manikam Web Solutions is a software and website development agency delivering professional, custom digital solutions to grow your business.",
+  "hero.title": "We help your business grow!",
+  "section": {
+    "title": "With our knowledge and experience,",
+    "span": " ideas ",
+    "title2": " become reality!",
+    "title3": " your ",
+    "span2": "+381641967267",
+    "phone": "+381641967267",
+    "subtitle": " Many small businesses underestimate the value of their ",
+    "span3": " websites",
+    "subtitle2": " which leads to huge losses and limits their potential",
+    "span4": "Schedule a meeting",
+    "subtitle3": " so we can put all the pieces together",
+    "span5": "!",
+    "email_button": "Send an email",
+    "email_address": "office@manikamwebsolutions.com",
+    "call_button": "Call us"
+  },
+  "cards": [
+    {
+      "title": "Do you need custom software for your business?",
+      "mim": "Our company specializes in developing custom software, built in consultation with clients and tailored to their specific needs. From idea to implementation, we provide complete solutions that help clients automate and streamline their work. If you need better organization, greater efficiency, and less manual work, we can build software exactly to your requirements.",
+      "img": "/images/hero2.jpg"
+    },
+    {
+      "title": "Is your website not attracting enough new clients?",
+      "mim": "Maybe it's time for a design refresh! We create striking, modernized websites that not only look fantastic but also leave a strong impression on visitors. Boost engagement and make your website unforgettable!",
+      "img": "/images/hero.jpg"
+    },
+    {
+      "title": "Increase traffic with SEO optimization!",
+      "mim": "Isn't your website getting enough visits? With SEO optimization you can increase your visibility on search engines and attract more users. We offer in-depth analysis, strategic planning, and implementation of solutions that deliver results. Improve your Google ranking and outperform the competition today!",
+      "img": "/images/sijalica.jpg"
+    },
+    {
+      "title": "Need a website you can update yourself?",
+      "mim": "With our CMS solution, you get a website you can easily and quickly update without any technical knowledge. Whether you want to add new pages, change content, or adjust the design, you can do it all yourself. This system gives you full control over your website, while we provide support whenever you need it.",
+      "img": "/images/kljuc.jpg"
+    },
+    {
+      "title": "Want to launch advertising campaigns?",
+      "mim": "Outperform the competition and increase your online visibility with professionally built campaigns that deliver results. We offer optimization, analytics, and tailored solutions to help you achieve the best performance on Google Search.",
+      "img": "/images/planeta.jpg"
+    }
+  ],
+  "usluge.title": "Our services",
+  "usluge": [
+    {
+      "img": "/images/software.svg",
+      "title": "WEB DEVELOPMENT",
+      "text": "We use React.js, Node.js, and Next.js. We work with local and international clients, and we also develop our own digital products, such as the app",
+      "span": " Taxi report"
+    },
+    {
+      "img": "/images/5462824_Devices.svg",
+      "title": "WEBSITE",
+      "text": "We don't use website builders - we code in Next.js, one of the fastest technologies available, ensuring speed and better Google rankings. We offer basic websites of up to 10 pages as well as custom solutions for specific client needs.",
+      "span": ""
+    },
+    {
+      "img": "/images/cms.png",
+      "title": "SELF-MANAGED WEBSITE (CMS)",
+      "text": "A CMS (Content Management System) lets you update pages yourself, adding or removing content and pages. Ideal for blogs, portals, and websites with frequent content changes.",
+      "span": ""
+    },
+    {
+      "img": "/images/7079603_3509262.svg",
+      "title": "ONLINE STORE",
+      "text": "Custom online stores provide a tailored layout for a specific group of products, with additional options and features that boost sales. The ideal solution for successful online selling.",
+      "span": ""
+    },
+    {
+      "img": "/images/seo.svg",
+      "title": "SEO",
+      "text": "Want better search rankings? Our high-quality SEO improves your website's position and increases visibility. We optimize content, keywords, and technical aspects of your site for better results and more traffic.",
+      "span": ""
+    },
+    {
+      "img": "/images/odrzavanje.png",
+      "title": "MAINTENANCE",
+      "text": "Every website needs maintenance over time. As technology advances quickly, regular updates are important to keep your website functional and up to date with the latest standards.",
+      "span": ""
+    },
+    {
+      "img": "/images/destination.png",
+      "title": "WEBSITE MIGRATION",
+      "text": "Whatever your reason for switching hosting providers, our team will handle a safe and seamless transfer of your website to the provider of your choice.",
+      "span": ""
+    },
+    {
+      "img": "/images/redesign.png",
+      "title": "WEBSITE REDESIGN",
+      "text": "If your website is older, it's probably time for a redesign. A redesign includes modernizing the design while keeping some of the existing content and adding new content, making it more functional and visually appealing.",
+      "span": ""
+    },
+    {
+      "img": "/images/consulting.png",
+      "title": "CONSULTING",
+      "text": "Not sure what you need? Schedule a meeting with us - we'll be happy to walk you through what we can do for your business and how to achieve better results.",
+      "span": ""
+    },
+    {
+      "img": "/images/cloud.png",
+      "title": "HOSTING",
+      "text": "In partnership with our providers, we offer hosting and domains for websites we've built or redesigned, ensuring reliable support and optimal performance for your website or web software.",
+      "span": ""
+    },
+    {
+      "img": "/images/ads.svg",
+      "title": "GOOGLE ADS",
+      "text": "With our digital advertising service, your brand gets the visibility and attention it needs, helping you stand out from the competition and reach a more targeted audience.",
+      "span": ""
+    },
+    {
+      "img": "/images/social-media.svg",
+      "title": "SOCIAL MEDIA",
+      "text": "We create and manage your social media profiles, produce engaging content, grow your audience's engagement, and build your brand's recognition on Instagram, Facebook, and other platforms.",
+      "span": ""
+    }
+  ],
+  "reference.title": "References",
+  "reference.link": "Visit website",
+  "ourWork.title": "Our work",
+  "ourWork.subtitle": "Take a look at some of the projects we've delivered. Every project is a unique success story.",
+  "ourWork.items": [
+    {
+      "title": "E-commerce platform",
+      "description": "A modern online store with integrated payments and inventory management.",
+      "image": "/images/SS2.png"
+    },
+    {
+      "title": "Corporate website",
+      "description": "An elegant web presence with a CMS for easy content updates.",
+      "image": "/images/SS3.png"
+    },
+    {
+      "title": "Booking system",
+      "description": "An advanced online booking application with calendar integration.",
+      "image": "/images/SS4.png"
+    },
+    {
+      "title": "Portfolio website",
+      "description": "A creative design for showcasing work and services.",
+      "image": "/images/SS5.png"
+    },
+    {
+      "title": "Restaurant website",
+      "description": "A visually appealing website with an online menu and ordering system.",
+      "image": "/images/SS6.png"
+    }
+  ],
+  "footer.message": "We create stories worth remembering.",
+  "footer.rights": "All rights reserved.",
+  "instagram": "https://www.instagram.com/manikam.web.solutions/",
+  "contact": {
+    "title": "Choose whichever way is most convenient for you...",
+    "name": "Full name:",
+    "broj": "Phone number:",
+    "message": "Your message:",
+    "plh.name": "Enter your full name:",
+    "plh.broj": "Enter your phone number:",
+    "plh.message": "Your message to us"
+  },
+  "alt_hero": "Background image - Manikam Web Solutions",
+  "alt_reference": "Website screenshot: {project}",
+  "alt_section1_1": "Software solution illustration",
+  "alt_section1_2": "Modern website illustration",
+  "alt_section1_3": "SEO optimization illustration",
+  "alt_section1_4": "CMS system illustration",
+  "alt_section1_5": "Advertising illustration",
+  "alt_usluge_1": "Web development service illustration",
+  "alt_usluge_2": "Website development illustration",
+  "alt_usluge_3": "CMS solution illustration",
+  "alt_usluge_4": "Online store illustration",
+  "alt_usluge_5": "SEO service illustration",
+  "alt_usluge_6": "Website maintenance illustration",
+  "alt_usluge_7": "Website migration illustration",
+  "alt_usluge_8": "Website redesign illustration",
+  "alt_usluge_9": "Consulting service illustration",
+  "alt_usluge_10": "Hosting service illustration",
+  "alt_usluge_11": "Google Ads illustration",
+  "alt_reklama_bg": "Laptop background image"
+}

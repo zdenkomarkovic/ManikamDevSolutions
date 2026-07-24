@@ -61,7 +61,14 @@
       "Read(//e//**)",
       "Bash(curl *)",
       "Bash(grep -o '<body[^>]*>.\\\\{0,300\\\\}' \"C:/Users/DELL/AppData/Local/Temp/claude/E--Sajtovi-manikam-dev-solutions/6bccc20b-cd02-49d2-a7a7-672fd37fb495/scratchpad/home.html\")",
-      "Bash(grep -o '<body[^>]*>.\\\\{0,400\\\\}' .next/server/app/izrada-sajta.html)"
+      "Bash(grep -o '<body[^>]*>.\\\\{0,400\\\\}' .next/server/app/izrada-sajta.html)",
+      "Bash(grep -o '<h1[^>]*>.\\\\{0,80\\\\}')",
+      "Bash(kill %1)",
+      "Bash(git check-ignore *)",
+      "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_4sdter4sdter4sdt \\(2\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(16\\).png\")",
+      "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_u1veeeu1veeeu1ve \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(17\\).png\")",
+      "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_blr1ojblr1ojblr1 \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(18\\).png\")",
+      "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_e4c55me4c55me4c5 \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(19\\).png\")"
     ],
     "deny": [],
     "ask": []

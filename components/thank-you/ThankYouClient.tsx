@@ -6,6 +6,8 @@ import { MessagesProvider } from "@/lib/MessagesContext";
 import { FaCheckCircle, FaHome, FaServicestack } from "react-icons/fa";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import type { Locale } from "@/i18n-config";
+import { homeHref, sectionHref } from "@/locales/localeLinks";
 
 type MessageValue = string | { [key: string]: MessageValue };
 type Messages = Record<string, MessageValue>;
@@ -35,10 +37,10 @@ interface ThankYouMessages {
 
 interface ThankYouClientProps {
   messages: Messages;
+  locale?: Locale;
 }
 
-export default function ThankYouClient({ messages }: ThankYouClientProps) {
-  const locale = "sr";
+export default function ThankYouClient({ messages, locale = "sr" }: ThankYouClientProps) {
   const thankYouMessages = messages as unknown as ThankYouMessages;
 
   useEffect(() => {
@@ -171,7 +173,7 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href={`/${locale}`}>
+                <Link href={homeHref(locale)}>
                   <Button className="w-full md:w-auto bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold px-8 py-6 text-lg">
                     <FaHome className="mr-2" />
                     {thankYouMessages.thankYou.cta.homeButton}
@@ -180,7 +182,7 @@ export default function ThankYouClient({ messages }: ThankYouClientProps) {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href={`/${locale}#services`}>
+                <Link href={sectionHref(locale, "#services")}>
                   <Button className="w-full md:w-auto bg-white text-orange-600 hover:bg-gray-100 font-semibold px-8 py-6 text-lg border-2 border-orange-600">
                     <FaServicestack className="mr-2" />
                     {thankYouMessages.thankYou.cta.servicesButton}

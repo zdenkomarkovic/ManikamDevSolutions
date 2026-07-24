@@ -14,6 +14,10 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     alternates: {
       canonical: "https://manikamwebsolutions.com/",
+      languages: {
+        sr: "https://manikamwebsolutions.com/",
+        en: "https://manikamwebsolutions.com/en",
+      },
     },
     openGraph: {
       url: "https://manikamwebsolutions.com/",
@@ -63,7 +67,7 @@ export default async function Home() {
   return (
     <main>
       <div className="bg-gray-900/95">
-        <Hero title={heroTitle} section={section} />
+        <Hero title={heroTitle} section={section} locale="sr" />
         <HomeBelowFold
           section={section}
           cards={cards}

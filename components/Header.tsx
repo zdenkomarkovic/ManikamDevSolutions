@@ -3,15 +3,20 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Button } from "../components/ui/button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
-import { getNavList } from "@/locales/navUtils";
+import { getNavList, getLocalizedPath } from "@/locales/navUtils";
 import logo from "../public/images/android-chrome-192x192.png";
 
 export default function Header() {
-  const navList = getNavList();
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "sr";
+  const navList = getNavList(locale);
+  const switchLocale = locale === "en" ? "sr" : "en";
+  const switchHref = getLocalizedPath(pathname ?? "/", switchLocale);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
@@ -24,6 +29,10 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   return (
     <header
@@ -103,16 +112,24 @@ export default function Header() {
             })}
           </div>
 
-          {/* Phone - Desktop */}
-          <a
-            href="tel:+381641967267"
-            onClick={() => window.gtag_report_conversion?.("tel:+381641967267")}
-            className="hidden md:flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-4 py-2 rounded-full transition-colors font-bold"
-          >
-            +381 64 196 7267
-          </a>
+          {/* Phone + Language switcher - Desktop */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="tel:+381641967267"
+              onClick={() => window.gtag_report_conversion?.("tel:+381641967267")}
+              className="flex items-center gap-2 bg-gradient-to-r from-orange-600 to-transparent hover:from-orange-500 text-white px-4 py-2 rounded-full transition-colors font-bold"
+            >
+              +381 64 196 7267
+            </a>
+            <Link
+              href={switchHref}
+              className="uppercase text-sm font-bold hover:text-orange-500 transition-colors border border-current rounded-full px-3 py-1"
+            >
+              {switchLocale}
+            </Link>
+          </div>
 
-          {/* Mobile: Phone + Menu Button */}
+          {/* Mobile: Phone + Language switcher + Menu Button */}
           <div className="md:hidden flex items-center gap-3">
             <a
               href="tel:+381641967267"
@@ -121,6 +138,12 @@ export default function Header() {
             >
               +381 64 196 7267
             </a>
+            <Link
+              href={switchHref}
+              className="uppercase text-xs font-bold border border-current rounded-full px-2 py-1"
+            >
+              {switchLocale}
+            </Link>
             <Button
               variant="ghost"
               size="icon"

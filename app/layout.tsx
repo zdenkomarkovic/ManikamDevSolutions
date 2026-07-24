@@ -64,6 +64,8 @@ export const metadata: Metadata = {
     images: ["https://manikamwebsolutions.com/api/og?title=Manikam%20Web%20Solutions"],
   },
   // Ne postavljamo canonical ovde - svaka stranica ima svoj
+  // (i18n napomena: ovaj export je samo fallback - svaka /en/* i sr ruta
+  // ima svoj generateMetadata koji ga u potpunosti prepisuje na tačan jezik)
 };
 
 export const viewport = {
@@ -93,9 +95,6 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.facebook.com" />
-        {/* hreflang */}
-        <link rel="alternate" hrefLang="sr" href="https://manikamwebsolutions.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://manikamwebsolutions.com/" />
         {/* JSON-LD Organization schema */}
         <script
           type="application/ld+json"

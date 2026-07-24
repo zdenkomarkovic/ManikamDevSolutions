@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
+import { contactHref } from "@/locales/localeLinks";
 import { Check } from "lucide-react";
 
 const GoogleAdsPackages = () => {
@@ -111,22 +112,8 @@ const GoogleAdsPackages = () => {
               {intl.formatMessage({ id: `googleAds.packages.${pkg.id}.tagline` })}
             </p>
 
-            <div className="mb-6">
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl md:text-5xl font-bold text-gray-900">
-                  {intl.formatMessage({ id: `googleAds.packages.${pkg.id}.price` })}
-                </span>
-                <span className="text-gray-600">
-                  {intl.formatMessage({ id: "googleAds.packages.perMonth" })}
-                </span>
-              </div>
-              <p className="text-sm text-gray-600 mt-2">
-                {intl.formatMessage({ id: `googleAds.packages.${pkg.id}.budget` })}
-              </p>
-            </div>
-
             <motion.a
-              href={`/${locale}/contact`}
+              href={contactHref(locale)}
               className="block w-full text-center bg-gradient-to-r from-orange-600 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold mb-6 hover:shadow-lg transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -138,6 +125,12 @@ const GoogleAdsPackages = () => {
               <h4 className="font-bold text-gray-900 mb-3">
                 {intl.formatMessage({ id: "googleAds.packages.included" })}
               </h4>
+              <div className="flex items-start gap-2">
+                <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-700 text-sm leading-relaxed font-semibold">
+                  {intl.formatMessage({ id: `googleAds.packages.${pkg.id}.campaigns` })}
+                </span>
+              </div>
               {[1, 2, 3, 4, 5, 6, 7].map((num) => {
                 const featureKey = `googleAds.packages.${pkg.id}.feature${num}`;
                 const feature = intl.formatMessage({ id: featureKey });

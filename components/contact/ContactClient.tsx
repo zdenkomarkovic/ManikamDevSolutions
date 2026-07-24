@@ -2,6 +2,7 @@
 
 import React from "react";
 import { MessagesProvider } from "@/lib/MessagesContext";
+import type { Locale } from "@/i18n-config";
 import ContactForm from "../ContactForm";
 
 // Type for the message structure
@@ -10,11 +11,12 @@ type Messages = Record<string, MessageValue>;
 
 interface ContactClientProps {
   messages: Messages;
+  locale?: Locale;
 }
 
-export default function ContactClient({ messages }: ContactClientProps) {
+export default function ContactClient({ messages, locale = "sr" }: ContactClientProps) {
   return (
-    <MessagesProvider locale="sr" messages={messages}>
+    <MessagesProvider locale={locale} messages={messages}>
       <div className="bg-gray-900/90">
         <ContactForm />
       </div>

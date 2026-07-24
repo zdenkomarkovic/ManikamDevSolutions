@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useMessages } from "@/lib/MessagesContext";
 
 const prosecneSlike = [
   "/images/lighthouse1.PNG",
@@ -11,6 +12,7 @@ const prosecneSlike = [
 ];
 
 const PoredjenjeSajt = () => {
+  const intl = useMessages();
   return (
     <div>
       <motion.p
@@ -20,10 +22,7 @@ const PoredjenjeSajt = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        Naši sajtovi su optimizovani prema standardima koje preporučuje Google,
-        sa fokusom na performanse, brzinu učitavanja i Core Web Vitals metrike
-        koje utiču na rangiranje u pretrazi. Rezultati optimizacije proveravaju
-        se alatima kao što su Google Lighthouse i Google PageSpeed Insights.
+        {intl.formatMessage({ id: "websiteDevelopment.comparison.intro" })}
       </motion.p>
 
       {/* Dve kolone */}
@@ -37,7 +36,7 @@ const PoredjenjeSajt = () => {
         {/* Leva kolona — Prosečan sajt */}
         <div className="flex flex-col gap-2">
           <h3 className="text-base md:text-lg font-bold text-gray-300 text-center mb-3">
-            Uobičajene performanse sajtova na internetu
+            {intl.formatMessage({ id: "websiteDevelopment.comparison.averageTitle" })}
           </h3>
           {prosecneSlike.map((src, i) => (
             <div
@@ -46,7 +45,10 @@ const PoredjenjeSajt = () => {
             >
               <Image
                 src={src}
-                alt={`Prosečan sajt ${i + 1}`}
+                alt={intl.formatMessage(
+                  { id: "websiteDevelopment.comparison.averageAlt" },
+                  { index: i + 1 }
+                )}
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 90vw, 45vw"
@@ -59,12 +61,12 @@ const PoredjenjeSajt = () => {
         {/* Desna kolona — Naš rezultat */}
         <div className="flex flex-col gap-4">
           <h3 className="text-base md:text-lg font-bold text-gray-300 text-center">
-            Naše performanse
+            {intl.formatMessage({ id: "websiteDevelopment.comparison.ourTitle" })}
           </h3>
           <div className="rounded-xl overflow-hidden border border-orange-500/30">
             <Image
               src="/images/lighthousemanikam.PNG"
-              alt="Manikam rezultat"
+              alt={intl.formatMessage({ id: "websiteDevelopment.comparison.ourAlt" })}
               width={0}
               height={0}
               sizes="(max-width: 768px) 90vw, 45vw"
@@ -75,7 +77,7 @@ const PoredjenjeSajt = () => {
       </motion.div>
 
       <p className="text-center text-gray-400 text-lg md:text-2xl mt-6">
-        Garantujemo performanse iznad 95
+        {intl.formatMessage({ id: "websiteDevelopment.comparison.guarantee" })}
       </p>
 
       <div className="mt-10 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent" />

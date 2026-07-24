@@ -35,7 +35,7 @@ const HeroSajt = () => {
         }}
         className="bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 text-white font-semibold text-base md:text-lg px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30"
       >
-        Zatražite besplatnu ponudu
+        {intl.formatMessage({ id: "websiteDevelopment.hero.ctaButton" })}
       </button>
     </div>
   );

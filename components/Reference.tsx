@@ -28,39 +28,38 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
     }
   }, []);
 
-  // Funkcija za kreiranje naizmeničnog teksta sa custom tekstom
-  // const createAlternatingTextWithCustomTitle = (
-  //   text: string,
-  //   count: number
-  // ) => {
-  //   const items = [];
-  //   for (let i = 0; i < count; i++) {
-  //     const isOrange = i % 2 === 0;
-  //     items.push(
-  //       <span
-  //         key={i}
-  //         className={
-  //           isOrange
-  //             ? "bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
-  //             : "text-black"
-  //         }
-  //         style={
-  //           !isOrange
-  //             ? {
-  //                 WebkitTextStroke: "6px white",
-  //                 paintOrder: "stroke fill",
-  //               }
-  //             : undefined
-  //         }
-  //       >
-  //         {text}
-  //       </span>
-  //     );
-  //     items.push(<span className="text-white"> • </span>);
-  //   }
-  //   items.push(<span key="nbsp">&nbsp;</span>);
-  //   return items;
-  // };
+  const createAlternatingTextWithCustomTitle = (
+    text: string,
+    count: number
+  ) => {
+    const items = [];
+    for (let i = 0; i < count; i++) {
+      const isOrange = i % 2 === 0;
+      items.push(
+        <span
+          key={i}
+          className={
+            isOrange
+              ? "bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent"
+              : "text-black"
+          }
+          style={
+            !isOrange
+              ? {
+                  WebkitTextStroke: "6px white",
+                  paintOrder: "stroke fill",
+                }
+              : undefined
+          }
+        >
+          {text}
+        </span>
+      );
+      items.push(<span className="text-white"> • </span>);
+    }
+    items.push(<span key="nbsp">&nbsp;</span>);
+    return items;
+  };
 
   // Kalkulišemo paginaciju
   const totalPages = Math.ceil(allReferences.length / itemsPerPage);
@@ -113,8 +112,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
   return (
     <div id="reference" className="pb-10">
       {/* Animated text naslov - puna širina ekrana */}
-      {/* <div className="w-full pb-10 md:py-16 overflow-hidden">
-  
+      <div className="w-full pb-10 md:py-16 overflow-hidden">
         <div className="mb-4 overflow-hidden">
           <div
             className="flex animate-scroll-right"
@@ -131,7 +129,6 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
           </div>
         </div>
 
-
         <div className="overflow-hidden">
           <div
             className="flex animate-scroll-left"
@@ -147,11 +144,11 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
             </h3>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Reference grid - zadržava container */}
       <div className="container px-2 md:px-16 mx-auto">
-        <h3
+        {/* <h3
           className="text-center pb-14 text-4xl md:text-8xl font-extrabold whitespace-nowrap text-black"
           style={{
             WebkitTextStroke: "6px white",
@@ -159,7 +156,7 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
           }}
         >
           {title}
-        </h3>
+        </h3> */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {currentReferences.map((item, i) => {
             return (
@@ -182,11 +179,9 @@ const Reference = ({ refLink, title }: { refLink: string; title: string }) => {
                     alt={`${item.title} - manikam web solutions`}
                     className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <p className="absolute bottom-5 left-8 text-xl text-black group-hover:scale-110 transition-transform duration-300">
-                    <span className="flex flex-col">
-                      {refLink} <span>{item.title}</span>
-                    </span>
-                  </p>
+                  <span className="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-white/90 text-black text-xs font-semibold shadow-md group-hover:scale-110 transition-transform duration-300">
+                    {refLink} {item.title}
+                  </span>
                 </Link>
               </motion.div>
             );

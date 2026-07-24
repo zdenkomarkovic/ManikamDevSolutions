@@ -2,16 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroPhoneLink from "./HeroPhoneLink";
 import heroImg from "../public/images/laptop.jpg";
+import type { Locale } from "@/i18n-config";
 
-const services = [
-  { text: "Izrada web sajta", href: "/izrada-sajta" },
-  { text: "Izrada online prodavnica", href: "/izrada-web-shopa" },
-  { text: "Redizajn sajta", href: "/redizajn-migracija" },
-  { text: "Google Ads kampanje", href: "/google-oglasavanje" },
-  { text: "SEO usluge", href: "/seo-optimizacija" },
-  { text: "Marketing društvenih mreža", href: "/drustvene-mreze" },
-  { text: "Razvoj softvera", href: "/izrada-softvera" },
-];
+const servicesByLocale: Record<Locale, { text: string; href: string }[]> = {
+  sr: [
+    { text: "Izrada web sajta", href: "/izrada-sajta" },
+    { text: "Izrada online prodavnica", href: "/izrada-web-shopa" },
+    { text: "Redizajn sajta", href: "/redizajn-migracija" },
+    { text: "Google Ads kampanje", href: "/google-oglasavanje" },
+    { text: "SEO usluge", href: "/seo-optimizacija" },
+    { text: "Marketing društvenih mreža", href: "/drustvene-mreze" },
+    { text: "Razvoj softvera", href: "/izrada-softvera" },
+  ],
+  en: [
+    { text: "Website development", href: "/en/website-development" },
+    { text: "Online store development", href: "/en/webshop-development" },
+    { text: "Website redesign", href: "/en/website-redesign" },
+    { text: "Google Ads campaigns", href: "/en/google-ads" },
+    { text: "SEO services", href: "/en/seo-optimization" },
+    { text: "Social media marketing", href: "/en/social-media" },
+    { text: "Software development", href: "/en/software-development" },
+  ],
+};
 
 type SectionData = {
   title: string;
@@ -31,7 +43,16 @@ type SectionData = {
   call_button: string;
 };
 
-const Hero = ({ title, section }: { title: string; section: SectionData }) => {
+const Hero = ({
+  title,
+  section,
+  locale = "sr",
+}: {
+  title: string;
+  section: SectionData;
+  locale?: Locale;
+}) => {
+  const services = servicesByLocale[locale];
   return (
     <div className="relative h-[100dvh] w-full overflow-hidden">
       <div className="relative container mx-auto px-[5px] md:px-4 h-[100dvh] overflow-hidden">

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Code, Layers, Zap, Globe } from "lucide-react";
 import { useLocale } from "@/lib/LocaleContext";
+import { contactHref } from "@/locales/localeLinks";
 
 export default function RedesignWhyNextJS() {
   const { locale, t } = useLocale();
@@ -108,7 +109,7 @@ export default function RedesignWhyNextJS() {
         </h3>
 
         <Link
-          href={`/${locale}/contact`}
+          href={contactHref(locale)}
           className="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
         >
           {whyNextJS.cta.button}
