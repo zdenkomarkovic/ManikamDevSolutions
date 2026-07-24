@@ -9,6 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
 import { getNavList, getLocalizedPath } from "@/locales/navUtils";
+import { homeHref } from "@/locales/localeLinks";
 import logo from "../public/images/android-chrome-192x192.png";
 
 export default function Header() {
@@ -45,7 +46,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 md:px-16 py-[10px] font-bold">
         <div className="flex justify-between items-center">
           <div className="hover:scale-105 active:scale-95 transition-transform duration-200">
-            <Link href="/" className="flex items-center space-x-4">
+            <Link href={homeHref(locale)} className="flex items-center space-x-4">
               <Image
                 src={logo}
                 alt="manikamwebsolutions logo"

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Facebook, Instagram } from "lucide-react";
 import { getNavList } from "@/locales/navUtils";
 import { FaPhone } from "react-icons/fa6";
+import { FaViber, FaWhatsappSquare } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 
 // Declare gtag_report_conversion function type
@@ -102,6 +103,32 @@ export default function Footer({
                 aria-label={locale === "en" ? "Manikam Web Solutions on Instagram" : "Manikam Web Solutions na Instagramu"}
               >
                 <Instagram />
+              </a>
+              <a
+                href="viber://chat?number=%2B381641967267"
+                className="text-muted-foreground hover:text-orange-500"
+                aria-label="Viber"
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion?.("viber://chat?number=%2B381641967267");
+                  }
+                }}
+              >
+                <FaViber className="text-2xl" />
+              </a>
+              <a
+                href="https://wa.me/381641967267"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-orange-500"
+                aria-label="WhatsApp"
+                onClick={() => {
+                  if (window.gtag_report_conversion) {
+                    window.gtag_report_conversion?.("https://wa.me/381641967267");
+                  }
+                }}
+              >
+                <FaWhatsappSquare className="text-2xl" />
               </a>
             </div>
           </div>
