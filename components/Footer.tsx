@@ -80,6 +80,34 @@ export default function Footer({
                 </p>
               </a>
             </div>
+            <motion.a
+              href="viber://chat?number=%2B381641967267"
+              className="flex items-center gap-3 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all mx-auto w-fit"
+              whileHover={{ x: 5 }}
+              onClick={() => {
+                if (window.gtag_report_conversion) {
+                  window.gtag_report_conversion?.("viber://chat?number=%2B381641967267");
+                }
+              }}
+            >
+              <FaViber className="text-xl text-purple-600" />
+              <span className="font-semibold text-gray-900">+381 64 196 7267</span>
+            </motion.a>
+            <motion.a
+              href="https://wa.me/381641967267"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all mx-auto w-fit"
+              whileHover={{ x: 5 }}
+              onClick={() => {
+                if (window.gtag_report_conversion) {
+                  window.gtag_report_conversion?.("https://wa.me/381641967267");
+                }
+              }}
+            >
+              <FaWhatsappSquare className="text-xl text-green-600" />
+              <span className="font-semibold text-gray-900">+381 64 196 7267</span>
+            </motion.a>
             <div className=" mx-auto w-fit">
               <a href="mailto:office@manikamwebsolutions.com">
                 <p className="flex gap-3 items-center hover:text-orange-500 text-muted-foreground text-wrap">
@@ -103,32 +131,6 @@ export default function Footer({
                 aria-label={locale === "en" ? "Manikam Web Solutions on Instagram" : "Manikam Web Solutions na Instagramu"}
               >
                 <Instagram />
-              </a>
-              <a
-                href="viber://chat?number=%2B381641967267"
-                className="text-muted-foreground hover:text-orange-500"
-                aria-label="Viber"
-                onClick={() => {
-                  if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion?.("viber://chat?number=%2B381641967267");
-                  }
-                }}
-              >
-                <FaViber className="text-2xl" />
-              </a>
-              <a
-                href="https://wa.me/381641967267"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-orange-500"
-                aria-label="WhatsApp"
-                onClick={() => {
-                  if (window.gtag_report_conversion) {
-                    window.gtag_report_conversion?.("https://wa.me/381641967267");
-                  }
-                }}
-              >
-                <FaWhatsappSquare className="text-2xl" />
               </a>
             </div>
           </div>
