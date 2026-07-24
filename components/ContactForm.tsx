@@ -28,7 +28,7 @@ import {
   FaFacebook,
   FaPhone,
   FaViber,
-  FaWhatsappSquare,
+  FaWhatsapp,
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
@@ -186,7 +186,7 @@ export default function ContactForm() {
                 className="flex items-center gap-4 p-3 bg-gradient-to-bl from-gray-300 via-gray-100 to-gray-300 rounded-xl hover:shadow-lg transition-all"
                 whileHover={{ x: 5 }}
               >
-                <FaWhatsappSquare className="text-2xl text-green-600" />
+                <FaWhatsapp className="text-2xl text-green-600" />
                 <span className="font-semibold text-gray-900">
                   +1 240 810 3730
                 </span>
@@ -249,7 +249,7 @@ export default function ContactForm() {
                   }
                 }}
               >
-                <FaWhatsappSquare className="text-2xl text-green-600" />
+                <FaWhatsapp className="text-2xl text-green-600" />
                 <span className="font-semibold text-gray-900">
                   +381 64 196 7267
                 </span>
