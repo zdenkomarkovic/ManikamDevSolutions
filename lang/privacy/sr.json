@@ -1,0 +1,62 @@
+{
+  "privacy": {
+    "page": {
+      "title": "Politika privatnosti - Manikam Web Solutions",
+      "description": "Politika privatnosti Manikam Web Solutions - koje lične podatke prikupljamo preko kontakt formulara, zašto, i kako ih štitimo."
+    },
+    "hero": {
+      "title": "Politika Privatnosti",
+      "subtitle": "Poslednja izmena: 27. jul 2026."
+    },
+    "sections": {
+      "intro": {
+        "title": "Uvod",
+        "text": "Manikam Web Solutions („mi“, „nas“) posvećeni smo zaštiti privatnosti posetilaca i klijenata sajta manikamwebsolutions.com. Ova Politika privatnosti objašnjava koje lične podatke prikupljamo, zašto ih obrađujemo i koja su vaša prava, u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije i, gde je primenljivo, Opštom uredbom o zaštiti podataka (GDPR)."
+      },
+      "controller": {
+        "title": "Rukovalac podataka",
+        "text": "Rukovalac vaših ličnih podataka je Manikam Web Solutions, sa sedištem u Nišu, Srbija. Za sva pitanja u vezi sa obradom podataka možete nas kontaktirati na office@manikamwebsolutions.com."
+      },
+      "dataCollected": {
+        "title": "Koje podatke prikupljamo",
+        "text": "Putem kontakt formulara na sajtu prikupljamo: ime i prezime, broj telefona, email adresu i sadržaj poruke koju nam pošaljete. Prilikom posete sajtu se, putem alata za analitiku, automatski prikupljaju i osnovni tehnički podaci (IP adresa, tip uređaja i pregledača)."
+      },
+      "purpose": {
+        "title": "Svrha obrade",
+        "text": "Vaše podatke koristimo isključivo da bismo odgovorili na vaš upit, pripremili ponudu za tražene usluge i uspostavili poslovnu komunikaciju sa vama. Ne koristimo vaše podatke u marketinške svrhe bez vaše dodatne saglasnosti."
+      },
+      "legalBasis": {
+        "title": "Pravni osnov obrade",
+        "text": "Pravni osnov za obradu podataka je vaša saglasnost data prilikom slanja kontakt formulara, kao i naš legitimni interes da odgovorimo na vaš upit i pripremimo ponudu."
+      },
+      "retention": {
+        "title": "Čuvanje podataka",
+        "text": "Vaše podatke čuvamo najduže 24 meseca od poslednjeg kontakta, osim ako je duže čuvanje neophodno radi izvršenja ugovora ili zakonske obaveze. Nakon isteka tog perioda, podaci se trajno brišu."
+      },
+      "sharing": {
+        "title": "Deljenje podataka sa trećim licima",
+        "text": "Vaše podatke ne prodajemo niti ustupamo trećim licima u marketinške svrhe. Podaci se mogu deliti sa pružaocima usluga koje koristimo za rad sajta i komunikaciju (npr. provajder email usluge za slanje poruka, hosting provajder), koji su u obavezi da štite vaše podatke u skladu sa važećim propisima."
+      },
+      "cookies": {
+        "title": "Kolačići (cookies)",
+        "text": "Sajt koristi kolačiće za analitiku poseta (Google Analytics) i merenje efikasnosti oglasa (Google Ads). Kolačiće možete onemogućiti u podešavanjima vašeg internet pregledača, s tim da to može uticati na funkcionalnost sajta."
+      },
+      "rights": {
+        "title": "Vaša prava",
+        "text": "U skladu sa zakonom, imate pravo da zatražite pristup svojim podacima, ispravku netačnih podataka, brisanje podataka, povučete saglasnost u bilo kom trenutku, uložite prigovor na obradu i zatražite prenosivost podataka. Zahtev možete poslati na office@manikamwebsolutions.com."
+      },
+      "security": {
+        "title": "Bezbednost podataka",
+        "text": "Preduzimamo odgovarajuće tehničke i organizacione mere kako bismo zaštitili vaše podatke od neovlašćenog pristupa, gubitka ili zloupotrebe."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "text": "Za sva pitanja u vezi sa ovom Politikom privatnosti ili obradom vaših podataka, kontaktirajte nas na office@manikamwebsolutions.com ili na +381 64 196 7267."
+      },
+      "changes": {
+        "title": "Izmene politike",
+        "text": "Zadržavamo pravo izmene ove Politike privatnosti. O svim značajnim izmenama obavestićemo vas objavom na ovoj stranici, sa naznakom datuma poslednje izmene."
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "privacy": {
+    "page": {
+      "title": "Privacy Policy - Manikam Web Solutions",
+      "description": "Manikam Web Solutions privacy policy - what personal data we collect through the contact form, why, and how we protect it."
+    },
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "Last updated: July 27, 2026."
+    },
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "text": "Manikam Web Solutions (\"we\", \"us\") is committed to protecting the privacy of visitors and clients of manikamwebsolutions.com. This Privacy Policy explains what personal data we collect, why we process it, and what your rights are, in accordance with the Serbian Law on Personal Data Protection and, where applicable, the General Data Protection Regulation (GDPR)."
+      },
+      "controller": {
+        "title": "Data Controller",
+        "text": "The controller of your personal data is Manikam Web Solutions, based in Niš, Serbia. For any questions regarding data processing, you can contact us at office@manikamwebsolutions.com."
+      },
+      "dataCollected": {
+        "title": "What Data We Collect",
+        "text": "Through the contact form on our site, we collect: your full name, phone number, email address, and the content of the message you send us. When you visit the site, basic technical data (IP address, device and browser type) is also collected automatically through analytics tools."
+      },
+      "purpose": {
+        "title": "Purpose of Processing",
+        "text": "We use your data solely to respond to your inquiry, prepare a quote for the requested services, and establish business communication with you. We do not use your data for marketing purposes without your additional consent."
+      },
+      "legalBasis": {
+        "title": "Legal Basis for Processing",
+        "text": "The legal basis for processing your data is the consent you give when submitting the contact form, as well as our legitimate interest in responding to your inquiry and preparing a quote."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "text": "We keep your data for a maximum of 24 months from the last contact, unless longer retention is required to perform a contract or comply with a legal obligation. After this period, the data is permanently deleted."
+      },
+      "sharing": {
+        "title": "Sharing Data with Third Parties",
+        "text": "We do not sell or share your data with third parties for marketing purposes. Data may be shared with service providers we use to run the site and communicate with you (e.g. our email service provider, hosting provider), who are obligated to protect your data in accordance with applicable regulations."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "The site uses cookies for visit analytics (Google Analytics) and to measure ad effectiveness (Google Ads). You can disable cookies in your browser settings, though this may affect site functionality."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "text": "In accordance with the law, you have the right to request access to your data, correction of inaccurate data, deletion of data, withdraw consent at any time, object to processing, and request data portability. You can send your request to office@manikamwebsolutions.com."
+      },
+      "security": {
+        "title": "Data Security",
+        "text": "We take appropriate technical and organizational measures to protect your data from unauthorized access, loss, or misuse."
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "For any questions regarding this Privacy Policy or the processing of your data, contact us at office@manikamwebsolutions.com or at +381 64 196 7267."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "text": "We reserve the right to change this Privacy Policy. We will notify you of any significant changes by posting them on this page, indicating the date of the last update."
+      }
+    }
+  }
+}

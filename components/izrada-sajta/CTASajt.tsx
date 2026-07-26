@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
-import { thankYouHref } from "@/locales/localeLinks";
+import { thankYouHref, privacyHref } from "@/locales/localeLinks";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,14 +12,17 @@ import {
   FormControl,
   FormItem,
   FormMessage,
+  FormLabel,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 // Declare gtag_report_conversion function type
 declare global {
@@ -53,11 +56,21 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
       }),
     }),
     hp_confirm: z.string().optional(),
+    privacyConsent: z.boolean().refine((val) => val === true, {
+      message: intl.formatMessage({ id: "contact.validation.privacyRequired" }),
+    }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: "", phone: "", email: "", message: "", hp_confirm: "" },
+    defaultValues: {
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+      hp_confirm: "",
+      privacyConsent: false,
+    },
   });
 
   const formLoadedAt = useRef(Date.now());
@@ -376,6 +389,36 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
                       />
                     </FormControl>
                     <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="privacyConsent"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-start gap-2 space-y-0">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                        className="mt-1"
+                      />
+                    </FormControl>
+                    <div>
+                      <FormLabel className="font-normal text-xs text-gray-300 leading-snug">
+                        {intl.formatMessage({ id: "contact.form.privacyPrefix" })}
+                        <Link
+                          href={privacyHref(locale)}
+                          target="_blank"
+                          onClick={(e) => e.stopPropagation()}
+                          className="underline text-orange-400 hover:text-orange-300"
+                        >
+                          {intl.formatMessage({ id: "contact.form.privacyLinkText" })}
+                        </Link>
+                        {intl.formatMessage({ id: "contact.form.privacySuffix" })}
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
                   </FormItem>
                 )}
               />

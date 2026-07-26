@@ -97,6 +97,7 @@ const srToEnSlug: Record<string, string> = {
   "redizajn-migracija": "website-redesign",
   "marketing-paket": "marketing-package",
   contact: "contact",
+  "politika-privatnosti": "privacy-policy",
 };
 
 const enToSrSlug: Record<string, string> = Object.fromEntries(

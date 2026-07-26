@@ -18,6 +18,7 @@ import {
   FormLabel,
 } from "./ui/form";
 import { Input } from "./ui/input";
+import { Checkbox } from "./ui/checkbox";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Textarea } from "./ui/textarea";
@@ -34,8 +35,9 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { useMessages, useCurrentLocale } from "@/lib/MessagesContext";
-import { thankYouHref } from "@/locales/localeLinks";
+import { thankYouHref, privacyHref } from "@/locales/localeLinks";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function ContactForm() {
   const intl = useMessages();
@@ -58,6 +60,9 @@ export default function ContactForm() {
       }),
     }),
     hp_confirm: z.string().optional(),
+    privacyConsent: z.boolean().refine((val) => val === true, {
+      message: intl.formatMessage({ id: "contact.validation.privacyRequired" }),
+    }),
   });
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -68,6 +73,7 @@ export default function ContactForm() {
       email: "",
       message: "",
       hp_confirm: "",
+      privacyConsent: false,
     },
   });
 
@@ -416,6 +422,36 @@ export default function ContactForm() {
                       />
                     </FormControl>
                     <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="privacyConsent"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-start gap-2 space-y-0">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                        className="mt-1"
+                      />
+                    </FormControl>
+                    <div>
+                      <FormLabel className="font-normal text-sm text-gray-800 leading-snug">
+                        {intl.formatMessage({ id: "contact.form.privacyPrefix" })}
+                        <Link
+                          href={privacyHref(locale)}
+                          target="_blank"
+                          onClick={(e) => e.stopPropagation()}
+                          className="underline text-orange-600 hover:text-orange-500"
+                        >
+                          {intl.formatMessage({ id: "contact.form.privacyLinkText" })}
+                        </Link>
+                        {intl.formatMessage({ id: "contact.form.privacySuffix" })}
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
                   </FormItem>
                 )}
               />

@@ -23,13 +23,17 @@
       "messageLabel": "Vaša Poruka",
       "messagePlaceholder": "Opišite vaš projekat ili postavite pitanje...",
       "submitButton": "Pošalji Poruku",
-      "submitting": "Šaljem..."
+      "submitting": "Šaljem...",
+      "privacyPrefix": "Slažem se sa ",
+      "privacyLinkText": "Politikom privatnosti",
+      "privacySuffix": " i obradom mojih ličnih podataka u svrhu kontakta."
     },
     "validation": {
       "nameRequired": "Molimo unesite vase ime i prezime",
       "phoneRequired": "Molimo unesite vas broj telefona",
       "emailInvalid": "Molimo unesite vasu email adresu",
-      "messageMinLength": "Poruka mora imati najmanje 10 karaktera."
+      "messageMinLength": "Poruka mora imati najmanje 10 karaktera.",
+      "privacyRequired": "Morate se složiti sa Politikom privatnosti da biste poslali poruku."
     },
     "toast": {
       "success": "Poruka uspešno poslata!",

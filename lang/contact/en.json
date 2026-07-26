@@ -23,13 +23,17 @@
       "messageLabel": "Your Message",
       "messagePlaceholder": "Describe your project or ask a question...",
       "submitButton": "Send Message",
-      "submitting": "Sending..."
+      "submitting": "Sending...",
+      "privacyPrefix": "I agree to the ",
+      "privacyLinkText": "Privacy Policy",
+      "privacySuffix": " and to the processing of my personal data for contact purposes."
     },
     "validation": {
       "nameRequired": "Please enter your full name",
       "phoneRequired": "Please enter your phone number",
       "emailInvalid": "Please enter your email address",
-      "messageMinLength": "The message must be at least 10 characters long."
+      "messageMinLength": "The message must be at least 10 characters long.",
+      "privacyRequired": "You must agree to the Privacy Policy to send the message."
     },
     "toast": {
       "success": "Message sent successfully!",

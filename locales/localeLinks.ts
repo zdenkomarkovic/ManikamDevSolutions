@@ -12,6 +12,10 @@ export function thankYouHref(locale: Locale): string {
   return locale === "en" ? "/en/thank-you" : "/hvala";
 }
 
+export function privacyHref(locale: Locale): string {
+  return locale === "en" ? "/en/privacy-policy" : "/politika-privatnosti";
+}
+
 export function sectionHref(locale: Locale, hash: string): string {
   return locale === "en" ? `/en${hash}` : `/${hash}`;
 }

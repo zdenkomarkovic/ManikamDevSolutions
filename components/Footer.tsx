@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Facebook, Instagram } from "lucide-react";
 import { getNavList } from "@/locales/navUtils";
+import { privacyHref } from "@/locales/localeLinks";
 import { FaPhone } from "react-icons/fa6";
 import { FaViber, FaWhatsapp } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
@@ -150,7 +151,12 @@ export default function Footer({
             </p>
           </div>
         </div>
-        <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-gray-100">
+        <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-gray-100 space-y-2">
+          <p>
+            <Link href={privacyHref(locale)} className="text-muted-foreground hover:text-orange-500">
+              {locale === "en" ? "Privacy Policy" : "Politika privatnosti"}
+            </Link>
+          </p>
           <p>
             &copy; {new Date().getFullYear()} Manikam. {footerRights}
           </p>
