@@ -1,6 +1,7 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 // Declare gtag_report_conversion function type
 declare global {
@@ -56,6 +57,7 @@ export default function ContactForm() {
         id: "contact.validation.messageMinLength",
       }),
     }),
+    hp_confirm: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -65,10 +67,12 @@ export default function ContactForm() {
       phone: "",
       email: "",
       message: "",
+      hp_confirm: "",
     },
   });
 
   const isLoading = form.formState.isSubmitting;
+  const formLoadedAt = useRef(Date.now());
 
   const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     const mailText = `Ime: ${values.name}\n Telefon: ${values.phone}\n Email: ${values.email}\n Poruka: ${values.message}`;
@@ -76,6 +80,8 @@ export default function ContactForm() {
       email: values.email,
       subject: "New Contact Us Form",
       text: mailText,
+      honeypot: values.hp_confirm,
+      formStartTime: formLoadedAt.current,
     });
 
     if (response?.messageId) {
@@ -310,6 +316,24 @@ export default function ContactForm() {
           </h3>
           <Form {...form}>
             <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
+              <FormField
+                control={form.control}
+                name="hp_confirm"
+                render={({ field }) => (
+                  <FormItem className="sr-only">
+                    <FormControl>
+                      <Input
+                        {...field}
+                        tabIndex={-1}
+                        autoComplete="new-password"
+                        aria-hidden="true"
+                        data-lpignore="true"
+                        data-1p-ignore="true"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
               <FormField
                 control={form.control}
                 name="name"

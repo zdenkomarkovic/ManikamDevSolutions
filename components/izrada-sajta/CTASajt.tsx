@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { sendMail } from "@/lib/send-mail";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 // Declare gtag_report_conversion function type
 declare global {
@@ -52,12 +52,15 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
         id: "contact.validation.messageMinLength",
       }),
     }),
+    hp_confirm: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: "", phone: "", email: "", message: "" },
+    defaultValues: { name: "", phone: "", email: "", message: "", hp_confirm: "" },
   });
+
+  const formLoadedAt = useRef(Date.now());
 
   useEffect(() => {
     if (selectedPaket) {
@@ -74,6 +77,8 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
       email: values.email,
       subject: "New Contact Us Form",
       text: mailText,
+      honeypot: values.hp_confirm,
+      formStartTime: formLoadedAt.current,
     });
 
     if (response?.messageId) {
@@ -283,6 +288,24 @@ const CTASajt = ({ selectedPaket }: CTASajtProps) => {
           </p>
           <Form {...form}>
             <form className="space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
+              <FormField
+                control={form.control}
+                name="hp_confirm"
+                render={({ field }) => (
+                  <FormItem className="sr-only">
+                    <FormControl>
+                      <Input
+                        {...field}
+                        tabIndex={-1}
+                        autoComplete="new-password"
+                        aria-hidden="true"
+                        data-lpignore="true"
+                        data-1p-ignore="true"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
               <FormField
                 control={form.control}
                 name="name"

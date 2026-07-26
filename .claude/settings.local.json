@@ -68,7 +68,12 @@
       "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_4sdter4sdter4sdt \\(2\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(16\\).png\")",
       "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_u1veeeu1veeeu1ve \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(17\\).png\")",
       "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_blr1ojblr1ojblr1 \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(18\\).png\")",
-      "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_e4c55me4c55me4c5 \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(19\\).png\")"
+      "Bash(cp \"/c/Users/DELL/Downloads/Gemini_Generated_Image_e4c55me4c55me4c5 \\(1\\).png\" \"/e/Sajtovi/manikam_dev_solutions/public/images/reference \\(19\\).png\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(netstat -ano)",
+      "Bash(tasklist //FI \"PID eq 16896\")",
+      "Bash(tasklist //FI \"PID eq 21452\")",
+      "Bash(taskkill *)"
     ],
     "deny": [],
     "ask": []

@@ -17,19 +17,39 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+const MIN_SUBMIT_TIME_MS = 2000;
+
 export async function sendMail({
   email,
   sendTo,
   subject,
   text,
   html,
+  honeypot,
+  formStartTime,
 }: {
   email: string;
   sendTo?: string;
   subject: string;
   text: string;
   html?: string;
+  honeypot?: string;
+  formStartTime?: number;
 }) {
+  if (honeypot) {
+    console.log("Blocked suspected bot submission: honeypot filled", honeypot);
+    return { messageId: "spam-ignored" };
+  }
+
+  if (formStartTime && Date.now() - formStartTime < MIN_SUBMIT_TIME_MS) {
+    console.log(
+      "Blocked suspected bot submission: submitted too fast",
+      Date.now() - formStartTime,
+      "ms"
+    );
+    return { messageId: "spam-ignored" };
+  }
+
   try {
     const info = await transporter.sendMail({
       from: email,
